@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <!-- Photo de profil : un œil ouvert en deux, le cœur allumé.
+       L'œil = le système qui veille ; les deux moitiés écartées = la vue éclatée.
+       Tout tient dans le cercle de recadrage (le signe occupe ~60 % de la largeur). -->
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#5cffb0" stop-opacity="0.34" />
+      <stop offset="0.5" stop-color="#5cffb0" stop-opacity="0.08" />
+      <stop offset="1" stop-color="#5cffb0" stop-opacity="0" />
+    </radialGradient>
+    <filter id="glow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="38" />
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1080" fill="#070a0c" />
+  <circle cx="540" cy="540" r="530" fill="url(#halo)" />
+
+  <g transform="translate(540 540) scale(1.1) translate(-540 -540)">
+    <!-- axes d'éclatement, comme sur un plan technique -->
+    <g stroke="#e9e4d8" stroke-opacity="0.45" stroke-width="9" stroke-linecap="round" stroke-dasharray="4 22">
+      <line x1="244" y1="474" x2="244" y2="606" />
+      <line x1="836" y1="474" x2="836" y2="606" />
+    </g>
+
+    <!-- les deux moitiés -->
+    <g fill="none" stroke="#e9e4d8" stroke-width="56" stroke-linecap="round">
+      <path d="M 244 462 A 312 236 0 0 1 836 462" />
+      <path d="M 244 618 A 312 236 0 0 0 836 618" />
+    </g>
+
+    <!-- le cœur -->
+    <circle cx="540" cy="540" r="150" fill="none" stroke="#5cffb0" stroke-opacity="0.32" stroke-width="7" />
+    <circle cx="540" cy="540" r="128" fill="#5cffb0" filter="url(#glow)" opacity="0.95" />
+    <circle cx="540" cy="540" r="94" fill="#5cffb0" />
+  </g>
+</svg>
