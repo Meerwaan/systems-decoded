@@ -1,10 +1,22 @@
 {
   "name": "systems-decoded",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Système Décodé — vidéos TikTok qui ouvrent les systèmes de sécurité (HyperFrames + Three.js + ElevenLabs)",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sd": "node scripts/sd.mjs",
+    "new": "node scripts/sd.mjs new",
+    "build": "node scripts/sd.mjs build",
+    "voice": "node scripts/sd.mjs voice",
+    "sfx": "node scripts/sd.mjs sfx",
+    "script": "node scripts/sd.mjs script",
+    "snap": "node scripts/sd.mjs snap",
+    "check": "node scripts/sd.mjs check",
+    "preview": "node scripts/sd.mjs preview",
+    "render": "node scripts/sd.mjs render",
+    "qa": "node scripts/sd.mjs qa",
+    "brand": "node scripts/sd.mjs brand",
+    "cover": "node scripts/sd.mjs cover",
+    "front": "node scripts/sd.mjs front"
   },
   "repository": {
     "type": "git",
@@ -21,8 +33,10 @@
   "devDependencies": {
     "@fontsource/barlow-condensed": "^5.3.0",
     "@fontsource/jetbrains-mono": "^5.3.0",
+    "esbuild": "^0.25.12",
     "gsap": "^3.14.2",
     "hyperframes": "^0.8.133",
     "three": "^0.181.2"
-  }
+  },
+  "private": true
 }
