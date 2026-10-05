@@ -1,0 +1,203 @@
+/* Système Décodé — house style. Canvas 1080×1920.
+   Three colours carry meaning and nothing else:
+     ink     structure, text
+     veille  the system alive (sensing, standing by, OK)
+     signal  the threat (fire, smoke, alarm, countdown)                        */
+
+@font-face { font-family: "Barlow Condensed"; font-weight: 500; font-display: block; src: url("fonts/barlow-condensed-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-weight: 600; font-display: block; src: url("fonts/barlow-condensed-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-weight: 700; font-display: block; src: url("fonts/barlow-condensed-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-weight: 800; font-display: block; src: url("fonts/barlow-condensed-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 400; font-display: block; src: url("fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 500; font-display: block; src: url("fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 700; font-display: block; src: url("fonts/jetbrains-mono-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 800; font-display: block; src: url("fonts/jetbrains-mono-latin-800-normal.woff2") format("woff2"); }
+
+:root {
+  --bg: #070a0c;
+  --ink: #e9e4d8;
+  --ink-dim: rgba(233, 228, 216, 0.62);
+  --ink-faint: rgba(233, 228, 216, 0.22);
+  --veille: #5cffb0;
+  --signal: #ff5b2e;
+  --display: "Barlow Condensed", sans-serif;
+  --mono: "JetBrains Mono", monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+
+#root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--ink);
+  font-family: var(--display);
+  -webkit-font-smoothing: antialiased;
+}
+#stage { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.layer { position: absolute; inset: 0; }
+
+/* depth: darken the bands where the HUD and the captions sit */
+#vignette {
+  background:
+    radial-gradient(ellipse 80% 62% at 50% 44%, transparent 52%, rgba(0, 0, 0, 0.5) 100%),
+    linear-gradient(to bottom, rgba(7, 10, 12, 0.82) 0, rgba(7, 10, 12, 0) 20%, rgba(7, 10, 12, 0) 60%, rgba(7, 10, 12, 0.9) 100%);
+}
+#flash { background: var(--ink); opacity: 0; }
+#tint { background: radial-gradient(ellipse 90% 70% at 50% 45%, rgba(255, 91, 46, 0) 30%, rgba(255, 91, 46, 0.5) 100%); opacity: 0; }
+
+/* ─────────────────────────────────────────────── HUD (the dossier header) */
+#hud { position: absolute; left: 64px; right: 64px; top: 184px; height: 190px; }
+.hud__tag {
+  display: flex; align-items: center; gap: 14px;
+  font: 500 24px/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-dim);
+}
+.hud__dot { width: 12px; height: 12px; border-radius: 50%; background: var(--veille); box-shadow: 0 0 16px var(--veille); }
+.hud__title { margin-top: 14px; font: 700 48px/1 var(--display); letter-spacing: 0.02em; text-transform: uppercase; }
+.hud__clock { position: absolute; right: 0; top: -6px; font: 700 52px/1 var(--mono); letter-spacing: -0.02em; }
+.hud__count {
+  position: absolute; right: 0; top: 60px;
+  display: flex; align-items: baseline; gap: 14px;
+  font: 500 20px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--signal);
+}
+.hud__count b { font: 700 34px/1 var(--mono); letter-spacing: -0.01em; }
+.hud__rule { position: absolute; left: 0; right: 0; top: 118px; height: 2px; background: var(--ink-faint); }
+.hud__acts {
+  position: absolute; left: 0; right: 0; top: 136px;
+  display: flex; gap: 30px;
+  font: 500 21px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint);
+}
+.hud__acts span { color: var(--ink-dim); opacity: 0.4; }
+.hud__brand { margin-left: auto; color: var(--ink-dim); }
+
+/* ─────────────────────────────────────────────── captions (word by word) */
+#captions { position: absolute; left: 80px; right: 160px; top: 1248px; height: 240px; }
+.cap { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; visibility: hidden; }
+.cap__line {
+  display: block; width: 100%; text-align: center;
+  font: 800 94px/0.98 var(--display); letter-spacing: 0.004em; word-spacing: 0.05em; text-transform: uppercase;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.55), 0 0 30px rgba(0, 0, 0, 0.95), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.cap__w { display: inline-block; color: var(--ink); opacity: 0.34; }
+
+/* ─────────────────────────────────────────────── callouts */
+#leaders { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+#leaders polyline { fill: none; stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: round; }
+#leaders circle { fill: var(--bg); stroke: var(--ink); stroke-width: 2.5; }
+#leaders .is-sys { stroke: var(--veille); }
+#leaders .is-danger { stroke: var(--signal); }
+.co { position: absolute; white-space: nowrap; }
+.co__in { display: block; padding-top: 12px; border-top: 2.5px solid var(--ink); }
+.co--right { text-align: right; }
+.co__t { display: block; font: 700 42px/1 var(--display); letter-spacing: 0.03em; text-transform: uppercase; text-shadow: 0 0 18px rgba(0, 0, 0, 0.9); }
+.co__s { display: block; margin-top: 8px; font: 500 22px/1.15 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-dim); text-shadow: 0 0 12px rgba(0, 0, 0, 0.9); }
+.co--sys .co__in { border-color: var(--veille); }
+.co--sys .co__t { color: var(--veille); }
+.co--danger .co__in { border-color: var(--signal); }
+.co--danger .co__t { color: var(--signal); }
+
+/* ─────────────────────────────────────────────── panels, chips, big numbers */
+.panel { position: absolute; padding: 22px 26px 24px; border: 2px solid var(--ink-faint); background: rgba(7, 10, 12, 0.78); }
+.panel__h {
+  display: flex; justify-content: space-between; gap: 24px;
+  font: 500 21px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-dim);
+}
+.chip {
+  position: absolute; display: flex; align-items: center; gap: 14px; padding: 12px 18px;
+  border: 2px solid currentColor; background: rgba(7, 10, 12, 0.7);
+  font: 500 23px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap;
+}
+.mega { position: absolute; left: 0; right: 0; text-align: center; font: 800 250px/0.9 var(--mono); letter-spacing: -0.04em; }
+.mega--display { font: 800 380px/0.82 var(--display); letter-spacing: -0.01em; }
+.kicker { font: 500 26px/1 var(--mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-dim); }
+
+.is-signal { color: var(--signal); }
+.is-veille { color: var(--veille); }
+
+/* ─────────────────────────────────────────────── STORY OVERLAYS
+   The recurring devices of an episode, styled once. An episode writes the markup (same ids),
+   the words and the timing. Only ONE of the top-slot devices is on screen at a time
+   (top 386 → ~750): #senses, #scope, #db, #retitle, #co-count, #net, #cta-field, #next.
+
+   #bigclock    the giant readout of the first second (becomes the HUD readout)
+   #senses      "TOI" read like a system: a short list of states
+   #bigcount    the countdown that then runs in the HUD
+   #scope       what the sensor measures, sample after sample, against a threshold
+   #db          one giant number
+   #retitle     the received idea, struck and corrected (the chute)
+   #co-count    the countdown paying off
+   .rail        chevrons pointing at TikTok's own buttons (follow / like / comment)
+   #net         like: the film reaches other people
+   #cta-field   comment: the question, and an answer typing itself
+   #next        subscribe: the next file, classified                                   */
+#fireglow {
+  position: absolute; left: -200px; right: -200px; bottom: -420px; height: 1500px;
+  background: radial-gradient(ellipse 60% 55% at 28% 100%, rgba(255, 91, 46, 0.62) 0, rgba(255, 91, 46, 0.2) 38%, rgba(255, 91, 46, 0) 70%);
+  opacity: 0;
+}
+
+#bigclock { top: 868px; }
+#bigclock-sec { font-size: 96px; letter-spacing: -0.02em; color: var(--ink-dim); }
+
+#senses { left: 64px; top: 386px; width: 640px; }
+.sense { display: flex; align-items: baseline; justify-content: space-between; margin-top: 26px; }
+.sense__n { font: 700 60px/1 var(--display); letter-spacing: 0.02em; text-transform: uppercase; }
+.sense__s { display: flex; align-items: center; gap: 12px; font: 500 24px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; }
+.sense__s i { display: block; width: 12px; height: 12px; border-radius: 50%; background: currentColor; }
+
+#bigcount { position: absolute; left: 0; right: 0; top: 760px; text-align: center; }
+#bigcount .kicker { color: var(--signal); }
+#bigcount-v { position: static; margin-top: 54px; color: var(--signal); }
+
+#scope { left: 64px; right: 64px; top: 386px; height: 258px; }
+#scope-plot { position: absolute; left: 26px; right: 26px; top: 64px; bottom: 62px; border-bottom: 2px solid var(--ink-faint); }
+#scope-th { position: absolute; left: 0; right: 0; bottom: 62%; border-top: 2px dashed var(--signal); }
+#scope-th span { position: absolute; left: 0; top: -30px; font: 500 19px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--signal); }
+.bar { position: absolute; bottom: 0; width: 46px; background: var(--veille); transform-origin: 50% 100%; }
+.bar--hot { background: var(--signal); }
+#scope-status { position: absolute; left: 26px; right: 26px; bottom: 20px; height: 24px; font: 700 23px/1 var(--mono); letter-spacing: 0.12em; }
+#scope-status span { position: absolute; left: 0; top: 0; white-space: nowrap; }
+
+#db { position: absolute; left: 0; right: 0; top: 420px; text-align: center; color: var(--signal); }
+#db-v { position: static; display: inline-block; font-size: 340px; }
+#db-u { font: 800 130px/1 var(--display); margin-left: 14px; }
+#db .kicker { margin-top: 46px; color: var(--ink); }
+
+#retitle { position: absolute; left: 64px; right: 64px; top: 392px; }
+#retitle-main { margin-top: 34px; font: 800 118px/1 var(--display); text-transform: uppercase; letter-spacing: 0.005em; }
+#retitle-slot { position: relative; display: block; height: 118px; margin-top: 14px; }
+#retitle-slot span { position: absolute; left: 0; top: 0; white-space: nowrap; }
+#retitle-strike { position: absolute; left: -8px; right: -8px; top: 58px; height: 10px; background: var(--signal); transform-origin: 0 50%; }
+
+#co-count { position: absolute; left: 64px; top: 392px; }
+#co-count .kicker { color: var(--veille); }
+#co-count b { display: block; margin-top: 44px; font: 800 150px/1 var(--mono); letter-spacing: -0.04em; color: var(--veille); }
+
+.rail { position: absolute; left: 928px; width: 60px; height: 44px; display: flex; gap: 6px; color: var(--veille); }
+.rail i { display: block; width: 18px; height: 44px; background: currentColor; clip-path: polygon(0 0, 100% 50%, 0 100%, 0 78%, 52% 50%, 0 22%); }
+#rail-follow { top: 1010px; }
+#rail-like { top: 1160px; }
+#rail-comment { top: 1296px; }
+
+#net { left: 64px; right: 64px; top: 386px; }
+#net-grid { position: relative; display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px 0; margin-top: 26px; justify-items: center; }
+.tile { position: relative; width: 104px; height: 104px; border-radius: 50%; border: 2.5px dashed var(--ink-faint); }
+.tile__on { position: absolute; inset: -2.5px; border-radius: 50%; border: 2.5px solid var(--veille); }
+.tile__dot { position: absolute; left: 50%; top: 50%; width: 20px; height: 20px; margin: -10px 0 0 -10px; border-radius: 50%; background: var(--veille); box-shadow: 0 0 20px var(--veille); }
+.tile__you { position: absolute; left: 0; right: 0; top: 66px; text-align: center; font: 700 17px/1 var(--mono); letter-spacing: 0.14em; color: var(--veille); }
+#net-wave { position: absolute; left: 0; top: 0; width: 104px; height: 104px; margin-left: calc((100% / 6 - 104px) / 2); border-radius: 50%; border: 3px solid var(--veille); }
+#cta-field { position: absolute; left: 64px; right: 64px; top: 386px; padding: 22px 26px 26px; border: 2px solid var(--ink-faint); background: rgba(7, 10, 12, 0.82); }
+#cta-field-v { margin-top: 30px; height: 70px; font: 800 66px/70px var(--mono); letter-spacing: 0; }
+#cta-field-v span { display: inline-block; vertical-align: top; }
+#cta-typed { width: 0ch; height: 70px; overflow: hidden; white-space: nowrap; }
+#cta-caret { width: 6px; height: 62px; margin: 4px 0 0 8px; background: var(--veille); }
+
+#next { position: absolute; left: 64px; right: 64px; top: 392px; padding: 30px 34px 34px; border: 2px solid var(--ink-faint); background: rgba(7, 10, 12, 0.86); }
+#next-title { margin-top: 22px; font: 800 96px/0.95 var(--display); text-transform: uppercase; }
+#next-redact { display: inline-block; width: 520px; height: 78px; background: var(--ink); vertical-align: -8px; transform-origin: 0 50%; }
+#next-fact { margin-top: 26px; display: flex; align-items: baseline; gap: 22px; color: var(--signal); }
+#next-fact b { font: 800 150px/0.86 var(--mono); letter-spacing: -0.04em; }
+#next-fact span { font: 500 26px/1.25 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; }
+#next-cta { margin-top: 30px; display: flex; justify-content: space-between; align-items: center; font: 700 28px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--veille); }
