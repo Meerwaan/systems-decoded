@@ -1,0 +1,92 @@
+# ==========================================
+# GitIgnore - Motion Design Studio (Hyperframe)
+# ==========================================
+
+# 1. Hyperframe & Render Outputs
+# (Ignored to keep repository lightweight; use Git LFS or storage buckets for final renders if needed)
+output/
+renders/
+exports/
+videos/
+compositions/**/*.mp4
+compositions/**/*.mov
+compositions/**/*.MOV
+compositions/**/*.webm
+*.mp4
+*.mov
+*.webm
+*.avi
+*.m4v
+*.exr
+
+# 2. Node & Dependencies
+node_modules/
+.pnpm-store/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+
+# 3. Build & Bundles
+dist/
+build/
+.out/
+*.tsbuildinfo
+
+# 4. Hyperframe & Tool Caches
+.cache/
+.tmp/
+tmp/
+.debug/
+.hyperframe/
+.remotion/
+.turbo/
+.next/
+
+# 5. Environment & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+
+# 6. Motion Graphics & Design Software Temp Files (Ae / C4D / Blender)
+*.autosave
+*.blend1
+*.blend2
+*.c4d.bak
+Adobe After Effects Cache/
+"Ae Cache/"
+
+# 7. System & OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# 8. Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 9. IDE & Code Editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.swp
+*.swo
