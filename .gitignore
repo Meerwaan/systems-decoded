@@ -1,75 +1,136 @@
-# ==========================================
-# GitIgnore - Motion Design Studio (Hyperframe)
-# ==========================================
+# ===================================================
+# ULTRA-STRICT GITIGNORE - MOTION DESIGN & HYPERFRAME
+# Empêche le dépôt d'être pollué par les fichiers lourds,
+# les rendus, les caches et les fichiers temporaires.
+# ===================================================
 
-# 1. Hyperframe & Render Outputs
-# (Ignored to keep repository lightweight; use Git LFS or storage buckets for final renders if needed)
-output/
+# ---------------------------------------------------
+# 1. RENDUS & EXPORTS (Hyperframe, Remotion, Ae, etc.)
+# ---------------------------------------------------
 renders/
+render/
+output/
+outputs/
 exports/
-videos/
+export/
+episodes/*/renders/
+episodes/*/output/
+episodes/*/exports/
+kit/*/dist/
+kit/*/build/
 compositions/**/*.mp4
 compositions/**/*.mov
 compositions/**/*.MOV
 compositions/**/*.webm
+compositions/**/*.exr
+
+# ---------------------------------------------------
+# 2. FICHIERS MÉDIA LOURDS & RUSHES (Vidéo / Audio / 3D)
+# ---------------------------------------------------
+# Vidéos
 *.mp4
 *.mov
+*.MOV
 *.webm
 *.avi
 *.m4v
-*.exr
+*.mkv
+*.flv
+*.wmv
+*.prores
 
-# 2. Node & Dependencies
+# Audio brut & Voix off
+*.wav
+*.mp3
+*.aac
+*.flac
+*.ogg
+*.m4a
+audio/raw/
+footage/
+raw/
+raw_assets/
+recordings/
+screen-recordings/
+voiceovers/
+
+# Textures lourdes & Séquences d'images (EXR, HDR, TIF)
+*.exr
+*.hdr
+*.hdri
+*.tif
+*.tiff
+*.tga
+*.dpx
+
+# ---------------------------------------------------
+# 3. FICHIERS TEMPORAIRES DESIGN & 3D (Ae, C4D, Blender)
+# ---------------------------------------------------
+*.autosave
+*.blend1
+*.blend2
+*.blend3
+*.c4d.bak
+*.aep.bak
+*.aepx.bak
+Adobe After Effects Cache/
+"Ae Cache/"
+"after_effects_cache/"
+*.tmp
+*.bak
+
+# ---------------------------------------------------
+# 4. DÉPENDANCES & BUILDS (Node, esbuild, hyperframe)
+# ---------------------------------------------------
 node_modules/
 .pnpm-store/
 .yarn/cache/
 .yarn/unplugged/
-.yarn/build-state.yml
-
-# 3. Build & Bundles
 dist/
 build/
 .out/
+.esbuild/
 *.tsbuildinfo
 
-# 4. Hyperframe & Tool Caches
-.cache/
+# ---------------------------------------------------
+# 5. CACHES & FICHIERS TEMPORAIRES DE DÉVELOPPEMENT
+# ---------------------------------------------------
 .tmp/
 tmp/
-.debug/
+.cache/
 .hyperframe/
+.hyperframes/
 .remotion/
 .turbo/
 .next/
+.debug/
 
-# 5. Environment & Secrets
+# ---------------------------------------------------
+# 6. ENVIRONNEMENT & SECRETS (Clés API, mdp)
+# ---------------------------------------------------
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+!.env.example
 *.pem
 *.key
+*.p12
+*.pfx
 
-# 6. Motion Graphics & Design Software Temp Files (Ae / C4D / Blender)
-*.autosave
-*.blend1
-*.blend2
-*.c4d.bak
-Adobe After Effects Cache/
-"Ae Cache/"
+# ---------------------------------------------------
+# 7. ARCHIVES & FICHIERS COMPRESSÉS
+# ---------------------------------------------------
+*.zip
+*.tar
+*.gz
+*.tgz
+*.rar
+*.7z
+*.iso
+*.dmg
 
-# 7. System & OS Files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-desktop.ini
-
-# 8. Logs
+# ---------------------------------------------------
+# 8. LOGS & JOURNAUX
+# ---------------------------------------------------
 logs/
 *.log
 npm-debug.log*
@@ -77,16 +138,32 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# 9. IDE & Code Editors
+# ---------------------------------------------------
+# 9. SYSTÈME & ÉDITEURS (macOS, Windows, VS Code, JetBrains)
+# ---------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Dd]esktop.ini
+Thumbs.db
+$RECYCLE.BIN/
+
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 .idea/
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
 *.swp
 *.swo
+*.suo
+*.user
+
+# 10. Systems Decoded — fichiers générés (reconstruits par `npm run build` / `npm run sfx`)
+episodes/*/gen/
+episodes/*/snapshots/
+episodes/*/audio/takes/
+episodes/*/audio/bed.wav
