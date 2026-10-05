@@ -1,0 +1,62 @@
+{
+  "id": "__ID__",
+  "slug": "__SLUG__",
+  "title": "__TITLE__",
+  "fps": 30,
+  "lead": 0.35,
+  "tail": 0.55,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1.0,
+    "seed": 21
+  },
+  "cover": { "at": "autopsie:cœur", "title": ["__TITLE__"], "cam": { "d": 100, "shift": -335 } },
+  "post": {
+    "caption": "Une phrase qui prolonge l'accroche sans la répéter, puis la question du CTA commentaire.",
+    "hashtags": ["#apprendresurtiktok", "#commentcamarche", "#sujet1", "#sujet2", "#communaute"],
+    "pinned": "La question du CTA commentaire, reformulée pour le commentaire épinglé."
+  },
+  "sources": [],
+  "beats": [
+    { "id": "hook",    "text": "Une heure, un lieu, une personne. Et un *danger* qu'elle ne voit pas.",
+                       "vo": "[ominous] Une heure, un lieu, une personne. Et un danger... qu'elle ne voit pas." },
+    { "id": "menace",  "text": "Dans [3|trois] minutes, il sera *trop tard*.",
+                       "vo": "[ominous] Dans trois minutes... il sera TROP tard." },
+    { "id": "boite",   "text": "Une seule chose peut encore l'arrêter. Et elle cache +un secret+.",
+                       "vo": "[low, grave voice] Une seule chose peut encore l'arrêter. Et elle cache... un secret." },
+    { "id": "ouvre",   "hold": 0.6, "text": "Alors… on l'ouvre.",
+                       "vo": "[slowly] Alors... on l'ouvre." },
+    { "id": "autopsie", "hold": 0.5, "text": "Une première pièce. Une deuxième. Et au centre… +le cœur+.",
+                       "vo": "Une première pièce. Une deuxième. Et au centre... [slowly] le cœur." },
+    { "id": "reponse", "hold": 0.8, "text": "Le danger arrive. Et pour la première fois… le système *réagit*.",
+                       "vo": "[tense] Le danger arrive. Et pour la première fois... le système RÉAGIT." },
+    { "id": "chute",   "hold": 0.8, "text": "Voilà son secret. Ce n'était pas ce que tu croyais.",
+                       "vo": "[low, grave voice] Voilà son secret. Ce n'était pas... ce que tu croyais." },
+    { "id": "like",    "text": "Si tu viens de l'apprendre, +like+ : quelqu'un d'autre le saura grâce à toi.",
+                       "vo": "[low, grave voice] Si tu viens de l'apprendre, like : quelqu'un d'autre le saura grâce à toi." },
+    { "id": "comment", "text": "Dis-moi en +commentaire+ : et toi, tu le savais ?",
+                       "vo": "[serious] Dis-moi en commentaire : et toi... tu le savais ?" },
+    { "id": "abo",     "text": "+Abonne-toi+ : le prochain système qu'on ouvre est encore plus étrange.",
+                       "vo": "[ominous] Abonne-toi : le prochain système qu'on ouvre est encore plus étrange." },
+    { "id": "boucle",  "text": "Parce que tout commence toujours par…",
+                       "vo": "[ominous] Parce que tout commence toujours par..." }
+  ],
+  "cues": {
+    "explode": "ouvre:on",
+    "trigger": "reponse:réagit",
+    "rewind": "boucle:toujours"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    { "type": "drone", "gain": -24, "curve": [[0, 0.75], ["explode", 0.55], ["trigger", 1], ["like", 0.4]] },
+    { "type": "impact", "at": 0.03, "gain": -14, "size": 1.2 },
+    { "type": "riser", "to": "explode", "dur": 0.8, "gain": -25 },
+    { "type": "impact", "at": "explode", "gain": -16, "size": 0.8 },
+    { "type": "impact", "at": "trigger", "gain": -10, "size": 1.4 },
+    { "type": "rewind", "at": "rewind", "dur": 1.0, "gain": -21 }
+  ]
+}
