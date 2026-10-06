@@ -16,6 +16,7 @@
     "qa": "node scripts/sd.mjs qa",
     "brand": "node scripts/sd.mjs brand",
     "cover": "node scripts/sd.mjs cover",
+    "phone": "node scripts/sd.mjs phone",
     "front": "node scripts/sd.mjs front",
     "credits": "node scripts/sd.mjs credits",
     "review": "node scripts/sd.mjs review",
