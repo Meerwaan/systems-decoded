@@ -44,6 +44,7 @@ const HELP = `
   npm run render  -- <ep> [--draft]              MP4 final dans renders/
   npm run qa      -- <ep> [--file x.mp4]         contrôle le MP4 rendu : voix calée, niveau, images parasites, fluidité
   npm run cover   -- <ep>                        couverture de grille (PNG 1080×1920 dans renders/)
+  npm run phone   -- <ep>                        copie du film sous 30 Mio (renders/<ep>-iphone.mp4) : ce que l'app Claude peut envoyer au téléphone hors du Wi-Fi
   npm run brand                                  exporte la photo de profil (brand/avatar.svg → .png)
   npm run front   [-- --port 4173]               bureau de publication (vidéo, couverture, légende) et cabine d'écoute de la voix, à ouvrir sur l'iPhone (même Wi-Fi)
   <ep> = numéro d'épisode (ex: 001)
@@ -168,6 +169,11 @@ try {
     case "cover": {
       const { cover } = await import("./cover.mjs");
       await cover(resolveEpisode(args[0]));
+      break;
+    }
+    case "phone": {
+      const { phone } = await import("./phone.mjs");
+      phone(resolveEpisode(args[0]));
       break;
     }
     case "brand": {

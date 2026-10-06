@@ -607,21 +607,48 @@ function banner(port) {
   console.log(`  Ctrl+C pour arrêter.\n`);
 }
 
-/** Start the desk. Resolves with the http.Server once it listens; the process then stays alive. */
+/** Is the program that holds `port` one of our own desks? (It answers /api/dossiers the way we do.) */
+async function deskAlready(port) {
+  try {
+    const res = await fetch(`http://127.0.0.1:${port}/api/dossiers`, { signal: AbortSignal.timeout(2500) });
+    return res.ok && Array.isArray((await res.json()).dossiers);
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Start the desk. Resolves with the http.Server once it listens; the process then stays alive.
+ * If another desk already runs on this PC (a Claude session started one: those stop by themselves
+ * after two hours), this one says so, shows the address — the site is up — and waits: the moment
+ * the other one stops, it takes over. Double-clicking publier.cmd therefore always ends well.
+ */
 export function front({ port = 4173 } = {}) {
   return new Promise((resolve, reject) => {
     if (!Number.isInteger(port) || port < 1 || port > 65535) return reject(new Error(`Port invalide : ${port} (ex : --port 4173)`));
     const server = http.createServer(handle);
-    server.once("error", (err) =>
-      reject(
-        err.code === "EADDRINUSE"
-          ? new Error(`Le port ${port} est déjà pris. Essaie : npm run front -- --port ${port + 1}`)
-          : new Error(`Impossible d'ouvrir le port ${port} : ${err.message}`),
-      ),
-    );
-    server.listen(port, "0.0.0.0", () => {
-      banner(port);
+    let waiting = false;
+    server.on("error", async (err) => {
+      if (err.code !== "EADDRINUSE") return reject(new Error(`Impossible d'ouvrir le port ${port} : ${err.message}`));
+      if (!waiting && !(await deskAlready(port))) {
+        return reject(new Error(`Le port ${port} est pris par un autre programme. Essaie : npm run front -- --port ${port + 1}`));
+      }
+      if (!waiting) {
+        waiting = true;
+        banner(port);
+        console.log(`  Le bureau tourne déjà sur ce PC (lancé ailleurs) : le site est ouvert, tu peux t'en servir.`);
+        console.log(`  Laisse cette fenêtre ouverte : elle prendra le relais dès que l'autre s'arrêtera.\n`);
+      }
+      setTimeout(() => {
+        server.close();
+        server.listen(port, "0.0.0.0");
+      }, 3000);
+    });
+    server.on("listening", () => {
+      if (waiting) note("l'autre bureau s'est arrêté : cette fenêtre a pris le relais");
+      else banner(port);
       resolve(server);
     });
+    server.listen(port, "0.0.0.0");
   });
 }
