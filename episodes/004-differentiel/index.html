@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · 004 · Différentiel</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents sont stylés dans kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+      #next-fact b { font-size: 150px; }
+      #retitle-main { font-size: 112px; }
+      #retitle-slot { height: 112px; }
+      #retitle-strike { top: 54px; }
+      .vs__v { font-size: 36px; }
+      #chip-limit { color: var(--veille); } /* .chip--live sets signal: this one is the system's side */
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="85.7" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 004</span></div>
+        <div class="hud__title" id="hud-title">Différentiel</div>
+        <div class="hud__clock" id="hud-clock">230 V</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Fuite</span><b id="hud-count-v">0 mA</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- 01 · MENACE : toi, lu comme un circuit (ce qui suit un point de la scène) -->
+      <div id="chip-skin" class="chip chip--live"><span>Peau mouillée</span><b>≈ 1 500 Ω</b></div>
+      <div id="chip-heart" class="chip chip--live"><span>Par le cœur</span><b>150 mA</b></div>
+      <div id="chip-limit" class="chip chip--live is-veille"><span>Il en supporte</span><b>30 mA</b></div>
+
+      <section id="versus" class="panel">
+        <div class="panel__h"><span>Ton disjoncteur · ce qu'il attend</span><span>× 500</span></div>
+        <div class="vs is-signal" id="vs-toi">
+          <div class="vs__h"><span class="vs__n">Ce qui te traverse</span><span class="vs__v">150 mA</span></div>
+          <div class="vs__track"><div class="vs__bar" style="width: 0.94%; min-width: 7px"></div></div>
+        </div>
+        <div class="vs" id="vs-disj">
+          <div class="vs__h"><span class="vs__n">Ce qu'il attend</span><span class="vs__v">16 000 mA</span></div>
+          <div class="vs__track"><div class="vs__bar"></div></div>
+        </div>
+      </section>
+
+      <!-- 02 · AUTOPSIE / 03 · RÉPONSE : ce que l'anneau compare -->
+      <section id="gauge" class="panel">
+        <div class="panel__h"><span id="gauge-l">Part 8,70 A · revient 8,70 A</span><span id="gauge-v">0 mA</span></div>
+        <div id="gauge-track">
+          <div id="gauge-fill"></div>
+          <div id="gauge-th" data-layout-allow-overflow><span>Seuil · 30 mA</span></div>
+        </div>
+        <div id="gauge-status">
+          <span id="gauge-s0" class="is-veille">● Il revient autant qu'il part</span>
+          <span id="gauge-s1" class="is-signal">● Il en manque — coupure</span>
+        </div>
+      </section>
+
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">Le disjoncteur<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Un anneau</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- appels à l'action : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Like · la vidéo remonte</span><span id="net-n">Tableaux vérifiés 1/12</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <div id="cta-field">
+        <div class="kicker">Commentaire · sur ton tableau ?</div>
+        <div id="cta-field-v"><span id="cta-typed" class="is-veille">30 mA</span><span id="cta-caret"></span></div>
+      </div>
+
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 005</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <div id="next-fact"><b>2 s</b><span>et il s'arrête.<br />Sans courant.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
