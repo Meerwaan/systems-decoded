@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · 002 · Airbag</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (panneaux, compteurs, CTA) sont stylés dans kit/brand.css.
+         Ici : seulement ce qui n'existe que dans cet épisode. */
+      #next-fact b { font-size: 170px; }
+      /* « le temps d'un clignement d'œil » : deux paupières */
+      .lid { position: absolute; left: 0; right: 0; height: 50.2%; background: #000; }
+      #lid-top { top: 0; transform-origin: 50% 0; }
+      #lid-bot { bottom: 0; transform-origin: 50% 100%; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="94.067" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 002</span></div>
+        <div class="hud__title" id="hud-title">Airbag</div>
+        <div class="hud__clock" id="hud-clock">50 km/h</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Mur à</span><b id="hud-count-v">13,9 m</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- 01 · MENACE -->
+      <section id="versus" class="panel">
+        <div class="panel__h"><span>Qui est le plus rapide ?</span><span>En secondes</span></div>
+        <div class="vs" id="vs-choc">
+          <div class="vs__h"><span class="vs__n">Le choc dure</span><span class="vs__v">0,1 s</span></div>
+          <div class="vs__track"><div class="vs__bar" style="width: 50%"></div></div>
+        </div>
+        <div class="vs is-signal" id="vs-toi">
+          <div class="vs__h"><span class="vs__n">Ton cerveau réagit en</span><span class="vs__v">0,2 s</span></div>
+          <div class="vs__track"><div class="vs__bar" style="width: 100%"></div></div>
+        </div>
+      </section>
+      <div id="chip-dist" class="chip chip--live"><span>Mur à</span><b id="chip-dist-v">13,9 m</b></div>
+
+      <section id="senses" class="panel">
+        <div class="panel__h"><span>Toi · conducteur</span><span>50 km/h</span></div>
+        <div class="sense" id="sense-yeux"><span class="sense__n">Yeux</span><span class="sense__s is-signal"><i></i>Sur le téléphone</span></div>
+        <div class="sense" id="sense-route"><span class="sense__n">Route</span><span class="sense__s is-signal"><i></i>14 m à l'aveugle</span></div>
+        <div class="sense" id="sense-cerveau">
+          <span class="sense__n">Cerveau</span>
+          <span class="sense__s is-signal" id="sense-cerveau-s"><i></i><span id="sense-cerveau-t">0,2 s de retard</span></span>
+        </div>
+      </section>
+
+      <!-- 02 · AUTOPSIE -->
+      <section id="scope" class="panel">
+        <div class="panel__h"><span>Boîtier · décélération</span><span id="scope-n">Mesure 0</span></div>
+        <div id="scope-plot">
+          <div id="scope-th" data-layout-allow-overflow><span>Seuil de déclenchement</span></div>
+        </div>
+        <div id="scope-status">
+          <span id="scope-s0" class="is-veille">● Secousses — rien à signaler</span>
+          <span id="scope-s1" class="is-signal">● Choc frontal — analyse</span>
+          <span id="scope-s2" class="is-signal">● Mise à feu</span>
+        </div>
+      </section>
+
+      <!-- 03 · RÉPONSE -->
+      <div id="db">
+        <div><span id="db-v" class="mega mega--display">60</span><span id="db-u">L</span></div>
+        <div class="kicker" data-layout-allow-overlap>De gaz · en 30 millisecondes</div>
+      </div>
+
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Tu ne percutes pas</div>
+        <div id="retitle-main">
+          <span>Un airbag qui se</span>
+          <span id="retitle-slot">
+            <span id="retitle-a">Gonfle<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Dégonfle</span>
+          </span>
+        </div>
+      </div>
+
+      <div id="co-count">
+        <div class="kicker">Tout est fini en</div>
+        <b id="co-count-v">150 ms</b>
+      </div>
+
+      <div id="lid-top" class="lid"></div>
+      <div id="lid-bot" class="lid"></div>
+
+      <!-- appels à l'action : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Like · la vidéo remonte</span><span id="net-n">Passagers prévenus 1/12</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <div id="cta-field">
+        <div class="kicker">Commentaire · tes mains sur le volant ?</div>
+        <div id="cta-field-v"><span id="cta-typed" class="is-signal">10 H 10</span><span id="cta-caret"></span></div>
+      </div>
+
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 003</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <div id="next-fact"><b>1</b><span>câble casse.<br />rien ne tombe.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
