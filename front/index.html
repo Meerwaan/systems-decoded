@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#070a0c" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-title" content="Publication" />
+    <title>Publication</title>
+    <link rel="icon" href="/brand/avatar.png" />
+    <link rel="apple-touch-icon" href="/brand/avatar.png" />
+    <link rel="preload" href="/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/jetbrains-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/app.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <div class="top__row">
+          <p class="tag" id="link"><i class="dot"></i><span>Publication</span></p>
+          <button class="textbtn" id="refresh" type="button">Actualiser</button>
+        </div>
+        <h1 class="top__title" id="brand">&nbsp;</h1>
+        <p class="top__help">Télécharge, copie la légende, coche et publie.</p>
+      </header>
+
+      <main id="dossiers">
+        <p class="state">Lecture des dossiers…</p>
+      </main>
+
+      <section class="profil" id="profil" aria-labelledby="profil-h" hidden></section>
+
+      <footer class="foot">
+        <p>La page relit le disque du PC à chaque ouverture. Après un nouveau rendu, touche Actualiser.</p>
+      </footer>
+    </div>
+
+    <dialog class="viewer" id="viewer" aria-label="Couverture en entier">
+      <div class="viewer__bar">
+        <p class="tag"><i class="dot"></i><span id="viewer-tag">Couverture</span></p>
+        <button class="btn viewer__close" type="button" data-close>Fermer</button>
+      </div>
+      <img class="viewer__img" id="viewer-img" alt="" />
+      <p class="viewer__hint">Appui long sur l'image pour l'enregistrer dans Photos.</p>
+    </dialog>
+
+    <p class="sr" id="live" role="status" aria-live="polite"></p>
+    <noscript><p class="state state--alert">Cette page a besoin de JavaScript pour lire les dossiers.</p></noscript>
+  </body>
+</html>

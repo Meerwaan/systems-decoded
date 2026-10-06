@@ -1,0 +1,170 @@
+/* Système Décodé — cabine de doublage.
+   Everything shared with the publishing desk (tokens, header, buttons, chips, blocks) is in app.css.
+   The three colours keep their meaning here:
+     ink     structure, text, the things you press, a sound that is playing
+     veille  the recording that is in the comp; a note that is saved (a light that comes on)
+     signal  what the measurements doubt; a change that did not go through          */
+
+/* several pieces below are flex or grid: "hidden" has to win over that */
+[hidden] { display: none !important; }
+
+.top__title span { white-space: nowrap; } /* "Dossier 002 —" stays in one piece, the title wraps after it */
+
+/* ─────────────────────────────────────────────── the comp */
+.montage { margin-top: 30px; border-top: 2px solid var(--ink); }
+.montage__player { display: block; width: 100%; min-height: 44px; } /* the browser's own player, at the height it wants */
+.montage .btn, .confirm, .key { margin-top: 16px; }
+.confirm .note { margin: 0 0 12px; color: var(--ink); }
+.confirm .btn { margin-top: 0; }
+
+/* how to read a recording: folded, one tap away */
+.key { border-top: 1px solid var(--ink-faint); }
+.key summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px;
+  cursor: pointer; list-style: none; touch-action: manipulation;
+  font: 500 12px/1.2 var(--mono); letter-spacing: 0.16em; text-transform: uppercase;
+}
+.key summary::-webkit-details-marker { display: none; }
+.key summary::after { content: "+"; flex: none; font: 500 18px/1 var(--mono); letter-spacing: 0; color: var(--ink-dim); }
+.key[open] summary::after { content: "–"; }
+.key dl { margin: 0; }
+.key dl div { display: grid; grid-template-columns: 72px minmax(0, 1fr); align-items: center; gap: 12px; padding: 10px 0; border-top: 1px solid var(--ink-faint); }
+.key dt { display: flex; }
+.key dd { margin: 0; font: 500 16.5px/1.28 var(--display); color: var(--ink-dim); text-wrap: pretty; }
+.key dl + .note { margin-top: 0; padding-top: 12px; border-top: 1px solid var(--ink-faint); }
+
+/* ─────────────────────────────────────────────── one phrase */
+.phrase { margin-top: 40px; padding-top: 16px; border-top: 2px solid var(--ink); }
+.phrase__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 28px; }
+.phrase .tag { flex-wrap: wrap; row-gap: 6px; min-width: 0; }
+/* its light: off while the measurements choose, on once the ear has */
+.phrase .tag .dot { background: none; box-shadow: inset 0 0 0 1px var(--ink-line); }
+.phrase.is-manual .tag .dot { background: var(--veille); box-shadow: 0 0 10px var(--veille); }
+.phrase__id { letter-spacing: 0.04em; text-transform: none; color: var(--ink); overflow-wrap: anywhere; } /* as typed on the PC: --retake hook */
+.phrase__id::before { content: "· "; color: var(--ink-dim); }
+.chip--mood { flex: none; padding: 7px 9px; color: var(--ink-dim); }
+.phrase__text { margin-top: 14px; font: 600 25px/1.14 var(--display); overflow-wrap: anywhere; text-wrap: pretty; }
+/* the direction given to the voice, word for word */
+.phrase__vo { margin-top: 10px; font: 500 12px/1.55 var(--mono); color: var(--ink-dim); overflow-wrap: anywhere; }
+.phrase__vo + .phrase__vo { margin-top: 6px; }
+.phrase__vo b { font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+.phrase__ear {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px;
+  font: 500 12px/1.2 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--veille);
+}
+.phrase__moved { margin-top: 12px; font: 500 12px/1.45 var(--mono); letter-spacing: 0.02em; color: var(--ink); }
+
+/* ─────────────────────────────────────────────── its recordings */
+.takes { list-style: none; display: grid; gap: 8px; margin-top: 16px; }
+.take { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; border: 1px solid var(--ink-line); }
+.take.is-current { border-color: var(--veille); box-shadow: inset 3px 0 0 var(--veille); }
+
+/* listening: the whole left of the row. It never changes what is kept. */
+.take__play {
+  position: relative; display: flex; align-items: center; gap: 10px; min-width: 0; min-height: 62px; padding: 9px 8px 9px 12px;
+  border: 0; background: none; cursor: pointer; text-align: left; touch-action: manipulation; -webkit-user-select: none; user-select: none;
+}
+.take__play:active { background: var(--ink-wash); }
+.take__icon { position: relative; flex: none; width: 34px; height: 34px; border: 1.5px solid var(--ink); border-radius: 50%; }
+.take__icon::before { /* ▶ */
+  content: ""; position: absolute; left: 11.5px; top: 8.5px;
+  border-style: solid; border-color: transparent transparent transparent var(--ink); border-width: 7px 0 7px 11px;
+}
+.take__play[aria-pressed="true"] .take__icon { background: var(--ink); }
+.take__play[aria-pressed="true"] .take__icon::before { left: 10px; top: 10px; width: 11px; height: 11px; border: 0; background: var(--bg); } /* ■ */
+.is-loading .take__icon { animation: wait 0.6s ease-in-out infinite alternate; } /* tapped, the sound is on its way */
+@keyframes wait { to { opacity: 0.35; } }
+/* how far the sound has got */
+.take__play::after, .phrase__in::after {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; pointer-events: none;
+  background: var(--ink); transform-origin: 0 50%; transform: scaleX(var(--p, 0));
+}
+
+.take__id { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.take__line { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 8px; }
+.take__line--marks > * { margin-top: 7px; } /* no gap on the column: a row with no mark keeps its name centred */
+.take__name { font: 700 21px/1 var(--display); letter-spacing: 0.03em; text-transform: uppercase; }
+/* a retake directed with another intention than the phrase's own */
+.take__mood {
+  padding: 4px 6px; border: 1px solid var(--ink-line);
+  font: 500 11px/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); white-space: nowrap;
+}
+.take__rec { font: 500 11px/1 var(--mono); color: var(--ink-dim); }
+.take__auto { font: 500 11px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-dim); white-space: nowrap; }
+.take__in { font: 500 11px/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--veille); white-space: nowrap; }
+
+/* liveliness of the intonation, as measured: five rising bars */
+.meter { flex: none; display: inline-flex; align-items: flex-end; gap: 2px; height: 18px; }
+.meter i { width: 3px; background: var(--ink-faint); }
+.meter i:nth-child(1) { height: 6px; }
+.meter i:nth-child(2) { height: 9px; }
+.meter i:nth-child(3) { height: 12px; }
+.meter i:nth-child(4) { height: 15px; }
+.meter i:nth-child(5) { height: 18px; }
+.meter[data-level="1"] i:nth-child(-n + 1),
+.meter[data-level="2"] i:nth-child(-n + 2),
+.meter[data-level="3"] i:nth-child(-n + 3),
+.meter[data-level="4"] i:nth-child(-n + 4),
+.meter[data-level="5"] i { background: var(--ink); }
+
+/* keeping: its own control, apart from listening */
+.take__keep {
+  margin-right: 8px; min-width: 80px; min-height: 46px; padding: 8px 10px;
+  border: 1px solid var(--ink-line); background: transparent; color: var(--ink);
+  font: 600 17px/1 var(--display); letter-spacing: 0.04em; text-transform: uppercase;
+  cursor: pointer; touch-action: manipulation; -webkit-user-select: none; user-select: none;
+  transition: background-color 0.12s, color 0.12s, border-color 0.12s;
+}
+.take__keep:active { background: var(--ink-wash); }
+.take.is-current .take__keep { border-color: var(--veille); color: var(--veille); } /* in the comp because the measurements say so: yours if you keep it */
+/* kept by ear: lit. (As specific as the rule above, and after it: its dark text must win over the green one.) */
+.take .take__keep[aria-pressed="true"] { border-color: var(--veille); background: var(--veille); color: var(--bg); font-weight: 700; }
+
+/* what the measurements doubt in this recording */
+.take__flags { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; margin: -3px 10px 10px 56px; }
+.flag {
+  padding: 5px 7px; border: 1px solid currentColor;
+  font: 500 11px/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--signal); white-space: nowrap;
+}
+
+/* the PC is redoing the comp: nothing else can be changed for a few seconds */
+[data-change][aria-disabled="true"] { opacity: 0.4; cursor: default; }
+[data-change].is-pending { opacity: 1; } /* the one that was pressed: it says what is going on */
+
+.phrase__in { position: relative; margin-top: 10px; }
+.phrase__in[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: var(--bg); }
+.phrase__in::after { background: var(--bg); height: 3px; }
+
+/* ─────────────────────────────────────────────── a note for the director */
+.notefield { margin-top: 18px; }
+.notefield label { display: block; margin-bottom: 8px; font: 500 11px/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-dim); }
+.notefield textarea {
+  display: block; width: 100%; min-height: 64px; margin: 0; padding: 11px 13px;
+  border: 1px solid var(--ink-line); border-radius: 0; background: var(--ink-wash); color: var(--ink);
+  font: 500 19px/1.3 var(--display); /* 16px and over: below that, iOS zooms in on focus */
+  resize: none; overflow: hidden; -webkit-appearance: none; appearance: none;
+}
+.notefield textarea::placeholder { color: var(--ink-dim); opacity: 1; }
+.notefield__state { min-height: 17px; margin-top: 7px; font: 500 11.5px/1.45 var(--mono); letter-spacing: 0.04em; color: var(--ink-dim); overflow-wrap: anywhere; }
+.notefield__state.is-done { color: var(--veille); }
+.notefield__state.is-failed { color: var(--signal); }
+.notefield__state code { font-size: 1em; color: inherit; white-space: normal; } /* already in the mono face: a command keeps the size of the line */
+.notefield .textbtn { margin: 0 0 -10px -8px; } /* "send it again", under the reason it did not go through */
+
+/* ─────────────────────────────────────────────── what the PC is doing, what it answered */
+.toast {
+  position: fixed; z-index: 10; left: 50%; bottom: calc(12px + env(safe-area-inset-bottom)); transform: translateX(-50%);
+  display: flex; align-items: center; gap: 12px; width: min(440px, calc(100% - 2 * var(--gutter))); min-height: 52px; padding: 10px 14px 10px 16px;
+  border: 1px solid var(--ink-line); border-left: 3px solid var(--ink); background: var(--bg); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+.toast__text { flex: 1; min-width: 0; font: 600 17.5px/1.25 var(--display); overflow-wrap: anywhere; text-wrap: pretty; }
+.toast .textbtn { flex: none; margin: -6px -8px -6px 0; }
+.toast.is-busy .textbtn { display: none; } /* nothing to close: it goes when the PC has answered */
+.toast.is-busy::before { content: ""; flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--ink); animation: wait 0.6s ease-in-out infinite alternate; }
+.toast.is-done { border-color: var(--veille); }
+.toast.is-failed { border-color: var(--signal); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; }
+  .take__play::after, .phrase__in::after { display: none; }
+}

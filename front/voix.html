@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#070a0c" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-title" content="Cabine" />
+    <title>Cabine</title>
+    <link rel="icon" href="/brand/avatar.png" />
+    <link rel="apple-touch-icon" href="/brand/avatar.png" />
+    <link rel="preload" href="/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/jetbrains-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/app.css" />
+    <link rel="stylesheet" href="/voix.css" />
+    <script src="/voix.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <div class="top__row">
+          <p class="tag" id="link"><i class="dot"></i><span>Cabine</span></p>
+          <a class="textbtn" href="/" aria-label="Retour au bureau de publication">Publication</a>
+        </div>
+        <h1 class="top__title" id="title">Cabine de doublage</h1>
+        <p class="top__help">Écoute chaque phrase dans chaque prise. Garde celle qui sonne juste.</p>
+      </header>
+
+      <main id="booth">
+        <p class="state">Lecture de la séance…</p>
+      </main>
+
+      <footer class="foot">
+        <p>Rien sur cette page n'enregistre quoi que ce soit chez ElevenLabs : elle choisit seulement parmi des prises déjà payées. Aucun crédit dépensé ici.</p>
+      </footer>
+    </div>
+
+    <!-- what the PC is doing, what it answered: stays in view wherever the page is scrolled -->
+    <div class="toast" id="toast" hidden>
+      <p class="toast__text" id="toast-text"></p>
+      <button class="textbtn" id="toast-close" type="button">Fermer</button>
+    </div>
+
+    <p class="sr" id="live" role="status" aria-live="polite"></p>
+    <noscript><p class="state state--alert">Cette page a besoin de JavaScript pour ouvrir la cabine.</p></noscript>
+  </body>
+</html>
