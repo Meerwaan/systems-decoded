@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · 003 · Ascenseur</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents sont stylés dans kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+      #next-fact b { font-size: 132px; }
+      #retitle-main { font-size: 128px; }
+      #retitle-slot { height: 128px; }
+      #retitle-strike { top: 62px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="82.167" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 003</span></div>
+        <div class="hud__title" id="hud-title">Ascenseur</div>
+        <div class="hud__clock" id="hud-clock">12e étage</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Vitesse</span><b id="hud-count-v">0,00 m/s</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- 01 · MENACE : ce qui suit un point de la scène -->
+      <div id="chip-keep" class="chip chip--live is-veille"><span>Il en reste</span><b>5</b></div>
+      <div id="chip-depth" class="chip chip--live"><span>Vide</span><b>36 m</b></div>
+      <div id="chip-speed" class="chip chip--live"><span>En bas</span><b>≈ 100 km/h</b></div>
+      <div id="chip-date" class="chip chip--live is-veille"><span>Depuis</span><b>1854</b></div>
+
+      <!-- 02 · AUTOPSIE -->
+      <div id="reveal">
+        <div class="kicker">Son nom</div>
+        <div id="reveal-main" class="is-veille">Parachute</div>
+      </div>
+
+      <section id="gauge" class="panel">
+        <div class="panel__h"><span>Limiteur · vitesse de la cabine</span><span id="gauge-v">0,00 m/s</span></div>
+        <div id="gauge-track">
+          <div id="gauge-fill"></div>
+          <div id="gauge-th" data-layout-allow-overflow><span>Seuil · 115 %</span></div>
+        </div>
+        <div id="gauge-status">
+          <span id="gauge-s0" class="is-veille">● Vitesse normale — elle tourne</span>
+          <span id="gauge-s1" class="is-signal">● Survitesse — blocage</span>
+        </div>
+      </section>
+
+      <!-- 03 · RÉPONSE -->
+      <div id="chip-you" class="chip chip--live"><span>Poids ressenti</span><b>0 kg</b></div>
+      <div id="chip-drop" class="chip chip--live is-veille"><span>Chute</span><b id="chip-drop-v">0 cm</b></div>
+
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Un ascenseur tient à</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">Un fil<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Ses rails</span>
+          </span>
+        </div>
+      </div>
+
+      <div id="chip-otis" class="chip chip--live"><span>New York</span><b>1854</b></div>
+
+      <!-- appels à l'action : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Like · la vidéo remonte</span><span id="net-n">Cabines rassurées 1/12</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <div id="cta-field">
+        <div class="kicker">Commentaire · si ça tombait ?</div>
+        <div id="cta-field-v"><span id="cta-typed" class="is-signal">JE SAUTE</span><span id="cta-caret"></span></div>
+      </div>
+
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 004</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <div id="next-fact"><b>30 mA</b><span>au-delà,<br />ton cœur peut s'arrêter.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
