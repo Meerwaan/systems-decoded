@@ -1,12 +1,13 @@
 // DOSSIER __ID__ — __TITLE__.
-// Squelette d'épisode : un plan continu, trois actes, tout calé sur le script (T.at).
-// Remplace le modèle de démonstration par le vrai système (voir episodes/001-detecteur-fumee/src/model.js).
+// Squelette d'épisode : l'accroche A·B·C en cartes, trois actes, tout calé sur le script (T.at).
+// Remplace le modèle de démonstration par le vrai système, et étudie episodes/002-airbag/src/main.js :
+// deux décors (cut), un grand objet aux rayons X (road.js), des plans qui naissent les uns des autres.
 import * as THREE from "three";
 import { BRAND } from "@kit/brand.js";
 import { createStage } from "@kit/stage.js";
 import { makeSurface, makePool, makeMotes } from "@kit/atmo.js";
 import { makePart, addMesh, solid, glow, setGlow, explode } from "@kit/build3d.js";
-import { buildCaptions, createCallouts, setAct, brandHud, pad2 } from "@kit/overlay.js";
+import { buildCaptions, buildHook, createCallouts, setAct, brandHud, pad2 } from "@kit/overlay.js";
 import { makeTiming } from "@kit/timing.js";
 
 const EP = window.__EPISODE;
@@ -33,7 +34,7 @@ function buildModel() {
 
 function build() {
   const END = EP.duration;
-  const stage = createStage($("stage"));
+  const stage = createStage($("stage"), { scale: 9 }); // scale ≈ rayon du sujet, en cm : cadre les ombres
   const { scene, cam, lights } = stage;
   window.SD.stage = stage; // lets the cover exporter pose the camera
   const surface = makeSurface();
@@ -97,7 +98,12 @@ function build() {
   setAct(tl, 1, t.rewind + 0.2);
 
   brandHud(tl, { decodedAt: t.chute + 0.6, resetAt: t.rewind + 0.2 });
-  buildCaptions($("captions"), EP, tl);
+  // l'accroche (A, puis B·C) est à l'écran en entier avant d'être dite ; les sous-titres prennent la suite.
+  // Sur la dernière image, la première carte est revenue : le film reboucle.
+  const HOOK = ["accroche", "promesse"];
+  const handOver = END - 0.34;
+  buildHook($("hook"), EP, tl, { beats: HOOK, loopAt: handOver });
+  buildCaptions($("captions"), EP, tl, { skip: HOOK, lastEnd: handOver });
   shots.sort((a, b) => a.at - b.at);
   shots.forEach((s, i) => {
     const room = (shots[i + 1]?.at ?? END) - s.at;
@@ -109,8 +115,10 @@ function build() {
   const mix = new THREE.Color();
   const bg0 = new THREE.Color(BRAND.bg);
   const bgFire = new THREE.Color(0x150b07);
+  stage.grade.gel.copy(signal); // la teinte de danger passe par l'étalonnage : les noirs restent noirs
   stage.onUpdate((time) => {
     tw.time(time);
+    stage.grade.gelAmount = S.fire * 0.2;
     explode(partList, S.explode);
     setGlow(model.heart, S.heart);
     mix.copy(veille).lerp(signal, S.fire);

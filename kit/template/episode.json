@@ -3,8 +3,8 @@
   "slug": "__SLUG__",
   "title": "__TITLE__",
   "fps": 30,
-  "lead": 0.35,
-  "tail": 0.55,
+  "lead": 0.2,
+  "tail": 0.45,
   "voice": {
     "name": "Eric",
     "voiceId": "9osbeK6KzhDRV0yX4rTq",
@@ -22,8 +22,11 @@
   },
   "sources": [],
   "beats": [
-    { "id": "hook",    "text": "Une heure, un lieu, une personne. Et un *danger* qu'elle ne voit pas.",
-                       "vo": "[ominous] Une heure, un lieu, une personne. Et un danger... qu'elle ne voit pas." },
+    { "id": "accroche", "text": "Une phrase *choc*, pour toi, au présent.",
+                       "vo": "[tense] Une phrase choc, pour toi, au présent.",
+                       "voAlt": ["[firm, matter-of-fact] Une phrase choc, pour toi, au présent."] },
+    { "id": "promesse", "text": "Voilà ce que tu y +gagnes+. À une *condition*.",
+                       "vo": "[low, grave voice] Voilà ce que tu y gagnes. [short pause] [ominous] À une condition." },
     { "id": "menace",  "text": "Dans [3|trois] minutes, il sera *trop tard*.",
                        "vo": "[ominous] Dans trois minutes... il sera TROP tard." },
     { "id": "boite",   "text": "Une seule chose peut encore l'arrêter. Et elle cache +un secret+.",
@@ -43,7 +46,7 @@
     { "id": "abo",     "text": "+Abonne-toi+ : le prochain système qu'on ouvre est encore plus étrange.",
                        "vo": "[ominous] Abonne-toi : le prochain système qu'on ouvre est encore plus étrange." },
     { "id": "boucle",  "text": "Parce que tout commence toujours par…",
-                       "vo": "[ominous] Parce que tout commence toujours par..." }
+                       "vo": "[serious] Parce que tout commence toujours par..." }
   ],
   "cues": {
     "explode": "ouvre:on",

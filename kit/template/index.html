@@ -7,15 +7,12 @@
     <link rel="stylesheet" href="gen/brand.css" />
     <script src="gen/gsap.min.js"></script>
     <style>
-      /* ── overlays propres à cet épisode. Un seul élément à la fois dans la zone haute (top 386 → ~750). ── */
-      #reveal { position: absolute; left: 64px; right: 64px; top: 392px; }
-      #reveal-main { margin-top: 34px; font: 800 118px/1 var(--display); text-transform: uppercase; }
+      /* Les dispositifs récurrents (dont #reveal) sont stylés dans kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
     </style>
   </head>
   <body>
     <div id="root" data-composition-id="main" data-start="0" data-duration="60" data-width="1080" data-height="1920">
       <canvas id="stage" width="1080" height="1920"></canvas>
-      <div id="tint" class="layer"></div>
       <div id="vignette" class="layer"></div>
       <svg id="leaders" viewBox="0 0 1080 1920"></svg>
 
@@ -36,6 +33,7 @@
       </div>
 
       <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
       <div id="captions"></div>
       <div id="flash" class="layer"></div>
 
