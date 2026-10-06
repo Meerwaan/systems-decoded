@@ -1,10 +1,13 @@
-// Audio decoding + prosody measurement, with no ffmpeg dependency:
-// the MP3 is decoded by the headless Chrome that HyperFrames already ships.
+// Audio decoding + prosody measurement. Decoding goes through ffmpeg when there is one;
+// otherwise through the headless Chrome that HyperFrames already ships.
 import fs from "node:fs";
 import { launchChrome } from "./chrome.mjs";
+import { decodePcm } from "./ffmpeg.mjs";
 
-/** Decode any browser-playable audio file to mono Float32 at `rate` Hz. */
+/** Decode any audio file to mono Float32 at `rate` Hz. */
 export async function decodeAudio(file, rate = 16000) {
+  const pcm = decodePcm(file, rate);
+  if (pcm) return pcm;
   const browser = await launchChrome();
   try {
     const page = await browser.newPage();
@@ -103,8 +106,12 @@ const sd = (xs) => {
 
 /**
  * Objective read on "is this take flat?".
- * `segments`: [{ id, start, end, letters }] (seconds in the audio file).
+ * `segments`: [{ id, start, end, letters, marks? }] (seconds in the audio file); `marks` are the
+ *   words the script asks to stress: [{ key, start, end }].
  * `tags`: [{ text, start, end }] spans of audio tags, to check none was read aloud.
+ * Per segment: register (mean pitch, semitones from the take's median), spread (pitch movement),
+ * level (dB under the take's peak), rate (letters per second of speech), pause (longest silence),
+ * tail (where the last third of a second sits against the rest: < 0 the phrase falls, > 0 it stays up).
  */
 export function prosodyReport(frames, segments = [], tags = []) {
   const peak = quantile(frames.map((f) => f.db).sort((a, b) => a - b), 0.98);
@@ -135,13 +142,34 @@ export function prosodyReport(frames, segments = [], tags = []) {
     const fr = frames.filter((f) => f.t >= seg.start && f.t <= seg.end);
     const hz = semis(fr.filter((f) => f.f0 > 0 && f.db > gate).map((f) => f.f0));
     const talk = fr.filter((f) => f.db > gate);
+    let quiet = 0;
+    let pause = 0;
+    for (const f of fr) {
+      quiet = f.db <= gate ? quiet + 0.01 : 0;
+      pause = Math.max(pause, quiet);
+    }
+    const register = hz.length ? mean(hz) : 0;
+    const level = talk.length ? mean(talk.map((f) => f.db)) : peak - 60;
     return {
       id: seg.id,
-      register: hz.length ? mean(hz) : 0,
+      pause,
+      register,
       spread: hz.length ? sd(hz) : 0,
-      level: talk.length ? mean(talk.map((f) => f.db)) - peak : -60,
+      level: level - peak,
+      db: level,
       rate: seg.letters / Math.max(0.2, talk.length * 0.01),
       voiced: fr.length ? hz.length / fr.length : 0,
+      seconds: seg.end - seg.start,
+      tail: hz.length >= 60 ? mean(hz.slice(-30)) - register : 0,
+      marks: (seg.marks ?? []).map((mark) => {
+        const inside = frames.filter((f) => f.t >= mark.start - 0.02 && f.t <= mark.end + 0.02 && f.db > gate);
+        const pitch = semis(inside.filter((f) => f.f0 > 0).map((f) => f.f0));
+        return {
+          key: mark.key,
+          level: inside.length ? mean(inside.map((f) => f.db)) - level : 0,
+          pitch: pitch.length ? Math.max(...pitch) - register : 0,
+        };
+      }),
     };
   });
 
