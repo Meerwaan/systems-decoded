@@ -18,11 +18,14 @@ const el = (tag, cls, text) => {
 /**
  * Word-by-word captions. Chunks break on punctuation, on a breath, or when the line
  * gets long; the word being spoken lights up (accent colour for marked words).
+ * `skip`: beats that have their own text on screen (the hook cards). `lastEnd`: when the last
+ * line leaves, if not on the final frame (a film that loops hands the frame back to its first card).
  */
-export function buildCaptions(container, EP, tl, { maxChars = 19, maxWords = 4 } = {}) {
+export function buildCaptions(container, EP, tl, { maxChars = 17, maxWords = 4, skip = [], lastEnd } = {}) {
   // 1. phrases: runs of words between punctuation or a breath
   const phrases = [];
   for (const beat of EP.beats) {
+    if (skip.includes(beat.id)) continue;
     let cur = [];
     beat.words.forEach((w, i) => {
       cur.push(w);
@@ -58,7 +61,7 @@ export function buildCaptions(container, EP, tl, { maxChars = 19, maxWords = 4 }
     const start = Math.max(0, words[0].s - 0.06);
     const nextStart = chunks[i + 1] ? chunks[i + 1][0].s - 0.06 : EP.duration;
     // the last line holds to the final frame: on a loop it hands over to the first one
-    const end = chunks[i + 1] ? Math.min(nextStart, words.at(-1).e + 0.5) : EP.duration;
+    const end = chunks[i + 1] ? Math.min(nextStart, words.at(-1).e + 0.5) : (lastEnd ?? EP.duration);
     const cap = el("div", "cap");
     const line = el("span", "cap__line");
     cap.append(line);
@@ -77,6 +80,94 @@ export function buildCaptions(container, EP, tl, { maxChars = 19, maxWords = 4 }
     tl.set(cap, { visibility: "hidden" }, end);
   });
   return chunks;
+}
+
+/**
+ * The hook, as cards: each sentence of the opening beats is on screen whole — dim — before it is
+ * spoken, and lights up word by word. Someone scrolling with the sound off reads the hook on the
+ * very first frame; someone listening sees it land. A sentence of one or two words ("50 km/h.")
+ * becomes the small line above the next one.
+ *   beats    ids of the opening beats, in order (the A, B, C of the hook)
+ *   loopAt   when the first card comes back, unlit, so that the last frame is the first one
+ * Returns when the last card leaves (the captions take over from there).
+ */
+export function buildHook(container, EP, tl, { beats, maxChars = 19, loopAt } = {}) {
+  const width = (words) => words.reduce((n, w) => n + w.t.length + 1, -1);
+  // 1. sentences, a very short one riding on top of the next
+  const cards = [];
+  let kicker = null;
+  for (const id of beats) {
+    const beat = EP.beats.find((b) => b.id === id);
+    let cur = [];
+    beat.words.forEach((w, i) => {
+      cur.push(w);
+      if (w.p !== 2 && i < beat.words.length - 1) return;
+      if (cur.length <= 2 && i < beat.words.length - 1 && !kicker) kicker = cur;
+      else {
+        cards.push({ kicker, words: cur });
+        kicker = null;
+      }
+      cur = [];
+    });
+  }
+  // 2. lines of similar length, broken at a comma when there is one
+  const linesOf = (words) => {
+    const n = Math.ceil(width(words) / maxChars);
+    const target = width(words) / n;
+    const lines = [[]];
+    for (const w of words) {
+      const cur = lines.at(-1);
+      const next = width([...cur, w]);
+      const full = cur.length && (next > maxChars || (cur.at(-1).p === 1 && width(cur) > target * 0.7) || (n > 1 && lines.length < n && Math.abs(width(cur) - target) < Math.abs(next - target)));
+      if (full) lines.push([w]);
+      else cur.push(w);
+    }
+    return lines;
+  };
+
+  const make = (card, lit) => {
+    const node = el("div", "hook");
+    const spans = new Map();
+    const row = (words, cls) => {
+      const line = el("div", cls);
+      for (const w of words) {
+        const span = el("span", "hook__w", w.t);
+        if (lit) spans.set(w, span);
+        line.append(span, " ");
+      }
+      node.append(line);
+    };
+    if (card.kicker) row(card.kicker, "hook__k");
+    for (const line of linesOf(card.words)) row(line, "hook__l");
+    container.append(node);
+    return { node, spans };
+  };
+
+  let leaves = 0;
+  cards.forEach((card, i) => {
+    const all = [...(card.kicker ?? []), ...card.words];
+    const { node, spans } = make(card, true);
+    const from = i === 0 ? 0 : all[0].s - 0.16;
+    const to = cards[i + 1] ? [...(cards[i + 1].kicker ?? []), ...cards[i + 1].words][0].s - 0.16 : all.at(-1).e + 0.4;
+    leaves = to;
+    tl.set(node, { visibility: "visible" }, from);
+    // the first card is simply there (it is the frame the feed shows); the others come up
+    if (i > 0) tl.fromTo(node, { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.22, ease: "power3.out" }, from);
+    for (const w of all) {
+      const span = spans.get(w);
+      tl.to(span, { opacity: 1, color: TONE[w.a] ?? INK, duration: 0.08, ease: "none" }, Math.max(from, w.s - 0.03));
+      if (w.a) tl.fromTo(span, { scale: 1 }, { scale: 1.08, duration: 0.09, ease: "power2.out", yoyo: true, repeat: 1 }, Math.max(from, w.s - 0.03));
+    }
+    tl.to(node, { opacity: 0, y: -22, duration: 0.14, ease: "power2.in" }, to - 0.14);
+    tl.set(node, { visibility: "hidden" }, to);
+  });
+
+  if (loopAt != null && cards.length) {
+    const { node } = make(cards[0], false);
+    tl.set(node, { visibility: "visible" }, loopAt);
+    tl.fromTo(node, { opacity: 0 }, { opacity: 1, duration: Math.max(0.05, EP.duration - loopAt), ease: "power1.out" }, loopAt);
+  }
+  return leaves;
 }
 
 /**
@@ -139,7 +230,8 @@ export function createCallouts(stage, layer, svg) {
 /** Light one act in the HUD ("01 MENACE / 02 AUTOPSIE / 03 RÉPONSE"). */
 export function setAct(tl, n, at) {
   document.querySelectorAll(".hud__acts span").forEach((span, i) => {
-    tl.to(span, { opacity: i + 1 === n ? 1 : 0.4, color: i + 1 === n ? INK : DIM, duration: 0.3 }, at);
+    // at the very start the act is simply lit: a film that loops must not fade its header in again
+    tl.to(span, { opacity: i + 1 === n ? 1 : 0.4, color: i + 1 === n ? INK : DIM, duration: at > 0 ? 0.3 : 0 }, at);
   });
 }
 

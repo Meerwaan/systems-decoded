@@ -22,6 +22,15 @@
   --signal: #ff5b2e;
   --display: "Barlow Condensed", sans-serif;
   --mono: "JetBrains Mono", monospace;
+
+  /* Where TikTok leaves us room (measured on a tall iPhone: the app crops ~53 px off each side,
+     its search bar covers the top down to ~205, its buttons the right edge from 880 to 1760,
+     the account name and caption everything under ~1620). */
+  --safe-l: 88px;    /* text never closer to the left edge */
+  --safe-r: 88px;    /* …nor to the right edge, above the buttons */
+  --clear-r: 190px;  /* right margin of anything that sits beside the button column */
+  --hud-top: 236px;  /* the header starts under the search bar */
+  --slot-top: 436px; /* the top slot: one panel at a time, between the header and the subject */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -49,7 +58,7 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 #tint { background: radial-gradient(ellipse 90% 70% at 50% 45%, rgba(255, 91, 46, 0) 30%, rgba(255, 91, 46, 0.5) 100%); opacity: 0; }
 
 /* ─────────────────────────────────────────────── HUD (the dossier header) */
-#hud { position: absolute; left: 64px; right: 64px; top: 184px; height: 190px; }
+#hud { position: absolute; left: var(--safe-l); right: var(--safe-r); top: var(--hud-top); height: 190px; }
 .hud__tag {
   display: flex; align-items: center; gap: 14px;
   font: 500 24px/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-dim);
@@ -73,7 +82,7 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 .hud__brand { margin-left: auto; color: var(--ink-dim); }
 
 /* ─────────────────────────────────────────────── captions (word by word) */
-#captions { position: absolute; left: 80px; right: 160px; top: 1248px; height: 240px; }
+#captions { position: absolute; left: var(--safe-l); right: var(--clear-r); top: 1248px; height: 240px; }
 .cap { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; visibility: hidden; }
 .cap__line {
   display: block; width: 100%; text-align: center;
@@ -141,7 +150,7 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 #bigclock { top: 868px; }
 #bigclock-sec { font-size: 96px; letter-spacing: -0.02em; color: var(--ink-dim); }
 
-#senses { left: 64px; top: 386px; width: 640px; }
+#senses { left: var(--safe-l); top: var(--slot-top); width: 640px; }
 .sense { display: flex; align-items: baseline; justify-content: space-between; margin-top: 26px; }
 .sense__n { font: 700 60px/1 var(--display); letter-spacing: 0.02em; text-transform: uppercase; }
 .sense__s { display: flex; align-items: center; gap: 12px; font: 500 24px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; }
@@ -151,7 +160,7 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 #bigcount .kicker { color: var(--signal); }
 #bigcount-v { position: static; margin-top: 54px; color: var(--signal); }
 
-#scope { left: 64px; right: 64px; top: 386px; height: 258px; }
+#scope { left: var(--safe-l); right: var(--safe-r); top: var(--slot-top); height: 258px; }
 #scope-plot { position: absolute; left: 26px; right: 26px; top: 64px; bottom: 62px; border-bottom: 2px solid var(--ink-faint); }
 #scope-th { position: absolute; left: 0; right: 0; bottom: 62%; border-top: 2px dashed var(--signal); }
 #scope-th span { position: absolute; left: 0; top: -30px; font: 500 19px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--signal); }
@@ -160,44 +169,84 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 #scope-status { position: absolute; left: 26px; right: 26px; bottom: 20px; height: 24px; font: 700 23px/1 var(--mono); letter-spacing: 0.12em; }
 #scope-status span { position: absolute; left: 0; top: 0; white-space: nowrap; }
 
-#db { position: absolute; left: 0; right: 0; top: 420px; text-align: center; color: var(--signal); }
+#db { position: absolute; left: 0; right: 0; top: calc(var(--slot-top) + 34px); text-align: center; color: var(--signal); }
 #db-v { position: static; display: inline-block; font-size: 340px; }
 #db-u { font: 800 130px/1 var(--display); margin-left: 14px; }
 #db .kicker { margin-top: 46px; color: var(--ink); }
 
-#retitle { position: absolute; left: 64px; right: 64px; top: 392px; }
+#retitle { position: absolute; left: var(--safe-l); right: var(--safe-r); top: calc(var(--slot-top) + 6px); }
 #retitle-main { margin-top: 34px; font: 800 118px/1 var(--display); text-transform: uppercase; letter-spacing: 0.005em; }
 #retitle-slot { position: relative; display: block; height: 118px; margin-top: 14px; }
 #retitle-slot span { position: absolute; left: 0; top: 0; white-space: nowrap; }
 #retitle-strike { position: absolute; left: -8px; right: -8px; top: 58px; height: 10px; background: var(--signal); transform-origin: 0 50%; }
 
-#co-count { position: absolute; left: 64px; top: 392px; }
+#co-count { position: absolute; left: var(--safe-l); top: calc(var(--slot-top) + 6px); }
 #co-count .kicker { color: var(--veille); }
 #co-count b { display: block; margin-top: 44px; font: 800 150px/1 var(--mono); letter-spacing: -0.04em; color: var(--veille); }
 
-.rail { position: absolute; left: 928px; width: 60px; height: 44px; display: flex; gap: 6px; color: var(--veille); }
+.rail { position: absolute; left: 832px; width: 60px; height: 44px; display: flex; gap: 6px; color: var(--veille); } /* just left of TikTok's buttons, at their height */
 .rail i { display: block; width: 18px; height: 44px; background: currentColor; clip-path: polygon(0 0, 100% 50%, 0 100%, 0 78%, 52% 50%, 0 22%); }
-#rail-follow { top: 1010px; }
-#rail-like { top: 1160px; }
-#rail-comment { top: 1296px; }
+#rail-follow { top: 948px; }
+#rail-like { top: 1112px; }
+#rail-comment { top: 1261px; }
 
-#net { left: 64px; right: 64px; top: 386px; }
+#net { left: var(--safe-l); right: var(--safe-r); top: var(--slot-top); }
 #net-grid { position: relative; display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px 0; margin-top: 26px; justify-items: center; }
 .tile { position: relative; width: 104px; height: 104px; border-radius: 50%; border: 2.5px dashed var(--ink-faint); }
 .tile__on { position: absolute; inset: -2.5px; border-radius: 50%; border: 2.5px solid var(--veille); }
 .tile__dot { position: absolute; left: 50%; top: 50%; width: 20px; height: 20px; margin: -10px 0 0 -10px; border-radius: 50%; background: var(--veille); box-shadow: 0 0 20px var(--veille); }
 .tile__you { position: absolute; left: 0; right: 0; top: 66px; text-align: center; font: 700 17px/1 var(--mono); letter-spacing: 0.14em; color: var(--veille); }
 #net-wave { position: absolute; left: 0; top: 0; width: 104px; height: 104px; margin-left: calc((100% / 6 - 104px) / 2); border-radius: 50%; border: 3px solid var(--veille); }
-#cta-field { position: absolute; left: 64px; right: 64px; top: 386px; padding: 22px 26px 26px; border: 2px solid var(--ink-faint); background: rgba(7, 10, 12, 0.82); }
+#cta-field { position: absolute; left: var(--safe-l); right: var(--safe-r); top: var(--slot-top); padding: 22px 26px 26px; border: 2px solid var(--ink-faint); background: rgba(7, 10, 12, 0.82); }
 #cta-field-v { margin-top: 30px; height: 70px; font: 800 66px/70px var(--mono); letter-spacing: 0; }
 #cta-field-v span { display: inline-block; vertical-align: top; }
 #cta-typed { width: 0ch; height: 70px; overflow: hidden; white-space: nowrap; }
 #cta-caret { width: 6px; height: 62px; margin: 4px 0 0 8px; background: var(--veille); }
 
-#next { position: absolute; left: 64px; right: 64px; top: 392px; padding: 30px 34px 34px; border: 2px solid var(--ink-faint); background: rgba(7, 10, 12, 0.86); }
+#next { position: absolute; left: var(--safe-l); right: var(--safe-r); top: calc(var(--slot-top) + 6px); padding: 30px 34px 34px; border: 2px solid var(--ink-faint); background: rgba(7, 10, 12, 0.86); }
 #next-title { margin-top: 22px; font: 800 96px/0.95 var(--display); text-transform: uppercase; }
 #next-redact { display: inline-block; width: 520px; height: 78px; background: var(--ink); vertical-align: -8px; transform-origin: 0 50%; }
 #next-fact { margin-top: 26px; display: flex; align-items: baseline; gap: 22px; color: var(--signal); }
 #next-fact b { font: 800 150px/0.86 var(--mono); letter-spacing: -0.04em; }
 #next-fact span { font: 500 26px/1.25 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; }
 #next-cta { margin-top: 30px; display: flex; justify-content: space-between; align-items: center; font: 700 28px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--veille); }
+
+/* ─────────────────────────────────────────────── THE HOOK (buildHook)
+   The opening sentences as cards: whole on screen before they are spoken (readable with the
+   sound off, on the very first frame), lit word by word. Same zone as the captions, which take
+   over once the hook is said. */
+#hook { position: absolute; left: var(--safe-l); right: var(--clear-r); top: 1186px; height: 356px; }
+.hook {
+  position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; text-align: center; visibility: hidden;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.55), 0 0 30px rgba(0, 0, 0, 0.95), 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.hook__k { margin-bottom: 18px; font: 700 46px/1 var(--mono); letter-spacing: 0.04em; text-transform: uppercase; }
+.hook__l { font: 800 88px/1.02 var(--display); letter-spacing: 0.004em; word-spacing: 0.05em; text-transform: uppercase; }
+.hook__w { display: inline-block; color: var(--ink); opacity: 0.5; }
+
+/* #versus   two durations side by side: the bar that is too long is the story */
+#versus { left: var(--safe-l); right: var(--safe-r); top: var(--slot-top); }
+.vs { margin-top: 24px; }
+.vs__h { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; }
+.vs__n { font: 700 50px/1 var(--display); letter-spacing: 0.02em; text-transform: uppercase; white-space: nowrap; }
+.vs__v { font: 700 40px/1 var(--mono); letter-spacing: -0.01em; white-space: nowrap; }
+.vs__track { margin-top: 12px; height: 20px; background: rgba(233, 228, 216, 0.1); }
+.vs__bar { height: 100%; background: currentColor; transform-origin: 0 50%; }
+
+/* #gauge    one live value against the one threshold that matters (the film sets the fill every frame) */
+#gauge { left: var(--safe-l); right: var(--safe-r); top: var(--slot-top); }
+#gauge-v { font: 700 30px/1 var(--mono); letter-spacing: -0.01em; color: var(--ink); }
+#gauge-track { position: relative; margin-top: 46px; height: 26px; background: rgba(233, 228, 216, 0.1); }
+#gauge-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; background: var(--veille); transform-origin: 0 50%; }
+#gauge-th { position: absolute; top: -14px; bottom: -14px; width: 0; border-left: 3px dashed var(--signal); }
+#gauge-th span { position: absolute; left: 12px; top: -20px; white-space: nowrap; font: 500 19px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--signal); }
+#gauge-status { position: relative; margin-top: 28px; height: 24px; font: 700 23px/1 var(--mono); letter-spacing: 0.12em; }
+#gauge-status span { position: absolute; left: 0; top: 0; white-space: nowrap; }
+
+/* #reveal   the thing gets its name */
+#reveal { position: absolute; left: var(--safe-l); right: var(--safe-r); top: calc(var(--slot-top) + 6px); }
+#reveal-main { margin-top: 30px; font: 800 150px/0.95 var(--display); letter-spacing: 0.005em; text-transform: uppercase; }
+
+/* a chip that follows a point of the 3D scene and shows a live value (placed by the film every frame) */
+.chip--live { left: 0; top: 0; color: var(--signal); font-size: 26px; }
+.chip--live b { font: 700 42px/1 var(--mono); letter-spacing: -0.02em; }
