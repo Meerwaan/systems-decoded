@@ -16,7 +16,10 @@
     "qa": "node scripts/sd.mjs qa",
     "brand": "node scripts/sd.mjs brand",
     "cover": "node scripts/sd.mjs cover",
-    "front": "node scripts/sd.mjs front"
+    "front": "node scripts/sd.mjs front",
+    "credits": "node scripts/sd.mjs credits",
+    "review": "node scripts/sd.mjs review",
+    "look": "node scripts/sd.mjs look"
   },
   "repository": {
     "type": "git",
