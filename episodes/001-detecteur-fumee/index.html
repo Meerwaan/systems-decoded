@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · 001 · Détecteur de fumée</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (panneaux, compteurs, CTA) sont stylés dans kit/brand.css.
+         Ici : seulement ce qui n'existe que dans cet épisode. */
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="78.8" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="fireglow"></div>
+      <div id="tint" class="layer"></div>
+      <div id="vignette" class="layer"></div>
+
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot" id="hud-dot"></i><span>Dossier 001</span></div>
+        <div class="hud__title" id="hud-title">Détecteur de fumée</div>
+        <div class="hud__clock" id="hud-clock">03:07:20</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Hors de contrôle dans</span><b id="hud-count-v">03:00</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- 01 · MENACE -->
+      <div id="bigclock" class="mega"><span id="bigclock-hm">03:07</span><span id="bigclock-sec">:20</span></div>
+
+      <section id="senses" class="panel">
+        <div class="panel__h"><span>Toi · capteurs</span><span>Sommeil profond</span></div>
+        <div class="sense" id="sense-vue"><span class="sense__n">Vue</span><span class="sense__s is-signal"><i></i>Fermée</span></div>
+        <div class="sense" id="sense-odorat"><span class="sense__n">Odorat</span><span class="sense__s is-signal"><i></i>Hors ligne</span></div>
+        <div class="sense" id="sense-ouie">
+          <span class="sense__n">Ouïe</span>
+          <span class="sense__s is-veille" id="sense-ouie-s"><i></i><span id="sense-ouie-t">En veille</span></span>
+        </div>
+      </section>
+
+      <div id="bigcount">
+        <div class="kicker">Feu hors de contrôle dans</div>
+        <div id="bigcount-v" class="mega">03:00</div>
+      </div>
+
+      <!-- 02 · AUTOPSIE -->
+      <section id="scope" class="panel">
+        <div class="panel__h"><span>Capteur · lumière reçue</span><span id="scope-n">Flash 0</span></div>
+        <div id="scope-plot">
+          <div id="scope-th" data-layout-allow-overflow><span>Seuil d'alarme</span></div>
+        </div>
+        <div id="scope-status">
+          <span id="scope-s0" class="is-veille">● Noir complet — rien à signaler</span>
+          <span id="scope-s1" class="is-signal">● Lumière détectée — vérification</span>
+          <span id="scope-s2" class="is-signal">● Fumée confirmée — alarme</span>
+        </div>
+      </section>
+
+      <!-- 03 · RÉPONSE -->
+      <div id="db">
+        <div><span id="db-v" class="mega mega--display">85</span><span id="db-u">dB</span></div>
+        <div class="kicker" data-layout-allow-overlap>À 3 mètres · norme EN 14604</div>
+      </div>
+
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Ce n'est pas un</div>
+        <div id="retitle-main">
+          <span>Détecteur de</span>
+          <span id="retitle-slot">
+            <span id="retitle-a">Fumée<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Lumière</span>
+          </span>
+        </div>
+      </div>
+
+      <div id="co-count">
+        <div class="kicker">Il te reste, pour sortir</div>
+        <b id="co-count-v">02:10</b>
+      </div>
+
+      <!-- appels à l'action : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Like · la vidéo remonte</span><span id="net-n">Plafonds équipés 1/12</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <div id="cta-field">
+        <div class="kicker">Commentaire · ton dernier test ?</div>
+        <div id="cta-field-v"><span id="cta-typed" class="is-signal">JAMAIS</span><span id="cta-caret"></span></div>
+      </div>
+
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 002</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <div id="next-fact"><b>30</b><span>millisecondes<br />pour te sauver</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <div id="callouts" class="layer"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
