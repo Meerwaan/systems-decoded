@@ -179,7 +179,8 @@ const GRADE = {
  * `far`     how far the camera sees, in scene units.
  * `keySize` the key light as a softbox: its half-angle seen from the subject, in degrees (0 = a point,
  *           shadows cut with a razor; 2–3 = crisp where a part touches, soft a hand's width away).
- *           Free: each instant of the shutter sees the key from another point of the box. Also `stage.keySize`.
+ *           Free: each instant of the shutter sees the key from another point of the box. `stage.keySize`
+ *           changes it along the film; ask for it here first, the shadow map is cut for it.
  */
 export function createStage(canvas, { bloom = [0.6, 0.7, 1.0], fog = 0.0032, scale = 10, samples = 16, shutter = 0.5, far = 900, keySize = 0 } = {}) {
   const { W, H } = BRAND;
@@ -205,7 +206,8 @@ export function createStage(canvas, { bloom = [0.6, 0.7, 1.0], fog = 0.0032, sca
     fill: new THREE.DirectionalLight(0x8fa6ff, 0.2),
   };
   lights.key.castShadow = true;
-  lights.key.shadow.mapSize.set(4096, 4096);
+  // a softbox is sixteen shadows laid over each other: a coarser map blurs each one just enough to melt their steps into one penumbra
+  lights.key.shadow.mapSize.setScalar(keySize ? 2048 : 4096);
   lights.key.shadow.bias = -0.0004;
   scene.add(lights.hemi, lights.key, lights.key.target, lights.rim, lights.rim.target, lights.fill, lights.fill.target);
 

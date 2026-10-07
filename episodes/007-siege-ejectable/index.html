@@ -7,7 +7,47 @@
     <link rel="stylesheet" href="gen/brand.css" />
     <script src="gen/gsap.min.js"></script>
     <style>
-      /* Les dispositifs récurrents (dont #reveal) sont stylés dans kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+      /* Les dispositifs récurrents sont stylés dans kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+
+      /* le second compteur de l'en-tête : ce que pèse ton corps (encre ; signal sous zéro et au coup du canon — main.js) */
+      #hud-count { color: var(--ink); }
+
+      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
+      #chip-toi, #chip-you, #chip-alt, #chip-speed, #chip-brain { color: var(--ink); }
+      .tag { padding: 8px 16px 8px 12px; gap: 12px; color: var(--veille); }
+      .tag b { font-size: 36px; }
+
+      /* « c'est arrivé » : le tampon du dossier, puis ses trois lignes */
+      #stamp { position: absolute; left: var(--safe-l); top: calc(var(--slot-top) + 8px); padding: 26px 30px 24px; border: 2px solid var(--ink-faint); background: rgba(7, 10, 12, 0.8); }
+      #stamp-main { display: inline-block; padding: 6px 22px 12px; border: 6px solid var(--signal); outline: 2px solid var(--signal); outline-offset: 6px; color: var(--signal); font: 800 100px/1 var(--display); letter-spacing: 0.02em; text-transform: uppercase; white-space: nowrap; transform-origin: 0 0; }
+      .stamp__l { margin-top: 16px; font: 500 25px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; color: var(--ink); }
+      #stamp-1 { margin-top: 34px; }
+      .stamp__l i { font-style: normal; color: var(--ink-dim); }
+
+      /* 03 · la frise des deux secondes : un trait de 0 à 2 s qui se remplit avec le chrono (main.js), quatre repères.
+         Leurs noms ne sont pas écrits d'avance : chacun arrive quand la voix y est (main.js) — seuls « 0 s » et « 2 s » attendent, éteints */
+      #frise { left: var(--safe-l); right: var(--safe-r); top: var(--slot-top); height: 156px; padding: 0; }
+      #frise-track { position: absolute; left: 34px; right: 34px; top: 34px; height: 10px; background: var(--ink-faint); }
+      #frise-fill { position: absolute; inset: 0; background: var(--veille); transform-origin: 0 50%; transform: scaleX(0); }
+      .fr { position: absolute; top: -12px; width: 0; height: 0; }
+      .fr i { position: absolute; left: -3px; top: 0; width: 6px; height: 34px; background: var(--ink-dim); }
+      .fr b { position: absolute; left: -3px; top: 46px; font: 700 40px/1 var(--mono); letter-spacing: -0.04em; white-space: nowrap; color: var(--veille); }
+      .fr span { position: absolute; left: -3px; top: 94px; font: 500 21px/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; color: var(--ink); }
+      #fr-0 b, #fr-4 b { color: var(--ink-dim); }
+      .fr--end b, .fr--end span { left: auto; right: -3px; }
+
+      /* les étiquettes de la suite */
+      #chip-empty, #chip-aboard { color: var(--ink); }
+
+      /* la chute : le titre se pose sur le haut du siège et sur une conduite qui s'allume — une ombre le porte */
+      /* (elle part du haut de l'image : les tubes clairs du canon montent derrière l'en-tête — sans elle, le libellé d'acte éteint échouait au contraste) */
+      #title-shade { position: absolute; left: 0; right: 0; top: 0; height: 840px; opacity: 0; background: linear-gradient(to bottom, rgba(7, 10, 12, 0.78) 0, rgba(7, 10, 12, 0.74) 75%, rgba(7, 10, 12, 0) 100%); }
+      /* la chute, puis les trois appels à l'action */
+      #retitle-main { font-size: 108px; }
+      #retitle-slot { height: 108px; }
+      #retitle-strike { top: 52px; }
+      #net-grid .tile:nth-child(n + 8) { display: none; } /* six vies : une seule rangée de six */
+      #next-fact span { font-size: 44px; line-height: 1.2; letter-spacing: 0.06em; } /* pas de chiffre sur ce panneau : aucun n'est encore sourcé */
     </style>
   </head>
   <body>
@@ -15,12 +55,14 @@
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
+      <div id="title-shade"></div>
       <svg id="leaders" viewBox="0 0 1080 1920"></svg>
 
       <header id="hud">
         <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 007</span></div>
         <div class="hud__title" id="hud-title">Siège éjectable</div>
-        <div class="hud__clock" id="hud-clock">00:00:00</div>
+        <div class="hud__clock" id="hud-clock">T+0,0 s</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Accélération</span><b id="hud-count-v">+1,0 g</b></div>
         <div class="hud__rule"></div>
         <nav class="hud__acts">
           <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
@@ -28,9 +70,77 @@
         </nav>
       </header>
 
-      <div id="reveal">
-        <div class="kicker">Le secret</div>
-        <div id="reveal-main">À écrire</div>
+      <!-- 01 · MENACE -->
+      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <div id="chip-handle" class="chip chip--live"><span>Poignée</span><b>Éjection</b></div>
+      <div id="chip-you" class="chip chip--live"><b>Toi</b></div>
+      <div id="chip-pilot" class="chip chip--live"><span>Pilote</span><b>Toujours à bord</b></div>
+
+      <section id="stamp">
+        <div id="stamp-main">Histoire vraie</div>
+        <div class="stamp__l" id="stamp-1">Saint-Dizier <i>·</i> 20 mars 2019</div>
+        <div class="stamp__l" id="stamp-2">Rapport d'enquête du BEA-É</div>
+        <div class="stamp__l" id="stamp-3">Passager <i>·</i> 64 ans</div>
+      </section>
+
+      <div id="chip-alt" class="chip chip--live"><span>Altitude</span><b>200 m</b></div>
+      <div id="chip-speed" class="chip chip--live"><span>Vitesse</span><b>≈ 520 km/h</b></div>
+      <div id="chip-g" class="chip chip--live"><span>Ton poids</span><b>−0,6 g</b></div>
+
+      <!-- 02 · AUTOPSIE -->
+      <div id="chip-canopy" class="chip chip--live"><span>Verrière</span><b>Ne s'ouvre pas</b></div>
+      <div id="tag-1" class="chip chip--live tag"><b>1</b><span>Canon</span></div>
+      <div id="tag-2" class="chip chip--live tag"><b>2</b><span>Fusée</span></div>
+      <div id="tag-3" class="chip chip--live tag"><b>3</b><span>Parachutes</span></div>
+      <div id="chip-brain" class="chip chip--live"><span>Ordinateur ?</span></div>
+
+      <!-- 03 · RÉPONSE : les deux secondes -->
+      <section id="frise" class="panel">
+        <div id="frise-track">
+          <i id="frise-fill"></i>
+          <div class="fr" id="fr-0" style="left: 0%"><i></i><b>0 s</b></div>
+          <div class="fr" id="fr-1" style="left: 10%"><i></i><b>0,2</b><span>Fusée</span></div>
+          <div class="fr" id="fr-2" style="left: 25%"><i></i><b>0,5</b><span>Dehors</span></div>
+          <div class="fr" id="fr-3" style="left: 75%"><i></i><b>1,5</b><span>Lâche</span></div>
+          <div class="fr fr--end" id="fr-4" style="left: 100%"><i></i><b>2 s</b><span>Ouvert</span></div>
+        </div>
+      </section>
+      <div id="chip-vert" class="chip chip--live"><span>Jusqu'à</span><b>1 éjecté sur 3</b></div>
+
+      <!-- la chute : ce qu'il y a dans le boîtier -->
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">Un ordinateur<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">De la poudre</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- appels à l'action : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Sur Rafale</span><span id="net-n">1 vie sauvée</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 008</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <div id="next-fact"><span>Il attend l'orage.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <div id="chip-aboard" class="chip chip--live"><span>Pilote</span><b>À bord</b></div>
+      <div id="chip-empty" class="chip chip--live"><span>Ta place</span><b>Vide</b></div>
+
+      <div id="cta-field">
+        <div class="kicker">Ce vol, on te l'offre : tu y vas ?</div>
+        <div id="cta-field-v"><span id="cta-typed" class="is-veille">J'Y VAIS</span><span id="cta-caret"></span></div>
       </div>
 
       <div id="callouts" class="layer"></div>

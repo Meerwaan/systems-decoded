@@ -118,8 +118,8 @@ export function captionBlocks(EP, { maxChars = 17, maxWords = 4, skip = [], minD
 }
 
 /**
- * Word-by-word captions, in blocks of one or two lines (see captionBlocks); the word being
- * spoken lights up (accent colour for marked words).
+ * Word-by-word captions, in blocks of one or two lines (see captionBlocks): each word comes up
+ * when it is said, never before (accent colour for marked words).
  * `skip`: beats that have their own text on screen (the hook cards). `lastEnd`: when the last
  * line leaves, if not on the final frame (a film that loops hands the frame back to its first card).
  */
@@ -140,6 +140,7 @@ export function buildCaptions(container, EP, tl, { maxChars = 17, maxWords = 4, 
       const line = el("span", "cap__line");
       for (const w of row) {
         const span = el("span", "cap__w", w.t);
+        span.style.color = TONE[w.a] ?? INK;
         line.append(span, " ");
         spans.push(span);
       }
@@ -148,9 +149,10 @@ export function buildCaptions(container, EP, tl, { maxChars = 17, maxWords = 4, 
     container.append(cap);
 
     tl.set(cap, { visibility: "visible" }, start);
-    tl.fromTo(box, { scale: 0.9, y: 16 }, { scale: 1, y: 0, duration: 0.18, ease: "back.out(2.2)" }, start);
+    // A word is on screen when it is said, never before (a block that lands whole reads as a slab).
+    // Each one comes up in the place the block keeps for it: the lines do not re-centre as they fill.
     words.forEach((w, k) => {
-      tl.to(spans[k], { opacity: 1, color: TONE[w.a] ?? INK, duration: 0.07, ease: "none" }, Math.max(start, w.s - 0.03));
+      tl.fromTo(spans[k], { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.14, ease: "back.out(2)" }, Math.max(start, w.s - 0.04));
     });
     tl.set(cap, { visibility: "hidden" }, end);
   });
@@ -158,12 +160,12 @@ export function buildCaptions(container, EP, tl, { maxChars = 17, maxWords = 4, 
 }
 
 /**
- * The hook, as cards: each sentence of the opening beats is on screen whole — dim — before it is
- * spoken, and lights up word by word. Someone scrolling with the sound off reads the hook on the
- * very first frame; someone listening sees it land. A sentence of one or two words ("50 km/h.")
+ * The hook, as cards: one per sentence of the opening beats, larger than the captions. Like them,
+ * each word comes up when it is said — the first frame carries no text, the picture has to stop
+ * the thumb on its own. A sentence of one or two words ("50 km/h.")
  * becomes the small line above the next one.
  *   beats    ids of the opening beats, in order (the A, B, C of the hook)
- *   loopAt   when the first card comes back, unlit, so that the last frame is the first one
+ *   loopAt   unused (kept for the films that pass it): no text on the first frame, none to hand back
  * Returns when the last card leaves (the captions take over from there).
  */
 export function buildHook(container, EP, tl, { beats, maxChars = 19, loopAt } = {}) {
@@ -256,22 +258,21 @@ export function buildHook(container, EP, tl, { beats, maxChars = 19, loopAt } = 
     const to = cards[i + 1] ? [...(cards[i + 1].kicker ?? []), ...cards[i + 1].words][0].s - 0.16 : all.at(-1).e + 0.4;
     leaves = to;
     tl.set(node, { visibility: "visible" }, from);
-    // the first card is simply there (it is the frame the feed shows); the others come up
-    if (i > 0) tl.fromTo(node, { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.22, ease: "power3.out" }, from);
+    // like the captions: each word comes up as it is said, in the place the card keeps for it
     for (const w of all) {
       const span = spans.get(w);
-      tl.to(span, { opacity: 1, color: TONE[w.a] ?? INK, duration: 0.08, ease: "none" }, Math.max(from, w.s - 0.03));
-      if (w.a) tl.fromTo(span, { scale: 1 }, { scale: 1.08, duration: 0.09, ease: "power2.out", yoyo: true, repeat: 1 }, Math.max(from, w.s - 0.03));
+      const at = Math.max(from, w.s - 0.04);
+      span.style.color = TONE[w.a] ?? INK;
+      tl.fromTo(span, { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.14, ease: "back.out(2)" }, at);
+      if (w.a) tl.fromTo(span, { scale: 1 }, { scale: 1.08, duration: 0.09, ease: "power2.out", yoyo: true, repeat: 1 }, at + 0.14);
     }
     tl.to(node, { opacity: 0, y: -22, duration: 0.14, ease: "power2.in" }, to - 0.14);
     tl.set(node, { visibility: "hidden" }, to);
   });
 
-  if (loopAt != null && cards.length) {
-    const { node } = make(cards[0], false);
-    tl.set(node, { visibility: "visible" }, loopAt);
-    tl.fromTo(node, { opacity: 0 }, { opacity: 1, duration: Math.max(0.05, EP.duration - loopAt), ease: "power1.out" }, loopAt);
-  }
+  // `loopAt` is kept for the films that pass it: the first frame carries no text any more (the first
+  // word comes with the voice), so the last one has none to hand back.
+  void loopAt;
   return leaves;
 }
 

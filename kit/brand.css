@@ -98,7 +98,8 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
   text-shadow: 0 3px 0 rgba(0, 0, 0, 0.7), 0 0 5px rgba(0, 0, 0, 0.95), 0 0 14px rgba(0, 0, 0, 0.9), 0 0 44px rgba(0, 0, 0, 0.95), 0 0 70px rgba(0, 0, 0, 0.7);
 }
 /* waiting words are dim by their colour, not by opacity: their shadow stays whole on a bright subject */
-.cap__w { display: inline-block; color: rgba(233, 228, 216, 0.34); }
+/* a word shows when it is said (overlay.js brings it up): hidden until then, its place kept in the line */
+.cap__w { display: inline-block; color: var(--ink); opacity: 0; visibility: hidden; }
 
 /* ─────────────────────────────────────────────── callouts */
 #leaders { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
@@ -233,7 +234,7 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 .hook__k--say { font: 800 64px/1 var(--display); letter-spacing: 0.01em; word-spacing: 0.05em; }
 .hook__l { font: 800 88px/1.02 var(--display); letter-spacing: 0.004em; word-spacing: 0.05em; text-transform: uppercase; }
 /* waiting words: readable at once on the first frame, dim by colour so that their shadow stays whole */
-.hook__w { display: inline-block; color: rgba(233, 228, 216, 0.62); }
+.hook__w { display: inline-block; color: var(--ink); opacity: 0; visibility: hidden; }
 
 /* #versus   two durations side by side: the bar that is too long is the story */
 #versus { left: var(--safe-l); right: var(--safe-r); top: var(--slot-top); }

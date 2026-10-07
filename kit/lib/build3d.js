@@ -6,13 +6,40 @@ import { LineSegmentsGeometry } from "three/addons/lines/LineSegmentsGeometry.js
 import { LineMaterial } from "three/addons/lines/LineMaterial.js";
 import { Line2 } from "three/addons/lines/Line2.js";
 import { LineGeometry } from "three/addons/lines/LineGeometry.js";
-import { mergeGeometries, toCreasedNormals } from "three/addons/utils/BufferGeometryUtils.js";
+import { mergeGeometries as mergeAll, toCreasedNormals } from "three/addons/utils/BufferGeometryUtils.js";
 import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
 import { BRAND } from "./brand.js";
 
-export { mergeGeometries };
-
 const DEG = Math.PI / 180;
+
+/**
+ * A geometry with broken edges carries the outline to draw (`userData.edges`): one line per edge,
+ * on the crest of its bevel — its own facets would give four. The outline follows the geometry
+ * through whatever is done to it afterwards: rotate, translate, scale, clone, `placed`, `mergeGeometries`.
+ */
+function outlined(geometry, outline) {
+  geometry.userData = { ...geometry.userData, edges: outline };
+  const { applyMatrix4, clone } = geometry;
+  geometry.applyMatrix4 = function (m) {
+    this.userData.edges.applyMatrix4(m);
+    return applyMatrix4.call(this, m);
+  };
+  geometry.clone = function () {
+    return outlined(clone.call(this), this.userData.edges.clone());
+  };
+  return geometry;
+}
+
+/** Several geometries as one (the three.js helper), their outlines with them. */
+export function mergeGeometries(geometries, useGroups = false) {
+  const merged = mergeAll(geometries, useGroups);
+  if (!merged || !geometries.some((g) => g.userData.edges)) return merged;
+  const soup = geometries.flatMap((g) => {
+    const o = g.userData.edges ?? g;
+    return [...(o.index ? o.toNonIndexed() : o).attributes.position.array];
+  });
+  return outlined(merged, new THREE.BufferGeometry().setAttribute("position", new THREE.Float32BufferAttribute(soup, 3)));
+}
 
 /** The studio's large softbox (stage.js builds it from these numbers): where it stands, its width and height. Glass shows its reflection. */
 export const SOFTBOX = { pos: [-7, 8, 6], w: 9, h: 6 };
@@ -77,17 +104,19 @@ export function glow(color, k = 3, o = {}) {
  *   `edge`  its lip: a crisp bright line where the surface turns away (0.3–0.7), on top of the soft `rim`
  *   `spec`  the studio's softbox mirrored in it, with soft borders (0.4–0.9): a window on a canopy,
  *           a long streak down a tube or a limb. Keep it for what is seen from close
- * — and hand its meshes to `asShell`: only the nearest surface lights up. Then `base` can go to 0.
+ * — and hand its meshes to `asShell`: only the nearest surface lights up. Then `base` can go to 0,
+ * and `through` (0.2–0.4) says how much of what lies behind that surface still shows, faintly: the
+ * far wall of a fuselage, the arm behind a trunk. It is what keeps the X-ray in the glass.
  */
-export function glass(color = BRAND.ink, { base = 0.006, rim = 0.2, power = 3.2, edge = 0, spec = 0 } = {}) {
-  return new THREE.ShaderMaterial({
+export function glass(color = BRAND.ink, { base = 0.006, rim = 0.2, power = 3.2, edge = 0, spec = 0, through = 0 } = {}) {
+  const mat = new THREE.ShaderMaterial({
     transparent: true,
     depthWrite: false,
     blending: THREE.AdditiveBlending,
     side: THREE.DoubleSide,
     uniforms: {
       uColor: { value: new THREE.Color(color) }, uBase: { value: base }, uRim: { value: rim }, uPower: { value: power }, uAmount: { value: 1 },
-      uEdge: { value: edge }, uSpec: { value: spec },
+      uEdge: { value: edge }, uSpec: { value: spec }, uGain: { value: 1 },
       uBoxC: { value: BOX.c }, uBoxU: { value: BOX.u }, uBoxV: { value: BOX.v }, uBoxSize: { value: new THREE.Vector3(SOFTBOX.w / 2, SOFTBOX.h / 2, BOX.d) },
     },
     vertexShader: /* glsl */ `
@@ -99,7 +128,7 @@ export function glass(color = BRAND.ink, { base = 0.006, rim = 0.2, power = 3.2,
         gl_Position = projectionMatrix * mv;
       }`,
     fragmentShader: /* glsl */ `
-      uniform vec3 uColor, uBoxC, uBoxU, uBoxV, uBoxSize; uniform float uBase, uRim, uPower, uAmount, uEdge, uSpec; varying vec3 vN; varying vec3 vV;
+      uniform vec3 uColor, uBoxC, uBoxU, uBoxV, uBoxSize; uniform float uBase, uRim, uPower, uAmount, uEdge, uSpec, uGain; varying vec3 vN; varying vec3 vV;
       void main() {
         if (uAmount < 0.003) discard; // faded out, a shell must not hide the ones behind it
         vec3 n = normalize(vN); vec3 v = normalize(vV);
@@ -113,12 +142,15 @@ export function glass(color = BRAND.ink, { base = 0.006, rim = 0.2, power = 3.2,
           float toward = dot(r, uBoxC);
           vec3 p = r * (uBoxSize.z / max(toward, 1e-3));
           vec2 q = abs(vec2(dot(p, uBoxU), dot(p, uBoxV))) / uBoxSize.xy;
-          // soft borders, wider than a pixel on anything curved: a hard-edged glint would crawl as the limb moves
-          light += uSpec * smoothstep(0.0, 0.3, toward) * (1.0 - smoothstep(0.55, 1.3, q.x)) * (1.0 - smoothstep(0.55, 1.3, q.y));
+          // very soft borders: a hard-edged glint is a sticker on a coarse mesh, and crawls as a limb moves.
+          // Glass mirrors little where it faces the eye, a lot where it turns away
+          light += uSpec * (0.3 + 0.7 * g) * smoothstep(0.0, 0.3, toward) * (1.0 - smoothstep(0.2, 1.9, length(q)));
         }
-        gl_FragColor = vec4(uColor * light * uAmount, 1.0);
+        gl_FragColor = vec4(uColor * light * uAmount * uGain, 1.0);
       }`,
   });
+  mat.userData.through = through;
+  return mat;
 }
 
 /**
@@ -132,18 +164,36 @@ export function glass(color = BRAND.ink, { base = 0.006, rim = 0.2, power = 3.2,
 export function asShell(meshes, order = 20) {
   for (const mesh of [meshes].flat()) {
     const mat = mesh.material;
+    const layers = mesh.children.filter((child) => child.userData.shell);
+    if (order === false || !mat.uniforms?.uAmount) {
+      // not (or no longer) glass: a head turned solid again
+      for (const layer of layers) layer.visible = false;
+      mesh.renderOrder = 0;
+      continue;
+    }
     // the very same program as the glass: the two draws land on the same depth to the last bit
-    const hold = (mat.userData.hold ??= Object.assign(mat.clone(), { uniforms: mat.uniforms, colorWrite: false, depthWrite: true, blending: THREE.NoBlending }));
-    const twin = mesh.userData.hold ?? new THREE.Mesh(mesh.geometry, hold);
-    twin.material = hold;
-    twin.renderOrder = order - 1;
-    twin.visible = true;
+    if (!HOLDS.has(mat)) HOLDS.set(mat, Object.assign(mat.clone(), { uniforms: mat.uniforms, colorWrite: false, depthWrite: true, blending: THREE.NoBlending }));
+    const wanted = [["hold", HOLDS.get(mat), order - 1]];
+    if (mat.userData.through) {
+      // what is behind the nearest surface, drawn first and faintly: the far wall, the arm behind the trunk
+      if (!VEILS.has(mat)) VEILS.set(mat, Object.assign(mat.clone(), { uniforms: { ...mat.uniforms, uGain: { value: mat.userData.through }, uBase: { value: 0 }, uSpec: { value: 0 } } }));
+      wanted.push(["veil", VEILS.get(mat), order - 2]);
+    }
+    for (const layer of layers) layer.visible = false;
+    for (const [name, material, at] of wanted) {
+      const layer = layers.find((child) => child.userData.shell === name) ?? new THREE.Mesh(mesh.geometry, material);
+      layer.userData.shell = name;
+      layer.material = material;
+      layer.renderOrder = at;
+      layer.visible = true;
+      if (layer.parent !== mesh) mesh.add(layer);
+    }
     mesh.renderOrder = order;
-    mesh.userData.hold = twin;
-    mesh.add(twin);
   }
   return meshes;
 }
+const HOLDS = new WeakMap();
+const VEILS = new WeakMap();
 
 /** Re-light a glow material: intensity, optionally a new hue. */
 export function setGlow(mat, k, hue) {
@@ -260,19 +310,14 @@ export const lathe = (profile, segments = 96, { bevel = 0, round = 1, crease = b
   const turn = (pts) => new THREE.LatheGeometry(pts.map(([r, y]) => new THREE.Vector2(r, y)), segments);
   const broken = bevel ? breakCorners(profile, bevel, round) : null;
   const geo = turn(broken ? broken.cut : profile);
-  if (!crease) return geo;
-  const out = toCreasedNormals(geo, crease * DEG);
-  out.userData.edges = turn(broken ? broken.mid : profile);
-  return out;
+  return crease ? outlined(toCreasedNormals(geo, crease * DEG), turn(broken ? broken.mid : profile)) : geo;
 };
 
 /** A box w × h × d, centred like `BoxGeometry`, its edges rounded by `r` cm. */
 export function box(w, h, d, r = 0.15, facets = 3) {
   const k = Math.max(0.001, Math.min(r, w / 2.01, h / 2.01, d / 2.01));
-  const geo = new RoundedBoxGeometry(w, h, d, facets, k);
   const e = 2 * k * (1 - Math.SQRT1_2); // the line on the crest of the round
-  geo.userData.edges = new THREE.BoxGeometry(w - e, h - e, d - e);
-  return geo;
+  return outlined(new RoundedBoxGeometry(w, h, d, facets, k), new THREE.BoxGeometry(w - e, h - e, d - e));
 }
 
 /** A cylinder of radius `r` and height `h`, centred like `CylinderGeometry`, its two rims broken by `bevel` cm. `top`: another radius up there (a cone). */
@@ -288,9 +333,7 @@ export function plate(outline, depth, { bevel = 0.1, round = 2, curveSegments = 
   const b = Math.min(bevel, depth / 2.01);
   const cut = (inset, thickness, facets) =>
     new THREE.ExtrudeGeometry(shape, { depth: depth - 2 * inset, curveSegments, bevelEnabled: true, bevelThickness: thickness, bevelSize: thickness, bevelOffset: -inset, bevelSegments: facets }).translate(0, 0, inset);
-  const geo = cut(b, b, round);
-  geo.userData.edges = cut(b * (1 - Math.SQRT1_2), 0, 0); // the same outline, drawn in by a third of the bevel, with sharp corners
-  return geo;
+  return outlined(cut(b, b, round), cut(b * (1 - Math.SQRT1_2), 0, 0)); // the same outline, drawn in by a third of the bevel, with sharp corners
 }
 
 /* ─────────────────────────────────────────────────────────── parts */
