@@ -189,6 +189,8 @@ export function buildAED() {
     lid.add(ring);
     return { mat, ring };
   });
+  // what sits on the lid fades with it: a button left alone in the air above the board is a red moon
+  for (const mesh of [emblem, bolt, cap, led]) lid.userData.part.mats.add(mesh.material);
 
   /* ── the two electrodes, on their cables ── */
   const pads = makePart("pads", { lift: 0 });

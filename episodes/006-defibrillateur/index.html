@@ -10,7 +10,7 @@
       /* Les dispositifs récurrents sont stylés dans kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
 
       /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
-      #chip-box, #chip-call, #chip-ready { color: var(--veille); }
+      #chip-box, #chip-call, #chip-ready, #chip-samu { color: var(--veille); }
       #chip-toi, #chip-far { color: var(--ink); }
 
       /* ce que lit la puce : le tracé du cœur, tel que les électrodes le rapportent */
@@ -51,7 +51,7 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="84.867" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="85.5" data-width="1080" data-height="1920">
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
@@ -135,6 +135,8 @@
         <div class="kicker">Commentaire · la plus proche de chez moi…</div>
         <div id="cta-field-v"><span id="cta-typed" class="is-veille">LA MAIRIE</span><span id="cta-caret"></span></div>
       </div>
+
+      <div id="chip-samu" class="chip chip--live"><span>Le 15</span><b>Te dit où</b></div>
 
       <section id="next">
         <div class="panel__h"><span>Prochain dossier · 007</span><span>Classé</span></div>
