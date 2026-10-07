@@ -22,10 +22,12 @@
       #senses .sense__n { display: block; font-size: 50px; }
       #senses .sense__s { margin-top: 8px; }
       #chip-rods { color: var(--ink); }
+      /* before T+0 the header counts the reaction, under the name it keeps in act 3 */
+      #hud-clock-l { margin-right: 16px; font: 500 24px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--signal); }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="84.8" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="83.5" data-width="1080" data-height="1920">
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
@@ -35,7 +37,7 @@
       <header id="hud">
         <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 005</span></div>
         <div class="hud__title" id="hud-title">Arrêt d'urgence</div>
-        <div class="hud__clock" id="hud-clock">100 %</div>
+        <div class="hud__clock" id="hud-clock"><span id="hud-clock-l">Réaction</span><span id="hud-clock-v">100 %</span></div>
         <div class="hud__count" id="hud-count"><span id="hud-count-l">Réaction</span><b id="hud-count-v">100 %</b></div>
         <div class="hud__rule"></div>
         <nav class="hud__acts">

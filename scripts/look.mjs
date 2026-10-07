@@ -4,6 +4,7 @@
 //   npm run look -- 003 --at 0.04,accroche:casser+0.2,31.5
 //   npm run look -- 003 --file essais.json      [{ "at": "poulie:surveille", "pose": { "d": 240 }, "label": "plus près" }, …]
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { ROOT } from "./lib/env.mjs";
@@ -14,17 +15,36 @@ import { ZONES } from "./review.mjs";
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
-/** `shots`: [{ at, pose?, label? }] · `width`: px of one frame on the sheet · `bare`: the 3D alone, no text over it. */
-export async function look(dir, { shots, cols = 4, width = 405, zones = true, bare = false, out } = {}) {
+// A trial frame is drawn by the graphics card when there is one: 10 to 30 ms a frame, against 2 to 14 s
+// on the processor (SwiftShader). The film itself is still rendered by HyperFrames, in software: a
+// framing is judged here, a fine point of the picture (bloom, the edge of a line) on a draft render.
+const PAGE = ["--allow-file-access-from-files", "--autoplay-policy=no-user-gesture-required"];
+const GPU = ["--use-gl=angle", ...(process.platform === "win32" ? ["--use-angle=d3d11"] : []), "--enable-gpu", "--ignore-gpu-blocklist", "--enable-webgl"];
+const CPU = ["--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"];
+const drawnBy = (page) =>
+  page.evaluate(() => {
+    const gl = document.createElement("canvas").getContext("webgl2");
+    const info = gl?.getExtension("WEBGL_debug_renderer_info");
+    return gl ? String(info ? gl.getParameter(info.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER)) : "";
+  });
+
+/** `shots`: [{ at, pose?, label? }] · `width`: px of one frame on the sheet · `bare`: the 3D alone, no text over it · `cpu`: draw in software, like the render. */
+export async function look(dir, { shots, cols = 4, width = 405, zones = true, bare = false, cpu = false, out } = {}) {
   const { sched } = await build(dir, { quiet: true });
   const list = shots.map((s) => ({ ...s, t: Math.min(sched.duration - 0.01, Math.max(0, resolveMoment(sched.beats, sched.cues, s.at))) }));
-  const folder = path.join(dir, "snapshots", "essais");
-  fs.rmSync(folder, { recursive: true, force: true });
-  fs.mkdirSync(folder, { recursive: true });
+  // its own folder: two looks at once (two episodes, or two people at work on the kit) never share their frames
+  const folder = fs.mkdtempSync(path.join(os.tmpdir(), "sd-look-"));
   const sheet = out ?? path.join(ROOT, "renders", `${path.basename(dir)}-essais.jpg`);
   fs.mkdirSync(path.dirname(sheet), { recursive: true });
 
-  const browser = await launchChrome(["--enable-unsafe-swiftshader", "--ignore-gpu-blocklist", "--allow-file-access-from-files", "--autoplay-policy=no-user-gesture-required"]);
+  let browser = await launchChrome([...(cpu ? CPU : GPU), ...PAGE]).catch(() => null);
+  let renderer = browser ? await drawnBy(await browser.newPage()).catch(() => "") : "";
+  if (!browser || !renderer || (!cpu && /swiftshader|llvmpipe/i.test(renderer))) {
+    // no card to draw with (or it refused): the processor does it, slowly
+    await browser?.close();
+    browser = await launchChrome([...CPU, ...PAGE]);
+    renderer = "processeur (SwiftShader)";
+  }
   try {
     const page = await browser.newPage();
     await page.setViewport({ width: 1080, height: 1920, deviceScaleFactor: 1 });
@@ -77,7 +97,8 @@ export async function look(dir, { shots, cols = 4, width = 405, zones = true, ba
     await board.screenshot({ path: sheet, fullPage: true, type: "jpeg", quality: 90 });
   } finally {
     await browser.close();
+    fs.rmSync(folder, { recursive: true, force: true });
   }
-  console.log(`\n  essais: ${list.length} images → ${sheet}\n`);
+  console.log(`\n  essais: ${list.length} images → ${sheet}\n  dessinées par : ${renderer}\n`);
   return { sheet, shots: list };
 }

@@ -90,12 +90,15 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 /* ─────────────────────────────────────────────── captions (word by word) */
 #captions { position: absolute; left: var(--safe-l); right: var(--clear-r); top: 1248px; height: 240px; }
 .cap { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; visibility: hidden; }
+.cap__box { width: 100%; }
 .cap__line {
   display: block; width: 100%; text-align: center;
   font: 800 94px/0.98 var(--display); letter-spacing: 0.004em; word-spacing: 0.05em; text-transform: uppercase;
-  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.55), 0 0 30px rgba(0, 0, 0, 0.95), 0 0 10px rgba(0, 0, 0, 0.9);
+  /* a tight dark rim, then a wide one: an accent word stays cut out on a subject of its own colour */
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.7), 0 0 5px rgba(0, 0, 0, 0.95), 0 0 14px rgba(0, 0, 0, 0.9), 0 0 44px rgba(0, 0, 0, 0.95), 0 0 70px rgba(0, 0, 0, 0.7);
 }
-.cap__w { display: inline-block; color: var(--ink); opacity: 0.34; }
+/* waiting words are dim by their colour, not by opacity: their shadow stays whole on a bright subject */
+.cap__w { display: inline-block; color: rgba(233, 228, 216, 0.34); }
 
 /* ─────────────────────────────────────────────── callouts */
 #leaders { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
@@ -224,11 +227,13 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 #hook { position: absolute; left: var(--safe-l); right: var(--clear-r); top: 1186px; height: 356px; }
 .hook {
   position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; text-align: center; visibility: hidden;
-  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.55), 0 0 30px rgba(0, 0, 0, 0.95), 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.7), 0 0 5px rgba(0, 0, 0, 0.95), 0 0 14px rgba(0, 0, 0, 0.9), 0 0 44px rgba(0, 0, 0, 0.95), 0 0 70px rgba(0, 0, 0, 0.7);
 }
 .hook__k { margin-bottom: 18px; font: 700 46px/1 var(--mono); letter-spacing: 0.04em; text-transform: uppercase; }
+.hook__k--say { font: 800 64px/1 var(--display); letter-spacing: 0.01em; word-spacing: 0.05em; }
 .hook__l { font: 800 88px/1.02 var(--display); letter-spacing: 0.004em; word-spacing: 0.05em; text-transform: uppercase; }
-.hook__w { display: inline-block; color: var(--ink); opacity: 0.5; }
+/* waiting words: readable at once on the first frame, dim by colour so that their shadow stays whole */
+.hook__w { display: inline-block; color: rgba(233, 228, 216, 0.62); }
 
 /* #versus   two durations side by side: the bar that is too long is the story */
 #versus { left: var(--safe-l); right: var(--safe-r); top: var(--slot-top); }

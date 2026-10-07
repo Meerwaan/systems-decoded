@@ -237,7 +237,7 @@ export function buildGripper() {
     fx.ring.position.y = RING.y - RING.h / 2 - RING.fall * ring;
     for (const pivot of fx.arms) pivot.rotation.z = 19 * DEG * open; // about the hinge, away from the rod
     fx.rod.position.y = -drop;
-    fx.power.color.copy(VEILLE).multiplyScalar(0.05 + 1.7 * power * bands);
+    fx.power.color.copy(INK).multiplyScalar(0.09).lerp(hue.copy(VEILLE).multiplyScalar(0.05 + 1.7 * bands), power); // dead, a band is not green: dark veille on the signal mood turns khaki
     hue.copy(INK).multiplyScalar(0.35).lerp(VEILLE, power);
     fx.ringGlow.color.copy(hue).multiplyScalar((0.4 + 1.5 * power) * (1 + 1.5 * pulse));
     // the teeth: veille while they hold; once open they hold nothing

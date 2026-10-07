@@ -15,47 +15,117 @@ const el = (tag, cls, text) => {
   return node;
 };
 
+// words a caption line must not end on (French function words)
+const STOP = new Set(
+  (
+    "le la les l un une des du de d au aux à en et ou ne n se s te t me m ce c qui que qu il elle ils elles on tu je " +
+    "son sa ses ton ta tes mon ma mes leur leurs pour par sur sous dans avec sans chez plus très est es sont a as y " +
+    "tout toute toutes tous si mais donc car ni"
+  ).split(" "),
+);
+const isStop = (w) => {
+  if (/\d/.test(w.t)) return false;
+  const last = w.t
+    .toLowerCase()
+    .replace(/[…?!»«]/g, "")
+    .trim()
+    .split(/[\s'’-]/)
+    .filter(Boolean)
+    .at(-1);
+  return STOP.has(last) || /^(c'est|qu'il|qu'elle|qu'un|qu'une|d'un|d'une|n'est|s'est|t'en)$/i.test(w.t);
+};
+
 /**
- * Word-by-word captions. Chunks break on punctuation, on a breath, or when the line
- * gets long; the word being spoken lights up (accent colour for marked words).
+ * Cuts the spoken words into caption blocks of one or two lines, sentence by sentence, by cost:
+ * a block never spans a sentence end or a long breath, should not end on a function word, and
+ * stays on screen long enough to be read. Two lines only when that avoids one of those faults.
+ * Returns blocks: [line] or [line, line], each line an array of words.
+ */
+export function captionBlocks(EP, { maxChars = 17, maxWords = 4, skip = [], minDur = 0.6 } = {}) {
+  const width = (words) => words.reduce((n, w) => n + w.t.length + 1, -1);
+  const sentences = [];
+  let run = [];
+  for (const w of EP.beats.filter((b) => !skip.includes(b.id)).flatMap((b) => b.words)) {
+    run.push(w);
+    if (w.p === 2) {
+      sentences.push(run);
+      run = [];
+    }
+  }
+  if (run.length) sentences.push(run);
+
+  const blocks = [];
+  for (const words of sentences) {
+    const n = words.length;
+    const nextStart = (j) => (j < n ? words[j].s : words[n - 1].e + 0.5);
+    // best line break inside words[i..j-1]: [cost, break index or null]
+    const layout = (i, j) => {
+      const line = words.slice(i, j);
+      if (width(line) <= maxChars && line.length <= maxWords) return [0, null];
+      let best = [Infinity, null];
+      for (let k = i + 1; k < j; k++) {
+        const a = words.slice(i, k);
+        const b = words.slice(k, j);
+        if (width(a) > maxChars || width(b) > maxChars) continue;
+        let c = 1.2;
+        if (isStop(a.at(-1))) c += 3;
+        if (a.at(-1).p === 1) c -= 1;
+        c += 0.01 * Math.pow(width(a) - width(b), 2);
+        if (c < best[0]) best = [c, k];
+      }
+      return best;
+    };
+    const cost = (i, j) => {
+      const [lc, k] = layout(i, j);
+      if (lc === Infinity) return [Infinity, null];
+      // a block does not wait half lit across a long breath
+      for (let m = i; m < j - 1; m++) if (words[m + 1].s - words[m].e > 0.6) return [Infinity, null];
+      const last = words[j - 1];
+      const end = j === n;
+      const dur = nextStart(j) - words[i].s;
+      let c = 1 + lc;
+      if (!end && isStop(last)) c += 6;
+      if (j - i === 1 && isStop(last)) c += 8;
+      if (dur < minDur) c += 50 * (minDur - dur);
+      if (dur > 2.6) c += 4 * (dur - 2.6);
+      if (!end && last.p === 1) c -= 2.5;
+      else if (!end && words[j].s - last.e > 0.3) c -= 2;
+      for (let m = i; m < j - 1; m++) {
+        if (words[m].p === 1) c += 1.5;
+        if (words[m + 1].s - words[m].e > 0.3) c += 1.2;
+      }
+      return [c, k];
+    };
+    const best = new Array(n + 1).fill(Infinity);
+    const prev = new Array(n + 1).fill(-1);
+    const brk = new Array(n + 1).fill(null);
+    best[0] = 0;
+    for (let j = 1; j <= n; j++) {
+      for (let i = Math.max(0, j - maxWords - 2); i < j; i++) {
+        const [c, k] = cost(i, j);
+        if (best[i] + c < best[j]) {
+          best[j] = best[i] + c;
+          prev[j] = i;
+          brk[j] = k;
+        }
+      }
+    }
+    const cuts = [];
+    for (let j = n; j > 0; j = prev[j]) cuts.unshift([prev[j], j, brk[j]]);
+    for (const [i, j, k] of cuts) blocks.push(k == null ? [words.slice(i, j)] : [words.slice(i, k), words.slice(k, j)]);
+  }
+  return blocks;
+}
+
+/**
+ * Word-by-word captions, in blocks of one or two lines (see captionBlocks); the word being
+ * spoken lights up (accent colour for marked words).
  * `skip`: beats that have their own text on screen (the hook cards). `lastEnd`: when the last
  * line leaves, if not on the final frame (a film that loops hands the frame back to its first card).
  */
 export function buildCaptions(container, EP, tl, { maxChars = 17, maxWords = 4, skip = [], lastEnd } = {}) {
-  // 1. phrases: runs of words between punctuation or a breath
-  const phrases = [];
-  for (const beat of EP.beats) {
-    if (skip.includes(beat.id)) continue;
-    let cur = [];
-    beat.words.forEach((w, i) => {
-      cur.push(w);
-      const next = beat.words[i + 1];
-      if (!next || w.p === 2 || (w.p === 1 && cur.length >= 2) || next.s - w.e > 0.3) {
-        phrases.push(cur);
-        cur = [];
-      }
-    });
-  }
-  // 2. a phrase too long for one line is cut into lines of similar length (never one stray word)
-  const width = (words) => words.reduce((n, w) => n + w.t.length + 1, -1);
-  const chunks = [];
-  for (const phrase of phrases) {
-    const lines = Math.max(Math.ceil(width(phrase) / maxChars), Math.ceil(phrase.length / maxWords));
-    const target = width(phrase) / lines;
-    let cur = [];
-    for (const w of phrase) {
-      const next = width([...cur, w]);
-      if (cur.length && next > maxChars) {
-        chunks.push(cur);
-        cur = [];
-      } else if (cur.length && Math.abs(width(cur) - target) < Math.abs(next - target) && lines > 1) {
-        chunks.push(cur);
-        cur = [];
-      }
-      cur.push(w);
-    }
-    if (cur.length) chunks.push(cur);
-  }
+  const blocks = captionBlocks(EP, { maxChars, maxWords, skip });
+  const chunks = blocks.map((rows) => rows.flat());
 
   chunks.forEach((words, i) => {
     const start = Math.max(0, words[0].s - 0.06);
@@ -63,17 +133,22 @@ export function buildCaptions(container, EP, tl, { maxChars = 17, maxWords = 4, 
     // the last line holds to the final frame: on a loop it hands over to the first one
     const end = chunks[i + 1] ? Math.min(nextStart, words.at(-1).e + 0.5) : (lastEnd ?? EP.duration);
     const cap = el("div", "cap");
-    const line = el("span", "cap__line");
-    cap.append(line);
-    const spans = words.map((w) => {
-      const span = el("span", "cap__w", w.t);
-      line.append(span, " ");
-      return span;
-    });
+    const box = el("div", "cap__box");
+    cap.append(box);
+    const spans = [];
+    for (const row of blocks[i]) {
+      const line = el("span", "cap__line");
+      for (const w of row) {
+        const span = el("span", "cap__w", w.t);
+        line.append(span, " ");
+        spans.push(span);
+      }
+      box.append(line);
+    }
     container.append(cap);
 
     tl.set(cap, { visibility: "visible" }, start);
-    tl.fromTo(line, { scale: 0.9, y: 16 }, { scale: 1, y: 0, duration: 0.18, ease: "back.out(2.2)" }, start);
+    tl.fromTo(box, { scale: 0.9, y: 16 }, { scale: 1, y: 0, duration: 0.18, ease: "back.out(2.2)" }, start);
     words.forEach((w, k) => {
       tl.to(spans[k], { opacity: 1, color: TONE[w.a] ?? INK, duration: 0.07, ease: "none" }, Math.max(start, w.s - 0.03));
     });
@@ -110,26 +185,52 @@ export function buildHook(container, EP, tl, { beats, maxChars = 19, loopAt } = 
       cur = [];
     });
   }
-  // 2. lines of similar length, broken at a comma when there is one
+  // 2. up to three lines, the cheapest of all cuts: broken at a comma, never after a function
+  //    word, of similar length. A line may run to maxChars + 2: the card then shrinks to fit.
   const linesOf = (words) => {
-    const n = Math.ceil(width(words) / maxChars);
-    const target = width(words) / n;
-    const lines = [[]];
-    for (const w of words) {
-      const cur = lines.at(-1);
-      const next = width([...cur, w]);
-      const full = cur.length && (next > maxChars || (cur.at(-1).p === 1 && width(cur) > target * 0.7) || (n > 1 && lines.length < n && Math.abs(width(cur) - target) < Math.abs(next - target)));
-      if (full) lines.push([w]);
-      else cur.push(w);
+    const n = words.length;
+    const wide = maxChars + 2;
+    const best = Array.from({ length: n + 1 }, () => new Array(4).fill(Infinity));
+    const prev = Array.from({ length: n + 1 }, () => new Array(4).fill(-1));
+    best[0][0] = 0;
+    const lineCost = (i, j) => {
+      const chars = width(words.slice(i, j));
+      if (chars > wide) return Infinity;
+      const last = words[j - 1];
+      let c = 0.6;
+      if (j < n && isStop(last)) c += 4;
+      if (j < n && last.p === 1) c -= 3;
+      for (let k = i; k < j - 1; k++) if (words[k].p === 1) c += 1.5;
+      if (chars > maxChars) c += 1.2 * (chars - maxChars);
+      return c;
+    };
+    for (let j = 1; j <= n; j++)
+      for (let l = 1; l <= 3; l++)
+        for (let i = 0; i < j; i++) {
+          const c = best[i][l - 1] + lineCost(i, j);
+          if (c < best[j][l]) {
+            best[j][l] = c;
+            prev[j][l] = i;
+          }
+        }
+    let pick = null;
+    for (let l = 1; l <= 3; l++) {
+      if (best[n][l] === Infinity) continue;
+      const lines = [];
+      for (let j = n, k = l; j > 0; j = prev[j][k], k--) lines.unshift(words.slice(prev[j][k], j));
+      const ws = lines.map(width);
+      const total = best[n][l] + 0.012 * ws.reduce((s, w) => s + Math.pow(Math.max(...ws) - w, 2), 0);
+      if (!pick || total < pick.total) pick = { total, lines };
     }
-    return lines;
+    return pick ? pick.lines : [words];
   };
 
   const make = (card, lit) => {
     const node = el("div", "hook");
     const spans = new Map();
-    const row = (words, cls) => {
+    const row = (words, cls, size) => {
       const line = el("div", cls);
+      if (size) line.style.fontSize = size + "px";
       for (const w of words) {
         const span = el("span", "hook__w", w.t);
         if (lit) spans.set(w, span);
@@ -137,8 +238,12 @@ export function buildHook(container, EP, tl, { beats, maxChars = 19, loopAt } = 
       }
       node.append(line);
     };
-    if (card.kicker) row(card.kicker, "hook__k");
-    for (const line of linesOf(card.words)) row(line, "hook__l");
+    // the small line is data (mono) only when it carries a figure; otherwise it is said, like the rest
+    if (card.kicker) row(card.kicker, card.kicker.some((w) => /\d/.test(w.t)) ? "hook__k" : "hook__k hook__k--say");
+    const lines = linesOf(card.words);
+    const longest = Math.max(...lines.map(width));
+    const size = longest > maxChars ? Math.max(72, Math.floor((88 * (maxChars + 0.5)) / longest)) : 0;
+    for (const line of lines) row(line, "hook__l", size);
     container.append(node);
     return { node, spans };
   };

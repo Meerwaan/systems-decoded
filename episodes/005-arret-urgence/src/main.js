@@ -154,11 +154,13 @@ function build() {
   /* ════════════════════ 01 · MENACE — one move down the vessel ════════════════════ */
   setAct(tl, 1, 0);
   // A — "panne de courant. et c'est toi qui es aux commandes d'un réacteur nucléaire"
-  shot(0, t.promesse - 0.35, { az: 23 }, "sine.inOut");
+  // The camera is on its way from the first frame: it rises over the vessel while it closes in, and the
+  // crown opens into a ring of coils. Nothing else moves: the crown and its feed stay lit until "la panne"
+  shot(0, t.promesse - 0.35, { d: 4700, az: 44, el: 44, shift: 200 }, "sine.out");
   // B — "ne touche à rien : il s'arrête tout seul, en deux secondes" — you, read as a system: nothing to do.
   // The panel is a narrow column on the left; the vessel makes room for it
-  shot(t.promesse - 0.35, 1.1, { d: 5300, az: 20, side: -175 });
-  shot(t.promesse + 0.75, t.et - t.promesse - 0.95, { d: 5150, az: 15 }, "sine.inOut");
+  shot(t.promesse - 0.35, 1.1, { d: 5200, az: 40, side: -165 });
+  shot(t.promesse + 0.75, t.et - t.promesse - 0.95, { d: 5100, az: 37 }, "sine.inOut");
   tl.fromTo("#senses", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, t.promesse + 0.3);
   tl.fromTo("#sense-bouton", { opacity: 0.2 }, { opacity: 1, duration: 0.2 }, t.seul - 0.1);
   tl.fromTo("#sense-delai", { opacity: 0.2 }, { opacity: 1, duration: 0.2 }, t.et - 0.9);
@@ -255,33 +257,40 @@ function build() {
 
   /* ════════════════════ 03 · RÉPONSE ════════════════════ */
   setAct(tl, 3, t.zero);
-  // T+0,0 — "zéro. le courant tombe."
-  st(t.zero - 0.02, 0.3, { gPower: 0 }, "power2.out");
-  st(t.zero + 0.25, 0.9, { field: 0 }, "power2.in"); // no current, no field
+  // T+0,0 — "zéro. le courant tombe." — it falls while it is said (the film is in slow motion): fast, then
+  // slower, the way a coil lets go of its current. Its field goes with it, the camera closes in, and the
+  // gauge goes under its threshold as the magnet lets go
+  const decay = (u) => (1 - Math.exp(-1.9 * u)) / (1 - Math.exp(-1.9));
+  const fading = t.lacheMot - 0.05 - t.zero;
+  const lets = t.zero + 0.93 * fading; // under 18 %
+  st(t.zero, fading, { gPower: 0.16, field: 0.16 }, decay);
+  st(t.lacheMot - 0.05, 0.25, { gPower: 0, field: 0 }, "power2.out"); // no current, no field
   now(t.zero, { power: 0 }); // …and on the vessel head too, for when the film goes back there
   st(t.zero, 0.3, { mood: 1, gel: 0.12 });
-  tl.to("#gauge-fill", { backgroundColor: "#ff5b2e", duration: 0.12 }, t.zero);
-  tl.to("#gauge-s0", { opacity: 0, duration: 0.1 }, t.zero + 0.05);
-  tl.to("#gauge-s1", { opacity: 1, duration: 0.1 }, t.zero + 0.15);
+  tl.to("#gauge-fill", { backgroundColor: "#ff5b2e", duration: 0.12 }, lets);
+  tl.to("#gauge-s0", { opacity: 0, duration: 0.1 }, lets);
+  tl.to("#gauge-s1", { opacity: 1, duration: 0.1 }, lets + 0.1);
+  shot(t.zero + 0.05, t.lache - 0.25 - t.zero, { d: 138, az: -2 }, "sine.inOut");
   jolt(t.zero, 0.3, 0.4);
   tl.fromTo("#hud-clock", { scale: 1 }, { scale: 1.2, color: "#ff5b2e", duration: 0.12, ease: "power2.out", transformOrigin: "100% 50%" }, t.zero);
   tl.to("#hud-clock", { scale: 1, color: "#e9e4d8", duration: 0.6, ease: "power2.out" }, t.zero + 0.12);
   show("#hud-count", t.zero, 0.15);
-  tl.to("#gauge", { opacity: 0, duration: 0.2 }, t.lache - 0.25);
+  tl.to("#gauge", { opacity: 0, duration: 0.2 }, t.lacheMot + 0.2); // it has said what it had to: under the threshold
 
   // "l'aimant lâche. les cliquets s'écartent… et la barre tombe."
   shot(t.lache - 0.2, 1.0, { tx: 1.5, ty: 38, tz: 0, d: 112, az: 4, el: 4, shift: 60 });
   st(t.lacheMot - 0.05, 0.22, { ring: 1 }, "power2.in"); // the ring is no longer held: it drops
   jolt(t.lacheMot + 0.17, 0.25, 0.3);
   st(t.ecartent - 0.05, 0.3, { open: 1 }, "back.out(2)");
-  st(t.barreTombe - 0.05, toFall - t.barreTombe + 0.05, { drop: 30 }, "power2.in"); // it leaves the latches: the film cuts to the reactor while it falls
+  st(t.barreTombe - 0.12, toFall - t.barreTombe + 0.12, { drop: 34 }, "power1.in"); // it is on its way as the word is said, and leaves the latches: the film cuts to the reactor while it falls
   shot(t.barreTombe - 0.1, toFall - t.barreTombe + 0.1, { ty: 36, d: 122 }, "sine.inOut");
 
-  // "plus de mille tiges plongent dans le cœur. rien ne les pousse : leur poids suffit." — all of them at once
+  // "plus de mille tiges plongent dans le cœur. rien ne les pousse : leur poids suffit." — all of them at
+  // once, and the camera goes in with them: the core stays above the captions
   const FALL = { tx: X, ty: 110, tz: 0, d: 4700, az: -26, el: 24, fov: 28, shift: 150, side: 0 };
   cut(toFall, IN_REACTOR, FALL, { heat: 0, glow: 3.2, neutrons: 1, mood: 1, gel: 0.1, feed: 0, others: 1, chain: 0, sealed: 0.8 });
-  shot(toFall, t.pousse - toFall - 0.2, { d: 4400, az: -18 }, "sine.inOut");
-  follow("chip-count", reactor.A.barsTop, -40, -170);
+  shot(toFall, t.pousse - toFall - 0.2, { ty: 0, d: 3200, az: -18, el: 18, shift: 210 }, "sine.inOut");
+  follow("chip-count", null, 96, 470); // the top slot: the camera travels
   show("#chip-count", t.tiges - 0.2);
   hide("#chip-count", t.pousse - 0.2);
   shot(t.pousse - 0.2, 1.5, { tx: X, ty: -60, tz: 0, d: 2300, az: -10, el: 10, shift: 150 });
@@ -291,17 +300,24 @@ function build() {
   st(t.deux, 0.8, { mood: 0, gel: 0 });
   st(t.fond - 0.25, 0.9, { sealed: 1 }); // "elles sont au fond": the bars, seen through the dead fuel, at their brightest
   tl.to("#hud-count", { color: "#5cffb0", duration: 0.3 }, t.arretee - 0.1);
-  const ASIDE = { tx: X, ty: 100, tz: 0, d: 5400, az: 16, el: 24, fov: 28, shift: 10, side: -165 };
+  const ASIDE = { tx: X, ty: 100, tz: 0, d: 4400, az: 16, el: 24, fov: 28, shift: 110, side: -150 };
   shot(t.arretee + 0.15, t.chute + 0.75 - t.arretee - 0.15, ASIDE); // the vessel steps aside before the words of the chute take the top of the picture
 
   /* ════════════════════ chute ════════════════════ */
-  // "on ne dépense rien pour arrêter un réacteur. on dépense… pour l'empêcher de s'arrêter."
-  shot(t.chute + 0.75, toChicago - t.chute - 0.75, { az: 28, el: 27 }, "sine.inOut");
+  // "on ne dépense rien pour arrêter un réacteur." — the title turns over
+  const toCrown = t.depense2 - 0.15;
+  shot(t.chute + 0.75, toCrown - t.chute - 0.75, { az: 22, el: 26 }, "sine.inOut");
   tl.fromTo("#retitle", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, t.chute + 0.9);
   tl.fromTo("#retitle-strike", { scaleX: 0 }, { scaleX: 1, duration: 0.22, ease: "power3.out" }, t.rienMot - 0.1);
   tl.to("#retitle-a", { opacity: 0, y: -40, duration: 0.2, ease: "power2.in" }, t.rienMot + 0.25);
   tl.fromTo("#retitle-b", { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: 0.28, ease: "back.out(2)" }, t.rienMot + 0.4);
-  tl.to("#retitle", { opacity: 0, y: -24, duration: 0.25, ease: "power2.in" }, toChicago - 0.25);
+  tl.to("#retitle", { opacity: 0, y: -24, duration: 0.25, ease: "power2.in" }, t.depense2 + 0.15);
+  // "on dépense… pour l'empêcher de s'arrêter." — back up to what the current was paying for: the crown,
+  // in the frame where it faltered on "la panne". It is dark, and stays dark
+  shot(toCrown, 1.5, CROWN);
+  shot(toCrown + 1.5, toChicago - toCrown - 1.5, { d: 2400, az: 30 }, "sine.inOut");
+  tl.fromTo("#chip-feed-off", { opacity: 0 }, { opacity: 1, duration: 0.2, immediateRender: false }, t.empecher - 0.2); // the title has left the top slot
+  hide("#chip-feed-off", toChicago - 0.15, 0.12);
 
   // "chicago, 1942. le dernier secours du tout premier réacteur ? une barre pendue à une corde… et un homme avec une hache."
   cut(toChicago, IN_CHICAGO, { tx: PX + 170, ty: 560, tz: 0, d: 7000, az: -22, el: 10, shift: 60 }, { mood: 0, gel: 0, hot: 0, axe: 0 });
@@ -347,8 +363,9 @@ function build() {
      "…pour arrêter un réacteur, il suffit d'une…" → the reactor at full power: "Panne de courant." */
   shot(t.boucle, t.rewind - t.boucle, { tx: 0, ty: 32, d: 330, az: 8, el: 10, shift: -40, side: 0 }, "sine.inOut");
   shot(t.rewind, toHook - t.rewind, { d: 520, el: 16 }, "power3.in");
-  cut(toHook, IN_REACTOR, { ...POSE0, d: POSE0.d - 100 }, { ...FIRST });
-  shot(toHook, END - toHook, POSE0, "power2.out");
+  // it comes in along the path of the hook, at the speed the hook starts with: the loop does not stop
+  cut(toHook, IN_REACTOR, { ...POSE0, d: POSE0.d + 100, az: POSE0.az - 4, el: POSE0.el - 4, shift: POSE0.shift - 14 }, { ...FIRST });
+  shot(toHook, END - toHook, POSE0, "none");
   blip("#flash", toHook, 0.05, 0.03, 0.3);
   setAct(tl, 1, toHook);
   tl.to("#hud-count", { opacity: 0, duration: 0.15 }, toHook - 0.15);
@@ -418,7 +435,8 @@ function build() {
   });
 
   /* ───────────────────────── per-frame: the chrono, the gauge, the chips ───────────────────────── */
-  const hudClock = $("hud-clock");
+  const hudClock = $("hud-clock-v");
+  const hudClockL = $("hud-clock-l");
   const hudCount = $("hud-count-v");
   const gaugeV = $("gauge-v");
   const gaugeFill = $("gauge-fill");
@@ -427,6 +445,7 @@ function build() {
     const cur = storyOf(time);
     const before = time < t.zero || time >= toHook;
     hudClock.textContent = before ? "100 %" : `T+${comma(cur.s, 1)} s`;
+    hudClockL.style.display = before ? "" : "none"; // "Réaction 100 %" until the clock starts: the label then goes down to the counter
     hudCount.textContent = `${Math.round(cur.reaction * 100)} %`;
     gaugeV.textContent = `${Math.round(S.gPower * 100)} %`;
     gaugeFill.style.transform = `scaleX(${clamp01(S.gPower).toFixed(4)})`;

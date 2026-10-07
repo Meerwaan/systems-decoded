@@ -161,6 +161,7 @@ try {
         cols: flags.cols != null ? Number(flags.cols) : undefined,
         width: flags.width != null ? Number(flags.width) : undefined,
         bare: !!flags.bare,
+        cpu: !!flags.cpu,
         zones: !flags["no-zones"],
         out: flags.out ? path.resolve(String(flags.out)) : undefined,
       });

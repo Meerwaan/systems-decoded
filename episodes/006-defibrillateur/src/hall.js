@@ -104,7 +104,7 @@ export function buildHall() {
   const X0 = -1500;
   const X1 = HALL.far + 900;
   for (const y of [0, 96, HALL.height]) line([X0, y, W], [X1, y, W]);
-  for (let x = X0; x <= X1; x += 300) {
+  for (let x = X0 + 150; x <= X1; x += 300) { // (the box hangs between two pilasters, not on one)
     line([x, 0, W], [x, HALL.height, W]);
     line([x, HALL.height, W], [x, HALL.height, W + 620]); // a beam of the roof, toward us
   }

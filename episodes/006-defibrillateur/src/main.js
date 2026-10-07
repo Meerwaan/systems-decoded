@@ -7,7 +7,9 @@
 //   the box, ten seconds of reading, the charge — then ten milliseconds, slowed down: the current
 //   through the heart, every cell off at once, the silence… and the heart starts again by itself.
 // The story clock: T+0:00 when the heart stops pumping. It runs on, faster than the film (the box
-// is thirty metres away), until the shock at T+2:50. Every minute costs ten chances out of a hundred.
+// is thirty metres away), until the shock at T+2:50. Every minute costs ten chances out of a hundred — until the
+// witness pushes on the chest: from the word "masse" on, three and a half (ERC 2015: −10 to 12 % a minute without
+// compressions, −3 to 4 % with them).
 import * as THREE from "three";
 import { BRAND } from "@kit/brand.js";
 import { createStage } from "@kit/stage.js";
@@ -155,7 +157,8 @@ function build() {
     return 170;
   };
   const stamp = (s) => `T+${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
-  const chancesAt = (s) => Math.round(100 - (10 * s) / 60);
+  const sPush = secAt(t.masse); // the witness starts to push: from here the chances fall three times slower
+  const chancesAt = (s) => Math.round(100 - (10 * Math.min(s, sPush) + 3.5 * Math.max(0, s - sPush)) / 60);
 
   const co = createCallouts(stage, $("callouts"), $("leaders"));
   const chips = []; // [element, anchor, dx, dy]: placed every frame on a point of the scene (or fixed, without an anchor)
@@ -166,10 +169,13 @@ function build() {
   // A — "quelqu'un s'effondre. devant toi, son cœur ne pompe plus."
   st(0.02, 0.85, { collapse: 1 }, "power1.in");
   jolt(0.85, 0.3, 0.4);
-  shot(0, t.promesse - 0.25, { tx: X - 30, ty: 38, d: 400, az: -60, el: 13, fov: 44, side: 30 }, "sine.inOut");
+  // the camera follows the fall down and stays low: the one on the floor above the cards of the hook, and beyond, on
+  // the wall, the green box still in the picture
+  shot(0, 1.1, { ty: 32, d: 400, el: 8.5, shift: 108, side: 140 }, "power1.inOut");
+  shot(1.1, t.promesse - 1.35, { tx: X - 30, ty: 28, d: 340, az: -69, el: 8, fov: 46, shift: 110, side: 170 }, "sine.inOut");
   // B — "au mur, une boîte verte peut le sauver" — along the wall, to the box
   const BOXWIDE = { tx: X + BOX.x, ty: 150, tz: BOX.z, d: 2650, az: -81, el: 1.5, fov: 30, shift: 150, side: 0 };
-  const BOXCLOSE = { tx: X + BOX.x, ty: BOX.y + 12, tz: BOX.z, d: 210, az: -16, el: 3, fov: 28, shift: 40, side: 0 };
+  const BOXCLOSE = { tx: X + BOX.x, ty: BOX.y + 12, tz: BOX.z, d: 290, az: -16, el: 3, fov: 28, shift: 310, side: 0 };
   shot(t.promesse - 0.25, 1.5, BOXWIDE);
   st(t.promesse, 1.0, { halo: 0.6, far: 1.3 });
   shot(t.promesse + 1.3, t.tu - t.promesse - 1.4, { d: 1500, az: -74 }, "sine.inOut");
@@ -181,7 +187,7 @@ function build() {
   st(t.tu, 1.2, { far: 0.15, beacon: 1, sign: 0.12 });
   // C — "encore faut-il… savoir où elle est" — the camera backs away from the box without letting go of it, down the
   // whole hall, to high behind the one who fell: here the orange, over there the green, between the two, thirty metres
-  const WHERE = { tx: X + BOX.x, ty: BOX.y, tz: BOX.z, d: 3821, az: -81.7, el: 3.56, fov: 62, shift: 490, side: 0 };
+  const WHERE = { tx: X + BOX.x, ty: BOX.y, tz: BOX.z, d: 3821, az: -81.7, el: 3.56, fov: 62, shift: 490, side: 0, drift: 0 };
   shot(t.encore - 0.25, 1.45, WHERE, "sine.inOut", BOXCLOSE.d);
   st(t.encore, 1.0, { route: 1.6, far: 1.5, halo: 3, beacon: 2, lines: 1.5, ground: 0.5 });
   st(t.encore + 0.5, 0.5, { sign: 1 }); // the sign above the box: back on once the box has shrunk away from the header
@@ -190,15 +196,18 @@ function build() {
   hide("#chip-far", t.tremble - 0.95);
 
   // "son cœur ne s'est pas arrêté. il tremble. et plus une goutte de sang ne part." — down into the chest
-  const HEART = { tx: X + SPOT.heart.x, ty: SPOT.heart.y + 1, tz: SPOT.heart.z, d: 86, az: 10, el: 40, fov: 28, shift: -70, side: 0 };
-  shots.push({ at: t.tremble - 1.0, cut: true, pose: reaim(WHERE, 900) }); // same picture, aimed close: the dive does not swing out of the hall
+  const HEART = { tx: X + SPOT.heart.x, ty: SPOT.heart.y + 1, tz: SPOT.heart.z, d: 86, az: 10, el: 40, fov: 28, shift: -70, side: 0, drift: 1 };
+  // same picture, aimed close: the dive does not swing out of the hall. (The breath of the camera turns around the
+  // point it aims at: it is off — `drift` 0 — while the aim changes, or the two pictures would not match.)
+  stage.cut(t.tremble - 1.0);
+  shots.push({ at: t.tremble - 1.0, cut: true, pose: reaim(WHERE, 900) });
   shot(t.tremble - 1.0, 1.8, HEART, "sine.inOut", 900);
   st(t.tremble - 0.9, 1.2, { halo: 0.06, route: 0, far: 0, beacon: 1, lines: 1, ground: 0.07 });
   shot(t.tremble + 0.8, t.compte - t.tremble - 1.5, { d: 76, az: -8 }, "sine.inOut");
   st(t.trembleMot - 0.3, 0.3, { ecg: 1 });
   panel("#ecg", t.trembleMot - 0.25, t.compte - 0.3);
   tl.set(["#ecg-s1", "#ecg-s2", "#ecg-v0", "#ecg-v1"], { opacity: 0 }, 0);
-  follow("chip-flow", hall.A.heart, 60, 150);
+  follow("chip-flow", hall.A.heart, -150, 150);
   show("#chip-flow", t.goutte - 0.1);
   hide("#chip-flow", t.compte - 0.3);
 
@@ -225,7 +234,7 @@ function build() {
 
   // "un témoin appelle le 15, et masse. toi : la boîte."
   st(t.appelle - 0.1, 0.3, { call: 1 });
-  follow("chip-call", hall.A.phone, -330, -40);
+  follow("chip-call", hall.A.phone, -250, -40);
   show("#chip-call", t.appelle + 0.1);
   hide("#chip-call", t.toi - 0.44, 0.1);
   st(t.masse - 0.25, 0.4, { push: 1 }, "power2.out");
@@ -240,32 +249,32 @@ function build() {
   now(t.toi - 0.06, { toi: 1 });
   st(t.toi - 0.06, toBox - t.toi + 0.06, { toiS: 0.17 }, "power1.in"); // TOI is off, along the dashes on the floor
   // "la boîte": TOI is there — and on "alors…", the door opens
-  cut(toBox, IN_HALL, { ...BOXCLOSE, d: 300, az: -20 }, { toi: 3, far: 0.1, route: 0, halo: 0, beacon: 1, sign: 0.12 });
-  shot(toBox, toBench - toBox, { d: 215, az: -12 }, "sine.inOut");
+  cut(toBox, IN_HALL, { ...BOXCLOSE, d: 340, az: -20 }, { toi: 3, far: 0.1, route: 0, halo: 0, beacon: 1, sign: 0.12 });
+  shot(toBox, toBench - toBox, { d: 280, az: -12 }, "sine.inOut");
   st(t.ouvre - 0.05, toBench - t.ouvre + 0.05, { door: 1 }, "power2.inOut");
 
   /* ════════════════════ 02 · AUTOPSIE (sur l'établi) ════════════════════ */
   setAct(tl, 2, t.ouvre);
   // what was in the box, on the bench: same object, same place on the screen, seen from above as it hung
-  cut(toBench, BENCH, { tx: 0, ty: 6, tz: 0, d: 170, az: 0, el: 66, shift: 150 }, { pool: 0.26, grid: 0.18, mood: 0, gel: 0, cast: 1 });
+  cut(toBench, BENCH, { tx: 0, ty: 6, tz: 0, d: 285, az: 0, el: 66, shift: 145, side: 60 }, { pool: 0.26, grid: 0.18, mood: 0, gel: 0, cast: 1 });
   // "alors… on l'ouvre"
   st(t.explode, 1.2, { explode: 1 }, "none");
   st(t.explode + 0.15, 1.15, { out: 1 });
-  shot(toBench + 0.02, 1.25, { tx: 0, ty: 18, tz: 5, d: 300, az: 24, el: 22, shift: 150 });
+  shot(toBench + 0.02, 1.25, { tx: 0, ty: 18, tz: 5, d: 300, az: 24, el: 22, shift: 150, side: 0 });
   // "deux électrodes."
   shot(t.electrodes - 0.4, 0.75, { tx: 0, ty: 3, tz: 15, d: 215, az: 10, el: 42, shift: 150 });
-  const cPads = co.add({ title: "Électrodes", sub: "Lire, puis choquer", x: 300, y: 600, align: "end", anchor: aed.A.padL });
+  const cPads = co.add({ title: "Électrodes", sub: "Lire, puis choquer", x: 372, y: 600, align: "end", anchor: aed.A.padL });
   cPads.show(tl, t.electrodes - 0.05);
   cPads.hide(tl, t.batterie - 0.4);
   // "une batterie."
   const POWER = { tx: 1, ty: 14.5, tz: 2, d: 126, az: 30, el: 20, shift: 150 };
   shot(t.batterie - 0.4, 0.75, POWER);
-  const cBatt = co.add({ title: "Batterie", sub: "4 ans en veille", x: 300, y: 620, align: "end", anchor: aed.A.battery });
+  const cBatt = co.add({ title: "Batterie", sub: "4 ans en veille", x: 330, y: 620, align: "end", anchor: aed.A.battery });
   cBatt.show(tl, t.batterie - 0.05);
   cBatt.hide(tl, t.condo - 0.18);
   // "un condensateur." — it fills, to show what it is for, and empties
   shot(t.batterie + 0.36, t.puce - t.batterie - 0.82, { tx: 3.4, d: 108, az: 36 }, "sine.inOut");
-  const cCap = co.add({ title: "Condensateur", sub: "Il stocke le choc", x: 330, y: 600, align: "end", anchor: aed.A.cap });
+  const cCap = co.add({ title: "Condensateur", sub: "Il stocke le choc", x: 352, y: 600, align: "end", anchor: aed.A.cap });
   cCap.show(tl, t.condo - 0.05);
   cCap.hide(tl, t.puce - 0.48);
   st(t.condo + 0.05, 0.7, { bCharge: 0.9 }, "power1.in");
@@ -274,7 +283,7 @@ function build() {
   shot(t.puce - 0.46, 0.95, { tx: -1.4, ty: 27.5, tz: -0.6, d: 88, az: 14, el: 40, shift: 150 });
   st(t.puce - 0.45, 0.5, { lidA: 0.08 }); // the lid steps aside: it was in the way of what decides
   st(t.puce + 0.1, 0.6, { bListen: 1 });
-  const cChip = co.add({ title: "Puce", sub: "Elle seule décide", x: 300, y: 610, align: "end", tone: "system", anchor: aed.A.chip });
+  const cChip = co.add({ title: "Puce", sub: "Elle seule décide", x: 356, y: 610, align: "end", tone: "system", anchor: aed.A.chip });
   cChip.show(tl, t.puce);
   cChip.hide(tl, t.repos - 0.2);
 
@@ -308,9 +317,10 @@ function build() {
   st(t.touchez, 0.5, { push: 0, off: 1 }, "power2.out");
 
   // "dix secondes : elle lit le cœur. du chaos ? elle charge."
-  const READ = { tx: X + SPOT.heart.x + 3, ty: 13, tz: -5.5, d: 140, az: -96, el: 70, fov: 28, shift: -80, side: 0 };
+  // (from here to the punchline the heart is always seen from the feet: its tip down, its vessels up — a heart)
+  const READ = { tx: X + SPOT.heart.x + 3, ty: 13, tz: -3.4, d: 140, az: 84, el: 68, fov: 28, shift: -80, side: 0 };
   cut(t.analyse - 0.12, IN_HALL, READ);
-  shot(t.analyse - 0.12, toButton - t.analyse, { d: 124, az: -86 }, "sine.inOut");
+  shot(t.analyse - 0.12, toButton - t.analyse, { d: 124, az: 94 }, "sine.inOut");
   now(t.analyse - 0.12, { halo: 0.06, ecg: 1 });
   st(t.analyse - 0.1, 0.5, { listen: 1 });
   panel("#ecg", t.analyse, toShock - 0.12);
@@ -321,13 +331,14 @@ function build() {
   shot(toButton, toShock - toButton, { d: 104, az: -28 }, "sine.inOut");
   st(toButton + 0.1, toShock - toButton - 0.35, { charge: 1 }, "power1.in");
   st(toShock - 0.25, 0.18, { armed: 1 }, "power2.out");
-  follow("chip-charge", hall.A.aed, 40, 150);
+  follow("chip-charge", hall.A.aed, -70, 150);
   show("#chip-charge", toButton + 0.05, 0.12);
   hide("#chip-charge", toShock - 0.05, 0.05);
 
   // T+2:50 — "cent cinquante joules. plus de mille volts. dix millisecondes." — ten milliseconds, slowed down
-  const SHOCK = { tx: X + SPOT.chest.x + 2, ty: 14, tz: -3, d: 165, az: -104, el: 62, fov: 28, shift: 150 };
-  cut(toShock, IN_HALL, SHOCK, { halo: 0.12, listen: 0, ecg: 0 });
+  // the frame of the shock is the frame of the punchline: the same picture, where everything will have changed colour
+  const HEARTFRAME = { tx: X + SPOT.chest.x + 1, ty: 18, tz: -1, d: 180, az: 88, el: 62, fov: 28, shift: -60, side: -70 };
+  cut(toShock, IN_HALL, HEARTFRAME, { halo: 0.12, listen: 0, ecg: 0 });
   st(tShock, 0.07, { shock: 1, flash: 1 }, "power2.out");
   jolt(tShock, 0.55, 0.5);
   blip("#flash", tShock, 0.07, 0.03, 0.3);
@@ -339,10 +350,10 @@ function build() {
   follow("chip-ms", null, 96, 470);
   show("#chip-ms", tShock + 0.1, 0.15);
   hide("#chip-ms", tDark - 0.02, 0.1);
-  shot(toShock, t.eteint - toShock - 0.2, { d: 140, az: -92 }, "sine.inOut");
+  shot(toShock, t.eteint - toShock - 0.2, { d: 150, az: 80 }, "sine.inOut");
 
   // "le courant traverse le cœur : toutes ses cellules s'éteignent. en même temps."
-  const INSIDE = { tx: X + SPOT.heart.x, ty: SPOT.heart.y + 1, tz: SPOT.heart.z, d: 76, az: -86, el: 64, fov: 28, shift: -70, side: 0 };
+  const INSIDE = { tx: X + SPOT.heart.x, ty: SPOT.heart.y + 1, tz: SPOT.heart.z, d: 76, az: 84, el: 64, fov: 28, shift: -70, side: 0 };
   shot(t.eteint - 0.2, 1.3, INSIDE);
   st(t.eteint - 0.1, 0.6, { halo: 0.04 });
   st(tDark - 0.05, 0.1, { flash: 1 }, "power2.out"); // every cell at once…
@@ -355,7 +366,7 @@ function build() {
   tl.to("#ecg-s1", { opacity: 1, duration: 0.15 }, tDark + 0.1);
 
   // "silence… et le cœur repart. tout seul."
-  shot(t.repart - 0.1, t.chute - t.repart, { d: 84, az: -74, el: 56 }, "sine.inOut");
+  shot(t.repart - 0.1, t.chute - t.repart, { d: 84, az: 94, el: 56 }, "sine.inOut");
   now(tBeat - 0.02, { order: 1 });
   st(tBeat, 0.6, { mood: 0, gel: 0 });
   tl.to("#ecg-s1", { opacity: 0, duration: 0.1 }, tBeat + 0.15);
@@ -364,8 +375,10 @@ function build() {
 
   /* ════════════════════ chute ════════════════════ */
   // "voilà le secret : elle ne relance pas un cœur. elle l'arrête. pour qu'il redémarre… de lui-même."
-  const CALM = { tx: X + SPOT.chest.x + 1, ty: 18, tz: -1, d: 180, az: 88, el: 62, fov: 28, shift: -60, side: 0 };
-  cut(t.chute - 0.12, IN_HALL, CALM, { halo: 0.5, ecg: 0, ground: 0.16 });
+  // back from the heart, without a cut, to the frame of the shock
+  shot(t.chute - 0.12, 1.0, HEARTFRAME, "sine.inOut", 84);
+  st(t.chute - 0.12, 0.8, { halo: 0.5, ground: 0.16 });
+  now(t.chute - 0.04, { ecg: 0 });
   tl.fromTo("#title-shade", { opacity: 0 }, { opacity: 1, duration: 0.35 }, t.chute + 0.6);
   tl.to("#title-shade", { opacity: 0, duration: 0.22 }, t.refuse - 0.42);
   tl.fromTo("#retitle", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, t.chute + 0.7);
@@ -373,7 +386,7 @@ function build() {
   tl.to("#retitle-a", { opacity: 0, y: -40, duration: 0.2, ease: "power2.in" }, t.arrete - 0.15);
   tl.fromTo("#retitle-b", { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: 0.28, ease: "back.out(2)" }, t.arrete);
   tl.to("#retitle", { opacity: 0, y: -24, duration: 0.22, ease: "power2.in" }, t.refuse - 0.42);
-  shot(t.chute - 0.12, t.refuse - t.chute, { d: 150, az: 78 }, "sine.inOut");
+  shot(t.chute + 0.88, t.refuse - t.chute - 1.0, { d: 150, az: 78 }, "sine.inOut");
 
   // "un cœur qui bat ? elle refuse. tu ne peux blesser personne."
   cut(t.refuse - 0.12, IN_HALL, { ...BUTTON, d: 162, az: -50, shift: -40 }, { armed: 0, charge: 0, listen: 1, ecg: 1, halo: 0.4 });
@@ -381,7 +394,7 @@ function build() {
   panel("#ecg", t.refuse, toCta - 0.4);
   tl.set(["#ecg-s0", "#ecg-s1"], { opacity: 0 }, t.refuse - 0.05);
   tl.fromTo("#ecg-v0", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2)", immediateRender: false }, t.refuseMot - 0.05);
-  follow("chip-ready", hall.A.aed, 40, 150);
+  follow("chip-ready", hall.A.aed, -70, 150);
   show("#chip-ready", t.refuseMot + 0.25);
   hide("#chip-ready", toCta - 0.12, 0.12);
 
@@ -401,7 +414,7 @@ function build() {
   shot(t.comment - 0.15, 1.5, { tx: 0, ty: 6, tz: 0, d: 200, az: -8, el: 30, shift: -85, side: 0 });
   typeAnswer(tl, { showAt: t.commentaire, typedAt: t.proche + 0.5, chars: 9, hideAt: t.commentEnd + 0.12 });
   rail(tl, "rail-comment", t.commentaire, t.commentEnd + 0.12);
-  follow("chip-samu", null, 96, 668);
+  follow("chip-samu", null, 96, 812); // under the top slot: the field of the answer has it
   show("#chip-samu", t.quinze - 0.05, 0.15);
   hide("#chip-samu", t.commentEnd + 0.12, 0.15);
 
@@ -418,8 +431,8 @@ function build() {
      only the box, on its wall. Then: "Quelqu'un s'effondre." */
   cut(toTomorrow, IN_HALL, { ...BOXWIDE, d: 1050, az: -44, shift: 60 }, { ...FIRST, cast: 0, chaos: 0, halo: 0, mood: 0, far: 1, beacon: 1.2, lines: 1.7 });
   st(toTomorrow + 0.4, 1.6, { far: 0.3 });
-  shot(toTomorrow, t.rewind - toTomorrow, { ...BOXCLOSE, d: 400, az: -24, shift: -60 }, "sine.inOut", 1050);
-  shot(t.rewind, toHook - t.rewind, { d: 520 }, "power2.in");
+  shot(toTomorrow, t.rewind - toTomorrow, { ...BOXCLOSE, d: 520, az: -24, shift: 84 }, "sine.inOut", 1050);
+  shot(t.rewind, toHook - t.rewind, { d: 660 }, "power2.in");
   cut(toHook, IN_HALL, { ...POSE0, d: POSE0.d + 40 }, { ...FIRST });
   shot(toHook, END - toHook, POSE0, "power2.out");
   blip("#flash", toHook, 0.05, 0.03, 0.3);
