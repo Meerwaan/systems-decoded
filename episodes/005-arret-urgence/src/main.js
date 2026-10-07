@@ -256,7 +256,7 @@ function build() {
   tw.fromTo(S, { pulse: 0 }, { pulse: 1, duration: 0.25, ease: "sine.out", immediateRender: false }, t.serre - 0.05);
   st(t.serre + 0.2, 0.7, { pulse: 0 }, "sine.inOut");
   // "la barre reste en l'air": back, down to its free end — it hangs over the stand, daylight under it
-  shot(t.barreMot - 0.3, t.zero - t.barreMot + 0.1, { ty: 24, d: 192, az: -8, el: 6, shift: 10 }, "sine.inOut");
+  shot(t.barreMot - 0.3, t.zero - t.barreMot + 0.1, { ty: 24, d: 205, az: -8, el: 6, shift: 40 }, "sine.inOut");
 
   /* ════════════════════ 03 · RÉPONSE ════════════════════ */
   setAct(tl, 3, t.zero);
