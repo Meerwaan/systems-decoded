@@ -9,9 +9,14 @@
     <style>
       /* Les dispositifs récurrents sont stylés dans kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
       #next-fact b { font-size: 170px; }
-      #retitle-main { font-size: 120px; }
-      #retitle-slot { height: 120px; }
-      #retitle-strike { top: 58px; }
+      #retitle-main { font-size: 108px; } /* "Du courant" ends before the vessel begins */
+      #retitle-slot { height: 108px; }
+      #retitle-strike { top: 52px; }
+      /* on the bench, close up, the rod and its tube climb behind the header: they go into the dark before they reach it */
+      #top-fade {
+        position: absolute; left: 0; right: 0; top: 0; height: 560px; opacity: 0;
+        background: linear-gradient(to bottom, rgb(7, 10, 12) 0, rgb(7, 10, 12) 72%, rgba(7, 10, 12, 0) 100%);
+      }
       #chip-1942 { color: var(--ink); } /* .chip--live sets signal: a date is neither a threat nor the system */
       #chip-never { color: var(--veille); }
       #chip-feed { color: var(--veille); }
@@ -31,6 +36,7 @@
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
+      <div id="top-fade"></div>
 
       <svg id="leaders" viewBox="0 0 1080 1920"></svg>
 
