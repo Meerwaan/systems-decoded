@@ -120,12 +120,12 @@ export function buildHeart() {
           // the muscle itself: dark, modelled by a light from above
           vec3 col = uInk * ((0.04 + 0.19 * lam * lam) * relief + 0.07 * rim) + uInk * 0.22 * spec * cavity;
           // its edge tells its state: signal in the chaos, nothing in the dark, veille when it beats
-          col += (uSignal * uChaos * 0.5 + uVeille * uOrder * 0.6) * rim * uActive;
+          col += (uSignal * uChaos * 0.3 + uVeille * uOrder * 0.6) * rim * uActive;
           // fibrillation: fronts that wander, meet, die — a noise bent by itself (a product of sines draws a chequerboard)
           vec3 q = vP * 0.42 + vec3(0.0, uTime * 0.55, uTime * 0.35);
           q += 0.9 * vec3(noise(q * 1.7 + 3.1), noise(q * 1.7 + 7.7), noise(q * 1.7 + 1.3));
-          float patches = smoothstep(0.46, 0.66, noise(q * 1.3 + uTime * 0.8));
-          col += uSignal * patches * uChaos * uActive * (0.5 + 1.5 * facing);
+          float patches = smoothstep(0.55, 0.72, noise(q * 1.3 + uTime * 0.8));
+          col += uSignal * patches * uChaos * uActive * (0.5 + 1.5 * facing) * (1.0 - 0.8 * uFlash);
           // the beat: a front leaves the node, the muscle behind it is alight for a moment
           float d = distance(vP, uNode);
           float w = (d - uWave) / 1.15;
@@ -136,7 +136,7 @@ export function buildHeart() {
           float u = (vUv.x - uPulse) / 0.16;
           col += uInk * uOrder * (1.0 - uActive) * exp(-u * u) * 0.75 * (0.45 + 0.55 * facing);
           // the shock: every cell at once — brightest where the muscle faces us, its outline stays
-          col += uInk * uFlash * 2.3 * (0.15 + 0.85 * facing * facing);
+          col += uInk * uFlash * 1.6 * (0.15 + 0.85 * facing * facing);
           gl_FragColor = vec4(col * uDim, 1.0);
         }`,
     });
