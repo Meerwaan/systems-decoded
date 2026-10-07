@@ -14,11 +14,11 @@
     "speed": 1.0,
     "seed": 21
   },
-  "cover": { "at": "repos:serre+0.3", "title": ["Arrêt", "d'urgence"], "cam": { "tx": 0, "ty": 36, "tz": 0, "d": 200, "az": 20, "el": 48, "shift": -490, "side": 0, "fov": 28 } },
+  "cover": { "at": "repos:serre+0.3", "title": ["Réacteur", "nucléaire"], "cam": { "tx": 0, "ty": 36, "tz": 0, "d": 200, "az": 20, "el": 48, "shift": -490, "side": 0, "fov": 28 } },
   "post": {
-    "caption": "Tu imaginais un gros bouton rouge ? Pour arrêter un réacteur nucléaire, il suffit d'arrêter de le retenir. Et une fois arrêté, il chauffe encore combien de temps, à ton avis ?",
+    "caption": "Tu imaginais un gros bouton rouge ? Un réacteur nucléaire n'en a pas besoin pour s'arrêter. Et une fois arrêté, il chauffe encore combien de temps, à ton avis ?",
     "hashtags": ["#apprendresurtiktok", "#commentcamarche", "#nucleaire", "#energie", "#ingenierie"],
-    "pinned": "Des années. Une seconde après l'arrêt, le combustible dégage encore environ 7 % de la puissance du réacteur, et encore 1,5 % au bout d'une heure : la réaction en chaîne est arrêtée, mais les atomes déjà cassés continuent de chauffer. C'est pour ça qu'on le refroidit sans relâche, dans la cuve puis pendant des années en piscine. Tu aurais dit combien ?"
+    "pinned": "Réponse : des années. 1 seconde après l'arrêt, le cœur dégage encore environ 7 % de sa puissance. 1 heure après : 1,5 %. Tu aurais dit combien ?"
   },
   "sources": [
     "Réacteur à eau sous pression de 900 MWe (palier CPY) : 2 785 MW thermiques (« près de trois mille mégawatts »), 157 assemblages de combustible de 3,66 m de hauteur active, 57 grappes de commande : https://fr.wikipedia.org/wiki/Palier_CP0_/_CPY et https://www.uarga.org/nucleaire/REP_900.php",
@@ -138,7 +138,7 @@
     { "type": "tick", "at": "release-0.05", "count": 1, "every": 1, "gain": -16 },
     { "type": "impact", "at": "release+0.17", "gain": -12, "size": 1 },
     { "type": "tick", "at": "open-0.05", "count": 3, "every": 0.06, "gain": -17 },
-    { "type": "whoosh", "at": "drop-0.05", "dur": 1.0, "gain": -26 },
+    { "type": "whoosh", "at": "drop-0.12", "dur": 1.0, "gain": -26 },
     { "type": "impact", "at": "fall", "gain": -9, "size": 1.3 },
     { "type": "riser", "to": "bottom", "dur": 2.6, "gain": -21 },
     { "type": "whoosh", "at": "weight-0.4", "dur": 1.5, "gain": -20 },
@@ -147,7 +147,7 @@
     { "type": "impact", "at": "secret+0.4", "gain": -16, "size": 0.9 },
     { "type": "impact", "at": "chicago", "gain": -15, "size": 0.9 },
     { "type": "tick", "at": "hache:barre", "count": 1, "every": 1, "gain": -20 },
-    { "type": "whoosh", "at": "hache:homme-0.35", "dur": 1.2, "gain": -21 },
+    { "type": "whoosh", "at": "hache:corde+0.15", "dur": 1.2, "gain": -21 },
     { "type": "impact", "at": "axe", "gain": -11, "size": 1 },
     { "type": "blip", "at": "like:celui", "gain": -25, "pitch": 0.9, "pan": -0.3 },
     { "type": "blip", "at": "like:imagine", "gain": -25, "pitch": 1, "pan": 0.3 },

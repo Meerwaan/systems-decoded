@@ -80,6 +80,30 @@ export function makeSurface({ radius = 260, cell = 5, fade = 46, lift = 1 } = {}
   return { group, grid: grid.material.uniforms, shadow: catcher.material };
 }
 
+/**
+ * A soft patch of shadow, 1 × 1 until it is scaled: what sits a thing of glass on its floor (glass
+ * casts no shadow, and its solid head and hands alone would cast three orphan ovals), or seats a
+ * part on its base. Lay it just above the surface, scale it to the footprint; `uniforms.uAmount` is its depth.
+ */
+export function makeContact({ amount = 0.5 } = {}) {
+  const mesh = new THREE.Mesh(
+    new THREE.PlaneGeometry(1, 1),
+    new THREE.ShaderMaterial({
+      transparent: true,
+      depthWrite: false,
+      uniforms: { uAmount: { value: amount } },
+      vertexShader: /* glsl */ `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+      fragmentShader: /* glsl */ `
+        uniform float uAmount; varying vec2 vUv;
+        void main(){ float d = length(vUv - 0.5) * 2.0; gl_FragColor = vec4(0.0, 0.0, 0.0, uAmount * pow(clamp(1.0 - d, 0.0, 1.0), 1.6)); }`,
+    }),
+  );
+  mesh.rotation.x = -Math.PI / 2;
+  mesh.position.y = 0.05;
+  mesh.renderOrder = 1; // over the floor's own light, like the shadow catcher
+  return mesh;
+}
+
 /** Soft disc of light on the surface, under the object. */
 export function makePool({ radius = 17, color = BRAND.veille } = {}) {
   const mesh = new THREE.Mesh(

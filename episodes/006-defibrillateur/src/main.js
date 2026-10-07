@@ -56,7 +56,7 @@ function build() {
     set: IN_HALL, cast: 1, collapse: 0.5, witness: 0, push: 0, off: 0, toi: 0, toiS: 0,
     boxAt: 0, pad1: 0, pad2: 0, armed: 0, charge: 0, listen: 0, speak: 0,
     chaos: 1, order: 0, flash: 0, heartDim: 1, halo: 1, shock: 0, cold: 0,
-    route: 0, call: 0, lines: 1, beacon: 1.4, far: 1, ground: 0.2, door: 0, sign: 1, ghost: 0,
+    route: 0, call: 0, lines: 1, beacon: 2, far: 1.6, ground: 0.2, door: 0, sign: 1, ghost: 0,
     explode: 0, out: 0, lidA: 1, bArmed: 0, bCharge: 0, bListen: 0, days: 0, ms: 0, ecg: 0,
     pool: 0.24, grid: 0.16, mood: 1, gel: 0,
   };
@@ -177,7 +177,7 @@ function build() {
   const BOXWIDE = { tx: X + BOX.x, ty: 150, tz: BOX.z, d: 2650, az: -81, el: 1.5, fov: 30, shift: 150, side: 0 };
   const BOXCLOSE = { tx: X + BOX.x, ty: BOX.y + 12, tz: BOX.z, d: 290, az: -16, el: 3, fov: 28, shift: 310, side: 0 };
   shot(t.promesse - 0.25, 1.5, BOXWIDE);
-  st(t.promesse, 1.0, { halo: 0.6, far: 1.3 });
+  st(t.promesse, 1.0, { halo: 0.6, far: 1.3, beacon: 1.4 });
   shot(t.promesse + 1.3, t.tu - t.promesse - 1.4, { d: 1500, az: -74 }, "sine.inOut");
   follow("chip-box", hall.A.sign, -330, -60);
   show("#chip-box", t.boiteMot);

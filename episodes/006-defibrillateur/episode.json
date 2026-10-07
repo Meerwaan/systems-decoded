@@ -16,9 +16,13 @@
   },
   "cover": { "at": "eclate:condensateur+0.76", "title": ["Défibrillateur"], "cam": { "tx": 0, "ty": 19, "tz": 2, "d": 182, "az": 26, "el": 22, "shift": -345, "side": 0, "fov": 28 } },
   "post": {
-    "caption": "Tu passes devant sans la regarder. Elle se teste toute seule, elle te parle, et elle refuse de choquer un cœur qui bat. La plus proche de chez toi, elle est où ?",
+    "caption": "Défibrillateur : comment ça marche, et pourquoi tu ne peux pas te tromper. La boîte verte se teste seule chaque jour, te dicte chaque geste, et refuse de choquer un cœur qui bat. Arrêt cardiaque : appeler le 15, masser, défibriller. Dossier 006. La plus proche de chez toi, elle est où ?",
     "hashtags": ["#apprendresurtiktok", "#commentcamarche", "#premierssecours", "#defibrillateur", "#sante"],
-    "pinned": "Tu ne sais pas où elle est ? Appelle le 15 (ou le 112) : l'opérateur voit les défibrillateurs déclarés autour de toi (base nationale Géo'DAE) et te guide. Dans l'ordre : appeler, masser, puis la boîte. Des applis gratuites les montrent aussi sur une carte (SAUV Life, Staying Alive). Et la tienne, elle est où ?"
+    "pinned": "Tu ne sais pas où est la plus proche ? Appelle le 15 : l'opérateur voit les défibrillateurs autour de toi et te guide. Et la tienne, elle est où ?",
+    "replies": [
+      "Dans l'ordre : appeler le 15 (ou le 112), masser, puis la boîte. Elle parle, te dit quoi faire, et ne choque jamais un cœur qui bat.",
+      "Pour la repérer dès aujourd'hui : les applis gratuites Staying Alive et SAUV Life montrent les défibrillateurs sur une carte."
+    ]
   },
   "sources": [
     "Arrêt cardiaque en France : environ 40 000 à 50 000 par an, 5 % de survie, 7 fois sur 10 devant témoin, « 1 minute gagnée, c'est 10 % de chance de survie en plus » ; le défibrillateur « ne représente aucun danger : ni pour la victime, ni pour l'utilisateur » : https://www.pompiers.fr/arret-cardiaque/",

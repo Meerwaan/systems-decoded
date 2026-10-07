@@ -12,10 +12,15 @@ import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
 import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
 import { BRAND } from "./brand.js";
+import { SOFTBOX } from "./build3d.js";
 
 const DEG = Math.PI / 180;
 const FPS = 30;
 const KEY_DIR = new THREE.Vector3(-30, 52, 38).normalize();
+const KEY_U = new THREE.Vector3().crossVectors(KEY_DIR, new THREE.Vector3(0, 1, 0)).normalize();
+const KEY_V = new THREE.Vector3().crossVectors(KEY_U, KEY_DIR);
+// points spread evenly over a disc (Vogel's spiral)
+const disc = (n) => Array.from({ length: n }, (_, i) => [Math.sqrt((i + 0.5) / n) * Math.cos(i * 2.399963), Math.sqrt((i + 0.5) / n) * Math.sin(i * 2.399963)]);
 
 const halton = (i, base) => {
   let f = 1;
@@ -37,7 +42,7 @@ function studioEnvironment(renderer) {
     mesh.lookAt(0, 0, 0);
     room.add(mesh);
   };
-  panel(9, 6, 0xfff3e2, 9, [-7, 8, 6]);
+  panel(SOFTBOX.w, SOFTBOX.h, 0xfff3e2, 9, SOFTBOX.pos);
   panel(1.6, 10, 0xdfeeff, 7, [8, 3, -7]);
   panel(12, 12, 0xffffff, 0.5, [0, 12, 0]);
   panel(14, 14, 0x0a0d10, 1, [0, -6, 0]);
@@ -172,8 +177,11 @@ const GRADE = {
  * `samples` instants averaged per frame (16: a fast move stays one smooth smear, not a row of ghosts; 1 = off, for a fast draft).
  * `shutter` fraction of a frame the shutter stays open (0.5 = the classic 180°).
  * `far`     how far the camera sees, in scene units.
+ * `keySize` the key light as a softbox: its half-angle seen from the subject, in degrees (0 = a point,
+ *           shadows cut with a razor; 2–3 = crisp where a part touches, soft a hand's width away).
+ *           Free: each instant of the shutter sees the key from another point of the box. Also `stage.keySize`.
  */
-export function createStage(canvas, { bloom = [0.6, 0.7, 1.0], fog = 0.0032, scale = 10, samples = 16, shutter = 0.5, far = 900 } = {}) {
+export function createStage(canvas, { bloom = [0.6, 0.7, 1.0], fog = 0.0032, scale = 10, samples = 16, shutter = 0.5, far = 900, keySize = 0 } = {}) {
   const { W, H } = BRAND;
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, preserveDrawingBuffer: true, powerPreference: "high-performance" });
   renderer.setPixelRatio(1);
@@ -225,6 +233,27 @@ export function createStage(canvas, { bloom = [0.6, 0.7, 1.0], fog = 0.0032, sca
   }
   aimLights();
 
+  // The same points of the box at every frame, in an order that owes nothing to time: nothing crawls.
+  const box = disc(samples);
+  let spread = false;
+  function spreadKey(k) {
+    const size = samples >= 4 ? stage.keySize : 0;
+    if (!size) {
+      if (spread) aimed.x = NaN; // back to a point: let aimLights put it there again
+      spread = false;
+      return;
+    }
+    spread = true;
+    const reach = focus.scale * 8;
+    const r = reach * Math.tan(size * DEG);
+    const [u, v] = box[(k * 7) % samples];
+    lights.key.position.set(
+      focus.x + KEY_DIR.x * reach + (KEY_U.x * u + KEY_V.x * v) * r,
+      focus.y + KEY_DIR.y * reach + (KEY_U.y * u + KEY_V.y * v) * r,
+      focus.z + KEY_DIR.z * reach + (KEY_U.z * u + KEY_V.z * v) * r,
+    );
+  }
+
   // Orbit rig: tween these numbers, never the camera itself.
   //   t*: look-at point · d: distance · az/el: degrees · shift: px the picture is pushed up · side: px it is pushed left
   const cam = { tx: 0, ty: 0, tz: 0, d: 60, az: 0, el: 30, fov: 28, roll: 0, shift: 0, side: 0, drift: 1 };
@@ -261,6 +290,7 @@ export function createStage(canvas, { bloom = [0.6, 0.7, 1.0], fog = 0.0032, sca
     // just after the cut, never on it: at the very instant, the timeline may still hold the previous shot
     for (const c of cuts) if (c <= frameTime + 1e-6 && t < c + 1e-3) t = Math.max(t, Math.min(frameTime, c + 1e-3));
     for (const fn of before) fn(t);
+    spreadKey(k);
     aimLights();
     applyCamera(t, samples > 1 ? halton(k + 1, 2) - 0.5 : 0, samples > 1 ? halton(k + 1, 3) - 0.5 : 0);
   }
@@ -294,7 +324,7 @@ export function createStage(canvas, { bloom = [0.6, 0.7, 1.0], fog = 0.0032, sca
   }
 
   const stage = {
-    renderer, scene, camera, composer, bloomPass, lights, cam, grade, focus,
+    renderer, scene, camera, composer, bloomPass, lights, cam, grade, focus, keySize,
     /** Declare a cut at `t`: the frames around it stay clean (the motion blur never mixes two shots). */
     cut: (t) => cuts.push(t),
     /** Set to a partial pose to hold the camera there whatever the timeline says (the cover exporter does). */

@@ -68,7 +68,7 @@ function build() {
     set: IN_REACTOR, power: 1, falls: 1, neutrons: 0.5, shell: 1, heat: 0.6, glow: 3.2, mood: 1, gel: 0,
     feed: 1, others: 1, sealed: 0.8, chain: 0,
     explode: 0, coilA: 1, ringA: 1, gPower: 1, ring: 0, open: 0, drop: 0, aura: 0, shellA: 0, field: 0, pulse: 0, bands: 1, pool: 0.24, grid: 0.16,
-    hot: 0, axe: 0, lines: 1,
+    hot: 0, axe: 0, lines: 1, heart: 1,
   };
   const S = { ...FIRST, shake: 0 };
   Object.assign(cam, POSE0);
@@ -156,7 +156,7 @@ function build() {
   // A — "panne de courant. et c'est toi qui es aux commandes d'un réacteur nucléaire"
   // The camera is on its way from the first frame: it rises over the vessel while it closes in, and the
   // crown opens into a ring of coils. Nothing else moves: the crown and its feed stay lit until "la panne"
-  shot(0, t.promesse - 0.35, { d: 4700, az: 44, el: 44, shift: 200 }, "sine.out");
+  shot(0, t.promesse - 0.35, { d: 4720, az: 44, el: 44, shift: 165 }, "sine.out"); // no higher: the lit crown would climb behind the header
   // B — "ne touche à rien : il s'arrête tout seul, en deux secondes" — you, read as a system: nothing to do.
   // The panel is a narrow column on the left; the vessel makes room for it
   shot(t.promesse - 0.35, 1.1, { d: 5200, az: 40, side: -165 });
@@ -324,12 +324,17 @@ function build() {
   hide("#chip-feed-off", toChicago - 0.15, 0.12);
 
   // "chicago, 1942. le dernier secours du tout premier réacteur ? une barre pendue à une corde… et un homme avec une hache."
-  cut(toChicago, IN_CHICAGO, { tx: PX + 170, ty: 560, tz: 0, d: 7000, az: -22, el: 10, shift: 60 }, { mood: 0, gel: 0, hot: 0, axe: 0 });
-  shot(toChicago, t.barre - toChicago - 0.2, { d: 6600, az: -14 }, "sine.inOut");
+  // The camera never stops: in toward the pile, alight; up to the green rod over its well; along the rope, down to the man
+  cut(toChicago, IN_CHICAGO, { tx: PX + 200, ty: 520, tz: 0, d: 5600, az: -24, el: 8, shift: 100 }, { mood: 0, gel: 0, hot: 0, axe: 0, heart: 1 });
+  shot(toChicago, t.secours - 0.3 - toChicago, { d: 4700, az: -18 }, "sine.inOut");
   follow("chip-1942", null, 96, 470); // the top slot: the camera travels, the date does not
   show("#chip-1942", t.hache + 0.2);
-  shot(t.barre - 0.2, 1.3, { tx: PX + 250, ty: 860, tz: 0, d: 3300, az: -12, el: 6, shift: 150 }); // the rod, its rope
-  shot(t.homme - 0.35, 1.3, { tx: PX + 545, ty: 640, tz: 0, d: 1500, az: -34, el: 5, shift: 150 }); // the man
+  shot(t.secours - 0.3, 1.9, { tx: PX + 270, ty: 760, tz: 0, d: 3300, az: -12, el: 6, shift: 150 }); // the rod, its rope, the pulleys — and the man at the other end, clear of the app's buttons
+  st(t.secours - 0.3, 1.2, { heart: 0.15 }); // the pile is now under the captions: it steps back, the rod is the subject
+  shot(t.secours + 1.6, t.corde + 0.15 - t.secours - 1.6, { tx: PX + 300, d: 3150, az: -17 }, "sine.inOut");
+  shot(t.corde + 0.15, 1.35, { tx: PX + 545, ty: 640, tz: 0, d: 1150, az: -34, el: 5, shift: 150 }); // the man
+  tl.to("#top-fade", { opacity: 1, duration: 0.4 }, t.corde + 0.6); // the rope climbs behind the header: into the dark first
+  tl.set("#top-fade", { opacity: 0 }, toCta);
   hide("#chip-1942", t.barre - 0.3);
   st(t.homme, 0.4, { hot: 1 });
   st(t.hacheMot - 0.1, 0.3, { axe: 1 }, "power2.out");
@@ -416,7 +421,7 @@ function build() {
     if (S.set === IN_REACTOR) {
       reactor.update({ power: S.power, fall: cur.fall * S.falls, reaction: cur.reaction, neutrons: S.neutrons, shell: S.shell, heat: S.heat, glow: S.glow, feed: S.feed, others: S.others, sealed: S.sealed, chain: S.chain }, time, px);
     } else if (S.set === IN_CHICAGO) {
-      pile.update({ hot: S.hot, axe: S.axe, lines: S.lines }, time);
+      pile.update({ hot: S.hot, axe: S.axe, lines: S.lines, heart: S.heart }, time);
     }
 
     // the bench: taken apart, or at work

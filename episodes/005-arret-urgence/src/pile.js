@@ -23,6 +23,29 @@ const BALCONY = { x0: 430, x1: 800, y: 500, half: 150, rail: 105 };
 const ROPE_X = 500; // where the rope comes down to the rail
 const PULLEY = 1060;
 
+/** A ball of light: bright where it faces the camera, nothing at its edge. */
+const softGlow = (power = 2.2) =>
+  new THREE.ShaderMaterial({
+    transparent: true,
+    depthWrite: false,
+    blending: THREE.AdditiveBlending,
+    uniforms: { uColor: { value: new THREE.Color(0, 0, 0) }, uPower: { value: power } },
+    vertexShader: /* glsl */ `
+      varying vec3 vN; varying vec3 vV;
+      void main() {
+        vec4 mv = modelViewMatrix * vec4(position, 1.0);
+        vN = normalize(normalMatrix * normal);
+        vV = normalize(-mv.xyz);
+        gl_Position = projectionMatrix * mv;
+      }`,
+    fragmentShader: /* glsl */ `
+      uniform vec3 uColor; uniform float uPower; varying vec3 vN; varying vec3 vV;
+      void main() {
+        float f = pow(clamp(dot(normalize(vN), normalize(vV)), 0.0, 1.0), uPower);
+        gl_FragColor = vec4(uColor * f, 1.0);
+      }`,
+  });
+
 export function buildPile() {
   const group = new THREE.Group();
   group.position.set(PILE.x, 0, 0);
@@ -34,7 +57,7 @@ export function buildPile() {
   group.add(fx.floor.group);
 
   /* ── the pile: layers of bricks, wider in the middle, flattened on top ── */
-  fx.shell = glass(BRAND.ink, { base: 0.002, rim: 0.045, power: 2.4 });
+  fx.shell = glass(BRAND.ink, { base: 0.004, rim: 0.085, power: 2.4 }); // a body of glass: lines alone are a drawing. Twelve layers add up: a third of the vessel's values
   fx.edges = [];
   for (let k = 0; k < LAYERS; k++) {
     const t = k / (LAYERS - 1);
@@ -42,24 +65,36 @@ export function buildPile() {
     const geo = new THREE.BoxGeometry(half * 2, LAYER - 3, half * 1.8);
     const layer = new THREE.Mesh(geo, fx.shell);
     layer.position.y = k * LAYER + LAYER / 2;
-    const e = edgesOf(geo, { color: BRAND.ink, width: 1.9, opacity: 0.45 });
+    const e = edgesOf(geo, { color: BRAND.ink, width: 1.9, opacity: 0.22 });
     fx.edges.push(e.material);
     layer.add(e);
     group.add(layer);
   }
   A.pile = anchor(group, -330, 260, 300);
+  // it is running: a light in the heart of the graphite (a gradient — a plain additive sphere reads as a disc)
+  const heart = softGlow(3.2); // a bright centre, a long tail
+  heart.uniforms.uColor.value.copy(SIGNAL).multiplyScalar(1.4);
+  const core = new THREE.Mesh(new THREE.SphereGeometry(215, 40, 24), heart);
+  core.position.set(0, TOP * 0.45, 0);
+  group.add(core);
+  // the well the rod would fall into: a channel down through the bricks
+  const wellGeo = new THREE.BoxGeometry(34, 320, 34);
+  const well = new THREE.Mesh(wellGeo, glass(BRAND.ink, { base: 0.03, rim: 0.3, power: 2.4 }));
+  well.position.set(0, TOP - 160, 0);
+  well.add(edgesOf(wellGeo, { color: BRAND.ink, width: 1.9, opacity: 0.5 }));
+  group.add(well);
 
   /* ── the rod, over the pile; its rope, up over two pulleys and down to the balcony rail ── */
   const bright = solid(0xb9c0c4, { rough: 0.4, metal: 0.4, env: 1.3 });
   const rodLen = 250;
   const rodY = TOP + 46;
-  const rod = new THREE.Mesh(new THREE.BoxGeometry(10, rodLen, 10), bright);
+  // veille: it is the system — the ancestor of the green rods the film has just watched fall
+  const rod = new THREE.Mesh(new THREE.BoxGeometry(22, rodLen, 22), glow(BRAND.veille, 1.25));
   rod.position.set(0, rodY + rodLen / 2, 0);
-  rod.castShadow = true;
-  const rodEdges = edgesOf(rod.geometry, { color: BRAND.ink, width: 1.9, opacity: 0.8 });
+  const rodEdges = edgesOf(rod.geometry, { color: BRAND.veille, width: 1.9, opacity: 0.8 });
   rod.add(rodEdges);
   group.add(rod);
-  A.rod = anchor(group, -5, rodY + rodLen * 0.5, 0);
+  A.rod = anchor(group, -11, rodY + rodLen * 0.5, 0);
   const tie = BALCONY.y + BALCONY.rail;
   fx.rope = lineMat(BRAND.ink, 3.2, { opacity: 0.95 });
   const rope = new Line2(new LineGeometry(), fx.rope);
@@ -122,8 +157,17 @@ export function buildPile() {
   handle.position.y = 30;
   handle.castShadow = true;
   fx.blade = glow(BRAND.ink, 1);
-  const blade = new THREE.Mesh(new THREE.BoxGeometry(3.6, 17, 25), fx.blade);
-  blade.position.set(0, 70, 11);
+  // an axe head: narrow at the handle, flaring to a curved edge (a square plate reads as a sign)
+  const head = new THREE.Shape();
+  head.moveTo(0, -5);
+  head.lineTo(8, -6);
+  head.quadraticCurveTo(20, -9, 27, -15);
+  head.quadraticCurveTo(31, 0, 27, 15);
+  head.quadraticCurveTo(20, 9, 8, 6);
+  head.lineTo(0, 5);
+  head.closePath();
+  const blade = new THREE.Mesh(new THREE.ExtrudeGeometry(head, { depth: 3.2, bevelEnabled: false }).translate(0, 0, -1.6).rotateY(-Math.PI / 2), fx.blade);
+  blade.position.set(0, 70, -1);
   axe.add(handle, blade);
   man.group.add(axe);
   // the hand on top slides to where the handle really is
@@ -138,6 +182,7 @@ export function buildPile() {
    * hot     0 → 1: the point on the rope where the axe would fall
    * axe     0 → 1: the blade lights up (signal)
    * lines   0 → 1: the fine lines
+   * heart   0 → 1: the light inside the pile
    */
   function update(S, time) {
     const beat = 0.82 + 0.18 * Math.sin(time * 7.5);
@@ -145,9 +190,10 @@ export function buildPile() {
     fx.hot.visible = S.hot > 0.01;
     hue.copy(INK).lerp(SIGNAL, S.axe);
     fx.blade.color.copy(hue).multiplyScalar(1 + 2.6 * S.axe);
+    heart.uniforms.uColor.value.copy(SIGNAL).multiplyScalar(1.4 * S.heart);
     fx.lines.opacity = 0.45 * S.lines;
-    for (const m of fx.edges) m.opacity = 0.45 * S.lines;
-    fx.shell.uniforms.uAmount.value = S.lines;
+    for (const m of fx.edges) m.opacity = 0.22 * S.lines;
+    fx.shell.uniforms.uAmount.value = S.lines * (0.3 + 0.7 * S.heart); // the graphite steps back with its light: the rod is then the subject
     fx.floor.grid.uAmount.value = 0.16 * S.lines;
   }
 

@@ -215,6 +215,7 @@ export function buildHall() {
   group.add(fall);
   const victim = makeFigure({ hands: "flat" });
   victim.group.rotation.y = Math.PI / 2; // facing +x: falling backward is falling toward −x
+  victim.flesh.color.multiplyScalar(0.62); // the head stays solid (a person), but the heart is the brightest thing of the body
   fall.add(victim.group);
   // the heart, in the chest
   const heart = buildHeart();
@@ -290,7 +291,7 @@ export function buildHall() {
   fx.crowd = [];
   // (placed so that, in the first picture, nobody stands in front of the one who falls or in front of the box — and
   // nobody on the way the camera flies to the box: a figure of glass brushed past at speed is one stray frame)
-  for (const [x, z, turn] of [[520, -330, 0.6], [1180, 120, -2.2], [3500, -150, -1.9], [2360, 60, -0.4], [-900, -200, 0.9]]) {
+  for (const [x, z, turn] of [[520, -330, 0.6], [1180, 120, -2.2], [3500, -150, -1.9], [3350, 150, -0.4], [-900, -200, 0.9]]) {
     const p = makeFigure({ glassK: 0.42, hands: "flat" });
     p.group.position.set(x, 0, z);
     p.group.rotation.y = turn;
