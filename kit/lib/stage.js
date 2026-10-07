@@ -239,7 +239,10 @@ export function createStage(canvas, { bloom = [0.6, 0.7, 1.0], fog = 0.0032, sca
   function spreadKey(k) {
     const size = samples >= 4 ? stage.keySize : 0;
     if (!size) {
-      if (spread) aimed.x = NaN; // back to a point: let aimLights put it there again
+      if (spread) {
+        aimed.x = NaN; // back to a point
+        aimLights();
+      }
       spread = false;
       return;
     }
@@ -290,8 +293,8 @@ export function createStage(canvas, { bloom = [0.6, 0.7, 1.0], fog = 0.0032, sca
     // just after the cut, never on it: at the very instant, the timeline may still hold the previous shot
     for (const c of cuts) if (c <= frameTime + 1e-6 && t < c + 1e-3) t = Math.max(t, Math.min(frameTime, c + 1e-3));
     for (const fn of before) fn(t);
-    spreadKey(k);
     aimLights();
+    spreadKey(k);
     applyCamera(t, samples > 1 ? halton(k + 1, 2) - 0.5 : 0, samples > 1 ? halton(k + 1, 3) - 0.5 : 0);
   }
 
