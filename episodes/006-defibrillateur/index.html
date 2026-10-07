@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · 006 · Défibrillateur</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents sont stylés dans kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+
+      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
+      #chip-box, #chip-call, #chip-ready { color: var(--veille); }
+      #chip-toi, #chip-far { color: var(--ink); }
+
+      /* ce que lit la puce : le tracé du cœur, tel que les électrodes le rapportent */
+      #ecg { left: var(--safe-l); right: var(--safe-r); top: var(--slot-top); }
+      #ecg-plot { position: relative; margin-top: 18px; height: 150px; border-bottom: 2px solid var(--ink-faint); }
+      #ecg-plot svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+      #ecg-line { fill: none; stroke: var(--signal); stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; }
+      #ecg-status { position: relative; margin-top: 18px; height: 26px; font: 700 23px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; }
+      #ecg-status span { position: absolute; left: 0; top: 0; white-space: nowrap; }
+      #ecg-verdict { position: absolute; right: 0; top: 0; white-space: nowrap; }
+      #ecg-verdict span { position: absolute; left: auto; right: 0; top: -6px; padding: 4px 10px; border: 2px solid currentColor; }
+
+      /* ses chances, minute après minute, et l'heure où les secours arrivent */
+      #odds { left: var(--safe-l); right: var(--safe-r); top: var(--slot-top); }
+      #odds-plot { position: relative; margin-top: 20px; height: 170px; border-bottom: 2px solid var(--ink-faint); }
+      .odd { position: absolute; bottom: 0; width: 38px; background: var(--signal); transform-origin: 50% 100%; }
+      #odds-help { position: absolute; top: -6px; bottom: -12px; width: 0; border-left: 3px dashed var(--ink); }
+      #odds-help span { position: absolute; right: 12px; top: 0; white-space: nowrap; text-align: right; font: 500 19px/1.25 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); }
+      #odds-axis { display: flex; justify-content: space-between; margin-top: 12px; font: 500 19px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-dim); }
+
+      /* elle se teste toute seule : le compteur des jours */
+      #selftest { left: var(--safe-l); top: var(--slot-top); width: 560px; }
+      #selftest-n { margin-top: 22px; font: 800 96px/1 var(--mono); letter-spacing: -0.04em; color: var(--veille); }
+      #selftest-n small { margin-left: 14px; font: 500 24px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-dim); }
+      #selftest-s { margin-top: 18px; font: 700 23px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--veille); }
+
+      /* elle parle : ses phrases, entre guillemets, sortent du haut-parleur */
+      .say { position: absolute; left: 0; top: 0; max-width: 620px; padding: 16px 22px 18px; border: 2px solid var(--veille); background: rgba(7, 10, 12, 0.82); color: var(--veille); }
+      .say span { display: block; font: 500 20px/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-dim); }
+      .say b { display: block; margin-top: 10px; font: 700 46px/1.02 var(--display); letter-spacing: 0.02em; text-transform: uppercase; }
+
+      /* la chute : le titre se pose sur un sujet clair (un torse de verre, éclairé en vert) — une ombre le porte */
+      #title-shade { position: absolute; left: 0; right: 0; top: 400px; height: 460px; opacity: 0; background: linear-gradient(to bottom, rgba(7, 10, 12, 0.74) 0, rgba(7, 10, 12, 0.68) 55%, rgba(7, 10, 12, 0) 100%); }
+      #retitle-main { font-size: 104px; }
+      #retitle-slot { height: 104px; }
+      #retitle-strike { top: 50px; }
+      #next-fact b { font-size: 150px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="84.867" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 006</span></div>
+        <div class="hud__title" id="hud-title">Défibrillateur</div>
+        <div class="hud__clock" id="hud-clock">T+0:00</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Chances</span><b id="hud-count-v">100 %</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- 01 · MENACE -->
+      <div id="chip-box" class="chip chip--live"><span>La boîte verte</span><b>30 m</b></div>
+      <div id="chip-far" class="chip chip--live"><span>Elle est où ?</span><b>30 m</b></div>
+      <div id="chip-toi" class="chip chip--live"><span>Toi</span></div>
+      <div id="chip-flow" class="chip chip--live"><span>Sang pompé</span><b>0 L/min</b></div>
+      <div id="chip-call" class="chip chip--live"><span>Le 15</span><b>En ligne</b></div>
+
+      <section id="odds" class="panel">
+        <div class="panel__h"><span>Ses chances</span><span class="is-signal">−10 % par minute</span></div>
+        <div id="odds-plot"><div id="odds-help" data-layout-allow-overflow><span>Les secours<br />≈ 15 min</span></div></div>
+        <div id="odds-axis"><span>0 min</span><span>5</span><span>10</span><span>15</span></div>
+      </section>
+
+      <!-- le tracé du cœur, lu par la puce -->
+      <section id="ecg" class="panel">
+        <div class="panel__h"><span>Ce que lit la puce</span><span id="ecg-h">Par les électrodes</span></div>
+        <div id="ecg-plot"><svg viewBox="0 0 900 150" preserveAspectRatio="none"><path id="ecg-line" d="M0 75 L900 75" /></svg></div>
+        <div id="ecg-status">
+          <span id="ecg-s0" class="is-signal">● Fibrillation — du chaos</span>
+          <span id="ecg-s1">● Plus rien</span>
+          <span id="ecg-s2" class="is-veille">● Rythme normal</span>
+          <div id="ecg-verdict">
+            <span id="ecg-v1" class="is-signal">Choc recommandé</span>
+            <span id="ecg-v0" class="is-veille">Choc refusé</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 · AUTOPSIE -->
+      <section id="selftest" class="panel">
+        <div class="panel__h"><span>Autotest · chaque jour</span><span>Seule</span></div>
+        <div id="selftest-n"><b id="selftest-v">1</b><small>jours</small></div>
+        <div id="selftest-s">● Prête</div>
+      </section>
+
+      <!-- 03 · RÉPONSE : ce qu'elle dit -->
+      <div id="say-touch" class="say"><span>Elle parle</span><b>« Ne touchez pas le patient »</b></div>
+      <div id="chip-charge" class="chip chip--live"><span>Condensateur</span><b id="chip-charge-v">0 J</b></div>
+      <div id="chip-ms" class="chip chip--live"><span>Le choc</span><b id="chip-ms-v">0 ms</b></div>
+      <div id="chip-ready" class="chip chip--live"><span>Bouton</span><b>Verrouillé</b></div>
+
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Un défibrillateur</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">Relance le cœur<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Arrête le chaos</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- appels à l'action : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Like · la vidéo remonte</span><span id="net-n">Témoins prêts 1/12</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <div id="cta-field">
+        <div class="kicker">Commentaire · la plus proche de chez moi…</div>
+        <div id="cta-field-v"><span id="cta-typed" class="is-veille">LA MAIRIE</span><span id="cta-caret"></span></div>
+      </div>
+
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 007</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <div id="next-fact"><b>0,5 s</b><span>pour quitter<br />l'avion.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
