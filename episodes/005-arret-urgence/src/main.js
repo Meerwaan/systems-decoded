@@ -67,7 +67,7 @@ function build() {
   const FIRST = {
     set: IN_REACTOR, power: 1, falls: 1, neutrons: 0.5, shell: 1, heat: 0.6, glow: 3.2, mood: 1, gel: 0,
     feed: 1, others: 1, sealed: 0.8, chain: 0,
-    explode: 0, coilA: 1, gPower: 1, ring: 0, open: 0, drop: 0, aura: 0, shellA: 0, field: 0, pulse: 0, bands: 1, pool: 0.24, grid: 0.16,
+    explode: 0, coilA: 1, ringA: 1, gPower: 1, ring: 0, open: 0, drop: 0, aura: 0, shellA: 0, field: 0, pulse: 0, bands: 1, pool: 0.24, grid: 0.16,
     hot: 0, axe: 0, lines: 1,
   };
   const S = { ...FIRST, shake: 0 };
@@ -245,15 +245,18 @@ function build() {
   cCoil.hide(tl, t.repos - 0.1);
 
   // "c'est un électroaimant. tant que le courant passe, il serre les cliquets : la barre reste en l'air."
-  const HOLD = { tx: 1.5, ty: 34.5, tz: 0, d: 150, az: 0, el: 5, shift: -150, side: 0 };
+  const HOLD = { tx: 1.5, ty: 33, tz: 0, d: 125, az: 3, el: 5, shift: -120, side: 0 };
   shot(t.repos - 0.1, 1.5, HOLD);
   st(t.aimantMot - 0.05, 0.5, { field: 1 });
-  st(t.tant - 0.3, 0.6, { coilA: 0.1, bands: 0.62 }); // the coil turns to glass: what it holds is the subject
+  st(t.tant - 0.3, 0.6, { coilA: 0.1, ringA: 0.18, bands: 0.62 }); // the coil turns to glass, and the ring inside it: the teeth in their notch are the subject
+  tl.fromTo("#top-fade", { opacity: 0 }, { opacity: 1, duration: 0.5 }, t.repos - 0.1); // from here to the fall the rod climbs behind the header: it goes into the dark first
+  tl.set("#top-fade", { opacity: 0 }, toFall);
   tl.fromTo("#gauge", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, t.tant - 0.2);
   tl.set("#gauge-s1", { opacity: 0 }, 0);
   tw.fromTo(S, { pulse: 0 }, { pulse: 1, duration: 0.25, ease: "sine.out", immediateRender: false }, t.serre - 0.05);
   st(t.serre + 0.2, 0.7, { pulse: 0 }, "sine.inOut");
-  shot(t.barreMot - 0.3, t.zero - t.barreMot + 0.1, { ty: 31, d: 168, az: -7 }, "sine.inOut");
+  // "la barre reste en l'air": back, down to its free end — it hangs over the stand, daylight under it
+  shot(t.barreMot - 0.3, t.zero - t.barreMot + 0.1, { ty: 24, d: 192, az: -8, el: 6, shift: 10 }, "sine.inOut");
 
   /* ════════════════════ 03 · RÉPONSE ════════════════════ */
   setAct(tl, 3, t.zero);
@@ -270,7 +273,7 @@ function build() {
   tl.to("#gauge-fill", { backgroundColor: "#ff5b2e", duration: 0.12 }, lets);
   tl.to("#gauge-s0", { opacity: 0, duration: 0.1 }, lets);
   tl.to("#gauge-s1", { opacity: 1, duration: 0.1 }, lets + 0.1);
-  shot(t.zero + 0.05, t.lache - 0.25 - t.zero, { d: 138, az: -2 }, "sine.inOut");
+  shot(t.zero + 0.05, t.lache - 0.25 - t.zero, { ty: 31, d: 140, az: -2, el: 5, shift: -60 }, "sine.inOut");
   jolt(t.zero, 0.3, 0.4);
   tl.fromTo("#hud-clock", { scale: 1 }, { scale: 1.2, color: "#ff5b2e", duration: 0.12, ease: "power2.out", transformOrigin: "100% 50%" }, t.zero);
   tl.to("#hud-clock", { scale: 1, color: "#e9e4d8", duration: 0.6, ease: "power2.out" }, t.zero + 0.12);
@@ -279,6 +282,7 @@ function build() {
 
   // "l'aimant lâche. les cliquets s'écartent… et la barre tombe."
   shot(t.lache - 0.2, 1.0, { tx: 1.5, ty: 38, tz: 0, d: 112, az: 4, el: 4, shift: 60 });
+  st(t.lacheMot - 0.3, 0.2, { ringA: 1 }); // an object again
   st(t.lacheMot - 0.05, 0.22, { ring: 1 }, "power2.in"); // the ring is no longer held: it drops
   jolt(t.lacheMot + 0.17, 0.25, 0.3);
   st(t.ecartent - 0.05, 0.3, { open: 1 }, "back.out(2)");
@@ -300,13 +304,13 @@ function build() {
   st(t.deux, 0.8, { mood: 0, gel: 0 });
   st(t.fond - 0.25, 0.9, { sealed: 1 }); // "elles sont au fond": the bars, seen through the dead fuel, at their brightest
   tl.to("#hud-count", { color: "#5cffb0", duration: 0.3 }, t.arretee - 0.1);
-  const ASIDE = { tx: X, ty: 100, tz: 0, d: 4400, az: 16, el: 24, fov: 28, shift: 110, side: -150 };
+  const ASIDE = { tx: X, ty: 100, tz: 0, d: 4400, az: 16, el: 24, fov: 28, shift: 110, side: -165 };
   shot(t.arretee + 0.15, t.chute + 0.75 - t.arretee - 0.15, ASIDE); // the vessel steps aside before the words of the chute take the top of the picture
 
   /* ════════════════════ chute ════════════════════ */
   // "on ne dépense rien pour arrêter un réacteur." — the title turns over
   const toCrown = t.depense2 - 0.15;
-  shot(t.chute + 0.75, toCrown - t.chute - 0.75, { az: 22, el: 26 }, "sine.inOut");
+  shot(t.chute + 0.75, toCrown - t.chute - 0.75, { az: 28, el: 30 }, "sine.inOut");
   tl.fromTo("#retitle", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, t.chute + 0.9);
   tl.fromTo("#retitle-strike", { scaleX: 0 }, { scaleX: 1, duration: 0.22, ease: "power3.out" }, t.rienMot - 0.1);
   tl.to("#retitle-a", { opacity: 0, y: -40, duration: 0.2, ease: "power2.in" }, t.rienMot + 0.25);
@@ -335,7 +339,7 @@ function build() {
 
   /* ════════════════════ appels à l'action (sur l'établi) ════════════════════ */
   // LIKE — for the one who still pictures a big red button
-  cut(toCta, BENCH, { tx: 0, ty: 30, tz: 0, d: 420, az: 24, el: 14, shift: -90, side: 20 }, { coilA: 1, gPower: 1, ring: 0, open: 0, drop: 0, explode: 0, field: 0, shellA: 0, pulse: 0, bands: 1, pool: 0.28, grid: 0.16, mood: 0, gel: 0 });
+  cut(toCta, BENCH, { tx: 0, ty: 30, tz: 0, d: 420, az: 24, el: 14, shift: -90, side: 20 }, { coilA: 1, ringA: 1, gPower: 1, ring: 0, open: 0, drop: 0, explode: 0, field: 0, shellA: 0, pulse: 0, bands: 1, pool: 0.28, grid: 0.16, mood: 0, gel: 0 });
   shot(toCta, t.comment - toCta - 0.15, { az: 10, d: 400 }, "sine.inOut");
   likeNet(tl, {
     showAt: t.likeMot - 0.15,
@@ -418,6 +422,7 @@ function build() {
     // the bench: taken apart, or at work
     explode(partList, S.explode);
     setPartOpacity(grip.parts.coil, S.coilA);
+    setPartOpacity(grip.parts.ring, S.ringA);
     grip.pose({ power: S.gPower, ring: S.ring, open: S.open, drop: S.drop, aura: S.aura, shell: S.shellA, field: S.field, pulse: S.pulse, bands: S.bands });
 
     cam.roll = S.shake * Math.sin(time * 30) * 1.1;

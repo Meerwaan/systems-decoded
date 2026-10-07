@@ -141,15 +141,18 @@ export function buildGripper() {
     pivot.add(tip);
   }
   // the holding ring: a collar around the lower ends of the arms. Up, it wedges them shut.
+  // A part of its own: it turns to glass when the teeth it hides are the subject (its band stays lit)
+  const ring = makePart("ring", { lift: 0 });
+  const m2b = metals();
   fx.ring = new THREE.Group();
   const collar = lathe([[5.5, 0], [6.55, 0], [6.55, RING.h], [5.5, RING.h], [5.36, RING.h - 0.5], [5.36, 0.5], [5.5, 0]], 64);
-  fx.ring.add(addMesh(latches, collar, m2.cast, { threshold: 40, edgeOpacity: 0.85 }));
+  fx.ring.add(addMesh(ring, collar, m2b.cast, { threshold: 40, edgeOpacity: 0.85 }));
   fx.ringGlow = glow(BRAND.veille, 1.6);
   const band = new THREE.Mesh(new THREE.TorusGeometry(6.58, 0.13, 8, 72).rotateX(Math.PI / 2), fx.ringGlow);
   band.position.y = RING.h / 2;
   fx.ring.add(band);
   fx.ring.position.y = RING.y - RING.h / 2;
-  latches.add(fx.ring);
+  ring.add(fx.ring);
   A.latch = anchor(fx.arms[0], 0.75, -3.6, 0);
   A.tooth = anchor(fx.arms[0], -3.0, -7.6, 0);
   A.ring = anchor(fx.ring, 6.55, RING.h / 2, 0);
@@ -213,8 +216,8 @@ export function buildGripper() {
   }
   root.add(fieldLines);
 
-  const parts = { stand, rod, latches, coil };
-  root.add(stand, rod, latches, coil);
+  const parts = { stand, rod, latches, ring, coil };
+  root.add(stand, rod, latches, ring, coil);
   const outline = [...coil.userData.part.mats].filter((m) => m.isLineMaterial);
   for (const m of outline) m.userData.rest = m.color.clone();
 

@@ -326,7 +326,7 @@ export function buildReactor() {
     fx.neutrons.uniforms.uAmount.value = 0.9 * S.reaction * S.neutrons;
     fx.neutrons.update(time, px, 1 / 30);
     fx.chain.update(time, S.chain);
-    hue.copy(INK).multiplyScalar(0.12).lerp(VEILLE, S.power);
+    hue.copy(INK).multiplyScalar(0.3).lerp(VEILLE, S.power); // dead, the coils are still objects: dark grey, not a hole
     fx.coils.uniforms.uColor.value.copy(hue).multiplyScalar(0.4 + (0.9 + S.heat) * S.power);
     fx.coils.uniforms.uOthers.value = S.others;
     fx.feed.opacity = 0.95 * S.power * S.shell * S.feed;
