@@ -76,11 +76,13 @@ export function buildHeart() {
       },
       vertexShader: /* glsl */ `
         uniform float uTime, uChaos, uSqueeze, uActive;
-        varying vec3 vP; varying vec3 vN; varying vec3 vV; varying vec2 vUv;
+        attribute float crease;
+        varying vec3 vP; varying vec3 vN; varying vec3 vV; varying vec2 vUv; varying float vCrease;
         void main() {
           vec3 p = position;
           vP = position;
           vUv = uv;
+          vCrease = crease;
           // fibrillation: it quivers — every patch on its own
           float q = sin(p.x * 1.9 + uTime * 23.0) * sin(p.y * 1.6 - uTime * 19.0) + sin(p.z * 2.3 + uTime * 27.0 + 1.3);
           p += normal * q * 0.085 * uChaos * uActive;
@@ -94,7 +96,7 @@ export function buildHeart() {
       fragmentShader: /* glsl */ `
         uniform vec3 uInk, uSignal, uVeille, uNode;
         uniform float uTime, uChaos, uOrder, uFlash, uDim, uWave, uSqueeze, uActive, uPulse;
-        varying vec3 vP; varying vec3 vN; varying vec3 vV; varying vec2 vUv;
+        varying vec3 vP; varying vec3 vN; varying vec3 vV; varying vec2 vUv; varying float vCrease;
         float hash(vec3 p) { return fract(sin(dot(p, vec3(127.1, 311.7, 74.7))) * 43758.5453); }
         float noise(vec3 p) {
           vec3 i = floor(p); vec3 f = fract(p); f = f * f * (3.0 - 2.0 * f);
@@ -103,36 +105,61 @@ export function buildHeart() {
         }
         void main() {
           vec3 n = normalize(vN);
-          float facing = clamp(abs(dot(n, normalize(vV))), 0.0, 1.0);
-          float lam = 0.5 + 0.5 * dot(n, normalize(vec3(-0.4, 0.75, 0.5)));
+          vec3 v = normalize(vV);
+          float facing = clamp(abs(dot(n, v)), 0.0, 1.0);
+          vec3 l = normalize(vec3(-0.4, 0.75, 0.5));
+          float lam = 0.5 + 0.5 * dot(n, l);
+          // a wet highlight, wide on purpose: the muscle quivers, a sharp one would sparkle
+          float spec = pow(clamp(dot(n, normalize(l + v)), 0.0, 1.0), 34.0);
+          float rim = pow(clamp(1.0 - facing, 0.0, 1.0), 2.4);
+          // the furrows: between the atria and the ventricles (baked), between the two ventricles (down the front)
+          float cavity = mix(1.0, smoothstep(0.0, 1.0, vCrease), uActive);
+          float g = (vP.x * 0.92 - vP.y * 0.28 - 0.4) / 0.42;
+          float groove = exp(-g * g) * (1.0 - smoothstep(1.5, 2.5, vP.y)) * smoothstep(-0.5, 0.5, vP.z) * uActive;
+          float relief = mix(0.4, 1.0, cavity) * (1.0 - 0.4 * groove);
           // the muscle itself: dark, modelled by a light from above
-          vec3 col = uInk * (0.035 + 0.15 * lam * lam + 0.06 * pow(1.0 - facing, 2.0));
-          // fibrillation: wavelets that wander, meet, die — no two patches agree
-          float a = sin(dot(vP, vec3(0.92, 0.5, 0.31)) * 1.25 + uTime * 5.3) * sin(dot(vP, vec3(-0.45, 0.88, 0.62)) * 1.05 - uTime * 4.1);
-          float b = sin(dot(vP, vec3(0.38, -0.8, 1.0)) * 1.5 + uTime * 6.4 + 1.7);
-          float c = noise(vP * 0.55 + vec3(0.0, uTime * 0.9, uTime * 0.6));
-          float patches = smoothstep(0.18, 0.85, a * 0.55 + b * 0.3 + c * 0.75 - 0.2);
+          vec3 col = uInk * ((0.04 + 0.19 * lam * lam) * relief + 0.07 * rim) + uInk * 0.22 * spec * cavity;
+          // its edge tells its state: signal in the chaos, nothing in the dark, veille when it beats
+          col += (uSignal * uChaos * 0.5 + uVeille * uOrder * 0.6) * rim * uActive;
+          // fibrillation: fronts that wander, meet, die — a noise bent by itself (a product of sines draws a chequerboard)
+          vec3 q = vP * 0.42 + vec3(0.0, uTime * 0.55, uTime * 0.35);
+          q += 0.9 * vec3(noise(q * 1.7 + 3.1), noise(q * 1.7 + 7.7), noise(q * 1.7 + 1.3));
+          float patches = smoothstep(0.46, 0.66, noise(q * 1.3 + uTime * 0.8));
           col += uSignal * patches * uChaos * uActive * (0.5 + 1.5 * facing);
           // the beat: a front leaves the node, the muscle behind it is alight for a moment
           float d = distance(vP, uNode);
-          float front = exp(-pow((d - uWave) / 1.15, 2.0));
+          float w = (d - uWave) / 1.15;
+          float front = exp(-w * w);
           float wake = smoothstep(uWave - 9.0, uWave - 1.0, d) * (1.0 - smoothstep(uWave - 0.5, uWave + 0.5, d));
-          col += uVeille * uOrder * uActive * (front * 2.3 + wake * 0.26 + uSqueeze * 0.1 + 0.1) * (0.45 + 0.55 * facing);
+          col += uVeille * uOrder * uActive * (front * 2.3 + wake * 0.26 + uSqueeze * 0.1 + 0.26) * (0.45 + 0.55 * facing);
           // the blood that leaves: a pulse that runs up the vessel (along its length), after each squeeze
-          col += uInk * uOrder * (1.0 - uActive) * exp(-pow((vUv.x - uPulse) / 0.16, 2.0)) * 0.75 * (0.45 + 0.55 * facing);
-          // the shock: every cell at once
-          col += uInk * uFlash * 2.3 * (0.4 + 0.6 * facing);
+          float u = (vUv.x - uPulse) / 0.16;
+          col += uInk * uOrder * (1.0 - uActive) * exp(-u * u) * 0.75 * (0.45 + 0.55 * facing);
+          // the shock: every cell at once — brightest where the muscle faces us, its outline stays
+          col += uInk * uFlash * 2.3 * (0.15 + 0.85 * facing * facing);
           gl_FragColor = vec4(col * uDim, 1.0);
         }`,
     });
   fx.muscle = muscle();
   fx.muscle.fog = false;
-  const lower = new THREE.Mesh(ventricles(), fx.muscle);
+  // `crease`: how far a point of the muscle is from the next chamber (0 in the furrow … 1 at 1.4 cm). The shading
+  // darkens the furrows: the shape reads as chambers, not as three balls.
+  const ATRIA = [[1.9, 3.5, -1.7, 2.7], [-2.6, 3.4, 0.5, 2.9]];
+  const bake = (geo, dist) => {
+    const p = geo.attributes.position;
+    const a = new Float32Array(p.count);
+    for (let i = 0; i < p.count; i++) a[i] = Math.min(1, Math.max(0, dist(p.getX(i), p.getY(i), p.getZ(i)) / 1.4));
+    geo.setAttribute("crease", new THREE.BufferAttribute(a, 1));
+    return geo;
+  };
+  const toAtrium = ([cx, cy, cz, r], x, y, z) => Math.hypot(x - cx, y - cy, z - cz) - r;
+  const toVentricles = (x, y, z) => (Math.hypot(x / (R * 0.99), y / (R * 0.8), z / (R * 0.9)) - 1) * R * 0.83; // their top: an ellipsoid
+  const lower = new THREE.Mesh(bake(ventricles(), (x, y, z) => Math.min(...ATRIA.map((c) => toAtrium(c, x, y, z)))), fx.muscle);
   group.add(lower);
-  for (const [x, y, z, r] of [[1.9, 3.5, -1.7, 2.7], [-2.6, 3.4, 0.5, 2.9]]) {
-    const atrium = new THREE.Mesh(new THREE.SphereGeometry(r, 32, 24).translate(x, y, z), fx.muscle);
-    group.add(atrium);
-  }
+  ATRIA.forEach(([x, y, z, r], i) => {
+    const geo = bake(new THREE.SphereGeometry(r, 32, 24).translate(x, y, z), (px, py, pz) => Math.min(toVentricles(px, py, pz), toAtrium(ATRIA[1 - i], px, py, pz)));
+    group.add(new THREE.Mesh(geo, fx.muscle));
+  });
   // the great vessels: what makes the shape a heart. They carry no electricity of their own.
   fx.vessels = muscle();
   fx.vessels.fog = false;

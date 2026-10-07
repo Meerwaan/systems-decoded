@@ -55,7 +55,7 @@ function build() {
   const FIRST = {
     set: IN_HALL, cast: 1, collapse: 0.5, witness: 0, push: 0, off: 0, toi: 0, toiS: 0,
     boxAt: 0, pad1: 0, pad2: 0, armed: 0, charge: 0, listen: 0, speak: 0,
-    chaos: 1, order: 0, flash: 0, heartDim: 1, halo: 1, shock: 0,
+    chaos: 1, order: 0, flash: 0, heartDim: 1, halo: 1, shock: 0, cold: 0,
     route: 0, call: 0, lines: 1, beacon: 1.4, far: 1, ground: 0.2, door: 0, sign: 1, ghost: 0,
     explode: 0, out: 0, lidA: 1, bArmed: 0, bCharge: 0, bListen: 0, days: 0, ms: 0, ecg: 0,
     pool: 0.24, grid: 0.16, mood: 1, gel: 0,
@@ -356,9 +356,11 @@ function build() {
   const INSIDE = { tx: X + SPOT.heart.x, ty: SPOT.heart.y + 1, tz: SPOT.heart.z, d: 76, az: 84, el: 64, fov: 28, shift: -70, side: 0 };
   shot(t.eteint - 0.2, 1.3, INSIDE);
   st(t.eteint - 0.1, 0.6, { halo: 0.04 });
-  st(tDark - 0.05, 0.1, { flash: 1 }, "power2.out"); // every cell at once…
+  st(tDark - 0.05, 0.1, { flash: 0.6 }, "power2.out"); // every cell at once… (the heart fills the picture: at 1 the flash washes it white)
   now(tDark + 0.05, { chaos: 0 });
-  st(tDark + 0.05, 0.7, { flash: 0, shock: 0 }, "power2.out"); // …then nothing
+  // …then nothing: the coldest picture of the film — the warm light goes to a faint ink (`cold`), not to a brown
+  st(tDark + 0.05, 0.6, { flash: 0, shock: 0, cold: 1, ground: 0, gel: 0 }, "power2.out");
+  now(tDark + 0.7, { mood: 0 }); // unseen under the cold: the green of the first beat will come out of the dark
   st(tDark, 0.5, { ecg: 1 });
   panel("#ecg", tDark + 0.12, t.chute - 0.3);
   tl.set("#ecg-v1", { opacity: 0 }, tDark);
@@ -368,7 +370,7 @@ function build() {
   // "silence… et le cœur repart. tout seul."
   shot(t.repart - 0.1, t.chute - t.repart, { d: 84, az: 94, el: 56 }, "sine.inOut");
   now(tBeat - 0.02, { order: 1 });
-  st(tBeat, 0.6, { mood: 0, gel: 0 });
+  st(tBeat, 0.4, { cold: 0 });
   tl.to("#ecg-s1", { opacity: 0, duration: 0.1 }, tBeat + 0.15);
   tl.to("#ecg-s2", { opacity: 1, duration: 0.15 }, tBeat + 0.25);
   tl.to("#hud-count", { color: "#5cffb0", duration: 0.3 }, tBeat + 0.2);
@@ -478,7 +480,7 @@ function build() {
     scene.fog.density = S.set === BENCH ? 0.0016 : 0.00005;
     Object.assign(stage.focus, FOCUS[S.set]);
     stage.grade.gelAmount = S.gel;
-    mix.copy(VEILLE).lerp(SIGNAL, S.mood);
+    mix.copy(VEILLE).lerp(SIGNAL, S.mood).lerp(INK, S.cold).multiplyScalar(1 - 0.75 * S.cold);
 
     if (S.set === IN_HALL) {
       hall.update({ ...S, padsOn: [S.pad1, S.pad2] }, time, px);
@@ -495,7 +497,7 @@ function build() {
     pool.uniforms.uColor.value.copy(mix);
     pool.uniforms.uAmount.value = S.pool;
     surface.grid.uAmount.value = S.grid;
-    scene.background.copy(bg0).lerp(bgHot, S.mood * 0.5);
+    scene.background.copy(bg0).lerp(bgHot, S.mood * 0.5 * (1 - S.cold));
     scene.fog.color.copy(scene.background);
     motes.uniforms.uAmount.value = 0.1;
     motes.update(time, px);
