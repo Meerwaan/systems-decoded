@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="gen/brand.css" />
     <script src="gen/gsap.min.js"></script>
     <style>
-      /* Les dispositifs récurrents (dont #reveal) sont stylés dans kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
+         kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+
+      /* le second compteur de l'en-tête (.hud__count est signal par défaut) */
+      #hud-count { color: var(--ink); }
+      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
+      #chip-toi { color: var(--ink); }
+      #chip-coeur { color: var(--veille); }
     </style>
   </head>
   <body>
@@ -15,12 +22,14 @@
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
+      <div id="title-shade"></div>
       <svg id="leaders" viewBox="0 0 1080 1920"></svg>
 
       <header id="hud">
         <div class="hud__tag"><i class="hud__dot"></i><span>Dossier __ID__</span></div>
         <div class="hud__title" id="hud-title">__TITLE__</div>
-        <div class="hud__clock" id="hud-clock">00:00:00</div>
+        <div class="hud__clock" id="hud-clock">T−3,0 s</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Mesure</span><b id="hud-count-v">0</b></div>
         <div class="hud__rule"></div>
         <nav class="hud__acts">
           <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
@@ -28,9 +37,50 @@
         </nav>
       </header>
 
-      <div id="reveal">
-        <div class="kicker">Le secret</div>
-        <div id="reveal-main">À écrire</div>
+      <!-- 01 · MENACE (acte1.js) -->
+      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+
+      <!-- 02 · AUTOPSIE (acte2.js) -->
+      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>En veille</b></div>
+
+      <!-- le seuil (fin d'acte2.js) : la demande d'abonnement dite à la porte de l'acte 3 — des chevrons, jamais un panneau -->
+      <div id="rail-seuil" class="rail"><i></i><i></i><i></i></div>
+
+      <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
+
+      <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">L'idée reçue<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">La vérité</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 personne</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 000</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
+        <div id="next-fact"><span>Un fait, un seul.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <div id="cta-field">
+        <div class="kicker">La question de l'accroche ?</div>
+        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de lettres) -->
+        <div id="cta-field-v"><span id="cta-typed" class="is-veille">RÉPONSE</span><span id="cta-caret"></span></div>
       </div>
 
       <div id="callouts" class="layer"></div>
