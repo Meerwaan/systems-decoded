@@ -11,14 +11,54 @@
     "model": "eleven_v4",
     "stability": 0.4,
     "similarity": 0.8,
-    "speed": 1.0,
+    "speed": 1,
     "seed": 21
   },
-  "cover": { "at": "eclate:centre", "title": ["Détecteur", "de fumée"], "cam": { "d": 110, "ty": 7.5, "az": 14, "el": 22, "shift": -335 } },
+  "cover": {
+    "at": "eclate:centre",
+    "title": [
+      "Détecteur",
+      "de fumée"
+    ],
+    "cam": {
+      "d": 110,
+      "ty": 7.5,
+      "az": 14,
+      "el": 22,
+      "shift": -335
+    }
+  },
   "post": {
     "caption": "Il n'a jamais vu de fumée de sa vie. C'est pourtant lui qui te réveille. Et toi, ton dernier test, c'était quand ?",
-    "hashtags": ["#apprendresurtiktok", "#commentcamarche", "#detecteurdefumee", "#incendie", "#pompiers"],
-    "pinned": "Sois honnête : ton dernier test du détecteur, c'était quand ? « Jamais » est une réponse acceptée."
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#detecteurdefumee",
+      "#incendie",
+      "#pompiers"
+    ],
+    "pinned": "Sois honnête : ton dernier test du détecteur, c'était quand ? « Jamais » est une réponse acceptée.",
+    "instagram": {
+      "caption": "Il n'a jamais vu de fumée de sa vie. C'est pourtant lui qui te réveille à trois heures du matin.\n\nDossier 001 : on ouvre un détecteur de fumée.\n\nSois honnête : ton dernier test, c'était quand ?",
+      "hashtags": [
+        "#detecteurdefumee",
+        "#incendie",
+        "#securite",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Détecteur de fumée : comment ça marche vraiment (il n'a jamais « vu » de fumée)",
+      "description": "Dossier 001 — on ouvre un détecteur de fumée : ce qu'il surveille pendant que tu dors, et ce qui le fait hurler.\n\nTon dernier test, c'était quand ?",
+      "hashtags": [
+        "#shorts",
+        "#detecteurdefumee",
+        "#incendie",
+        "#commentcamarche",
+        "#science"
+      ]
+    }
   },
   "sources": [
     "Principe optique (LED infrarouge + photodiode hors de l'axe, diffusion par les particules, seuil d'alarme) : https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_d%C3%A9tection_incendie · https://www.nexecur.fr/detecteur-de-fumee-fonctionnement",
@@ -29,42 +69,103 @@
     "Airbag déployé en ~30 ms (annonce du dossier 002) : à revérifier en écrivant le 002"
   ],
   "beats": [
-    { "id": "hook",     "text": "[3 h 07|Trois heures sept]. Tu dors. Et ton nez… dort *aussi*.",
-                        "vo": "[ominous] Trois heures sept. [whispers] Tu dors. [normal voice] Et ton nez... dort aussi." },
-    { "id": "feu",      "text": "Dans le salon, un chargeur vient de prendre *feu*. Dans [3|trois] minutes, il sera *hors de contrôle*.",
-                        "vo": "[ominous] Dans le salon, un chargeur vient de prendre feu. Dans trois minutes... il sera HORS de contrôle." },
-    { "id": "boite",    "text": "Une seule chose peut encore te réveiller. Elle est au plafond… et elle n'a +jamais vu de fumée+ de sa vie.",
-                        "vo": "[low, grave voice] Une seule chose peut encore te réveiller. Elle est au plafond... et elle n'a JAMAIS vu de fumée de sa vie." },
-    { "id": "ouvre","hold": 0.6,     "text": "Alors… on l'ouvre.",
-                        "vo": "[slowly] Alors... on l'ouvre." },
-    { "id": "eclate","hold": 0.5,    "text": "Une pile. Un circuit. Une sirène. Et au centre… une +chambre noire+.",
-                        "vo": "Une pile. Un circuit. Une sirène. Et au centre... [slowly] une chambre noire." },
-    { "id": "laby",     "text": "Un labyrinthe : l'air entre. La lumière, *jamais*.",
-                        "vo": "[thoughtful] Un labyrinthe : l'air entre. La lumière... jamais." },
-    { "id": "led","hold": 0.35,       "text": "Dedans, une LED tire un flash infrarouge. Dans le vide.",
-                        "vo": "Dedans, une LED tire un flash infrarouge. [short pause] Dans le vide." },
-    { "id": "capteur",  "text": "À côté, un capteur. Placé exprès là où le flash ne passe +pas+.",
-                        "vo": "À côté, un capteur. Placé EXPRÈS là où le flash ne passe pas." },
-    { "id": "calme","hold": 0.6,     "text": "Tant qu'il ne voit rien… +tout va bien+.",
-                        "vo": "[slowly] Tant qu'il ne voit rien... tout va bien." },
-    { "id": "fumee",    "text": "[3 h 08|Trois heures huit]. La *fumée* entre.",
-                        "vo": "[tense] Trois heures huit. La fumée entre." },
-    { "id": "ricochet","hold": 0.7,  "text": "Chaque particule fait ricocher la lumière. Et pour la première fois… le capteur *voit*.",
-                        "vo": "[tense] Chaque particule fait ricocher la lumière. Et pour la première fois... le capteur VOIT." },
-    { "id": "verif","hold": 1.6,     "text": "Le circuit vérifie. Deux fois. Trois fois.",
-                        "vo": "[tense] Le circuit vérifie. Deux fois. Trois fois." },
-    { "id": "sirene",   "text": "[85|Quatre-vingt-cinq] décibels. Droit sur le seul sens qui te reste.",
-                        "vo": "[dramatic] Quatre-vingt-cinq décibels ! Droit sur le seul sens qui te reste." },
-    { "id": "chute","hold": 0.8,     "text": "Ce n'est pas un détecteur de fumée. C'est un détecteur de +lumière+… enfermé dans le noir.",
-                        "vo": "[low, grave voice] Ce n'est pas un détecteur de fumée. C'est un détecteur de lumière... enfermé dans le noir." },
-    { "id": "like",     "text": "Si tu viens de l'apprendre, +like+ : ça remontera chez quelqu'un qui dort sans détecteur.",
-                        "vo": "[low, grave voice] Si tu viens de l'apprendre, like : ça remontera chez quelqu'un qui dort sans détecteur." },
-    { "id": "test",     "text": "Ce bouton sert à le tester. En +commentaire+ : la dernière fois que tu as appuyé dessus. Jamais, c'est une réponse.",
-                        "vo": "[serious] Ce bouton sert à le tester. En commentaire : la dernière fois que tu as appuyé dessus. [short pause] « Jamais »... c'est une réponse." },
-    { "id": "abo",      "text": "+Abonne-toi+ : le prochain système qu'on ouvre a [30|trente] millisecondes pour te sauver.",
-                        "vo": "[ominous] Abonne-toi : le prochain système qu'on ouvre a trente millisecondes pour te sauver." },
-    { "id": "boucle",   "text": "Teste le tien ce soir. Avant qu'il soit…",
-                        "vo": "[ominous] Teste le tien ce soir. Avant qu'il soit..." }
+    {
+      "id": "hook",
+      "text": "[3 h 07|Trois heures sept]. Tu dors. Et ton nez… dort *aussi*.",
+      "vo": "[ominous] Trois heures sept. [whispers] Tu dors. [normal voice] Et ton nez... dort aussi."
+    },
+    {
+      "id": "feu",
+      "text": "Dans le salon, un chargeur vient de prendre *feu*. Dans [3|trois] minutes, il sera *hors de contrôle*.",
+      "vo": "[ominous] Dans le salon, un chargeur vient de prendre feu. Dans trois minutes... il sera HORS de contrôle."
+    },
+    {
+      "id": "boite",
+      "text": "Une seule chose peut encore te réveiller. Elle est au plafond… et elle n'a +jamais vu de fumée+ de sa vie.",
+      "vo": "[low, grave voice] Une seule chose peut encore te réveiller. Elle est au plafond... et elle n'a JAMAIS vu de fumée de sa vie."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.6,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[slowly] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.5,
+      "text": "Une pile. Un circuit. Une sirène. Et au centre… une +chambre noire+.",
+      "vo": "Une pile. Un circuit. Une sirène. Et au centre... [slowly] une chambre noire."
+    },
+    {
+      "id": "laby",
+      "text": "Un labyrinthe : l'air entre. La lumière, *jamais*.",
+      "vo": "[thoughtful] Un labyrinthe : l'air entre. La lumière... jamais."
+    },
+    {
+      "id": "led",
+      "hold": 0.35,
+      "text": "Dedans, une LED tire un flash infrarouge. Dans le vide.",
+      "vo": "Dedans, une LED tire un flash infrarouge. [short pause] Dans le vide."
+    },
+    {
+      "id": "capteur",
+      "text": "À côté, un capteur. Placé exprès là où le flash ne passe +pas+.",
+      "vo": "À côté, un capteur. Placé EXPRÈS là où le flash ne passe pas."
+    },
+    {
+      "id": "calme",
+      "hold": 0.6,
+      "text": "Tant qu'il ne voit rien… +tout va bien+.",
+      "vo": "[slowly] Tant qu'il ne voit rien... tout va bien."
+    },
+    {
+      "id": "fumee",
+      "text": "[3 h 08|Trois heures huit]. La *fumée* entre.",
+      "vo": "[tense] Trois heures huit. La fumée entre."
+    },
+    {
+      "id": "ricochet",
+      "hold": 0.7,
+      "text": "Chaque particule fait ricocher la lumière. Et pour la première fois… le capteur *voit*.",
+      "vo": "[tense] Chaque particule fait ricocher la lumière. Et pour la première fois... le capteur VOIT."
+    },
+    {
+      "id": "verif",
+      "hold": 1.6,
+      "text": "Le circuit vérifie. Deux fois. Trois fois.",
+      "vo": "[tense] Le circuit vérifie. Deux fois. Trois fois."
+    },
+    {
+      "id": "sirene",
+      "text": "[85|Quatre-vingt-cinq] décibels. Droit sur le seul sens qui te reste.",
+      "vo": "[dramatic] Quatre-vingt-cinq décibels ! Droit sur le seul sens qui te reste."
+    },
+    {
+      "id": "chute",
+      "hold": 0.8,
+      "text": "Ce n'est pas un détecteur de fumée. C'est un détecteur de +lumière+… enfermé dans le noir.",
+      "vo": "[low, grave voice] Ce n'est pas un détecteur de fumée. C'est un détecteur de lumière... enfermé dans le noir."
+    },
+    {
+      "id": "like",
+      "text": "Si tu viens de l'apprendre, +like+ : ça remontera chez quelqu'un qui dort sans détecteur.",
+      "vo": "[low, grave voice] Si tu viens de l'apprendre, like : ça remontera chez quelqu'un qui dort sans détecteur."
+    },
+    {
+      "id": "test",
+      "text": "Ce bouton sert à le tester. En +commentaire+ : la dernière fois que tu as appuyé dessus. Jamais, c'est une réponse.",
+      "vo": "[serious] Ce bouton sert à le tester. En commentaire : la dernière fois que tu as appuyé dessus. [short pause] « Jamais »... c'est une réponse."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+ : le prochain système qu'on ouvre a [30|trente] millisecondes pour te sauver.",
+      "vo": "[ominous] Abonne-toi : le prochain système qu'on ouvre a trente millisecondes pour te sauver."
+    },
+    {
+      "id": "boucle",
+      "text": "Teste le tien ce soir. Avant qu'il soit…",
+      "vo": "[ominous] Teste le tien ce soir. Avant qu'il soit..."
+    }
   ],
   "cues": {
     "countdown": "feu:3",
@@ -91,42 +192,262 @@
   },
   "bedVolume": 0.8,
   "sfx": [
-    {"type":"drone","gain":-24,"curve":[[0,0.75],["feu",1],["explode",0.55],["smoke",0.85],["alarm",1],["xray",0.5],["like",0.4],["rewind",0.7]]},
-    {"type":"impact","at":0.03,"gain":-14,"size":1.2},
-    {"type":"heartbeat","from":0.9,"to":"feu","bpm":52,"gain":-23},
-    {"type":"impact","at":"feu:feu","gain":-15},
-    {"type":"tick","at":"countdown","count":3,"every":1,"gain":-23},
-    {"type":"whoosh","at":"swoop+1.0","dur":1.8,"gain":-23},
-    {"type":"riser","to":"explode","dur":0.8,"gain":-25},
-    {"type":"impact","at":"explode","gain":-16,"size":0.8},
-    {"type":"whoosh","at":"explode+1.0","dur":1.6,"gain":-25},
-    {"type":"whoosh","at":"dive+0.7","dur":1.5,"gain":-22},
-    {"type":"blip","at":"flash1","gain":-20},
-    {"type":"blip","at":"flash2","gain":-20},
-    {"type":"blip","at":"flash3","gain":-20},
-    {"type":"blip","at":"flash4","gain":-21},
-    {"type":"tick","at":"calme","count":2,"every":0.9,"gain":-27},
-    {"type":"impact","at":"clock308","gain":-12,"size":1.3},
-    {"type":"blip","at":"flash5","gain":-19,"heavy":true},
-    {"type":"blip","at":"flash6","gain":-16,"pitch":1.12,"heavy":true},
-    {"type":"impact","at":"flash6","gain":-14},
-    {"type":"blip","at":"flash7","gain":-16,"pitch":1.26,"heavy":true},
-    {"type":"blip","at":"flash8","gain":-16,"pitch":1.41,"heavy":true},
-    {"type":"riser","to":"alarm","dur":1.3,"gain":-21},
-    {"type":"impact","at":"alarm","gain":-9,"size":1.5},
-    {"type":"beeps","from":"alarm+0.85","to":"sirene-0.06","gain":-16},
-    {"type":"beeps","from":"sirene","to":"reassemble+1.5","gain":-33},
-    {"type":"whoosh","at":"reassemble+0.9","dur":1.7,"gain":-24},
-    {"type":"impact","at":"chute:lumière","gain":-17,"size":0.9},
-    {"type":"blip","at":"xray+0.75","gain":-25},
-    {"type":"blip","at":"chute$+0.75","gain":-25},
-    {"type":"blip","at":"like:remontera","gain":-25,"pitch":0.9,"pan":-0.3},
-    {"type":"blip","at":"like:quelqu'un","gain":-25,"pitch":1,"pan":0.3},
-    {"type":"blip","at":"like:dort","gain":-25,"pitch":1.12,"pan":-0.3},
-    {"type":"blip","at":"like:détecteur","gain":-25,"pitch":1.26,"pan":0.3},
-    {"type":"beeps","from":"press","to":"press+0.24","gain":-20},
-    {"type":"tick","at":"typed","count":6,"every":0.055,"gain":-25},
-    {"type":"impact","at":"next","gain":-17,"size":0.9},
-    {"type":"rewind","at":"rewind","dur":1.15,"gain":-21}
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.75
+        ],
+        [
+          "feu",
+          1
+        ],
+        [
+          "explode",
+          0.55
+        ],
+        [
+          "smoke",
+          0.85
+        ],
+        [
+          "alarm",
+          1
+        ],
+        [
+          "xray",
+          0.5
+        ],
+        [
+          "like",
+          0.4
+        ],
+        [
+          "rewind",
+          0.7
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "heartbeat",
+      "from": 0.9,
+      "to": "feu",
+      "bpm": 52,
+      "gain": -23
+    },
+    {
+      "type": "impact",
+      "at": "feu:feu",
+      "gain": -15
+    },
+    {
+      "type": "tick",
+      "at": "countdown",
+      "count": 3,
+      "every": 1,
+      "gain": -23
+    },
+    {
+      "type": "whoosh",
+      "at": "swoop+1.0",
+      "dur": 1.8,
+      "gain": -23
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "whoosh",
+      "at": "explode+1.0",
+      "dur": 1.6,
+      "gain": -25
+    },
+    {
+      "type": "whoosh",
+      "at": "dive+0.7",
+      "dur": 1.5,
+      "gain": -22
+    },
+    {
+      "type": "blip",
+      "at": "flash1",
+      "gain": -20
+    },
+    {
+      "type": "blip",
+      "at": "flash2",
+      "gain": -20
+    },
+    {
+      "type": "blip",
+      "at": "flash3",
+      "gain": -20
+    },
+    {
+      "type": "blip",
+      "at": "flash4",
+      "gain": -21
+    },
+    {
+      "type": "tick",
+      "at": "calme",
+      "count": 2,
+      "every": 0.9,
+      "gain": -27
+    },
+    {
+      "type": "impact",
+      "at": "clock308",
+      "gain": -12,
+      "size": 1.3
+    },
+    {
+      "type": "blip",
+      "at": "flash5",
+      "gain": -19,
+      "heavy": true
+    },
+    {
+      "type": "blip",
+      "at": "flash6",
+      "gain": -16,
+      "pitch": 1.12,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "flash6",
+      "gain": -14
+    },
+    {
+      "type": "blip",
+      "at": "flash7",
+      "gain": -16,
+      "pitch": 1.26,
+      "heavy": true
+    },
+    {
+      "type": "blip",
+      "at": "flash8",
+      "gain": -16,
+      "pitch": 1.41,
+      "heavy": true
+    },
+    {
+      "type": "riser",
+      "to": "alarm",
+      "dur": 1.3,
+      "gain": -21
+    },
+    {
+      "type": "impact",
+      "at": "alarm",
+      "gain": -9,
+      "size": 1.5
+    },
+    {
+      "type": "beeps",
+      "from": "alarm+0.85",
+      "to": "sirene-0.06",
+      "gain": -16
+    },
+    {
+      "type": "beeps",
+      "from": "sirene",
+      "to": "reassemble+1.5",
+      "gain": -33
+    },
+    {
+      "type": "whoosh",
+      "at": "reassemble+0.9",
+      "dur": 1.7,
+      "gain": -24
+    },
+    {
+      "type": "impact",
+      "at": "chute:lumière",
+      "gain": -17,
+      "size": 0.9
+    },
+    {
+      "type": "blip",
+      "at": "xray+0.75",
+      "gain": -25
+    },
+    {
+      "type": "blip",
+      "at": "chute$+0.75",
+      "gain": -25
+    },
+    {
+      "type": "blip",
+      "at": "like:remontera",
+      "gain": -25,
+      "pitch": 0.9,
+      "pan": -0.3
+    },
+    {
+      "type": "blip",
+      "at": "like:quelqu'un",
+      "gain": -25,
+      "pitch": 1,
+      "pan": 0.3
+    },
+    {
+      "type": "blip",
+      "at": "like:dort",
+      "gain": -25,
+      "pitch": 1.12,
+      "pan": -0.3
+    },
+    {
+      "type": "blip",
+      "at": "like:détecteur",
+      "gain": -25,
+      "pitch": 1.26,
+      "pan": 0.3
+    },
+    {
+      "type": "beeps",
+      "from": "press",
+      "to": "press+0.24",
+      "gain": -20
+    },
+    {
+      "type": "tick",
+      "at": "typed",
+      "count": 6,
+      "every": 0.055,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "next",
+      "gain": -17,
+      "size": 0.9
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1.15,
+      "gain": -21
+    }
   ]
 }

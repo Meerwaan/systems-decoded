@@ -11,18 +11,61 @@
     "model": "eleven_v4",
     "stability": 0.4,
     "similarity": 0.8,
-    "speed": 1.0,
+    "speed": 1,
     "seed": 21
   },
-  "cover": { "at": "eclate:condensateur+0.76", "title": ["Défibrillateur"], "cam": { "tx": 0, "ty": 19, "tz": 2, "d": 182, "az": 26, "el": 22, "shift": -345, "side": 0, "fov": 28 } },
+  "cover": {
+    "at": "eclate:condensateur+0.76",
+    "title": [
+      "Défibrillateur"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 19,
+      "tz": 2,
+      "d": 182,
+      "az": 26,
+      "el": 22,
+      "shift": -345,
+      "side": 0,
+      "fov": 28
+    }
+  },
   "post": {
     "caption": "Défibrillateur : comment ça marche, et pourquoi tu ne peux pas te tromper. La boîte verte se teste seule chaque jour, te dicte chaque geste, et refuse de choquer un cœur qui bat. Arrêt cardiaque : appeler le 15, masser, défibriller. Dossier 006. La plus proche de chez toi, elle est où ?",
-    "hashtags": ["#apprendresurtiktok", "#commentcamarche", "#premierssecours", "#defibrillateur", "#sante"],
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#premierssecours",
+      "#defibrillateur",
+      "#sante"
+    ],
     "pinned": "Tu ne sais pas où est la plus proche ? Appelle le 15 : l'opérateur voit les défibrillateurs autour de toi et te guide. Et la tienne, elle est où ?",
     "replies": [
       "Dans l'ordre : appeler le 15 (ou le 112), masser, puis la boîte. Elle parle, te dit quoi faire, et ne choque jamais un cœur qui bat.",
       "Pour la repérer dès aujourd'hui : les applis gratuites Staying Alive et SAUV Life montrent les défibrillateurs sur une carte."
-    ]
+    ],
+    "instagram": {
+      "caption": "Quelqu'un s'effondre devant toi. Au mur, une boîte verte peut le sauver, et tu ne peux pas te tromper : c'est elle qui décide.\n\nDossier 006 : le défibrillateur. Appeler le 15, masser, défibriller.\n\nLa plus proche de chez toi, elle est où ?",
+      "hashtags": [
+        "#defibrillateur",
+        "#premierssecours",
+        "#sante",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Défibrillateur (DAE) : comment ça marche, et pourquoi tu ne peux pas te tromper",
+      "description": "Dossier 006 — arrêt cardiaque : appeler le 15, masser, défibriller. La boîte verte te dicte chaque geste et refuse de choquer un cœur qui bat.\n\nLa plus proche de chez toi, elle est où ?",
+      "hashtags": [
+        "#shorts",
+        "#defibrillateur",
+        "#premierssecours",
+        "#sante",
+        "#science"
+      ]
+    }
   },
   "sources": [
     "Arrêt cardiaque en France : environ 40 000 à 50 000 par an, 5 % de survie, 7 fois sur 10 devant témoin, « 1 minute gagnée, c'est 10 % de chance de survie en plus » ; le défibrillateur « ne représente aucun danger : ni pour la victime, ni pour l'utilisateur » : https://www.pompiers.fr/arret-cardiaque/",
@@ -39,46 +82,118 @@
     "Annonce du dossier 007 (siège éjectable) : sujet proposé, à valider par Merwan ; « une demi-seconde » et « une fusée sous le siège » sont à vérifier à l'écriture du 007"
   ],
   "beats": [
-    { "id": "accroche",               "text": "*Quelqu'un s'effondre*. Devant toi, son cœur ne pompe plus.",
-                                      "vo": "[firm, matter-of-fact] Quelqu'un s'effondre. Devant toi : son cœur ne pompe plus.",
-                                      "voAlt": ["[tense] Quelqu'un s'effondre, devant toi. Son cœur ne pompe plus.", "[tense] Quelqu'un s'effondre. Devant toi. Son cœur ne pompe plus."] },
-    { "id": "promesse", "hold": 0.5,               "text": "Au mur, une boîte verte peut le sauver. Tu ne peux +pas te tromper+ : c'est elle qui décide. Encore faut-il… *savoir où elle est*.",
-                                      "vo": "[firm, matter-of-fact] Au mur, une boîte verte peut le sauver. Tu ne peux pas te tromper : c'est elle qui décide. [short pause] [serious] Encore faut-il... savoir où elle est." },
-    { "id": "tremble",                "text": "Son cœur ne s'est pas arrêté. Il *tremble*. Et plus une goutte de sang ne part.",
-                                      "vo": "[tense] Son cœur ne s'est pas arrêté. Il tremble. [short pause] Et plus une goutte de sang ne part." },
-    { "id": "compte",                 "text": "Chaque minute : *[−10 %|dix pour cent]* de chances en moins. Les secours ? [15 min|Un quart d'heure].",
-                                      "vo": "[serious] Chaque minute : dix pour cent de chances en moins. Les secours ? Un quart d'heure." },
-    { "id": "chaine",                 "text": "Un témoin appelle le [15|quinze], et masse. Toi : +la boîte+.",
-                                      "vo": "[firm, matter-of-fact] Un témoin appelle le quinze, et masse. [short pause] Toi : la boîte." },
-    { "id": "ouvre", "hold": 0.5,     "text": "Alors… on l'ouvre.",
-                                      "vo": "[calm] Alors... on l'ouvre." },
-    { "id": "eclate", "hold": 0.1,    "text": "Deux électrodes. Une batterie. Un condensateur. Et une puce… qui +écoute+.",
-                                      "vo": "Deux électrodes. Une batterie. Un condensateur. Et une puce... qui écoute." },
-    { "id": "repos", "hold": 0.1,     "text": "Chaque jour, depuis des années, elle se teste toute seule. Voyant vert : +prête+.",
-                                      "vo": "[thoughtful] Chaque jour, depuis des années, elle se teste toute seule. Voyant vert : prête." },
-    { "id": "colle",                  "text": "Tu colles les électrodes. Elle parle : +ne touchez pas le patient+.",
-                                      "vo": "[tense] Tu colles les électrodes. Elle parle : ne touchez pas le patient." },
-    { "id": "analyse",                "text": "[10 s|Dix secondes] : elle lit le cœur. Du chaos ? Elle *charge*.",
-                                      "vo": "[serious] Dix secondes : elle lit le cœur. Du chaos ? Elle charge." },
-    { "id": "choc", "hold": 0.3,      "text": "*[150 J|Cent cinquante joules]*. Plus de [1 000 V|mille volts]. [10 ms|Dix millisecondes].",
-                                      "vo": "[tense] Cent cinquante joules. Plus de mille volts. Dix millisecondes." },
-    { "id": "eteint", "hold": 0.3,    "text": "Le courant traverse le cœur : toutes ses cellules s'éteignent. *En même temps*.",
-                                      "vo": "[firm, matter-of-fact] Le courant traverse le cœur : toutes ses cellules s'éteignent. En même temps." },
-    { "id": "repart", "hold": 0.6,    "text": "Silence… Et le cœur +repart+. Tout seul.",
-                                      "vo": "[calm] Silence. [short pause] Et le cœur repart. Tout seul." },
-    { "id": "chute", "hold": 0.4,     "text": "Voilà le secret : elle ne relance pas un cœur. Elle l'*arrête*. Pour qu'il redémarre… +de lui-même+.",
-                                      "vo": "[low, grave voice] Voilà le secret : elle ne relance pas un cœur. Elle l'arrête. Pour qu'il redémarre... de lui-même." },
-    { "id": "refuse", "hold": 0.15,   "text": "Un cœur qui bat ? Elle +refuse+. Tu ne peux blesser personne.",
-                                      "vo": "[firm, matter-of-fact] Un cœur qui bat ? Elle refuse. [short pause] Tu ne peux blesser personne." },
-    { "id": "like",                   "text": "+Like+ : [7 fois sur 10|sept fois sur dix], il y a un témoin. Autant qu'il ait vu ça.",
-                                      "vo": "[serious] Like. [short pause] Sept fois sur dix, il y a un témoin. Autant qu'il ait vu ça." },
-    { "id": "comment", "hold": 0.2,   "text": "En +commentaire+ : la plus proche de chez toi, elle est où ? Tu ne sais pas ? Le [15|quinze], lui, *le sait*.",
-                                      "vo": "[curious] En commentaire : la plus proche de chez toi, elle est où ? Tu ne sais pas ? [short pause] [serious] Le quinze, lui, le sait." },
-    { "id": "abo",                    "text": "+Abonne-toi+ : le prochain dossier te sort d'un avion en une demi-seconde. Avec une *fusée* sous le siège.",
-                                      "vo": "[ominous] Abonne-toi : le prochain dossier te sort d'un avion en une demi-seconde. [short pause] Avec une fusée sous le siège." },
-    { "id": "boucle",                 "text": "En attendant, demain, repère la boîte verte. Parce qu'un jour, sur ton trajet…",
-                                      "vo": "[calm] En attendant, demain, repère la boîte verte. Parce qu'un jour, sur ton trajet,",
-                                      "voAlt": ["[curious] En attendant, demain, repère la boîte verte. Parce qu'un jour, sur ton trajet..."] }
+    {
+      "id": "accroche",
+      "text": "*Quelqu'un s'effondre*. Devant toi, son cœur ne pompe plus.",
+      "vo": "[firm, matter-of-fact] Quelqu'un s'effondre. Devant toi : son cœur ne pompe plus.",
+      "voAlt": [
+        "[tense] Quelqu'un s'effondre, devant toi. Son cœur ne pompe plus.",
+        "[tense] Quelqu'un s'effondre. Devant toi. Son cœur ne pompe plus."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.5,
+      "text": "Au mur, une boîte verte peut le sauver. Tu ne peux +pas te tromper+ : c'est elle qui décide. Encore faut-il… *savoir où elle est*.",
+      "vo": "[firm, matter-of-fact] Au mur, une boîte verte peut le sauver. Tu ne peux pas te tromper : c'est elle qui décide. [short pause] [serious] Encore faut-il... savoir où elle est."
+    },
+    {
+      "id": "tremble",
+      "text": "Son cœur ne s'est pas arrêté. Il *tremble*. Et plus une goutte de sang ne part.",
+      "vo": "[tense] Son cœur ne s'est pas arrêté. Il tremble. [short pause] Et plus une goutte de sang ne part."
+    },
+    {
+      "id": "compte",
+      "text": "Chaque minute : *[−10 %|dix pour cent]* de chances en moins. Les secours ? [15 min|Un quart d'heure].",
+      "vo": "[serious] Chaque minute : dix pour cent de chances en moins. Les secours ? Un quart d'heure."
+    },
+    {
+      "id": "chaine",
+      "text": "Un témoin appelle le [15|quinze], et masse. Toi : +la boîte+.",
+      "vo": "[firm, matter-of-fact] Un témoin appelle le quinze, et masse. [short pause] Toi : la boîte."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.5,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.1,
+      "text": "Deux électrodes. Une batterie. Un condensateur. Et une puce… qui +écoute+.",
+      "vo": "Deux électrodes. Une batterie. Un condensateur. Et une puce... qui écoute."
+    },
+    {
+      "id": "repos",
+      "hold": 0.1,
+      "text": "Chaque jour, depuis des années, elle se teste toute seule. Voyant vert : +prête+.",
+      "vo": "[thoughtful] Chaque jour, depuis des années, elle se teste toute seule. Voyant vert : prête."
+    },
+    {
+      "id": "colle",
+      "text": "Tu colles les électrodes. Elle parle : +ne touchez pas le patient+.",
+      "vo": "[tense] Tu colles les électrodes. Elle parle : ne touchez pas le patient."
+    },
+    {
+      "id": "analyse",
+      "text": "[10 s|Dix secondes] : elle lit le cœur. Du chaos ? Elle *charge*.",
+      "vo": "[serious] Dix secondes : elle lit le cœur. Du chaos ? Elle charge."
+    },
+    {
+      "id": "choc",
+      "hold": 0.3,
+      "text": "*[150 J|Cent cinquante joules]*. Plus de [1 000 V|mille volts]. [10 ms|Dix millisecondes].",
+      "vo": "[tense] Cent cinquante joules. Plus de mille volts. Dix millisecondes."
+    },
+    {
+      "id": "eteint",
+      "hold": 0.3,
+      "text": "Le courant traverse le cœur : toutes ses cellules s'éteignent. *En même temps*.",
+      "vo": "[firm, matter-of-fact] Le courant traverse le cœur : toutes ses cellules s'éteignent. En même temps."
+    },
+    {
+      "id": "repart",
+      "hold": 0.6,
+      "text": "Silence… Et le cœur +repart+. Tout seul.",
+      "vo": "[calm] Silence. [short pause] Et le cœur repart. Tout seul."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà le secret : elle ne relance pas un cœur. Elle l'*arrête*. Pour qu'il redémarre… +de lui-même+.",
+      "vo": "[low, grave voice] Voilà le secret : elle ne relance pas un cœur. Elle l'arrête. Pour qu'il redémarre... de lui-même."
+    },
+    {
+      "id": "refuse",
+      "hold": 0.15,
+      "text": "Un cœur qui bat ? Elle +refuse+. Tu ne peux blesser personne.",
+      "vo": "[firm, matter-of-fact] Un cœur qui bat ? Elle refuse. [short pause] Tu ne peux blesser personne."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : [7 fois sur 10|sept fois sur dix], il y a un témoin. Autant qu'il ait vu ça.",
+      "vo": "[serious] Like. [short pause] Sept fois sur dix, il y a un témoin. Autant qu'il ait vu ça."
+    },
+    {
+      "id": "comment",
+      "hold": 0.2,
+      "text": "En +commentaire+ : la plus proche de chez toi, elle est où ? Tu ne sais pas ? Le [15|quinze], lui, *le sait*.",
+      "vo": "[curious] En commentaire : la plus proche de chez toi, elle est où ? Tu ne sais pas ? [short pause] [serious] Le quinze, lui, le sait."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+ : le prochain dossier te sort d'un avion en une demi-seconde. Avec une *fusée* sous le siège.",
+      "vo": "[ominous] Abonne-toi : le prochain dossier te sort d'un avion en une demi-seconde. [short pause] Avec une fusée sous le siège."
+    },
+    {
+      "id": "boucle",
+      "text": "En attendant, demain, repère la boîte verte. Parce qu'un jour, sur ton trajet…",
+      "vo": "[calm] En attendant, demain, repère la boîte verte. Parce qu'un jour, sur ton trajet,",
+      "voAlt": [
+        "[curious] En attendant, demain, repère la boîte verte. Parce qu'un jour, sur ton trajet..."
+      ]
+    }
   ],
   "cues": {
     "box": "promesse:boîte",
@@ -120,67 +235,464 @@
   },
   "bedVolume": 0.8,
   "sfx": [
-    { "type": "drone", "gain": -24, "curve": [[0, 0.9], ["where", 0.6], ["dive", 1], ["bars", 0.7], ["tobox", 0.6], ["explode", 0.45], ["close", 0.5], ["hall", 0.85], ["charge", 1], ["shock", 1], ["dark", 0.12], ["beat", 0.3], ["secret", 0.5], ["like", 0.4], ["tomorrow", 0.5], ["rewind", 0.75]] },
-    { "type": "impact", "at": 0.03, "gain": -13, "size": 1.2 },
-    { "type": "impact", "at": 0.86, "gain": -10, "size": 1.3 },
-    { "type": "whoosh", "at": "promesse-0.25", "dur": 1.5, "gain": -21 },
-    { "type": "blip", "at": "box", "gain": -20, "pitch": 1.1 },
-    { "type": "whoosh", "at": "decide", "dur": 1.6, "gain": -22 },
-    { "type": "blip", "at": "promesse:décide", "gain": -19, "pitch": 0.8, "heavy": true },
-    { "type": "whoosh", "at": "where", "dur": 1.45, "gain": -20 },
-    { "type": "tick", "at": "promesse:où", "count": 6, "every": 0.09, "gain": -24 },
-    { "type": "whoosh", "at": "dive", "dur": 1.8, "gain": -18 },
-    { "type": "tick", "at": "flutter", "count": 22, "every": 0.085, "gain": -27 },
-    { "type": "impact", "at": "tremble:goutte", "gain": -17, "size": 0.9 },
-    { "type": "whoosh", "at": "compte-0.7", "dur": 2.1, "gain": -22 },
-    { "type": "tick", "at": "bars", "count": 10, "every": 0.13, "gain": -20 },
-    { "type": "impact", "at": "help", "gain": -14, "size": 1 },
-    { "type": "blip", "at": "call", "gain": -19, "pitch": 1.25 },
-    { "type": "heartbeat", "from": "press", "to": "tobox", "bpm": 108, "gain": -21 },
-    { "type": "impact", "at": "run-0.32", "gain": -16, "size": 0.7 },
-    { "type": "whoosh", "at": "run", "dur": 0.7, "gain": -20 },
-    { "type": "impact", "at": "tobox", "gain": -13, "size": 0.9 },
-    { "type": "tick", "at": "door", "count": 1, "every": 1, "gain": -17 },
-    { "type": "riser", "to": "explode", "dur": 0.7, "gain": -25 },
-    { "type": "impact", "at": "explode", "gain": -15, "size": 0.8 },
-    { "type": "whoosh", "at": "explode", "dur": 1.4, "gain": -24 },
-    { "type": "blip", "at": "pads", "gain": -22, "pitch": 0.85 },
-    { "type": "blip", "at": "battery", "gain": -22, "pitch": 0.95 },
-    { "type": "blip", "at": "cap", "gain": -22, "pitch": 1.05 },
-    { "type": "riser", "to": "eclate:condensateur+0.9", "dur": 0.8, "gain": -27 },
-    { "type": "blip", "at": "chip", "gain": -20, "pitch": 1.3 },
-    { "type": "whoosh", "at": "close", "dur": 1.2, "gain": -24 },
-    { "type": "tick", "at": "repos+0.3", "count": 16, "every": 0.12, "gain": -26 },
-    { "type": "blip", "at": "ready", "gain": -18, "pitch": 1.2 },
-    { "type": "impact", "at": "hall", "gain": -12, "size": 1 },
-    { "type": "heartbeat", "from": "hall", "to": "handsoff", "bpm": 108, "gain": -22 },
-    { "type": "blip", "at": "stick1", "gain": -18, "pitch": 0.7, "heavy": true },
-    { "type": "blip", "at": "stick2", "gain": -18, "pitch": 0.75, "heavy": true },
-    { "type": "impact", "at": "speak-0.12", "gain": -17, "size": 0.7 },
-    { "type": "blip", "at": "speak", "gain": -19, "pitch": 1.4 },
-    { "type": "blip", "at": "handsoff", "gain": -19, "pitch": 1.4 },
-    { "type": "impact", "at": "analyse-0.12", "gain": -17, "size": 0.7 },
-    { "type": "tick", "at": "read", "count": 12, "every": 0.11, "gain": -24 },
-    { "type": "blip", "at": "verdict", "gain": -15, "pitch": 0.7, "heavy": true },
-    { "type": "impact", "at": "charge", "gain": -16, "size": 0.8 },
-    { "type": "riser", "to": "shock", "dur": 1.5, "gain": -13 },
-    { "type": "impact", "at": "shock", "gain": -6, "size": 1.6 },
-    { "type": "tick", "at": "shock+0.02", "count": 1, "every": 1, "gain": -12 },
-    { "type": "whoosh", "at": "eteint-0.2", "dur": 1.3, "gain": -22 },
-    { "type": "impact", "at": "dark", "gain": -13, "size": 1.1 },
-    { "type": "heartbeat", "from": "beat", "to": "refuse", "bpm": 65, "gain": -15, "body": true },
-    { "type": "heartbeat", "from": "refuse", "to": "like", "bpm": 65, "gain": -21, "body": true },
-    { "type": "impact", "at": "secret", "gain": -15, "size": 0.9 },
-    { "type": "impact", "at": "refuse-0.12", "gain": -18, "size": 0.6 },
-    { "type": "blip", "at": "refused", "gain": -17, "pitch": 0.75, "heavy": true },
-    { "type": "blip", "at": "like:sept", "gain": -25, "pitch": 0.9, "pan": -0.3 },
-    { "type": "blip", "at": "like:il", "gain": -25, "pitch": 1, "pan": 0.3 },
-    { "type": "blip", "at": "like:témoin", "gain": -25, "pitch": 1.12, "pan": -0.3 },
-    { "type": "blip", "at": "like:vu", "gain": -25, "pitch": 1.26, "pan": 0.3 },
-    { "type": "tick", "at": "comment:proche+0.5", "count": 9, "every": 0.055, "gain": -25 },
-    { "type": "impact", "at": "known", "gain": -15, "size": 0.8 },
-    { "type": "impact", "at": "next-0.1", "gain": -17, "size": 0.9 },
-    { "type": "whoosh", "at": "tomorrow", "dur": 1.4, "gain": -22 },
-    { "type": "rewind", "at": "rewind", "dur": 1.15, "gain": -21 }
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.9
+        ],
+        [
+          "where",
+          0.6
+        ],
+        [
+          "dive",
+          1
+        ],
+        [
+          "bars",
+          0.7
+        ],
+        [
+          "tobox",
+          0.6
+        ],
+        [
+          "explode",
+          0.45
+        ],
+        [
+          "close",
+          0.5
+        ],
+        [
+          "hall",
+          0.85
+        ],
+        [
+          "charge",
+          1
+        ],
+        [
+          "shock",
+          1
+        ],
+        [
+          "dark",
+          0.12
+        ],
+        [
+          "beat",
+          0.3
+        ],
+        [
+          "secret",
+          0.5
+        ],
+        [
+          "like",
+          0.4
+        ],
+        [
+          "tomorrow",
+          0.5
+        ],
+        [
+          "rewind",
+          0.75
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -13,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": 0.86,
+      "gain": -10,
+      "size": 1.3
+    },
+    {
+      "type": "whoosh",
+      "at": "promesse-0.25",
+      "dur": 1.5,
+      "gain": -21
+    },
+    {
+      "type": "blip",
+      "at": "box",
+      "gain": -20,
+      "pitch": 1.1
+    },
+    {
+      "type": "whoosh",
+      "at": "decide",
+      "dur": 1.6,
+      "gain": -22
+    },
+    {
+      "type": "blip",
+      "at": "promesse:décide",
+      "gain": -19,
+      "pitch": 0.8,
+      "heavy": true
+    },
+    {
+      "type": "whoosh",
+      "at": "where",
+      "dur": 1.45,
+      "gain": -20
+    },
+    {
+      "type": "tick",
+      "at": "promesse:où",
+      "count": 6,
+      "every": 0.09,
+      "gain": -24
+    },
+    {
+      "type": "whoosh",
+      "at": "dive",
+      "dur": 1.8,
+      "gain": -18
+    },
+    {
+      "type": "tick",
+      "at": "flutter",
+      "count": 22,
+      "every": 0.085,
+      "gain": -27
+    },
+    {
+      "type": "impact",
+      "at": "tremble:goutte",
+      "gain": -17,
+      "size": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": "compte-0.7",
+      "dur": 2.1,
+      "gain": -22
+    },
+    {
+      "type": "tick",
+      "at": "bars",
+      "count": 10,
+      "every": 0.13,
+      "gain": -20
+    },
+    {
+      "type": "impact",
+      "at": "help",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "blip",
+      "at": "call",
+      "gain": -19,
+      "pitch": 1.25
+    },
+    {
+      "type": "heartbeat",
+      "from": "press",
+      "to": "tobox",
+      "bpm": 108,
+      "gain": -21
+    },
+    {
+      "type": "impact",
+      "at": "run-0.32",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "whoosh",
+      "at": "run",
+      "dur": 0.7,
+      "gain": -20
+    },
+    {
+      "type": "impact",
+      "at": "tobox",
+      "gain": -13,
+      "size": 0.9
+    },
+    {
+      "type": "tick",
+      "at": "door",
+      "count": 1,
+      "every": 1,
+      "gain": -17
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.7,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -15,
+      "size": 0.8
+    },
+    {
+      "type": "whoosh",
+      "at": "explode",
+      "dur": 1.4,
+      "gain": -24
+    },
+    {
+      "type": "blip",
+      "at": "pads",
+      "gain": -22,
+      "pitch": 0.85
+    },
+    {
+      "type": "blip",
+      "at": "battery",
+      "gain": -22,
+      "pitch": 0.95
+    },
+    {
+      "type": "blip",
+      "at": "cap",
+      "gain": -22,
+      "pitch": 1.05
+    },
+    {
+      "type": "riser",
+      "to": "eclate:condensateur+0.9",
+      "dur": 0.8,
+      "gain": -27
+    },
+    {
+      "type": "blip",
+      "at": "chip",
+      "gain": -20,
+      "pitch": 1.3
+    },
+    {
+      "type": "whoosh",
+      "at": "close",
+      "dur": 1.2,
+      "gain": -24
+    },
+    {
+      "type": "tick",
+      "at": "repos+0.3",
+      "count": 16,
+      "every": 0.12,
+      "gain": -26
+    },
+    {
+      "type": "blip",
+      "at": "ready",
+      "gain": -18,
+      "pitch": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "hall",
+      "gain": -12,
+      "size": 1
+    },
+    {
+      "type": "heartbeat",
+      "from": "hall",
+      "to": "handsoff",
+      "bpm": 108,
+      "gain": -22
+    },
+    {
+      "type": "blip",
+      "at": "stick1",
+      "gain": -18,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "blip",
+      "at": "stick2",
+      "gain": -18,
+      "pitch": 0.75,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "speak-0.12",
+      "gain": -17,
+      "size": 0.7
+    },
+    {
+      "type": "blip",
+      "at": "speak",
+      "gain": -19,
+      "pitch": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "handsoff",
+      "gain": -19,
+      "pitch": 1.4
+    },
+    {
+      "type": "impact",
+      "at": "analyse-0.12",
+      "gain": -17,
+      "size": 0.7
+    },
+    {
+      "type": "tick",
+      "at": "read",
+      "count": 12,
+      "every": 0.11,
+      "gain": -24
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "charge",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "riser",
+      "to": "shock",
+      "dur": 1.5,
+      "gain": -13
+    },
+    {
+      "type": "impact",
+      "at": "shock",
+      "gain": -6,
+      "size": 1.6
+    },
+    {
+      "type": "tick",
+      "at": "shock+0.02",
+      "count": 1,
+      "every": 1,
+      "gain": -12
+    },
+    {
+      "type": "whoosh",
+      "at": "eteint-0.2",
+      "dur": 1.3,
+      "gain": -22
+    },
+    {
+      "type": "impact",
+      "at": "dark",
+      "gain": -13,
+      "size": 1.1
+    },
+    {
+      "type": "heartbeat",
+      "from": "beat",
+      "to": "refuse",
+      "bpm": 65,
+      "gain": -15,
+      "body": true
+    },
+    {
+      "type": "heartbeat",
+      "from": "refuse",
+      "to": "like",
+      "bpm": 65,
+      "gain": -21,
+      "body": true
+    },
+    {
+      "type": "impact",
+      "at": "secret",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "impact",
+      "at": "refuse-0.12",
+      "gain": -18,
+      "size": 0.6
+    },
+    {
+      "type": "blip",
+      "at": "refused",
+      "gain": -17,
+      "pitch": 0.75,
+      "heavy": true
+    },
+    {
+      "type": "blip",
+      "at": "like:sept",
+      "gain": -25,
+      "pitch": 0.9,
+      "pan": -0.3
+    },
+    {
+      "type": "blip",
+      "at": "like:il",
+      "gain": -25,
+      "pitch": 1,
+      "pan": 0.3
+    },
+    {
+      "type": "blip",
+      "at": "like:témoin",
+      "gain": -25,
+      "pitch": 1.12,
+      "pan": -0.3
+    },
+    {
+      "type": "blip",
+      "at": "like:vu",
+      "gain": -25,
+      "pitch": 1.26,
+      "pan": 0.3
+    },
+    {
+      "type": "tick",
+      "at": "comment:proche+0.5",
+      "count": 9,
+      "every": 0.055,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "known",
+      "gain": -15,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "next-0.1",
+      "gain": -17,
+      "size": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": "tomorrow",
+      "dur": 1.4,
+      "gain": -22
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1.15,
+      "gain": -21
+    }
   ]
 }

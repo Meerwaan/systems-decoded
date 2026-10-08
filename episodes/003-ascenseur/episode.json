@@ -11,14 +11,57 @@
     "model": "eleven_v4",
     "stability": 0.4,
     "similarity": 0.8,
-    "speed": 1.0,
+    "speed": 1,
     "seed": 21
   },
-  "cover": { "at": "eclate:rail+0.6", "title": ["Ascenseur"], "cam": { "tx": 0, "ty": 25, "tz": 0, "d": 250, "az": 150, "el": 28, "shift": -330, "side": 0, "fov": 28 } },
+  "cover": {
+    "at": "eclate:rail+0.6",
+    "title": [
+      "Ascenseur"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 25,
+      "tz": 0,
+      "d": 250,
+      "az": 150,
+      "el": 28,
+      "shift": -330,
+      "side": 0,
+      "fov": 28
+    }
+  },
   "post": {
     "caption": "Le câble casse. Tu ne tombes pas. Et ce n'est pas un câble qui te retient. Toi, tu sauterais au dernier moment ?",
-    "hashtags": ["#apprendresurtiktok", "#commentcamarche", "#ascenseur", "#securite", "#ingenierie"],
-    "pinned": "Sauter ne sert à rien : en tombant de 12 étages tu arrives à près de 100 km/h, et un saut t'en enlève une dizaine au mieux. En plus, en chute libre tu flottes : tu n'as même pas d'appui pour pousser. Heureusement, le parachute est là. Tu y croyais, toi ?"
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#ascenseur",
+      "#securite",
+      "#ingenierie"
+    ],
+    "pinned": "Sauter ne sert à rien : en tombant de 12 étages tu arrives à près de 100 km/h, et un saut t'en enlève une dizaine au mieux. En plus, en chute libre tu flottes : tu n'as même pas d'appui pour pousser. Heureusement, le parachute est là. Tu y croyais, toi ?",
+    "instagram": {
+      "caption": "Le câble de ton ascenseur casse. Tu ne tombes pas. Et ce n'est pas un câble qui te retient.\n\nDossier 003 : ce qui arrête une cabine en une demi-seconde.\n\nToi, tu sauterais au dernier moment ?",
+      "hashtags": [
+        "#ascenseur",
+        "#ingenierie",
+        "#securite",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ascenseur : que se passe-t-il si le câble casse ?",
+      "description": "Dossier 003 — douzième étage, le câble casse : ce qui retient la cabine en une demi-seconde.\n\nTu sauterais au dernier moment, toi ?",
+      "hashtags": [
+        "#shorts",
+        "#ascenseur",
+        "#ingenierie",
+        "#securite",
+        "#science"
+      ]
+    }
   },
   "sources": [
     "Limiteur de vitesse : déclenche le parachute au plus tôt à 115 % de la vitesse nominale, par un câble qui lui est propre (EN 81-20) : https://adrarascenseur.com/ressources/glossaire-ascenseur/ et https://emploi.belgique.be/sites/default/files/content/documents/Bien-%C3%AAtre%20au%20travail/R%C3%A9glementation/art270_RGPT.pdf",
@@ -32,45 +75,116 @@
     "Annonce du dossier 004 (différentiel 30 mA) : seuil au-delà duquel la fibrillation devient possible ; à vérifier en écrivant le 004 : https://guidelec.com/electricite/pourquoi-le-disjoncteur-differentiel-sauve-des-vies/"
   ],
   "beats": [
-    { "id": "accroche",               "text": "[12e étage|Douzième étage]. Le câble de ton ascenseur vient de *casser*.",
-                                      "vo": "[urgent] Douzième étage. Le câble de ton ascenseur vient de CASSER.",
-                                      "voAlt": ["[tense] Douzième étage. Le câble de ton ascenseur... vient de casser."] },
-    { "id": "promesse",               "text": "Tu ne tomberas +pas+. Et ce n'est pas un câble qui va te *retenir*.",
-                                      "vo": "[firm, matter-of-fact] Tu ne tomberas pas. [short pause] [serious] Et ce n'est pas un câble qui va te retenir." },
-    { "id": "cinq",                   "text": "D'abord, il en reste +cinq+. Un seul suffirait.",
-                                      "vo": "[calm] D'abord, il en reste cinq. Un seul suffirait." },
-    { "id": "tous", "hold": 0.3,      "text": "Alors coupons-les *tous*. [36|Trente-six] mètres de vide : en bas, tu arriverais à près de *cent à l'heure*.",
-                                      "vo": "[tense] Alors coupons-les TOUS. Trente-six mètres de vide : en bas, tu arriverais à près de cent à l'heure." },
-    { "id": "boite",                  "text": "Sauf que sous tes pieds, quelque chose attend ce moment depuis +[1854|mille huit cent cinquante-quatre]+.",
-                                      "vo": "[low, grave voice] Sauf que sous tes pieds, quelque chose attend ce moment depuis mille huit cent cinquante-quatre." },
-    { "id": "ouvre", "hold": 0.5,     "text": "Alors… on l'ouvre.",
-                                      "vo": "[slowly] Alors... on l'ouvre." },
-    { "id": "eclate", "hold": 0.3,    "text": "Un bloc d'acier, sous la cabine. Dedans, un coin. Et entre les deux… le rail qui te guide.",
-                                      "vo": "Un bloc d'acier, sous la cabine. Dedans, un coin. Et entre les deux... le rail qui te guide." },
-    { "id": "nom", "hold": 0.4,       "text": "Ça s'appelle un +parachute+.",
-                                      "vo": "[thoughtful] Ça s'appelle... un parachute." },
-    { "id": "poulie", "hold": 0.4,    "text": "Tout en haut, une poulie surveille ta vitesse. Elle n'attend qu'une chose : *[15 %|quinze pour cent] de trop*.",
-                                      "vo": "[serious] Tout en haut, une poulie surveille ta vitesse. Elle n'attend qu'une chose : quinze pour cent de trop." },
-    { "id": "zero", "hold": 0.4,      "text": "*Zéro*. Les câbles lâchent.",
-                                      "vo": "[tense] Zéro. Les câbles lâchent." },
-    { "id": "dix", "hold": 0.2,       "text": "[0,1 s|Un dixième de seconde]. Tu vas trop vite. La poulie se *bloque*.",
-                                      "vo": "[tense] Un dixième de seconde. Tu vas trop vite. La poulie se bloque." },
-    { "id": "coin", "hold": 0.4,      "text": "Son câble tire un levier. Le coin remonte… et *mord* le rail.",
-                                      "vo": "[urgent] Son câble tire un levier. Le coin remonte... et MORD le rail." },
-    { "id": "stop", "hold": 0.6,      "text": "[0,5 s|Une demi-seconde]. Tu es à l'arrêt. Un demi-mètre plus bas, +à peine+.",
-                                      "vo": "[calm] Une demi-seconde. Tu es à l'arrêt. [short pause] Un demi-mètre plus bas, à peine." },
-    { "id": "chute", "hold": 0.4,     "text": "Voilà le secret : un ascenseur ne tient pas à un fil. Il tient à +ses rails+. Et plus il tombe, plus il serre.",
-                                      "vo": "[low, grave voice] Voilà le secret : un ascenseur ne tient pas à un fil. Il tient à ses rails. Et plus il tombe... plus il serre." },
-    { "id": "otis", "hold": 0.4,      "text": "En [1854|mille huit cent cinquante-quatre], son inventeur l'a prouvé devant la foule : debout sur la plateforme, il a fait couper la corde.",
-                                      "vo": "[thoughtful] En mille huit cent cinquante-quatre, son inventeur l'a prouvé devant la foule : debout sur la plateforme, il a fait couper la corde." },
-    { "id": "like",                   "text": "+Like+, pour celui qui retient son souffle dès que la cabine tremble.",
-                                      "vo": "[serious] Like... pour celui qui retient son souffle dès que la cabine tremble." },
-    { "id": "comment", "hold": 0.6,   "text": "Et dis-moi en +commentaire+ : si ça tombait vraiment, tu sauterais au dernier moment ? La réponse est *épinglée*.",
-                                      "vo": "[curious] Et dis-moi en commentaire : si ça tombait vraiment, tu sauterais au dernier moment ? [short pause] [serious] La réponse est épinglée." },
-    { "id": "abo",                    "text": "+Abonne-toi+ : le prochain dossier tient dans [30 mA|trente milliampères]. Au-delà, ton cœur peut s'arrêter.",
-                                      "vo": "[ominous] Abonne-toi : le prochain dossier tient dans trente milliampères. [short pause] Au-delà, ton cœur peut s'arrêter." },
-    { "id": "boucle",                 "text": "En attendant, la prochaine fois que tu appuies sur le bouton du…",
-                                      "vo": "[calm] En attendant, la prochaine fois que tu appuies sur le bouton du..." }
+    {
+      "id": "accroche",
+      "text": "[12e étage|Douzième étage]. Le câble de ton ascenseur vient de *casser*.",
+      "vo": "[urgent] Douzième étage. Le câble de ton ascenseur vient de CASSER.",
+      "voAlt": [
+        "[tense] Douzième étage. Le câble de ton ascenseur... vient de casser."
+      ]
+    },
+    {
+      "id": "promesse",
+      "text": "Tu ne tomberas +pas+. Et ce n'est pas un câble qui va te *retenir*.",
+      "vo": "[firm, matter-of-fact] Tu ne tomberas pas. [short pause] [serious] Et ce n'est pas un câble qui va te retenir."
+    },
+    {
+      "id": "cinq",
+      "text": "D'abord, il en reste +cinq+. Un seul suffirait.",
+      "vo": "[calm] D'abord, il en reste cinq. Un seul suffirait."
+    },
+    {
+      "id": "tous",
+      "hold": 0.3,
+      "text": "Alors coupons-les *tous*. [36|Trente-six] mètres de vide : en bas, tu arriverais à près de *cent à l'heure*.",
+      "vo": "[tense] Alors coupons-les TOUS. Trente-six mètres de vide : en bas, tu arriverais à près de cent à l'heure."
+    },
+    {
+      "id": "boite",
+      "text": "Sauf que sous tes pieds, quelque chose attend ce moment depuis +[1854|mille huit cent cinquante-quatre]+.",
+      "vo": "[low, grave voice] Sauf que sous tes pieds, quelque chose attend ce moment depuis mille huit cent cinquante-quatre."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.5,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[slowly] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.3,
+      "text": "Un bloc d'acier, sous la cabine. Dedans, un coin. Et entre les deux… le rail qui te guide.",
+      "vo": "Un bloc d'acier, sous la cabine. Dedans, un coin. Et entre les deux... le rail qui te guide."
+    },
+    {
+      "id": "nom",
+      "hold": 0.4,
+      "text": "Ça s'appelle un +parachute+.",
+      "vo": "[thoughtful] Ça s'appelle... un parachute."
+    },
+    {
+      "id": "poulie",
+      "hold": 0.4,
+      "text": "Tout en haut, une poulie surveille ta vitesse. Elle n'attend qu'une chose : *[15 %|quinze pour cent] de trop*.",
+      "vo": "[serious] Tout en haut, une poulie surveille ta vitesse. Elle n'attend qu'une chose : quinze pour cent de trop."
+    },
+    {
+      "id": "zero",
+      "hold": 0.4,
+      "text": "*Zéro*. Les câbles lâchent.",
+      "vo": "[tense] Zéro. Les câbles lâchent."
+    },
+    {
+      "id": "dix",
+      "hold": 0.2,
+      "text": "[0,1 s|Un dixième de seconde]. Tu vas trop vite. La poulie se *bloque*.",
+      "vo": "[tense] Un dixième de seconde. Tu vas trop vite. La poulie se bloque."
+    },
+    {
+      "id": "coin",
+      "hold": 0.4,
+      "text": "Son câble tire un levier. Le coin remonte… et *mord* le rail.",
+      "vo": "[urgent] Son câble tire un levier. Le coin remonte... et MORD le rail."
+    },
+    {
+      "id": "stop",
+      "hold": 0.6,
+      "text": "[0,5 s|Une demi-seconde]. Tu es à l'arrêt. Un demi-mètre plus bas, +à peine+.",
+      "vo": "[calm] Une demi-seconde. Tu es à l'arrêt. [short pause] Un demi-mètre plus bas, à peine."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà le secret : un ascenseur ne tient pas à un fil. Il tient à +ses rails+. Et plus il tombe, plus il serre.",
+      "vo": "[low, grave voice] Voilà le secret : un ascenseur ne tient pas à un fil. Il tient à ses rails. Et plus il tombe... plus il serre."
+    },
+    {
+      "id": "otis",
+      "hold": 0.4,
+      "text": "En [1854|mille huit cent cinquante-quatre], son inventeur l'a prouvé devant la foule : debout sur la plateforme, il a fait couper la corde.",
+      "vo": "[thoughtful] En mille huit cent cinquante-quatre, son inventeur l'a prouvé devant la foule : debout sur la plateforme, il a fait couper la corde."
+    },
+    {
+      "id": "like",
+      "text": "+Like+, pour celui qui retient son souffle dès que la cabine tremble.",
+      "vo": "[serious] Like... pour celui qui retient son souffle dès que la cabine tremble."
+    },
+    {
+      "id": "comment",
+      "hold": 0.6,
+      "text": "Et dis-moi en +commentaire+ : si ça tombait vraiment, tu sauterais au dernier moment ? La réponse est *épinglée*.",
+      "vo": "[curious] Et dis-moi en commentaire : si ça tombait vraiment, tu sauterais au dernier moment ? [short pause] [serious] La réponse est épinglée."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+ : le prochain dossier tient dans [30 mA|trente milliampères]. Au-delà, ton cœur peut s'arrêter.",
+      "vo": "[ominous] Abonne-toi : le prochain dossier tient dans trente milliampères. [short pause] Au-delà, ton cœur peut s'arrêter."
+    },
+    {
+      "id": "boucle",
+      "text": "En attendant, la prochaine fois que tu appuies sur le bouton du…",
+      "vo": "[calm] En attendant, la prochaine fois que tu appuies sur le bouton du..."
+    }
   ],
   "cues": {
     "snap": "accroche:casser",
@@ -94,56 +208,369 @@
   },
   "bedVolume": 0.8,
   "sfx": [
-    { "type": "drone", "gain": -24, "curve": [[0, 0.85], ["promesse", 0.55], ["tous", 0.9], ["dive", 1], ["found", 0.6], ["explode", 0.5], ["rise", 0.6], ["trigger", 1], ["still", 0.45], ["like", 0.4], ["rewind", 0.7]] },
-    { "type": "impact", "at": 0.03, "gain": -13, "size": 1.2 },
-    { "type": "riser", "to": "snap", "dur": 0.7, "gain": -21 },
-    { "type": "impact", "at": "snap", "gain": -9, "size": 1.3 },
-    { "type": "whoosh", "at": "snap+0.05", "dur": 0.5, "gain": -19 },
-    { "type": "blip", "at": "promesse:pas", "gain": -19, "pitch": 0.75, "heavy": true },
-    { "type": "whoosh", "at": "under", "dur": 1.2, "gain": -20 },
-    { "type": "blip", "at": "promesse:retenir-0.3", "gain": -21, "pitch": 0.9 },
-    { "type": "blip", "at": "promesse:retenir+0.5", "gain": -22, "pitch": 0.9 },
-    { "type": "whoosh", "at": "cinq-0.3", "dur": 1.0, "gain": -21 },
-    { "type": "tick", "at": "cinq:cinq", "count": 5, "every": 0.08, "gain": -21 },
-    { "type": "blip", "at": "cinq:seul", "gain": -20, "pitch": 1.2 },
-    { "type": "tick", "at": "tous:tous-0.25", "count": 5, "every": 0.07, "gain": -18 },
-    { "type": "impact", "at": "tous:tous", "gain": -16, "size": 0.8 },
-    { "type": "whoosh", "at": "dive", "dur": 1.4, "gain": -15 },
-    { "type": "impact", "at": "dive+1.25", "gain": -13, "size": 1.4 },
-    { "type": "heartbeat", "from": "tous:36+0.6", "to": "boite", "bpm": 66, "gain": -22 },
-    { "type": "whoosh", "at": "found", "dur": 1.3, "gain": -20 },
-    { "type": "blip", "at": "boite:1854", "gain": -18, "pitch": 0.7, "heavy": true },
-    { "type": "riser", "to": "explode", "dur": 0.8, "gain": -25 },
-    { "type": "impact", "at": "explode", "gain": -16, "size": 0.8 },
-    { "type": "whoosh", "at": "explode+1.0", "dur": 1.6, "gain": -25 },
-    { "type": "blip", "at": "eclate:bloc", "gain": -23, "pitch": 0.8 },
-    { "type": "blip", "at": "eclate:coin-0.1", "gain": -23, "pitch": 0.9 },
-    { "type": "blip", "at": "eclate:rail-0.15", "gain": -23, "pitch": 1 },
-    { "type": "impact", "at": "named-0.25", "gain": -17, "size": 0.9 },
-    { "type": "whoosh", "at": "rise", "dur": 1.45, "gain": -18 },
-    { "type": "blip", "at": "over", "gain": -17, "pitch": 1.3, "heavy": true },
-    { "type": "riser", "to": "trigger", "dur": 1.2, "gain": -19 },
-    { "type": "impact", "at": "trigger", "gain": -7, "size": 1.6 },
-    { "type": "whoosh", "at": "trigger+0.1", "dur": 0.9, "gain": -17 },
-    { "type": "riser", "to": "lock", "dur": 1.4, "gain": -20 },
-    { "type": "impact", "at": "lock", "gain": -9, "size": 1.1 },
-    { "type": "tick", "at": "lock", "count": 1, "every": 1, "gain": -15 },
-    { "type": "whoosh", "at": "pull-0.1", "dur": 0.6, "gain": -22 },
-    { "type": "riser", "to": "bite", "dur": 1.0, "gain": -18 },
-    { "type": "impact", "at": "bite", "gain": -7, "size": 1.4 },
-    { "type": "whoosh", "at": "bite+0.15", "dur": 1.6, "gain": -19 },
-    { "type": "impact", "at": "still", "gain": -14, "size": 1 },
-    { "type": "blip", "at": "still+0.05", "gain": -18, "pitch": 0.7, "heavy": true },
-    { "type": "impact", "at": "rails-0.15", "gain": -16, "size": 0.9 },
-    { "type": "tick", "at": "otis:debout", "count": 1, "every": 1, "gain": -20 },
-    { "type": "impact", "at": "cut1854", "gain": -12, "size": 1 },
-    { "type": "blip", "at": "like:retient", "gain": -25, "pitch": 0.9, "pan": -0.3 },
-    { "type": "blip", "at": "like:souffle", "gain": -25, "pitch": 1, "pan": 0.3 },
-    { "type": "blip", "at": "like:cabine", "gain": -25, "pitch": 1.12, "pan": -0.3 },
-    { "type": "blip", "at": "like:tremble", "gain": -25, "pitch": 1.26, "pan": 0.3 },
-    { "type": "tick", "at": "comment:sauterais", "count": 8, "every": 0.055, "gain": -25 },
-    { "type": "impact", "at": "pinned", "gain": -15, "size": 0.8 },
-    { "type": "impact", "at": "next-0.1", "gain": -17, "size": 0.9 },
-    { "type": "rewind", "at": "rewind", "dur": 1.15, "gain": -21 }
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.85
+        ],
+        [
+          "promesse",
+          0.55
+        ],
+        [
+          "tous",
+          0.9
+        ],
+        [
+          "dive",
+          1
+        ],
+        [
+          "found",
+          0.6
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "rise",
+          0.6
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "still",
+          0.45
+        ],
+        [
+          "like",
+          0.4
+        ],
+        [
+          "rewind",
+          0.7
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -13,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "snap",
+      "dur": 0.7,
+      "gain": -21
+    },
+    {
+      "type": "impact",
+      "at": "snap",
+      "gain": -9,
+      "size": 1.3
+    },
+    {
+      "type": "whoosh",
+      "at": "snap+0.05",
+      "dur": 0.5,
+      "gain": -19
+    },
+    {
+      "type": "blip",
+      "at": "promesse:pas",
+      "gain": -19,
+      "pitch": 0.75,
+      "heavy": true
+    },
+    {
+      "type": "whoosh",
+      "at": "under",
+      "dur": 1.2,
+      "gain": -20
+    },
+    {
+      "type": "blip",
+      "at": "promesse:retenir-0.3",
+      "gain": -21,
+      "pitch": 0.9
+    },
+    {
+      "type": "blip",
+      "at": "promesse:retenir+0.5",
+      "gain": -22,
+      "pitch": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": "cinq-0.3",
+      "dur": 1,
+      "gain": -21
+    },
+    {
+      "type": "tick",
+      "at": "cinq:cinq",
+      "count": 5,
+      "every": 0.08,
+      "gain": -21
+    },
+    {
+      "type": "blip",
+      "at": "cinq:seul",
+      "gain": -20,
+      "pitch": 1.2
+    },
+    {
+      "type": "tick",
+      "at": "tous:tous-0.25",
+      "count": 5,
+      "every": 0.07,
+      "gain": -18
+    },
+    {
+      "type": "impact",
+      "at": "tous:tous",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "whoosh",
+      "at": "dive",
+      "dur": 1.4,
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "dive+1.25",
+      "gain": -13,
+      "size": 1.4
+    },
+    {
+      "type": "heartbeat",
+      "from": "tous:36+0.6",
+      "to": "boite",
+      "bpm": 66,
+      "gain": -22
+    },
+    {
+      "type": "whoosh",
+      "at": "found",
+      "dur": 1.3,
+      "gain": -20
+    },
+    {
+      "type": "blip",
+      "at": "boite:1854",
+      "gain": -18,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "whoosh",
+      "at": "explode+1.0",
+      "dur": 1.6,
+      "gain": -25
+    },
+    {
+      "type": "blip",
+      "at": "eclate:bloc",
+      "gain": -23,
+      "pitch": 0.8
+    },
+    {
+      "type": "blip",
+      "at": "eclate:coin-0.1",
+      "gain": -23,
+      "pitch": 0.9
+    },
+    {
+      "type": "blip",
+      "at": "eclate:rail-0.15",
+      "gain": -23,
+      "pitch": 1
+    },
+    {
+      "type": "impact",
+      "at": "named-0.25",
+      "gain": -17,
+      "size": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": "rise",
+      "dur": 1.45,
+      "gain": -18
+    },
+    {
+      "type": "blip",
+      "at": "over",
+      "gain": -17,
+      "pitch": 1.3,
+      "heavy": true
+    },
+    {
+      "type": "riser",
+      "to": "trigger",
+      "dur": 1.2,
+      "gain": -19
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -7,
+      "size": 1.6
+    },
+    {
+      "type": "whoosh",
+      "at": "trigger+0.1",
+      "dur": 0.9,
+      "gain": -17
+    },
+    {
+      "type": "riser",
+      "to": "lock",
+      "dur": 1.4,
+      "gain": -20
+    },
+    {
+      "type": "impact",
+      "at": "lock",
+      "gain": -9,
+      "size": 1.1
+    },
+    {
+      "type": "tick",
+      "at": "lock",
+      "count": 1,
+      "every": 1,
+      "gain": -15
+    },
+    {
+      "type": "whoosh",
+      "at": "pull-0.1",
+      "dur": 0.6,
+      "gain": -22
+    },
+    {
+      "type": "riser",
+      "to": "bite",
+      "dur": 1,
+      "gain": -18
+    },
+    {
+      "type": "impact",
+      "at": "bite",
+      "gain": -7,
+      "size": 1.4
+    },
+    {
+      "type": "whoosh",
+      "at": "bite+0.15",
+      "dur": 1.6,
+      "gain": -19
+    },
+    {
+      "type": "impact",
+      "at": "still",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "blip",
+      "at": "still+0.05",
+      "gain": -18,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "rails-0.15",
+      "gain": -16,
+      "size": 0.9
+    },
+    {
+      "type": "tick",
+      "at": "otis:debout",
+      "count": 1,
+      "every": 1,
+      "gain": -20
+    },
+    {
+      "type": "impact",
+      "at": "cut1854",
+      "gain": -12,
+      "size": 1
+    },
+    {
+      "type": "blip",
+      "at": "like:retient",
+      "gain": -25,
+      "pitch": 0.9,
+      "pan": -0.3
+    },
+    {
+      "type": "blip",
+      "at": "like:souffle",
+      "gain": -25,
+      "pitch": 1,
+      "pan": 0.3
+    },
+    {
+      "type": "blip",
+      "at": "like:cabine",
+      "gain": -25,
+      "pitch": 1.12,
+      "pan": -0.3
+    },
+    {
+      "type": "blip",
+      "at": "like:tremble",
+      "gain": -25,
+      "pitch": 1.26,
+      "pan": 0.3
+    },
+    {
+      "type": "tick",
+      "at": "comment:sauterais",
+      "count": 8,
+      "every": 0.055,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "pinned",
+      "gain": -15,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "next-0.1",
+      "gain": -17,
+      "size": 0.9
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1.15,
+      "gain": -21
+    }
   ]
 }
