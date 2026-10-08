@@ -1,0 +1,226 @@
+{
+  "id": "012",
+  "slug": "gaziniere",
+  "title": "Gazinière",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Gazinière"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Une phrase qui prolonge l'accroche sans la répéter ni dire la chute, avec le mot que les gens cherchent, puis la question du CTA commentaire.",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#sujet1",
+      "#sujet2",
+      "#communaute"
+    ],
+    "pinned": "La question du CTA commentaire, en 150 caractères au plus."
+  },
+  "sources": [],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Une phrase *choc*, pour toi, au présent.",
+      "vo": "[tense] Une phrase choc, pour toi, au présent.",
+      "voAlt": [
+        "[firm, matter-of-fact] Une phrase choc, pour toi, au présent."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Voilà ce que tu y +gagnes+. Sauf si… une *condition*.",
+      "vo": "[firm, matter-of-fact] Voilà ce que tu y gagnes. [short pause] [serious] Sauf si... une condition."
+    },
+    {
+      "id": "scene",
+      "text": "Dans [3 s|trois secondes], il sera *trop tard*. Une seule chose peut encore l'arrêter.",
+      "vo": "[tense] Dans trois secondes, il sera trop tard. Une seule chose peut encore l'arrêter."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Une première pièce. Une deuxième. Et au centre… +le cœur+.",
+      "vo": "Une première pièce. Une deuxième. Et au centre... le cœur."
+    },
+    {
+      "id": "repos",
+      "text": "Il attend. Sans bruit. Depuis des années.",
+      "vo": "[thoughtful] Il attend. Sans bruit. Depuis des années."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ce qui arrive maintenant, on te le montre en *entier*.",
+      "vo": "[tense] Abonne-toi : ce qui arrive maintenant, on te le montre en entier."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "*Zéro*. Le danger arrive.",
+      "vo": "[firm, matter-of-fact] Zéro. Le danger arrive."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Et pour la première fois… le système +réagit+.",
+      "vo": "[tense] Et pour la première fois... le système réagit."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : ce n'est *pas* ce que tu croyais. C'est +l'inverse+.",
+      "vo": "[low, grave voice] Voilà son secret : ce n'est pas ce que tu croyais. C'est l'inverse."
+    },
+    {
+      "id": "like",
+      "text": "+Like+. Quelqu'un d'autre le saura grâce à toi.",
+      "vo": "[firm, matter-of-fact] Like. [short pause] Quelqu'un d'autre le saura grâce à toi."
+    },
+    {
+      "id": "abo",
+      "text": "Prochain dossier : encore plus *étrange*. +Abonne-toi+ pour l'ouvrir.",
+      "vo": "[serious] Prochain dossier : encore plus étrange. [short pause] Abonne-toi pour l'ouvrir."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et la condition ? La voilà. En +commentaire+ : et toi, tu le savais ?",
+      "vo": "[curious] Et la condition ? [short pause] [serious] La voilà. [short pause] [curious] En commentaire : et toi, tu le savais ?"
+    },
+    {
+      "id": "boucle",
+      "text": "Parce que tout commence toujours par…",
+      "vo": "[calm] Parce que tout commence toujours par,"
+    }
+  ],
+  "cues": {
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:réagit-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "like-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:toujours"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
