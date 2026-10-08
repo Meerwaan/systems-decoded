@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · 008 · Paratonnerre</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
+         kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+
+      /* rien de ceci n'est à l'écran tant qu'un acte ne l'a pas fait entrer */
+      .chip--live, #stamp, #retitle, #net, #next, #cta-field, .rail { opacity: 0; }
+
+      /* le second compteur de l'en-tête : le courant dans le paratonnerre (encre ; signal au contact — main.js) */
+      #hud-count { color: var(--ink); }
+
+      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
+      #chip-toi, #chip-out, #chip-speed { color: var(--ink); }
+      #chip-rod, #chip-rep, #chip-cuivre, #chip-terre, #chip-safe { color: var(--veille); }
+
+      /* « on l'a filmé » : le tampon du dossier, puis ses lignes (zone haute, pendant que tout ce qui dépasse répond) */
+      #stamp { position: absolute; right: var(--safe-r); top: calc(var(--slot-top) + 8px); padding: 26px 30px 24px; border: 2px solid var(--ink-faint); background: rgba(7, 10, 12, 0.8); }
+      #stamp-main { display: inline-block; padding: 6px 22px 12px; border: 6px solid var(--veille); outline: 2px solid var(--veille); outline-offset: 6px; color: var(--veille); font: 800 100px/1 var(--display); letter-spacing: 0.02em; text-transform: uppercase; white-space: nowrap; transform-origin: 0 0; }
+      .stamp__l { margin-top: 16px; font: 500 25px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; color: var(--ink); }
+      #stamp-1 { margin-top: 34px; }
+      .stamp__l i { font-style: normal; color: var(--ink-dim); }
+
+      /* la chute, puis les trois appels à l'action */
+      #retitle-main { font-size: 104px; }
+      #retitle-slot { height: 104px; }
+      #retitle-strike { top: 50px; }
+      #next-fact span { font-size: 44px; line-height: 1.2; letter-spacing: 0.06em; } /* pas de chiffre sur ce panneau : aucun n'est encore sourcé */
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="114.733" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 008</span></div>
+        <div class="hud__title" id="hud-title">Paratonnerre</div>
+        <div class="hud__clock" id="hud-clock">T−1,00 ms</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Courant</span><b id="hud-count-v">0 A</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- 01 · MENACE (acte1.js) -->
+      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <div id="chip-rod" class="chip chip--live"><span>Sur ton toit</span><b>Paratonnerre</b></div>
+      <div id="chip-out" class="chip chip--live"><b>Toi</b></div>
+      <div id="chip-sans" class="chip chip--live"><span>Sans</span><b>Paratonnerre</b></div>
+
+      <!-- le seuil (fin d'acte2.js) : la demande d'abonnement dite à la porte de l'acte 3 — des chevrons, jamais un panneau -->
+      <div id="rail-seuil" class="rail"><i></i><i></i><i></i></div>
+
+      <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
+      <section id="stamp">
+        <div id="stamp-main">Filmé</div>
+        <div class="stamp__l" id="stamp-1">40 000 images par seconde</div>
+        <div class="stamp__l" id="stamp-2">INPE <i>·</i> Brésil</div>
+        <div class="stamp__l" id="stamp-3">Publié en 2022 <i>·</i> Geophys. Res. Lett.</div>
+      </section>
+      <div id="chip-rep" class="chip chip--live"><span>La tige</span><b>La plus haute</b></div>
+      <div id="chip-temp" class="chip chip--live"><span>Canal</span><b>≈ 30 000 °C</b></div>
+      <div id="chip-speed" class="chip chip--live"><span>Il remonte</span><b>≈ 100 000 km/s</b></div>
+      <div id="chip-cuivre" class="chip chip--live"><span>Le cuivre</span><b>Tiédit à peine</b></div>
+      <div id="chip-terre" class="chip chip--live"><span>Dispersé dans</span><b>La terre</b></div>
+      <div id="chip-safe" class="chip chip--live"><span>Toi</span><b>Rien senti</b></div>
+
+      <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Un paratonnerre</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">Éloigne la foudre<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Choisit où</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 personne</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 009</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <div id="next-fact"><span>Une plaque pleine de trous.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <div id="chip-arbre" class="chip chip--live"><span>L'arbre</span><b>Jamais</b></div>
+      <div id="cta-field">
+        <div class="kicker">Sous l'orage, tu vas où ?</div>
+        <div id="cta-field-v"><span id="cta-typed" class="is-veille">LA VOITURE</span><span id="cta-caret"></span></div>
+      </div>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

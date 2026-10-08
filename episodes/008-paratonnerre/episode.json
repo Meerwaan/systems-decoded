@@ -1,0 +1,810 @@
+{
+  "id": "008",
+  "slug": "paratonnerre",
+  "title": "Paratonnerre",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "whole+0.8",
+    "title": [
+      "Para",
+      "tonnerre"
+    ],
+    "cam": {
+      "tx": -11.5,
+      "ty": 40,
+      "tz": -9.6,
+      "d": 500,
+      "az": -40,
+      "el": 10,
+      "shift": -400,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Paratonnerre : ce qui se passe sur ton toit dans le dernier millième de seconde avant la foudre. Et toi, si l'orage te surprend dehors : tu vas où ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#paratonnerre",
+      "#foudre",
+      "#orage"
+    ],
+    "pinned": "Dehors sous l'orage : une voiture ou un bâtiment, jamais sous un arbre. Et on attend 30 min après le dernier tonnerre. Toi, tu vas où ?",
+    "instagram": {
+      "caption": "Un millième de seconde avant que la foudre touche ton toit, une tige de métal va l'appeler.\n\nDossier 008 : le paratonnerre, ce millième de seconde au ralenti.\n\nEt toi, si l'orage te surprend dehors : tu vas où ?",
+      "hashtags": [
+        "#paratonnerre",
+        "#foudre",
+        "#orage",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Paratonnerre : ce qui se passe sur ton toit une milliseconde avant la foudre",
+      "description": "Dossier 008 — la foudre descend par bonds, tout ce qui dépasse lui répond… et une tige de métal décide de la suite.\n\nSi l'orage te surprend dehors, tu vas où ?",
+      "hashtags": [
+        "#shorts",
+        "#paratonnerre",
+        "#foudre",
+        "#orage",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/008-paratonnerre.md ; contre-vérification phrase par phrase : docs/faits/008-contre-verification.md",
+    "La séquence d'un coup de foudre nuage-sol : un traceur descend par bonds d'environ 50 m (NWS : « Each step is typically about 50 meters ») en une dizaine de millisecondes (deux éclairs filmés à 4 000 images/s : 1/133 s et 1/50 s) ; quand il arrive à quelques dizaines de mètres, des décharges ascendantes partent des objets au sol ; à la rencontre, l'arc en retour remonte le canal à environ un tiers de la vitesse de la lumière, ≈ 30 000 A, ≈ 30 000 K (cinq fois la surface visible du Soleil) : https://weather.gov/safety/lightning-science-negative-charged-flash · https://www.weather.gov/safety/lightning-science-slow-motion-flashes · https://www.weather.gov/safety/lightning-power · Rakov & Uman, Lightning: Physics and Effects (2003), d'après un résumé de cours : https://birkeland.uib.no/wp-content/uploads/2019/05/rakov_4.7_4.12_tilles.pdf",
+    "Le point d'impact se décide à la fin : « des pré-décharges ascendantes naissent en différents points du sol, préférentiellement à partir d'aspérités ou d'objets pointus… L'une de ces pré-décharges rencontre le traceur descendant… c'est elle qui détermine le(s) point(s) d'impact » (INERIS, guide OMEGA 3, déc. 2025) : https://www.ineris.fr/sites/default/files/contribution/Documents/RAPPORT%20OMEGA3%20v1.pdf",
+    "« Il l'appelle » = il lance une décharge ascendante à la rencontre du traceur, dans les dernières dizaines de mètres — mesuré : distance d'amorçage de 62 à 120 m sur deux tours de São Paulo (Saba et al., INPE) : https://www.vaisala.com/sites/default/files/documents/Marcelo%20Saba%20et%20al.%20Lightning%20Attachment%20Process%20to%20Common%20Buildings_M.%20Saba.pdf ; filmé à 40 000 images/s par l'INPE au Brésil, plus de 30 paratonnerres dans les environs, l'éclair frappe la cheminée d'un four (Saba et al., Geophysical Research Letters 49(24), publié le 28/12/2022 — à l'image : « 40 000 images par seconde · INPE, Brésil · publié en 2022 », sans nombre de réponses, qui n'est pas sourcé) ; « Lightning rods neither attract nor repel strikes… They simply offer lightning an easy and safe route to the ground » : https://agencia.fapesp.br/40880/",
+    "Le système : dispositif de capture, conducteurs de descente, prise de terre ; cuivre de 50 mm² au minimum, soit un rond plein de 8 mm (IEC / NF EN 62305-3, tableau 6, relu dans le guide DEHN : « 50 mm² (diameter of 8 mm) ») ; terre visée < 10 Ω ; piquet vertical admis (prise de terre de type A) ; échauffement d'un cuivre de 50 mm² : 5 à 22 K aux éclairs de dimensionnement de 100 à 200 kA (guide DEHN, tableau 2.5.1), d'où « tiédit à peine » : https://resources.ipd.com.au/Flipbook/35_DS702_E_2014_Lightning_Protection_Guide/files/basic-html/page23.html · https://www.ineris.fr/sites/default/files/contribution/Documents/RAPPORT%20OMEGA3%20v1.pdf",
+    "Dans une maison frappée, le courant suit le câblage et la plomberie ; dehors : un bâtiment fermé ou un véhicule à toit rigide, jamais un arbre isolé (2ᵉ cause de victimes), 30 minutes d'attente après le dernier tonnerre (NWS) : https://www.weather.gov/safety/lightning-indoors · https://www.weather.gov/safety/lightning-outdoors · https://www.weather.gov/safety/lightning-myths · https://weather.gov/safety/lightning-cars ; en France : https://www.ecologie.gouv.fr/actualites/vigilance-orage-ayons-bons-reflexes",
+    "« Si tes cheveux se dressent » : NWS Saint-Louis, « If you are near a storm, and your hair stands on end, the particles are moving up you! » (https://www.weather.gov/media/lsx/wcm/Heat/ScienceofLightning.pdf) ; NWS Miami, « If you feel your skin tingle or your hair stand on end, lightning may be about to strike nearby » (https://www.weather.gov/mfl/lightning) ; une décharge ascendante peut partir d'une personne : NWS, « Five Ways Lightning Strikes People », rubrique Streamers (https://www.weather.gov/safety/lightning-struck-victims). Consigne : courir vers un bâtiment fermé ou un véhicule à toit rigide — jamais « s'accroupir » comme protection. « La sienne qui le rejoint » : NWS, « Upward streamers tend to develop from the taller objects » ; aucune source ne compare l'instant de départ des décharges : le film ne dit pas « la première »",
+    "Pour le commentaire épinglé : Marly-la-Ville, 10 mai 1752 — sur instruction de Dalibard, le dragon Coiffier tire des étincelles d'une tige de fer de 40 pieds (13 m) dressée sous un orage (ce n'est pas encore un paratonnerre : la tige est isolée du sol ; ne pas écrire « pour la première fois ») — Krider, « Benjamin Franklin and Lightning Rods », Physics Today, janv. 2006 : https://aip.brightspotcdn.com/PTO.v59.i1.42_1.online.pdf",
+    "Simplifications assumées : le ciel est une maquette à l'échelle de la maison (une maison de 8 m et une jonction à 60 m ne tiennent pas dans un cadre vertical) : le nuage est dessiné à 60 m, un bond à 2,5–4 m, la jonction à 4 m de la pointe ; aucune hauteur ni longueur n'est affichée sur une image du ciel, et la voix donne les vrais ordres de grandeur ; « un millième de seconde » et le chrono T−1,00 ms sont des ordres de grandeur (un traceur à 100–200 km/s est alors à une ou deux centaines de mètres) ; la maison n'a qu'une descente et un seul piquet (la norme demande au moins deux descentes sur un bâtiment ordinaire) ; 30 000 A et « près de 30 000 degrés » (NWS : 50 000 °F, soit 27 800 °C) sont des valeurs typiques, pas celles d'un éclair donné ; l'ordre « l'arbre, la cheminée, l'antenne, puis la tige » suit la voix ; la couleur des décharges (orange le traceur, vert la réponse de la tige) est un code du film",
+    "À NE PAS DIRE NI AFFICHER : qu'il attire la foudre de loin ; qu'il décharge le nuage ou empêche l'éclair (l'idée de Franklin en 1750) ; qu'une pointe plus fine attire mieux (Moore et al., 2000 : ce sont les tiges émoussées qui sont frappées) ; qu'il protège à 100 % ; rien sur les paratonnerres à dispositif d'amorçage ; « 386 clochers, 103 sonneurs » ; Brescia « 3 000 morts » ; un nombre de morts par an en France (aucune source primaire lue) ; s'accroupir ou se coucher comme protection (NWS : cela ne protège pas)",
+    "Annonce du dossier 009 (la porte du micro-ondes) : « entre ton visage et les ondes, une plaque pleine de trous » — sans chiffre ; à sourcer à l'écriture du 009"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Un millième de seconde. Et la *foudre* touche ton toit.",
+      "vo": "[tense] Un millième de seconde. Et la foudre touche ton toit.",
+      "voAlt": [
+        "[firm, matter-of-fact] Un millième de seconde. Et la foudre touche ton toit."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Tu ne sentiras rien : là-haut, une tige de métal va l'+appeler+. Sauf le jour où la tige… c'est *toi*.",
+      "vo": "[firm, matter-of-fact] Tu ne sentiras rien : là-haut, une tige de métal va l'appeler. [short pause] [serious] Sauf le jour où la tige... c'est toi."
+    },
+    {
+      "id": "scene",
+      "text": "Sans elle, la foudre cherche la terre à travers ta maison : tes fils, tes tuyaux… *toi*.",
+      "vo": "[tense] Sans elle, la foudre cherche la terre à travers ta maison : tes fils, tes tuyaux... toi."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Une +tige+. Un fil de cuivre, gros comme un crayon. Un piquet dans la terre. C'est tout.",
+      "vo": "Une tige. Un fil de cuivre, gros comme un crayon. Un piquet dans la terre. [short pause] C'est tout."
+    },
+    {
+      "id": "repos",
+      "text": "Sous l'orage, le sol se charge… et cette charge grimpe jusqu'au +sommet+ de la tige.",
+      "vo": "[thoughtful] Sous l'orage, le sol se charge... et cette charge grimpe jusqu'au sommet de la tige."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ce millième de seconde, on te le montre en entier.",
+      "vo": "[tense] Abonne-toi : ce millième de seconde, on te le montre en entier."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "L'éclair descend par bonds de [50 m|cinquante mètres], à l'aveugle : il ne vise *rien*.",
+      "vo": "[firm, matter-of-fact] L'éclair descend par bonds de cinquante mètres, à l'aveugle : il ne vise rien."
+    },
+    {
+      "id": "reponse",
+      "text": "À quelques dizaines de mètres, tout ce qui dépasse lui +répond+ : l'arbre, la cheminée, l'antenne.",
+      "vo": "[tense] À quelques dizaines de mètres, tout ce qui dépasse lui répond : l'arbre, la cheminée, l'antenne."
+    },
+    {
+      "id": "tige",
+      "hold": 0.2,
+      "text": "La tige aussi. Elle dépasse tout le reste : c'est la sienne qui le +rejoint+.",
+      "vo": "[serious] La tige aussi. Elle dépasse tout le reste : c'est la sienne qui le rejoint."
+    },
+    {
+      "id": "contact",
+      "hold": 0.2,
+      "text": "+Contact+. [30 000|Trente mille] ampères. Près de [30 000|trente mille] degrés : cinq fois la surface du Soleil.",
+      "vo": "[firm, matter-of-fact] Contact. [short pause] Trente mille ampères. Près de trente mille degrés : cinq fois la surface du Soleil."
+    },
+    {
+      "id": "remonte",
+      "text": "Et l'éclair que tu vois ne tombe pas : il *remonte*, au tiers de la vitesse de la lumière.",
+      "vo": "[curious] Et l'éclair que tu vois ne tombe pas : il remonte, au tiers de la vitesse de la lumière."
+    },
+    {
+      "id": "cuivre",
+      "text": "Le courant, lui, descend : le fil, le piquet… la +terre+.",
+      "vo": "[calm] Le courant, lui, descend : le fil, le piquet... la terre."
+    },
+    {
+      "id": "toi",
+      "hold": 0.4,
+      "text": "Et toi ? Tu as sursauté. C'est tout.",
+      "vo": "[thoughtful] Et toi ? [short pause] Tu as sursauté. C'est tout."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Un paratonnerre n'éloigne *pas* la foudre. Elle allait tomber : il a seulement choisi +où+.",
+      "vo": "[low, grave voice] Un paratonnerre n'éloigne pas la foudre. Elle allait tomber : il a seulement choisi où."
+    },
+    {
+      "id": "like",
+      "text": "+Like+. Ça remontera chez quelqu'un qui s'abrite encore sous un arbre.",
+      "vo": "[firm, matter-of-fact] Like. [short pause] Ça remontera chez quelqu'un qui s'abrite encore sous un arbre."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+. Prochain dossier : ta cuisine. Entre ton visage et les ondes… une plaque pleine de *trous*.",
+      "vo": "[serious] Abonne-toi. Prochain dossier : ta cuisine. [short pause] Entre ton visage et les ondes... une plaque pleine de trous."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et si la tige, c'est toi ? Dehors, tes cheveux se dressent : ton corps lui répond. *Cours* à l'abri. En +commentaire+ : sous l'orage, tu vas où ?",
+      "vo": "[curious] Et si la tige, c'est toi ? [short pause] [serious] Dehors, tes cheveux se dressent : ton corps lui répond. Cours à l'abri. [short pause] [curious] En commentaire : sous l'orage, tu vas où ?"
+    },
+    {
+      "id": "boucle",
+      "text": "Une voiture, une maison. Jamais l'arbre. Sous l'orage, tout se joue en…",
+      "vo": "[calm] Une voiture, une maison. Jamais l'arbre. Sous l'orage, tout se joue en,",
+      "voAlt": [
+        "[serious] Une voiture, une maison. Jamais l'arbre. Sous l'orage, tout se joue en..."
+      ]
+    }
+  ],
+  "cues": {
+    "toroof": "accroche:Et-0.1",
+    "torod": "promesse:là-haut-0.15",
+    "glow": "promesse:appeler-0.1",
+    "toout": "promesse:Sauf-0.14",
+    "hair0": "promesse:c'est-0.25",
+    "tosans": "scene-0.14",
+    "hit": "scene:foudre-0.05",
+    "wires": "scene:fils-0.1",
+    "pipes": "scene:tuyaux-0.1",
+    "reach": "scene:toi-0.1",
+    "back": "scene$+0.1",
+    "totip": "ouvre-0.14",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "p1": "eclate:tige-0.1",
+    "p2": "eclate:fil-0.15",
+    "p3": "eclate:piquet-0.15",
+    "whole": "eclate:C'est-0.1",
+    "toground": "repos-0.14",
+    "ground": "repos:sol-0.1",
+    "climb": "repos:grimpe-0.2",
+    "top": "repos:sommet-0.1",
+    "tozero": "zero-0.12",
+    "b1": "zero:descend-0.05",
+    "b2": "zero:bonds",
+    "b3": "zero:l'aveugle-0.05",
+    "toanswer": "reponse-0.12",
+    "b4": "reponse:dizaines",
+    "wide": "reponse:tout-0.12",
+    "a1": "reponse:l'arbre-0.05",
+    "a2": "reponse:cheminée-0.08",
+    "a3": "reponse:l'antenne-0.05",
+    "torodup": "tige-0.12",
+    "rise": "tige:aussi-0.25",
+    "join": "tige:rejoint",
+    "trigger": "contact",
+    "amps": "contact:30-0.05",
+    "heat": "contact:30#2-0.1",
+    "toreplay": "remonte-0.12",
+    "up2": "remonte:remonte-0.15",
+    "todown": "cuivre-0.12",
+    "flow": "cuivre:descend-0.2",
+    "wire": "cuivre:fil-0.05",
+    "stake": "cuivre:piquet-0.05",
+    "earth": "cuivre:terre-0.1",
+    "toyou": "toi-0.12",
+    "jump": "toi:sursauté",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "where": "chute:où-0.05",
+    "tocta": "like-0.12",
+    "toout2": "comment-0.12",
+    "hair": "comment:cheveux-0.1",
+    "run": "comment:Cours-0.08",
+    "ask": "comment:commentaire-0.3",
+    "toloop": "boucle-0.12",
+    "never": "boucle:Jamais-0.1",
+    "rewind": "boucle:Sous-0.05",
+    "toseuil": "seuil-0.1",
+    "ms": "seuil:millième-0.05"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.85
+        ],
+        [
+          "toout",
+          0.6
+        ],
+        [
+          "tosans",
+          0.9
+        ],
+        [
+          "reach",
+          1
+        ],
+        [
+          "back",
+          0.4
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "toground",
+          0.55
+        ],
+        [
+          "top",
+          0.75
+        ],
+        [
+          "tozero",
+          0.85
+        ],
+        [
+          "torodup",
+          0.95
+        ],
+        [
+          "trigger-0.05",
+          1
+        ],
+        [
+          "trigger+0.6",
+          0.7
+        ],
+        [
+          "toreplay",
+          0.6
+        ],
+        [
+          "todown",
+          0.55
+        ],
+        [
+          "toyou",
+          0.3
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "toout2",
+          0.75
+        ],
+        [
+          "rewind",
+          0.85
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "zap",
+      "at": 0.12,
+      "gain": -15,
+      "dur": 0.14
+    },
+    {
+      "type": "whoosh",
+      "at": "toroof+0.5",
+      "dur": 1.6,
+      "gain": -23
+    },
+    {
+      "type": "whoosh",
+      "at": "torod+0.5",
+      "dur": 1.6,
+      "gain": -23
+    },
+    {
+      "type": "blip",
+      "at": "glow",
+      "gain": -19,
+      "pitch": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "toout",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "zap",
+      "at": "hair0",
+      "gain": -19,
+      "dur": 0.2
+    },
+    {
+      "type": "impact",
+      "at": "tosans",
+      "gain": -13,
+      "size": 1
+    },
+    {
+      "type": "impact",
+      "at": "hit",
+      "gain": -9,
+      "size": 1.3
+    },
+    {
+      "type": "zap",
+      "at": "hit+0.05",
+      "gain": -13,
+      "dur": 0.3
+    },
+    {
+      "type": "tick",
+      "at": "hit+0.3",
+      "count": 14,
+      "every": 0.085,
+      "gain": -22
+    },
+    {
+      "type": "zap",
+      "at": "wires",
+      "gain": -15,
+      "dur": 0.16,
+      "pan": -0.3
+    },
+    {
+      "type": "zap",
+      "at": "pipes",
+      "gain": -15,
+      "dur": 0.16,
+      "pan": 0.3
+    },
+    {
+      "type": "riser",
+      "to": "reach+0.25",
+      "dur": 0.9,
+      "gain": -21
+    },
+    {
+      "type": "impact",
+      "at": "reach+0.25",
+      "gain": -10,
+      "size": 1.1
+    },
+    {
+      "type": "rewind",
+      "at": "back",
+      "dur": 0.6,
+      "gain": -21
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "whoosh",
+      "at": "explode+0.5",
+      "dur": 1.3,
+      "gain": -24
+    },
+    {
+      "type": "blip",
+      "at": "p1",
+      "gain": -21,
+      "pitch": 1.1
+    },
+    {
+      "type": "blip",
+      "at": "p2",
+      "gain": -21,
+      "pitch": 0.95
+    },
+    {
+      "type": "blip",
+      "at": "p3",
+      "gain": -21,
+      "pitch": 0.8,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "whole+0.35",
+      "gain": -17,
+      "size": 0.6
+    },
+    {
+      "type": "impact",
+      "at": "toground",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "riser",
+      "to": "top+0.3",
+      "dur": 2.4,
+      "gain": -24
+    },
+    {
+      "type": "blip",
+      "at": "top+0.3",
+      "gain": -18,
+      "pitch": 1.3
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -11,
+      "size": 1.2
+    },
+    {
+      "type": "zap",
+      "at": "b1",
+      "gain": -13,
+      "dur": 0.14,
+      "pan": -0.2
+    },
+    {
+      "type": "zap",
+      "at": "b2",
+      "gain": -13,
+      "dur": 0.14,
+      "pan": 0.2
+    },
+    {
+      "type": "zap",
+      "at": "b3",
+      "gain": -13,
+      "dur": 0.14,
+      "pan": -0.1
+    },
+    {
+      "type": "zap",
+      "at": "b4",
+      "gain": -12,
+      "dur": 0.16
+    },
+    {
+      "type": "impact",
+      "at": "wide",
+      "gain": -15,
+      "size": 0.8
+    },
+    {
+      "type": "blip",
+      "at": "reponse:répond-0.05",
+      "gain": -19,
+      "pitch": 1.25
+    },
+    {
+      "type": "zap",
+      "at": "a1",
+      "gain": -18,
+      "dur": 0.2,
+      "pan": 0.5
+    },
+    {
+      "type": "zap",
+      "at": "a2",
+      "gain": -18,
+      "dur": 0.2,
+      "pan": 0.1
+    },
+    {
+      "type": "zap",
+      "at": "a3",
+      "gain": -18,
+      "dur": 0.2,
+      "pan": -0.2
+    },
+    {
+      "type": "impact",
+      "at": "torodup",
+      "gain": -14,
+      "size": 0.9
+    },
+    {
+      "type": "riser",
+      "to": "trigger",
+      "dur": 3.2,
+      "gain": -19
+    },
+    {
+      "type": "zap",
+      "at": "rise",
+      "gain": -15,
+      "dur": 0.3
+    },
+    {
+      "type": "zap",
+      "at": "tige:sienne-0.05",
+      "gain": -12,
+      "dur": 0.16
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -5,
+      "size": 1.7
+    },
+    {
+      "type": "zap",
+      "at": "trigger+0.02",
+      "gain": -9,
+      "dur": 0.5
+    },
+    {
+      "type": "blip",
+      "at": "amps",
+      "gain": -17,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "blip",
+      "at": "heat",
+      "gain": -17,
+      "pitch": 0.85,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "contact:cinq-0.05",
+      "gain": -11,
+      "size": 1.1
+    },
+    {
+      "type": "zap",
+      "at": "contact:cinq-0.03",
+      "gain": -13,
+      "dur": 0.3
+    },
+    {
+      "type": "impact",
+      "at": "toreplay",
+      "gain": -15,
+      "size": 0.8
+    },
+    {
+      "type": "riser",
+      "to": "up2+0.9",
+      "dur": 1.1,
+      "gain": -20
+    },
+    {
+      "type": "whoosh",
+      "at": "up2+0.6",
+      "dur": 1.4,
+      "gain": -19
+    },
+    {
+      "type": "impact",
+      "at": "todown",
+      "gain": -15,
+      "size": 0.8
+    },
+    {
+      "type": "whoosh",
+      "at": "flow+1.2",
+      "dur": 2.6,
+      "gain": -20
+    },
+    {
+      "type": "tick",
+      "at": "flow+0.1",
+      "count": 16,
+      "every": 0.12,
+      "gain": -23
+    },
+    {
+      "type": "blip",
+      "at": "wire",
+      "gain": -21,
+      "pitch": 1
+    },
+    {
+      "type": "blip",
+      "at": "stake",
+      "gain": -21,
+      "pitch": 0.85
+    },
+    {
+      "type": "impact",
+      "at": "earth+0.15",
+      "gain": -11,
+      "size": 1.3
+    },
+    {
+      "type": "impact",
+      "at": "toyou",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "thunder",
+      "at": "jump-0.12",
+      "gain": -9,
+      "dur": 4.2
+    },
+    {
+      "type": "rain",
+      "from": "jump+0.2",
+      "to": "tocta",
+      "gain": -31
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "blip",
+      "at": "where",
+      "gain": -17,
+      "pitch": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "tocta",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "blip",
+      "at": "like+0.1",
+      "gain": -25,
+      "pitch": 0.9,
+      "pan": -0.3
+    },
+    {
+      "type": "blip",
+      "at": "like+0.36",
+      "gain": -25,
+      "pitch": 1,
+      "pan": 0.3
+    },
+    {
+      "type": "blip",
+      "at": "like+0.62",
+      "gain": -25,
+      "pitch": 1.1,
+      "pan": -0.3
+    },
+    {
+      "type": "blip",
+      "at": "like+0.88",
+      "gain": -25,
+      "pitch": 1.2,
+      "pan": 0.3
+    },
+    {
+      "type": "blip",
+      "at": "like+1.14",
+      "gain": -23,
+      "pitch": 1.32
+    },
+    {
+      "type": "impact",
+      "at": "abo:Prochain",
+      "gain": -17,
+      "size": 0.9
+    },
+    {
+      "type": "impact",
+      "at": "toout2",
+      "gain": -14,
+      "size": 0.9
+    },
+    {
+      "type": "zap",
+      "at": "hair",
+      "gain": -16,
+      "dur": 0.35
+    },
+    {
+      "type": "riser",
+      "to": "run",
+      "dur": 0.7,
+      "gain": -22
+    },
+    {
+      "type": "impact",
+      "at": "run",
+      "gain": -13,
+      "size": 0.9
+    },
+    {
+      "type": "tick",
+      "at": "boucle:voiture-0.25",
+      "count": 9,
+      "every": 0.055,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "zap",
+      "at": "never",
+      "gain": -17,
+      "dur": 0.2,
+      "pan": 0.4
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1.7,
+      "gain": -21
+    }
+  ]
+}
