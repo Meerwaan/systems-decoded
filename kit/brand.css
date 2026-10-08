@@ -184,6 +184,9 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 #db-u { font: 800 130px/1 var(--display); margin-left: 14px; }
 #db .kicker { margin-top: 46px; color: var(--ink); }
 
+/* what carries the chute's title when it lies over a bright subject (an element placed before #hud; a film
+   that already styles #title-shade in its own page keeps its own) */
+#title-shade { position: absolute; left: 0; right: 0; top: 0; height: 840px; opacity: 0; background: linear-gradient(to bottom, rgba(7, 10, 12, 0.78) 0, rgba(7, 10, 12, 0.74) 75%, rgba(7, 10, 12, 0) 100%); }
 #retitle { position: absolute; left: var(--safe-l); right: var(--safe-r); top: calc(var(--slot-top) + 6px); }
 #retitle-main { margin-top: 34px; font: 800 118px/1 var(--display); text-transform: uppercase; letter-spacing: 0.005em; }
 #retitle-slot { position: relative; display: block; height: 118px; margin-top: 14px; }
@@ -196,7 +199,7 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 
 .rail { position: absolute; left: 832px; width: 60px; height: 44px; display: flex; gap: 6px; color: var(--veille); } /* just left of TikTok's buttons, at their height */
 .rail i { display: block; width: 18px; height: 44px; background: currentColor; clip-path: polygon(0 0, 100% 50%, 0 100%, 0 78%, 52% 50%, 0 22%); }
-#rail-follow { top: 948px; }
+#rail-follow, #rail-seuil { top: 948px; } /* (#rail-seuil: the same button, pointed at once more at the threshold of act 3 — see followCall) */
 #rail-like { top: 1112px; }
 #rail-comment { top: 1261px; }
 

@@ -329,7 +329,7 @@ export const cyl = (r, h, bevel = 0.1, segments = 64, top = r) =>
  * z = `depth`, the outline keeping its size — the bevel is taken from the piece, not added to it.
  */
 export function plate(outline, depth, { bevel = 0.1, round = 2, curveSegments = 24 } = {}) {
-  const shape = outline.isShape ? outline : new THREE.Shape(outline.map(([x, y]) => new THREE.Vector2(x, y)));
+  const shape = outline.isShape || outline instanceof THREE.Shape ? outline : new THREE.Shape(outline.map(([x, y]) => new THREE.Vector2(x, y)));
   const b = Math.min(bevel, depth / 2.01);
   const cut = (inset, thickness, facets) =>
     new THREE.ExtrudeGeometry(shape, { depth: depth - 2 * inset, curveSegments, bevelEnabled: true, bevelThickness: thickness, bevelSize: thickness, bevelOffset: -inset, bevelSegments: facets }).translate(0, 0, inset);
