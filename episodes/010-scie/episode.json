@@ -1,0 +1,639 @@
+{
+  "id": "010",
+  "slug": "scie",
+  "title": "Scie sur table",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "tocta+2",
+    "title": [
+      "Scie",
+      "sur table"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 13,
+      "tz": -4.2,
+      "d": 250,
+      "az": -55,
+      "el": 29,
+      "shift": -430,
+      "side": 30,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Scie sur table : ce qui se passe en moins de cinq millisecondes, quand ton doigt touche la lame. Son inventeur l'a essayée sur le sien. Et toi, tu poserais ton doigt ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#bricolage",
+      "#menuiserie",
+      "#sawstop"
+    ],
+    "pinned": "La techno s'appelle SawStop (Steve Gass, brevet déposé en 2000). En Europe, elle équipe la Festool TKS 80. Alors, ton doigt : tu le poses ?",
+    "instagram": {
+      "caption": "Ta main glisse. Ton doigt touche la lame d'une scie en marche… et tu le gardes.\n\nDossier 010 : la scie qui s'arrête en moins de cinq millisecondes. Son inventeur l'a testée sur son propre doigt.\n\nEt toi, tu poserais le tien ?",
+      "hashtags": [
+        "#bricolage",
+        "#menuiserie",
+        "#sawstop",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "La scie qui s'arrête quand elle touche ton doigt (SawStop) : comment ça marche",
+      "description": "Dossier 010 — moins de cinq millisecondes entre ton doigt et l'arrêt de la lame : le signal, le fil, le ressort, le bloc d'aluminium. Son inventeur l'a testée sur son doigt.\n\nEt toi, tu poserais le tien ?",
+      "hashtags": [
+        "#shorts",
+        "#sawstop",
+        "#bricolage",
+        "#menuiserie",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/010-scie.md ; contre-vérification phrase par phrase : docs/faits/010-contre-verification.md",
+    "La détection : un signal d'environ 200 kHz est couplé à la lame ; « the capacitance of the human body is approximately 300 picofarads … when a user contacts cutting tool 14, the capacitance of the user's body is electrically coupled to the inherent capacitance of the cutting tool » ; détection en ≈ 50 µs (brevet US 7,055,417, Gass, déposé le 29/09/2000) : https://patents.google.com/patent/US7055417B1/en",
+    "Le frein : un ressort presse un sabot dans les dents ; il est retenu par un fil fusible qu'une décharge de condensateurs fait fondre en ≈ 1 à 5 ms (même brevet) ; sabot en aluminium sur la scie vendue (« the aluminum assembly springs into the path of the blade », Woodcraft, revendeur) : https://www.woodcraft.com/blogs/shop-knowledge-guides/sawstop-table-saw-safety-system-how-it-works-with-video-woodcraft",
+    "« En moins de 5 millisecondes » : formule de SawStop rapportée par deux revendeurs (« from activation to a completely stopped saw blade, is less than 5 milliseconds », Woodcraft) ; le brevet de 2000 : « stopping times of less than 5 milliseconds » préférés. La page SawStop elle-même n'a pas pu être lue (403)",
+    "La lame plonge : « the angular momentum of the blade causes the blade, arbor block and cartridge to all pivot down away from the cutting region when the pawl strikes the blade » ; entièrement sous la table ≈ 14 ms après la détection (brevet US 8,061,245, valeur de démonstration) : https://patents.google.com/patent/US8061245B2/en",
+    "Le prix : « The blade is ruined in the process, and the cartridge will need to be replaced » ; test à la saucisse : entaille de 1/16 pouce, « two or three stitches at most » (Fine Woodworking, 2004) ; Gass : « you just get a little nick » (NPR Planet Money, 11/10/2024) : https://www.finewoodworking.com/2004/12/01/a-safer-tablesaw-finally-arrives",
+    "L'enjeu : 29 500 à 34 600 blessures par contact avec la lame traitées aux urgences américaines chaque année de 2010 à 2021, 2 800 amputations en 2017 (CPSC, Federal Register du 01/11/2023) : https://www.govinfo.gov/content/pkg/FR-2023-11-01/html/2023-23898.htm",
+    "L'inventeur : Steve Gass — « before the first trade show I had to test it with my actual finger. Thankfully it worked! » (cité par kottke.org, 2021 ; les détails « Novocaïne, annulaire gauche » viennent d'Inc. 2005 via Wikipédia : non vérifiés, non dits) : https://kottke.org/21/02/the-table-saw-that-wont-cut-your-fingers-off",
+    "Simplifications assumées : la technologie est celle de SawStop (États-Unis, vendue depuis 2004 ; en Europe sur la Festool TKS 80) — le film ne nomme pas la marque ; le chrono T+0 → T+5 ms et le découpage « le fil, le ressort, les dents » suivent la voix, pas une mesure à la milliseconde ; la vitesse de rotation n'est ni dite ni affichée (4 000 tr/min et 40 dents d'après des fiches de revendeurs : le modèle les suit, le film ne les cite pas) ; la place de la cartouche autour de la lame n'est pas sourcée : elle est dessinée sous le plateau, derrière la lame, son bloc à 2–3 mm des dents (réglage réel : 0,8 à 6 mm) ; « la scie se sacrifie » : la lame et la cartouche, pas la machine ; « deux ou trois points de suture » : l'avis d'un médecin sur un essai à la saucisse (la blessure dépend de la vitesse de la main) ; « le bois sec n'y change rien » : le bois très humide, une agrafe, un métal peuvent déclencher le frein à tort",
+    "À NE PAS DIRE NI AFFICHER : « en 5 millisecondes » sans « moins de » ; « plus vite qu'un airbag » ; « elle voit / sent la peau » ; « zéro blessure » ; « 4 000 tr/min », « 190 km/h » ; « 10 000 doigts sauvés » (allégation de l'inventeur) ; « 4 000 amputations par an » (NPR ; la CPSC lue dit 2 800 en 2017) ; que c'est obligatoire (la règle américaine a été retirée le 20/08/2025) ; rien sur les intentions des fabricants",
+    "Limites à garder en tête (commentaires) : ne protège que du contact avec la lame, pas du rejet de la pièce ; la coupure est plus profonde si la main arrive vite (la règle CPSC proposée : ≤ 3,5 mm à 1 m/s)",
+    "Annonce du dossier 011 (fusible pyrotechnique) : « dans une voiture électrique, une charge explosive… vissée sur le câble de la batterie » — sourcé dans docs/faits/011-fusible-pyro.md (Schurter : montage par vis M8 sur la barre de cuivre ; Mersen : « a small explosive element »)"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ta main glisse. Ton doigt touche la *lame*.",
+      "vo": "[tense] Ta main glisse. Ton doigt touche la lame.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ta main glisse. Ton doigt touche la lame."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Tu le gardes : elle s'arrête en moins de [5 ms|cinq millisecondes]. Son inventeur l'a testée sur +son doigt+. Toi… tu poses le *tien* ?",
+      "vo": "[firm, matter-of-fact] Tu le gardes : elle s'arrête en moins de cinq millisecondes. [short pause] [serious] Son inventeur l'a testée sur son doigt. [curious] Toi... tu poses le tien ?"
+    },
+    {
+      "id": "scene",
+      "text": "Sur une scie ordinaire, c'est déjà fini. Aux États-Unis : [30 000|trente mille] blessés par an. Des milliers d'*amputations*.",
+      "vo": "[tense] Sur une scie ordinaire, c'est déjà fini. Aux États-Unis : trente mille blessés par an. Des milliers d'amputations."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.5,
+      "text": "Sous la table, tout près de la lame : une cartouche. Un bloc d'aluminium. Un ressort comprimé. Et pour le retenir… un simple +fil+.",
+      "vo": "Sous la table, tout près de la lame : une cartouche. Un bloc d'aluminium. Un ressort comprimé. Et pour le retenir... un simple fil."
+    },
+    {
+      "id": "repos",
+      "text": "La lame, elle, porte un petit signal électrique. Le bois sec n'y change presque rien. Ton corps, si : en la touchant, tu entres dans le +circuit+.",
+      "vo": "[thoughtful] La lame, elle, porte un petit signal électrique. Le bois sec n'y change presque rien. Ton corps, si : en la touchant, tu entres dans le circuit."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ton doigt est sur la lame, et on reprend au *ralenti*.",
+      "vo": "[tense] Abonne-toi : ton doigt est sur la lame, et on reprend au ralenti."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "+Contact+. Ta peau boit le signal : la scie l'a senti avant toi.",
+      "vo": "[firm, matter-of-fact] Contact. [short pause] Ta peau boit le signal : la scie l'a senti avant toi."
+    },
+    {
+      "id": "fil",
+      "text": "Un courant brûle le fil. Le ressort jette l'aluminium dans les *dents*.",
+      "vo": "[tense] Un courant brûle le fil. Le ressort jette l'aluminium dans les dents."
+    },
+    {
+      "id": "arret",
+      "hold": 0.2,
+      "text": "Moins de [5 ms|cinq millisecondes] : la lame est +arrêtée+. Et son propre élan la tire sous la table.",
+      "vo": "[serious] Moins de cinq millisecondes : la lame est arrêtée. [short pause] Et son propre élan la tire sous la table."
+    },
+    {
+      "id": "toi",
+      "hold": 0.3,
+      "text": "Toi ? Une entaille. Deux ou trois points de suture.",
+      "vo": "[thoughtful] Toi ? [short pause] Une entaille. Deux ou trois points de suture."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Cette lame ne ralentit *pas*. Elle prend un bloc de métal dans les dents. Lame, cartouche : à la poubelle. La scie se +sacrifie+… pour ton doigt.",
+      "vo": "[low, grave voice] Cette lame ne ralentit pas. Elle prend un bloc de métal dans les dents. Lame, cartouche : à la poubelle. La scie se sacrifie... pour ton doigt."
+    },
+    {
+      "id": "like",
+      "text": "+Like+. Ça remontera chez quelqu'un qui a une scie dans son garage.",
+      "vo": "[firm, matter-of-fact] Like. [short pause] Ça remontera chez quelqu'un qui a une scie dans son garage."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+. Prochain dossier : dans une voiture électrique, une charge explosive… vissée sur le câble de la *batterie*.",
+      "vo": "[serious] Abonne-toi. Prochain dossier : dans une voiture électrique, une charge explosive... [short pause] vissée sur le câble de la batterie."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et l'inventeur ? Avant son premier salon, il a posé son doigt sur la lame. Ça a marché. En +commentaire+ : toi, tu poses le tien ?",
+      "vo": "[curious] Et l'inventeur ? [short pause] [serious] Avant son premier salon, il a posé son doigt sur la lame. Ça a marché. [short pause] [curious] En commentaire : toi, tu poses le tien ?"
+    },
+    {
+      "id": "boucle",
+      "text": "Lui a gardé le sien. Mais un accident de scie commence souvent comme ça…",
+      "vo": "[calm] Lui a gardé le sien. Mais un accident de scie commence souvent comme ça,",
+      "voAlt": [
+        "[serious] Lui a gardé le sien. Mais un accident de scie commence souvent comme ça..."
+      ]
+    }
+  ],
+  "cues": {
+    "touch": "accroche:touche-0.05",
+    "keep": "promesse:gardes-0.1",
+    "his": "promesse:inventeur-0.14",
+    "yours": "promesse:Toi-0.14",
+    "tosans": "scene-0.14",
+    "over": "scene:fini-0.1",
+    "usa": "scene:États-0.15",
+    "amput": "scene:amputations-0.1",
+    "back": "ouvre-0.51",
+    "tounder": "ouvre-0.14",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "p0": "eclate:cartouche-0.15",
+    "p1": "eclate:bloc-0.15",
+    "p2": "eclate:ressort-0.15",
+    "p3": "eclate:fil-0.2",
+    "tosignal": "repos-0.14",
+    "signal": "repos:signal-0.1",
+    "wood": "repos:bois-0.15",
+    "body": "repos:corps-0.15",
+    "contact": "repos:touchant+0.12",
+    "circuit": "repos:circuit-0.1",
+    "toseuil": "seuil-0.1",
+    "tozero": "zero-0.12",
+    "trigger": "zero",
+    "drink": "zero:boit-0.1",
+    "tofil": "fil-0.12",
+    "burn": "fil:brûle-0.1",
+    "throw": "fil:jette-0.1",
+    "bite": "fil:dents-0.05",
+    "tostop": "arret-0.12",
+    "stop": "arret:arrêtée-0.1",
+    "dive": "arret:tire-0.15",
+    "toyou": "toi-0.12",
+    "nick": "toi:entaille-0.1",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "block": "chute:bloc-0.1",
+    "trash": "chute:poubelle-0.1",
+    "truth": "chute:sacrifie-0.1",
+    "tocta": "like-0.12",
+    "tocomment": "comment-0.12",
+    "finger": "comment:posé-0.1",
+    "snap": "comment:lame$+0.08",
+    "ask": "comment:commentaire-0.3",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:Mais-0.05"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.9
+        ],
+        [
+          "touch",
+          1
+        ],
+        [
+          "keep",
+          0.6
+        ],
+        [
+          "tosans",
+          0.9
+        ],
+        [
+          "amput",
+          1
+        ],
+        [
+          "back",
+          0.4
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tosignal",
+          0.55
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "bite",
+          1
+        ],
+        [
+          "stop+0.3",
+          0.35
+        ],
+        [
+          "toyou",
+          0.3
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "tocomment",
+          0.6
+        ],
+        [
+          "rewind",
+          0.85
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "touch",
+      "dur": 0.9,
+      "gain": -22
+    },
+    {
+      "type": "zap",
+      "at": "touch",
+      "gain": -12,
+      "dur": 0.25
+    },
+    {
+      "type": "impact",
+      "at": "touch+0.02",
+      "gain": -10,
+      "size": 1.2
+    },
+    {
+      "type": "blip",
+      "at": "keep",
+      "gain": -19,
+      "pitch": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "his",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": "yours-0.15",
+      "dur": 1.6,
+      "gain": -24
+    },
+    {
+      "type": "impact",
+      "at": "tosans",
+      "gain": -12,
+      "size": 1.1
+    },
+    {
+      "type": "impact",
+      "at": "over",
+      "gain": -13,
+      "size": 1
+    },
+    {
+      "type": "tick",
+      "at": "usa",
+      "count": 12,
+      "every": 0.09,
+      "gain": -23
+    },
+    {
+      "type": "impact",
+      "at": "amput",
+      "gain": -11,
+      "size": 1.1
+    },
+    {
+      "type": "rewind",
+      "at": "back",
+      "dur": 0.4,
+      "gain": -21
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "whoosh",
+      "at": "explode+0.5",
+      "dur": 1.3,
+      "gain": -24
+    },
+    {
+      "type": "blip",
+      "at": "p1",
+      "gain": -21,
+      "pitch": 1.1,
+      "heavy": true
+    },
+    {
+      "type": "blip",
+      "at": "p2",
+      "gain": -21,
+      "pitch": 0.95
+    },
+    {
+      "type": "blip",
+      "at": "p3",
+      "gain": -21,
+      "pitch": 1.3
+    },
+    {
+      "type": "impact",
+      "at": "tosignal",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "blip",
+      "at": "signal",
+      "gain": -19,
+      "pitch": 1.25
+    },
+    {
+      "type": "blip",
+      "at": "body",
+      "gain": -18,
+      "pitch": 0.9
+    },
+    {
+      "type": "zap",
+      "at": "contact",
+      "gain": -13,
+      "dur": 0.25
+    },
+    {
+      "type": "impact",
+      "at": "contact+0.02",
+      "gain": -12,
+      "size": 1
+    },
+    {
+      "type": "riser",
+      "to": "repos$",
+      "dur": 1.4,
+      "gain": -22
+    },
+    {
+      "type": "rewind",
+      "at": "toseuil",
+      "dur": 0.9,
+      "gain": -23
+    },
+    {
+      "type": "blip",
+      "at": "seuil:ralenti",
+      "gain": -19,
+      "pitch": 0.8,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -11,
+      "size": 1.2
+    },
+    {
+      "type": "zap",
+      "at": "trigger",
+      "gain": -11,
+      "dur": 0.3
+    },
+    {
+      "type": "blip",
+      "at": "drink",
+      "gain": -18,
+      "pitch": 0.8
+    },
+    {
+      "type": "zap",
+      "at": "burn",
+      "gain": -12,
+      "dur": 0.2
+    },
+    {
+      "type": "impact",
+      "at": "throw",
+      "gain": -14,
+      "size": 0.7
+    },
+    {
+      "type": "riser",
+      "to": "bite",
+      "dur": 0.5,
+      "gain": -20
+    },
+    {
+      "type": "impact",
+      "at": "bite",
+      "gain": -5,
+      "size": 1.7
+    },
+    {
+      "type": "tick",
+      "at": "bite+0.05",
+      "count": 8,
+      "every": 0.07,
+      "gain": -21
+    },
+    {
+      "type": "impact",
+      "at": "stop",
+      "gain": -10,
+      "size": 1.2
+    },
+    {
+      "type": "whoosh",
+      "at": "dive",
+      "dur": 0.9,
+      "gain": -20
+    },
+    {
+      "type": "impact",
+      "at": "dive+0.7",
+      "gain": -13,
+      "size": 1
+    },
+    {
+      "type": "impact",
+      "at": "toyou",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "blip",
+      "at": "nick",
+      "gain": -19,
+      "pitch": 1.1
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "block",
+      "gain": -13,
+      "size": 1
+    },
+    {
+      "type": "blip",
+      "at": "truth",
+      "gain": -17,
+      "pitch": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "tocta",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "blip",
+      "at": "like+0.1",
+      "gain": -25,
+      "pitch": 0.9,
+      "pan": -0.3
+    },
+    {
+      "type": "blip",
+      "at": "like+0.36",
+      "gain": -25,
+      "pitch": 1.0050000000000001,
+      "pan": 0.3
+    },
+    {
+      "type": "blip",
+      "at": "like+0.62",
+      "gain": -25,
+      "pitch": 1.11,
+      "pan": -0.3
+    },
+    {
+      "type": "blip",
+      "at": "like+0.88",
+      "gain": -25,
+      "pitch": 1.215,
+      "pan": 0.3
+    },
+    {
+      "type": "blip",
+      "at": "like+1.14",
+      "gain": -23,
+      "pitch": 1.32
+    },
+    {
+      "type": "impact",
+      "at": "abo:Prochain",
+      "gain": -17,
+      "size": 0.9
+    },
+    {
+      "type": "impact",
+      "at": "tocomment",
+      "gain": -14,
+      "size": 0.9
+    },
+    {
+      "type": "blip",
+      "at": "finger",
+      "gain": -19,
+      "pitch": 0.9
+    },
+    {
+      "type": "zap",
+      "at": "snap",
+      "gain": -12,
+      "dur": 0.3
+    },
+    {
+      "type": "impact",
+      "at": "snap+0.02",
+      "gain": -7,
+      "size": 1.5
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1.4,
+      "gain": -21
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · 010 · Scie sur table</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
+         kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+
+      /* rien de ceci n'est à l'écran tant qu'un acte ne l'a pas fait entrer */
+      .chip--live, #retitle, #net, #next, #cta-field, .rail { opacity: 0; }
+
+      /* le second compteur de l'en-tête : la vitesse de la lame (encre) */
+      #hud-count { color: var(--ink); }
+      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
+      #chip-gass, #chip-lame, #chip-cart { color: var(--ink); }
+      #chip-5ms, #chip-signal, #chip-circuit, #chip-detect, #chip-stop, #chip-nick { color: var(--veille); }
+      /* la chute */
+      #retitle-main { font-size: 104px; }
+      #retitle-slot { height: 104px; }
+      #retitle-strike { top: 50px; }
+      #next-fact span { font-size: 44px; line-height: 1.2; letter-spacing: 0.06em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="83.5" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 010</span></div>
+        <div class="hud__title" id="hud-title">Scie sur table</div>
+        <div class="hud__clock" id="hud-clock">T−0,40 s</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Lame</span><b id="hud-count-v">100 %</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- 01 · MENACE (acte1.js) -->
+      <div id="chip-5ms" class="chip chip--live"><span>S'arrête en</span><b>&lt; 5 ms</b></div>
+      <div id="chip-gass" class="chip chip--live"><span>Son inventeur</span><b>L'a testée sur lui</b></div>
+      <div id="chip-ord" class="chip chip--live"><span>Scie</span><b>Ordinaire</b></div>
+      <div id="chip-usa" class="chip chip--live"><span>Blessés par an · États-Unis</span><b id="usa-v">30 000</b></div>
+      <div id="chip-amp" class="chip chip--live"><span>Amputations</span><b>Des milliers</b></div>
+
+      <!-- 02 · AUTOPSIE (acte2.js) -->
+      <div id="chip-signal" class="chip chip--live"><span>La lame porte</span><b>Un signal</b></div>
+      <div id="chip-circuit" class="chip chip--live"><span>Toi</span><b>Dans le circuit</b></div>
+
+      <!-- le seuil (fin d'acte2.js) : la demande d'abonnement dite à la porte de l'acte 3 — des chevrons, jamais un panneau -->
+      <div id="rail-seuil" class="rail"><i></i><i></i><i></i></div>
+
+      <!-- 03 · RÉPONSE (acte3.js) : une seule étiquette à la fois dans la zone haute -->
+      <div id="chip-detect" class="chip chip--live"><span>Détecté en</span><b>0,05 ms</b></div>
+      <div id="chip-stop" class="chip chip--live"><span>Lame</span><b>Arrêtée</b></div>
+      <div id="chip-nick" class="chip chip--live"><span>Toi</span><b>2 ou 3 points</b></div>
+
+      <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Pour s'arrêter</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">Elle ralentit<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Elle se sacrifie</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 personne</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 011</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <!-- un seul fait comme appât ; aucun chiffre -->
+        <div id="next-fact"><span>Une charge explosive. Sur ta batterie.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <div id="chip-lame" class="chip chip--live"><span>Lame</span><b>Perdue</b></div>
+      <div id="chip-cart" class="chip chip--live"><span>Cartouche</span><b>À remplacer</b></div>
+      <div id="cta-field">
+        <div class="kicker">Toi, tu poses ton doigt ?</div>
+        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de lettres) -->
+        <div id="cta-field-v"><span id="cta-typed" class="is-veille">JAMAIS</span><span id="cta-caret"></span></div>
+      </div>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
