@@ -1,0 +1,637 @@
+{
+  "id": "009",
+  "slug": "micro-ondes",
+  "title": "Micro-ondes",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "p2+0.6",
+    "title": [
+      "Micro",
+      "ondes"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 21,
+      "tz": 3.5,
+      "d": 300,
+      "az": -48,
+      "el": 20,
+      "shift": -400,
+      "side": 40,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Micro-ondes : pourquoi tu vois ton plat à travers la porte alors que presque toutes les ondes restent dedans. Et ce qui se passe si tu l'ouvres en plein chauffage. Le tien, il a quel âge ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#microondes",
+      "#cuisine",
+      "#physique"
+    ],
+    "pinned": "Un vieux four n'est pas forcément un problème. Une porte tordue ou un joint usé, si : là, on arrête de s'en servir. Le tien, il a quel âge ?",
+    "instagram": {
+      "caption": "Mille watts de micro-ondes, à dix centimètres de ton visage. Et entre les deux : une porte pleine de trous.\n\nDossier 009 : la porte du micro-ondes, et ce qui se passe si tu l'ouvres en plein chauffage.\n\nLe tien, il a quel âge ?",
+      "hashtags": [
+        "#microondes",
+        "#cuisine",
+        "#physique",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Micro-ondes : pourquoi la lumière sort de la porte, et (presque) pas les ondes",
+      "description": "Dossier 009 — la porte de ton micro-ondes : sa plaque à trous, ses crochets, et ce qui se passe en dix millionièmes de seconde quand tu l'ouvres en plein chauffage.\n\nLe tien, il a quel âge ?",
+      "hashtags": [
+        "#shorts",
+        "#microondes",
+        "#cuisine",
+        "#physique",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/009-micro-ondes.md ; contre-vérification phrase par phrase : docs/faits/009-contre-verification.md",
+    "Fréquence 2,45 GHz, longueur d'onde ≈ 12,2 cm ; puissance de micro-ondes d'un four ménager : 500 à 1 000 W (Goldwasser, Sci.Electronics.Repair FAQ) ou 500 à 2 000 W (OFSP) — « mille watts » est un ordre de grandeur, et c'est la puissance DANS la cavité : https://mail.repairfaq.org/REPAIR/F_micfaq2.html · fiche « Four à micro-ondes » de l'Office fédéral suisse de la santé publique (OFSP), 12/10/2016",
+    "La grille : trous ronds d'environ 1,5 mm au pas d'environ 2,5 mm (brevet BSH US 11 528 784, 2022 : « diameter of approx. 1.5 mm … pitch of approx. 2.5 mm ») ; « Each hole or opening is much smaller than the wavelength of approximately 12.2 cm » (brevet US 8 772 687) ; rapport onde / trou ≈ 80 et trou / lumière visible ≈ 3 000 : calculs ; c'est la grille qui arrête les ondes, pas le verre (« microwaves easily penetrate glass », Physics Van, Univ. de l'Illinois) : https://patents.google.com/patent/US11528784 · https://patents.google.com/patent/US8772687B2/en · https://van.physics.illinois.edu/ask/listing/12217",
+    "Les interrupteurs : la loi américaine exige au moins deux interverrouillages et un moyen de les surveiller qui rend le four « inoperable … until repaired » (21 CFR 1030.10(c)(2)) ; la FDA : ils arrêtent les micro-ondes « the moment the latch is released or the door is opened » ; le troisième (moniteur) fait griller le fusible si les deux autres sont restés collés porte ouverte (manuels de service Sharp R-216LS et Frigidaire FGMC3066UD) : https://www.law.cornell.edu/cfr/text/21/1030.10 · https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens · https://manualsdump.com/en/manuals/sharp-r-216ls/87968/12",
+    "« À l'ouverture de la porte, la source de rayonnement est immédiatement coupée et le rayonnement cesse en l'espace de 10 µs » (selon l'OFSP, 2016 — la seule source de cette valeur ; c'est le temps d'extinction du champ une fois la source coupée, pas celui de l'ouverture mécanique des contacts, qui n'est pas sourcé)",
+    "Sans la porte : les micro-ondes chauffent l'eau des tissus ; les yeux sont particulièrement vulnérables « because there is relatively little blood flow in them to carry away excess heat » (FDA) ; « cinq secondes, et la douleur arrive » : Oleson et al., J. Microwave Power and Electromagnetic Energy, 1994, main d'un volontaire dans un four à 2 450 MHz défectueux — « Moderately severe pain was experienced at the fingertips after 5 sec of exposure », lésion irréversible estimée 9 s plus tard : https://scholars.duke.edu/publication/767760",
+    "Porte abîmée : « Don't operate a microwave oven if the door does not close firmly or is bent, warped, or otherwise damaged » (FDA) ; fuites les plus fortes « lorsque les joints d'étanchéité de la porte sont usés ou encrassés » (OFSP) ; limite légale 5 mW/cm² à 5 cm (21 CFR 1030.10) ; sur ≈ 400 fours mesurés dans trois études, un seul la dépassait (OFSP) ; la nourriture n'est pas radioactive (FDA, Santé Canada, OFSP)",
+    "Simplifications assumées : « deux interrupteurs et un troisième » vaut pour les deux manuels lus (la loi dit « au moins deux interverrouillages et une surveillance ») ; le joint « piège à ondes » quart d'onde du tour de porte existe (brevets Amana 1969, Matsushita 1984) mais le film n'en parle pas ; le chrono en microsecondes de l'acte 3 est un ordre de grandeur (une valeur, une source) ; le four est dessiné encastré à hauteur de visage ; « dix centimètres » est une distance de mise en scène ; 1,5 mm est une valeur courante du trou (d'où « quatre-vingts fois », entre 60 et 100 selon les fours) ; « presque rien ne sort » : la loi tolère 5 mW/cm² à 5 cm ; un joint seulement sale se nettoie (CCHST) : c'est la porte faussée ou le joint usé qui condamne le four",
+    "À NE PAS DIRE NI AFFICHER : que rester devant la vitre est dangereux avec une porte intacte ; « zéro fuite » ; que la vitre arrête les ondes ; un cas de cataracte par four domestique (aucun n'est établi dans les sources lues) ; « trois interrupteurs » comme une loi ; lequel est le « primaire » ; la barre chocolatée de Spencer comme un fait ; ANSES / ANFR / INRS (rien trouvé)",
+    "Annonce du dossier 010 (la scie sur table) : « une scie qui s'arrête en touchant ton doigt… et qui se sacrifie pour ça » — sourcé dans docs/faits/010-scie.md (lame perdue, cartouche à remplacer)"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Mille watts de *micro-ondes*. À dix centimètres de ton visage.",
+      "vo": "[tense] Mille watts de micro-ondes. À dix centimètres de ton visage.",
+      "voAlt": [
+        "[firm, matter-of-fact] Mille watts de micro-ondes. À dix centimètres de ton visage."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Presque rien ne sort : la vitre les laisse passer, ce sont ses +trous+ qui les arrêtent. Sauf si ta porte… ferme *mal*.",
+      "vo": "[firm, matter-of-fact] Presque rien ne sort : la vitre les laisse passer, ce sont ses trous qui les arrêtent. [short pause] [serious] Sauf si ta porte... ferme mal."
+    },
+    {
+      "id": "scene",
+      "text": "Sans elle ? Des chercheurs y ont mis la main, sécurités contournées : [5 s|cinq secondes], et la *douleur* arrive. Tes yeux, eux, évacuent mal la chaleur.",
+      "vo": "[tense] Sans elle ? Des chercheurs y ont mis la main, sécurités contournées : cinq secondes, et la douleur arrive. Tes yeux, eux, évacuent mal la chaleur."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Une vitre. Une plaque de métal, percée de trous d'[1,5 mm|un millimètre et demi]. Et sur le bord… deux +crochets+.",
+      "vo": "Une vitre. Une plaque de métal, percée de trous d'un millimètre et demi. Et sur le bord... deux crochets."
+    },
+    {
+      "id": "repos",
+      "text": "L'onde du four mesure [12 cm|douze centimètres] : quatre-vingts fois trop *grande* pour le trou. La lumière, minuscule, passe : tu vois ton plat.",
+      "vo": "[thoughtful] L'onde du four mesure douze centimètres : quatre-vingts fois trop grande pour le trou. La lumière, minuscule, passe : tu vois ton plat."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : on ouvre cette porte en plein *chauffage*.",
+      "vo": "[tense] Abonne-toi : on ouvre cette porte en plein chauffage."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Tu tires la poignée. Le four chauffe *encore*.",
+      "vo": "[firm, matter-of-fact] Tu tires la poignée. Le four chauffe encore."
+    },
+    {
+      "id": "loquet",
+      "text": "Le loquet se soulève : deux interrupteurs +coupent+ le courant.",
+      "vo": "[tense] Le loquet se soulève : deux interrupteurs coupent le courant."
+    },
+    {
+      "id": "coupe",
+      "hold": 0.2,
+      "text": "Dix millionièmes de seconde : plus une *onde*. Ta main, elle, n'a pas fini de tirer.",
+      "vo": "[serious] Dix millionièmes de seconde : plus une onde. [short pause] Ta main, elle, n'a pas fini de tirer."
+    },
+    {
+      "id": "moniteur",
+      "hold": 0.2,
+      "text": "Et si les deux restent collés ? Un troisième se ferme… et fait *sauter* le fusible.",
+      "vo": "[curious] Et si les deux restent collés ? [short pause] [firm, matter-of-fact] Un troisième se ferme... et fait sauter le fusible."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Ce qui te protège, ce n'est *pas* la vitre. Ce sont des trous… et un four prêt à se +saboter+.",
+      "vo": "[low, grave voice] Ce qui te protège, ce n'est pas la vitre. Ce sont des trous... et un four prêt à se saboter."
+    },
+    {
+      "id": "like",
+      "text": "+Like+. Ça remontera chez quelqu'un qui croit encore que ça rend les plats radioactifs.",
+      "vo": "[firm, matter-of-fact] Like. [short pause] Ça remontera chez quelqu'un qui croit encore que ça rend les plats radioactifs."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+. Prochain dossier : une scie qui s'arrête en touchant ton doigt… et qui se *sacrifie* pour ça.",
+      "vo": "[serious] Abonne-toi. Prochain dossier : une scie qui s'arrête en touchant ton doigt... [short pause] et qui se sacrifie pour ça."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et si ta porte ferme mal ? Charnière tordue, joint usé : là, on arrête de s'en servir. En +commentaire+ : ton micro-ondes, il a quel âge ?",
+      "vo": "[curious] Et si ta porte ferme mal ? [short pause] [serious] Charnière tordue, joint usé : là, on arrête de s'en servir. [short pause] [curious] En commentaire : ton micro-ondes, il a quel âge ?"
+    },
+    {
+      "id": "boucle",
+      "text": "Vieux ou neuf, derrière sa porte, il y a toujours…",
+      "vo": "[calm] Vieux ou neuf, derrière sa porte, il y a toujours,",
+      "voAlt": [
+        "[serious] Vieux ou neuf, derrière sa porte, il y a toujours..."
+      ]
+    }
+  ],
+  "cues": {
+    "glass": "promesse:vitre-0.1",
+    "holes": "promesse:trous-0.15",
+    "bad": "promesse:Sauf-0.14",
+    "tosans": "scene-0.14",
+    "totest": "scene:Des-0.12",
+    "hand": "scene:main-0.1",
+    "pain": "scene:douleur-0.1",
+    "toeyes": "scene:Tes-0.12",
+    "eyes": "scene:yeux-0.15",
+    "back": "scene$-0.05",
+    "todoor": "ouvre-0.14",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "p1": "eclate:vitre-0.1",
+    "p2": "eclate:plaque-0.15",
+    "tohooks": "eclate:sur-0.32",
+    "p3": "eclate:crochets-0.2",
+    "towave": "repos-0.14",
+    "wave": "repos:mesure-0.1",
+    "big": "repos:grande-0.1",
+    "light": "repos:lumière-0.15",
+    "tosight": "repos:tu-0.12",
+    "plate": "repos:vois-0.1",
+    "toseuil": "seuil-0.1",
+    "tozero": "zero-0.12",
+    "pull": "zero:tires",
+    "tolatch": "loquet-0.12",
+    "lift": "loquet:soulève-0.1",
+    "sw": "loquet:coupent-0.1",
+    "tocut": "coupe-0.12",
+    "trigger": "coupe:plus-0.08",
+    "tohand": "coupe:main-0.15",
+    "tomon": "moniteur-0.12",
+    "stuck": "moniteur:collés-0.1",
+    "third": "moniteur:troisième-0.1",
+    "fuse": "moniteur:sauter-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "truth": "chute:trous-0.05",
+    "sabot": "chute:saboter-0.1",
+    "tocta": "like-0.12",
+    "tocomment": "comment-0.12",
+    "ask": "comment:commentaire-0.3",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:derrière-0.05"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.85
+        ],
+        [
+          "bad",
+          0.6
+        ],
+        [
+          "tosans",
+          0.9
+        ],
+        [
+          "pain",
+          1
+        ],
+        [
+          "back",
+          0.4
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "towave",
+          0.55
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger-0.05",
+          1
+        ],
+        [
+          "trigger+0.4",
+          0.35
+        ],
+        [
+          "tomon",
+          0.4
+        ],
+        [
+          "stuck",
+          0.85
+        ],
+        [
+          "fuse",
+          1
+        ],
+        [
+          "fuse+0.5",
+          0.3
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "tocomment",
+          0.6
+        ],
+        [
+          "comment:arrête-0.08",
+          0.6
+        ],
+        [
+          "comment:arrête+0.3",
+          0.25
+        ],
+        [
+          "toloop",
+          0.55
+        ],
+        [
+          "rewind",
+          0.85
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "whoosh",
+      "at": 0.3,
+      "dur": 1.6,
+      "gain": -24
+    },
+    {
+      "type": "blip",
+      "at": "holes",
+      "gain": -19,
+      "pitch": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "bad",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "impact",
+      "at": "tosans",
+      "gain": -13,
+      "size": 1
+    },
+    {
+      "type": "impact",
+      "at": "totest",
+      "gain": -15,
+      "size": 0.8
+    },
+    {
+      "type": "riser",
+      "to": "pain+0.1",
+      "dur": 1.2,
+      "gain": -21
+    },
+    {
+      "type": "tick",
+      "at": "scene:sécurités-0.1",
+      "count": 10,
+      "every": 0.3,
+      "gain": -23
+    },
+    {
+      "type": "impact",
+      "at": "pain+0.1",
+      "gain": -10,
+      "size": 1.1
+    },
+    {
+      "type": "impact",
+      "at": "toeyes",
+      "gain": -15,
+      "size": 0.8
+    },
+    {
+      "type": "rewind",
+      "at": "back",
+      "dur": 0.6,
+      "gain": -21
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "whoosh",
+      "at": "explode+0.5",
+      "dur": 1.3,
+      "gain": -24
+    },
+    {
+      "type": "blip",
+      "at": "p1",
+      "gain": -21,
+      "pitch": 1.1
+    },
+    {
+      "type": "blip",
+      "at": "p2",
+      "gain": -21,
+      "pitch": 0.95
+    },
+    {
+      "type": "whoosh",
+      "at": "eclate:percée-0.1",
+      "dur": 0.9,
+      "gain": -25
+    },
+    {
+      "type": "blip",
+      "at": "p3",
+      "gain": -21,
+      "pitch": 0.8,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "towave",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": "wave",
+      "dur": 1.6,
+      "gain": -23
+    },
+    {
+      "type": "blip",
+      "at": "big",
+      "gain": -18,
+      "pitch": 0.8,
+      "heavy": true
+    },
+    {
+      "type": "blip",
+      "at": "light",
+      "gain": -19,
+      "pitch": 1.35
+    },
+    {
+      "type": "impact",
+      "at": "tosight",
+      "gain": -17,
+      "size": 0.7
+    },
+    {
+      "type": "blip",
+      "at": "seuil:chauffage",
+      "gain": -19,
+      "pitch": 0.8,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -11,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "trigger",
+      "dur": 2.6,
+      "gain": -20
+    },
+    {
+      "type": "blip",
+      "at": "lift",
+      "gain": -18,
+      "pitch": 1
+    },
+    {
+      "type": "blip",
+      "at": "sw",
+      "gain": -17,
+      "pitch": 1.25
+    },
+    {
+      "type": "blip",
+      "at": "sw+0.16",
+      "gain": -17,
+      "pitch": 1.25
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -7,
+      "size": 1.5
+    },
+    {
+      "type": "tick",
+      "at": "tohand",
+      "count": 6,
+      "every": 0.14,
+      "gain": -24
+    },
+    {
+      "type": "impact",
+      "at": "tomon",
+      "gain": -15,
+      "size": 0.8
+    },
+    {
+      "type": "blip",
+      "at": "stuck",
+      "gain": -18,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "blip",
+      "at": "third",
+      "gain": -18,
+      "pitch": 0.9,
+      "heavy": true
+    },
+    {
+      "type": "zap",
+      "at": "fuse",
+      "gain": -10,
+      "dur": 0.3
+    },
+    {
+      "type": "impact",
+      "at": "fuse+0.02",
+      "gain": -8,
+      "size": 1.3
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "blip",
+      "at": "truth",
+      "gain": -17,
+      "pitch": 1.2
+    },
+    {
+      "type": "blip",
+      "at": "sabot+0.06",
+      "gain": -17,
+      "pitch": 0.8,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "tocta",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "blip",
+      "at": "like+0.1",
+      "gain": -25,
+      "pitch": 0.9,
+      "pan": -0.3
+    },
+    {
+      "type": "blip",
+      "at": "like+0.36",
+      "gain": -25,
+      "pitch": 1.0050000000000001,
+      "pan": 0.3
+    },
+    {
+      "type": "blip",
+      "at": "like+0.62",
+      "gain": -25,
+      "pitch": 1.11,
+      "pan": -0.3
+    },
+    {
+      "type": "blip",
+      "at": "like+0.88",
+      "gain": -25,
+      "pitch": 1.215,
+      "pan": 0.3
+    },
+    {
+      "type": "blip",
+      "at": "like+1.14",
+      "gain": -23,
+      "pitch": 1.32
+    },
+    {
+      "type": "impact",
+      "at": "abo:Prochain",
+      "gain": -17,
+      "size": 0.9
+    },
+    {
+      "type": "impact",
+      "at": "tocomment",
+      "gain": -14,
+      "size": 0.9
+    },
+    {
+      "type": "blip",
+      "at": "comment:arrête-0.08",
+      "gain": -17,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "tick",
+      "at": "comment:il-0.05",
+      "count": 6,
+      "every": 0.055,
+      "gain": -24
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1.4,
+      "gain": -21
+    }
+  ]
+}
