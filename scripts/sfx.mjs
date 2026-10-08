@@ -256,6 +256,66 @@ export function sfx(dir, { ep = loadEpisode(dir), sched = schedule(ep), force = 
         return (Math.sin(phase) * 0.5 + lp * 0.6) * flutter * Math.sin(Math.PI * Math.min(1, u * 1.04)) ** 0.7 * g;
       }, fx);
     },
+    // lightning striking close: the crack — a tearing burst around 2 kHz, what a phone plays — then
+    // the roll: the same sound arriving again and again from farther up the channel, darker each time
+    thunder({ at: ref, gain = -8, dur = 4.5 }) {
+      const t0 = at(ref);
+      const g = db(gain);
+      const noise = rng(Math.round(t0 * 1000) + 23);
+      const echo = rng(41);
+      const hits = Array.from({ length: 9 }, (_, k) => [k === 0 ? 0 : 0.12 + k * 0.33 * (0.7 + 0.6 * echo()), Math.pow(0.72, k) * (0.7 + 0.5 * echo())]);
+      const fc = 2 * Math.sin((Math.PI * 1800) / SR);
+      let lp1 = 0;
+      let lp2 = 0;
+      let bandL = 0;
+      let bandB = 0;
+      write(t0, dur, 0, (t) => {
+        const x = noise() * 2 - 1;
+        const high = x - bandL - 0.9 * bandB;
+        bandB += fc * high;
+        bandL += fc * bandB;
+        lp1 += 0.07 * (x - lp1); // under ≈ 500 Hz: the body of the roll
+        lp2 += 0.022 * (x - lp2); // under ≈ 150 Hz: its weight, for headphones
+        const crack = (bandB * 0.9 + (x - lp1) * 0.3) * Math.exp(-t / 0.05) * Math.min(1, t / 0.002);
+        let env = 0;
+        for (const [d, a] of hits) {
+          const u = t - d;
+          if (u > 0) env += a * Math.min(1, u / 0.02) * Math.exp(-u / 0.42);
+        }
+        return (crack + (lp1 * 1.6 + lp2 * 3.2) * env) * g * Math.min(1, (dur - t) / 0.6);
+      });
+    },
+    // rain between two moments: a hiss with a little grain, under the voice
+    rain({ from, to, gain = -30 }) {
+      const t0 = at(from);
+      const t1 = at(to);
+      const g = db(gain);
+      const noise = rng(57);
+      let lp = 0;
+      let lp2 = 0;
+      write(t0, t1 - t0, 0, (t) => {
+        const x = noise() * 2 - 1;
+        lp += 0.45 * (x - lp);
+        lp2 += 0.06 * (x - lp2);
+        const env = Math.min(1, t / 0.5) * Math.min(1, (t1 - t0 - t) / 0.5);
+        return (lp - lp2) * (0.8 + 0.2 * Math.sin(TAU * 0.31 * t)) * env * g;
+      }, under);
+    },
+    // a spark: a short gritty buzz in the consonant band (one bound of a leader, an arc that jumps)
+    zap({ at: ref, gain = -20, dur = 0.09, pan = 0 }) {
+      const t0 = at(ref);
+      const g = db(gain);
+      const noise = rng(Math.round(t0 * 1000) + 31);
+      let lp = 0;
+      let hp = 0;
+      write(t0, dur + 0.05, pan, (t) => {
+        const x = noise() * 2 - 1;
+        lp += 0.5 * (x - lp);
+        hp += 0.12 * (lp - hp);
+        const buzz = Math.sin(TAU * 118 * t) > 0 ? 1 : 0.25;
+        return (lp - hp) * buzz * Math.exp(-t / (dur * 0.5)) * Math.min(1, t / 0.001) * g;
+      }, fx);
+    },
   };
 
   for (const item of list) {

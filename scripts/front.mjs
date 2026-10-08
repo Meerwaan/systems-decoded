@@ -94,7 +94,17 @@ function postOf(post) {
     caption: typeof post.caption === "string" ? post.caption : "",
     hashtags: Array.isArray(post.hashtags) ? post.hashtags.filter((t) => typeof t === "string") : [],
     pinned: typeof post.pinned === "string" ? post.pinned : "",
+    // the same film on the other two platforms (scripts/posts.mjs)
+    instagram: alsoOn(post.instagram, ["caption"]),
+    youtube: alsoOn(post.youtube, ["title", "description"]),
   };
+}
+
+function alsoOn(block, fields) {
+  if (!block || typeof block !== "object") return null;
+  const out = { hashtags: Array.isArray(block.hashtags) ? block.hashtags.filter((t) => typeof t === "string") : [] };
+  for (const f of fields) out[f] = typeof block[f] === "string" ? block[f] : "";
+  return out;
 }
 
 /** The folders of episodes/ that hold an episode.json: the only names a URL may use for a dossier. */
@@ -139,7 +149,9 @@ function dossiers() {
 
 function profile() {
   const p = readJson(path.join(BRAND, "profil.json")) ?? {};
-  return { name: String(p.name ?? ""), handle: String(p.handle ?? ""), bio: String(p.bio ?? "") };
+  // `bio` is TikTok's (80 characters); `bios` the other platforms' — Instagram (150), YouTube (the channel's description)
+  const bios = p.bios && typeof p.bios === "object" ? p.bios : {};
+  return { name: String(p.name ?? ""), handle: String(p.handle ?? ""), bio: String(p.bio ?? ""), instagram: String(bios.instagram ?? ""), youtube: String(bios.youtube ?? "") };
 }
 
 /* ---------------------------------------------------------------- the listening booth: what was recorded */

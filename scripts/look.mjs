@@ -3,6 +3,8 @@
 // in one look, no render, nothing written into the film until one of them is right.
 //   npm run look -- 003 --at 0.04,accroche:casser+0.2,31.5
 //   npm run look -- 003 --file essais.json      [{ "at": "poulie:surveille", "pose": { "d": 240 }, "label": "plus près" }, …]
+//   …and, in a film staged with kit/lib/direct.js, "state": { "explode": 1 } holds numbers of the world's state for that frame:
+//   a model or a set is judged before any act is written.
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
@@ -28,7 +30,7 @@ const drawnBy = (page) =>
     return gl ? String(info ? gl.getParameter(info.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER)) : "";
   });
 
-/** `shots`: [{ at, pose?, label? }] · `width`: px of one frame on the sheet · `bare`: the 3D alone, no text over it · `cpu`: draw in software, like the render. */
+/** `shots`: [{ at, pose?, state?, label? }] · `width`: px of one frame on the sheet · `bare`: the 3D alone, no text over it · `cpu`: draw in software, like the render. */
 export async function look(dir, { shots, cols = 4, width = 405, zones = true, bare = false, cpu = false, out } = {}) {
   const { sched } = await build(dir, { quiet: true });
   const list = shots.map((s) => ({ ...s, t: Math.min(sched.duration - 0.01, Math.max(0, resolveMoment(sched.beats, sched.cues, s.at))) }));
@@ -62,13 +64,14 @@ export async function look(dir, { shots, cols = 4, width = 405, zones = true, ba
 
     for (const [i, s] of list.entries()) {
       await page.evaluate(
-        ({ t, pose }) => {
+        ({ t, pose, state }) => {
           const { stage } = window.SD;
           window.__timelines.main.time(t);
           stage.pose = pose ? { ...pose, drift: 0 } : null;
+          window.SD.force = state; // numbers of the world's state held whatever the timeline says (kit/lib/direct.js)
           stage.renderAt(t);
         },
-        { t: s.t, pose: s.pose ?? null },
+        { t: s.t, pose: s.pose ?? null, state: s.state ?? null },
       );
       if (errors.length) throw new Error(`Erreur à ${s.t} s: ${errors[0]}`);
       s.file = path.join(folder, `${String(i).padStart(2, "0")}.jpg`);

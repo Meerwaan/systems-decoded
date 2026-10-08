@@ -6,6 +6,7 @@ import { ROOT } from "./lib/env.mjs";
 import { resolveEpisode, loadEpisode, schedule } from "./lib/episode.mjs";
 import { master } from "./lib/ffmpeg.mjs";
 import { hyperframes } from "./lib/hf.mjs";
+import { logCommand } from "./metrics.mjs";
 
 const [cmd, ...rest] = process.argv.slice(2);
 const flags = {};
@@ -20,6 +21,16 @@ for (let i = 0; i < rest.length; i++) {
     } else flags[key] = true;
   } else args.push(rest[i]);
 }
+
+// Every working command leaves one line in metrics/commandes.jsonl (what ran, on which episode, how long):
+// `npm run metrics` reads them back. Servers and one-line lookups are not timed.
+const TIMED = new Set(["build", "voice", "sfx", "snap", "check", "lint", "render", "review", "look", "cover", "phone", "qa"]);
+const metric = { t: new Date().toISOString(), cmd, ep: /^\d{3}/.test(args[0] ?? "") ? args[0].slice(0, 3) : undefined };
+const started = Date.now();
+if (flags.draft) metric.draft = true;
+process.on("exit", (code) => {
+  if (TIMED.has(cmd)) logCommand({ ...metric, ms: Date.now() - started, ok: code === 0 });
+});
 
 function hf(sub, dir, extra = []) {
   const status = hyperframes(sub, dir, extra);
@@ -46,6 +57,8 @@ const HELP = `
   npm run cover   -- <ep>                        couverture de grille (PNG 1080×1920 dans renders/)
   npm run phone   -- <ep>                        copie du film sous 30 Mio (renders/<ep>-iphone.mp4) : ce que l'app Claude peut envoyer au téléphone hors du Wi-Fi
   npm run brand                                  exporte la photo de profil (brand/avatar.svg → .png)
+  npm run chrono  -- <ep> <étape> | stop | agent <nom> --jetons N | jauge --session N --hebdo N   le chronomètre de la fabrication
+  npm run metrics [-- <ep>]                      ce que coûte un dossier (temps, jetons, calcul) et ce qu'il rapporte (audience)
   npm run front   [-- --port 4173]               bureau de publication (vidéo, couverture, légende) et cabine d'écoute de la voix, à ouvrir sur l'iPhone (même Wi-Fi)
   <ep> = numéro d'épisode (ex: 001)
 `;
@@ -155,7 +168,9 @@ try {
     }
     case "look": {
       const { look } = await import("./look.mjs");
+      if (flags.out) metric.out = path.basename(String(flags.out));
       const shots = flags.file ? JSON.parse(fs.readFileSync(path.resolve(String(flags.file)), "utf8")) : String(flags.at ?? "0.04").split(",").map((at) => ({ at: at.trim() }));
+      metric.n = shots.length;
       await look(resolveEpisode(args[0]), {
         shots,
         cols: flags.cols != null ? Number(flags.cols) : undefined,
@@ -185,6 +200,16 @@ try {
     case "qa": {
       const { qa } = await import("./qa.mjs");
       await qa(resolveEpisode(args[0]), flags.file ? path.resolve(String(flags.file)) : undefined);
+      break;
+    }
+    case "chrono": {
+      const { chrono } = await import("./metrics.mjs");
+      chrono(args[0], args[1], args[2], flags);
+      break;
+    }
+    case "metrics": {
+      const { report } = await import("./metrics.mjs");
+      report(args[0]);
       break;
     }
     case "front": {
