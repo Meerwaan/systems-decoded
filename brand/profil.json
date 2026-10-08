@@ -1,5 +1,9 @@
 {
   "name": "Système Décodé",
   "handle": "systeme.decode",
-  "bio": "Ils veillent pendant que tu dors.\nOn les décode, un système à la fois."
+  "bio": "Ils veillent pendant que tu dors.\nOn les décode, un système à la fois.",
+  "bios": {
+    "instagram": "Ils veillent pendant que tu dors.\nOn les décode, un système à la fois.\nUn dossier en 3D, 80 secondes.\n#commentcamarche #ingenierie #securite",
+    "youtube": "Système Décodé ouvre les systèmes de sécurité qui veillent sur toi (détecteur de fumée, airbag, ascenseur, différentiel, défibrillateur…) et les explique en 3D, en moins de 90 secondes.\n\nUn dossier par vidéo : ce qui se passe à la seconde près, ce qu'il y a dedans, et ce qu'on croit à tort. Chaque fait est vérifié et sourcé.\n\nIls veillent pendant que tu dors. On les décode, un système à la fois.\n\n#commentcamarche #ingenierie #securite #science #shorts"
+  }
 }

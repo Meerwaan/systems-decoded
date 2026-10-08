@@ -20,7 +20,9 @@
     "front": "node scripts/sd.mjs front",
     "credits": "node scripts/sd.mjs credits",
     "review": "node scripts/sd.mjs review",
-    "look": "node scripts/sd.mjs look"
+    "look": "node scripts/sd.mjs look",
+    "chrono": "node scripts/sd.mjs chrono",
+    "metrics": "node scripts/sd.mjs metrics"
   },
   "repository": {
     "type": "git",

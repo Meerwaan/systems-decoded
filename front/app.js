@@ -345,13 +345,32 @@
                 h("div", { class: "pair" }, copyButton("Copier la légende", caption, { source: words }), copyButton("Copier les hashtags", tags, { source: marks })),
               ]
             : [copyButton(caption ? "Copier la légende" : "Copier les hashtags", caption || tags, { primary: true, source: quote })];
-        blocks.push(block("Légende", null, quote, buttons));
+        blocks.push(block("Légende · TikTok", null, quote, buttons));
       } else {
         blocks.push(block("Légende", null, h("p", { class: "note", text: "Légende et hashtags restent à écrire dans episode.json." })));
       }
       if (pinned) {
         const quote = h("div", { class: "quote" }, h("p", { text: pinned }));
         blocks.push(block("Commentaire à épingler", null, quote, copyButton("Copier le commentaire", pinned, { source: quote })));
+      }
+      /* the same film on Instagram (Reels) and YouTube (Shorts) */
+      const { instagram, youtube } = d.post;
+      if (instagram && instagram.caption) {
+        const tags = instagram.hashtags.join(" ");
+        const words = h("p", { text: instagram.caption });
+        const marks = tags && h("p", { class: "quote__tags", text: tags });
+        const quote = h("div", { class: "quote" }, words, marks);
+        blocks.push(block("Légende · Instagram", null, quote, copyButton("Copier légende + hashtags", tags ? `${instagram.caption}\n\n${tags}` : instagram.caption, { primary: true, source: quote })));
+      }
+      if (youtube && youtube.title) {
+        const tags = youtube.hashtags.join(" ");
+        const title = h("div", { class: "quote" }, h("p", { text: youtube.title }));
+        const words = h("p", { text: youtube.description });
+        const marks = tags && h("p", { class: "quote__tags", text: tags });
+        const quote = h("div", { class: "quote" }, words, marks);
+        blocks.push(
+          block("YouTube Shorts", h("small", { text: `titre : ${youtube.title.length} caractères` }), title, copyButton("Copier le titre", youtube.title, { primary: true, source: title }), quote, copyButton("Copier description + hashtags", tags ? `${youtube.description}\n\n${tags}` : youtube.description, { source: quote })),
+        );
       }
     }
 
@@ -431,7 +450,9 @@
       p.name && field("Nom", p.name, p.name),
       // shown with its @, copied without: the TikTok field refuses the @
       p.handle && field("Identifiant", `@${p.handle}`, p.handle),
-      p.bio && field("Bio", p.bio, p.bio, "Copier la bio"),
+      p.bio && field("Bio · TikTok", p.bio, p.bio, "Copier la bio"),
+      p.instagram && field("Bio · Instagram", p.instagram, p.instagram, "Copier la bio"),
+      p.youtube && field("Description · YouTube", p.youtube, p.youtube, "Copier la description"),
     ];
   }
 
