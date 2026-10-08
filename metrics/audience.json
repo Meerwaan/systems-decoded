@@ -1,0 +1,102 @@
+{
+  "//": "Ce que TikTok dit de chaque film : les captures de Merwan, recopiées. `courbe` : [seconde, % encore là]. `publie` : la date de mise en ligne, null si elle n'est pas connue.",
+  "episodes": {
+    "001": {
+      "titre": "Détecteur de fumée",
+      "publie": "2026-10-05"
+    },
+    "002": {
+      "titre": "Airbag",
+      "publie": "2026-10-06"
+    },
+    "003": {
+      "titre": "Ascenseur",
+      "publie": "2026-10-06T04:55",
+      "releve": "2026-10-08T04:28",
+      "duree": 82.2,
+      "vues": 1973,
+      "dureeMoyenne": 28.5,
+      "enEntier": 5.84,
+      "likes": 150,
+      "commentaires": 4,
+      "partages": 21,
+      "enregistrements": 22,
+      "abonnes": 15,
+      "pourToi": 96.1,
+      "courbe": [
+        [
+          0,
+          100
+        ],
+        [
+          4.4,
+          51
+        ],
+        [
+          20,
+          40
+        ],
+        [
+          30,
+          35
+        ],
+        [
+          41,
+          30
+        ],
+        [
+          57,
+          22
+        ],
+        [
+          61,
+          18
+        ],
+        [
+          64.4,
+          16
+        ],
+        [
+          69,
+          13
+        ],
+        [
+          73.7,
+          10
+        ]
+      ]
+    },
+    "004": {
+      "titre": "Différentiel",
+      "publie": "2026-10-06T17:00"
+    },
+    "005": {
+      "titre": "Arrêt d'urgence",
+      "publie": "2026-10-07"
+    },
+    "006": {
+      "titre": "Défibrillateur",
+      "publie": "2026-10-07"
+    },
+    "007": {
+      "titre": "Siège éjectable",
+      "publie": null
+    },
+    "008": {
+      "titre": "Paratonnerre",
+      "publie": null
+    },
+    "009": {
+      "titre": "Micro-ondes",
+      "publie": null
+    },
+    "010": {
+      "titre": "Scie sur table",
+      "publie": null
+    },
+    "011": {
+      "titre": "Fusible pyro",
+      "publie": null
+    }
+  }
+}

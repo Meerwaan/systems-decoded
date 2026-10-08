@@ -1,0 +1,62 @@
+{
+  "cibles": {
+    "minutes": 120,
+    "jetons": 1500000,
+    "imagesParAgent": 30
+  },
+  "episodes": {
+    "007": {
+      "titre": "Siège éjectable",
+      "minutes": 270,
+      "jetons": 2700000,
+      "note": "dernier dossier de l'ancienne chaîne ; voix comprise"
+    },
+    "008": {
+      "titre": "Paratonnerre",
+      "minutes": 150,
+      "jetons": 3500000,
+      "nAgents": 9,
+      "note": "première chaîne courte, voix comprise ; + 40 min d'étape 0, une fois"
+    },
+    "009": {
+      "titre": "Micro-ondes",
+      "minutes": 73,
+      "jetons": 3000000,
+      "nAgents": 9,
+      "note": "sans voix ; un tiers du lot de trois (3 h 40, 9 M, +17 pts d'hebdo)"
+    },
+    "010": {
+      "titre": "Scie sur table",
+      "minutes": 73,
+      "jetons": 3000000,
+      "nAgents": 8,
+      "note": "sans voix ; un tiers du lot de trois"
+    },
+    "011": {
+      "titre": "Fusible pyro",
+      "minutes": 73,
+      "jetons": 3000000,
+      "nAgents": 9,
+      "note": "sans voix ; un tiers du lot de trois"
+    },
+    "012": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-10-08T18:29:00.000Z",
+          "note": "un agent léger cherche ; pendant ce temps, le chronomètre lui-même (scripts/metrics.mjs)"
+        }
+      ],
+      "agents": [],
+      "jauges": [
+        {
+          "t": "2026-10-08T18:29:00.000Z",
+          "quoi": "début",
+          "session": 12,
+          "hebdo": 37
+        }
+      ],
+      "titre": "Gazinière"
+    }
+  }
+}
