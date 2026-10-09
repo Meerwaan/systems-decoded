@@ -1,0 +1,367 @@
+{
+  "id": "014",
+  "slug": "abs",
+  "title": "ABS",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "again+0.3",
+    "title": [
+      "Ton",
+      "ABS"
+    ],
+    "cam": {
+      "tx": -7,
+      "ty": 48,
+      "tz": -25,
+      "d": 280,
+      "az": -30,
+      "el": 28,
+      "shift": -455,
+      "side": -75,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "ABS : sous la pluie, tu écrases le frein et la pédale tremble. Ce tremblement, c'est ta voiture qui travaille pour toi. La tienne, elle a déjà tremblé ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#abs",
+      "#voiture",
+      "#securiteroutiere"
+    ],
+    "pinned": "Pédale qui tremble au freinage d'urgence : tu écrases, tu tiens, tu ne pompes pas. La tienne a déjà tremblé ?",
+    "instagram": {
+      "caption": "Sous la pluie, tu écrases le frein… et ta pédale se met à trembler.\n\nDossier 014 : l'ABS. Ce tremblement, c'est ta voiture qui travaille — jusqu'à 40 fois par seconde.\n\nTa pédale, elle a déjà tremblé ?",
+      "hashtags": [
+        "#abs",
+        "#voiture",
+        "#securiteroutiere",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "ABS : pourquoi ta pédale de frein tremble (et pourquoi il ne faut pas la lâcher)",
+      "description": "Dossier 014 — l'ABS ouvert : le capteur, le calculateur, les deux vannes et la pompe, et ce qui se passe dans ta roue quand tu écrases le frein sous la pluie.\n\nTa pédale, elle a déjà tremblé ?",
+      "hashtags": [
+        "#shorts",
+        "#abs",
+        "#voiture",
+        "#securiteroutiere",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/014-abs.md ; contre-vérification phrase par phrase : docs/faits/014-contre-verification.md",
+    "Le mécanisme (Bosch) : un capteur de vitesse à chacune des quatre roues, un calculateur, un bloc hydraulique avec des électrovannes par roue et une pompe de retour ; la pression est relâchée sur la seule roue qui va se bloquer (« on that wheel alone »), « up to 40 times a second ». Premier ABS électronique à quatre roues de série : Bosch, 1978.",
+    "Les trois temps d'un cycle (documentation d'atelier Saab) : maintien (la vanne d'admission se ferme : le frein est isolé du maître-cylindre), réduction (la vanne d'échappement s'ouvre, la pompe renvoie le liquide vers le maître-cylindre), remontée de la pression. Le film montre un cycle : isoler, relâcher, resserrer.",
+    "Une roue bloquée ne dirige plus : « At 100% slip … no lateral force remains for steering » (Saab). Garder la direction en freinant : « les roues permettent au conducteur de garder sa capacité directionnelle. Il peut ainsi tenter d'éviter un obstacle tout en freinant » (DEKRA France, 2024).",
+    "La pédale qui tremble et le bon geste : « vibrations through the brake pedal… These are all normal » ; « Do not pump the brake pedal, rather continue to hold it firmly down » (notice Honda, honda.ca) ; « you may feel the brake pedal pulsating… caused by the system applying and releasing pressure » ; « do not pump the brake » (Transport Canada) ; « freiner à fond et maintenir la pression maximale … jusqu'à l'arrêt complet », « la vibration de la pédale de frein est normale » (DEKRA France). Bosch écrit que la pédale « may pulsate » : le tremblement se sent plus ou moins selon la voiture. Une pédale qui pulse à chaque freinage ordinaire peut venir de disques voilés.",
+    "« Sur du gravier, il t'arrête même plus loin » : distance d'arrêt allongée sur gravier (+27 % en moyenne dans un essai de la NHTSA de 1999 sur neuf voitures — SAE 1999-01-1287, lu en résumé, non affiché), sur neige et neige fondue (Transport Canada) ; sur route sèche ou mouillée, « about the same » ou plus court. D'où « ne sert pas d'abord à freiner plus court ».",
+    "Simplifications assumées : la scène (80 km/h sous la pluie, un camion arrêté trop près pour s'arrêter) est un scénario, aucune distance n'est affichée ; les vitesses de la voiture et de la roue à l'écran sont illustratives ; « deux vannes par roue et une pompe » est le schéma type (le nombre réel varie) ; la couronne dentée est la forme classique (les capteurs actifs lisent aussi une bague magnétique) ; « il surveille tes quatre roues » : le vrai calcul utilise une vitesse de référence et le glissement ; un seul cycle est montré, au ralenti. Non dit : l'effet de l'ABS sur le nombre de morts en voiture, mitigé dans les études (Kahane, NHTSA, 1994).",
+    "Prochain dossier (015) : « Au toucher des roues sur le pont, le pilote met systématiquement pleine puissance pour être en mesure de repartir dans le cas où il aurait raté tous les brins d'arrêt » (Marine nationale, Cols bleus / BM n° 237, octobre 2020)."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Sous la pluie, tu écrases le frein… et ta pédale se met à *trembler*.",
+      "vo": "[tense] Sous la pluie, tu écrases le frein... et ta pédale se met à trembler.",
+      "voAlt": [
+        "[firm, matter-of-fact] Sous la pluie, tu écrases le frein... et ta pédale se met à trembler."
+      ]
+    },
+    {
+      "id": "promesse",
+      "text": "C'est ta voiture : elle +relâche+ tes freins, roue par roue. Exprès : pour t'éviter le camion. Sauf si ton pied… a le mauvais *réflexe*.",
+      "vo": "[firm, matter-of-fact] C'est ta voiture : elle relâche tes freins, roue par roue. Exprès : pour t'éviter le camion. [short pause] [serious] Sauf si ton pied... a le mauvais réflexe.",
+      "hold": 0.3
+    },
+    {
+      "id": "scene",
+      "text": "[80|Quatre-vingts] kilomètres-heure. Trop près pour t'arrêter : il faut tourner. Mais une roue bloquée glisse *tout droit*… elle ne dirige plus rien.",
+      "vo": "[tense] Quatre-vingts kilomètres-heure. Trop près pour t'arrêter : il faut tourner. Mais une roue bloquée glisse tout droit... elle ne dirige plus rien.",
+      "hold": 0.3
+    },
+    {
+      "id": "ouvre",
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "hold": 0.4
+    },
+    {
+      "id": "eclate",
+      "text": "Derrière chaque roue : une couronne dentée, un capteur. Un calculateur. Et sur le circuit de tes freins… deux +vannes+ par roue, et une pompe.",
+      "vo": "Derrière chaque roue : une couronne dentée, un capteur. Un calculateur. Et sur le circuit de tes freins... deux vannes par roue, et une pompe.",
+      "hold": 0.3
+    },
+    {
+      "id": "repos",
+      "text": "Tant qu'aucune roue ne se bloque, il ne touche à rien. Il surveille tes quatre roues… et attend qu'une seule ralentisse *trop vite*.",
+      "vo": "[thoughtful] Tant qu'aucune roue ne se bloque, il ne touche à rien. Il surveille tes quatre roues... et attend qu'une seule ralentisse trop vite."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : cette pédale qui tremble, regarde ce qui se passe dans ta *roue*.",
+      "vo": "[tense] Abonne-toi : cette pédale qui tremble, regarde ce qui se passe dans ta roue."
+    },
+    {
+      "id": "zero",
+      "text": "Tu écrases. Ta roue avant ralentit d'un coup : elle va se *bloquer*.",
+      "vo": "[firm, matter-of-fact] Tu écrases. [short pause] Ta roue avant ralentit d'un coup : elle va se bloquer.",
+      "hold": 0.2
+    },
+    {
+      "id": "reponse",
+      "text": "Première vanne : il isole ton frein. Deuxième vanne : il +relâche+ la pression. La roue repart… il resserre. Jusqu'à [40|quarante] fois par seconde.",
+      "vo": "[tense] Première vanne : il isole ton frein. Deuxième vanne : il relâche la pression. La roue repart... il resserre. [short pause] Jusqu'à quarante fois par seconde.",
+      "hold": 0.3
+    },
+    {
+      "id": "tourne",
+      "text": "Sous ton pied, ça tremble. Mais tes roues +tournent+ encore : tu braques… et la voiture *obéit*.",
+      "vo": "[serious] Sous ton pied, ça tremble. Mais tes roues tournent encore : tu braques... et la voiture obéit.",
+      "hold": 0.3
+    },
+    {
+      "id": "chute",
+      "text": "[L'ABS|L'a-bé-esse] ne sert pas d'abord à freiner plus court : sur du gravier, il t'arrête même plus *loin*. Il garde tes roues en vie… pour que tu puisses +tourner+.",
+      "vo": "[low, grave voice] L'a-bé-esse ne sert pas d'abord à freiner plus court : sur du gravier, il t'arrête même plus loin. Il garde tes roues en vie... pour que tu puisses tourner.",
+      "hold": 0.4
+    },
+    {
+      "id": "like",
+      "text": "+Like+. Pour celui qui lève le pied quand ça tremble.",
+      "vo": "[firm, matter-of-fact] Like. [short pause] Pour celui qui lève le pied quand ça tremble."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+. Prochain dossier : un Rafale se pose sur un porte-avions. Et quand il touche le pont… il met *plein gaz*.",
+      "vo": "[serious] Abonne-toi. Prochain dossier : un Rafale se pose sur un porte-avions. [short pause] Et quand il touche le pont... il met plein gaz.",
+      "hold": 0.4
+    },
+    {
+      "id": "comment",
+      "text": "Et le mauvais réflexe ? Ton pied veut relâcher. Ne relâche pas, ne pompe pas : tu écrases, tu tiens… et tu +tournes+. En commentaire : ta pédale a déjà tremblé ?",
+      "vo": "[curious] Et le mauvais réflexe ? [short pause] [serious] Ton pied veut relâcher. Ne relâche pas, ne pompe pas : tu écrases, tu tiens... et tu tournes. [short pause] [curious] En commentaire : ta pédale a déjà tremblé ?",
+      "hold": 0.3
+    },
+    {
+      "id": "boucle",
+      "text": "Parce que la prochaine fois, ce sera peut-être…",
+      "vo": "[calm] Parce que la prochaine fois, ce sera peut-être,",
+      "voAlt": [
+        "[serious] Parce que la prochaine fois, ce sera peut-être..."
+      ]
+    }
+  ],
+  "cues": {
+    "rain": "accroche:pluie-0.1",
+    "stamp": "accroche:écrases-0.1",
+    "shake": "accroche:trembler-0.15",
+    "car": "promesse:voiture-0.1",
+    "lets": "promesse:relâche-0.1",
+    "onpurpose": "promesse:Exprès-0.1",
+    "truck": "promesse:camion-0.1",
+    "sauf": "promesse:Sauf-0.14",
+    "reflex": "promesse:réflexe-0.15",
+    "toscene": "scene-0.14",
+    "v80": "scene:80-0.1",
+    "tooclose": "scene:Trop-0.1",
+    "turn": "scene:tourner-0.1",
+    "locked": "scene:bloquée-0.1",
+    "straight": "scene:droit-0.15",
+    "nothing": "scene:rien-0.1",
+    "back": "scene$+0.1",
+    "tosystem": "ouvre-0.14",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "p1": "eclate:couronne-0.15",
+    "p2": "eclate:capteur-0.15",
+    "p3": "eclate:calculateur-0.15",
+    "p4": "eclate:vannes-0.2",
+    "p5": "eclate:pompe-0.15",
+    "torepos": "repos-0.14",
+    "idle": "repos:rien-0.1",
+    "watch": "repos:surveille-0.1",
+    "four": "repos:quatre-0.1",
+    "toofast": "repos:trop-0.1",
+    "toseuil": "seuil-0.1",
+    "tozero": "zero-0.12",
+    "press": "zero:écrases-0.05",
+    "slows": "zero:ralentit-0.1",
+    "lock": "zero:bloquer-0.1",
+    "toreponse": "reponse-0.12",
+    "v1": "reponse:Première-0.1",
+    "isolate": "reponse:isole-0.1",
+    "v2": "reponse:Deuxième-0.1",
+    "trigger": "reponse:relâche-0.06",
+    "again": "reponse:repart-0.1",
+    "squeeze": "reponse:resserre-0.1",
+    "forty": "reponse:40-0.1",
+    "toturn": "tourne-0.12",
+    "pedal": "tourne:tremble-0.1",
+    "rolling": "tourne:tournent-0.1",
+    "steer": "tourne:braques-0.1",
+    "obeys": "tourne:obéit-0.1",
+    "toverdict": "chute-0.12",
+    "idea": "chute:court-0.1",
+    "gravel": "chute:gravier-0.1",
+    "far": "chute:loin-0.1",
+    "alive": "chute:vie-0.1",
+    "verdict": "chute:tourner-0.05",
+    "tocta": "like-0.12",
+    "toabo": "abo-0.1",
+    "next": "abo:Prochain-0.1",
+    "rafale": "abo:Rafale-0.1",
+    "deck": "abo:pont-0.1",
+    "throttle": "abo:plein-0.1",
+    "tocomment": "comment-0.12",
+    "wants": "comment:veut-0.1",
+    "dont": "comment:Ne-0.1",
+    "stomp": "comment:écrases-0.1",
+    "stay": "comment:tiens-0.1",
+    "go": "comment:tournes-0.1",
+    "ask": "comment:commentaire-0.3",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:prochaine-0.05"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "tosystem",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "rain",
+      "from": 0,
+      "to": "tosystem",
+      "gain": -27
+    },
+    {
+      "type": "impact",
+      "at": "stamp",
+      "gain": -13,
+      "size": 1.1
+    },
+    {
+      "type": "impact",
+      "at": "straight",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "rain",
+      "from": "tozero",
+      "to": "toverdict",
+      "gain": -28
+    },
+    {
+      "type": "impact",
+      "at": "press",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "clack",
+      "at": "isolate",
+      "gain": -12
+    },
+    {
+      "type": "clack",
+      "at": "trigger",
+      "gain": -9
+    },
+    {
+      "type": "clack",
+      "at": "squeeze",
+      "gain": -12
+    },
+    {
+      "type": "blip",
+      "at": "toofast",
+      "gain": -18,
+      "pitch": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "dont",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
