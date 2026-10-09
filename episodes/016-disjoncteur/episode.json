@@ -1,0 +1,392 @@
+{
+  "id": "016",
+  "slug": "disjoncteur",
+  "title": "Disjoncteur",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "coil+0.5",
+    "title": [
+      "Ton",
+      "disjoncteur"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 4.2,
+      "tz": 3,
+      "d": 44,
+      "az": -62,
+      "el": 28,
+      "shift": -455,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Disjoncteur : il laisse passer plus que son calibre, exprès — et il sait pourquoi. Ce qu'il surveille n'est pas ce que tu crois. Le tien, il saute sur quoi ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#disjoncteur",
+      "#electricite",
+      "#electricien"
+    ],
+    "pinned": "S'il ressaute ou si ça sent le chaud : on laisse coupé, on ne force pas, électricien. Le tien, il saute sur quoi ?",
+    "instagram": {
+      "caption": "Dans ton mur, un fil chauffe. Et ton disjoncteur… ne coupe pas.\n\nDossier 016 : le disjoncteur. Deux pièges dans la même boîte : un lent, un rapide.\n\nLe tien, il saute sur quoi ?",
+      "hashtags": [
+        "#disjoncteur",
+        "#electricite",
+        "#electricien",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Disjoncteur : pourquoi il ne coupe pas tout de suite (bilame, bobine, arc électrique)",
+      "description": "Dossier 016 — un disjoncteur ouvert : le bilame qui attend, la bobine qui frappe en moins de deux centièmes de seconde, et la chambre qui éteint l'arc.\n\nLe tien, il saute sur quoi ?",
+      "hashtags": [
+        "#shorts",
+        "#disjoncteur",
+        "#electricite",
+        "#electricien",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/016-disjoncteur.md ; contre-vérification phrase par phrase : docs/faits/016-contre-verification.md",
+    "Deux déclencheurs (Legrand) : un bilame — « deux lames qui vont se dilater sous l'effet de la chaleur » — pour la surcharge, une bobine pour le court-circuit : « plusieurs milliers d'ampères », déclenchement en moins de 0,02 s.",
+    "Les seuils du thermique (CEI 60898-1, citée par Schneider Electric, FAQ FA369327, et Hager) : courant conventionnel de non-déclenchement 1,13 fois le calibre, de déclenchement 1,45 fois, temps conventionnel une heure. Pour un 16 A : 18 A (1,125 fois) ne doit pas le faire déclencher en une heure ; 23,2 A (1,45 fois) doit le faire déclencher en moins d'une heure.",
+    "La chambre de coupure : « Le but de cette chambre est de couper le plus rapidement possible l'arc électrique » ; l'arc y est poussé, allongé, fractionné et refroidi (cours de formation, enseignons.be). Température d'un arc : des milliers de degrés — les sources divergent, aucun chiffre n'est dit.",
+    "Ce qu'il protège : les circuits, contre les échauffements (Legrand) ; la protection des personnes est celle du différentiel 30 mA (dossier 004).",
+    "Quand il saute (Legrand) : « Pour toute odeur de brûlé, échauffement inhabituel ou déclenchements répétés, laissez hors tension, ne forcez pas le réarmement » ; débrancher les appareils suspects avant de réarmer.",
+    "« 20 à 35 % des incendies d'habitation sont d'origine électrique » (Observatoire national de la sécurité électrique, baromètre 2024, cité au Sénat) : le film dit « jusqu'à un sur trois ». Isolant en PVC d'un câble : 70 °C en service (fiches de fabricants de câbles).",
+    "Simplifications assumées : la scène (une bouilloire et un radiateur d'appoint sur le même circuit, ≈ 18 A) est un scénario, les puissances ne sont pas affichées ; le mécanisme (manette, ressort, verrou que libèrent le bilame et la bobine) est le schéma type d'un disjoncteur modulaire, pas un modèle précis ; le temps réel de déclenchement dépend de la courbe du produit et de la température : le film ne donne que les bornes de la norme ; l'arc et sa coupure sont montrés au ralenti ; le disjoncteur est dessiné unipolaire et le neutre part d'un bornier (en France un divisionnaire coupe le plus souvent la phase et le neutre) ; le neutre est montré froid alors que le même courant y passe ; le bilame, le fil et la tresse sont grossis, la chambre de coupure est sans joue du côté de la caméra ; le compteur « Depuis » est accéléré et illustratif (quelques minutes au déclenchement de l'accroche, près d'une heure sur « il cuit ») ; la démonstration de l'autopsie se fait à 21 A (1,3 fois le calibre), valeur d'illustration entre les deux bornes de la norme : le bilame s'y tord sans déclencher, aucune durée n'est affichée ; la bouilloire et le radiateur sont comptés pour 9 A chacun.",
+    "Prochain dossier (017) : le bouton d'arrêt d'urgence d'une IRM « ne coupe pas le champ magnétique » (Siemens Healthineers) ; l'aimant reste sous champ en permanence — docs/faits/017-irm.md."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Dans ton mur, un fil *chauffe*. Et ton disjoncteur… ne coupe *pas*.",
+      "vo": "[tense] Dans ton mur, un fil chauffe. Et ton disjoncteur... ne coupe pas.",
+      "voAlt": [
+        "[firm, matter-of-fact] Dans ton mur, un fil chauffe. Et ton disjoncteur... ne coupe pas."
+      ]
+    },
+    {
+      "id": "promesse",
+      "text": "Il n'est pas en panne : il +attend+. Mais le jour où il saute… ne le relève pas *deux fois*.",
+      "vo": "[firm, matter-of-fact] Il n'est pas en panne : il attend. [short pause] [serious] Mais le jour où il saute... ne le relève pas deux fois.",
+      "hold": 0.3
+    },
+    {
+      "id": "scene",
+      "text": "Bouilloire, radiateur, la même multiprise : [18|dix-huit] ampères, sur un disjoncteur de [16|seize]. L'isolant du fil est fait pour [70|soixante-dix] degrés. Trop chaud, trop longtemps… il *cuit*.",
+      "vo": "[tense] Bouilloire, radiateur, la même multiprise : dix-huit ampères, sur un disjoncteur de seize. [short pause] L'isolant du fil est fait pour soixante-dix degrés. Trop chaud, trop longtemps... il cuit.",
+      "hold": 0.3
+    },
+    {
+      "id": "ouvre",
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "hold": 0.4
+    },
+    {
+      "id": "eclate",
+      "text": "Une manette, un ressort, deux contacts. Et sur le chemin du courant, deux pièges : un +bilame+… et une +bobine+.",
+      "vo": "Une manette, un ressort, deux contacts. Et sur le chemin du courant, deux pièges : un bilame... et une bobine.",
+      "hold": 0.3
+    },
+    {
+      "id": "repos",
+      "text": "Le bilame : deux métaux soudés. Le courant le chauffe, comme ton fil. Trop longtemps… il se +tord+.",
+      "vo": "[thoughtful] Le bilame : deux métaux soudés. Le courant le chauffe, comme ton fil. [short pause] Trop longtemps... il se tord."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ce fil qui chauffe, regarde ce qu'il fait au *bilame*.",
+      "vo": "[tense] Abonne-toi : ce fil qui chauffe, regarde ce qu'il fait au bilame."
+    },
+    {
+      "id": "zero",
+      "text": "À [18|dix-huit] ampères, la norme l'oblige à tenir au moins une heure. À [24|vingt-quatre]… à couper, en moins d'une heure. Le bilame se tord, et +déclenche+.",
+      "vo": "[firm, matter-of-fact] À dix-huit ampères, la norme l'oblige à tenir au moins une heure. À vingt-quatre... à couper, en moins d'une heure. [short pause] Le bilame se tord, et déclenche.",
+      "hold": 0.3
+    },
+    {
+      "id": "reponse",
+      "text": "Deux fils se touchent : *court-circuit*. Des milliers d'ampères. Le bilame n'a pas le temps. La bobine, si : moins de deux centièmes de seconde.",
+      "vo": "[tense] Deux fils se touchent : court-circuit. Des milliers d'ampères. Le bilame n'a pas le temps. [short pause] La bobine, si : moins de deux centièmes de seconde.",
+      "hold": 0.2
+    },
+    {
+      "id": "arc",
+      "text": "Les contacts s'écartent : un *arc*, à des milliers de degrés. Il file dans une chambre de plaques… qui le fractionne, et +l'éteint+.",
+      "vo": "[serious] Les contacts s'écartent : un arc, à des milliers de degrés. Il file dans une chambre de plaques... qui le fractionne, et l'éteint.",
+      "hold": 0.3
+    },
+    {
+      "id": "chute",
+      "text": "Voilà le secret : ton disjoncteur ne te protège pas, *toi*. Il protège le +fil+, dans ton mur. Toi, c'est son voisin : le différentiel.",
+      "vo": "[low, grave voice] Voilà le secret : ton disjoncteur ne te protège pas, toi. Il protège le fil, dans ton mur. Toi, c'est son voisin : le différentiel.",
+      "hold": 0.4
+    },
+    {
+      "id": "like",
+      "text": "+Like+. Entre un incendie de logement sur cinq et un sur trois est d'origine électrique : ça remontera chez quelqu'un.",
+      "vo": "[firm, matter-of-fact] Like. [short pause] Entre un incendie de logement sur cinq et un sur trois est d'origine électrique : ça remontera chez quelqu'un."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+. Prochain dossier : [l'IRM|l'i-èr-èm]. Son aimant reste allumé jour et nuit… et son bouton d'arrêt d'urgence ne le coupe *pas*.",
+      "vo": "[serious] Abonne-toi. Prochain dossier : l'i-èr-èm. [short pause] Son aimant reste allumé jour et nuit... et son bouton d'arrêt d'urgence ne le coupe pas.",
+      "hold": 0.4
+    },
+    {
+      "id": "comment",
+      "text": "Et s'il saute ? Tu débranches. Ça sent le brûlé : tu laisses coupé. Sinon tu le relèves, une fois. Il ressaute ? Tu n'insistes pas : électricien. En +commentaire+ : le tien, il saute sur quoi ?",
+      "vo": "[curious] Et s'il saute ? [short pause] [serious] Tu débranches. Ça sent le brûlé : tu laisses coupé. Sinon tu le relèves, une fois. Il ressaute ? Tu n'insistes pas : électricien. [short pause] [curious] En commentaire : le tien, il saute sur quoi ?",
+      "hold": 0.3
+    },
+    {
+      "id": "boucle",
+      "text": "Parce que ce soir, peut-être…",
+      "vo": "[calm] Parce que ce soir, peut-être,",
+      "voAlt": [
+        "[serious] Parce que ce soir, peut-être..."
+      ]
+    }
+  ],
+  "cues": {
+    "wire": "accroche:fil-0.1",
+    "hot": "accroche:chauffe-0.1",
+    "breaker": "accroche:disjoncteur-0.1",
+    "nocut": "accroche:coupe-0.1",
+    "nofault": "promesse:panne-0.1",
+    "waits": "promesse:attend-0.1",
+    "sauf": "promesse:Mais-0.14",
+    "trips": "promesse:saute-0.1",
+    "twice": "promesse:deux-0.15",
+    "toscene": "scene-0.14",
+    "kettle": "scene:Bouilloire-0.05",
+    "heater": "scene:radiateur-0.1",
+    "plug": "scene:multiprise-0.1",
+    "a18": "scene:18-0.1",
+    "a16": "scene:16-0.1",
+    "insul": "scene:L'isolant-0.1",
+    "deg70": "scene:70-0.1",
+    "cooks": "scene:cuit-0.15",
+    "back": "scene$+0.1",
+    "tosystem": "ouvre-0.14",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "p1": "eclate:manette-0.15",
+    "p2": "eclate:ressort-0.15",
+    "p3": "eclate:contacts-0.15",
+    "path": "eclate:chemin-0.1",
+    "traps": "eclate:pièges-0.1",
+    "p4": "eclate:bilame-0.15",
+    "p5": "eclate:bobine-0.15",
+    "torepos": "repos-0.14",
+    "metals": "repos:métaux-0.1",
+    "warms": "repos:chauffe-0.1",
+    "likewire": "repos:fil-0.1",
+    "toolong": "repos:Trop-0.1",
+    "bends": "repos:tord-0.1",
+    "toseuil": "seuil-0.1",
+    "tozero": "zero-0.12",
+    "hold18": "zero:18-0.1",
+    "norm": "zero:norme-0.1",
+    "hour": "zero:heure-0.1",
+    "a24": "zero:24-0.1",
+    "cut23": "zero:couper-0.1",
+    "hour2": "zero:heure#2-0.1",
+    "bend": "zero:tord-0.1",
+    "trigger": "zero:déclenche-0.06",
+    "toreponse": "reponse-0.12",
+    "short": "reponse:touchent-0.1",
+    "cc": "reponse:court-circuit-0.1",
+    "kiloamps": "reponse:milliers-0.1",
+    "notime": "reponse:temps-0.1",
+    "coil": "reponse:bobine-0.1",
+    "fast": "reponse:centièmes-0.1",
+    "trip2": "reponse$-0.1",
+    "toarc": "arc-0.12",
+    "opens": "arc:s'écartent-0.1",
+    "arcon": "arc:arc-0.1",
+    "hotarc": "arc:degrés-0.1",
+    "chamber": "arc:chambre-0.1",
+    "plates": "arc:plaques-0.1",
+    "split": "arc:fractionne-0.1",
+    "out": "arc:l'éteint-0.05",
+    "toverdict": "chute-0.12",
+    "secret": "chute:secret-0.1",
+    "notyou": "chute:toi-0.1",
+    "verdict": "chute:fil-0.05",
+    "wall": "chute:mur-0.1",
+    "neighbour": "chute:voisin-0.1",
+    "diff": "chute:différentiel-0.1",
+    "tocta": "like-0.12",
+    "fires": "like:incendie-0.1",
+    "third": "like:trois-0.1",
+    "someone": "like:quelqu'un-0.1",
+    "toabo": "abo-0.1",
+    "next": "abo:Prochain-0.1",
+    "mri": "abo:l'IRM-0.1",
+    "magnet": "abo:aimant-0.1",
+    "estop": "abo:d'urgence-0.1",
+    "nocut2": "abo:pas-0.1",
+    "tocomment": "comment-0.12",
+    "iftrips": "comment:saute-0.1",
+    "unplug": "comment:débranches-0.1",
+    "smell": "comment:brûlé-0.1",
+    "leave": "comment:laisses-0.1",
+    "once": "comment:relèves-0.1",
+    "again": "comment:ressaute-0.1",
+    "sparky": "comment:électricien-0.1",
+    "ask": "comment:commentaire-0.3",
+    "answer": "comment:quoi",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:soir-0.05"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.85
+        ],
+        [
+          "tosystem",
+          0.5
+        ],
+        [
+          "tozero",
+          0.8
+        ],
+        [
+          "short",
+          1
+        ],
+        [
+          "out",
+          0.5
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -15,
+      "size": 1
+    },
+    {
+      "type": "impact",
+      "at": "twice",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "riser",
+      "to": "trigger",
+      "dur": 1.2,
+      "gain": -24
+    },
+    {
+      "type": "clack",
+      "at": "trigger",
+      "gain": -9
+    },
+    {
+      "type": "impact",
+      "at": "short",
+      "gain": -11,
+      "size": 1.3
+    },
+    {
+      "type": "clack",
+      "at": "trip2",
+      "gain": -9
+    },
+    {
+      "type": "impact",
+      "at": "arcon",
+      "gain": -13,
+      "size": 1
+    },
+    {
+      "type": "blip",
+      "at": "out",
+      "gain": -16,
+      "pitch": 0.7
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "clack",
+      "at": "once",
+      "gain": -20
+    },
+    {
+      "type": "clack",
+      "at": "again",
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
