@@ -1,0 +1,404 @@
+{
+  "id": "015",
+  "slug": "brin-arret",
+  "title": "Brin d'arrêt",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "pulls+0.6",
+    "title": [
+      "Brin",
+      "d'arrêt"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 400,
+      "tz": -100,
+      "d": 6600,
+      "az": -58,
+      "el": 28,
+      "shift": -455,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Rafale, porte-avions Charles de Gaulle : cent mètres pour s'arrêter, et un câble d'acier en travers du pont. Ce qui le freine vraiment est caché dessous. Toi, cet appontage, tu le tentes ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#rafale",
+      "#porteavions",
+      "#marinenationale"
+    ],
+    "pinned": "Au toucher des roues, le pilote met pleine puissance (Marine nationale) : si la crosse rate les trois brins, il repart. Tu le tentes ?",
+    "instagram": {
+      "caption": "Tes roues touchent le pont du porte-avions. Et là… tu mets plein gaz.\n\nDossier 015 : le brin d'arrêt. Un Rafale, un câble d'acier, cent mètres — et sous le pont, ce qui freine vraiment.\n\nToi, cet appontage, tu le tentes ?",
+      "hashtags": [
+        "#rafale",
+        "#porteavions",
+        "#marinenationale",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Rafale sur porte-avions : pourquoi il met plein gaz en touchant le pont (brin d'arrêt)",
+      "description": "Dossier 015 — le brin d'arrêt du Charles de Gaulle : la crosse, le câble, et sous le pont le frein hydraulique qui arrête un Rafale en cent mètres.\n\nToi, cet appontage, tu le tentes ?",
+      "hashtags": [
+        "#shorts",
+        "#rafale",
+        "#porteavions",
+        "#marinenationale",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/015-brin-arret.md ; contre-vérification phrase par phrase : docs/faits/015-contre-verification.md",
+    "Plein gaz au toucher : « Au toucher des roues sur le pont, le pilote met systématiquement pleine puissance pour être en mesure de repartir dans le cas où il aurait raté tous les brins d'arrêt (ce que l'on appelle un bolter). » — Marine nationale, Bulletin de la Marine n° 237, octobre 2020. Le film ne montre pas de postcombustion : la source dit « pleine puissance ».",
+    "Trois brins sur le Charles de Gaulle, la crosse en accroche un ; chaque brin est relié à un système de freinage hydraulique qui le laisse se dérouler (même source ; kit pédagogique « Le grand Charles », ministère des Armées). Cadence : « De jour, la cadence d'appontage est d'un avion par minute » (même source).",
+    "Sous le pont : le câble transmet l'effort à un piston qui chasse de l'huile à travers une vanne de régulation (« oil is hydraulically forced out of a cylinder by a ram connected to the purchase cable, through a control valve » — Wikipédia EN, Arresting gear, système américain Mk 7). La Marine ne publie pas le modèle des presses du Charles de Gaulle : le film montre le principe, pas ce matériel précis. Réglage avant chaque appontage : « La tension et la course des brins doivent être adaptées à l'avion qui va se poser » (Wikipédia FR, Brin d'arrêt).",
+    "Ordres de grandeur, dits avec « environ » : plus de 200 km/h (220 pour le Rafale selon Wikipédia FR, 270 pour « un avion » selon la Marine) ; une centaine de mètres, deux à trois secondes. Les « 1,5 seconde » et « 4 g » qu'on lit partout ne tiennent pas avec la distance : ils ne sont pas dits.",
+    "USS Dwight D. Eisenhower, 18 mars 2016 : un brin se rompt à l'appontage d'un E-2C Hawkeye, huit marins blessés, l'avion reprend son vol et se pose à terre (Navy Times, 18 mars 2016) ; cause : une erreur de maintenance, la presse était mal réglée (rapport d'enquête cité par Navy Times, 14 juillet 2016).",
+    "Simplifications assumées : le pont, les brins et la presse sont une maquette — l'espacement des brins, la place de la presse sous le pont, le brin accroché (celui du milieu) et la longueur du pont ne sont pas sourcés pour le Charles de Gaulle et ne sont pas affichés ; la vitesse et le temps de l'en-tête (220 km/h, T+2,9 s, ≈ 90 m) sont cohérents entre eux (freinage régulier) et illustratifs ; la scène de 2016 est reconstituée sur notre pont, sans avion à l'image.",
+    "Prochain dossier (016) : un disjoncteur ne déclenche pas à 1,13 fois son calibre, et met jusqu'à une heure à 1,45 fois (Schneider Electric, Hager) — docs/faits/016-disjoncteur.md."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Tes roues touchent le pont du porte-avions. Et là… tu mets *plein gaz*.",
+      "vo": "[tense] Tes roues touchent le pont du porte-avions. Et là... tu mets plein gaz.",
+      "voAlt": [
+        "[firm, matter-of-fact] Tes roues touchent le pont du porte-avions. Et là... tu mets plein gaz."
+      ]
+    },
+    {
+      "id": "promesse",
+      "text": "C'est voulu : un câble va +t'arrêter+, en cent mètres. Sauf si tu le rates… ou s'il *casse*.",
+      "vo": "[firm, matter-of-fact] C'est voulu : un câble va t'arrêter, en cent mètres. [short pause] [serious] Sauf si tu le rates... ou s'il casse.",
+      "hold": 0.3
+    },
+    {
+      "id": "scene",
+      "text": "Ton Rafale arrive à plus de [200|deux cents] kilomètres-heure. Le pont, lui, finit dans la *mer*. En travers : trois câbles. Ta crosse doit en accrocher +un+.",
+      "vo": "[tense] Ton Rafale arrive à plus de deux cents kilomètres-heure. Le pont, lui, finit dans la mer. [short pause] En travers : trois câbles. Ta crosse doit en accrocher un.",
+      "hold": 0.3
+    },
+    {
+      "id": "ouvre",
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "hold": 0.4
+    },
+    {
+      "id": "eclate",
+      "text": "Sur le pont, un câble d'acier : le +brin+. Dessous, il continue : des poulies… et au bout, un piston dans un cylindre plein +d'huile+.",
+      "vo": "Sur le pont, un câble d'acier : le brin. Dessous, il continue : des poulies... et au bout, un piston dans un cylindre plein d'huile.",
+      "hold": 0.3
+    },
+    {
+      "id": "repos",
+      "text": "Avant chaque appontage, on règle ce frein pour l'avion qui arrive. Le câble, lui, ne freine rien : il ne sait que *tirer*.",
+      "vo": "[thoughtful] Avant chaque appontage, on règle ce frein pour l'avion qui arrive. [short pause] Le câble, lui, ne freine rien : il ne sait que tirer."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ces *cent mètres*, on te les montre en entier.",
+      "vo": "[tense] Abonne-toi : ces cent mètres, on te les montre en entier."
+    },
+    {
+      "id": "zero",
+      "text": "Tes roues touchent. *Plein gaz*. Ta crosse traîne sur le pont… et +accroche+.",
+      "vo": "[firm, matter-of-fact] Tes roues touchent. Plein gaz. [short pause] Ta crosse traîne sur le pont... et accroche.",
+      "hold": 0.2
+    },
+    {
+      "id": "reponse",
+      "text": "Le brin se déroule, tire le piston. Le piston chasse l'huile par une vanne étroite. L'huile +résiste+… et ta vitesse devient de la *chaleur*.",
+      "vo": "[tense] Le brin se déroule, tire le piston. Le piston chasse l'huile par une vanne étroite. [short pause] L'huile résiste... et ta vitesse devient de la chaleur.",
+      "hold": 0.3
+    },
+    {
+      "id": "arret",
+      "text": "Deux à trois secondes. Une centaine de mètres. Tu es +arrêté+.",
+      "vo": "[serious] Deux à trois secondes. Une centaine de mètres. [short pause] Tu es arrêté.",
+      "hold": 0.3
+    },
+    {
+      "id": "bolter",
+      "text": "Et si ta crosse les rate, tous les trois ? Tu es déjà à pleine puissance : au bout du pont… tu +redécolles+.",
+      "vo": "[curious] Et si ta crosse les rate, tous les trois ? [short pause] [tense] Tu es déjà à pleine puissance : au bout du pont... tu redécolles.",
+      "hold": 0.3
+    },
+    {
+      "id": "chute",
+      "text": "Voilà le secret : sur un porte-avions, tu ne *freines* pas. Tu es prêt à redécoller… et c'est un câble qui te +retient+.",
+      "vo": "[low, grave voice] Voilà le secret : sur un porte-avions, tu ne freines pas. Tu es prêt à redécoller... et c'est un câble qui te retient.",
+      "hold": 0.4
+    },
+    {
+      "id": "like",
+      "text": "+Like+. Pour ceux qui remettent ce câble en place : ici, il se pose jusqu'à un avion par *minute*.",
+      "vo": "[firm, matter-of-fact] Like. [short pause] Pour ceux qui remettent ce câble en place : ici, il se pose jusqu'à un avion par minute."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+. Prochain dossier : ton disjoncteur. Tu dépasses sa limite… et il ne coupe pas tout de suite. Il *attend*.",
+      "vo": "[serious] Abonne-toi. Prochain dossier : ton disjoncteur. [short pause] Tu dépasses sa limite... et il ne coupe pas tout de suite. Il attend.",
+      "hold": 0.4
+    },
+    {
+      "id": "comment",
+      "text": "Et s'il casse ? Mars [2016|deux mille seize], un porte-avions américain : frein mal réglé, le câble *casse*. Huit marins blessés. L'avion, lui… est reparti. En +commentaire+ : toi, tu le tentes ?",
+      "vo": "[curious] Et s'il casse ? [short pause] [serious] Mars deux mille seize, un porte-avions américain : frein mal réglé, le câble casse. Huit marins blessés. L'avion, lui... est reparti. [short pause] [curious] En commentaire : toi, tu le tentes ?",
+      "hold": 0.3
+    },
+    {
+      "id": "boucle",
+      "text": "Le brin revient en place. Et déjà…",
+      "vo": "[calm] Le brin revient en place. Et déjà,",
+      "voAlt": [
+        "[serious] Le brin revient en place. Et déjà..."
+      ]
+    }
+  ],
+  "cues": {
+    "touch": "accroche:touchent-0.1",
+    "deck": "accroche:pont-0.1",
+    "throttle": "accroche:plein-0.15",
+    "wanted": "promesse:voulu-0.1",
+    "cable": "promesse:câble-0.1",
+    "hundred": "promesse:cent-0.1",
+    "sauf": "promesse:Sauf-0.14",
+    "miss": "promesse:rates-0.1",
+    "breaks": "promesse:casse-0.15",
+    "toscene": "scene-0.14",
+    "v200": "scene:200-0.1",
+    "sea": "scene:mer-0.15",
+    "three": "scene:trois-0.1",
+    "crosse": "scene:crosse-0.1",
+    "catchone": "scene:accrocher-0.1",
+    "back": "scene$+0.1",
+    "tosystem": "ouvre-0.14",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "p1": "eclate:câble-0.15",
+    "brin": "eclate:brin-0.1",
+    "under": "eclate:Dessous-0.1",
+    "p2": "eclate:poulies-0.15",
+    "p3": "eclate:piston-0.15",
+    "p4": "eclate:cylindre-0.15",
+    "oil": "eclate:d'huile-0.15",
+    "torepos": "repos-0.14",
+    "setup": "repos:règle-0.1",
+    "arrives": "repos:arrive-0.1",
+    "nobrake": "repos:freine-0.1",
+    "pulls": "repos:tirer-0.1",
+    "toseuil": "seuil-0.1",
+    "tozero": "zero-0.12",
+    "wheels": "zero:touchent-0.05",
+    "gas": "zero:Plein-0.05",
+    "scrape": "zero:traîne-0.1",
+    "trigger": "zero:accroche-0.06",
+    "toreponse": "reponse-0.12",
+    "unreel": "reponse:déroule-0.1",
+    "ram": "reponse:tire-0.1",
+    "push": "reponse:chasse-0.1",
+    "valve": "reponse:vanne-0.1",
+    "resist": "reponse:résiste-0.1",
+    "eats": "reponse:vitesse-0.1",
+    "heats": "reponse:chaleur-0.15",
+    "toarret": "arret-0.12",
+    "secs": "arret:secondes-0.1",
+    "meters": "arret:mètres-0.1",
+    "stopped": "arret:arrêté-0.05",
+    "tobolter": "bolter-0.12",
+    "missed": "bolter:rate-0.1",
+    "allthree": "bolter:trois-0.1",
+    "power": "bolter:puissance-0.1",
+    "edge": "bolter:bout-0.1",
+    "fly": "bolter:redécolles-0.1",
+    "toverdict": "chute-0.12",
+    "secret": "chute:secret-0.1",
+    "noland": "chute:freines-0.1",
+    "again": "chute:redécoller-0.1",
+    "verdict": "chute:retient-0.05",
+    "tocta": "like-0.12",
+    "crew": "like:remettent-0.1",
+    "perminute": "like:minute-0.1",
+    "toabo": "abo-0.1",
+    "next": "abo:Prochain-0.1",
+    "breaker": "abo:disjoncteur-0.1",
+    "limit": "abo:limite-0.1",
+    "waits": "abo:attend-0.1",
+    "tocomment": "comment-0.12",
+    "ifbreaks": "comment:casse-0.1",
+    "y2016": "comment:2016-0.1",
+    "misset": "comment:réglé-0.1",
+    "parts": "comment:casse#2-0.1",
+    "hurt": "comment:Huit-0.1",
+    "away": "comment:reparti-0.1",
+    "ask": "comment:commentaire-0.3",
+    "answer": "comment:tentes",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:déjà-0.05"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.9
+        ],
+        [
+          "tosystem",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "stopped",
+          0.5
+        ],
+        [
+          "tobolter",
+          0.9
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": "touch",
+      "gain": -12,
+      "size": 1.3
+    },
+    {
+      "type": "riser",
+      "to": "throttle",
+      "dur": 0.9,
+      "gain": -24
+    },
+    {
+      "type": "impact",
+      "at": "breaks",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "blip",
+      "at": "setup",
+      "gain": -18,
+      "pitch": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "wheels",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "trigger",
+      "dur": 1.1,
+      "gain": -22
+    },
+    {
+      "type": "clack",
+      "at": "trigger",
+      "gain": -9
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -11,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "stopped",
+      "gain": -16,
+      "pitch": 0.7
+    },
+    {
+      "type": "riser",
+      "to": "fly",
+      "dur": 1.2,
+      "gain": -23
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "clack",
+      "at": "parts",
+      "gain": -10
+    },
+    {
+      "type": "impact",
+      "at": "parts",
+      "gain": -13,
+      "size": 1.1
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
