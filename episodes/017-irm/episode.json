@@ -1,0 +1,364 @@
+{
+  "id": "017",
+  "slug": "irm",
+  "title": "IRM",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "helium+0.5",
+    "title": [
+      "L'aimant",
+      "de l'IRM"
+    ],
+    "cam": {
+      "tx": 6,
+      "ty": 104,
+      "tz": 5,
+      "d": 1560,
+      "az": -40,
+      "el": 28,
+      "shift": -560,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "IRM : la machine se tait, mais son aimant ne dort pas. Et le bouton qui l'éteint vraiment n'est pas celui que tu crois. Tu as déjà passé une IRM ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#irm",
+      "#hopital",
+      "#science"
+    ],
+    "pinned": "Une IRM silencieuse n'est pas éteinte : son aimant reste sous champ, jour et nuit. Tu as déjà passé une IRM ?",
+    "instagram": {
+      "caption": "L'IRM s'est tue. Tu entres… et ta bouteille d'oxygène t'est arrachée des mains.\n\nDossier 017 : l'aimant de l'IRM. 1,5 tesla, jour et nuit — et le bouton qui l'éteint vraiment.\n\nTu as déjà passé une IRM ?",
+      "hashtags": [
+        "#irm",
+        "#hopital",
+        "#radiologie",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "IRM : son aimant reste allumé jour et nuit (et l'arrêt d'urgence ne le coupe pas)",
+      "description": "Dossier 017 — l'IRM ouverte : le fil supraconducteur dans son bain d'hélium, l'arrêt d'urgence qui ne coupe pas le champ, et l'arrêt de l'aimant.\n\nTu as déjà passé une IRM ?",
+      "hashtags": [
+        "#shorts",
+        "#irm",
+        "#hopital",
+        "#radiologie",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/017-irm.md ; contre-vérification phrase par phrase : docs/faits/017-contre-verification.md",
+    "Les deux boutons (Siemens Healthineers, notice d'utilisation) : l'arrêt d'urgence électrique ne coupe pas le champ magnétique ; l'arrêt de l'aimant (Magnet Stop), sous un couvercle scellé, évacue l'hélium au-dehors par le tube de quench et fait tomber le champ « within seconds » ; on le presse aussitôt si une personne est coincée et blessée. C'est un dernier recours.",
+    "Le champ reste présent en permanence, examen ou non (« assume the main magnetic field is always ON », mriquestions.com) ; 1,5 tesla ≈ 30 000 fois le champ terrestre ; l'hélium liquide est à −269 °C ; passé à l'état de gaz, il occupe ≈ 700 fois plus de place. Le bruit de l'examen vient des bobines de gradient, pas de l'aimant.",
+    "L'ordre des causes d'un quench : une portion du fil cesse d'être supraconductrice et chauffe, cette chaleur fait bouillir l'hélium, le gaz sort par le tube, le champ tombe.",
+    "« Des dizaines de milliers d'euros » : ordre de grandeur donné par des vendeurs et des sociétés de maintenance (jusqu'à ≈ 100 000 €, des jours à des semaines d'arrêt), pas un prix officiel.",
+    "Simplifications assumées : la scène (tu entres avec une bouteille d'oxygène en acier, quelqu'un est retenu contre la machine) est un scénario — des accidents de ce type sont documentés (2001, 2018, 2025), aucun n'est nommé ni reconstitué, personne n'est blessé à l'image ; « un seul bouton l'éteint » vaut pour l'urgence (une descente en champ contrôlée par un technicien existe, et les aimants permanents à bas champ n'ont pas ce bouton) ; certains aimants récents n'ont presque plus d'hélium ni de tube de quench ; dans la maquette, le tube du tunnel, le manchon des gradients et la cuve dépassent l'un de l'autre pour se lire, le nombre d'anneaux et de lignes de champ est illustratif, la ligne au sol aussi (en France la zone d'exclusion est à 0,5 mT, sa forme dépend de l'aimant).",
+    "Prochain dossier (018) : la cocotte-minute — annoncée sans aucun fait ; son dossier de faits : docs/faits/018-cocotte-minute.md."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "[L'IRM|L'i-èr-èm] s'est tue. Tu entres… et ta bouteille d'oxygène t'est *arrachée* des mains.",
+      "vo": "[tense] L'i-èr-èm s'est tue. Tu entres... et ta bouteille d'oxygène t'est arrachée des mains.",
+      "voAlt": [
+        "[firm, matter-of-fact] L'i-èr-èm s'est tue. Tu entres... et ta bouteille d'oxygène t'est arrachée des mains."
+      ]
+    },
+    {
+      "id": "promesse",
+      "text": "Son aimant reste allumé, jour et nuit. En urgence, un seul bouton +l'éteint+… et ce n'est *pas* l'arrêt d'urgence.",
+      "vo": "[firm, matter-of-fact] Son aimant reste allumé, jour et nuit. [short pause] [serious] En urgence, un seul bouton l'éteint... et ce n'est pas l'arrêt d'urgence.",
+      "hold": 0.3
+    },
+    {
+      "id": "scene",
+      "text": "[1,5|Un virgule cinq] tesla : [30 000|trente mille] fois le champ de la Terre. Ici, le moindre objet en fer devient un *projectile*… et un objet lourd peut coincer quelqu'un contre la machine.",
+      "vo": "[tense] Un virgule cinq tesla : trente mille fois le champ de la Terre. [short pause] Ici, le moindre objet en fer devient un projectile... et un objet lourd peut coincer quelqu'un contre la machine.",
+      "hold": 0.3
+    },
+    {
+      "id": "ouvre",
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "hold": 0.4
+    },
+    {
+      "id": "eclate",
+      "text": "Un tunnel. Des bobines qui cognent : le bruit, c'est elles. Et autour, le vrai aimant : du fil, noyé dans +l'hélium+ liquide.",
+      "vo": "Un tunnel. Des bobines qui cognent : le bruit, c'est elles. Et autour, le vrai aimant : du fil, noyé dans l'hélium liquide.",
+      "hold": 0.3
+    },
+    {
+      "id": "repos",
+      "text": "À moins [269|deux cent soixante-neuf] degrés, ce fil n'a plus de résistance : le courant y tourne tout seul, sans prise. Silencieuse… ne veut pas dire *éteinte*.",
+      "vo": "[thoughtful] À moins deux cent soixante-neuf degrés, ce fil n'a plus de résistance : le courant y tourne tout seul, sans prise. [short pause] Silencieuse... ne veut pas dire éteinte."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : cet aimant toujours allumé, regarde comment on *l'éteint*.",
+      "vo": "[tense] Abonne-toi : cet aimant toujours allumé, regarde comment on l'éteint."
+    },
+    {
+      "id": "zero",
+      "text": "Quelqu'un est coincé. Tu frappes l'arrêt d'urgence : la machine s'éteint. Le champ, lui… ne bouge *pas*.",
+      "vo": "[firm, matter-of-fact] Quelqu'un est coincé. Tu frappes l'arrêt d'urgence : la machine s'éteint. [short pause] Le champ, lui... ne bouge pas.",
+      "hold": 0.2
+    },
+    {
+      "id": "reponse",
+      "text": "L'autre bouton, sous son capot : l'arrêt de l'aimant. Le fil chauffe, l'hélium bout, se dilate sept cents fois, file dehors par un tube… et le champ +tombe+, en quelques secondes.",
+      "vo": "[tense] L'autre bouton, sous son capot : l'arrêt de l'aimant. [short pause] Le fil chauffe, l'hélium bout, se dilate sept cents fois, file dehors par un tube... et le champ tombe, en quelques secondes.",
+      "hold": 0.3
+    },
+    {
+      "id": "chute",
+      "text": "Voilà le secret : une [IRM|i-èr-èm] qui se tait n'est pas éteinte. L'éteindre d'un coup, c'est la *vider*… des dizaines de milliers d'euros. Le dernier recours.",
+      "vo": "[low, grave voice] Voilà le secret : une i-èr-èm qui se tait n'est pas éteinte. L'éteindre d'un coup, c'est la vider... des dizaines de milliers d'euros. Le dernier recours.",
+      "hold": 0.4
+    },
+    {
+      "id": "like",
+      "text": "+Like+. Pour celui qui entrera un jour dans cette salle… avec ses clés en poche.",
+      "vo": "[firm, matter-of-fact] Like. [short pause] Pour celui qui entrera un jour dans cette salle... avec ses clés en poche."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+. Prochain dossier : ta cocotte-minute. Pourquoi elle siffle… et ce qui se passe quand elle ne siffle *plus*.",
+      "vo": "[serious] Abonne-toi. Prochain dossier : ta cocotte-minute. [short pause] Pourquoi elle siffle... et ce qui se passe quand elle ne siffle plus.",
+      "hold": 0.4
+    },
+    {
+      "id": "comment",
+      "text": "Et ce bouton ? Il n'est pas pour toi : le personnel le presse si quelqu'un est coincé, en danger. Toi, ta sécurité, c'est le questionnaire… et des poches vides. En +commentaire+ : tu as déjà passé une [IRM|i-èr-èm] ?",
+      "vo": "[curious] Et ce bouton ? [short pause] [serious] Il n'est pas pour toi : le personnel le presse si quelqu'un est coincé, en danger. Toi, ta sécurité, c'est le questionnaire... et des poches vides. [short pause] [curious] En commentaire : tu as déjà passé une i-èr-èm ?",
+      "hold": 0.3
+    },
+    {
+      "id": "boucle",
+      "text": "Parce que cet aimant tire encore, même quand…",
+      "vo": "[calm] Parce que cet aimant tire encore, même quand,",
+      "voAlt": [
+        "[serious] Parce que cet aimant tire encore, même quand..."
+      ]
+    }
+  ],
+  "cues": {
+    "silent": "accroche:tue-0.1",
+    "enter": "accroche:entres-0.1",
+    "bottle": "accroche:bouteille-0.1",
+    "ripped": "accroche:arrachée-0.15",
+    "magnet": "promesse:aimant-0.1",
+    "daynight": "promesse:jour-0.1",
+    "sauf": "promesse:En-0.14",
+    "button": "promesse:bouton-0.1",
+    "notstop": "promesse:pas-0.15",
+    "toscene": "scene-0.14",
+    "tesla": "scene:tesla-0.1",
+    "earth": "scene:Terre-0.1",
+    "iron": "scene:fer-0.1",
+    "missile": "scene:projectile-0.15",
+    "pinned": "scene:coincer-0.1",
+    "back": "scene$+0.1",
+    "tosystem": "ouvre-0.14",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "p1": "eclate:tunnel-0.15",
+    "p2": "eclate:bobines-0.15",
+    "noise": "eclate:bruit-0.1",
+    "p3": "eclate:aimant-0.15",
+    "p4": "eclate:fil-0.15",
+    "helium": "eclate:l'hélium-0.15",
+    "torepos": "repos-0.14",
+    "cold": "repos:269-0.1",
+    "noresist": "repos:résistance-0.1",
+    "alone": "repos:seul-0.1",
+    "noplug": "repos:prise-0.1",
+    "quiet": "repos:Silencieuse-0.1",
+    "noff": "repos:éteinte-0.1",
+    "toseuil": "seuil-0.1",
+    "tozero": "zero-0.12",
+    "stuck": "zero:coincé-0.1",
+    "estop": "zero:d'urgence-0.1",
+    "machineoff": "zero:s'éteint-0.1",
+    "fieldon": "zero:champ-0.1",
+    "stillon": "zero:pas-0.1",
+    "toreponse": "reponse-0.12",
+    "other": "reponse:L'autre-0.1",
+    "hood": "reponse:capot-0.1",
+    "trigger": "reponse:l'arrêt-0.06",
+    "warms": "reponse:chauffe-0.1",
+    "boils": "reponse:bout#2-0.1",
+    "expands": "reponse:dilate-0.1",
+    "vent": "reponse:dehors-0.1",
+    "tube": "reponse:tube-0.1",
+    "falls": "reponse:tombe-0.1",
+    "seconds": "reponse:secondes-0.1",
+    "toverdict": "chute-0.12",
+    "secret": "chute:secret-0.1",
+    "notoff": "chute:éteinte-0.1",
+    "verdict": "chute:vider-0.05",
+    "cost": "chute:dizaines-0.1",
+    "last": "chute:dernier-0.1",
+    "tocta": "like-0.12",
+    "keys": "like:clés-0.1",
+    "toabo": "abo-0.1",
+    "next": "abo:Prochain-0.1",
+    "cooker": "abo:cocotte-minute-0.1",
+    "whistle": "abo:siffle-0.1",
+    "nomore": "abo:plus-0.1",
+    "tocomment": "comment-0.12",
+    "thatbutton": "comment:bouton-0.1",
+    "notyou": "comment:toi-0.1",
+    "staff": "comment:personnel-0.1",
+    "danger": "comment:danger-0.1",
+    "form": "comment:questionnaire-0.1",
+    "pockets": "comment:poches-0.1",
+    "ask": "comment:commentaire-0.3",
+    "answer": "comment:IRM",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:même-0.05"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.85
+        ],
+        [
+          "tosystem",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "falls",
+          0.5
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "riser",
+      "to": "ripped",
+      "dur": 0.9,
+      "gain": -23
+    },
+    {
+      "type": "impact",
+      "at": "ripped",
+      "gain": -11,
+      "size": 1.4
+    },
+    {
+      "type": "impact",
+      "at": "notstop",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "clack",
+      "at": "estop",
+      "gain": -11
+    },
+    {
+      "type": "blip",
+      "at": "stillon",
+      "gain": -17,
+      "pitch": 0.8
+    },
+    {
+      "type": "riser",
+      "to": "trigger",
+      "dur": 1.1,
+      "gain": -22
+    },
+    {
+      "type": "clack",
+      "at": "trigger",
+      "gain": -9
+    },
+    {
+      "type": "impact",
+      "at": "boils",
+      "gain": -12,
+      "size": 1.3
+    },
+    {
+      "type": "blip",
+      "at": "falls",
+      "gain": -16,
+      "pitch": 0.7
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
