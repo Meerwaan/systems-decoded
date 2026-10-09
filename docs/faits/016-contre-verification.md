@@ -1,0 +1,35 @@
+# Contre-vérification du script 016 — disjoncteur divisionnaire
+
+Faite le 2026-10-09, avant enregistrement. 3 recherches web sur 15, plus relecture du dossier de faits. Limites : la norme NF EN 60898-1 n'a pas été lue ; le schéma TT en logement et la NF C 15-100 viennent de FAQ de fabricants (Legrand, Engie) et de connaissance générale (niveau B/C).
+
+Sources : [L1] Legrand, FAQ « comment fonctionne un disjoncteur en cas de surcharges » (A) · [L2] Legrand, FAQ « que faire quand un disjoncteur saute » (A) · [S] Schneider FA369327 (A) · [H] Hager Belgique et hager.com/fr (A) · [E] cours enseignons.be (B) · [L3] Legrand FAQ « comment brancher un interrupteur différentiel 30 mA » (A, résumé de recherche) · [Sén] Sénat, ONSE 2024 (B).
+
+| Beat | Phrase | Verdict | Source | Réécriture |
+| --- | --- | --- | --- | --- |
+| accroche | Dans ton mur, un fil chauffe. Et ton disjoncteur… ne coupe pas. | tient (à 18 A, 1,13 In = 18,08 A : il ne doit pas couper) | [S] A | — |
+| promesse | Il n'est pas en panne : il attend. … ne le relève pas deux fois. | tient ; « relever » = langage courant (Legrand dit « réarmer ») | [L2] A | optionnel : « …ne le réarme pas deux fois. » |
+| scene 1 | Bouilloire, radiateur, la même prise : dix-huit ampères, sur un disjoncteur de seize. | à nuancer : une prise 16 A seule ne porte pas deux appareils ; c'est une multiprise. Puissances (2 200 + 2 000 W = 18,3 A) plausibles, circuit prises 16 A / 1,5 mm² conforme NF C 15-100 | [H] A (circuit), puissances C | « Bouilloire, radiateur, la même multiprise : dix-huit ampères, sur un disjoncteur de seize. » |
+| scene 2 | L'isolant du fil tient soixante-dix degrés. Au-delà… il cuit. | à nuancer : 70 °C est la température maximale en service permanent du PVC, pas un seuil de destruction (160 °C en court-circuit) ; « au-delà il cuit » est trop brutal | Prysmian / BS 6004, C+ | « L'isolant du fil est fait pour soixante-dix degrés. Trop chaud, trop longtemps… il *cuit*. » |
+| ouvre | Alors… on l'ouvre. | — | — | — |
+| eclate | Une manette, un ressort, deux contacts. … deux pièges : une lame de métal… et une bobine. | tient (thermique en série avec magnétique). Vocabulaire : un électricien dit « bilame » et « déclencheur magnétique » | [L1] A, [E] B | « …deux pièges : un bilame… et une bobine. » |
+| repos | La lame : deux métaux soudés. Le courant la chauffe, comme ton fil. Trop longtemps… elle se tord. | tient. Bilame chauffé par effet Joule, le plus souvent directement par le courant ; certains modèles ont un chauffage séparé ou mixte (brevets). « comme ton fil » défendable (même effet Joule). « Soudés » : accepté (assemblés) | [E] B, techno-science, brevet EP C | « Le bilame : deux métaux soudés. Le courant le chauffe, comme ton fil. Trop longtemps… il se tord. » |
+| seuil | … ce fil qui chauffe, regarde ce qu'il fait à la lame. | tient (voir vocabulaire) | — | « …ce qu'il fait au bilame. » si « bilame » est adopté partout |
+| zero 1 | À dix-huit ampères, la norme l'oblige à tenir : une heure au moins. | tient : 18 A < 1,13 In (18,08 A), pas de déclenchement avant 1 h (courant conventionnel de non-déclenchement) | [S] A, [H] A | « À dix-huit ampères, la norme l'oblige à tenir au moins une heure. » (même sens, plus net) |
+| zero 2 | À vingt-trois… à couper, en moins d'une heure. | **ne tient pas** : 23 A est sous 1,45 In (23,2 A), la norme n'impose rien à 23 A. Un électricien le verra | [S] A | « À vingt-quatre… à couper, en moins d'une heure. » (24 A = 1,5 In) ; mettre `[24|vingt-quatre]` dans `text` |
+| zero 3 | La lame se tord, et déclenche. | tient | [L1] A | idem bilame |
+| reponse 1 | Deux fils se touchent : court-circuit. Des milliers d'ampères. | tient (« plusieurs milliers d'ampères ») | [L1] A | — |
+| reponse 2 | La lame n'a pas le temps. La bobine, si : moins de deux centièmes de seconde. | tient (« < 0,02 s », borne haute vraie ; le cours donne même 0,1 s au maximum) | [L1] A, [E] B | « Le bilame n'a pas le temps. La bobine, si : … » |
+| arc | Les contacts s'écartent : un arc, à des milliers de degrés. Il file dans une chambre de plaquettes… qui le découpe, et l'éteint. | tient pour l'arc et la chambre (Laplace pousse l'arc, il est allongé, fractionné, refroidi). Vocabulaire : « chambre de coupure », plaques (« déion »), pas « plaquettes » ; « le fractionne » est le mot juste | [E] B, fiches fabricants C | « Il file dans une chambre de plaques… qui le fractionne, et l'éteint. » |
+| chute 1 | ton disjoncteur ne te protège pas, toi. Il protège le fil, dans ton mur. | tient (Legrand : évite les échauffements des circuits ; le divisionnaire est une protection de canalisation) | [L1] A, [E] B | — |
+| chute 2 | Toi, c'est son voisin : le différentiel. | tient : en logement (schéma TT, cas général du branchement particulier) la protection des personnes est faite par le différentiel 30 mA, placé en tête de rangée, en amont des divisionnaires qu'il protège, donc dans la même rangée | [L3] A, TT = connaissance générale (B) | optionnel : « Toi, c'est le différentiel, juste à côté. » Si un disjoncteur différentiel combiné existe, il fait les deux : le film parle du divisionnaire seul |
+| like | Jusqu'à un incendie de logement sur trois est d'origine électrique | à nuancer : source = 20 à 35 % (ONSE 2024 cité au Sénat). « Jusqu'à un sur trois » = 33 %, sous la borne haute de 35 %, et omet la borne basse | [Sén] B | « Entre un incendie de logement sur cinq et un sur trois est d'origine électrique : » |
+| abo | Prochain dossier : l'IRM. Son aimant reste allumé jour et nuit… et l'arrêt d'urgence ne le coupe pas. | tient : champ toujours actif ; le bouton d'arrêt d'urgence électrique « ne coupe pas le champ » (Siemens) ; seul l'arrêt de l'aimant (quench) le fait. Risque : l'« arrêt de l'aimant » peut aussi se dire arrêt d'urgence | Siemens A, healthmanagement B (`017-irm.md` §4) | « …et son bouton d'arrêt d'urgence ne le coupe pas. » |
+| comment | Tu débranches, tu le relèves une fois. Il ressaute, ou ça sent le chaud : tu laisses coupé, et tu appelles un électricien. | à nuancer : l'odeur se contrôle AVANT de réarmer (Legrand : odeur de brûlé, échauffement, déclenchements répétés → hors tension, ne pas forcer le réarmement). « Ça sent le chaud » est flou | [L2] A | « Tu débranches. Ça sent le brûlé, ou il ressaute après un seul réarmement : tu laisses coupé, et tu appelles un électricien. » |
+| boucle | Parce que ce soir, peut-être… | — | — | — |
+
+## Vocabulaire (point 12)
+- « lame » → **bilame** (premier emploi au moins) ; « bobine » : acceptable (déclencheur magnétique) ; « plaquettes » → **plaques** ; « découpe » → **fractionne** ; « il saute » : courant, titre même de la FAQ Legrand ; « relever » : courant mais « réarmer » est le terme ; « tenir » : correct (ne pas déclencher avant 1 h).
+- Ne pas confondre divisionnaire et disjoncteur de branchement, ni disjoncteur différentiel (combiné) et interrupteur différentiel.
+
+## Non vérifié
+Temps réel d'un C16 à 24 A (courbe produit) ; norme lue ; part exacte des causes d'incendie imputables à un disjoncteur ; 70 °C selon le type de câble (les anciens câbles ou la gaine caoutchouc diffèrent).
