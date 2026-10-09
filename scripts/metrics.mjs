@@ -68,10 +68,10 @@ export function chrono(ep, what, name, flags) {
   if (what === "agent") {
     if (!name) throw new Error("npm run chrono -- 012 agent <nom> --genre faits|verif|decor|acte --jetons N [--min N --outils N --images N --modele sonnet]");
     const num = (k) => (flags[k] != null ? Number(flags[k]) : undefined);
-    const row = { nom: name, genre: flags.genre ?? "autre", modele: flags.modele, jetons: num("jetons"), minutes: num("min"), outils: num("outils"), images: num("images"), note: flags.note };
+    const row = { nom: name, genre: flags.genre, modele: flags.modele, jetons: num("jetons"), minutes: num("min"), outils: num("outils"), images: num("images"), note: flags.note };
     const i = e.agents.findIndex((a) => a.nom === name);
     if (i >= 0) e.agents[i] = { ...e.agents[i], ...Object.fromEntries(Object.entries(row).filter(([, v]) => v !== undefined)) };
-    else e.agents.push(row);
+    else e.agents.push({ ...row, genre: row.genre ?? "autre" });
     console.log(`\n  ${ep} · agent ${name} : ${tok(row.jetons)}${row.minutes ? ` · ${dur(row.minutes)}` : ""}\n`);
   } else if (what === "jauge") {
     e.jauges.push({ t, quoi: flags.quoi ?? "", session: Number(flags.session), hebdo: Number(flags.hebdo) });

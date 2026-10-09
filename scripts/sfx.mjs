@@ -316,6 +316,42 @@ export function sfx(dir, { ep = loadEpisode(dir), sched = schedule(ep), force = 
         return (lp - hp) * buzz * Math.exp(-t / (dur * 0.5)) * Math.min(1, t / 0.001) * g;
       }, fx);
     },
+    // gas leaving a burner: a steady band of high noise with a thin whistle in it (`tone` 1) — or, at `tone` 0,
+    // something wetter and lower that spits: a pan boiling over onto a flame. It ends short: the valve shuts.
+    hiss({ from, to, gain = -26, tone = 1 }) {
+      const t0 = at(from);
+      const t1 = at(to);
+      const g = db(gain);
+      const noise = rng(Math.round(t0 * 1000) + 73);
+      const k = 0.1 + 0.16 * tone; // where the band starts: higher for dry gas
+      let lp = 0;
+      let hp = 0;
+      let spit = 0;
+      write(t0, t1 - t0, 0, (t) => {
+        const x = noise() * 2 - 1;
+        lp += 0.7 * (x - lp);
+        hp += k * (lp - hp);
+        if (noise() < (1 - tone) * 0.0009) spit = 1; // droplets on hot metal
+        spit *= 0.9985;
+        const whistle = Math.sin(TAU * 3400 * t) * 0.05 * tone;
+        const env = Math.min(1, t / 0.18) * Math.min(1, (t1 - t0 - t) / 0.05);
+        return ((lp - hp) * (0.85 + 0.15 * Math.sin(TAU * 0.23 * t) + (1 - tone) * 0.9 * spit) + whistle) * env * g;
+      }, under);
+    },
+    // a spring-loaded valve snapping shut: the click of metal on its seat — what a phone plays — and the knock of the body behind it
+    clack({ at: ref, gain = -8, pan = 0 }) {
+      const t0 = at(ref);
+      const g = db(gain);
+      const noise = rng(Math.round(t0 * 1000) + 17);
+      let lp = 0;
+      write(t0, 0.3, pan, (t) => {
+        lp += 0.6 * (noise() * 2 - 1 - lp);
+        const click = (Math.sin(TAU * 2900 * t) + 0.6 * Math.sin(TAU * 4300 * t) + lp * 0.8) * Math.exp(-t / 0.006);
+        const u = Math.max(0, t - 0.011);
+        const knock = t < 0.011 ? 0 : (Math.sin(TAU * 520 * u) + 0.5 * Math.sin(TAU * 860 * u) + 0.35 * Math.sin(TAU * 190 * u)) * Math.exp(-u / 0.035);
+        return (click * 0.7 + knock) * Math.min(1, t / 0.0006) * g;
+      });
+    },
   };
 
   for (const item of list) {

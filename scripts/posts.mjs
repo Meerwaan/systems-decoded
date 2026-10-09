@@ -129,6 +129,72 @@ const POSTS = {
       hashtags: ["#shorts", "#voitureelectrique", "#tesla", "#securiteroutiere", "#science"],
     },
   },
+  "012-gaziniere": {
+    instagram: {
+      caption: "Ta casserole déborde. La flamme s'éteint. Le gaz, lui, sort toujours.\n\nDossier 012 : la gazinière. Une minute, en temps réel, jusqu'à ce qu'il se coupe tout seul — sans prise ni pile.\n\nLa tienne, elle a la petite pointe à côté de la flamme ?",
+      hashtags: ["#gaziniere", "#cuisine", "#gaz", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Gazinière : la flamme s'éteint, le gaz continue… et ce qui le coupe en une minute",
+      description: "Dossier 012 — la sécurité d'une plaque à gaz, filmée en temps réel : de la flamme qui s'éteint au gaz qui se coupe, sans prise ni pile.\n\nLa tienne, elle a la petite pointe à côté de la flamme ?",
+      hashtags: ["#shorts", "#gaziniere", "#cuisine", "#gaz", "#science"],
+    },
+  },
+  "013-halo": {
+    instagram: {
+      caption: "Premier tour. Ta Formule 1 traverse un rail d'acier, et prend feu.\n\nDossier 013 : le Halo. 192 km/h, 67 g, le feu — et un arceau de titane entre ton casque et l'acier.\n\nToi, ce Halo, tu étais pour… ou contre ?",
+      hashtags: ["#f1", "#formule1", "#halo", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Halo de Formule 1 : 192 km/h dans un rail d'acier, le feu… et l'arceau qui tient",
+      description: "Dossier 013 — le Halo, raconté par un accident réel : Bahreïn 2020, premier tour. Ce que fait vraiment cet arceau de titane au-dessus du casque.\n\nToi, tu étais pour ou contre ?",
+      hashtags: ["#shorts", "#f1", "#formule1", "#halo", "#science"],
+    },
+  },
+  "014-abs": {
+    instagram: {
+      caption: "Sous la pluie, tu écrases le frein… et ta pédale se met à trembler.\n\nDossier 014 : l'ABS. Ce tremblement, c'est ta voiture qui travaille — jusqu'à 40 fois par seconde.\n\nTa pédale, elle a déjà tremblé ?",
+      hashtags: ["#abs", "#voiture", "#securiteroutiere", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "ABS : pourquoi ta pédale de frein tremble (et pourquoi il ne faut pas la lâcher)",
+      description: "Dossier 014 — l'ABS ouvert : le capteur, le calculateur, les deux vannes et la pompe, et ce qui se passe dans ta roue quand tu écrases le frein sous la pluie.\n\nTa pédale, elle a déjà tremblé ?",
+      hashtags: ["#shorts", "#abs", "#voiture", "#securiteroutiere", "#science"],
+    },
+  },
+  "015-brin-arret": {
+    instagram: {
+      caption: "Tes roues touchent le pont du porte-avions. Et là… tu mets plein gaz.\n\nDossier 015 : le brin d'arrêt. Un Rafale, un câble d'acier, cent mètres — et sous le pont, ce qui freine vraiment.\n\nToi, cet appontage, tu le tentes ?",
+      hashtags: ["#rafale", "#porteavions", "#marinenationale", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Rafale sur porte-avions : pourquoi il met plein gaz en touchant le pont (brin d'arrêt)",
+      description: "Dossier 015 — le brin d'arrêt du Charles de Gaulle : la crosse, le câble, et sous le pont le frein hydraulique qui arrête un Rafale en cent mètres.\n\nToi, cet appontage, tu le tentes ?",
+      hashtags: ["#shorts", "#rafale", "#porteavions", "#marinenationale", "#science"],
+    },
+  },
+  "016-disjoncteur": {
+    instagram: {
+      caption: "Dans ton mur, un fil chauffe. Et ton disjoncteur… ne coupe pas.\n\nDossier 016 : le disjoncteur. Deux pièges dans la même boîte : un lent, un rapide.\n\nLe tien, il saute sur quoi ?",
+      hashtags: ["#disjoncteur", "#electricite", "#electricien", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Disjoncteur : pourquoi il ne coupe pas tout de suite (bilame, bobine, arc électrique)",
+      description: "Dossier 016 — un disjoncteur ouvert : le bilame qui attend, la bobine qui frappe en moins de deux centièmes de seconde, et la chambre qui éteint l'arc.\n\nLe tien, il saute sur quoi ?",
+      hashtags: ["#shorts", "#disjoncteur", "#electricite", "#electricien", "#science"],
+    },
+  },
+  "017-irm": {
+    instagram: {
+      caption: "L'IRM s'est tue. Tu entres… et ta bouteille d'oxygène t'est arrachée des mains.\n\nDossier 017 : l'aimant de l'IRM. 1,5 tesla, jour et nuit — et le bouton qui l'éteint vraiment.\n\nTu as déjà passé une IRM ?",
+      hashtags: ["#irm", "#hopital", "#radiologie", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "IRM : son aimant reste allumé jour et nuit (et l'arrêt d'urgence ne le coupe pas)",
+      description: "Dossier 017 — l'IRM ouverte : le fil supraconducteur dans son bain d'hélium, l'arrêt d'urgence qui ne coupe pas le champ, et l'arrêt de l'aimant.\n\nTu as déjà passé une IRM ?",
+      hashtags: ["#shorts", "#irm", "#hopital", "#radiologie", "#science"],
+    },
+  },
 };
 
 const problems = [];

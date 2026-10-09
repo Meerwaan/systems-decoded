@@ -59,6 +59,7 @@ const HELP = `
   npm run brand                                  exporte la photo de profil (brand/avatar.svg → .png)
   npm run chrono  -- <ep> <étape> | stop | agent <nom> --jetons N | jauge --session N --hebdo N   le chronomètre de la fabrication
   npm run metrics [-- <ep>]                      ce que coûte un dossier (temps, jetons, calcul) et ce qu'il rapporte (audience)
+  npm run social  [-- --out <dossier>] [--only facebook|stories|youtube]   deux stories Instagram, la bannière YouTube et l'image du post Facebook, dans renders/
   npm run front   [-- --port 4173]               bureau de publication (vidéo, couverture, légende) et cabine d'écoute de la voix, à ouvrir sur l'iPhone (même Wi-Fi)
   <ep> = numéro d'épisode (ex: 001)
 `;
@@ -210,6 +211,11 @@ try {
     case "metrics": {
       const { report } = await import("./metrics.mjs");
       report(args[0]);
+      break;
+    }
+    case "social": {
+      const { social } = await import("./social.mjs");
+      await social({ out: flags.out ? path.resolve(String(flags.out)) : undefined, only: flags.only ? String(flags.only) : undefined });
       break;
     }
     case "front": {
