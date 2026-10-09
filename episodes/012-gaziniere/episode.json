@@ -15,127 +15,231 @@
     "seed": 21
   },
   "cover": {
-    "at": "eclate$",
+    "at": "mv+0.6",
     "title": [
-      "Gazinière"
+      "Ta",
+      "gazinière"
     ],
     "cam": {
       "tx": 0,
-      "ty": 8,
+      "ty": 6,
       "tz": 0,
-      "d": 120,
+      "d": 100,
       "az": -40,
-      "el": 14,
-      "shift": -430,
-      "side": 0,
+      "el": 29,
+      "shift": -455,
+      "side": 20,
       "fov": 28,
       "roll": 0
     }
   },
   "post": {
-    "caption": "Une phrase qui prolonge l'accroche sans la répéter ni dire la chute, avec le mot que les gens cherchent, puis la question du CTA commentaire.",
+    "caption": "Gazinière : la flamme s'éteint, le gaz continue… et ce qui le coupe n'a ni prise, ni pile, ni détecteur de gaz. La tienne, elle a la petite pointe à côté de la flamme ?",
     "hashtags": [
       "#apprendresurtiktok",
       "#commentcamarche",
-      "#sujet1",
-      "#sujet2",
-      "#communaute"
+      "#gaziniere",
+      "#cuisine",
+      "#securite"
     ],
-    "pinned": "La question du CTA commentaire, en 150 caractères au plus."
+    "pinned": "Odeur de gaz : ni flamme ni interrupteur, tu aères, tu sors, puis tu appelles le 0 800 47 33 33 (gratuit). La tienne, elle a la pointe ?",
+    "instagram": {
+      "caption": "Ta casserole déborde. La flamme s'éteint. Le gaz, lui, sort toujours.\n\nDossier 012 : la gazinière. Une minute, en temps réel, jusqu'à ce qu'il se coupe tout seul — sans prise ni pile.\n\nLa tienne, elle a la petite pointe à côté de la flamme ?",
+      "hashtags": [
+        "#gaziniere",
+        "#cuisine",
+        "#gaz",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Gazinière : la flamme s'éteint, le gaz continue… et ce qui le coupe en une minute",
+      "description": "Dossier 012 — la sécurité d'une plaque à gaz, filmée en temps réel : de la flamme qui s'éteint au gaz qui se coupe, sans prise ni pile.\n\nLa tienne, elle a la petite pointe à côté de la flamme ?",
+      "hashtags": [
+        "#shorts",
+        "#gaziniere",
+        "#cuisine",
+        "#gaz",
+        "#science"
+      ]
+    }
   },
-  "sources": [],
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/012-gaziniere.md ; contre-vérification phrase par phrase : docs/faits/012-contre-verification.md",
+    "Le mécanisme (fabricant de robinets de tables de cuisson) : on appuie et on tourne la manette ; « A few seconds after the burner ignites, the thermocouple generates enough current to hold the safety magnet open » ; flamme éteinte : « the thermocouple cools and the current is reduced, the safety magnet is closed and the flow of gas is blocked after a few seconds » ; temps de fermeture maximal des thermocouples : 90 s (SABAF, notice du robinet 16C, 02/2018) : https://www.sabaf.it/sites/default/files/allegati/user%20manual%20mod%2016C%20rev%2000%20feb%2018%20CE.pdf",
+    "L'aimant retient mais n'attire pas : la bobine est dimensionnée pour tenir la vanne ouverte contre un ressort léger, c'est la main qui l'ouvre en appuyant (Wikipédia EN, « Thermocouple », section gaz ; cohérent avec SABAF). Tension : ≈ 25 mV à vide, 10–12 mV en charge (même page) ; ≈ 30 mV au maximum, pointe à 650 °C au plus, fermeture en 60 à 90 s (fiche du thermocouple universel OEG) : https://en.wikipedia.org/wiki/Thermocouple · https://www.oeg.net/oeg-universal-thermocouples-g133466000",
+    "« Dans une minute » et le chrono du film : ce film se déroule EN TEMPS RÉEL — le compteur de l'en-tête compte les vraies secondes depuis l'extinction de la flamme jusqu'au « clac ». La valeur affichée (≈ une minute) est celle de CETTE plaque, plausible (fiche OEG : fermeture en 60 à 90 s) et dans la limite du fabricant SABAF (90 s au plus ; son texte dit « a few seconds ») ; ce n'est pas une valeur de norme (le maximum d'EN 30-1-1 n'a pas pu être lu).",
+    "« Dans les cinq litres à la minute » : un CALCUL, pas une mesure — un grand brûleur de 3 kW (hypothèse : la puissance courante d'un brûleur « rapide », non sourcée ici), en gaz naturel à ≈ 10 kWh/m³ (PCI, GRDF Cegibat) : 0,3 m³/h, soit ≈ 5 L/min (4,8 à 5,8 selon le PCI retenu), ≈ 300 L/h. Ne vaut pas pour une bouteille de butane. Le compteur « gaz sorti » de l'en-tête applique ce débit au temps réel écoulé.",
+    "« Toute une nuit, cuisine fermée… un interrupteur peut suffire » : le gaz naturel s'enflamme à partir de 4 à 5 % dans l'air (« la LIE du méthane était à 5 % il y a quelques années en Europe, elle est aujourd'hui à 4,4 % », guide du ministère de l'Intérieur, 2009) ; dans 30 m³ sans aucune ventilation, 0,3 m³/h y arrive en ≈ 5 h (calcul : la ventilation d'un logement repousse beaucoup ce délai — d'où « peut »). Consigne des sapeurs-pompiers : « Ne pas activer ou ne pas désactiver les appareils ou interrupteurs pouvant produire une étincelle » : https://www.pompiers.fr/fuite-de-gaz/",
+    "Reconnaître la sécurité sur sa plaque : contrôle visuel (« presenza della termocoppia nelle immediate vicinanze del bruciatore ») et contrôle pratique (tenir la manette enfoncée quelques secondes) ; sans thermocouple, « non è necessario tenere premuta la manopola » (AIL, distributeur de gaz de Lugano, 2022). Le film n'affirme que le sens sûr : si tu dois la garder enfoncée, elle l'a. Une plaque à surveillance électronique peut avoir une sécurité sans ce geste.",
+    "Accidents : 1 189 événements liés à l'usage domestique du gaz en France de 2010 à 2019, environ 125 par an sur les trois dernières années de la période, une explosion dans 42 % des cas (BARPI, base ARIA) — non cité dans le film : https://www.aria.developpement-durable.gouv.fr/wp-content/uploads/2021/02/2020-09-07_UTILGAZ_VIP-b_vBSERR-DR-Vff.pdf",
+    "Simplifications assumées : la course du clapet est exagérée à l'image (7 mm, pour qu'on voie le claquement) ; dans le modèle, la tige de la manette pousse le clapet par un cône (un vrai robinet pousse dans son axe) et le trajet du gaz dans le robinet est simplifié (en vrai, la sécurité est en amont du boisseau) ; un seul brûleur est suivi ; l'allumage (étincelle) n'est pas montré ; le film ne dit pas que toutes les gazinières ont cette sécurité. Commentaire épinglé : numéro Urgence Sécurité Gaz de GRDF, 0 800 47 33 33, 24 h/24 et 7 j/7 (ministère de l'Intérieur, masecurite.interieur.gouv.fr) — il vaut pour le gaz de réseau. Prochain dossier (013) : Grosjean, Bahreïn 2020 — la voiture s'est séparée en deux et a pris feu (rapport de la FIA) ; le Halo l'a « protégé » (« sauvé » est le mot du pilote, pas celui du rapport)."
+  ],
   "beats": [
     {
       "id": "accroche",
-      "text": "Une phrase *choc*, pour toi, au présent.",
-      "vo": "[tense] Une phrase choc, pour toi, au présent.",
+      "text": "Ta casserole déborde. La flamme s'éteint. Le gaz, lui… *sort toujours*.",
+      "vo": "[tense] Ta casserole déborde. La flamme s'éteint. Le gaz, lui... sort toujours.",
       "voAlt": [
-        "[firm, matter-of-fact] Une phrase choc, pour toi, au présent."
+        "[firm, matter-of-fact] Ta casserole déborde. La flamme s'éteint. Le gaz, lui... sort toujours."
       ]
     },
     {
       "id": "promesse",
-      "hold": 0.3,
-      "text": "Voilà ce que tu y +gagnes+. Sauf si… une *condition*.",
-      "vo": "[firm, matter-of-fact] Voilà ce que tu y gagnes. [short pause] [serious] Sauf si... une condition."
+      "text": "Dans une minute environ, il se coupe +tout seul+ : sans prise ni pile. Sauf si ta gazinière… n'a *pas* cette pièce.",
+      "vo": "[firm, matter-of-fact] Dans une minute environ, il se coupe tout seul : sans prise ni pile. [short pause] [serious] Sauf si ta gazinière... n'a pas cette pièce.",
+      "hold": 0.3
     },
     {
       "id": "scene",
-      "text": "Dans [3 s|trois secondes], il sera *trop tard*. Une seule chose peut encore l'arrêter.",
-      "vo": "[tense] Dans trois secondes, il sera trop tard. Une seule chose peut encore l'arrêter."
+      "text": "Un grand feu ouvert, sans flamme : dans les [5|cinq] litres de gaz à la minute. Laisse-le toute une nuit, cuisine fermée… et un *interrupteur* peut suffire.",
+      "vo": "[tense] Un grand feu ouvert, sans flamme : dans les cinq litres de gaz à la minute. Laisse-le toute une nuit, cuisine fermée... et un interrupteur peut suffire.",
+      "hold": 0.3
     },
     {
       "id": "ouvre",
-      "hold": 0.4,
       "text": "Alors… on l'ouvre.",
-      "vo": "[calm] Alors... on l'ouvre."
+      "vo": "[calm] Alors... on l'ouvre.",
+      "hold": 0.4
     },
     {
       "id": "eclate",
-      "hold": 0.2,
-      "text": "Une première pièce. Une deuxième. Et au centre… +le cœur+.",
-      "vo": "Une première pièce. Une deuxième. Et au centre... le cœur."
+      "text": "Sous la manette : un robinet. Un ressort, qui ne demande qu'à le fermer. Un électroaimant, pour le retenir. Et dans la flamme… une +pointe de métal+.",
+      "vo": "Sous la manette : un robinet. Un ressort, qui ne demande qu'à le fermer. Un électroaimant, pour le retenir. Et dans la flamme... une pointe de métal.",
+      "hold": 0.3
     },
     {
       "id": "repos",
-      "text": "Il attend. Sans bruit. Depuis des années.",
-      "vo": "[thoughtful] Il attend. Sans bruit. Depuis des années."
+      "text": "Chauffée, cette pointe fabrique du courant : [30|trente] millièmes de volt, au mieux. Juste assez pour que l'aimant +retienne+ le ressort.",
+      "vo": "[thoughtful] Chauffée, cette pointe fabrique du courant : trente millièmes de volt, au mieux. Juste assez pour que l'aimant retienne le ressort."
+    },
+    {
+      "id": "main",
+      "text": "Pas assez pour l'attirer : c'est pour ça que tu gardes la manette *enfoncée*, le temps qu'elle chauffe.",
+      "vo": "[curious] Pas assez pour l'attirer : c'est pour ça que tu gardes la manette enfoncée, le temps qu'elle chauffe.",
+      "hold": 0.2
     },
     {
       "id": "seuil",
-      "text": "+Abonne-toi+ : ce qui arrive maintenant, on te le montre en *entier*.",
-      "vo": "[tense] Abonne-toi : ce qui arrive maintenant, on te le montre en entier."
+      "text": "+Abonne-toi+ : ce gaz qui sort toujours, regarde ce qui l'*arrête*.",
+      "vo": "[tense] Abonne-toi : ce gaz qui sort toujours, regarde ce qui l'arrête."
     },
     {
       "id": "zero",
-      "hold": 0.2,
-      "text": "*Zéro*. Le danger arrive.",
-      "vo": "[firm, matter-of-fact] Zéro. Le danger arrive."
+      "text": "La flamme est *éteinte*. La pointe refroidit. Le courant baisse… baisse…",
+      "vo": "[firm, matter-of-fact] La flamme est éteinte. [short pause] La pointe refroidit. Le courant baisse... baisse...",
+      "hold": 0.2
     },
     {
       "id": "reponse",
-      "hold": 0.3,
-      "text": "Et pour la première fois… le système +réagit+.",
-      "vo": "[tense] Et pour la première fois... le système réagit."
+      "text": "L'aimant *lâche*. Le ressort claque. Le gaz est +coupé+.",
+      "vo": "[tense] L'aimant lâche. Le ressort claque. [short pause] Le gaz est coupé.",
+      "hold": 0.4
+    },
+    {
+      "id": "bilan",
+      "text": "Il est sorti quelques litres de gaz. Pas des +centaines+.",
+      "vo": "[serious] Il est sorti quelques litres de gaz. Pas des centaines.",
+      "hold": 0.3
     },
     {
       "id": "chute",
-      "hold": 0.4,
-      "text": "Voilà son secret : ce n'est *pas* ce que tu croyais. C'est +l'inverse+.",
-      "vo": "[low, grave voice] Voilà son secret : ce n'est pas ce que tu croyais. C'est l'inverse."
+      "text": "Rien n'a détecté ton gaz. C'est un *ressort* : la flamme payait pour le retenir. Elle s'est éteinte… il a +fermé+.",
+      "vo": "[low, grave voice] Rien n'a détecté ton gaz. C'est un ressort : la flamme payait pour le retenir. Elle s'est éteinte... il a fermé.",
+      "hold": 0.4
     },
     {
       "id": "like",
-      "text": "+Like+. Quelqu'un d'autre le saura grâce à toi.",
-      "vo": "[firm, matter-of-fact] Like. [short pause] Quelqu'un d'autre le saura grâce à toi."
+      "text": "+Like+. Ça remontera chez quelqu'un qui cuisine au gaz sans savoir ça.",
+      "vo": "[firm, matter-of-fact] Like. [short pause] Ça remontera chez quelqu'un qui cuisine au gaz sans savoir ça."
     },
     {
       "id": "abo",
-      "text": "Prochain dossier : encore plus *étrange*. +Abonne-toi+ pour l'ouvrir.",
-      "vo": "[serious] Prochain dossier : encore plus étrange. [short pause] Abonne-toi pour l'ouvrir."
+      "text": "+Abonne-toi+. Prochain dossier : d'autres flammes. Une Formule [1|un] coupée en deux… et l'arceau qui a *protégé* son pilote.",
+      "vo": "[serious] Abonne-toi. Prochain dossier : d'autres flammes. [short pause] Une Formule un coupée en deux... et l'arceau qui a protégé son pilote.",
+      "hold": 0.4
     },
     {
       "id": "comment",
-      "hold": 0.3,
-      "text": "Et la condition ? La voilà. En +commentaire+ : et toi, tu le savais ?",
-      "vo": "[curious] Et la condition ? [short pause] [serious] La voilà. [short pause] [curious] En commentaire : et toi, tu le savais ?"
+      "text": "Et la tienne, elle l'a ? Regarde à côté de la flamme : une petite pointe de métal. Et si tu dois garder la manette enfoncée pour allumer… c'est +elle+. En commentaire : la tienne, elle l'a ?",
+      "vo": "[curious] Et la tienne, elle l'a ? [short pause] [serious] Regarde à côté de la flamme : une petite pointe de métal. Et si tu dois garder la manette enfoncée pour allumer... c'est elle. [short pause] [curious] En commentaire : la tienne, elle l'a ?",
+      "hold": 0.3
     },
     {
       "id": "boucle",
-      "text": "Parce que tout commence toujours par…",
-      "vo": "[calm] Parce que tout commence toujours par,"
+      "text": "Parce qu'un soir ou l'autre, forcément…",
+      "vo": "[calm] Parce qu'un soir ou l'autre, forcément,",
+      "voAlt": [
+        "[serious] Parce qu'un soir ou l'autre, forcément..."
+      ]
     }
   ],
   "cues": {
+    "spill": "accroche:déborde-0.1",
+    "dying": "accroche:flamme-0.1",
+    "out": "accroche:Le-0.12",
+    "gas": "accroche:gaz-0.05",
+    "still": "accroche:sort-0.1",
+    "minute": "promesse:minute-0.2",
+    "alone": "promesse:tout-0.1",
+    "plug": "promesse:prise-0.1",
+    "sauf": "promesse:Sauf-0.14",
+    "piece": "promesse:pièce-0.2",
+    "tosans": "scene-0.14",
+    "litres": "scene:5-0.1",
+    "night": "scene:Laisse-0.14",
+    "closed": "scene:cuisine-0.1",
+    "switch": "scene:interrupteur-0.1",
+    "back": "scene$+0.1",
+    "tosystem": "ouvre-0.14",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "p1": "eclate:robinet-0.15",
+    "p2": "eclate:ressort-0.15",
+    "p3": "eclate:électroaimant-0.15",
+    "p4": "eclate:pointe-0.2",
+    "torepos": "repos-0.14",
+    "hot": "repos:Chauffée",
+    "current": "repos:courant-0.1",
+    "mv": "repos:30-0.1",
+    "grip": "repos:retienne-0.1",
+    "tomain": "main-0.12",
+    "weak": "main:attirer-0.1",
+    "press": "main:gardes-0.1",
+    "warm": "main:temps-0.1",
+    "toseuil": "seuil-0.1",
     "tozero": "zero-0.12",
-    "trigger": "reponse:réagit-0.05",
+    "dead": "zero:éteinte-0.1",
+    "cool": "zero:pointe-0.1",
+    "drop": "zero:baisse-0.1",
+    "drop2": "zero:baisse#2-0.1",
+    "torelease": "reponse-0.12",
+    "release": "reponse:lâche-0.08",
+    "trigger": "reponse:claque-0.06",
+    "shut": "reponse:coupé-0.1",
+    "tobilan": "bilan-0.12",
+    "few": "bilan:quelques-0.1",
+    "hundreds": "bilan:centaines-0.1",
     "toverdict": "chute-0.12",
-    "verdict": "chute:pas",
+    "idea": "chute:détecté-0.1",
+    "verdict": "chute:ressort-0.05",
+    "paid": "chute:payait-0.1",
+    "went": "chute:éteinte-0.2",
+    "shutdown": "chute:fermé-0.1",
     "tocta": "like-0.12",
+    "toabo": "abo-0.1",
+    "next": "abo:Prochain-0.1",
+    "f1": "abo:Formule-0.1",
+    "halo": "abo:arceau-0.1",
+    "tocomment": "comment-0.12",
+    "look": "comment:Regarde-0.1",
+    "pin": "comment:pointe-0.2",
+    "hold": "comment:garder-0.2",
+    "its": "comment:allumer$+0.15",
+    "ask": "comment:commentaire-0.3",
     "toloop": "boucle-0.12",
-    "rewind": "boucle:toujours"
+    "rewind": "boucle:soir-0.05"
   },
   "bedVolume": 0.8,
   "sfx": [
@@ -148,7 +252,7 @@
           0.8
         ],
         [
-          "explode",
+          "tosystem",
           0.5
         ],
         [
@@ -160,8 +264,8 @@
           1
         ],
         [
-          "toverdict",
-          0.45
+          "tobilan",
+          0.4
         ],
         [
           "tocta",
@@ -177,7 +281,41 @@
       "type": "impact",
       "at": 0.03,
       "gain": -14,
-      "size": 1.2
+      "size": 1.1
+    },
+    {
+      "type": "hiss",
+      "from": 0,
+      "to": "out",
+      "gain": -19,
+      "tone": 0.3
+    },
+    {
+      "type": "hiss",
+      "from": "out",
+      "to": "tosystem",
+      "gain": -27,
+      "tone": 1
+    },
+    {
+      "type": "hiss",
+      "from": "tozero",
+      "to": "trigger",
+      "gain": -24,
+      "tone": 1
+    },
+    {
+      "type": "blip",
+      "at": "out",
+      "gain": -17,
+      "pitch": 0.6,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "switch",
+      "gain": -13,
+      "size": 0.9
     },
     {
       "type": "riser",
@@ -194,14 +332,19 @@
     {
       "type": "impact",
       "at": "tozero",
-      "gain": -12,
-      "size": 1.2
+      "gain": -13,
+      "size": 1.1
     },
     {
-      "type": "impact",
+      "type": "riser",
+      "to": "trigger",
+      "dur": 1.4,
+      "gain": -23
+    },
+    {
+      "type": "clack",
       "at": "trigger",
-      "gain": -10,
-      "size": 1.4
+      "gain": -7
     },
     {
       "type": "blip",
@@ -209,6 +352,11 @@
       "gain": -15,
       "pitch": 0.7,
       "heavy": true
+    },
+    {
+      "type": "clack",
+      "at": "shutdown+0.1",
+      "gain": -13
     },
     {
       "type": "impact",

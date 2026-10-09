@@ -7,18 +7,34 @@
     <link rel="stylesheet" href="gen/brand.css" />
     <script src="gen/gsap.min.js"></script>
     <style>
-      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
+      /* Les dispositifs récurrents (en-tête, étiquettes, jauge, titre barré, les trois appels à l'action) sont stylés dans
          kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
 
-      /* le second compteur de l'en-tête (.hud__count est signal par défaut) */
-      #hud-count { color: var(--ink); }
+      /* rien de ceci n'est à l'écran tant qu'un acte ne l'a pas fait entrer */
+      .chip--live, #gauge, #retitle, #net, #next, #cta-field, .rail { opacity: 0; }
+
+      /* le second compteur de l'en-tête : le gaz sorti depuis que la flamme est éteinte (signal tant qu'il sort ; main.js le passe en veille au « clac ») */
+      #hud-count { color: var(--signal); }
+
       /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
-      #chip-toi { color: var(--ink); }
-      #chip-coeur { color: var(--veille); }
+      #chip-main, #chip-hold, #chip-nuit { color: var(--ink); }
+      #chip-mv, #chip-tient, #chip-coupe, #chip-tige { color: var(--veille); }
+
+      /* la jauge de l'acte 3 : le courant que fabrique la pointe, contre le seuil où l'aimant lâche (un ordre de grandeur : pas de chiffre sur le seuil) */
+      #gauge-th { left: 36%; }
+
+      /* sous la casserole, la mousse claire passe derrière l'en-tête pendant de longs plans : son ombre est plus dense que celle du kit */
+      #hud-shade { background: linear-gradient(to bottom, rgba(7, 10, 12, 0.9) 0, rgba(7, 10, 12, 0.84) 72%, rgba(7, 10, 12, 0) 100%); }
+
+      /* la chute, puis les trois appels à l'action */
+      #retitle-main { font-size: 104px; }
+      #retitle-slot { height: 104px; }
+      #retitle-strike { top: 50px; }
+      #next-fact span { font-size: 44px; line-height: 1.2; letter-spacing: 0.06em; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="60" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="87.967" data-width="1080" data-height="1920">
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
@@ -28,8 +44,8 @@
       <header id="hud">
         <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 012</span></div>
         <div class="hud__title" id="hud-title">Gazinière</div>
-        <div class="hud__clock" id="hud-clock">T−3,0 s</div>
-        <div class="hud__count" id="hud-count"><span id="hud-count-l">Mesure</span><b id="hud-count-v">0</b></div>
+        <div class="hud__clock" id="hud-clock">T−0:03</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Gaz sorti</span><b id="hud-count-v">≈ 0,0 L</b></div>
         <div class="hud__rule"></div>
         <nav class="hud__acts">
           <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
@@ -38,23 +54,41 @@
       </header>
 
       <!-- 01 · MENACE (acte1.js) -->
-      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <div id="chip-gaz" class="chip chip--live"><span>Flamme éteinte</span><b>Le gaz sort</b></div>
+      <div id="chip-sans" class="chip chip--live"><span>Sans sécurité</span><b>≈ 5 L par minute</b></div>
+      <div id="chip-nuit" class="chip chip--live"><span>Toute une nuit</span><b>Cuisine fermée</b></div>
+      <div id="chip-lie" class="chip chip--live"><span>Inflammable dès</span><b>4 à 5 % dans l'air</b></div>
 
-      <!-- 02 · AUTOPSIE (acte2.js) -->
-      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>En veille</b></div>
+      <!-- 02 · AUTOPSIE (acte2.js) : les légendes des pièces se font avec co.add -->
+      <div id="chip-mv" class="chip chip--live"><span>La pointe chauffe</span><b>30 millivolts</b></div>
+      <div id="chip-tient" class="chip chip--live"><span>L'aimant</span><b>Retient</b></div>
+      <div id="chip-main" class="chip chip--live"><span>Ta main</span><b>Ouvre le gaz</b></div>
 
       <!-- le seuil (fin d'acte2.js) : la demande d'abonnement dite à la porte de l'acte 3 — des chevrons, jamais un panneau -->
       <div id="rail-seuil" class="rail"><i></i><i></i><i></i></div>
 
       <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
+      <section id="gauge" class="panel">
+        <div class="panel__h"><span>La pointe · courant de la flamme</span><span id="gauge-v">100 %</span></div>
+        <div id="gauge-track">
+          <div id="gauge-fill"></div>
+          <div id="gauge-th" data-layout-allow-overflow><span>L'aimant lâche</span></div>
+        </div>
+        <div id="gauge-status">
+          <span id="gauge-s0" class="is-veille">● La pointe est chaude — l'aimant tient</span>
+          <span id="gauge-s1" class="is-signal">● Plus de courant — il lâche</span>
+        </div>
+      </section>
+      <div id="chip-coupe" class="chip chip--live"><span>Le ressort</span><b>Gaz coupé</b></div>
+      <div id="chip-300" class="chip chip--live"><span>Sans sécurité</span><b>≈ 300 L par heure</b></div>
 
       <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
       <div id="retitle">
-        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
+        <div class="kicker" id="retitle-k">Ta gazinière</div>
         <div id="retitle-main">
           <span id="retitle-slot">
-            <span id="retitle-a">L'idée reçue<i id="retitle-strike"></i></span>
-            <span id="retitle-b" class="is-veille">La vérité</span>
+            <span id="retitle-a">Détecte le gaz<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Lâche un ressort</span>
           </span>
         </div>
       </div>
@@ -70,17 +104,19 @@
       </section>
 
       <section id="next">
-        <div class="panel__h"><span>Prochain dossier · 000</span><span>Classé</span></div>
+        <div class="panel__h"><span>Prochain dossier · 013</span><span>Classé</span></div>
         <div id="next-title"><span id="next-redact"></span></div>
-        <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
-        <div id="next-fact"><span>Un fait, un seul.</span></div>
+        <!-- un seul fait comme appât ; aucun chiffre -->
+        <div id="next-fact"><span>Coupée en deux. En feu. Il en sort vivant.</span></div>
         <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
       </section>
 
+      <div id="chip-tige" class="chip chip--live"><span>À côté de la flamme</span><b>La pointe</b></div>
+      <div id="chip-hold" class="chip chip--live"><span>Manette enfoncée</span><b>Quelques secondes</b></div>
       <div id="cta-field">
-        <div class="kicker">La question de l'accroche ?</div>
+        <div class="kicker">Ta gazinière, elle a la pointe ?</div>
         <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de lettres) -->
-        <div id="cta-field-v"><span id="cta-typed" class="is-veille">RÉPONSE</span><span id="cta-caret"></span></div>
+        <div id="cta-field-v"><span id="cta-typed" class="is-veille">OUI</span><span id="cta-caret"></span></div>
       </div>
 
       <div id="callouts" class="layer"></div>
@@ -89,6 +125,8 @@
       <div id="flash" class="layer"></div>
 
       <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
       <!-- AUDIO:END -->
     </div>
 
