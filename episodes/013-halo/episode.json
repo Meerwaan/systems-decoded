@@ -1,0 +1,393 @@
+{
+  "id": "013",
+  "slug": "halo",
+  "title": "Halo",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "harness+0.5",
+    "title": [
+      "Le Halo",
+      "de F1"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 46,
+      "tz": 6,
+      "d": 900,
+      "az": -34,
+      "el": 29,
+      "shift": -455,
+      "side": 20,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Halo de Formule 1 : 192 km/h, un rail d'acier, le feu… et un arceau de titane au-dessus du casque. Toi, ce Halo, tu étais pour ou contre ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#f1",
+      "#formule1",
+      "#halo"
+    ],
+    "pinned": "Le Halo en F1 : tu étais pour ou contre quand il est arrivé en 2018 ? (Grosjean, lui, était contre.)",
+    "instagram": {
+      "caption": "Premier tour. Ta Formule 1 traverse un rail d'acier, et prend feu.\n\nDossier 013 : le Halo. 192 km/h, 67 g, le feu — et un arceau de titane entre ton casque et l'acier.\n\nToi, ce Halo, tu étais pour… ou contre ?",
+      "hashtags": [
+        "#f1",
+        "#formule1",
+        "#halo",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Halo de Formule 1 : 192 km/h dans un rail d'acier, le feu… et l'arceau qui tient",
+      "description": "Dossier 013 — le Halo, raconté par un accident réel : Bahreïn 2020, premier tour. Ce que fait vraiment cet arceau de titane au-dessus du casque.\n\nToi, tu étais pour ou contre ?",
+      "hashtags": [
+        "#shorts",
+        "#f1",
+        "#formule1",
+        "#halo",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/013-halo.md ; contre-vérification phrase par phrase : docs/faits/013-contre-verification.md",
+    "L'accident (conclusions de l'enquête de la FIA, communiqué du 5 mars 2021, et la presse spécialisée qui cite le rapport) : Grand Prix de Bahreïn, 29 novembre 2020, premier tour, sortie du virage 3 ; la roue arrière droite de Romain Grosjean touche la roue avant gauche de Daniil Kvyat ; 241 km/h avant le contact, 192 km/h contre la glissière, angle de 29°, pic de 67 g ; le groupe propulseur se sépare de la cellule de survie, qui perce la triple glissière et s'arrête « constrained by the primary roll structure against the upper rail » ; le feu naît à l'arrière de la cellule (trappe de visite du réservoir arrachée, raccord d'alimentation arraché de la vessie) ; pied gauche coincé, libéré en laissant la chaussure ; brûlures au dos des deux mains.",
+    "Ce que la FIA dit du Halo ce jour-là : il a fonctionné selon ses spécifications « in protecting the driver's survival space » (avec le casque, le HANS, le harnais, la cellule, le siège et l'appui-tête, qui ont géré les forces). « Sauvé » est le mot du pilote et de Ross Brawn (« there's absolutely no doubt the halo was the factor that saved the day and saved Romain », Sky, 29/11/2020), pas celui du rapport. Le Halo est resté intact, engagé dans la glissière (The Race).",
+    "Simplification assumée, à l'image : AUCUNE source lue ne décrit le contact exact entre le Halo et les rails. Le film reconstitue — la cellule perce la glissière (FIA), le rail du milieu cède, ceux du haut et du bas se déforment, l'arceau traverse intact devant le casque, la cellule s'arrête l'arceau principal contre le rail du haut (FIA). La voix dit seulement : « l'arceau tient : il reste entre toi et l'acier ». L'angle de 29° est repris, le lacet de 22° ne l'est pas. Après être sorti, le pilote a franchi la glissière avec l'aide du médecin de la voiture médicale : le film s'arrête à « tu es dehors ».",
+    "« 28 secondes, environ » : de l'arrêt de la voiture à la sortie, selon Grosjean et la presse (27 s dans un résumé du communiqué de la FIA) — d'où « environ », et une horloge qui ne s'affiche qu'en secondes entières.",
+    "Le Halo : titane de grade 5 ; trois fixations sur la cellule (le film montre le pied central devant le pilote et deux ancrages latéraux, comme sur les voitures) ; obligatoire en Formule 1 depuis 2018 ; fabricants agréés : CP Autosport, SSTT, V System (FIA). Essai d'homologation : 125 kN appliqués par le dessus pendant 5 s, et 125 kN de côté, sans défaillance de la cellule ni des fixations (article de la FIA, 2017) ; d'autres résumés du règlement donnent 116 kN : la voix dit « plus de cent kilonewtons ». « Le poids d'un bus à impériale » est l'image de James Allison (Mercedes) : « roughly the weight of a London double decker bus ». C'est un essai du châssis, pas un contrôle d'avant chaque course.",
+    "« N'est pas là pour amortir » : le Halo est une structure rigide de protection frontale du cockpit, pas un absorbeur d'énergie ; ce sont la cellule, le siège, le harnais, le HANS et l'appui-tête que la FIA cite pour la gestion des forces.",
+    "Grosjean contre le Halo : « a sad day for Formula One » (juillet 2016, il était l'un des directeurs de l'association des pilotes, le GPDA — Crash.net) ; après l'accident : « I wasn't for the Halo some years ago but I think it's the greatest thing that we've brought to Formula 1. Without it I wouldn't be able to speak to you today. » (vidéo depuis l'hôpital, 29/11/2020 — RaceFans). Traductions de la voix. Non dit dans le film : Leclerc à Spa en 2018 (l'enquête de la FIA conclut que le Halo a dévié la McLaren d'Alonso), Makino en F2 à Barcelone en 2018.",
+    "Prochain dossier (014) : l'ABS relâche la pression de freinage de la roue qui va se bloquer, jusqu'à 40 fois par seconde (Bosch)."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Premier tour. Ta Formule [1|un] traverse un rail d'acier… et prend *feu*.",
+      "vo": "[tense] Premier tour. Ta Formule un traverse un rail d'acier... et prend feu.",
+      "voAlt": [
+        "[firm, matter-of-fact] Premier tour. Ta Formule un traverse un rail d'acier... et prend feu."
+      ]
+    },
+    {
+      "id": "promesse",
+      "text": "Tu en sors +vivant+. Grâce à un arceau… dont tu ne voulais *pas*.",
+      "vo": "[firm, matter-of-fact] Tu en sors vivant. [short pause] [serious] Grâce à un arceau... dont tu ne voulais pas.",
+      "hold": 0.3
+    },
+    {
+      "id": "scene",
+      "text": "Une roue touche la tienne. Tu frappes le rail à [192|cent quatre-vingt-douze] kilomètres-heure : [67 g|soixante-sept gé]. Entre ton casque et l'acier… il n'y a qu'*une* chose.",
+      "vo": "[tense] Une roue touche la tienne. Tu frappes le rail à cent quatre-vingt-douze kilomètres-heure : soixante-sept gé. [short pause] Entre ton casque et l'acier... il n'y a qu'une chose.",
+      "hold": 0.3
+    },
+    {
+      "id": "ouvre",
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "hold": 0.4
+    },
+    {
+      "id": "eclate",
+      "text": "Un arceau de +titane+. Un pied, devant tes yeux. Deux ancrages, sur les côtés. Et dessous… ta coque de carbone.",
+      "vo": "Un arceau de titane. Un pied, devant tes yeux. Deux ancrages, sur les côtés. Et dessous... ta coque de carbone.",
+      "hold": 0.3
+    },
+    {
+      "id": "repos",
+      "text": "Avant d'être autorisé en course, on l'écrase : plus de [100|cent] kilonewtons. À peu près le poids d'un bus à impériale. Il n'a pas le droit de +céder+.",
+      "vo": "[thoughtful] Avant d'être autorisé en course, on l'écrase : plus de cent kilonewtons. À peu près le poids d'un bus à impériale. [short pause] Il n'a pas le droit de céder."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ce rail d'acier, regarde ce qui se met *entre lui et toi*.",
+      "vo": "[tense] Abonne-toi : ce rail d'acier, regarde ce qui se met entre lui et toi."
+    },
+    {
+      "id": "zero",
+      "text": "Impact. L'arrière s'arrache : ta voiture se sépare en *deux*. Ta coque, elle… entre dans le rail.",
+      "vo": "[firm, matter-of-fact] Impact. [short pause] L'arrière s'arrache : ta voiture se sépare en deux. Ta coque, elle... entre dans le rail.",
+      "hold": 0.2
+    },
+    {
+      "id": "reponse",
+      "text": "Et devant ton casque, l'arceau +tient+ : il reste entre toi… et l'*acier*.",
+      "vo": "[tense] Et devant ton casque, l'arceau tient : il reste entre toi... et l'acier.",
+      "hold": 0.4
+    },
+    {
+      "id": "feu",
+      "text": "Le feu. Ton pied est coincé : tu laisses ta chaussure. [28|Vingt-huit] secondes, environ… et tu es +dehors+.",
+      "vo": "[serious] Le feu. Ton pied est coincé : tu laisses ta chaussure. Vingt-huit secondes, environ... et tu es dehors.",
+      "hold": 0.7
+    },
+    {
+      "id": "chute",
+      "text": "[67 g|Soixante-sept gé] : c'est ta coque, ton siège et ton harnais qui les ont pris. L'arceau, lui, n'est *pas* là pour amortir. Il garde une seule chose… la +place de ta tête+.",
+      "vo": "[low, grave voice] Soixante-sept gé : c'est ta coque, ton siège et ton harnais qui les ont pris. L'arceau, lui, n'est pas là pour amortir. Il garde une seule chose... la place de ta tête.",
+      "hold": 0.4
+    },
+    {
+      "id": "like",
+      "text": "+Like+. Ça remontera chez quelqu'un qui le trouve encore trop laid.",
+      "vo": "[firm, matter-of-fact] Like. [short pause] Ça remontera chez quelqu'un qui le trouve encore trop laid."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+. Prochain dossier : ta voiture à toi. Tu freines à fond… et elle *relâche* tes freins.",
+      "vo": "[serious] Abonne-toi. Prochain dossier : ta voiture à toi. [short pause] Tu freines à fond... et elle relâche tes freins.",
+      "hold": 0.4
+    },
+    {
+      "id": "comment",
+      "text": "Et l'arceau dont tu ne voulais pas ? Ce pilote, c'est Romain Grosjean. Avant, il disait : un triste jour pour la Formule [1|un]. Après le feu : sans lui, je ne pourrais pas vous parler. En commentaire : le Halo, +pour+… ou *contre* ?",
+      "vo": "[curious] Et l'arceau dont tu ne voulais pas ? [short pause] [serious] Ce pilote, c'est Romain Grosjean. Avant, il disait : un triste jour pour la Formule un. Après le feu : sans lui, je ne pourrais pas vous parler. [short pause] [curious] En commentaire : le Halo, pour... ou contre ?",
+      "hold": 0.3
+    },
+    {
+      "id": "boucle",
+      "text": "Parce que ce jour-là, tout a basculé au…",
+      "vo": "[calm] Parce que ce jour-là, tout a basculé au,",
+      "voAlt": [
+        "[serious] Parce que ce jour-là, tout a basculé au..."
+      ]
+    }
+  ],
+  "cues": {
+    "pierce": "accroche:traverse-0.1",
+    "fire0": "accroche:feu-0.1",
+    "alive": "promesse:vivant-0.1",
+    "hoop": "promesse:arceau-0.15",
+    "unwanted": "promesse:pas-0.1",
+    "toscene": "scene-0.14",
+    "touch": "scene:touche-0.1",
+    "hit": "scene:frappes-0.1",
+    "v192": "scene:192-0.1",
+    "g67": "scene:67-0.1",
+    "between": "scene:Entre-0.14",
+    "one": "scene:chose-0.2",
+    "tosystem": "ouvre-0.14",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "p1": "eclate:arceau-0.15",
+    "p2": "eclate:pied-0.15",
+    "p3": "eclate:ancrages-0.15",
+    "p4": "eclate:coque-0.2",
+    "torepos": "repos-0.14",
+    "crush": "repos:écrase-0.1",
+    "kn": "repos:100-0.1",
+    "bus": "repos:bus-0.1",
+    "hold": "repos:céder-0.1",
+    "toseuil": "seuil-0.1",
+    "tozero": "zero-0.12",
+    "impact": "zero:Impact",
+    "tear": "zero:arrache-0.1",
+    "two": "zero:deux-0.1",
+    "enters": "zero:entre-0.1",
+    "toreponse": "reponse-0.12",
+    "helmet": "reponse:casque-0.1",
+    "trigger": "reponse:tient-0.06",
+    "stays": "reponse:reste-0.1",
+    "steel": "reponse:acier-0.1",
+    "tofire": "feu-0.12",
+    "blaze": "feu:feu-0.05",
+    "foot": "feu:pied-0.1",
+    "shoe": "feu:chaussure-0.1",
+    "s28": "feu:28-0.1",
+    "outside": "feu:dehors-0.1",
+    "toverdict": "chute-0.12",
+    "idea": "chute:coque-0.1",
+    "harness": "chute:harnais-0.1",
+    "strike": "chute:amortir-0.1",
+    "verdict": "chute:place-0.05",
+    "tocta": "like-0.12",
+    "toabo": "abo-0.1",
+    "next": "abo:Prochain-0.1",
+    "brakes": "abo:freines-0.1",
+    "release": "abo:relâche-0.1",
+    "tocomment": "comment-0.12",
+    "pilot": "comment:Romain-0.1",
+    "before": "comment:Avant-0.1",
+    "sad": "comment:triste-0.1",
+    "after": "comment:Après-0.1",
+    "speak": "comment:parler-0.1",
+    "ask": "comment:commentaire-0.3",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:basculé-0.05"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.9
+        ],
+        [
+          "tosystem",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -12,
+      "size": 1.3
+    },
+    {
+      "type": "hiss",
+      "from": "fire0",
+      "to": "toscene",
+      "gain": -24,
+      "tone": 0.3
+    },
+    {
+      "type": "rewind",
+      "at": "promesse$",
+      "dur": 0.45,
+      "gain": -23
+    },
+    {
+      "type": "impact",
+      "at": "touch",
+      "gain": -17,
+      "size": 0.6
+    },
+    {
+      "type": "impact",
+      "at": "g67",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "kn",
+      "gain": -15,
+      "size": 1
+    },
+    {
+      "type": "riser",
+      "to": "impact",
+      "dur": 1.2,
+      "gain": -23
+    },
+    {
+      "type": "impact",
+      "at": "impact",
+      "gain": -9,
+      "size": 1.4
+    },
+    {
+      "type": "impact",
+      "at": "tear",
+      "gain": -15,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "two+0.2",
+      "gain": -13,
+      "size": 1.1
+    },
+    {
+      "type": "clack",
+      "at": "trigger",
+      "gain": -9
+    },
+    {
+      "type": "impact",
+      "at": "blaze",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "hiss",
+      "from": "blaze",
+      "to": "outside",
+      "gain": -22,
+      "tone": 0.3
+    },
+    {
+      "type": "impact",
+      "at": "outside+0.25",
+      "gain": -18,
+      "size": 0.6
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "riser",
+      "to": "rewind",
+      "dur": 0.9,
+      "gain": -24
+    },
+    {
+      "type": "impact",
+      "at": "rewind",
+      "gain": -13,
+      "size": 1.1
+    }
+  ]
+}
