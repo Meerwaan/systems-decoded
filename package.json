@@ -22,7 +22,8 @@
     "review": "node scripts/sd.mjs review",
     "look": "node scripts/sd.mjs look",
     "chrono": "node scripts/sd.mjs chrono",
-    "metrics": "node scripts/sd.mjs metrics"
+    "metrics": "node scripts/sd.mjs metrics",
+    "social": "node scripts/sd.mjs social"
   },
   "repository": {
     "type": "git",
