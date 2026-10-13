@@ -1,0 +1,247 @@
+{
+  "id": "018",
+  "slug": "cocotte-minute",
+  "title": "Cocotte-minute",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "acts": {
+      "menace": {
+        "stability": 0.2
+      }
+    }
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Ta",
+      "cocotte-minute"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Cocotte-minute : pourquoi elle siffle, et ce qu'elle fait le jour où elle ne siffle plus. Elle te fait peur, la tienne ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#cocotteminute",
+      "#cuisine",
+      "#securite"
+    ],
+    "pinned": "Lentilles, pâtes, tout ce qui mousse : jamais plus de la moitié. Elle te fait peur, ta cocotte-minute ?"
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/018-cocotte-minute.md ; contre-vérification phrase par phrase : docs/faits/018-contre-verification.md",
+    "« Plus de 350 kilos » : la force exercée sur le couvercle en fonctionnement « équivaut à une masse de plus de 350 kg » (DREAL Hauts-de-France, contrôle national de 2018). Les 350 kg sont une force équivalente, qui dépend du diamètre et de la pression. « Plus de 110 degrés » : 0,55 bar au-dessus de l'atmosphère (position légumes, SEB) ≈ 111 °C, 0,9 bar (viande) ≈ 118 °C, sur la courbe de vapeur saturée.",
+    "Les sécurités, dans l'ordre (notices Batimex, SEB, Cristel) : la soupape de fonctionnement laisse sortir l'excès de vapeur ; si elle est bouchée, la soupape de sécurité prend le relais ; si les deux le sont, le joint sort sur le côté du couvercle (SEB, Cristel) ou un levier fléchit (Batimex). Tant qu'il reste de la pression, une tige de verrouillage (l'indicateur de pression) empêche d'ouvrir : « il ne doit pas être possible d'ouvrir un autocuiseur sous pression » (exigence européenne, DREAL).",
+    "Remplissage (notices) : deux tiers au plus, la moitié pour ce qui mousse ou gonfle (légumes secs, pâtes, riz) — « les soupapes risqueraient de se boucher » (Cristel). Si la vapeur ne sort plus : décompresser, vérifier le liquide et la soupape (Batimex, Cristel) ; ne jamais forcer l'ouverture.",
+    "« Une cocotte aux normes n'explose pas » : les accidents décrits par l'État en 2018 (cinq modèles rappelés, quatre incidents, trois brûlures au second degré) sont des ouvertures brutales sous pression, avec projection, pas l'éclatement de la cuve.",
+    "Simplifications assumées : « un poids posé sur un trou » décrit la soupape à masselotte ; d'autres modèles ont un ressort, et les soupapes récentes chuchotent plus qu'elles ne sifflent. La scène (des lentilles, la mousse qui bouche la soupape) est un scénario. Aucune pression d'ouverture des sécurités n'est affichée : la norme EN 12778 n'a pas été lue.",
+    "Prochain dossier (019) : le prétensionneur de ceinture — docs/faits/019-pretensionneur.md."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ta cocotte-minute siffle. Sous le couvercle, la vapeur pousse : plus de [350|trois cent cinquante] *kilos*.",
+      "vo": "[tense] Ta cocotte-minute siffle. Sous le couvercle, la vapeur pousse : plus de trois cent cinquante kilos.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ta cocotte-minute siffle. Sous le couvercle, la vapeur pousse : plus de trois cent cinquante kilos."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Ce sifflement te +protège+. Le danger… c'est le jour où elle se *tait*.",
+      "vo": "[firm, matter-of-fact] Ce sifflement te protège. [short pause] [serious] Le danger... c'est le jour où elle se tait."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Dedans, la vapeur est prisonnière : l'eau ne bout plus à cent degrés, mais à plus de [110|cent dix]. Tout cuit plus vite. Mais ce soir, tu l'as trop remplie : des lentilles. La mousse monte… vers la *soupape*.",
+      "vo": "[tense] Dedans, la vapeur est prisonnière : l'eau ne bout plus à cent degrés, mais à plus de cent dix. Tout cuit plus vite. [short pause] Mais ce soir, tu l'as trop remplie : des lentilles. La mousse monte... vers la soupape."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Une cuve. Un couvercle, verrouillé. Un joint. Et dessus… +deux soupapes+.",
+      "vo": "[curious] Une cuve. Un couvercle, verrouillé. Un joint. Et dessus... deux soupapes."
+    },
+    {
+      "id": "repos",
+      "text": "La première, c'est elle qui siffle : un poids, posé sur un trou. Trop de pression ? La vapeur le soulève… et sort. Ce bruit, c'est la pression qui se +règle+.",
+      "vo": "[thoughtful] La première, c'est elle qui siffle : un poids, posé sur un trou. [curious] Trop de pression ? La vapeur le soulève... et sort. Ce bruit, c'est la pression qui se règle."
+    },
+    {
+      "id": "verrou",
+      "text": "Et tant qu'il reste de la pression, une tige bloque le couvercle : *impossible* de l'ouvrir.",
+      "vo": "[serious] Et tant qu'il reste de la pression, une tige bloque le couvercle : impossible de l'ouvrir."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : le jour où elle se *tait*… regarde.",
+      "vo": "[tense] Abonne-toi : le jour où elle se tait... regarde."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "La mousse bouche le trou. Plus un bruit. Dedans, la pression monte. Encore. Le couvercle, lui… tient *toujours*.",
+      "vo": "[urgent] La mousse bouche le trou. Plus un bruit. Dedans. La pression monte. Encore. [short pause] [ominous] Le couvercle, lui... tient toujours."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "La soupape de sécurité s'ouvre. La vapeur sort. Et si elle est bouchée, elle aussi ? Le joint cède, sur le côté. Il fuit. Exprès. La pression +tombe+.",
+      "vo": "[urgent] La soupape de sécurité s'ouvre. La vapeur sort. Et si elle est bouchée. Elle aussi ? Le joint cède. Sur le côté. Il fuit. Exprès. [short pause] [relieved] La pression tombe."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : une cocotte aux normes n'explose pas. Elle *fuit*. Ce qui brûle, c'est un couvercle… ouvert sous pression.",
+      "vo": "[low, grave voice] Voilà son secret : une cocotte aux normes n'explose pas. Elle fuit. Ce qui brûle, c'est un couvercle... ouvert sous pression."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et si la tienne se tait ? Coupe le feu. Laisse la pression retomber. Ne force jamais le couvercle. Puis nettoie la soupape. En +commentaire+ : elle te fait peur, ta cocotte ?",
+      "vo": "[curious] Et si la tienne se tait ? [short pause] [serious] Coupe le feu. Laisse la pression retomber. Ne force jamais le couvercle. Puis nettoie la soupape. [short pause] [curious] En commentaire : elle te fait peur, ta cocotte ?"
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : quelqu'un, ce soir, va la remplir à ras bord. Ce qui mousse : jamais plus de la *moitié*.",
+      "vo": "[firm, matter-of-fact] Like : [short pause] quelqu'un, ce soir, va la remplir à ras bord. Ce qui mousse : jamais plus de la moitié."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : ta ceinture de sécurité. Au choc, une charge explosive part dans son *enrouleur*. Exprès.",
+      "vo": "[serious] Prochain dossier : ta ceinture de sécurité. [short pause] Au choc, une charge explosive part dans son enrouleur. Exprès."
+    },
+    {
+      "id": "boucle",
+      "text": "Tout le contraire de…",
+      "vo": "[calm] Tout le contraire de,"
+    }
+  ],
+  "cues": {
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:s'ouvre-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:fuit",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:contraire"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

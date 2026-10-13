@@ -1,0 +1,242 @@
+{
+  "id": "019",
+  "slug": "pretensionneur",
+  "title": "Prétensionneur",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "acts": {
+      "menace": {
+        "stability": 0.2
+      }
+    }
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Ta ceinture",
+      "de sécurité"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Ceinture de sécurité : au choc, une charge explosive la retend avant même que ton corps parte. Et juste après, elle fait l'inverse. Ta voiture… elle a déjà tapé ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#ceinturedesecurite",
+      "#voiture",
+      "#securiteroutiere"
+    ],
+    "pinned": "Demandé en commentaire : le prétensionneur de ceinture. Il ne sert qu'une fois. Ta voiture… elle a déjà tapé ?"
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/019-pretensionneur.md ; contre-vérification phrase par phrase : docs/faits/019-contre-verification.md",
+    "Le prétensionneur d'enrouleur (NHTSA, rapport DOT HS 811 835) : une charge pyrotechnique produit du gaz qui entraîne une turbine reliée à la bobine de l'enrouleur ; il retire le mou presque instantanément ; il est déclenché par les mêmes capteurs que l'airbag et peut partir sans lui dans un choc léger. D'autres montages existent (dans la boucle : câble et piston ; billes, crémaillère).",
+    "« Une vingtaine de millièmes de seconde » : 15 à 20 ms, temps moyen de mise à feu relevé dans les essais NCAP à 56 km/h (IRCOBI 2023) — un ordre de grandeur de laboratoire, pas un temps mesuré depuis l'instant exact du choc. Aucun délai n'est donné entre le prétensionneur et l'airbag : aucune source.",
+    "Le limiteur d'effort : souvent une barre de torsion qui se tord à l'effort limite et laisse sortir de la sangle ; 3 à 4 kN aujourd'hui (≈ 300 à 400 kg), ≈ 5 kN dans les années 1990 (NHTSA, IRCOBI). Il limite la charge sur le thorax : 3 à 4 kN est son seuil, pas un seuil de fracture (aucun n'est établi). Le prétensionneur, lui, retire le mou (≈ 2 kN) : c'est la ceinture, puis le limiteur, qui retiennent. Il existe aussi des prétensionneurs électriques réversibles, non montrés ici.",
+    "Usage unique : « conçus pour fonctionner une seule fois », la ceinture se remplace après un déclenchement (notice Kia). Premier prétensionneur de série : Mercedes Classe S, 1981 ; premier limiteur : Volvo 850, 1995.",
+    "Le blocage du quotidien n'a rien à voir : dans l'enrouleur, une masse (pendule ou bille) pousse un cliquet contre une roue à rochet quand la voiture décélère ; il se réarme (un second blocage réagit à la sangle tirée d'un coup). Simplifications assumées : la longueur de sangle reprise n'est pas chiffrée (« quelques centimètres », aucune valeur de série trouvée) ; « trois cents, quatre cents kilos » traduit 3 à 4 kN ; le choc est un scénario.",
+    "Sujet demandé en commentaire sous le 015 et promis par Merwan. Prochain dossier (020) : la boule de la tour Taipei 101 — docs/faits/020-taipei-101.md."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Choc frontal. Tu n'as pas encore bougé… et ta ceinture se *resserre*, seule.",
+      "vo": "[tense] Choc frontal. Tu n'as pas encore bougé... et ta ceinture se resserre, seule.",
+      "voAlt": [
+        "[firm, matter-of-fact] Choc frontal. Tu n'as pas encore bougé... et ta ceinture se resserre, seule."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Une charge explosive vient de partir, pour la +retendre+. Mais ça, elle ne le fera… qu'*une fois*.",
+      "vo": "[firm, matter-of-fact] Une charge explosive vient de partir, pour la retendre. [short pause] [serious] Mais ça, elle ne le fera... qu'une fois."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Ta voiture s'arrête contre le mur. Toi, non : ton corps continue. Et ta ceinture a toujours un peu de mou. Ton manteau. Ta position. Quelques centimètres… c'est déjà *trop*.",
+      "vo": "[tense] Ta voiture s'arrête contre le mur. Toi, non : ton corps continue. [short pause] Et ta ceinture a toujours un peu de mou. Ton manteau. Ta position. Quelques centimètres... c'est déjà trop."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Un enrouleur. Sa bobine. Une charge : le générateur de gaz. Une turbine. Et au centre… une +barre de torsion+.",
+      "vo": "[curious] Un enrouleur. Sa bobine. Une charge : le générateur de gaz. Une turbine. Et au centre... une barre de torsion."
+    },
+    {
+      "id": "repos",
+      "text": "Au quotidien, tu freines fort : elle se bloque. Aucun explosif : un simple pendule. Mais bloquer ne reprend pas le mou. Pour ça, ici… une *explosion*.",
+      "vo": "[thoughtful] Au quotidien, tu freines fort : elle se bloque. Aucun explosif : un simple pendule. [short pause] [serious] Mais bloquer ne reprend pas le mou. Pour ça, ici... une explosion."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : cette ceinture qui se resserre seule, regarde-la *faire*.",
+      "vo": "[tense] Abonne-toi : cette ceinture qui se resserre seule, regarde-la faire."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Zéro. Le choc. Les capteurs de l'airbag donnent l'ordre. La charge part. Le gaz lance la turbine. La bobine tourne à l'envers. Une vingtaine de millièmes de seconde : la sangle est *tendue*. Et ton corps… arrive.",
+      "vo": "[urgent] Zéro. Le choc. Les capteurs de l'airbag donnent l'ordre. La charge part. Le gaz lance la turbine. La bobine tourne à l'envers. Une vingtaine de millièmes de seconde. La sangle est tendue. [short pause] [ominous] Et ton corps... arrive."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Il s'écrase dans la sangle. Trois cents kilos. Quatre cents. Sur ta poitrine. Alors la barre se tord. La sangle repart. Exprès. Et ta poitrine encaisse… +moins+.",
+      "vo": "[urgent] Il s'écrase dans la sangle. Trois cents kilos. Quatre cents. Sur ta poitrine. Alors la barre se tord. La sangle repart. Exprès. [short pause] [relieved] Et ta poitrine encaisse... moins."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : ta ceinture ne fait pas que te retenir. Elle se resserre avant que tu bouges… puis elle *cède*. Exprès.",
+      "vo": "[low, grave voice] Voilà son secret : ta ceinture ne fait pas que te retenir. Elle se resserre avant que tu bouges... puis elle cède. Exprès."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Une seule fois ? Oui. Une fois la charge partie, même sans airbag, la ceinture se remplace. En +commentaire+ : ta voiture… elle a déjà tapé ?",
+      "vo": "[curious] Une seule fois ? [short pause] [serious] Oui. Une fois la charge partie, même sans airbag, la ceinture se remplace. [short pause] [curious] En commentaire : ta voiture... elle a déjà tapé ?"
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour celui qui, sur la banquette arrière, ne s'attache *pas*.",
+      "vo": "[firm, matter-of-fact] Like : [short pause] pour celui qui, sur la banquette arrière, ne s'attache pas."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : une boule d'acier de [660|six cent soixante] tonnes, suspendue en haut d'une *tour*.",
+      "vo": "[serious] Prochain dossier : une boule d'acier de six cent soixante tonnes, [short pause] suspendue en haut d'une tour."
+    },
+    {
+      "id": "boucle",
+      "text": "Elle aussi, elle attend son…",
+      "vo": "[calm] Elle aussi, elle attend son,"
+    }
+  ],
+  "cues": {
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "zero:charge-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:cède",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:attend"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
