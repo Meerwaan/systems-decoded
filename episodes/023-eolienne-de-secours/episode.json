@@ -1,0 +1,242 @@
+{
+  "id": "023",
+  "slug": "eolienne-de-secours",
+  "title": "Éolienne de secours",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "acts": {
+      "menace": {
+        "stability": 0.2
+      }
+    }
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "L'éolienne",
+      "de secours"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Avion de ligne : quand tous les moteurs s'arrêtent, une petite hélice sort du fuselage. Voilà à quoi elle sert, et ce qu'elle ne peut pas faire. En avion, tu as peur ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#avion",
+      "#aviation",
+      "#airbus"
+    ],
+    "pinned": "24 août 2001 : un Airbus plane 19 minutes sans moteur au-dessus de l'Atlantique et se pose. Aucun mort. En avion, tu as peur ?"
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/023-eolienne-de-secours.md ; contre-vérification phrase par phrase : docs/faits/023-contre-verification.md",
+    "Le vol (rapport d'enquête portugais GPIAA 22/ACCID/2001, lu en entier) : Air Transat 236, Airbus A330-243, 24 août 2001, 293 passagers et 13 membres d'équipage ; moteur droit éteint à 06 h 13 UTC, moteur gauche à 06 h 26, à environ 65 milles nautiques (≈ 120 km) de Lajes, vers 34 500 pieds (≈ 10 500 m) ; toucher à 06 h 45 ; environ 200 nœuds (≈ 370 km/h) au seuil de piste ; ni antiblocage ni freinage normal, freinage maximal sur l'accumulateur de secours, roues bloquées, pneus dégonflés ; 18 blessés, tous pendant l'évacuation, aucun mort.",
+    "La cause (même rapport) : une fuite de carburant sur le moteur droit, due à des conduites non adaptées montées lors du remplacement d'une pompe hydraulique ; l'équipage n'a pas appliqué la procédure de fuite de carburant. Le film dit « une fuite a vidé les réservoirs » et ne nomme personne.",
+    "L'éolienne de secours (Ram Air Turbine) : sortie automatique quand tous les moteurs sont arrêtés, en vol, au-dessus de 100 nœuds (note Airbus) ; un ressort étend son bras (décrit par Airbus pour la famille A320) ; sur ce vol elle a tenu en pression le circuit hydraulique vert, un des trois — commandes de vol primaires — et, par lui, le générateur de secours ; les circuits bleu et jaune étaient perdus : plus de pilotes automatiques, la plupart des spoilers, les freins normaux, la direction de la roue avant, les inverseurs.",
+    "Elle ne rallume aucun moteur et l'avion ne plane pas grâce à elle : elle rend de quoi piloter. Finesse d'un avion de ligne : environ 16 à 20 pour 1 (16 : calcul sur ce vol).",
+    "Simplifications assumées : tu es un passager ; les heures sont en temps universel, comme dans le rapport ; « plus un seul moteur » : ils se sont éteints à treize minutes d'écart ; la sortie de l'éolienne est déduite par le rapport, son instant n'est pas enregistré ; le ressort et la trappe sont décrits par Airbus pour l'A320, la pompe « derrière l'hélice » est un choix de mise en scène ; « l'huile » est le fluide hydraulique ; « près de 370 km/h » est la vitesse au seuil de piste ; l'emplacement, le diamètre et la puissance de l'éolienne d'un A330 n'ont pas été trouvés : rien n'en est dit ni affiché, pas plus que son temps de sortie. À ne pas utiliser : l'accident d'Air India 171 (juin 2025), enquête en cours.",
+    "Prochain dossier (024) : l'alimentation électrique du bloc opératoire — docs/faits/024-bloc-operatoire.md."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Au-dessus de l'Atlantique, ton avion n'a plus un seul *moteur*.",
+      "vo": "[tense] Au-dessus de l'Atlantique, ton avion n'a plus un seul moteur.",
+      "voAlt": [
+        "[firm, matter-of-fact] Au-dessus de l'Atlantique, ton avion n'a plus un seul moteur."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Tu te poseras, vivant : dehors, une petite hélice vient de +sortir+. Reste un problème : tes *freins*.",
+      "vo": "[firm, matter-of-fact] Tu te poseras, vivant : dehors, une petite hélice vient de sortir. [short pause] [serious] Reste un problème : tes freins."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Vingt-quatre août [2001|deux mille un]. Un Airbus, [306|trois cent six] personnes. Une fuite de carburant a vidé les réservoirs. Plus de moteurs : plus de générateurs, plus de pression pour les gouvernes. Et la piste visée, aux Açores, est à cent vingt *kilomètres*.",
+      "vo": "[tense] Vingt-quatre août deux mille un. Un Airbus, trois cent six personnes. Une fuite de carburant a vidé les réservoirs. [short pause] Plus de moteurs : plus de générateurs, plus de pression pour les gouvernes. Et la piste visée, aux Açores, est à cent vingt kilomètres."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Une trappe. Un bras, poussé par un ressort. Une hélice. Et derrière… une +pompe+.",
+      "vo": "[curious] Une trappe. Un bras, poussé par un ressort. Une hélice. Et derrière... une pompe."
+    },
+    {
+      "id": "repos",
+      "text": "Elle dort, repliée, derrière une trappe. Tous les moteurs s'arrêtent en vol ? Elle sort seule. Pas de moteur pour elle : c'est le vent de l'avion qui la fait tourner. Et elle pousse l'huile… dans un *seul* circuit.",
+      "vo": "[thoughtful] Elle dort, repliée, derrière une trappe. [curious] Tous les moteurs s'arrêtent en vol ? Elle sort seule. Pas de moteur pour elle : c'est le vent de l'avion qui la fait tourner. [serious] Et elle pousse l'huile... dans un seul circuit."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ce plané au-dessus de l'océan… regarde-le en *entier*.",
+      "vo": "[tense] Abonne-toi : ce plané au-dessus de l'océan... regarde-le en entier."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Six heures vingt-six. Le second moteur s'éteint. Dix mille mètres. Plus de pilote automatique. Et l'avion… *descend*.",
+      "vo": "[urgent] Six heures vingt-six. Le second moteur s'éteint. Dix mille mètres. Plus de pilote automatique. [short pause] [ominous] Et l'avion... descend."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "L'hélice sort. Elle tourne. Un circuit sur trois revit. Les gouvernes répondent. Le commandant vise une île. Dix-neuf minutes de plané. Et la piste est +là+.",
+      "vo": "[urgent] L'hélice sort. Elle tourne. Un circuit sur trois revit. Les gouvernes répondent. Le commandant vise une île. Dix-neuf minutes de plané. [short pause] [relieved] Et la piste est là."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà le secret : un avion sans moteur ne tombe pas. Il *plane*. Et c'est le vent de sa descente… qui lui rend de quoi piloter.",
+      "vo": "[low, grave voice] Voilà le secret : un avion sans moteur ne tombe pas. Il plane. Et c'est le vent de sa descente... qui lui rend de quoi piloter."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et les freins ? Ni inverseurs, ni freinage normal. Il arrive sur la piste à près de [370|trois cent soixante-dix] kilomètres-heure. Freinage de secours. Les pneus lâchent… il s'arrête. Aucun mort. En +commentaire+ : en avion, tu as peur ?",
+      "vo": "[curious] Et les freins ? [short pause] [serious] Ni inverseurs, ni freinage normal. Il arrive sur la piste à près de trois cent soixante-dix kilomètres-heure. Freinage de secours. Les pneus lâchent... il s'arrête. Aucun mort. [short pause] [curious] En commentaire : en avion, tu as peur ?"
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour celui qui serre l'accoudoir à chaque *décollage*.",
+      "vo": "[firm, matter-of-fact] Like : [short pause] pour celui qui serre l'accoudoir à chaque décollage."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : le bloc opératoire. Là, un premier défaut électrique… ne doit rien *couper*.",
+      "vo": "[serious] Prochain dossier : le bloc opératoire. [short pause] Là, un premier défaut électrique... ne doit rien couper."
+    },
+    {
+      "id": "boucle",
+      "text": "Et pas besoin, pour ça, d'être…",
+      "vo": "[calm] Et pas besoin, pour ça, d'être,"
+    }
+  ],
+  "cues": {
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:L'hélice-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:plane",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:besoin"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

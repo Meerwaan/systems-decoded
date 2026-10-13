@@ -1,0 +1,242 @@
+{
+  "id": "022",
+  "slug": "batterie-telephone",
+  "title": "Batterie",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "acts": {
+      "menace": {
+        "stability": 0.2
+      }
+    }
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "La batterie",
+      "de ton téléphone"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Batterie de téléphone : entre ses deux électrodes, un film de plastique plus fin qu'un cheveu. Voilà ce qu'il fait quand ça chauffe. Tu le charges où, la nuit ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#batterie",
+      "#telephone",
+      "#lithium"
+    ],
+    "pinned": "Jamais sous l'oreiller ni sous la couette pendant la charge. Batterie gonflée : on arrête. Tu le charges où, la nuit ?"
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/022-batterie-telephone.md ; contre-vérification phrase par phrase : docs/faits/022-contre-verification.md. Peu de sources primaires dans ce dossier : la CPSC seule a été lue en entier.",
+    "Le séparateur : un film de polymère microporeux de 10 à 30 µm (un cheveu : 50 à 120 µm, source faible — « plus fin qu'un cheveu » est un ordre de grandeur) ; sa couche de polyéthylène fond vers 130 à 140 °C et ferme ses pores, ce qui arrête le passage des ions (Volta Foundation, source secondaire). C'est une barrière passive, avec ses limites : sa fenêtre est étroite (l'effet se perd vers 150 °C, le film se rétracte) ; un court-circuit interne mécanique (électrode pliée, perforation) contourne tout ; aucun fabricant de téléphone ne la confirme pour ses cellules, et un séparateur uniquement céramique n'en a pas.",
+    "Le circuit de protection, dans le bloc batterie : surcharge, décharge profonde, surintensité, température (thermistance). Aucun seuil propre à un téléphone n'a été trouvé : aucun n'est dit ni affiché. Électrolyte inflammable : INRS.",
+    "Le rappel de 2016 (CPSC, 15 septembre 2016) : Samsung Galaxy Note 7, environ un million d'appareils rappelés aux États-Unis, 92 signalements de surchauffe, 26 brûlures, 55 dégâts matériels ; interdit à bord des avions aux États-Unis le 15 octobre 2016. La marque n'est pas dite dans le film.",
+    "La charge de nuit : la page de sécurité d'Apple n'a pas pu être lue (la presse en cite « under a blanket, pillow, or your body », et Apple parle de chaleur sur la peau et de ventilation, pas d'incendie) : la marque n'est pas nommée dans le film ; Fondation MAIF : ni sous l'oreiller ni sur un canapé ; batterie gonflée, chaude ou qui sent : on arrête la charge et on l'isole (INRS).",
+    "Simplifications assumées : la scène de l'acte 3 est un scénario qui suppose une batterie abîmée — l'oreiller seul n'amène pas l'intérieur à 130 °C, un téléphone sain réduit ou coupe sa charge bien avant ; « pas d'abord le courant » : un court-circuit interne est aussi un courant ; « cuivre, aluminium » sont les feuilles qui portent les deux électrodes ; « enroulé ou empilé » : les deux existent, le nombre de couches n'est pas sourcé ; aucune température d'emballement n'est affichée. À ne pas dire : « le séparateur sauve le téléphone », une statistique française d'incendies, tout mélange avec trottinettes et vélos.",
+    "Prochain dossier (023) : l'éolienne de secours des avions de ligne — docs/faits/023-eolienne-de-secours.md."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ton téléphone charge, sous ton oreiller. Dedans, sa batterie *chauffe*.",
+      "vo": "[tense] Ton téléphone charge, sous ton oreiller. Dedans, sa batterie chauffe.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ton téléphone charge, sous ton oreiller. Dedans, sa batterie chauffe."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Son dernier rempart : un film de plastique, plus fin qu'un +cheveu+. Et ton oreiller… travaille *contre lui*.",
+      "vo": "[firm, matter-of-fact] Son dernier rempart : un film de plastique, plus fin qu'un cheveu. [short pause] [serious] Et ton oreiller... travaille contre lui."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Dans une batterie : deux électrodes, séparées par presque rien, dans un liquide inflammable. Si elles se touchent : la chaleur appelle la chaleur. En [2016|deux mille seize], un modèle entier a été rappelé… et interdit d'avion, aux *États-Unis*.",
+      "vo": "[tense] Dans une batterie : deux électrodes, séparées par presque rien, dans un liquide inflammable. Si elles se touchent : la chaleur appelle la chaleur. [short pause] En deux mille seize, un modèle entier a été rappelé... et interdit d'avion, aux États-Unis."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Deux feuilles de métal, enduites : cuivre, aluminium. Entre les deux… le +film+ : le séparateur. Le tout, enroulé ou empilé, en couches serrées. Et au bout, un petit circuit.",
+      "vo": "[curious] Deux feuilles de métal, enduites : cuivre, aluminium. Entre les deux... le film : le séparateur. Le tout, enroulé ou empilé, en couches serrées. Et au bout, un petit circuit."
+    },
+    {
+      "id": "repos",
+      "text": "Le circuit surveille tout : trop chargée, trop vidée, trop chaude… il coupe. Le film, lui, laisse passer le lithium par des pores invisibles. Et il *attend*.",
+      "vo": "[thoughtful] Le circuit surveille tout : trop chargée, trop vidée, trop chaude... il coupe. [curious] Le film, lui, laisse passer le lithium par des pores invisibles. [serious] Et il attend."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ce film plus fin qu'un cheveu… *regarde*.",
+      "vo": "[tense] Abonne-toi : ce film plus fin qu'un cheveu... regarde."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Sous l'oreiller, la chaleur ne sort plus. La batterie monte. Le circuit coupe la charge. Mais si la batterie est abîmée, un point chauffe… *encore*.",
+      "vo": "[urgent] Sous l'oreiller. La chaleur ne sort plus. La batterie monte. Le circuit coupe la charge. [short pause] [ominous] Mais si la batterie est abîmée, un point chauffe... encore."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Vers cent trente degrés, le film fond. Ses pores se ferment. Le lithium ne passe plus. Le courant +s'arrête+. C'était son dernier geste.",
+      "vo": "[urgent] Vers cent trente degrés. Le film fond. Ses pores se ferment. Le lithium ne passe plus. [short pause] [relieved] Le courant s'arrête. [serious] C'était son dernier geste."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : ce n'est pas d'abord le courant qui menace ta batterie. C'est la *chaleur*. Et ce qui la retient, à la fin… c'est un film qui fond.",
+      "vo": "[low, grave voice] Voilà son secret : ce n'est pas d'abord le courant qui menace ta batterie. C'est la chaleur. Et ce qui la retient, à la fin... c'est un film qui fond."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et ton oreiller ? Il garde cette chaleur. Les consignes sont claires : pas d'oreiller, pas de couverture, pendant la charge. Batterie gonflée ? Tu débranches, et tu l'éloignes. En +commentaire+ : tu le charges où, la nuit ?",
+      "vo": "[curious] Et ton oreiller ? [short pause] [serious] Il garde cette chaleur. Les consignes sont claires : pas d'oreiller, pas de couverture, pendant la charge. Batterie gonflée ? Tu débranches, et tu l'éloignes. [short pause] [curious] En commentaire : tu le charges où, la nuit ?"
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : quelqu'un, ce soir, va s'endormir *dessus*.",
+      "vo": "[firm, matter-of-fact] Like : [short pause] quelqu'un, ce soir, va s'endormir dessus."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : un avion de ligne. Deux moteurs éteints… au-dessus de l'*Atlantique*.",
+      "vo": "[serious] Prochain dossier : un avion de ligne. [short pause] Deux moteurs éteints... au-dessus de l'Atlantique."
+    },
+    {
+      "id": "boucle",
+      "text": "Et pendant ce temps, cette nuit…",
+      "vo": "[calm] Et pendant ce temps, cette nuit,"
+    }
+  ],
+  "cues": {
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:fond-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:chaleur",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:nuit"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
