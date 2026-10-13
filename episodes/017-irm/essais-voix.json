@@ -1,0 +1,64 @@
+{
+  "//": "Banc d'essai du 2026-10-13 : sortir la voix du « même ton partout ». L'acte 3 du 017, les mêmes mots, sept façons de les diriger. npm run essai -- 017 --file episodes/017-irm/essais-voix.json",
+  "phrases": ["zero", "reponse"],
+  "essais": [
+    {
+      "nom": "A-temoin",
+      "note": "la direction du film, jouée seule : ce que change une requête courte"
+    },
+    {
+      "nom": "B-urgent",
+      "note": "[urgent] sans majuscules ni point d'exclamation, la menace qui retombe en [ominous], la fin en [relieved]",
+      "vo": {
+        "zero": "[urgent] Quelqu'un est coincé. Tu frappes l'arrêt d'urgence : la machine s'éteint. [short pause] [ominous] Le champ, lui... ne bouge pas.",
+        "reponse": "[urgent] L'autre bouton, sous son capot : l'arrêt de l'aimant. [short pause] Le fil chauffe, l'hélium bout, se dilate sept cents fois, file dehors par un tube... [relieved] et le champ tombe, en quelques secondes."
+      }
+    },
+    {
+      "nom": "C-nerveux",
+      "note": "[nervous] : la tension par la hauteur, pas par le volume",
+      "vo": {
+        "zero": "[nervous] Quelqu'un est coincé. Tu frappes l'arrêt d'urgence : la machine s'éteint. [short pause] [ominous] Le champ, lui... ne bouge pas.",
+        "reponse": "[nervous] L'autre bouton, sous son capot : l'arrêt de l'aimant. [short pause] Le fil chauffe, l'hélium bout, se dilate sept cents fois, file dehors par un tube... [relieved] et le champ tombe, en quelques secondes."
+      }
+    },
+    {
+      "nom": "D-souffle",
+      "note": "[breathless, fast] : la tension par le débit et l'effort",
+      "vo": {
+        "zero": "[breathless, fast] Quelqu'un est coincé. Tu frappes l'arrêt d'urgence : la machine s'éteint. [short pause] [ominous] Le champ, lui... ne bouge pas.",
+        "reponse": "[breathless, fast] L'autre bouton, sous son capot : l'arrêt de l'aimant. [short pause] Le fil chauffe, l'hélium bout, se dilate sept cents fois, file dehors par un tube... [relieved] et le champ tombe, en quelques secondes."
+      }
+    },
+    {
+      "nom": "E-retenu",
+      "note": "[hushed, urgent] : la tension de près, vite et bas, sans monter le volume",
+      "vo": {
+        "zero": "[hushed, urgent] Quelqu'un est coincé. Tu frappes l'arrêt d'urgence : la machine s'éteint. [short pause] [ominous] Le champ, lui... ne bouge pas.",
+        "reponse": "[hushed, urgent] L'autre bouton, sous son capot : l'arrêt de l'aimant. [short pause] Le fil chauffe, l'hélium bout, se dilate sept cents fois, file dehors par un tube... [relieved] et le champ tombe, en quelques secondes."
+      }
+    },
+    {
+      "nom": "F-hache",
+      "note": "comme B, la ponctuation en souffles courts : les mêmes mots, des points à la place des virgules",
+      "vo": {
+        "zero": "[urgent] Quelqu'un est coincé. Tu frappes l'arrêt d'urgence. La machine s'éteint. [short pause] [ominous] Le champ, lui... ne bouge pas.",
+        "reponse": "[urgent] L'autre bouton. Sous son capot. L'arrêt de l'aimant. [short pause] Le fil chauffe. L'hélium bout. Se dilate sept cents fois. File dehors par un tube... [relieved] Et le champ tombe. En quelques secondes."
+      }
+    },
+    {
+      "nom": "G-stabilite",
+      "note": "la direction du film, stabilité 0,2 au lieu de 0,4 : est-ce le réglage qui bride la voix ?",
+      "stability": 0.2
+    },
+    {
+      "nom": "H-turbo",
+      "note": "14/10 : l'essai F mot pour mot, sur eleven_v4_turbo (moitié prix) — à comparer à F, seul le modèle change",
+      "model": "eleven_v4_turbo",
+      "vo": {
+        "zero": "[urgent] Quelqu'un est coincé. Tu frappes l'arrêt d'urgence. La machine s'éteint. [short pause] [ominous] Le champ, lui... ne bouge pas.",
+        "reponse": "[urgent] L'autre bouton. Sous son capot. L'arrêt de l'aimant. [short pause] Le fil chauffe. L'hélium bout. Se dilate sept cents fois. File dehors par un tube... [relieved] Et le champ tombe. En quelques secondes."
+      }
+    }
+  ]
+}

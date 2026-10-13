@@ -1,0 +1,252 @@
+{
+ "phrases": [
+  "zero",
+  "reponse"
+ ],
+ "film": {
+  "zero": {
+   "score": 3.13,
+   "flags": [],
+   "mood": "firm, matter-of-fact",
+   "register": 0.3100016808825931,
+   "spread": 3.126152859692619,
+   "rate": 19.387755102040817,
+   "pause": 0.4000000000000002,
+   "seconds": 5.207000000000001,
+   "level": 0.5878377973999669,
+   "lift": 0,
+   "clip": "audio/takes/c9a6a26c/cut/take-22.zero.mp3"
+  },
+  "reponse": {
+   "score": 4.07,
+   "flags": [],
+   "mood": "tendu",
+   "register": 0.7746041058720606,
+   "spread": 4.003390548067287,
+   "rate": 16.91919191919192,
+   "pause": 0.38000000000000017,
+   "seconds": 9.744,
+   "level": -0.08850213251139394,
+   "lift": 0,
+   "clip": "audio/takes/c9a6a26c/cut/take-22.reponse.mp3"
+  }
+ },
+ "essais": [
+  {
+   "nom": "A-temoin",
+   "note": "la direction du film, jouée seule : ce que change une requête courte",
+   "stability": 0.4,
+   "model": "eleven_v4",
+   "rows": [
+    {
+     "id": "zero",
+     "register": 2.1766864223953473,
+     "level": -0.5958231185465266,
+     "rate": -5.3044408350830015,
+     "spread": 3.4341467358434636,
+     "pause": 0.6300000000000003,
+     "flags": []
+    },
+    {
+     "id": "reponse",
+     "register": 2.4759933905737093,
+     "level": -0.0966284967425608,
+     "rate": -10.14417692540821,
+     "spread": 4.028091324718497,
+     "pause": 0.6400000000000003,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\017-irm\\audio\\essais\\017-essai-A-temoin.mp3"
+  },
+  {
+   "nom": "B-urgent",
+   "note": "[urgent] sans majuscules ni point d'exclamation, la menace qui retombe en [ominous], la fin en [relieved]",
+   "stability": 0.4,
+   "model": "eleven_v4",
+   "rows": [
+    {
+     "id": "zero",
+     "register": 4.448612839050987,
+     "level": 0.11552091452644575,
+     "rate": 2.684762667664331,
+     "spread": 5.335885419854311,
+     "pause": 0.7100000000000004,
+     "flags": []
+    },
+    {
+     "id": "reponse",
+     "register": 6.200918980072293,
+     "level": 1.9644669506741863,
+     "rate": -6.6970225875082505,
+     "spread": 3.751776824487645,
+     "pause": 0.4300000000000002,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\017-irm\\audio\\essais\\017-essai-B-urgent.mp3"
+  },
+  {
+   "nom": "C-nerveux",
+   "note": "[nervous] : la tension par la hauteur, pas par le volume",
+   "stability": 0.4,
+   "model": "eleven_v4",
+   "rows": [
+    {
+     "id": "zero",
+     "register": -0.35965876787625106,
+     "level": -1.8427038023840048,
+     "rate": -8.243992560823221,
+     "spread": 4.609347639420586,
+     "pause": 0.8900000000000006,
+     "flags": []
+    },
+    {
+     "id": "reponse",
+     "register": 3.40268516263311,
+     "level": 0.101498110565867,
+     "rate": -15.552166277119738,
+     "spread": 3.770411957234112,
+     "pause": 0.6200000000000003,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\017-irm\\audio\\essais\\017-essai-C-nerveux.mp3"
+  },
+  {
+   "nom": "D-souffle",
+   "note": "[breathless, fast] : la tension par le débit et l'effort",
+   "stability": 0.4,
+   "model": "eleven_v4",
+   "rows": [
+    {
+     "id": "zero",
+     "register": 0.597604135065942,
+     "level": -1.9826777132873552,
+     "rate": -2.4010392569133843,
+     "spread": 3.5027965588186425,
+     "pause": 0.6300000000000003,
+     "flags": []
+    },
+    {
+     "id": "reponse",
+     "register": 4.165493734703716,
+     "level": 0.6564458974161056,
+     "rate": -3.7428386061100882,
+     "spread": 3.662050688668431,
+     "pause": 0.45000000000000023,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\017-irm\\audio\\essais\\017-essai-D-souffle.mp3"
+  },
+  {
+   "nom": "E-retenu",
+   "note": "[hushed, urgent] : la tension de près, vite et bas, sans monter le volume",
+   "stability": 0.4,
+   "model": "eleven_v4",
+   "rows": [
+    {
+     "id": "zero",
+     "register": -1.2336375957450414,
+     "level": -1.9974884094100531,
+     "rate": -1.705559726677608,
+     "spread": 2.6721831359217054,
+     "pause": 0.7000000000000004,
+     "flags": []
+    },
+    {
+     "id": "reponse",
+     "register": 1.9665168431541156,
+     "level": 1.2943186995288087,
+     "rate": -4.748135330850467,
+     "spread": 3.451706695085021,
+     "pause": 0.6300000000000003,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\017-irm\\audio\\essais\\017-essai-E-retenu.mp3"
+  },
+  {
+   "nom": "F-hache",
+   "note": "comme B, la ponctuation en souffles courts : les mêmes mots, des points à la place des virgules",
+   "stability": 0.4,
+   "model": "eleven_v4",
+   "rows": [
+    {
+     "id": "zero",
+     "register": 5.641525704771041,
+     "level": 1.4865561938317313,
+     "rate": -1.9384849405954307,
+     "spread": 5.238745812242363,
+     "pause": 0.6100000000000003,
+     "flags": []
+    },
+    {
+     "id": "reponse",
+     "register": 6.470490126182964,
+     "level": 1.790817156233956,
+     "rate": -1.5345096672489178,
+     "spread": 4.33552352397351,
+     "pause": 0.4100000000000002,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\017-irm\\audio\\essais\\017-essai-F-hache.mp3"
+  },
+  {
+   "nom": "G-stabilite",
+   "note": "la direction du film, stabilité 0,2 au lieu de 0,4 : est-ce le réglage qui bride la voix ?",
+   "stability": 0.2,
+   "model": "eleven_v4",
+   "rows": [
+    {
+     "id": "zero",
+     "register": 1.4574870184997892,
+     "level": 0.1424208499785813,
+     "rate": -1.4715253450744537,
+     "spread": 3.1652402743004884,
+     "pause": 0.6900000000000004,
+     "flags": []
+    },
+    {
+     "id": "reponse",
+     "register": 2.528997531462018,
+     "level": 0.625706612767253,
+     "rate": -10.14417692540821,
+     "spread": 3.8615420311451922,
+     "pause": 0.5400000000000003,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\017-irm\\audio\\essais\\017-essai-G-stabilite.mp3"
+  },
+  {
+   "nom": "H-turbo",
+   "note": "14/10 : l'essai F mot pour mot, sur eleven_v4_turbo (moitié prix) — à comparer à F, seul le modèle change",
+   "stability": 0.4,
+   "model": "eleven_v4_turbo",
+   "rows": [
+    {
+     "id": "zero",
+     "register": 6.345682586554498,
+     "level": 0.6779568983345037,
+     "rate": -2.63068387042652,
+     "spread": 5.092712082118282,
+     "pause": 0.6100000000000003,
+     "flags": []
+    },
+    {
+     "id": "reponse",
+     "register": 5.920468381936905,
+     "level": 1.4305192597145577,
+     "rate": -2.194466036771381,
+     "spread": 4.246605713603962,
+     "pause": 0.4300000000000002,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\017-irm\\audio\\essais\\017-essai-H-turbo.mp3"
+  }
+ ]
+}
