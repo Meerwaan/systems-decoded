@@ -1,5 +1,6 @@
-/* Système Décodé — bureau de publication.
-   Same house style as kit/brand.css, brought down to a phone held in one hand.
+/* Système Décodé — bureau de publication (and the base of the listening booth, voix.css).
+   Same house style as kit/brand.css, brought down to a phone held in one hand; from 960px the
+   desk opens into two panes, the index of the dossiers and one sheet.
    Three colours carry meaning and nothing else:
      ink     structure, text, the things you press
      veille  alive, ready, done (a light that comes on)
@@ -124,47 +125,76 @@ a.textbtn { display: inline-flex; align-items: center; } /* a link keeps the 44p
 .state--alert b { color: var(--signal); }
 .state .btn { margin-top: 18px; }
 
-/* ─────────────────────────────────────────────── header */
+/* ─────────────────────────────────────────────── header (the booth's page; the desk has its own bar) */
 .top__row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .top__title { margin-top: 14px; min-height: 0.92em; font: 800 clamp(40px, 12.6vw, 56px)/0.92 var(--display); letter-spacing: 0.005em; text-transform: uppercase; }
 .top__help { margin-top: 10px; font: 500 18px/1.25 var(--display); color: var(--ink-dim); }
 
-/* ─────────────────────────────────────────────── one dossier */
-.dossier { margin-top: 30px; padding-top: 16px; border-top: 2px solid var(--ink); }
-.dossier:not(.dossier--idle) + .dossier { margin-top: 48px; } /* more air after a long, open dossier */
-.dossier__head { display: flex; gap: 16px; }
-.dossier__cover {
-  position: relative; flex: none; display: block; width: 118px; aspect-ratio: 3 / 4; overflow: hidden;
-  border: 1px solid var(--ink-faint); background: var(--ink-wash); color: var(--ink-dim);
+/* ─────────────────────────────────────────────── the desk: an index, and one sheet at a time
+   A phone shows one or the other (data-view, set from the address); from 960px they sit side by side. */
+.desk { max-width: 560px; margin: 0 auto; }
+.desk [hidden], .flash[hidden] { display: none !important; }
+.index, .sheet {
+  padding-left: max(var(--gutter), env(safe-area-inset-left));
+  padding-right: max(var(--gutter), env(safe-area-inset-right));
 }
-/* the 9:16 file, cut to its middle 3:4 the way TikTok's profile grid cuts it — and about that size */
-.dossier__cover img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
-/* no cover yet: an empty frame, crossed out like a blank on a drawing */
-.dossier__cover--none {
-  border-style: dashed; border-color: var(--ink-line);
-  background:
-    linear-gradient(to top right, transparent calc(50% - 0.5px), var(--ink-faint) calc(50% - 0.5px), var(--ink-faint) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
-    linear-gradient(to bottom right, transparent calc(50% - 0.5px), var(--ink-faint) calc(50% - 0.5px), var(--ink-faint) calc(50% + 0.5px), transparent calc(50% + 0.5px));
+.index { padding-top: calc(10px + env(safe-area-inset-top)); padding-bottom: calc(28px + env(safe-area-inset-bottom)); }
+.sheet { padding-bottom: calc(132px + env(safe-area-inset-bottom)); } /* room for the ticks, pinned to the bottom of the screen */
+.desk[data-view="list"] .sheet, .desk[data-view="sheet"] .index { display: none; }
+
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; }
+.bar__acts { display: flex; align-items: center; gap: 20px; }
+.index__title { margin-top: 2px; min-height: 0.94em; font: 800 34px/0.94 var(--display); letter-spacing: 0.005em; text-transform: uppercase; }
+
+/* one choice out of two or three: the lists of the index, the platforms of a sheet */
+.segs { display: flex; }
+.seg {
+  flex: 1 1 0; min-width: 0; display: flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 46px; padding: 6px 6px;
+  border: 1px solid var(--ink-line); background: transparent; color: var(--ink-dim);
+  font: 600 17px/1 var(--display); letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap;
+  cursor: pointer; touch-action: manipulation; -webkit-user-select: none; user-select: none;
+  transition: background-color 0.12s, color 0.12s, border-color 0.12s;
 }
-/* "open it whole": two corners pulling apart */
-.dossier__zoom {
-  position: absolute; right: 0; bottom: 0; width: 30px; height: 30px;
-  border-top: 1px solid var(--ink-faint); border-left: 1px solid var(--ink-faint); background: rgba(7, 10, 12, 0.86);
+.seg + .seg { margin-left: -1px; }
+.seg b { font: 500 12px/1 var(--mono); letter-spacing: 0; }
+.seg[aria-pressed="true"], .seg[aria-selected="true"] { position: relative; border-color: var(--ink); background: var(--ink); color: var(--bg); font-weight: 700; }
+/* a platform the film is already on: a tick before its name, lit while its words are not the ones open */
+.seg.is-on::before { content: ""; flex: none; width: 5px; height: 10px; margin: -3px 1px 0 0; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.seg.is-on[aria-selected="false"] { border-color: var(--veille); color: var(--veille); z-index: 1; }
+.segs--filters {
+  position: sticky; top: 0; z-index: 3;
+  margin: 12px calc(-1 * var(--gutter)) 0; padding: 8px var(--gutter);
+  border-bottom: 1px solid var(--ink-faint); background: var(--bg);
 }
-.dossier__zoom::before, .dossier__zoom::after { content: ""; position: absolute; width: 7px; height: 7px; border: 0 solid var(--ink); }
-.dossier__zoom::before { top: 8px; right: 8px; border-width: 1.5px 1.5px 0 0; }
-.dossier__zoom::after { bottom: 8px; left: 8px; border-width: 0 0 1.5px 1.5px; }
-.dossier__id { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; padding: 3px 0 0; }
-.dossier__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; } /* its number, and the way to its voice */
-.dossier__title { margin-top: 10px; font: 800 33px/0.94 var(--display); letter-spacing: 0.005em; text-transform: uppercase; overflow-wrap: anywhere; text-wrap: balance; }
-.dossier__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; width: 100%; margin-top: auto; padding-top: 10px; }
-/* nothing to do with it today (no render yet, or already posted): it folds down to a line of the index */
-.dossier--idle .dossier__cover { width: 78px; }
-.dossier--idle .tag .dot { background: none; box-shadow: inset 0 0 0 1px var(--ink-line); } /* light off */
-.dossier--idle .dossier__zoom { width: 24px; height: 24px; }
-.dossier--idle .dossier__zoom::before { top: 6px; right: 6px; width: 6px; height: 6px; }
-.dossier--idle .dossier__zoom::after { bottom: 6px; left: 6px; width: 6px; height: 6px; }
-.dossier--idle .dossier__title { margin-top: 8px; font-size: 26px; }
+
+.notice { margin-top: 12px; padding: 10px 12px 11px; border: 1px solid var(--signal); font: 500 16.5px/1.3 var(--display); text-wrap: pretty; }
+
+/* ─────────────────────────────────────────────── the index: one line per dossier */
+.rows { list-style: none; margin: 0; padding: 0; }
+.rows .state { margin-top: 22px; }
+.row { display: flex; align-items: center; gap: 14px; min-height: 86px; padding: 10px 0; border-bottom: 1px solid var(--ink-faint); color: inherit; text-decoration: none; touch-action: manipulation; }
+.row:active { background: var(--ink-wash); }
+/* the 9:16 cover, cut to its middle 3:4 the way TikTok's profile grid cuts it */
+.row__thumb { flex: none; width: 48px; aspect-ratio: 3 / 4; overflow: hidden; border: 1px solid var(--ink-faint); background: var(--ink-wash); }
+.row__thumb img { width: 100%; height: 100%; object-fit: cover; }
+.row__body { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.row__top { display: flex; align-items: center; gap: 10px; font: 500 11.5px/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-dim); }
+.row__top b { font-weight: 500; }
+.row__top em { font-style: normal; color: var(--veille); }
+.row__title { font: 800 25px/0.96 var(--display); letter-spacing: 0.005em; text-transform: uppercase; overflow-wrap: anywhere; }
+.row__state { display: flex; align-items: center; gap: 10px; }
+.row__state .chip { padding: 5px 8px; font-size: 10.5px; }
+.row__meta { font: 500 11px/1 var(--mono); letter-spacing: 0.04em; color: var(--ink-dim); white-space: nowrap; }
+.row__go { flex: none; width: 9px; height: 9px; margin-right: 4px; border: solid var(--ink-line); border-width: 1.5px 1.5px 0 0; transform: rotate(45deg); }
+/* where the film is online: a light per platform */
+.pips { display: flex; gap: 4px; }
+.pip {
+  display: flex; align-items: center; justify-content: center; min-width: 27px; height: 18px; padding: 0 4px;
+  border: 1px solid var(--ink-faint); font: 500 10px/1 var(--mono); font-style: normal; letter-spacing: 0.06em; color: var(--ink-dim);
+}
+.pip.is-on { border-color: var(--veille); background: var(--veille); color: var(--bg); }
+
 .chip {
   display: inline-flex; align-items: center; gap: 8px; padding: 8px 10px;
   border: 1px solid currentColor;
@@ -177,14 +207,93 @@ a.textbtn { display: inline-flex; align-items: center; } /* a link keeps the 44p
 .chip--posted { color: var(--ink-dim); }
 .chip--posted i { display: none; }
 
+/* no cover yet: an empty frame, crossed out like a blank on a drawing */
+.row__thumb.row__thumb--none, .sheet__cover.sheet__cover--none {
+  border-style: dashed; border-color: var(--ink-line);
+  background:
+    linear-gradient(to top right, transparent calc(50% - 0.5px), var(--ink-faint) calc(50% - 0.5px), var(--ink-faint) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
+    linear-gradient(to bottom right, transparent calc(50% - 0.5px), var(--ink-faint) calc(50% - 0.5px), var(--ink-faint) calc(50% + 0.5px), transparent calc(50% + 0.5px));
+}
+
+/* ─────────────────────────────────────────────── one sheet */
+/* its bar stays at the top: back to the list, and the dossier before and after */
+.sheet__bar {
+  position: sticky; top: 0; z-index: 3; display: flex; align-items: center; gap: 0;
+  margin: 0 calc(-1 * var(--gutter)); padding: calc(6px + env(safe-area-inset-top)) var(--gutter) 6px;
+  border-bottom: 1px solid var(--ink-faint); background: var(--bg);
+}
+.sheet__back { gap: 10px; margin: 0 auto 0 -8px; padding: 15px 8px; text-decoration: none; }
+.sheet__chev { flex: none; width: 9px; height: 9px; border: solid var(--ink); border-width: 0 0 1.5px 1.5px; transform: rotate(45deg); }
+.sheet__pos { margin-right: 12px; font: 500 12px/1 var(--mono); letter-spacing: 0.08em; color: var(--ink-dim); }
+.step {
+  display: flex; align-items: center; justify-content: center; width: 46px; height: 44px; padding-bottom: 5px;
+  border: 1px solid var(--ink-line); color: var(--ink); font: 600 30px/1 var(--display); text-decoration: none;
+  cursor: pointer; touch-action: manipulation; -webkit-user-select: none; user-select: none;
+}
+.step + .step { margin-left: -1px; }
+.step:active { background: var(--ink-wash); }
+.step[aria-disabled="true"] { border-color: var(--ink-faint); color: var(--ink-faint); cursor: default; }
+.step[aria-disabled="true"] + .step, .step:has(+ .step[aria-disabled="true"]) { position: relative; z-index: 1; }
+
+.sheet__lead { margin-top: 18px; }
+.dossier--wip .sheet__top .dot { background: none; box-shadow: inset 0 0 0 1px var(--ink-line); } /* nothing to post yet: light off */
+.sheet__head { display: flex; gap: 16px; }
+.sheet__cover { position: relative; flex: none; display: block; width: 104px; aspect-ratio: 3 / 4; overflow: hidden; border: 1px solid var(--ink-faint); background: var(--ink-wash); color: var(--ink-dim); }
+.sheet__cover img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+/* "open it whole": two corners pulling apart */
+.sheet__zoom {
+  position: absolute; right: 0; bottom: 0; width: 28px; height: 28px;
+  border-top: 1px solid var(--ink-faint); border-left: 1px solid var(--ink-faint); background: rgba(7, 10, 12, 0.86);
+}
+.sheet__zoom::before, .sheet__zoom::after { content: ""; position: absolute; width: 7px; height: 7px; border: 0 solid var(--ink); }
+.sheet__zoom::before { top: 7px; right: 7px; border-width: 1.5px 1.5px 0 0; }
+.sheet__zoom::after { bottom: 7px; left: 7px; border-width: 0 0 1.5px 1.5px; }
+.sheet__id { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; padding: 3px 0 0; }
+.sheet__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; } /* its number, and the way to its voice */
+.sheet__title { margin-top: 10px; font: 800 33px/0.94 var(--display); letter-spacing: 0.005em; text-transform: uppercase; overflow-wrap: anywhere; text-wrap: balance; }
+.sheet__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; width: 100%; margin-top: auto; padding-top: 10px; }
+.sheet__meta { font: 500 11px/1.2 var(--mono); letter-spacing: 0.04em; color: var(--ink-dim); white-space: nowrap; }
+
+/* online: one tick per platform, always under the thumb */
+.ticks {
+  position: fixed; z-index: 4; left: 0; right: 0; bottom: 0;
+  padding: 9px max(12px, env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  border-top: 1px solid var(--ink-faint); background: rgba(7, 10, 12, 0.94);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.ticks__k { display: flex; align-items: center; justify-content: space-between; gap: 12px; max-width: 536px; min-height: 16px; margin: 0 auto 7px; font: 500 10.5px/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-dim); }
+.ticks__all { margin: -16px -8px -14px 0; padding: 16px 8px 14px; min-height: 0; font-size: 10.5px; }
+.ticks__row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; max-width: 536px; margin: 0 auto; }
+.tick {
+  display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; padding: 6px 4px;
+  border: 1px solid var(--ink-line); background: transparent; color: var(--ink);
+  font: 600 16.5px/1 var(--display); letter-spacing: 0.03em; text-transform: uppercase; white-space: nowrap;
+  cursor: pointer; touch-action: manipulation; -webkit-user-select: none; user-select: none;
+  transition: background-color 0.12s, color 0.12s, border-color 0.12s;
+}
+.tick:active { background: var(--ink-wash); }
+.tick i { position: relative; flex: none; width: 17px; height: 17px; border: 1.5px solid var(--ink-line); }
+.tick[aria-pressed="true"] { border-color: var(--veille); color: var(--veille); }
+.tick[aria-pressed="true"] i { border-color: var(--veille); background: var(--veille); }
+.tick[aria-pressed="true"] i::after { content: ""; position: absolute; left: 4px; top: 0; width: 5px; height: 10px; border: solid var(--bg); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+
+/* the film and its cover */
+.sheet__cols { margin-top: 20px; }
+.player { display: none; width: 100%; aspect-ratio: 9 / 16; border: 1px solid var(--ink-faint); background: #000; } /* on a phone the film opens whole instead (.film__play) */
+.film__note { display: none; }
+.film__pair { margin-top: 8px; }
+.film__pair:empty { display: none; }
+.film__pair > :only-child { grid-column: 1 / -1; }
+.film__tri { flex: none; width: 0; height: 0; border-style: solid; border-width: 7px 0 7px 11px; border-color: transparent transparent transparent currentColor; }
+.absent + .film__pair, .film__pair + .absent, .film__pair + .btn { margin-top: 8px; }
+
+/* the words to paste, exactly as they will be pasted */
+.words { margin-top: 26px; }
 .block { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--ink-faint); }
+.words__panel > .block:first-child { margin-top: 18px; padding-top: 0; border-top: 0; }
 .block__h { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; font: 500 12px/1.2 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; }
 .block__h i { font-style: normal; color: var(--ink-dim); }
 .block__h small { margin-left: auto; font-size: 11px; letter-spacing: 0.06em; text-transform: none; color: var(--ink-dim); white-space: nowrap; }
-
-.player { width: 100%; aspect-ratio: 1 / 1.12; margin-top: 12px; border: 1px solid var(--ink-faint); background: var(--bg); }
-
-/* the words to paste, exactly as they will be pasted */
 .quote {
   margin-bottom: 12px; padding: 14px 14px 15px 16px;
   border: 1px solid var(--ink-faint); border-left: 2px solid var(--ink); background: var(--ink-wash);
@@ -193,39 +302,36 @@ a.textbtn { display: inline-flex; align-items: center; } /* a link keeps the 44p
 }
 .quote__tags { margin-top: 12px; font: 500 12.5px/1.65 var(--mono); word-spacing: 0.3em; color: var(--ink-dim); }
 
-/* ─────────────────────────────────────────────── before posting */
-.checks { list-style: none; margin-bottom: 14px; border-top: 1px solid var(--ink-faint); }
-.check { display: flex; align-items: flex-start; gap: 14px; min-height: 54px; padding: 13px 0; border-bottom: 1px solid var(--ink-faint); cursor: pointer; touch-action: manipulation; }
-.check input { position: absolute; width: 1px; height: 1px; opacity: 0; }
-.check__box {
-  position: relative; flex: none; display: flex; align-items: center; justify-content: center; width: 28px; height: 28px;
-  border: 1.5px solid var(--ink-line); font: 500 12px/1 var(--mono); color: var(--ink-dim);
+/* TikTok's settings that are easy to forget: six boxes, two by two */
+.memos { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.memo { display: flex; align-items: center; gap: 10px; height: 100%; min-height: 48px; padding: 6px 10px; border: 1px solid var(--ink-faint); cursor: pointer; touch-action: manipulation; }
+.memo input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.memo__box {
+  position: relative; flex: none; display: flex; align-items: center; justify-content: center; width: 22px; height: 22px;
+  border: 1.5px solid var(--ink-line); font: 500 11px/1 var(--mono); color: var(--ink-dim);
 }
-.check input:focus-visible + .check__box { outline: 2px solid var(--veille); outline-offset: 3px; }
-.check input:checked + .check__box { border-color: var(--veille); background: var(--veille); color: transparent; }
-.check input:checked + .check__box::after {
-  content: ""; position: absolute; left: 9px; top: 4px; width: 7px; height: 13px;
-  border: solid var(--bg); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg);
-}
-.check__t { padding-top: 3px; font: 600 20px/1.15 var(--display); }
-.check__t small { display: block; margin-top: 5px; font: 500 16.5px/1.28 var(--display); color: var(--ink-dim); }
-.check input:checked ~ .check__t { color: var(--ink-dim); }
+.memo__t { font: 600 17px/1.08 var(--display); }
+.memo input:focus-visible ~ .memo__box { outline: 2px solid var(--veille); outline-offset: 3px; }
+.memo input:checked ~ .memo__box { border-color: var(--veille); background: var(--veille); color: transparent; }
+.memo input:checked ~ .memo__box::after { content: ""; position: absolute; left: 6.5px; top: 2px; width: 6px; height: 11px; border: solid var(--bg); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
+.memo input:checked ~ .memo__t { color: var(--ink-dim); }
 
-.switch {
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  width: 100%; min-height: 58px; padding: 10px 14px;
-  border: 1px solid var(--ink-line); background: transparent; cursor: pointer; touch-action: manipulation;
-  font: 700 20px/1.05 var(--display); letter-spacing: 0.04em; text-transform: uppercase; text-align: left;
-  -webkit-appearance: none; appearance: none;
+/* everything is online: the way to the next one */
+.done { margin-bottom: 18px; padding: 14px; border: 1px solid var(--veille); }
+.done > p:first-child { margin-bottom: 12px; font: 700 20px/1.1 var(--display); letter-spacing: 0.03em; text-transform: uppercase; color: var(--veille); }
+.done .note { margin-top: 0; }
+
+/* what a tick just did, said right above the ticks: never over the way back to the list */
+.flash {
+  position: fixed; z-index: 20; bottom: calc(112px + env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%);
+  width: max-content; max-width: calc(100% - 24px); padding: 11px 14px 12px;
+  border: 1px solid var(--veille); background: var(--bg); color: var(--veille); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  font: 500 12px/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; text-align: center; pointer-events: none;
 }
-.switch__track { position: relative; flex: none; width: 48px; height: 28px; border: 1.5px solid var(--ink-line); }
-.switch__track::after { content: ""; position: absolute; left: 3px; top: 3px; width: 19px; height: 19px; background: var(--ink); transition: transform 0.16s ease, background-color 0.16s; }
-.switch[aria-checked="true"] { border-color: var(--veille); }
-.switch[aria-checked="true"] .switch__track { border-color: var(--veille); }
-.switch[aria-checked="true"] .switch__track::after { transform: translateX(20px); background: var(--veille); }
+.flash.is-failed { border-color: var(--signal); color: var(--signal); }
 
 /* ─────────────────────────────────────────────── profile */
-.profil { margin-top: 44px; padding-top: 16px; border-top: 2px solid var(--ink); }
+.profil > .tag { margin-top: 20px; }
 .profil__id { display: flex; align-items: center; gap: 16px; margin: 16px 0 18px; }
 .profil__avatar { flex: none; width: 88px; height: 88px; border-radius: 50%; border: 1px solid var(--ink-faint); } /* round, as TikTok crops it */
 .profil__id .btn { min-height: 48px; }
@@ -235,12 +341,13 @@ a.textbtn { display: inline-flex; align-items: center; } /* a link keeps the 44p
 .field__v { margin-top: 7px; font: 600 21px/1.2 var(--display); white-space: pre-line; overflow-wrap: anywhere; -webkit-user-select: text; user-select: text; }
 .field .btn { flex: none; width: 96px; min-height: 48px; padding-inline: 8px; font-size: 16px; }
 /* several lines (the bio): the words get the full width, the button goes underneath */
-.field--stack { flex-direction: column; align-items: stretch; gap: 12px; padding-bottom: 0; }
+.field--stack { flex-direction: column; align-items: stretch; gap: 12px; padding-bottom: 12px; }
 .field--stack .btn { width: 100%; font-size: 18px; }
 
 .foot { margin-top: 36px; padding-top: 14px; border-top: 1px solid var(--ink-faint); font: 500 11px/1.7 var(--mono); letter-spacing: 0.04em; color: var(--ink-dim); }
+.index .foot { margin-top: 28px; }
 
-/* ─────────────────────────────────────────────── the cover, whole */
+/* ─────────────────────────────────────────────── the cover or the film, whole */
 .viewer {
   width: 100%; max-width: none; height: 100%; max-height: none; margin: 0; padding: 0; border: 0;
   background: var(--bg); color: var(--ink); overscroll-behavior: contain;
@@ -252,8 +359,58 @@ a.textbtn { display: inline-flex; align-items: center; } /* a link keeps the 44p
   padding: calc(10px + env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 10px max(16px, env(safe-area-inset-left));
 }
 .viewer__close { width: auto; min-height: 46px; padding-inline: 18px; }
-.viewer__img { flex: 1; min-height: 0; width: 100%; object-fit: contain; }
+.viewer__stage { flex: 1; min-height: 0; display: flex; }
+.viewer__stage > * { width: 100%; height: 100%; object-fit: contain; }
 .viewer__hint { padding: 12px 16px calc(14px + env(safe-area-inset-bottom)); font: 500 16.5px/1.3 var(--display); color: var(--ink-dim); text-align: center; }
+
+@media (max-width: 359px) {
+  .tick { gap: 6px; font-size: 15px; letter-spacing: 0; }
+  .tick i { width: 15px; height: 15px; }
+  .tick[aria-pressed="true"] i::after { left: 3px; top: -1px; }
+  .film__pair .btn__data { display: none; }
+}
+
+/* ─────────────────────────────────────────────── a wide screen: the index on the left, the sheet beside it */
+@media (min-width: 960px) {
+  .desk { max-width: none; display: grid; grid-template-columns: clamp(340px, 30vw, 420px) minmax(0, 1fr); }
+  .desk[data-view="list"] .sheet, .desk[data-view="sheet"] .index { display: block; }
+
+  .index {
+    position: sticky; top: 0; height: 100vh; height: 100dvh; overflow-y: auto; overscroll-behavior: contain;
+    padding: 16px 24px 28px; border-right: 1px solid var(--ink-faint);
+    scrollbar-width: thin; scrollbar-color: var(--ink-faint) transparent;
+  }
+  .segs--filters { margin-inline: -24px; padding-inline: 24px; }
+  .row { margin-inline: -24px; padding-inline: 24px; }
+  .row:hover { background: var(--ink-wash); }
+  .row[aria-current="true"] { background: var(--ink-wash); box-shadow: inset 3px 0 0 var(--veille); }
+  .row[aria-current="true"] .row__go { border-color: var(--veille); }
+
+  /* the film is as tall as the window lets it be with its buttons under it: nothing to scroll to watch, copy and tick */
+  .sheet { --film-h: clamp(380px, calc(100dvh - 450px), 570px); max-width: 1180px; padding: 14px clamp(28px, 4vw, 56px) 64px; }
+  .sheet__bar { position: static; margin: 0; padding: 0; border: 0; background: none; }
+  .sheet .sheet__back { display: none; }
+  .sheet__pos { margin-left: auto; }
+  .sheet__lead { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-top: 2px; padding-bottom: 24px; border-bottom: 1px solid var(--ink-faint); }
+  .sheet__head { flex: 1; min-width: 0; }
+  .sheet__title { font-size: 50px; }
+  .ticks { position: static; flex: none; width: min(420px, 44%); padding: 0; border: 0; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .ticks__k { margin-bottom: 9px; }
+  .tick:hover { background: var(--ink-wash); }
+
+  .sheet__cols { display: grid; grid-template-columns: calc(var(--film-h) * 0.5625) minmax(0, 1fr); align-items: start; gap: clamp(28px, 4vw, 56px); margin-top: 26px; }
+  .film { position: sticky; top: 20px; }
+  .film .btn--primary { min-height: 52px; font-size: 18px; }
+  .player { display: block; }
+  .film__note { display: block; margin: 8px 0 12px; font-size: 15px; }
+  .film__play, .film__how { display: none; }
+  .film__pair { grid-template-columns: 1fr; }
+  .words { margin-top: 0; max-width: 660px; }
+  .seg:hover:not([aria-pressed="true"], [aria-selected="true"]) { background: var(--ink-wash); }
+  .memos { grid-template-columns: repeat(3, 1fr); }
+  .profil { max-width: 560px; }
+  .flash { bottom: 28px; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }

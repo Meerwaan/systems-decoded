@@ -56,6 +56,9 @@
   /* ---------------------------------------------------------------- what the page knows */
 
   const dir = new URLSearchParams(location.search).get("ep") || "";
+  // the way back lands on the sheet of this dossier, not at the top of the list
+  const home = document.querySelector('.top__row a[href="/"]');
+  if (home && dir) home.href = `/#${encodeURIComponent(dir)}`;
   const api = `/api/voix/${encodeURIComponent(dir)}`;
   const main = $("#booth");
   const link = $("#link");

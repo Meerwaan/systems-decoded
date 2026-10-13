@@ -17,36 +17,45 @@
     <script src="/app.js" defer></script>
   </head>
   <body>
-    <div class="page">
-      <header class="top">
-        <div class="top__row">
-          <p class="tag" id="link"><i class="dot"></i><span>Publication</span></p>
-          <button class="textbtn" id="refresh" type="button">Actualiser</button>
-        </div>
-        <h1 class="top__title" id="brand">&nbsp;</h1>
-        <p class="top__help">Télécharge, copie la légende, coche et publie.</p>
-      </header>
+    <!-- data-view: what a phone shows, the list or one sheet. A wide screen shows both. -->
+    <div class="desk" id="desk" data-view="list">
+      <aside class="index" id="index" aria-label="Les dossiers">
+        <header>
+          <div class="bar">
+            <p class="tag" id="link"><i class="dot"></i><span>Publication</span></p>
+            <div class="bar__acts">
+              <a class="textbtn" id="to-profil" href="#profil">Profil</a>
+              <button class="textbtn" id="refresh" type="button">Actualiser</button>
+            </div>
+          </div>
+          <h1 class="index__title" id="brand">&nbsp;</h1>
+        </header>
+        <div class="segs segs--filters" id="filters" role="group" aria-label="Quels dossiers"></div>
+        <p class="notice" id="notice" hidden>
+          Ce que tu coches reste sur cet appareil : le bureau du PC date d'avant cette page. Ferme sa fenêtre et relance
+          <code>publier.cmd</code> : les cases seront alors gardées sur le PC, les mêmes sur l'ordinateur et l'iPhone.
+        </p>
+        <ol class="rows" id="rows">
+          <li class="state">Lecture des dossiers…</li>
+        </ol>
+        <footer class="foot">
+          <p>La page relit le disque du PC toute seule : un nouveau rendu, une case cochée ailleurs arrivent en quelques secondes.</p>
+        </footer>
+      </aside>
 
-      <main id="dossiers">
-        <p class="state">Lecture des dossiers…</p>
-      </main>
-
-      <section class="profil" id="profil" aria-labelledby="profil-h" hidden></section>
-
-      <footer class="foot">
-        <p>La page relit le disque du PC à chaque ouverture. Après un nouveau rendu, touche Actualiser.</p>
-      </footer>
+      <main class="sheet" id="sheet"></main>
     </div>
 
-    <dialog class="viewer" id="viewer" aria-label="Couverture en entier">
+    <dialog class="viewer" id="viewer" aria-label="En entier">
       <div class="viewer__bar">
         <p class="tag"><i class="dot"></i><span id="viewer-tag">Couverture</span></p>
         <button class="btn viewer__close" type="button" data-close>Fermer</button>
       </div>
-      <img class="viewer__img" id="viewer-img" alt="" />
-      <p class="viewer__hint">Appui long sur l'image pour l'enregistrer dans Photos.</p>
+      <div class="viewer__stage" id="viewer-stage"></div>
+      <p class="viewer__hint" id="viewer-hint"></p>
     </dialog>
 
+    <p class="flash" id="flash" role="presentation" hidden></p>
     <p class="sr" id="live" role="status" aria-live="polite"></p>
     <noscript><p class="state state--alert">Cette page a besoin de JavaScript pour lire les dossiers.</p></noscript>
   </body>
