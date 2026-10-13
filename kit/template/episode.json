@@ -8,11 +8,16 @@
   "voice": {
     "name": "Eric",
     "voiceId": "9osbeK6KzhDRV0yX4rTq",
-    "model": "eleven_v4",
+    "model": "eleven_v4_turbo",
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21
+    "seed": 21,
+    "acts": {
+      "menace": {
+        "stability": 0.2
+      }
+    }
   },
   "cover": {
     "at": "eclate$",
@@ -74,7 +79,7 @@
       "id": "eclate",
       "hold": 0.2,
       "text": "Une première pièce. Une deuxième. Et au centre… +le cœur+.",
-      "vo": "Une première pièce. Une deuxième. Et au centre... le cœur."
+      "vo": "[curious] Une première pièce. Une deuxième. Et au centre... le cœur."
     },
     {
       "id": "repos",
@@ -90,13 +95,13 @@
       "id": "zero",
       "hold": 0.2,
       "text": "*Zéro*. Le danger arrive.",
-      "vo": "[firm, matter-of-fact] Zéro. Le danger arrive."
+      "vo": "[urgent] Zéro. Le danger arrive."
     },
     {
       "id": "reponse",
       "hold": 0.3,
       "text": "Et pour la première fois… le système +réagit+.",
-      "vo": "[tense] Et pour la première fois... le système réagit."
+      "vo": "[urgent] Et pour la première fois. [short pause] [relieved] Le système réagit."
     },
     {
       "id": "chute",
@@ -105,25 +110,26 @@
       "vo": "[low, grave voice] Voilà son secret : ce n'est pas ce que tu croyais. C'est l'inverse."
     },
     {
-      "id": "like",
-      "text": "+Like+. Quelqu'un d'autre le saura grâce à toi.",
-      "vo": "[firm, matter-of-fact] Like. [short pause] Quelqu'un d'autre le saura grâce à toi."
-    },
-    {
-      "id": "abo",
-      "text": "Prochain dossier : encore plus *étrange*. +Abonne-toi+ pour l'ouvrir.",
-      "vo": "[serious] Prochain dossier : encore plus étrange. [short pause] Abonne-toi pour l'ouvrir."
-    },
-    {
       "id": "comment",
       "hold": 0.3,
       "text": "Et la condition ? La voilà. En +commentaire+ : et toi, tu le savais ?",
       "vo": "[curious] Et la condition ? [short pause] [serious] La voilà. [short pause] [curious] En commentaire : et toi, tu le savais ?"
     },
     {
+      "id": "like",
+      "text": "+Like+. Quelqu'un d'autre le saura grâce à toi.",
+      "vo": "[firm, matter-of-fact] Like. [short pause] Quelqu'un d'autre le saura grâce à toi."
+    },
+    {
+      "id": "abo",
+      "text": "Prochain dossier : encore plus *étrange*.",
+      "vo": "[serious] Prochain dossier : encore plus étrange.",
+      "hold": 0.2
+    },
+    {
       "id": "boucle",
-      "text": "Parce que tout commence toujours par…",
-      "vo": "[calm] Parce que tout commence toujours par,"
+      "text": "Ici, tout commence toujours par…",
+      "vo": "[calm] Ici, tout commence toujours par,"
     }
   ],
   "cues": {
@@ -133,7 +139,7 @@
     "trigger": "reponse:réagit-0.05",
     "toverdict": "chute-0.12",
     "verdict": "chute:pas",
-    "tocta": "like-0.12",
+    "tocta": "comment-0.12",
     "toloop": "boucle-0.12",
     "rewind": "boucle:toujours"
   },
