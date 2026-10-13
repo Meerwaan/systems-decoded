@@ -1,0 +1,242 @@
+{
+  "id": "021",
+  "slug": "veille-tgv",
+  "title": "Veille du TGV",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "acts": {
+      "menace": {
+        "stability": 0.2
+      }
+    }
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "La veille",
+      "du TGV"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "TGV : dans la cabine, une pédale que le conducteur doit relâcher sans arrêt. Voilà ce qui se passe quand plus personne ne le fait. Cette pédale, tu connaissais ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#tgv",
+      "#sncf",
+      "#train"
+    ],
+    "pinned": "Dans la cabine d'un train, une pédale à relâcher au moins une fois par minute, sinon il s'arrête seul. Tu connaissais ?"
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/021-vacma-tgv.md ; contre-vérification phrase par phrase : docs/faits/021-contre-verification.md",
+    "Le cas réel (BEA-TT, fiche de présentation, Crisenoy, 24 décembre 2024) : TGV n° 6689, rame Duplex, 393 passagers, 255 km/h ; le conducteur n'est plus dans la cabine ; « le système de veille automatique du train provoque l'arrêt d'urgence (ouverture des disjoncteurs et mise à l'atmosphère de la conduite générale) » ; arrêt obtenu en 2 320 m ; la veille émet aussitôt un signal radio d'alarme reçu à Lyon. Le BEA-TT parle d'une « chute » du conducteur et a ouvert une enquête : le film ne dit rien de plus, ni cause, ni nom.",
+    "Le fonctionnement (EPSF, recommandation SAM S 301, ±15 %) : appui maintenu au plus 55 s, puis signal sonore, puis freinage d'urgence et coupure de la traction 5 s plus tard ; pédale relâchée : signal sonore après 2,5 s, freinage d'urgence 2,5 s après ; alarme radio après l'arrêt. Organes : pédales, boutons, touches sensitives, et les commandes de conduite elles-mêmes. Ce sont les valeurs de la recommandation générale : le réglage propre aux rames TGV n'a pas été lu, d'où « environ ». 255 km/h est la vitesse au déclenchement ; le délai entre la chute et le déclenchement n'est pas connu. Le BEA-TT a remis son rapport conclusif le 18 décembre 2025 (six recommandations) : il n'a pas pu être ouvert — à lire avant d'enregistrer la voix.",
+    "Ce qu'elle ne fait pas (BEA-TT) : « la seule information fiable qu'elle peut délivrer sur le conducteur est la présence effective de ce conducteur » (tramway de Rouen, 2004) ; un endormissement de moins d'une minute lui échappe (Versailles Rive Gauche, 2007 : « la constante de temps (60 secondes) […] n'aurait pas pu agir »). La vitesse et les signaux sont surveillés par d'autres systèmes (TVM et COVIT sur ligne à grande vitesse, KVB ailleurs).",
+    "Pourquoi relâcher : un appui continu peut être celui d'un objet ou d'un corps inerte (Wikipédia, « Veille automatique » ; accident de Waterfall, Australie, 2003) — source secondaire, aucune source SNCF ou EPSF ne le formule ainsi.",
+    "Simplifications assumées : ta place de passager est le seul élément inventé, tout le reste est l'événement réel ; « des touches » est une possibilité admise par la recommandation, pas une description de la cabine d'un TGV ; « soixante-dix mètres par seconde » = 255 km/h ; « l'air des freins s'échappe » traduit la mise à l'atmosphère de la conduite générale, qui serre les freins. À ne pas dire : « toutes les 30 secondes », « pédale de l'homme mort » comme nom officiel, « elle détecte l'endormissement », « elle a sauvé des vies » à propos de Crisenoy, « suicide ».",
+    "Prochain dossier (022) : la batterie du téléphone — docs/faits/022-batterie-telephone.md."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ton [TGV|té-gé-vé] file à [255|deux cent cinquante-cinq] kilomètres-heure. Dans la cabine… plus *personne*.",
+      "vo": "[tense] Ton té-gé-vé file à deux cent cinquante-cinq kilomètres-heure. Dans la cabine... plus personne.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ton té-gé-vé file à deux cent cinquante-cinq kilomètres-heure. Dans la cabine... plus personne."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Il va s'arrêter +tout seul+. Mais ce qui l'arrête… a un *angle mort*.",
+      "vo": "[firm, matter-of-fact] Il va s'arrêter tout seul. [short pause] [serious] Mais ce qui l'arrête... a un angle mort."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Ce n'est pas un scénario. Vingt-quatre décembre [2024|deux mille vingt-quatre] : le conducteur tombe du train. Derrière lui, [393|trois cent quatre-vingt-treize] passagers. Aucun ne le voit. Et le train avale soixante-dix mètres par *seconde*.",
+      "vo": "[serious] Ce n'est pas un scénario. Vingt-quatre décembre deux mille vingt-quatre : le conducteur tombe du train. [short pause] [tense] Derrière lui, trois cent quatre-vingt-treize passagers. Aucun ne le voit. Et le train avale soixante-dix mètres par seconde."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Une pédale. Ou des touches, sous les doigts. Et derrière… un simple +compte à rebours+.",
+      "vo": "[curious] Une pédale. Ou des touches, sous les doigts. Et derrière... un simple compte à rebours."
+    },
+    {
+      "id": "repos",
+      "text": "Appuyer ne suffit pas. Près d'une minute sans lâcher : une sonnerie. Il faut relâcher. Puis réappuyer. Toute la journée. Pourquoi relâcher ? Parce qu'un corps effondré… peut appuyer *encore*.",
+      "vo": "[thoughtful] Appuyer ne suffit pas. Près d'une minute sans lâcher : une sonnerie. Il faut relâcher. Puis réappuyer. Toute la journée. [short pause] [curious] Pourquoi relâcher ? [serious] Parce qu'un corps effondré... peut appuyer encore."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : cette cabine vide, regarde ce qui s'y *passe*.",
+      "vo": "[tense] Abonne-toi : cette cabine vide, regarde ce qui s'y passe."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "La pédale se relève. Deux secondes et demie, environ. Une sonnerie. Personne ne répond. Le train, lui… file *toujours*.",
+      "vo": "[urgent] La pédale se relève. Deux secondes et demie, environ. Une sonnerie. Personne ne répond. [short pause] [ominous] Le train, lui... file toujours."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Encore autant. Verdict : absent. Le courant est coupé. L'air des freins s'échappe : freinage d'urgence. [2320|Deux mille trois cent vingt] mètres plus loin… le train est +arrêté+. Et il prévient lui-même, par radio.",
+      "vo": "[urgent] Encore autant. Verdict : absent. Le courant est coupé. L'air des freins s'échappe. Freinage d'urgence. [short pause] [relieved] Deux mille trois cent vingt mètres plus loin... le train est arrêté. Et il prévient lui-même, par radio."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : elle ne surveille pas le conducteur. Elle ne sait pas s'il dort. Elle sait une seule chose… quelqu'un a *bougé*.",
+      "vo": "[low, grave voice] Voilà son secret : elle ne surveille pas le conducteur. Elle ne sait pas s'il dort. Elle sait une seule chose... quelqu'un a bougé."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Son angle mort ? La minute. Un conducteur qui s'assoupit quelques secondes… elle ne le voit pas. Pour ça, d'autres systèmes surveillent la vitesse. En +commentaire+ : cette pédale, tu connaissais ?",
+      "vo": "[curious] Son angle mort ? [short pause] [serious] La minute. Un conducteur qui s'assoupit quelques secondes... elle ne le voit pas. Pour ça, d'autres systèmes surveillent la vitesse. [short pause] [curious] En commentaire : cette pédale, tu connaissais ?"
+    },
+    {
+      "id": "like",
+      "text": "+Like+. Pour celles et ceux qui conduisent, seuls, des centaines de *passagers*.",
+      "vo": "[firm, matter-of-fact] Like. [short pause] Pour celles et ceux qui conduisent, seuls, des centaines de passagers."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : la batterie de ton téléphone. Entre ses deux pôles… un film de plastique, plus fin qu'un *cheveu*.",
+      "vo": "[serious] Prochain dossier : la batterie de ton téléphone. [short pause] Entre ses deux pôles... un film de plastique, plus fin qu'un cheveu."
+    },
+    {
+      "id": "boucle",
+      "text": "Et lui, tu l'emportes partout. Même dans…",
+      "vo": "[calm] Et lui, tu l'emportes partout. Même dans,"
+    }
+  ],
+  "cues": {
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:absent-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:bougé",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:partout"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

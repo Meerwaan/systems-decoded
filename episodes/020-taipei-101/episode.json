@@ -1,0 +1,242 @@
+{
+  "id": "020",
+  "slug": "taipei-101",
+  "title": "Taipei 101",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "acts": {
+      "menace": {
+        "stability": 0.2
+      }
+    }
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "La boule",
+      "de Taipei 101"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Taipei 101 : une boule d'acier de 660 tonnes est suspendue tout en haut de la tour. Regarde ce qu'un typhon lui fait. Un jour de typhon… tu montes ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#taipei101",
+      "#architecture",
+      "#ingenierie"
+    ],
+    "pinned": "660 tonnes d'acier suspendues tout en haut de la tour Taipei 101, visibles du public. Un jour de typhon… tu montes ?"
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/020-taipei-101.md ; contre-vérification phrase par phrase : docs/faits/020-contre-verification.md",
+    "La boule (site officiel de Taipei 101) : 660 tonnes métriques, environ 5,5 m de diamètre, 41 plaques d'acier de 12,5 cm soudées, 92 câbles d'acier de 42 m, huit vérins hydrauliques visqueux dessous, un anneau de butée qui limite sa course à 150 cm ; elle est visible du public.",
+    "À quoi elle sert (site officiel) : « its main purpose is to reduce swaying by strong winds to make working in such a tall tower comfortable ». Elle oscille à contretemps de la tour et son énergie est dissipée en chaleur dans les vérins (Structure magazine, Guinness).",
+    "Le record : typhon Soudelor, 8 août 2015, 6 h 59, environ un mètre, avec des vents d'environ 160 km/h (Taiwan News, Focus Taiwan, Guinness). En séisme : environ 20 cm le 18 avril 2019, le plus grand mouvement dû à un séisme ; les vérins brident alors la boule (« lock down », Structure magazine) et c'est la structure de la tour qui résiste. Taipei 101 ne publie plus ces mouvements depuis octobre 2021.",
+    "Simplifications assumées : la scène (toi au sommet pendant le typhon) est un scénario ; « cinquante centimètres, soixante-dix » sont des étapes de la montée vers le mètre mesuré, pas des relevés ; « le mal de mer » traduit le but de confort annoncé par la tour (Structure magazine y ajoute la sécurité de la structure), aucune accélération avec ou sans boule n'est publiée ; 6 h 59 est l'heure du déplacement maximal ; « 160 km/h » : les sources ne disent pas s'il s'agit d'un vent moyen ou d'une rafale ; « jamais relevée plus loin » : record publié, la tour ne publie plus ces mouvements depuis 2021 ; la période de la tour (quelques secondes) n'est pas chiffrée.",
+    "À ne pas dire : 728 tonnes (tonnes courtes), « la plus lourde du monde », « elle empêche la tour de tomber », « elle réduit le mouvement de 40 % » (chiffre du propriétaire, sans mesure), un mouvement pour le séisme de 2024.",
+    "Prochain dossier (021) : la veille automatique du TGV — docs/faits/021-vacma-tgv.md."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Typhon sur Taipei. Tu es au sommet d'une tour… et elle se *balance*.",
+      "vo": "[tense] Typhon sur Taipei. Tu es au sommet d'une tour... et elle se balance.",
+      "voAlt": [
+        "[firm, matter-of-fact] Typhon sur Taipei. Tu es au sommet d'une tour... et elle se balance."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Ce qui la +calme+ : [660|six cent soixante] tonnes d'acier, qui bougent à contretemps. Pour les séismes ? Pas *vraiment*.",
+      "vo": "[firm, matter-of-fact] Ce qui la calme : six cent soixante tonnes d'acier, qui bougent à contretemps. [short pause] [serious] Pour les séismes ? Pas vraiment."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Huit août [2015|deux mille quinze] : le typhon Soudelor. Des vents à [160|cent soixante] kilomètres-heure. Cent un étages qui plient, reviennent, repartent… comme un bateau. Sans rien pour les calmer, là-haut, tu aurais le *mal de mer*.",
+      "vo": "[tense] Huit août deux mille quinze : le typhon Soudelor. Des vents à cent soixante kilomètres-heure. [short pause] Cent un étages qui plient, reviennent, repartent... comme un bateau. Sans rien pour les calmer, là-haut, tu aurais le mal de mer."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Une boule de cinq mètres cinquante : [41|quarante et une] plaques d'acier soudées. [92|Quatre-vingt-douze] câbles. Huit vérins. Et autour… un anneau de +butée+.",
+      "vo": "[curious] Une boule de cinq mètres cinquante : quarante et une plaques d'acier soudées. Quatre-vingt-douze câbles. Huit vérins. Et autour... un anneau de butée."
+    },
+    {
+      "id": "repos",
+      "text": "C'est un pendule, accordé sur la tour. La tour part d'un côté… la boule traîne, et la retient. Et à chaque aller-retour, ses vérins changent l'élan en *chaleur*.",
+      "vo": "[thoughtful] C'est un pendule, accordé sur la tour. [curious] La tour part d'un côté... la boule traîne, et la retient. Et à chaque aller-retour, ses vérins changent l'élan en chaleur."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ce typhon, regarde ce qu'il fait à la *boule*.",
+      "vo": "[tense] Abonne-toi : ce typhon, regarde ce qu'il fait à la boule."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Six heures cinquante-neuf. Le pic du typhon. La tour part. La boule aussi. Cinquante centimètres. Soixante-dix. La butée est à un mètre cinquante… et elle avance *encore*.",
+      "vo": "[urgent] Six heures cinquante-neuf. Le pic du typhon. La tour part. La boule aussi. Cinquante centimètres. Soixante-dix. [short pause] [ominous] La butée est à un mètre cinquante... et elle avance encore."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Un mètre. Les vérins freinent. Elle s'arrête. Elle repart dans l'autre sens. On ne l'a jamais relevée plus +loin+ : c'est son record.",
+      "vo": "[urgent] Un mètre. Les vérins freinent. Elle s'arrête. Elle repart dans l'autre sens. [short pause] [relieved] On ne l'a jamais relevée plus loin : c'est son record."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : cette boule n'empêche pas la tour de tomber. La tour tient *seule*. La boule est là… d'abord pour ton +confort+.",
+      "vo": "[low, grave voice] Voilà son secret : cette boule n'empêche pas la tour de tomber. La tour tient seule. La boule est là... d'abord pour ton confort."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et les séismes ? Là, ses vérins la brident : vingt centimètres, son record en séisme. C'est le squelette de la tour qui encaisse. En +commentaire+ : un jour de typhon… tu montes ?",
+      "vo": "[curious] Et les séismes ? [short pause] [serious] Là, ses vérins la brident : vingt centimètres, son record en séisme. C'est le squelette de la tour qui encaisse. [short pause] [curious] En commentaire : un jour de typhon... tu montes ?"
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : quelqu'un croit encore qu'une tour ne bouge *pas*.",
+      "vo": "[firm, matter-of-fact] Like : [short pause] quelqu'un croit encore qu'une tour ne bouge pas."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : un [TGV|té-gé-vé] à [255|deux cent cinquante-cinq] kilomètres-heure… et dans la cabine, plus *personne*.",
+      "vo": "[serious] Prochain dossier : un té-gé-vé à deux cent cinquante-cinq kilomètres-heure... [short pause] et dans la cabine, plus personne."
+    },
+    {
+      "id": "boucle",
+      "text": "Et là, pas besoin d'un…",
+      "vo": "[calm] Et là, pas besoin d'un,"
+    }
+  ],
+  "cues": {
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:mètre-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:confort",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:besoin"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
