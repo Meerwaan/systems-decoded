@@ -8,15 +8,15 @@
 import fs from "node:fs";
 import path from "node:path";
 import { elevenKey } from "./lib/env.mjs";
-import { loadEpisode, scriptHash, beatHash, beatHashes, directions, alignTokens, schedule, hashOf, core } from "./lib/episode.mjs";
+import { loadEpisode, scriptHash, beatHash, beatHashes, directions, alignTokens, schedule, hashOf, core, acts, stabilityOf } from "./lib/episode.mjs";
 import { decodeAudio, trackPitch, prosodyReport } from "./lib/audio.mjs";
-import { masterVoice, assemble, excerpt, tool } from "./lib/ffmpeg.mjs";
+import { masterVoice, assemble, joinAudio, excerpt, tool } from "./lib/ffmpeg.mjs";
+import { creditRate, spendGuard } from "./credits.mjs";
 
 const API = "https://api.elevenlabs.io/v1";
 const ANALYSIS = 4; // bump when what is stored next to a recording changes
 const DEFAULT_TAKES = 3; // whole takes for a new script
 const RETAKES = 3; // recordings of one phrase when it is retaken alone
-const RATE = 0.135; // credits per character billed so far on this model: only used to announce a cost
 const SWITCH = 0.7; // what a change of recording must earn: phrases stay together unless one is clearly better elsewhere
 const WHOLE = 6; // a recording of at least this many phrases is a "take"; shorter, a retake
 // fader: dB under (or over) the usual level that are left alone, share of the rest given back (or taken off), ceilings
@@ -39,13 +39,13 @@ const letters = (beat) => beat.tokens.reduce((n, t) => n + t.s.replace(/[^\p{L}\
 
 /* ---------------------------------------------------------------- recording */
 
-async function synthesize(ep, text, seed) {
+async function synthesize(ep, text, seed, stability = ep.voice.stability) {
   const v = ep.voice;
   const body = {
     text,
     model_id: v.model,
     seed,
-    voice_settings: { stability: v.stability, similarity_boost: v.similarity, speed: v.speed },
+    voice_settings: { stability, similarity_boost: v.similarity, speed: v.speed },
   };
   const res = await fetch(`${API}/text-to-speech/${v.voiceId}/with-timestamps?output_format=${v.format ?? "mp3_44100_128"}`, {
     method: "POST",
@@ -58,7 +58,7 @@ async function synthesize(ep, text, seed) {
   return { audio: Buffer.from(json.audio_base64, "base64"), alignment: json.alignment, cost };
 }
 
-function tagSpans(alignment) {
+export function tagSpans(alignment) {
   const text = alignment.characters.join("");
   return [...text.matchAll(/\[[^\]]+\]/g)].map((m) => ({
     text: m[0],
@@ -71,7 +71,7 @@ function tagSpans(alignment) {
 
 const MOODS = [
   { key: "grave", label: "grave", re: /\b(ominous|grave|low|dark|menacing)\b/ },
-  { key: "tendu", label: "tendu", re: /\b(tense|urgent|nervous|anxious)\b/ },
+  { key: "tendu", label: "tendu", re: /\b(tense|urgent|nervous|anxious|rushed|breathless|fast|alarmed)\b/ },
   { key: "climax", label: "climax", re: /\b(dramatic|shouts?|shouting|excited|intense)\b/ },
   { key: "pose", label: "posé", re: /\b(slowly|slow|calm|thoughtful|soft|softly)\b/ },
   { key: "murmure", label: "murmuré", re: /\b(whispers?|whispering|quietly)\b/ },
@@ -305,6 +305,64 @@ function compose(beats, candidates, score, follows, forced = {}) {
   return Object.fromEntries(beats.map((b, i) => [b.id, end.path[i]]));
 }
 
+/* ---------------------------------------------------------------- the tension curve
+   A film is three acts and each asks something else of the voice: the menace presses, the autopsy
+   settles and shows, the response is the peak, then the fall lands. Melody inside the phrases is not
+   enough: a narrator who moves well but plays every act in the same register, at the same level and
+   at the same pace is heard as one tone from end to end (the viewers of October: "soporific", on films
+   this sheet called "très joué"). So the acts are measured against each other. */
+
+const ACTS = [
+  { key: "menace", label: "01 MENACE" },
+  { key: "autopsie", label: "02 AUTOPSIE" },
+  { key: "reponse", label: "03 RÉPONSE" },
+  { key: "fin", label: "CHUTE · CTA" },
+];
+// what is heard, alone, as another tone: a semitone and a half up, 2 dB louder, 10 % faster
+const STEP = { register: 1.5, level: 2, rate: 10 };
+// under this spread between the phrases (semitones, dB), the whole film sits on one tone: 002–004 were at 2.2–2.6 dt
+// and 2–2.9 dB, the films the viewers found soporific at 0.8–1.2 dt and 0.9–1.6 dB
+const FLAT = { register: 1.5, level: 1.8 };
+
+/**
+ * How the comp plays each act, against the film's own average.
+ * `rows`: one per phrase, { id, register (semitones), level (dB), rate (letters/s), seconds }.
+ * Three readings: how far the phrases sit from one another (`spread`), how far act 3 climbs above the
+ * autopsy (`step`: 1 = one tone higher, heard as such) and where the most tense phrase of the film is.
+ */
+export function tensionArc(ep, rows) {
+  const act = acts(ep);
+  const weight = (r) => Math.max(0.5, r.seconds ?? 1);
+  const mean = (list, key) => list.reduce((a, r) => a + r[key] * weight(r), 0) / (list.reduce((a, r) => a + weight(r), 0) || 1);
+  const sd = (list, key) => Math.sqrt(list.reduce((a, r) => a + (r[key] - mean(list, key)) ** 2 * weight(r), 0) / (list.reduce((a, r) => a + weight(r), 0) || 1));
+  const film = { register: mean(rows, "register"), level: mean(rows, "level"), rate: mean(rows, "rate") || 1 };
+  const read = (list) => ({ register: mean(list, "register") - film.register, level: mean(list, "level") - film.level, rate: 100 * (mean(list, "rate") / film.rate - 1) });
+  const round = (o) => Object.fromEntries(Object.entries(o).map(([k, v]) => [k, typeof v === "number" ? Math.round(v * 100) / 100 : v]));
+  const perAct = ACTS.map((a) => ({ ...a, list: rows.filter((r) => act[r.id] === a.key) }))
+    .filter((a) => a.list.length)
+    .map(({ list, ...a }) => ({ ...a, phrases: list.length, ...read(list) }));
+  const rest = perAct.find((a) => a.key === "autopsie");
+  const top = perAct.find((a) => a.key === "reponse");
+  const step = rest && top ? Math.max(...Object.keys(STEP).map((k) => (top[k] - rest[k]) / STEP[k])) : 0;
+  // the most tense phrase: register and level only (the rate of a three-word phrase means nothing)
+  const peak = rows.map((r) => ({ id: r.id, act: act[r.id], ...read([r]) })).sort((a, b) => b.register / STEP.register + b.level / STEP.level - a.register / STEP.register - a.level / STEP.level)[0];
+  const spread = { register: sd(rows, "register"), level: sd(rows, "level") };
+  const flat = spread.register < FLAT.register && spread.level < FLAT.level;
+  const misplaced = peak && peak.act !== "reponse" && peak.act !== "menace";
+  return {
+    acts: perAct.map(round),
+    spread: round(spread),
+    step: Math.round(step * 100) / 100,
+    peak: peak && round(peak),
+    verdict: flat ? "MÊME TON PARTOUT" : step < 1 || misplaced ? "relief incomplet" : "en relief",
+    why: [
+      flat && `d'une phrase à l'autre la voix ne bouge que de ${spread.register.toFixed(1)} dt et ${spread.level.toFixed(1)} dB (il en faut ${FLAT.register} ou ${FLAT.level})`,
+      step < 1 && `l'acte 3 ne monte pas au-dessus de l'autopsie (il lui faut +${STEP.register} dt, +${STEP.level} dB ou +${STEP.rate} % de débit)`,
+      misplaced && `la phrase la plus tendue du film est « ${peak.id} » (${ACTS.find((a) => a.key === peak.act).label}), pas dans la menace ni la réponse`,
+    ].filter(Boolean),
+  };
+}
+
 /* ---------------------------------------------------------------- the one voice file of the film */
 
 /**
@@ -340,11 +398,12 @@ export function readPicks(dir) {
  * Measure, comp, write audio/vo.json and audio/voix.wav — and record what is missing, if a budget allows it.
  *   takes    whole takes the current script must have (a new script asks for 3)
  *   retake   phrases to record again on their own, `count` times each (default 3)
+ *   alone    retakes without the phrase before and the phrase after: an act played in its own request
  *   budget   credits this run may spend. Without it nothing is recorded: the cost is announced instead.
  *   solo     use this one recording everywhere it can be used
  *   pick     { phrase: recording } forced for this run, on top of audio/picks.json
  */
-export async function voice(dir, { takes, retake = [], count = RETAKES, budget = 0, seed, solo, pick = {}, quiet = false } = {}) {
+export async function voice(dir, { takes, retake = [], count = RETAKES, alone = false, budget = 0, seed, solo, pick = {}, quiet = false } = {}) {
   const say = quiet ? () => {} : (line = "") => console.log(line);
   const ep = loadEpisode(dir);
   const hash = scriptHash(ep);
@@ -362,8 +421,18 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, budget =
   const orphans = ep.beats.filter((b) => !covered(b.id)).map((b) => b.id);
   // a few orphans are retaken alone; past a third of the script, whole takes cost less and play better
   const wantWhole = takes ?? (orphans.length > ep.beats.length / 3 ? DEFAULT_TAKES : 0);
+  // A film whose voice has "acts" is recorded act by act: one request per act, joined into one take.
+  // Heard and measured on the bench of 2026-10-13: played in its own short request an act keeps the
+  // register its direction asks for, where a 90-second request lets the narrator settle on one low tone.
+  const byAct = ep.voice.acts != null;
+  const actOf = acts(ep);
+  const parts = [];
+  for (const b of ep.beats) {
+    if (parts.at(-1)?.act === actOf[b.id]) parts.at(-1).beats.push(b);
+    else parts.push({ act: actOf[b.id], beats: [b], stability: stabilityOf(ep, b) });
+  }
   for (let s = base; plan.length + wholeHere.length < wantWhole; s++) {
-    if (!wholeHere.includes(s)) plan.push({ beats: ep.beats, seed: s, folder: hash, base: `take-${s}` });
+    if (!wholeHere.includes(s)) plan.push({ beats: ep.beats, seed: s, folder: hash, base: `take-${s}`, parts: byAct ? parts : null });
   }
   if (!plan.length) {
     // Retaken on their own: neighbouring phrases in one breath, with the phrase before and the phrase
@@ -372,7 +441,9 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, budget =
     const wanted = [...new Set([...orphans, ...retake])].map((id) => index[id]).sort((a, b) => a - b);
     const runs = [];
     for (const i of wanted) {
-      if (runs.length && runs.at(-1).at(-1) === i - 1) runs.at(-1).push(i);
+      // act by act, a run stops at the door of the next act: one request, one act, one setting
+      const joins = runs.length && runs.at(-1).at(-1) === i - 1 && (!byAct || actOf[ep.beats[i].id] === actOf[ep.beats[i - 1].id]);
+      if (joins) runs.at(-1).push(i);
       else runs.push([i]);
     }
     for (const run of runs) {
@@ -380,9 +451,11 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, budget =
       const used = recs.filter((r) => r.reprise && r.base.replace(/-\d+$/, "") === id).map((r) => Number(/-(\d+)$/.exec(r.base)?.[1] ?? 0));
       const first = Math.max(0, ...used) + 1;
       for (let n = first; n < first + count; n++) {
-        const beats = ep.beats.slice(Math.max(0, run[0] - 1), run.at(-1) + 2);
+        // `alone`: the run by itself, in its own request. Measured on the bench (017, act 3): the same lines sit two
+        // semitones higher than inside a 90-second take, where the narrator settles into his low register.
+        const beats = alone || byAct ? run.map((i) => ep.beats[i]) : ep.beats.slice(Math.max(0, run[0] - 1), run.at(-1) + 2);
         const vo = Object.fromEntries(beats.map((b) => [b.id, directions(b)[(n - 1) % directions(b).length]]));
-        plan.push({ beats, vo, seed: base + 100 + n, folder: "reprises", base: `${id}-${n}`, target: run.map((i) => ep.beats[i].id) });
+        plan.push({ beats, vo, seed: base + 100 + n, folder: "reprises", base: `${id}-${n}`, target: run.map((i) => ep.beats[i].id), stability: stabilityOf(ep, ep.beats[run[0]]) });
       }
     }
   }
@@ -393,38 +466,96 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, budget =
   // 2. record — only inside the budget given on the command line
   let spent = 0;
   if (plan.length) {
-    const texts = plan.map((p) => p.beats.map((b) => p.vo[b.id]).join("\n\n"));
-    const estimate = Math.ceil(texts.reduce((n, t) => n + t.length, 0) * RATE);
-    const what = plan[0].target ? `${plan.length} reprise${plan.length > 1 ? "s" : ""} (${[...new Set(plan.flatMap((p) => p.target))].join(", ")})` : `${plan.length} prise${plan.length > 1 ? "s" : ""} complète${plan.length > 1 ? "s" : ""}`;
+    // One request = one text sent to the model. A take recorded act by act is several: each act is kept on
+    // disk as soon as it is paid for (parts/), so a run that stops halfway never pays for the same act twice.
+    const requests = plan.map((p) =>
+      (p.parts ?? [{ beats: p.beats, stability: p.stability }]).map((part, n) => {
+        const text = part.beats.map((b) => p.vo[b.id]).join("\n\n");
+        const stability = part.stability ?? ep.voice.stability;
+        const cache = p.parts ? path.join(root, p.folder, "parts", `${p.base}.${n + 1}-${part.act}`) : null;
+        const stamp = hashOf(JSON.stringify({ text, stability, seed: p.seed }));
+        return { ...part, text, stability, cache, stamp, paid: cache != null && readJson(`${cache}.json`)?.stamp === stamp && fs.existsSync(`${cache}.mp3`) };
+      }),
+    );
+    const guard = spendGuard(budget, await creditRate(ep.voice.model)); // today's rate, asked of ElevenLabs
+    const estimate = requests.flat().reduce((n, q) => n + (q.paid ? 0 : guard.estimate(q.text.length)), 0);
+    const what = plan[0].target ? `${plan.length} reprise${plan.length > 1 ? "s" : ""} (${[...new Set(plan.flatMap((p) => p.target))].join(", ")})` : `${plan.length} prise${plan.length > 1 ? "s" : ""} complète${plan.length > 1 ? "s" : ""}${byAct ? `, acte par acte (${parts.length} requêtes chacune)` : ""}`;
     if (budget < estimate) {
       say(`\n  À enregistrer : ${what} ≈ ${estimate} crédits ElevenLabs.`);
       say(`  Rien n'a été enregistré. Avec l'accord de Merwan : ajoute --budget ${Math.ceil(estimate / 50) * 50}  (solde : npm run credits)`);
       if (!ep.beats.every((b) => covered(b.id))) throw new Error("Des phrases n'ont aucun enregistrement : pas de voix à monter pour l'instant.");
     } else {
       say(`\n  Enregistrement : ${what} ≈ ${estimate} crédits (budget ${budget})`);
+      let halted = null;
       for (const [k, p] of plan.entries()) {
-        if (!quiet) process.stdout.write(`  ${p.target ? `reprise ${p.base}` : `prise ${p.seed}`} … `);
-        const out = await synthesize(ep, texts[k], p.seed);
-        spent += out.cost;
+        const name = p.target ? `reprise ${p.base}` : `prise ${p.seed}`;
+        const got = [];
+        for (const q of requests[k]) {
+          let part = q.paid ? readJson(`${q.cache}.json`) : null;
+          if (!part) {
+            // the budget is a ceiling on what is billed: checked before every request, and against every bill
+            if (!guard.before(q.text.length)) {
+              halted = `le budget (${budget}) ne couvre plus la suite`;
+              break;
+            }
+            if (!quiet) process.stdout.write(`  ${name}${q.act && p.parts ? ` · ${q.act}` : ""} … `);
+            const out = await synthesize(ep, q.text, p.seed, q.stability);
+            spent += out.cost;
+            part = { stamp: q.stamp, cost: out.cost, act: q.act, stability: q.stability, words: alignTokens(ep, out.alignment, q.beats), tags: tagSpans(out.alignment) };
+            if (q.cache) {
+              fs.mkdirSync(path.dirname(q.cache), { recursive: true });
+              fs.writeFileSync(`${q.cache}.mp3`, out.audio);
+              fs.writeFileSync(`${q.cache}.json`, JSON.stringify(part));
+            } else part.audio = out.audio;
+            say(`${out.cost} crédits`);
+            if (!guard.after(out.cost, q.text.length)) halted = `facturé ${out.cost} crédits pour ${guard.estimate(q.text.length)} annoncés`;
+          }
+          got.push(part);
+          if (halted) break;
+        }
+        // a take with an act missing is not a take: what is paid stays in parts/ for the next run
+        if (got.length < requests[k].length) break;
+
+        const file = path.join(root, p.folder, `${p.base}.mp3`);
         fs.mkdirSync(path.join(root, p.folder), { recursive: true });
-        fs.writeFileSync(path.join(root, p.folder, `${p.base}.mp3`), out.audio);
+        let words = got[0].words;
+        let tags = got[0].tags;
+        let joined = null;
+        if (p.parts) {
+          // the acts end to end: each one's words and tags move by the length of what comes before it
+          const files = requests[k].map((q) => `${q.cache}.mp3`);
+          const lengths = [];
+          for (const f of files) lengths.push((await decodeAudio(f)).duration);
+          const at = lengths.map((_, i) => lengths.slice(0, i).reduce((a, b) => a + b, 0));
+          if (!joinAudio(files, file)) throw new Error(`Impossible d'assembler les actes de la ${name} (ffmpeg) : ils restent dans ${path.join(p.folder, "parts")}, déjà payés.`);
+          const total = (await decodeAudio(file)).duration;
+          if (Math.abs(total - (at.at(-1) + lengths.at(-1))) > 0.03) throw new Error(`Assemblage de la ${name} : ${total.toFixed(3)} s pour ${(at.at(-1) + lengths.at(-1)).toFixed(3)} s attendues — les mots ne seraient plus calés.`);
+          const shift = (list, d) => list.map((x) => ({ ...x, ...(x.s != null ? { s: x.s + d, e: x.e + d } : { start: x.start + d, end: x.end + d }) }));
+          words = Object.assign({}, ...got.map((g, i) => Object.fromEntries(Object.entries(g.words).map(([id, w]) => [id, shift(w, at[i])]))));
+          tags = got.flatMap((g, i) => shift(g.tags, at[i]));
+          joined = got.map((g, i) => ({ act: g.act, at: Math.round(at[i] * 1000) / 1000, length: Math.round(lengths[i] * 1000) / 1000, cost: g.cost, stability: g.stability }));
+        } else fs.writeFileSync(file, got[0].audio);
         fs.rmSync(path.join(root, p.folder, `${p.base}.wav`), { force: true });
+        const by = Object.fromEntries(requests[k].flatMap((q) => q.beats.map((b) => [b.id, q.stability])));
         fs.writeFileSync(
           path.join(root, p.folder, `${p.base}.json`),
           JSON.stringify({
             seed: p.seed,
-            cost: out.cost,
+            cost: got.reduce((n, g) => n + g.cost, 0),
             target: p.target ?? null,
             order: p.beats.map((b) => b.id),
-            hashes: Object.fromEntries(p.beats.map((b) => [b.id, beatHash(ep, b, p.vo[b.id])])),
+            hashes: Object.fromEntries(p.beats.map((b) => [b.id, beatHash(ep, b, p.vo[b.id], by[b.id])])),
             vo: p.vo,
-            words: alignTokens(ep, out.alignment, p.beats),
-            tags: tagSpans(out.alignment),
+            words,
+            tags,
+            ...(joined ? { parts: joined } : {}),
           }),
         );
-        say(`${out.cost} crédits`);
+        if (p.parts) say(`  ${name} : ${got.length} actes assemblés`);
+        if (halted) break;
       }
       say(`  ${spent} crédits dépensés`);
+      if (halted) say(`  ⚠ Enregistrement arrêté : ${halted}. Rien d'autre n'a été dépensé ; à voir avec Merwan avant de relancer.`);
       recs = pool(dir, ep);
     }
   }
@@ -475,6 +606,7 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, budget =
   const seg = (r, id) => r.qa.segments.find((x) => x.id === id);
   const refOf = (list) => ({ rate: median(list.flatMap((r) => r.qa.segments.map((x) => x.rate))), db: median(list.flatMap((r) => r.qa.segments.map((x) => x.db))) });
   const shared = refOf(whole.length ? whole : recs);
+  const filmHz = median(whole.map((r) => r.qa.medianHz)); // the narrator's median pitch, over the whole takes
   const dirs = Object.fromEntries(ep.beats.map((b) => [b.id, direction(b)]));
   const candidates = {};
   const grid = {}; // phrase → recording → { score, flags, … }
@@ -497,6 +629,8 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, budget =
         pause: s.pause,
         seconds: s.seconds,
         level: s.db - ref.db,
+        // a retake is measured against its own few phrases: this is what brings its register back to the narrator of the film
+        lift: whole.includes(r) || !filmHz ? 0 : Math.round(12 * Math.log2(r.qa.medianHz / filmHz) * 100) / 100,
         clip: rel(dir, path.join(root, r.folder, "cut", `${r.base}.${b.id}.mp3`)), // the booth's excerpt of this phrase
       };
     }
@@ -544,6 +678,7 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, budget =
     takes: Object.fromEntries(used.map((r) => [r.id, { file: rel(dir, r.file), duration: r.meta.duration }])),
     takeWords: Object.fromEntries(used.map((r) => [r.id, r.meta.words])),
     cuts: Object.fromEntries(used.map((r) => [r.id, r.cuts])),
+    arc: tensionArc(ep, ep.beats.map((b) => ({ id: b.id, ...grid[b.id][comp[b.id]], register: grid[b.id][comp[b.id]].register + grid[b.id][comp[b.id]].lift }))),
     booth: {
       names,
       auto,
@@ -580,7 +715,7 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, budget =
   }
 
   // 9. the session sheet
-  say("\n  enregistrement        durée   hauteur σ   étendue   verdict");
+  say("\n  enregistrement        durée   hauteur σ   étendue   mélodie des phrases");
   for (const r of whole) {
     const q = r.qa;
     say(`  ${`${names[r.id]} [${r.id}]`.padEnd(20)} ${r.meta.duration.toFixed(1).padStart(5)}s  ${q.pitchSd.toFixed(2).padStart(6)} dt  ${q.pitchRange.toFixed(1).padStart(6)} dt   ${verdict(q.pitchSd)}`);
@@ -599,13 +734,17 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, budget =
       `  ${b.id.padEnd(13)} ${mark}${names[r].padEnd(15)} ${g.mood.slice(0, 10).padEnd(10)}${signed(g.register).padStart(6)} dt  ${g.spread.toFixed(2).padStart(6)} dt  ${g.rate.toFixed(1).padStart(4)} l/s  ${g.pause.toFixed(2)}s   ${g.flags.join(", ")}${better ? `${g.flags.length ? " · " : ""}(${better} mieux notée${better > 1 ? "s" : ""})` : ""}`,
     );
   }
-  if (vo.qa) say(`\n  Voix montée: ${vo.duration.toFixed(1)} s · hauteur σ ${vo.qa.pitchSd.toFixed(2)} dt (${verdict(vo.qa.pitchSd)}) · registres ${vo.qa.registerSpread.toFixed(2)} dt · ${vo.qa.pauses} pauses, la plus longue ${vo.qa.longestPause.toFixed(2)} s`);
+  if (vo.qa) say(`\n  Voix montée: ${vo.duration.toFixed(1)} s · hauteur σ ${vo.qa.pitchSd.toFixed(2)} dt (mélodie des phrases : ${verdict(vo.qa.pitchSd)}) · registres ${vo.qa.registerSpread.toFixed(2)} dt · ${vo.qa.pauses} pauses, la plus longue ${vo.qa.longestPause.toFixed(2)} s`);
+  // the melody inside the phrases says nothing of the tone from one act to the next: that is this second reading
+  say(`\n  Courbe de tension : ${vo.arc.verdict}${vo.arc.why.length ? ` — ${vo.arc.why.join(" ; ")}` : ""}`);
+  say("  acte            registre    niveau    débit");
+  for (const a of vo.arc.acts) say(`  ${a.label.padEnd(14)} ${signed(a.register).padStart(6)} dt  ${signed(a.level).padStart(5)} dB  ${signed(a.rate, 0).padStart(4)} %`);
   if (dropped.length) say(`  (choix à l'oreille ignorés, l'enregistrement ne vaut plus pour la phrase : ${dropped.join(", ")})`);
   say(
     "\n  Ces mesures trient et alertent ; elles n'entendent pas. Écoute dans la cabine (npm run front → Voix) et choisis\n" +
       "  une autre prise là où une phrase sonne faux. Refaire une seule phrase : npm run voice -- <ep> --retake <phrase>\n",
   );
-  return { ep, vo, recs, grid, comp, auto, dirs, names, spent };
+  return { ep, vo, recs, grid, comp, auto, dirs, names, spent, shared, gains };
 }
 
 /** Save the ear's choices (and its notes), then re-comp from the recordings on disk. Never records anything. */

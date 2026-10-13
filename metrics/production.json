@@ -879,6 +879,14 @@
           "minutes": 3.9,
           "outils": 37,
           "images": 0
+        },
+        {
+          "nom": "verif",
+          "genre": "verif",
+          "modele": "sonnet",
+          "jetons": 171151,
+          "minutes": 1.5,
+          "outils": 8
         }
       ],
       "jauges": []
@@ -890,10 +898,18 @@
           "nom": "faits",
           "genre": "faits",
           "modele": "sonnet",
-          "jetons": 177119,
-          "minutes": 3.5,
-          "outils": 32,
+          "jetons": 204695,
+          "minutes": 4.7,
+          "outils": 35,
           "images": 0
+        },
+        {
+          "nom": "verif",
+          "genre": "verif",
+          "modele": "sonnet",
+          "jetons": 175069,
+          "minutes": 1.3,
+          "outils": 9
         }
       ],
       "jauges": []
@@ -909,6 +925,116 @@
           "minutes": 3.8,
           "outils": 33,
           "images": 0
+        },
+        {
+          "nom": "verif",
+          "genre": "verif",
+          "modele": "sonnet",
+          "jetons": 171293,
+          "minutes": 1.6,
+          "outils": 11
+        }
+      ],
+      "jauges": []
+    },
+    "022": {
+      "etapes": [],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "faits",
+          "modele": "sonnet",
+          "jetons": 193055,
+          "minutes": 7.5,
+          "outils": 33
+        },
+        {
+          "nom": "verif",
+          "genre": "verif",
+          "modele": "sonnet",
+          "jetons": 187737,
+          "minutes": 2.8,
+          "outils": 19
+        }
+      ],
+      "jauges": []
+    },
+    "023": {
+      "etapes": [],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "faits",
+          "modele": "sonnet",
+          "jetons": 213214,
+          "minutes": 5.6,
+          "outils": 39
+        },
+        {
+          "nom": "verif",
+          "genre": "verif",
+          "modele": "sonnet",
+          "jetons": 177603,
+          "minutes": 2.2,
+          "outils": 7
+        }
+      ],
+      "jauges": []
+    },
+    "024": {
+      "etapes": [],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "faits",
+          "modele": "sonnet",
+          "jetons": 222428,
+          "minutes": 6,
+          "outils": 39
+        },
+        {
+          "nom": "verif",
+          "genre": "verif",
+          "modele": "sonnet",
+          "jetons": 188942,
+          "minutes": 3.1,
+          "outils": 18
+        }
+      ],
+      "jauges": []
+    },
+    "025": {
+      "etapes": [],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "faits",
+          "modele": "sonnet",
+          "jetons": 189238,
+          "minutes": 4.9,
+          "outils": 34
+        },
+        {
+          "nom": "verif",
+          "genre": "verif",
+          "modele": "sonnet",
+          "jetons": 168716,
+          "minutes": 1.4,
+          "outils": 11
+        }
+      ],
+      "jauges": []
+    },
+    "021": {
+      "etapes": [],
+      "agents": [
+        {
+          "nom": "verif",
+          "genre": "verif",
+          "modele": "sonnet",
+          "jetons": 177021,
+          "minutes": 2.5,
+          "outils": 13
         }
       ],
       "jauges": []

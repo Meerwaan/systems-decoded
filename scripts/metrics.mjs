@@ -191,14 +191,19 @@ export function report(only) {
     say("  AUDIENCE — ce que rapporte un dossier");
     say();
     say(`  ${pad("dossier", 22)}${lpad("vues", 7)}${lpad("regardé", 9)}${lpad("en entier", 11)}${lpad("abo/1000", 10)}${lpad("likes/100", 11)}${lpad("com/1000", 10)}${lpad("à 5 s", 7)}`);
+    // what the publishing desk was told is online (a tick per platform): a tick on TikTok dates a film this file does not date yet
+    const ticked = readJson(path.join(DIR, "publication.json"), {}).dossiers ?? {};
     let stock = 0;
     for (const ep of eps) {
       const a = aud.episodes[ep];
       const rendered = fs.readdirSync(path.join(ROOT, "episodes")).find((d) => d.startsWith(ep));
       const hasFilm = rendered && fs.existsSync(path.join(ROOT, "renders", `${rendered}.mp4`));
-      if (!a.publie && hasFilm) stock++;
+      const tick = ticked[rendered]?.tiktok;
+      const since = a.publie ?? (typeof tick === "string" ? tick : null);
+      const online = Boolean(a.publie) || Boolean(tick);
+      if (!online && hasFilm) stock++;
       if (!a.vues) {
-        say(`  ${pad(`${ep} ${a.titre ?? ""}`.slice(0, 21), 22)}${a.publie ? `   en ligne depuis le ${String(a.publie).slice(0, 10)} — chiffres à demander` : hasFilm ? "   rendu, pas en ligne (ou date inconnue)" : "   en préparation"}`);
+        say(`  ${pad(`${ep} ${a.titre ?? ""}`.slice(0, 21), 22)}${since ? `   en ligne depuis le ${String(since).slice(0, 10)} — chiffres à demander` : online ? "   en ligne (coché au bureau, date inconnue) — chiffres à demander" : hasFilm ? "   rendu, pas en ligne (ou pas coché au bureau)" : "   en préparation"}`);
         continue;
       }
       const at = (s) => {

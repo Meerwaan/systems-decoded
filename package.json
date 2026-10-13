@@ -19,6 +19,7 @@
     "phone": "node scripts/sd.mjs phone",
     "front": "node scripts/sd.mjs front",
     "credits": "node scripts/sd.mjs credits",
+    "essai": "node scripts/sd.mjs essai",
     "review": "node scripts/sd.mjs review",
     "look": "node scripts/sd.mjs look",
     "chrono": "node scripts/sd.mjs chrono",

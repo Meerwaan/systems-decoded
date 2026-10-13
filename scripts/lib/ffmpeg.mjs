@@ -135,6 +135,18 @@ export function assemble(clips, out, { format = "wav" } = {}) {
   return res.status === 0 && fs.existsSync(out) ? out : null;
 }
 
+/**
+ * Recordings played one after the other, as one file — sample for sample, no fade and no gap: where each
+ * begins in the result is the sum of the lengths before it. MP3 at 320 kbit/s: a second encoding nobody hears.
+ */
+export function joinAudio(files, out) {
+  if (!tool("ffmpeg") || !files.length) return null;
+  const inputs = files.map((_, i) => `[${i}:a]aresample=44100,aformat=sample_fmts=fltp:channel_layouts=mono[a${i}]`).join(";");
+  const graph = `${inputs};${files.map((_, i) => `[a${i}]`).join("")}concat=n=${files.length}:v=0:a=1[out]`;
+  const res = run([...files.flatMap((f) => ["-i", f]), "-filter_complex", graph, "-map", "[out]", "-ar", "44100", "-ac", "1", "-c:a", "libmp3lame", "-b:a", "320k", out]);
+  return res.status === 0 && fs.existsSync(out) ? out : null;
+}
+
 /** Cut one slice of an audio file to a small MP3 (the listening booth plays these). */
 export function excerpt(src, from, length, out) {
   if (!tool("ffmpeg")) return null;

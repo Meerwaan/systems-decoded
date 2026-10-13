@@ -42,9 +42,12 @@ const HELP = `
   npm run build   -- <ep>                        données de timing + bundle + pistes audio
   npm run voice   -- <ep>                        séance de doublage : mesure les prises du disque, monte la meilleure par phrase
                      [--takes 3] [--retake phrase,…] [--count 3]   ce qu'il faudrait enregistrer : le coût est annoncé, rien n'est dépensé
+                     [--isole]                                     …les phrases reprises seules, dans leur propre requête (un acte joué à part)
                      [--budget 700]                                …sauf avec un budget en crédits (accord de Merwan d'abord)
                      [--pick phrase=enregistrement,…] [--solo enregistrement]
   npm run credits                                solde ElevenLabs (appel gratuit)
+  npm run essai   -- <ep> --file essais.json [--budget 300]   banc d'essai voix : un passage joué sous plusieurs directions, mesuré contre le narrateur du film
+                     --garder <essai>                             …l'essai retenu à l'oreille entre dans le film : sa direction dans le script, son enregistrement en reprise (gratuit)
   npm run sfx     -- <ep>                        régénère l'habillage sonore (audio/bed.wav) — le build le fait seul quand le timing bouge
   npm run script  -- <ep>                        affiche le script, le minutage et les cues
   npm run snap    -- <ep> [--at 1,5,12] [--zoom sel]   images de contrôle (PNG)
@@ -91,12 +94,24 @@ try {
         takes: flags.takes != null ? Number(flags.takes) : undefined,
         retake: flags.retake ? String(flags.retake).split(",").map((s) => s.trim()).filter(Boolean) : [],
         count: flags.count != null ? Number(flags.count) : undefined,
+        alone: Boolean(flags.isole),
         budget: flags.budget != null ? Number(flags.budget) : 0,
         seed: flags.seed != null ? Number(flags.seed) : undefined,
         solo: flags.solo != null ? String(flags.solo) : undefined,
         pick,
       });
       await build(dir);
+      break;
+    }
+    case "essai": {
+      const { essai, garder } = await import("./essai.mjs");
+      const dir = resolveEpisode(args[0]);
+      if (flags.garder) {
+        // --garder F-hache : the trial Merwan chose becomes a retake of the film (free: it is already recorded)
+        const { build } = await import("./build.mjs");
+        await garder(dir, { file: flags.file, nom: String(flags.garder) });
+        await build(dir);
+      } else await essai(dir, { file: flags.file, budget: flags.budget != null ? Number(flags.budget) : 0 });
       break;
     }
     case "credits": {

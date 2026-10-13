@@ -249,9 +249,28 @@ export function hashOf(payload) {
 /** The ways a phrase may be directed: its "vo" line, then the alternatives the booth can compare ("voAlt"). */
 export const directions = (beat) => [beat.vo ?? plainText(beat.tokens), ...(beat.voAlt ?? [])].map((v) => v.trim());
 
+export const ACTS = ["menace", "autopsie", "reponse", "fin"];
+
+/** The act of each phrase: its "act" in the script, else read from the landmarks every script has ("ouvre", "seuil" or "zero", "chute"). */
+export function acts(ep) {
+  const ids = ep.beats.map((b) => b.id);
+  const open = ids.includes("ouvre") ? ids.indexOf("ouvre") : Math.round(ids.length * 0.22);
+  const fall = ids.indexOf("chute") > open ? ids.indexOf("chute") : Math.round(ids.length * 0.72);
+  let gate = ids.includes("seuil") ? ids.indexOf("seuil") : ids.indexOf("zero"); // the threshold already speaks for act 3
+  if (gate <= open || gate >= fall) gate = Math.round((open + fall + 1) / 2);
+  const byPlace = (i) => (i < open ? "menace" : i < gate ? "autopsie" : i < fall ? "reponse" : "fin");
+  return Object.fromEntries(ep.beats.map((b, i) => [b.id, ACTS.includes(b.act) ? b.act : byPlace(i)]));
+}
+
+/**
+ * A film whose voice has "acts" ({ menace: { stability: 0.2 }, … }, possibly empty) is recorded act by act,
+ * each act in its own request — and an act may ask for its own stability. Without it: one request, one setting.
+ */
+export const stabilityOf = (ep, beat) => ep.voice?.acts?.[acts(ep)[beat.id]]?.stability ?? ep.voice?.stability;
+
 /** What makes two recordings of a phrase interchangeable: same voice, same direction, same words. */
-export function beatHash(ep, beat, vo = directions(beat)[0]) {
-  const { voiceId, model, stability, similarity, speed, format } = ep.voice ?? {};
+export function beatHash(ep, beat, vo = directions(beat)[0], stability = stabilityOf(ep, beat)) {
+  const { voiceId, model, similarity, speed, format } = ep.voice ?? {};
   return hashOf(
     JSON.stringify({
       voice: { voiceId, model, stability, similarity, speed, format },

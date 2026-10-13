@@ -1,0 +1,84 @@
+{
+  "//": "Ce qui est en ligne, plateforme par plateforme : tenu par le bureau de publication (npm run front), une case par plateforme. Une date = le moment où la case a été cochée (en postant : l'heure de la mise en ligne) ; true = en ligne, date inconnue ; false = décoché. Sans ligne ici, TikTok se lit dans audience.json (`publie`).",
+  "dossiers": {
+    "001-detecteur-fumee": {
+      "instagram": true,
+      "youtube": true
+    },
+    "002-airbag": {
+      "instagram": true,
+      "youtube": true
+    },
+    "003-ascenseur": {
+      "instagram": true,
+      "youtube": true
+    },
+    "004-differentiel": {
+      "instagram": true,
+      "youtube": true
+    },
+    "005-arret-urgence": {
+      "instagram": true,
+      "youtube": true
+    },
+    "006-defibrillateur": {
+      "instagram": true,
+      "youtube": true
+    },
+    "007-siege-ejectable": {
+      "tiktok": true,
+      "instagram": true,
+      "youtube": true
+    },
+    "008-paratonnerre": {
+      "tiktok": true,
+      "instagram": true,
+      "youtube": true
+    },
+    "009-micro-ondes": {
+      "tiktok": true,
+      "instagram": true,
+      "youtube": true
+    },
+    "010-scie": {
+      "tiktok": true,
+      "instagram": true,
+      "youtube": true
+    },
+    "011-fusible-pyro": {
+      "tiktok": true,
+      "instagram": true,
+      "youtube": true
+    },
+    "012-gaziniere": {
+      "tiktok": true,
+      "instagram": true,
+      "youtube": true
+    },
+    "013-halo": {
+      "tiktok": true,
+      "instagram": true,
+      "youtube": true
+    },
+    "014-abs": {
+      "tiktok": true,
+      "instagram": true,
+      "youtube": true
+    },
+    "015-brin-arret": {
+      "tiktok": true,
+      "instagram": true,
+      "youtube": true
+    },
+    "016-disjoncteur": {
+      "tiktok": true,
+      "instagram": true,
+      "youtube": true
+    },
+    "017-irm": {
+      "tiktok": "2026-10-13T21:13",
+      "instagram": "2026-10-13T21:13",
+      "youtube": "2026-10-13T21:14"
+    }
+  }
+}

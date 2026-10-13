@@ -3,14 +3,18 @@
 // pinned comment. Everything is read from disk on every request: a new render shows up on
 // the next refresh, without a restart.
 // It also opens the listening booth of an episode (front/voix.html): every phrase in every
-// recording, and the one address of this server that writes anything — the ear's choice of a
-// recording, handed to voice.mjs, which re-comps from what is already on the disk.
+// recording, and the ear's choice of a recording, handed to voice.mjs, which re-comps from what
+// is already on the disk.
+// Two addresses write, and nothing else does: that booth, and what is online — a tick per
+// platform, kept in metrics/publication.json so that the PC and the phone tell the same story.
+import { spawn } from "node:child_process";
 import fs from "node:fs";
 import http from "node:http";
 import os from "node:os";
 import path from "node:path";
 import { ROOT } from "./lib/env.mjs";
 import { loadEpisode, schedule } from "./lib/episode.mjs";
+import { tool } from "./lib/ffmpeg.mjs";
 import { choose, readPicks } from "./voice.mjs";
 
 const FRONT = path.join(ROOT, "front");
@@ -18,8 +22,13 @@ const RENDERS = path.join(ROOT, "renders");
 const FONTS = path.join(ROOT, "kit", "fonts");
 const BRAND = path.join(ROOT, "brand");
 const EPISODES = path.join(ROOT, "episodes");
+const AUDIENCE = path.join(ROOT, "metrics", "audience.json");
+const PUBLICATION = path.join(ROOT, "metrics", "publication.json");
+const PLATFORMS = ["tiktok", "instagram", "youtube"]; // where a film goes: episode.json → post, post.instagram, post.youtube
+const VIGNETTES = path.join(ROOT, ".cache", "vignettes"); // the covers, small: made here, never in renders/
 
 const MIME = {
+  ".jpg": "image/jpeg",
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
@@ -88,6 +97,63 @@ function rendered(name) {
   }
 }
 
+const making = new Map(); // dossier → its small cover, while ffmpeg draws it
+
+/**
+ * The cover of a dossier as the list shows it: 360 px wide, a few dozen Ko. The covers are 1080 × 1920
+ * PNGs of 1,5 Mo each, and a phone that draws twenty of them as thumbnails crawls. Made on the first
+ * ask and again after a new `npm run cover`; without ffmpeg on this PC, the cover itself is handed out.
+ * Resolves with the file to send, or null when the dossier has no cover.
+ */
+function vignette(dir) {
+  const cover = path.join(RENDERS, `${dir}-couverture.png`);
+  const small = path.join(VIGNETTES, `${dir}.jpg`);
+  let drawn;
+  try {
+    drawn = fs.statSync(cover).mtimeMs;
+  } catch {
+    return Promise.resolve(null);
+  }
+  try {
+    if (fs.statSync(small).mtimeMs >= drawn) return Promise.resolve(small);
+  } catch {
+    // not made yet
+  }
+  const ffmpeg = tool("ffmpeg");
+  if (!ffmpeg) return Promise.resolve(cover);
+  if (!making.has(dir)) {
+    making.set(
+      dir,
+      new Promise((resolve) => {
+        const draft = path.join(VIGNETTES, `${dir}.${process.pid}.jpg`); // swapped in once whole: a page never gets half an image
+        let over = false;
+        const done = (ok) => {
+          if (over) return;
+          over = true;
+          making.delete(dir);
+          try {
+            if (!ok) throw new Error("ffmpeg");
+            fs.renameSync(draft, small);
+            resolve(small);
+          } catch {
+            fs.rmSync(draft, { force: true });
+            resolve(cover);
+          }
+        };
+        try {
+          fs.mkdirSync(VIGNETTES, { recursive: true });
+          const child = spawn(ffmpeg, ["-hide_banner", "-loglevel", "error", "-y", "-i", cover, "-vf", "scale=360:-2:flags=lanczos", "-q:v", "4", draft], { stdio: "ignore", windowsHide: true });
+          child.on("error", () => done(false));
+          child.on("exit", (code) => done(code === 0));
+        } catch {
+          done(false);
+        }
+      }),
+    );
+  }
+  return making.get(dir);
+}
+
 function postOf(post) {
   if (!post || typeof post !== "object") return null;
   return {
@@ -124,8 +190,84 @@ function named(ep, dir) {
   return { id: String(ep.id ?? num ?? dir), slug: String(ep.slug ?? rest ?? dir), title: String(ep.title ?? rest ?? dir) };
 }
 
+/* ---------------------------------------------------------------- what is online */
+
+const isMap = (x) => x !== null && typeof x === "object" && !Array.isArray(x);
+/** object[key] for a key that came in a URL or a body: its own entries only, never what every object inherits. */
+const own = (object, key) => (isMap(object) && Object.hasOwn(object, key) ? object[key] : undefined);
+
+/** The ticks of the desk, as metrics/publication.json keeps them: { dossier: { platform: date | true | false } }. */
+function publication() {
+  const kept = readJson(PUBLICATION)?.dossiers;
+  return isMap(kept) ? kept : {};
+}
+
+/**
+ * Where one dossier is online: for each platform a date ("2026-10-09T18:22": when it was ticked),
+ * true (online, nobody knows since when) or false. A dossier nobody ticked for TikTok falls back on
+ * the date of metrics/audience.json (`publie`), where the first films were written down by hand.
+ */
+function postedOf(dir, kept, audience) {
+  const mine = own(kept, dir);
+  const out = {};
+  for (const platform of PLATFORMS) {
+    const value = own(mine, platform);
+    out[platform] = value === true || (typeof value === "string" && value !== "") ? value : false;
+  }
+  if (own(mine, "tiktok") === undefined) {
+    const known = own(own(audience, /^\d+/.exec(dir)?.[0] ?? ""), "publie");
+    if (typeof known === "string" && known !== "") out.tiktok = known;
+  }
+  return out;
+}
+
+/** Now, the way audience.json writes its dates: local time, to the minute. */
+function stamp() {
+  const d = new Date();
+  const two = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${two(d.getMonth() + 1)}-${two(d.getDate())}T${two(d.getHours())}:${two(d.getMinutes())}`;
+}
+
+/**
+ * Keep what the page ticked for one dossier — { platform: "now" | true | false } — and say what changed.
+ * "now" is a film that has just gone up: it is dated. true is one that was already online (the ticks
+ * a phone kept for itself before the PC did): no date is made up for it. Read, changed and written in
+ * one go, without a pause in between: two ticks sent at once cannot cross.
+ */
+function keepPublication(dir, asked) {
+  const file = readJson(PUBLICATION);
+  const all = isMap(file?.dossiers) ? file.dossiers : {};
+  const audience = readJson(AUDIENCE)?.episodes;
+  const before = postedOf(dir, all, audience);
+  const written = postedOf(dir, {}, audience); // what audience.json says on its own
+  const mine = { ...(isMap(own(all, dir)) ? all[dir] : {}) };
+  const said = [];
+  for (const [platform, on] of Object.entries(asked)) {
+    if (Boolean(before[platform]) === (on !== false)) continue; // already so: a date that is there is never rewritten
+    // unticked by mistake, ticked again: the date written down by hand comes back, rather than today's
+    if (on !== false && written[platform]) delete mine[platform];
+    else mine[platform] = on === "now" ? stamp() : on;
+    said.push(`${platform} ${on === false ? "retiré" : "en ligne"}`);
+  }
+  if (said.length === 0) return said;
+  const kept = { ...all, [dir]: mine };
+  if (Object.keys(mine).length === 0) delete kept[dir];
+  const next = {
+    "//": "Ce qui est en ligne, plateforme par plateforme : tenu par le bureau de publication (npm run front), une case par plateforme. Une date = le moment où la case a été cochée (en postant : l'heure de la mise en ligne) ; true = en ligne, date inconnue ; false = décoché. Sans ligne ici, TikTok se lit dans audience.json (`publie`).",
+    dossiers: Object.fromEntries(Object.entries(kept).sort(([a], [b]) => a.localeCompare(b, "fr", { numeric: true }))),
+  };
+  // written beside, then swapped in: a page that reads at that instant never finds half a file
+  const draft = `${PUBLICATION}.${process.pid}.tmp`;
+  fs.mkdirSync(path.dirname(PUBLICATION), { recursive: true });
+  fs.writeFileSync(draft, `${JSON.stringify(next, null, 2)}\n`);
+  fs.renameSync(draft, PUBLICATION);
+  return said;
+}
+
 /** Every episode folder, newest id first. Renders are named after the folder. */
 function dossiers() {
+  const kept = publication();
+  const audience = readJson(AUDIENCE)?.episodes;
   return episodeDirs()
     .map((dir) => {
       // an episode.json caught half-written must not take the desk down: fall back on the folder name
@@ -134,18 +276,26 @@ function dossiers() {
         video: rendered(`${dir}.mp4`),
         cover: rendered(`${dir}-couverture.png`),
         preview: rendered(`${dir}-apercu.mp4`),
+        phone: rendered(`${dir}-iphone.mp4`), // the copy under 30 Mio (npm run phone): what the page plays, when it is the same film
+        mute: rendered(`${dir}-apercu-muet.mp4`), // a film waiting for its voice
       };
+      if (files.cover) files.thumb = { url: `/vignette/${encodeURIComponent(dir)}`, mtime: files.cover.mtime };
       return {
         ...named(ep, dir),
         dir,
         post: postOf(ep.post),
         files,
         ready: files.video !== null,
+        posted: postedOf(dir, kept, audience),
+        voiced: fs.existsSync(path.join(EPISODES, dir, "audio", "vo.json")),
         booth: boothOf(dir) !== null, // a voice comped phrase by phrase: its recordings can be compared on /voix.html
       };
     })
     .sort((a, b) => b.id.localeCompare(a.id, "fr", { numeric: true }) || b.dir.localeCompare(a.dir));
 }
+
+/** Everything the desk's page draws, read from the disk at this instant. */
+const desk = () => ({ profile: profile(), dossiers: dossiers() });
 
 function profile() {
   const p = readJson(path.join(BRAND, "profil.json")) ?? {};
@@ -158,10 +308,6 @@ function profile() {
 
 /** A refusal a route words itself — a status and what to tell the phone: handle() answers it as it is. */
 const refuse = (status, message) => Object.assign(new Error(message), { status });
-
-const isMap = (x) => x !== null && typeof x === "object" && !Array.isArray(x);
-/** object[key] for a key that came in a URL or a body: its own entries only, never what every object inherits. */
-const own = (object, key) => (isMap(object) && Object.hasOwn(object, key) ? object[key] : undefined);
 
 /**
  * audio/vo.json of an episode, when it carries a booth: its voice was comped phrase by phrase out of
@@ -464,20 +610,43 @@ function inTurn(job) {
   return done;
 }
 
+/** What one of the desk's own pages posts about a dossier, read as JSON — or the refusal that says why not. */
+async function postedJson(req, dir, stranger) {
+  if (!ownPage(req)) throw refuse(403, stranger);
+  // JSON and nothing else: a form on another site cannot send that type, and a script there has to ask first (and is told no)
+  if (!/^application\/json\s*(;|$)/i.test(req.headers["content-type"] ?? "")) throw refuse(415, "Type refusé : envoie du JSON (Content-Type: application/json)");
+  if (Number(req.headers["content-length"]) > BODY_MAX) throw refuse(413, TOO_BIG);
+  if (!dir) throw refuse(404, NO_DOSSIER);
+  const body = await readBody(req, BODY_MAX);
+  try {
+    return JSON.parse(body.toString("utf8"));
+  } catch {
+    throw refuse(400, "JSON illisible");
+  }
+}
+
+/** POST /api/publication/<dossier>: { platform: "now" | true | false } — tick or untick, then answer with the desk as it now stands. */
+async function publicationPost(req, res, dir) {
+  const asked = await postedJson(req, dir, "Origine refusée : seule la page du bureau peut cocher un dossier");
+  if (!isMap(asked) || Object.keys(asked).length === 0) throw refuse(400, `Corps attendu : { ${PLATFORMS.join(" | ")} : "now", true ou false }`);
+  for (const [platform, on] of Object.entries(asked)) {
+    if (!PLATFORMS.includes(platform)) throw refuse(400, `Plateforme inconnue : ${shown(platform)}`);
+    if (on !== "now" && on !== true && on !== false) throw refuse(400, `Valeur refusée pour ${platform} : "now", true ou false`);
+  }
+  let said;
+  try {
+    said = keepPublication(dir, asked);
+  } catch (err) {
+    console.error(`  ✗ publication ${dir}: ${err.stack ?? err.message}`);
+    throw refuse(500, "Le PC n'a pas pu écrire metrics/publication.json (le détail est dans la fenêtre du serveur)");
+  }
+  if (said.length > 0) note(`${dir} : ${said.join(", ")} (${who(req)})`);
+  return json(req, res, desk());
+}
+
 /** POST /api/voix/<dossier>: keep these recordings and these notes, then answer with the booth as it now stands. */
 async function boothPost(req, res, dir) {
-  if (!ownPage(req)) return text(res, 403, "Origine refusée : seule la page de la cabine peut envoyer un choix");
-  // JSON and nothing else: a form on another site cannot send that type, and a script there has to ask first (and is told no)
-  if (!/^application\/json\s*(;|$)/i.test(req.headers["content-type"] ?? "")) return text(res, 415, "Type refusé : envoie du JSON (Content-Type: application/json)");
-  if (Number(req.headers["content-length"]) > BODY_MAX) return text(res, 413, TOO_BIG);
-  if (!dir) return text(res, 404, NO_DOSSIER);
-  const body = await readBody(req, BODY_MAX);
-  let asked;
-  try {
-    asked = JSON.parse(body.toString("utf8"));
-  } catch {
-    return text(res, 400, "JSON illisible");
-  }
+  const asked = await postedJson(req, dir, "Origine refusée : seule la page de la cabine peut envoyer un choix");
   const { patch, session } = await inTurn(async () => {
     const patch = boothPatch(asked, boothSession(dir)); // against the disk as the POST before this one left it
     try {
@@ -536,10 +705,12 @@ function route(req, res) {
   } catch {
     // unreadable: said below, once the method has been looked at
   }
-  // The desk only reads. One address takes a POST: the booth of a dossier, for the ear's choices.
+  // The desk reads. Two addresses take a POST: the booth of a dossier, for the ear's choices, and
+  // its publication, for a tick when it goes online.
   const booth = pathname !== null && /^\/api\/voix\/[^/]+$/.test(pathname);
-  if (req.method !== "GET" && req.method !== "HEAD" && !(booth && req.method === "POST")) {
-    return text(res, 405, "Méthode refusée", { Allow: booth ? "GET, HEAD, POST" : "GET, HEAD" });
+  const ticks = pathname !== null && /^\/api\/publication\/[^/]+$/.test(pathname);
+  if (ticks ? req.method !== "POST" : req.method !== "GET" && req.method !== "HEAD" && !(booth && req.method === "POST")) {
+    return text(res, 405, "Méthode refusée", { Allow: ticks ? "POST" : booth ? "GET, HEAD, POST" : "GET, HEAD" });
   }
   if (pathname === null) return text(res, 400, "Adresse illisible");
   // Nothing is normalised for us (no URL parser): a path that tries to climb, in any encoding, stops here.
@@ -550,13 +721,17 @@ function route(req, res) {
     if (req.method === "GET") note(`page ouverte depuis ${who(req)}`);
     return sendFile(req, res, path.join(FRONT, "index.html"));
   }
-  if (pathname === "/api/dossiers") return json(req, res, { profile: profile(), dossiers: dossiers() });
+  if (pathname === "/api/dossiers") return json(req, res, desk());
   if (pathname === "/brand/avatar.png") return sendFile(req, res, path.join(BRAND, "avatar.png"), { download });
 
   const parts = pathname.slice(1).split("/");
   // The booth: "/api/voix/<dossier>" and "/voix-audio/<dossier>/…". The dossier is a real folder of
   // episodes/ or nothing — like every name here, looked up in the listing, never joined to a path as it came.
   const dossier = (name) => (episodeDirs().includes(name) ? name : null);
+  if (ticks) return publicationPost(req, res, dossier(parts[2]));
+  if (parts[0] === "vignette" && parts.length === 2) {
+    return vignette(dossier(parts[1]) ?? "").then((file) => (file ? sendFile(req, res, file) : text(res, 404, "Introuvable")));
+  }
   if (booth) {
     if (req.method === "POST") return boothPost(req, res, dossier(parts[2]));
     return dossier(parts[2]) ? json(req, res, boothSession(parts[2])) : text(res, 404, NO_DOSSIER);

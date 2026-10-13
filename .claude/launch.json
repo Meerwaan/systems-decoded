@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "bureau-essai",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/sd.mjs", "front", "--port", "4174"],
+      "port": 4174
+    }
+  ]
+}
