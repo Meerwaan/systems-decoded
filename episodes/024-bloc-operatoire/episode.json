@@ -1,0 +1,242 @@
+{
+  "id": "024",
+  "slug": "bloc-operatoire",
+  "title": "Bloc opératoire",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "acts": {
+      "menace": {
+        "stability": 0.2
+      }
+    }
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Le courant",
+      "du bloc opératoire"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Bloc opératoire : ici, un défaut d'isolement ne fait rien sauter. C'est voulu, et ça porte un nom : le schéma IT médical. Électriciens : qu'est-ce qu'on a simplifié ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#electricite",
+      "#electricien",
+      "#hopital"
+    ],
+    "pinned": "Schéma IT médical : au premier défaut d'isolement, rien ne coupe, une alarme prévient. Électriciens : qu'est-ce qu'on a simplifié ?"
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source, le vocabulaire exact et ce qu'il ne faut pas dire : docs/faits/024-bloc-operatoire.md ; contre-vérification phrase par phrase : docs/faits/024-contre-verification.md",
+    "Réserve : la NF C 15-211 et la CEI 60364-7-710 sont payantes et n'ont pas été lues. Les valeurs viennent du guide IET GN7 (article 710 de la BS 7671, transposition de la même norme internationale), de Wiring Matters n° 77 et de documents Bender et Legrand. Aucune valeur n'est attribuée à « la norme française » dans le film.",
+    "Le schéma IT médical (locaux à usage médical de groupe 2) : un transformateur d'isolement alimente les circuits autour du patient ; son secondaire n'est relié à aucune terre, les masses le restent ; au premier défaut d'isolement, le courant de défaut ne dépend que des capacités de fuite et rien ne coupe ; un contrôleur permanent d'isolement (CPI) alarme, au plus tard à 50 kΩ, par un voyant et un signal sonore dans la salle (50 kΩ : valeur des sources britanniques, que les documents français lus ne donnent qu'en plage de réglage — elle n'est ni dite ni affichée) ; au deuxième défaut, les protections coupent.",
+    "La raison d'être : la continuité — « a total loss of supply in Group 2 locations shall be prevented » (IET). Alimentation de sécurité : lampe opératoire et appareils de maintien en vie repris en 0,5 s au plus, sur une source qui tient au moins 3 h ; le reste en 15 s.",
+    "Simplifications assumées : la scène (un fil touche la carcasse d'un appareil pendant ton opération) est un scénario ; « aucun fil n'est relié à la terre » parle des conducteurs actifs du secondaire, les masses restent à la terre ; « ça ne marche qu'une fois » : le deuxième défaut ne coupe que s'il ferme une boucle entre les deux conducteurs actifs ; « un respirateur qui s'arrête, une lampe qui s'éteint » est l'enjeu, pas une description — ils ont une batterie ou sont repris en 0,5 s au plus ; « il ne passe presque rien » : aucune valeur du courant de premier défaut n'a été trouvée ; tout le bloc n'est pas en IT médical, et des différentiels 30 mA existent dans un bloc, hors de ces circuits.",
+    "À ne pas dire : « il n'y a pas de terre », « on ne peut pas s'électrocuter », « rien ne coupe jamais », « l'IT protège du microchoc », « court-circuit » pour un premier défaut, « disjoncteur d'isolement ».",
+    "Prochain dossier (025) : l'ESP — docs/faits/025-esp.md."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Tu dors, sur la table d'opération. Dans un appareil, un fil touche le *métal*.",
+      "vo": "[tense] Tu dors, sur la table d'opération. Dans un appareil, un fil touche le métal.",
+      "voAlt": [
+        "[firm, matter-of-fact] Tu dors, sur la table d'opération. Dans un appareil, un fil touche le métal."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Chez toi, ça sauterait. Ici, rien ne coupe : +exprès+. Mais ça ne marche… qu'*une fois*.",
+      "vo": "[firm, matter-of-fact] Chez toi, ça sauterait. Ici, rien ne coupe : exprès. [short pause] [serious] Mais ça ne marche... qu'une fois."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Chez toi, ce défaut ferait sauter le différentiel : le noir. Ici, le noir, c'est un respirateur qui s'arrête. Une lampe qui s'éteint. Un chirurgien… qui ne voit plus *rien*.",
+      "vo": "[tense] Chez toi, ce défaut ferait sauter le différentiel : le noir. [short pause] Ici, le noir, c'est un respirateur qui s'arrête. Une lampe qui s'éteint. Un chirurgien... qui ne voit plus rien."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Un transformateur d'isolement. Deux enroulements, qui ne se touchent pas. D'un côté, le réseau. De l'autre… un circuit dont aucun fil n'est relié à la +terre+.",
+      "vo": "[curious] Un transformateur d'isolement. Deux enroulements, qui ne se touchent pas. D'un côté, le réseau. De l'autre... un circuit dont aucun fil n'est relié à la terre."
+    },
+    {
+      "id": "repos",
+      "text": "Chez toi, le courant qui fuit repart par la terre : ton différentiel le voit. Ici, le chemin de retour est minuscule : il ne passe presque rien. Et un boîtier veille : le contrôleur permanent d'*isolement*.",
+      "vo": "[thoughtful] Chez toi, le courant qui fuit repart par la terre : ton différentiel le voit. [curious] Ici, le chemin de retour est minuscule : il ne passe presque rien. [serious] Et un boîtier veille : le contrôleur permanent d'isolement."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ce fil sur le métal… regarde ce qu'il *déclenche*.",
+      "vo": "[tense] Abonne-toi : ce fil sur le métal... regarde ce qu'il déclenche."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Le fil touche la carcasse. Premier défaut. Le respirateur tourne. La lampe éclaire. Personne n'a rien vu. Mais le circuit, lui… n'est plus *isolé*.",
+      "vo": "[urgent] Le fil touche la carcasse. Premier défaut. Le respirateur tourne. La lampe éclaire. Personne n'a rien vu. [short pause] [ominous] Mais le circuit, lui... n'est plus isolé."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Le contrôleur l'a mesuré. Une alarme, dans la salle. Rien ne coupe. Le chirurgien continue. Le défaut sera cherché, puis réparé. Et toi… tu respires +toujours+.",
+      "vo": "[urgent] Le contrôleur l'a mesuré. Une alarme. Dans la salle. Rien ne coupe. Le chirurgien continue. Le défaut sera cherché. Puis réparé. [short pause] [relieved] Et toi... tu respires toujours."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : au bloc, la sécurité, c'est d'abord de ne pas couper. C'est de +tenir+… et de prévenir. Parce qu'ici, la panne est plus dangereuse que le *défaut*.",
+      "vo": "[low, grave voice] Voilà son secret : au bloc, la sécurité, c'est d'abord de ne pas couper. C'est de tenir... et de prévenir. Parce qu'ici, la panne est plus dangereuse que le défaut."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Qu'une fois ? Oui : au deuxième défaut, là, ça coupe. D'où l'alarme : on répare avant. En +commentaire+ : électriciens, dites-nous ce qu'on a simplifié.",
+      "vo": "[curious] Qu'une fois ? [short pause] [serious] Oui : au deuxième défaut, là, ça coupe. D'où l'alarme : on répare avant. [short pause] [curious] En commentaire : électriciens, dites-nous ce qu'on a simplifié."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour celles et ceux qui câblent les *hôpitaux*.",
+      "vo": "[firm, matter-of-fact] Like : [short pause] pour celles et ceux qui câblent les hôpitaux."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : dans un virage, ta voiture freine une roue… sans *toi*.",
+      "vo": "[serious] Prochain dossier : dans un virage, ta voiture freine une roue... [short pause] sans toi."
+    },
+    {
+      "id": "boucle",
+      "text": "Elle veille même quand…",
+      "vo": "[calm] Elle veille même quand,"
+    }
+  ],
+  "cues": {
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:alarme-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:tenir",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:veille"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "id": "025",
+  "slug": "esp",
+  "title": "ESP",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "acts": {
+      "menace": {
+        "stability": 0.2
+      }
+    }
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "L'ESP",
+      "de ta voiture"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "ESP : dans un virage qui tourne mal, ta voiture freine une roue toute seule pour te remettre dans l'axe. Et elle le doit à un élan. La tienne, elle est d'avant ou d'après 2014 ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#esp",
+      "#voiture",
+      "#securiteroutiere"
+    ],
+    "pinned": "Demandé en commentaire : l'ESP. Obligatoire sur toute voiture neuve en Europe depuis novembre 2014. La tienne, avant ou après ?"
+  },
+  "sources": [
+    "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/025-esp.md ; contre-vérification phrase par phrase : docs/faits/025-contre-verification.md",
+    "Le fonctionnement (Bosch) : un capteur d'angle de volant (la direction voulue), un capteur de lacet (la rotation de la voiture autour de son axe vertical), un capteur d'accélération latérale, les capteurs de vitesse des roues ; le calculateur compare 25 fois par seconde le mouvement voulu et le mouvement réel ; s'ils divergent, il réduit d'abord la puissance du moteur, puis freine des roues une par une.",
+    "Quelle roue : en survirage (l'arrière part), la roue avant extérieure au virage ; en sous-virage, la roue arrière intérieure — et une seconde roue si l'écart est fort. Source secondaire (Wikipédia, « Electronic stability control ») : aucune source primaire lue sur ce point — Bosch dit seulement « des roues, une par une », après avoir réduit la puissance du moteur. Le film ne montre que le survirage.",
+    "Le test de l'élan : 21 octobre 1997, en Suède, Robert Collin, du magazine Teknikens Värld, renverse la Mercedes Classe A dans une manœuvre d'évitement ; la voiture bascule (« umgekippt » ; sur le toit ou le flanc, les sources ne le disent pas) ; Mercedes conteste d'abord, puis arrête les livraisons et monte l'ESP en série (autohaus.de, presse ; le récit officiel de Mercedes n'a pas pu être lu). Premier ESP de série : Mercedes S 600 Coupé, 1995, avec Bosch. Aucune vitesse du test ni nombre de voitures rappelées : les sources divergent.",
+    "L'obligation : dans l'Union européenne, sur toutes les voitures neuves au 1er novembre 2014, sur les nouveaux modèles dès novembre 2011 (règlement (CE) n° 661/2009, Commission européenne). Efficacité : −56 % d'accidents mortels à un seul véhicule dans une étude américaine de 2006 (IIHS), non dite dans le film.",
+    "Simplifications assumées : la scène (un sanglier, un coup de volant) est un scénario ; le film montre le survirage et une seule roue freinée ; « elle freine pour tourner » : l'ESP ne crée pas d'adhérence, il ne peut rien au-delà de ce que tiennent les pneus. À ne pas dire : un délai en millisecondes, « elle freine toujours une seule roue », qui possède la marque ESP.",
+    "L'annonce du prochain dossier et la boucle restent à écrire : le 026 n'est pas choisi."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Un sanglier. Tu braques d'un coup… et l'arrière de ta voiture *décroche*.",
+      "vo": "[tense] Un sanglier. Tu braques d'un coup... et l'arrière de ta voiture décroche.",
+      "voAlt": [
+        "[firm, matter-of-fact] Un sanglier. Tu braques d'un coup... et l'arrière de ta voiture décroche."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Elle se rattrape seule : elle freine une roue. +Pas les quatre+. Et ce réflexe, elle le doit… à un *élan*.",
+      "vo": "[firm, matter-of-fact] Elle se rattrape seule : elle freine une roue. Pas les quatre. [short pause] [serious] Et ce réflexe, elle le doit... à un élan."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Ton volant dit : à gauche. Ta voiture, elle, pivote trop. Elle commence une toupie. Contre-braquer ? Trop tard… ou trop *fort*.",
+      "vo": "[tense] Ton volant dit : à gauche. Ta voiture, elle, pivote trop. Elle commence une toupie. [short pause] Contre-braquer ? Trop tard... ou trop fort."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Un capteur dans le volant : où tu veux aller. Un capteur de lacet : où la voiture va *vraiment*. Un capteur par roue. Et un calculateur… qui +compare+.",
+      "vo": "[curious] Un capteur dans le volant : où tu veux aller. Un capteur de lacet : où la voiture va vraiment. Un capteur par roue. Et un calculateur... qui compare."
+    },
+    {
+      "id": "repos",
+      "text": "Vingt-cinq fois par seconde, il pose la même question : elle va là où tu braques ? Tant que la réponse est oui… il ne fait *rien*.",
+      "vo": "[thoughtful] Vingt-cinq fois par seconde, il pose la même question : [curious] elle va là où tu braques ? [short pause] [serious] Tant que la réponse est oui... il ne fait rien."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : cette roue freinée sans toi… *regarde*.",
+      "vo": "[tense] Abonne-toi : cette roue freinée sans toi... regarde."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "L'arrière part. Le volant dit gauche. La voiture tourne trop. La réponse est *non*. Et la toupie… a commencé.",
+      "vo": "[urgent] L'arrière part. Le volant dit gauche. La voiture tourne trop. La réponse est non. [short pause] [ominous] Et la toupie... a commencé."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Il coupe les gaz. Puis il freine. Une roue : l'avant, à l'extérieur du virage. Freinée par ce seul coin, la voiture se redresse. Le nez revient. L'arrière suit. Tu es +droit+.",
+      "vo": "[urgent] Il coupe les gaz. Puis il freine. Une roue. L'avant. À l'extérieur du virage. Freinée par ce seul coin, la voiture se redresse. Le nez revient. L'arrière suit. [short pause] [relieved] Tu es droit."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : ta voiture ne freine pas d'abord pour ralentir. Elle freine *une* roue… pour +tourner+.",
+      "vo": "[low, grave voice] Voilà son secret : ta voiture ne freine pas d'abord pour ralentir. Elle freine une roue... pour tourner."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et l'élan ? Octobre [1997|mille neuf cent quatre-vingt-dix-sept], en Suède. Un journaliste teste une Mercedes neuve : l'évitement d'un élan. Elle *bascule*. Mercedes arrête les livraisons… et monte ce système en série. Depuis [2014|deux mille quatorze], toute voiture neuve en Europe l'a. En +commentaire+ : la tienne, elle est d'avant… ou d'après ?",
+      "vo": "[curious] Et l'élan ? [short pause] [serious] Octobre mille neuf cent quatre-vingt-dix-sept, en Suède. Un journaliste teste une Mercedes neuve : l'évitement d'un élan. Elle bascule. Mercedes arrête les livraisons... et monte ce système en série. Depuis deux mille quatorze, toute voiture neuve en Europe l'a. [short pause] [curious] En commentaire : la tienne, elle est d'avant... ou d'après ?"
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : seul sur la route, c'est lui qui t'évite le *fossé*.",
+      "vo": "[firm, matter-of-fact] Like : [short pause] seul sur la route, c'est lui qui t'évite le fossé."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : à choisir.",
+      "vo": "[serious] Prochain dossier : à choisir."
+    },
+    {
+      "id": "boucle",
+      "text": "Et tout recommence avec…",
+      "vo": "[calm] Et tout recommence avec,"
+    }
+  ],
+  "cues": {
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:freine-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:tourner",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:recommence"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
