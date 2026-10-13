@@ -1,4 +1,4 @@
-# Dossier de faits — 020 La veille automatique du TGV (VACMA, « pédale de l'homme mort »)
+# Dossier de faits — 021 La veille automatique du TGV (VACMA, « pédale de l'homme mort »)
 
 Recherche du 2026-10-09. Format : fait — valeur — phrase de la source — URL — niveau (A primaire lu · B secondaire sérieux · C faible).
 Budget : ≈ 26 requêtes sur 30 (recherches + pages + téléchargements). Pages en 403/404 ou illisibles : franco.wiki (404), Latts-T2C (bloqué par un anti-robot). Les PDF de l'EPSF et du BEA-TT ont été extraits en local (pdftotext). « Résumé de recherche, non lu » = vu seulement dans le résumé du moteur.
