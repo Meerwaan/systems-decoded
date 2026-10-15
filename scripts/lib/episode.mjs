@@ -195,6 +195,8 @@ export function schedule(ep) {
     }
     beats.push({
       id: beat.id,
+      ...(beat.chap ? { chap: beat.chap } : {}),
+      ...(beat.midroll ? { midroll: true } : {}),
       start: round(words[0].s),
       end: round(words.at(-1).e),
       words: beat.tokens.map((tok, k) => ({

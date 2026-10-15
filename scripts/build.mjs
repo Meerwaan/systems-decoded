@@ -40,6 +40,7 @@ export async function build(dir, { quiet = false } = {}) {
   // 2. kit assets
   copyDir(path.join(KIT, "fonts"), path.join(gen, "fonts"));
   fs.copyFileSync(path.join(KIT, "brand.css"), path.join(gen, "brand.css"));
+  fs.copyFileSync(path.join(KIT, "long.css"), path.join(gen, "long.css")); // the 16:9 layer of the long format
   fs.copyFileSync(path.join(ROOT, "node_modules", "gsap", "dist", "gsap.min.js"), path.join(gen, "gsap.min.js"));
 
   // 3. bundle (three + kit + episode code → one classic script, no network at render time)
