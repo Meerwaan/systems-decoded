@@ -15,6 +15,7 @@
 // the film gives a `ride` — the travel of what it follows.
 import { makeTiming } from "./timing.js";
 import { buildCaptions, buildHook, setAct, brandHud } from "./overlay.js";
+import { buildChapters, buildKeywords } from "./long.js";
 
 export const DEG = Math.PI / 180;
 export const clamp01 = (x) => Math.min(1, Math.max(0, x));
@@ -170,10 +171,20 @@ export function createDirector({ EP = window.__EPISODE, stage, first, pose0, rid
    * Once every act is written: the text on screen (`hook`: the beats shown as cards, the captions take
    * the rest), the header's verdict, and the shots laid on the timeline in order.
    */
-  const commit = ({ hook = ["accroche", "promesse"], captions = {} } = {}) => {
+  const quietWins = [];
+  /** Long format: from `from` to `to`, no keyword comes on the picture (a chapter shows something better there). */
+  const quiet = (from, to) => quietWins.push([from, to]);
+  const commit = ({ hook = ["accroche", "promesse"], captions = {}, long = null } = {}) => {
     brandHud(tl, { decodedAt, resetAt });
-    buildHook($("hook"), EP, tl, { beats: hook, loopAt: handOver });
-    buildCaptions($("captions"), EP, tl, { skip: hook, lastEnd: handOver, ...captions });
+    if (long) {
+      // the long format: chapter cards and keywords, no captions (the words go in the .srt)
+      const chapters = buildChapters($("chapters"), EP, tl, long.chapters);
+      const quiet = [...chapters.filter((c) => c.n > 0).map((c) => [c.at, c.at + (long.chapters?.hold ?? 2.6)]), ...(long.quiet ?? []), ...quietWins];
+      buildKeywords($("keywords"), EP, tl, { ...long.keywords, quiet });
+    } else {
+      buildHook($("hook"), EP, tl, { beats: hook, loopAt: handOver });
+      buildCaptions($("captions"), EP, tl, { skip: hook, lastEnd: handOver, ...captions });
+    }
     shots.sort((a, b) => a.at - b.at);
     shots.forEach((s, i) => {
       if (s.cut) return tw.set(C, s.pose, s.at);
@@ -203,7 +214,7 @@ export function createDirector({ EP = window.__EPISODE, stage, first, pose0, rid
 
   return {
     EP, T, END, tEnd, handOver, S, W, C, tl, tw, first, pose0, riding,
-    at: T.at, st, now, shot, cut, jolt, show, hide, blip, panel, follow, chip, readout, verdict, loop, commit,
+    at: T.at, st, now, shot, cut, jolt, show, hide, blip, panel, follow, chip, readout, verdict, loop, quiet, commit,
     /** { name: "beat:mot" } → { name: seconds } */
     times: (refs) => Object.fromEntries(Object.entries(refs).map(([k, ref]) => [k, T.at(ref)])),
   };
