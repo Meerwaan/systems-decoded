@@ -8,33 +8,28 @@
   "voice": {
     "name": "Eric",
     "voiceId": "9osbeK6KzhDRV0yX4rTq",
-    "model": "eleven_v4_turbo",
+    "model": "eleven_v4",
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21,
-    "acts": {
-      "menace": {
-        "stability": 0.2
-      }
-    }
+    "seed": 21
   },
   "cover": {
-    "at": "eclate$",
+    "at": "eclate:générateur+0.4",
     "title": [
       "Ta ceinture",
       "de sécurité"
     ],
     "cam": {
       "tx": 0,
-      "ty": 8,
-      "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
-      "shift": -430,
-      "side": 0,
+      "ty": 11,
+      "tz": 4.5,
+      "d": 175,
+      "az": -58,
+      "el": 28,
       "fov": 28,
+      "shift": -640,
+      "side": 40,
       "roll": 0
     }
   },
@@ -47,7 +42,28 @@
       "#voiture",
       "#securiteroutiere"
     ],
-    "pinned": "Demandé en commentaire : le prétensionneur de ceinture. Il ne sert qu'une fois. Ta voiture… elle a déjà tapé ?"
+    "pinned": "Demandé en commentaire : le prétensionneur de ceinture. Il ne sert qu'une fois. Ta voiture… elle a déjà tapé ?",
+    "instagram": {
+      "caption": "Choc frontal. Tu n'as pas encore bougé… et ta ceinture se resserre, seule.\n\nDossier 019 : le prétensionneur de ceinture de sécurité, demandé en commentaire. Une charge explosive, une turbine, une vingtaine de millièmes de seconde — et il ne sert qu'une fois.\n\nTa voiture… elle a déjà tapé ?",
+      "hashtags": [
+        "#ceinturedesecurite",
+        "#pretensionneur",
+        "#securiteroutiere",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Prétensionneur de ceinture de sécurité : la charge explosive qui la retend au choc",
+      "description": "Dossier 019 — le prétensionneur de ceinture de sécurité, ouvert : l'enrouleur, la charge, la turbine, et ce qui se passe dans la sangle en une vingtaine de millièmes de seconde, avant même que ton corps arrive.\n\nTa voiture… elle a déjà tapé ?",
+      "hashtags": [
+        "#shorts",
+        "#ceinturedesecurite",
+        "#pretensionneur",
+        "#securiteroutiere",
+        "#science"
+      ]
+    }
   },
   "sources": [
     "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/019-pretensionneur.md ; contre-vérification phrase par phrase : docs/faits/019-contre-verification.md",
@@ -56,22 +72,22 @@
     "Le limiteur d'effort : souvent une barre de torsion qui se tord à l'effort limite et laisse sortir de la sangle ; 3 à 4 kN aujourd'hui (≈ 300 à 400 kg), ≈ 5 kN dans les années 1990 (NHTSA, IRCOBI). Il limite la charge sur le thorax : 3 à 4 kN est son seuil, pas un seuil de fracture (aucun n'est établi). Le prétensionneur, lui, retire le mou (≈ 2 kN) : c'est la ceinture, puis le limiteur, qui retiennent. Il existe aussi des prétensionneurs électriques réversibles, non montrés ici.",
     "Usage unique : « conçus pour fonctionner une seule fois », la ceinture se remplace après un déclenchement (notice Kia). Premier prétensionneur de série : Mercedes Classe S, 1981 ; premier limiteur : Volvo 850, 1995.",
     "Le blocage du quotidien n'a rien à voir : dans l'enrouleur, une masse (pendule ou bille) pousse un cliquet contre une roue à rochet quand la voiture décélère ; il se réarme (un second blocage réagit à la sangle tirée d'un coup). Simplifications assumées : la longueur de sangle reprise n'est pas chiffrée (« quelques centimètres », aucune valeur de série trouvée) ; « trois cents, quatre cents kilos » traduit 3 à 4 kN ; le choc est un scénario.",
-    "Sujet demandé en commentaire sous le 015 et promis par Merwan. Prochain dossier (020) : la boule de la tour Taipei 101 — docs/faits/020-taipei-101.md."
+    "Sujet demandé en commentaire sous le 015 et promis par Merwan. Prochain dossier (020) : la boule de la tour Taipei 101 — docs/faits/020-taipei-101.md.",
+    "Image : le chrono en millièmes de seconde n'est sourcé que jusqu'à « une vingtaine » (la sangle tendue) ; au-delà il est illustratif. Le mou de la sangle, ce qu'elle reprend et ce qu'elle rend sont exagérés pour se voir.",
+    "Image : l'enrouleur est un type à turbine parmi d'autres, dessiné la sangle côté porte ; la torsion de la barre est dessinée environ cinq fois l'angle réel (à l'angle vrai, elle ne se verrait pas).",
+    "Image : la scène de l'acte 1 « si rien ne la retendait » est un scénario, pas une mesure."
   ],
   "beats": [
     {
       "id": "accroche",
       "text": "Choc frontal. Tu n'as pas encore bougé… et ta ceinture se *resserre*, seule.",
-      "vo": "[tense] Choc frontal. Tu n'as pas encore bougé... et ta ceinture se resserre, seule.",
-      "voAlt": [
-        "[firm, matter-of-fact] Choc frontal. Tu n'as pas encore bougé... et ta ceinture se resserre, seule."
-      ]
+      "vo": "[tense] Choc frontal. Tu n'as pas encore bougé... et ta ceinture se resserre, seule."
     },
     {
       "id": "promesse",
       "hold": 0.3,
       "text": "Une charge explosive vient de partir, pour la +retendre+. Mais ça, elle ne le fera… qu'*une fois*.",
-      "vo": "[firm, matter-of-fact] Une charge explosive vient de partir, pour la retendre. [short pause] [serious] Mais ça, elle ne le fera... qu'une fois."
+      "vo": "[firm, matter-of-fact] Une charge explosive vient de partir, pour la retendre. [short pause] Mais ça, elle ne le fera... qu'une fois."
     },
     {
       "id": "scene",
@@ -94,7 +110,7 @@
     {
       "id": "repos",
       "text": "Au quotidien, tu freines fort : elle se bloque. Aucun explosif : un simple pendule. Mais bloquer ne reprend pas le mou. Pour ça, ici… une *explosion*.",
-      "vo": "[thoughtful] Au quotidien, tu freines fort : elle se bloque. Aucun explosif : un simple pendule. [short pause] [serious] Mais bloquer ne reprend pas le mou. Pour ça, ici... une explosion."
+      "vo": "[thoughtful] Au quotidien, tu freines fort : elle se bloque. Aucun explosif : un simple pendule. [short pause] Mais bloquer ne reprend pas le mou. Pour ça, ici... une explosion."
     },
     {
       "id": "seuil",
@@ -105,25 +121,25 @@
       "id": "zero",
       "hold": 0.2,
       "text": "Zéro. Le choc. Les capteurs de l'airbag donnent l'ordre. La charge part. Le gaz lance la turbine. La bobine tourne à l'envers. Une vingtaine de millièmes de seconde : la sangle est *tendue*. Et ton corps… arrive.",
-      "vo": "[urgent] Zéro. Le choc. Les capteurs de l'airbag donnent l'ordre. La charge part. Le gaz lance la turbine. La bobine tourne à l'envers. Une vingtaine de millièmes de seconde. La sangle est tendue. [short pause] [ominous] Et ton corps... arrive."
+      "vo": "[tense] Zéro. Le choc. Les capteurs de l'airbag donnent l'ordre. La charge part. Le gaz lance la turbine. La bobine tourne à l'envers. Une vingtaine de millièmes de seconde. La sangle est tendue. [short pause] Et ton corps... arrive."
     },
     {
       "id": "reponse",
       "hold": 0.3,
       "text": "Il s'écrase dans la sangle. Trois cents kilos. Quatre cents. Sur ta poitrine. Alors la barre se tord. La sangle repart. Exprès. Et ta poitrine encaisse… +moins+.",
-      "vo": "[urgent] Il s'écrase dans la sangle. Trois cents kilos. Quatre cents. Sur ta poitrine. Alors la barre se tord. La sangle repart. Exprès. [short pause] [relieved] Et ta poitrine encaisse... moins."
+      "vo": "[tense] Il s'écrase dans la sangle. Trois cents kilos. Quatre cents. Sur ta poitrine. Alors la barre se tord. La sangle repart. Exprès. [short pause] Et ta poitrine encaisse... moins."
     },
     {
       "id": "chute",
       "hold": 0.4,
       "text": "Voilà son secret : ta ceinture ne fait pas que te retenir. Elle se resserre avant que tu bouges… puis elle *cède*. Exprès.",
-      "vo": "[low, grave voice] Voilà son secret : ta ceinture ne fait pas que te retenir. Elle se resserre avant que tu bouges... puis elle cède. Exprès."
+      "vo": "[firm, matter-of-fact] Voilà son secret : ta ceinture ne fait pas que te retenir. Elle se resserre avant que tu bouges... puis elle cède. Exprès."
     },
     {
       "id": "comment",
       "hold": 0.3,
       "text": "Une seule fois ? Oui. Une fois la charge partie, même sans airbag, la ceinture se remplace. En +commentaire+ : ta voiture… elle a déjà tapé ?",
-      "vo": "[curious] Une seule fois ? [short pause] [serious] Oui. Une fois la charge partie, même sans airbag, la ceinture se remplace. [short pause] [curious] En commentaire : ta voiture... elle a déjà tapé ?"
+      "vo": "[curious] Une seule fois ? [short pause] Oui. Une fois la charge partie, même sans airbag, la ceinture se remplace. [short pause] En commentaire : ta voiture... elle a déjà tapé ?"
     },
     {
       "id": "like",
@@ -143,13 +159,90 @@
     }
   ],
   "cues": {
+    "still": "accroche:bougé-0.1",
+    "tight": "accroche:resserre-0.15",
+    "alone": "accroche:seule-0.1",
+    "blast": "promesse:explosive-0.1",
+    "retend": "promesse:retendre-0.1",
+    "butonce": "promesse:Mais-0.14",
+    "once": "promesse:qu'une-0.1",
+    "toscene": "scene-0.14",
+    "stops": "scene:s'arrête-0.1",
+    "mur": "scene:mur-0.1",
+    "goeson": "scene:continue-0.1",
+    "loose": "scene:mou-0.1",
+    "manteau": "scene:manteau-0.1",
+    "posture": "scene:position-0.1",
+    "fewcm": "scene:centimètres-0.1",
+    "toomuch": "scene:trop-0.1",
+    "back": "scene$+0.1",
+    "tosystem": "ouvre-0.14",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "p1": "eclate:enrouleur-0.15",
+    "p2": "eclate:bobine-0.15",
+    "p3": "eclate:charge-0.15",
+    "gen": "eclate:générateur-0.1",
+    "p4": "eclate:turbine-0.15",
+    "centre": "eclate:centre-0.1",
+    "p5": "eclate:barre-0.15",
+    "torepos": "repos-0.14",
+    "brakes": "repos:freines-0.1",
+    "locks": "repos:bloque-0.1",
+    "noboom": "repos:explosif-0.1",
+    "pendule": "repos:pendule-0.1",
+    "butlock": "repos:bloquer-0.1",
+    "nottaken": "repos:reprend-0.1",
+    "here": "repos:ici-0.1",
+    "boom": "repos:explosion-0.1",
+    "toseuil": "seuil-0.1",
+    "watch": "seuil:regarde-0.1",
     "tozero": "zero-0.12",
+    "shock": "zero:choc-0.1",
+    "sensors": "zero:capteurs-0.12",
+    "ordre": "zero:l'ordre-0.1",
+    "tocharge": "zero:charge-0.3",
     "trigger": "zero:charge-0.05",
+    "gas": "zero:gaz-0.1",
+    "spin": "zero:turbine-0.1",
+    "turns": "zero:bobine-0.1",
+    "backward": "zero:l'envers-0.1",
+    "twenty": "zero:vingtaine-0.1",
+    "taut": "zero:tendue-0.1",
+    "tobody": "zero:corps-0.45",
+    "arrives": "zero:arrive-0.1",
+    "toreponse": "reponse-0.12",
+    "crushes": "reponse:s'écrase-0.1",
+    "k300": "reponse:Trois-0.1",
+    "k400": "reponse:Quatre-0.1",
+    "onchest": "reponse:poitrine-0.1",
+    "tobar": "reponse:Alors-0.12",
+    "twists": "reponse:tord-0.1",
+    "payout": "reponse:repart-0.1",
+    "onpurpose": "reponse:Exprès-0.1",
+    "eases": "reponse:poitrine#2-0.1",
+    "less": "reponse:moins-0.1",
     "toverdict": "chute-0.12",
+    "secret": "chute:secret-0.1",
+    "notonly": "chute:retenir-0.1",
+    "before": "chute:resserre-0.1",
     "verdict": "chute:cède",
+    "purpose": "chute:Exprès-0.1",
     "tocta": "comment-0.12",
+    "onlyonce": "comment:seule-0.1",
+    "yes": "comment:Oui-0.1",
+    "spent": "comment:partie-0.1",
+    "noairbag": "comment:airbag-0.1",
+    "replace": "comment:remplace-0.1",
+    "ask": "comment:commentaire-0.3",
+    "answer": "comment:tapé",
+    "tolike": "like-0.12",
+    "rearseat": "like:banquette-0.1",
+    "unbelted": "like:s'attache-0.1",
+    "toabo": "abo-0.1",
+    "next": "abo:Prochain-0.1",
+    "ball": "abo:boule-0.1",
+    "hung": "abo:suspendue-0.1",
     "toloop": "boucle-0.12",
     "rewind": "boucle:attend"
   },
@@ -161,10 +254,10 @@
       "curve": [
         [
           0,
-          0.8
+          0.85
         ],
         [
-          "explode",
+          "tosystem",
           0.5
         ],
         [
@@ -174,6 +267,10 @@
         [
           "trigger",
           1
+        ],
+        [
+          "less",
+          0.5
         ],
         [
           "toverdict",
@@ -192,8 +289,26 @@
     {
       "type": "impact",
       "at": 0.03,
+      "gain": -13,
+      "size": 1.3
+    },
+    {
+      "type": "blip",
+      "at": "tight",
+      "gain": -17,
+      "pitch": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "stops",
       "gain": -14,
-      "size": 1.2
+      "size": 1.1
+    },
+    {
+      "type": "blip",
+      "at": "toomuch",
+      "gain": -18,
+      "pitch": 0.6
     },
     {
       "type": "riser",
@@ -208,8 +323,19 @@
       "size": 0.8
     },
     {
+      "type": "clack",
+      "at": "locks",
+      "gain": -11
+    },
+    {
+      "type": "riser",
+      "to": "shock",
+      "dur": 1,
+      "gain": -22
+    },
+    {
       "type": "impact",
-      "at": "tozero",
+      "at": "shock",
       "gain": -12,
       "size": 1.2
     },
@@ -218,6 +344,36 @@
       "at": "trigger",
       "gain": -10,
       "size": 1.4
+    },
+    {
+      "type": "hiss",
+      "from": "gas",
+      "to": "taut",
+      "gain": -24,
+      "tone": 1
+    },
+    {
+      "type": "blip",
+      "at": "taut",
+      "gain": -16,
+      "pitch": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "crushes",
+      "gain": -11,
+      "size": 1.4
+    },
+    {
+      "type": "clack",
+      "at": "twists",
+      "gain": -10
+    },
+    {
+      "type": "blip",
+      "at": "less",
+      "gain": -16,
+      "pitch": 0.7
     },
     {
       "type": "blip",
