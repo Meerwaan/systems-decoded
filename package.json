@@ -24,7 +24,8 @@
     "look": "node scripts/sd.mjs look",
     "chrono": "node scripts/sd.mjs chrono",
     "metrics": "node scripts/sd.mjs metrics",
-    "social": "node scripts/sd.mjs social"
+    "social": "node scripts/sd.mjs social",
+    "srt": "node scripts/sd.mjs srt"
   },
   "repository": {
     "type": "git",
