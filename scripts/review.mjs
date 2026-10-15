@@ -8,6 +8,7 @@ import { ROOT } from "./lib/env.mjs";
 import { launchChrome } from "./lib/chrome.mjs";
 import { hyperframes } from "./lib/hf.mjs";
 import { build } from "./build.mjs";
+import { frameOf } from "./lib/frame.mjs";
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
@@ -18,6 +19,11 @@ export const ZONES = [[0, 0, 53, 1920], [1027, 0, 53, 1920], [53, 0, 974, 205], 
 
 export async function review(dir, { cols = 8, only, every, zones = true } = {}) {
   const { ep, sched } = await build(dir, { quiet: true });
+  const F = frameOf(dir);
+  if (F.long) zones = false;
+  if (F.long && cols === 8) cols = 5;
+  const IW = F.long ? 384 : 270;
+  const IH = Math.round(IW * (F.h / F.w));
   const said = (t) => {
     const beat = sched.beats.find((b) => t >= b.start - 0.05 && t <= b.end + 0.05);
     if (!beat) return "";
@@ -51,10 +57,10 @@ export async function review(dir, { cols = 8, only, every, zones = true } = {}) 
     )
     .join("");
   const html = `<!doctype html><meta charset="utf-8"><style>
-    body { margin: 0; padding: 28px; background: #070a0c; color: #e9e4d8; font: 500 15px/1.25 "Segoe UI", system-ui, sans-serif; width: ${cols * 286 + 56}px; box-sizing: border-box; }
+    body { margin: 0; padding: 28px; background: #070a0c; color: #e9e4d8; font: 500 15px/1.25 "Segoe UI", system-ui, sans-serif; width: ${cols * (IW + 16) + 56}px; box-sizing: border-box; }
     h1 { font-size: 26px; margin: 0 0 20px; letter-spacing: 0.04em; } h1 small { font-weight: 400; opacity: 0.6; font-size: 17px; margin-left: 14px; }
-    main { display: grid; grid-template-columns: repeat(${cols}, 270px); gap: 16px; }
-    figure { margin: 0; } img { display: block; width: 270px; height: 480px; border-radius: 6px; outline: 1px solid #1c2428; }
+    main { display: grid; grid-template-columns: repeat(${cols}, ${IW}px); gap: 16px; }
+    figure { margin: 0; } img { display: block; width: ${IW}px; height: ${IH}px; border-radius: 6px; outline: 1px solid #1c2428; }
     figure.cue img { outline-color: #5cffb0; } figure.edge img { outline-color: #ff5b2e; }
     figure > div { position: relative; }
     /* what TikTok covers on a tall phone (¼ scale): side crops, search bar, buttons, name and caption */
@@ -71,7 +77,7 @@ export async function review(dir, { cols = 8, only, every, zones = true } = {}) 
   const browser = await launchChrome(["--allow-file-access-from-files"]);
   try {
     const page = await browser.newPage();
-    await page.setViewport({ width: cols * 286 + 56, height: 900, deviceScaleFactor: 1 });
+    await page.setViewport({ width: cols * (IW + 16) + 56, height: 900, deviceScaleFactor: 1 });
     await page.goto(pathToFileURL(sheet).href, { waitUntil: "load" });
     await page.screenshot({ path: out, fullPage: true, type: "jpeg", quality: 86 });
   } finally {

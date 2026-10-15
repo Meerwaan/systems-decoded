@@ -12,6 +12,7 @@ import { pathToFileURL } from "node:url";
 import { ROOT } from "./lib/env.mjs";
 import { launchChrome } from "./lib/chrome.mjs";
 import { build } from "./build.mjs";
+import { frameOf } from "./lib/frame.mjs";
 import { resolveMoment } from "../kit/lib/ref.mjs";
 import { ZONES } from "./review.mjs";
 
@@ -33,6 +34,10 @@ const drawnBy = (page) =>
 /** `shots`: [{ at, pose?, state?, label? }] · `width`: px of one frame on the sheet · `bare`: the 3D alone, no text over it · `cpu`: draw in software, like the render. */
 export async function look(dir, { shots, cols = 4, width = 405, zones = true, bare = false, cpu = false, out } = {}) {
   const { sched } = await build(dir, { quiet: true });
+  const F = frameOf(dir);
+  if (F.long) zones = false; // TikTok's zones mean nothing on a 16:9 frame
+  if (F.long && width === 405) width = 640;
+  if (F.long && cols === 4) cols = 3;
   const list = shots.map((s) => ({ ...s, t: Math.min(sched.duration - 0.01, Math.max(0, resolveMoment(sched.beats, sched.cues, s.at))) }));
   // its own folder: two looks at once (two episodes, or two people at work on the kit) never share their frames
   const folder = fs.mkdtempSync(path.join(os.tmpdir(), "sd-look-"));
@@ -49,7 +54,7 @@ export async function look(dir, { shots, cols = 4, width = 405, zones = true, ba
   }
   try {
     const page = await browser.newPage();
-    await page.setViewport({ width: 1080, height: 1920, deviceScaleFactor: 1 });
+    await page.setViewport({ width: F.w, height: F.h, deviceScaleFactor: 1 });
     // the film expects the HyperFrames runtime to have created this registry
     await page.evaluateOnNewDocument(() => {
       window.__timelines = {};
@@ -75,7 +80,7 @@ export async function look(dir, { shots, cols = 4, width = 405, zones = true, ba
       );
       if (errors.length) throw new Error(`Erreur à ${s.t} s: ${errors[0]}`);
       s.file = path.join(folder, `${String(i).padStart(2, "0")}.jpg`);
-      await page.screenshot({ path: s.file, type: "jpeg", quality: 90, clip: { x: 0, y: 0, width: 1080, height: 1920 } });
+      await page.screenshot({ path: s.file, type: "jpeg", quality: 90, clip: { x: 0, y: 0, width: F.w, height: F.h } });
     }
 
     // the zones are drawn for a frame 270 px wide (the contact sheet): one scaled layer puts them on ours
@@ -86,7 +91,7 @@ export async function look(dir, { shots, cols = 4, width = 405, zones = true, ba
     const html = `<!doctype html><meta charset="utf-8"><style>
       body { margin: 0; padding: 16px; background: #070a0c; color: #e9e4d8; font: 500 15px/1.25 "Segoe UI", system-ui, sans-serif; width: ${cols * (width + 12) + 32}px; box-sizing: border-box; }
       main { display: grid; grid-template-columns: repeat(${cols}, ${width}px); gap: 12px; }
-      figure { margin: 0; } img { display: block; width: ${width}px; height: ${width * (1920 / 1080)}px; outline: 1px solid #1c2428; }
+      figure { margin: 0; } img { display: block; width: ${width}px; height: ${Math.round(width * (F.h / F.w))}px; outline: 1px solid #1c2428; }
       figure > div { position: relative; overflow: hidden; }
       .zones { position: absolute; left: 0; top: 0; width: 270px; height: 480px; transform-origin: 0 0; transform: scale(${(width / 270).toFixed(4)}); }
       .zones i { position: absolute; background: rgba(255, 91, 46, 0.14); outline: 1px dashed rgba(255, 91, 46, 0.6); }
