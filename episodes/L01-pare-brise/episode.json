@@ -1,0 +1,758 @@
+{
+  "id": "L01",
+  "slug": "pare-brise",
+  "title": "Pare-brise",
+  "format": "long",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "parts": [
+      "ouvre",
+      "four",
+      "etain",
+      "etenderie",
+      "forme",
+      "bombage",
+      "salle",
+      "autoclave",
+      "route",
+      "trempe",
+      "pret",
+      "recap"
+    ]
+  },
+  "post": {
+    "caption": "Comment c'est fait : ton pare-brise, du sable jusqu'au test où on le frappe exprès. Et la vitre que tu dois viser le jour où il faut sortir de ta voiture.",
+    "hashtags": [
+      "#commentcestfait",
+      "#parebrise",
+      "#fabrication",
+      "#securiteroutiere",
+      "#systemedecode"
+    ],
+    "pinned": "Le coin de ta vitre conducteur : il est écrit quoi ? Trempé, tu peux la casser pour sortir. Feuilleté, vise une autre vitre.",
+    "youtube": {
+      "title": "Moins d'1 mm entre ta tête et la route : comment on fabrique ton pare-brise",
+      "titleAlts": [
+        "Ton pare-brise DOIT casser pour te sauver la vie : voici pourquoi on le frappe exprès",
+        "On lâche une tête de 10 kg sur ton pare-brise : il doit casser, mais rien ne doit passer"
+      ],
+      "description": "Ta tête part dans le pare-brise. Il casse… exactement comme prévu. Comment c'est fait : du sable fondu à 1 500 °C jusqu'au test où on lâche une tête de 10 kg dessus. Et la vitre de ta voiture qu'il faut viser, le jour où tu dois en sortir.\n\nChapitres\n00:00 Introduction\n00:26 On l'ouvre\n00:47 Le four\n01:14 Le bain d'étain\n02:13 L'étenderie\n02:39 Découpe et bande noire\n03:10 Le bombage\n03:35 La salle blanche\n04:56 L'autoclave\n05:25 Sur la route\n05:45 Le verre trempé\n06:40 Le test\n07:48 Ce qu'il faut retenir\n\nSources : brochure Saint-Gobain Sekurit (étapes de fabrication) · Pilkington (verre flotté) · règlement ONU n° 43 (essais d'homologation) · Société chimique de France (Édouard Bénédictus) · AAA, 2019 (brise-vitres).\n\nFabriqué pour te sauver : comment on fabrique les objets qui te protègent. Abonne-toi : on se retrouve très vite, dans une autre usine.\n\nLe coin de ta vitre conducteur : il est écrit quoi ?",
+      "hashtags": [
+        "#commentcestfait",
+        "#parebrise",
+        "#voiture",
+        "#securiteroutiere",
+        "#fabrication"
+      ],
+      "pinned": "Le coin de ta vitre conducteur : il est écrit quoi ? Trempé, c'est elle qu'on casse pour sortir. Feuilleté : vise une autre vitre.",
+      "thumbnail": "16:9, fond noir. Un pare-brise de trois quarts, plein cadre ; à l'impact, la tête factice de verre, et la toile d'araignée qui s'étend en traits clairs ; à travers les fissures, le film luit en veille (c'est lui qui tient). En grand, Barlow Condensed : IL DOIT / CASSER (« CASSER » en signal). En petit, en haut à gauche : DOSSIER L01. Un seul objet, lisible à 160 px de large. Variante à tester : le ruban de verre orange sur l'étain, « DU SABLE ? ».",
+      "endScreen": "Les 15 dernières secondes (like → prochain dossier → boucle) laissent la moitié droite de l'image libre pour l'écran de fin : la vidéo suivante et le bouton S'abonner.",
+      "descriptionTemplate": "Ta tête part dans le pare-brise. Il casse… exactement comme prévu. Comment c'est fait : du sable fondu à 1 500 °C jusqu'au test où on lâche une tête de 10 kg dessus. Et la vitre de ta voiture qu'il faut viser, le jour où tu dois en sortir.\n\nChapitres\n__CHAPITRES__\n\nSources : brochure Saint-Gobain Sekurit (étapes de fabrication) · Pilkington (verre flotté) · règlement ONU n° 43 (essais d'homologation) · Société chimique de France (Édouard Bénédictus) · AAA, 2019 (brise-vitres).\n\nFabriqué pour te sauver : comment on fabrique les objets qui te protègent. Abonne-toi : on se retrouve très vite, dans une autre usine.\n\nLe coin de ta vitre conducteur : il est écrit quoi ?",
+      "chapters": [
+        "00:00 Introduction",
+        "00:26 On l'ouvre",
+        "00:47 Le four",
+        "01:14 Le bain d'étain",
+        "02:13 L'étenderie",
+        "02:39 Découpe et bande noire",
+        "03:10 Le bombage",
+        "03:35 La salle blanche",
+        "04:56 L'autoclave",
+        "05:25 Sur la route",
+        "05:45 Le verre trempé",
+        "06:40 Le test",
+        "07:48 Ce qu'il faut retenir"
+      ],
+      "titleNote": "16/10, Merwan : plus choc, « vrai titre YouTube », mais fidèle. Vrai mot pour mot : le film PVB (moins d'un millimètre) entre les deux verres t'empêche de passer au travers (accroche du film) ; à l'essai R43, la tête factice de 10 kg est lâchée d'1,50 m et le pare-brise doit casser pour réussir. Puis, même jour : « un peu plus long, là c'est vraiment court » — l'accroche en tête (ce qui reste visible si le téléphone coupe), puis la promesse de fabrication avec le mot cherché ; 75 à 88 caractères (YouTube en accepte 100)."
+    }
+  },
+  "sources": [
+    "Faits : docs/faits/L01-pare-brise.md (niveaux A/B/C). Contre-vérification : docs/faits/L01-contre-verification.md.",
+    "Étapes d'usine (découpe, sérigraphie, bombage par gravité à plus de 600 °C sur un même outillage, PVB inséré en salle blanche, autoclave à 140 °C, inspection de tous les vitrages) : brochure Saint-Gobain Sekurit, « La fabrication du vitrage automobile » (A).",
+    "Verre flotté : Pilkington (invention 1952, ≈ 370 lignes, ≈ 6 000 km par an et par ligne), Wikipedia Float glass (four ≈ 1 500 °C, > 1 200 t, bain ≈ 1 100 → 600 °C, 3-4 m de large, étenderie ≈ 100 m) (A/B).",
+    "Histoire : note de J.-M. Michel, Société chimique de France (récit de Bénédictus de 1930 : flacon tombé en novembre 1903 ; brevet du 25 novembre 1909 ; Société du Verre Triplex, 7 juillet 1911 ; celluloïd, acétate, PVB) (A/B). L'anecdote de l'accident de voiture de 1909 n'est pas dite : non attestée. English Triplex (1912) s'allie à Pilkington en 1929 (coentreprise), majorité en 1965 : « rachetée en 1925 » est faux. Loi britannique : « années trente » (1930, 1932 ou 1937 selon les sources, aucune lue à la source).",
+    "Trempé : Wikipedia Tempered glass (≈ 620 °C, ≈ 4 fois plus résistant, fragments ; sulfure de nickel) (B) ; R43 : visibilité résiduelle du pare-brise trempé, symboles I / II, marque E + pays (A).",
+    "Essais d'homologation, règlement ONU n° 43, annexes (texte consolidé, copie de EUR-Lex 42014X0212(01)) : bille de 2 260 g à 4 m, ne doit pas traverser ; tête factice de 10 kg à 1,5 m, critère d'aspect (fissures circulaires nombreuses autour de l'impact, les plus proches à 80 mm au plus) ; pare-brise trempé : 40 à 350 fragments par carré de 5 × 5 cm (dit « au moins quarante » sur un verre trempé) ; transmission lumineuse ≥ 70 %, distorsion optique et image secondaire limitées (A-/B). « Chaque fissure prend un peu du choc » est une lecture du critère, pas une phrase du règlement. Bille de 227 g : ≈ 9 m à +40 °C, 8,5 m à −20 °C, éclats ≤ 12 à 25 g selon l'épaisseur.",
+    "Vitres latérales feuilletées : AAA, 2019 (≈ 1 véhicule sur 3 du millésime 2018 aux États-Unis ; aucun des 6 brise-vitres testés n'a cassé le feuilleté ; lire l'étiquette dans le coin de la vitre) (A).",
+    "Simplifications : la chaîne est montrée d'un seul tenant, alors que le verre flotté et le pare-brise sont faits dans deux usines ; l'en-tête affiche la température du verre, pas une durée (les durées d'usine ne sont pas publiées) ; le laboratoire de 1903 est une reconstitution."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "chap": "Introduction",
+      "text": "Ta tête part dans le pare-brise. Il *casse*… exactement comme prévu.",
+      "vo": "[tense] Ta tête part dans le pare-brise. Il casse... exactement comme prévu."
+    },
+    {
+      "id": "promesse",
+      "text": "Il est fait de *sable*. Et entre ses deux verres, un film de moins d'un millimètre va t'empêcher de passer +au travers+.",
+      "vo": "[firm, matter-of-fact] Il est fait de sable. Et entre ses deux verres, un film de moins d'un millimètre va t'empêcher de passer au travers."
+    },
+    {
+      "id": "curiosite",
+      "hold": 0.3,
+      "text": "Ce film, ta vitre de côté ne l'a peut-être *pas*. Et le jour où il faut sortir de la voiture… ça change tout.",
+      "vo": "[serious] Ce film, ta vitre de côté ne l'a peut-être pas. Et le jour où il faut sortir de la voiture... ça change tout."
+    },
+    {
+      "id": "defi",
+      "text": "On y reviendra. Car avant, il faut le fabriquer : du sable… jusqu'au jour où on lâche dessus une tête de dix kilos. Et pour réussir cet essai… il devra *casser*.",
+      "vo": "[curious] On y reviendra. Car avant, il faut le fabriquer : du sable... jusqu'au jour où on lâche dessus une tête de dix kilos. Et pour réussir cet essai... il devra casser.",
+      "hold": 1.2
+    },
+    {
+      "id": "ouvre",
+      "chap": "On l'ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "couches",
+      "text": "Un verre. Un +film+. Un deuxième verre. Autour, une bande noire. Et dans un coin, un petit tampon.",
+      "vo": "[conversational, curious] Un verre. Un film. Un deuxième verre. Autour, une bande noire. Et dans un coin, un petit tampon."
+    },
+    {
+      "id": "avant",
+      "text": "Avant tout ça, un pare-brise était une simple vitre. Dans un choc, elle pouvait se briser en *lames*… à hauteur de ton visage.",
+      "vo": "[serious] Avant tout ça, un pare-brise était une simple vitre. Dans un choc, elle pouvait se briser en lames... à hauteur de ton visage."
+    },
+    {
+      "id": "remonter",
+      "text": "Et pour fabriquer ces trois couches, tout commence au même endroit. Dans le sable.",
+      "vo": "[warm, conversational] Et pour fabriquer ces trois couches, tout commence au même endroit. Dans le sable.",
+      "hold": 1.2
+    },
+    {
+      "id": "four",
+      "chap": "Le four",
+      "text": "Du sable, pour la silice. De la soude, pour qu'il fonde plus bas. Du calcaire et de la dolomie, pour qu'il dure.",
+      "vo": "[curious] Du sable, pour la silice. De la soude, pour qu'il fonde plus bas. Du calcaire et de la dolomie, pour qu'il dure."
+    },
+    {
+      "id": "calcin",
+      "text": "Et du vieux verre, broyé : le calcin. Tout tombe dans un four, autour de [1500°C|mille cinq cents degrés].",
+      "vo": "[conversational, curious] Et du vieux verre, broyé : le calcin. Tout tombe dans un four, autour de mille cinq cents degrés."
+    },
+    {
+      "id": "fusion",
+      "text": "Dans un seul four, plus de [1200|mille deux cents] tonnes de verre en fusion. Une pâte *orange*, qui ne s'arrête jamais de couler.",
+      "vo": "[warm, conversational] Dans un seul four, plus de mille deux cents tonnes de verre en fusion. Une pâte orange, qui ne s'arrête jamais de couler."
+    },
+    {
+      "id": "plat",
+      "hold": 1.2,
+      "text": "Le problème : en faire une plaque parfaitement *plate*. Pendant longtemps, on coulait le verre… puis on le polissait. Des deux côtés.",
+      "vo": "[curious] Le problème : en faire une plaque parfaitement plate. Pendant longtemps, on coulait le verre... puis on le polissait. Des deux côtés."
+    },
+    {
+      "id": "etain",
+      "chap": "Le bain d'étain",
+      "text": "En [1952|mille neuf cent cinquante-deux], un Britannique, Alastair Pilkington, a une idée étrange : verser le verre… sur du métal liquide. De l'+étain+.",
+      "vo": "[conversational, curious] En mille neuf cent cinquante-deux, un Britannique, Alastair Pilkington, a une idée étrange : verser le verre... sur du métal liquide. De l'étain."
+    },
+    {
+      "id": "essais",
+      "text": "Il lui faut des années d'essais, dans son usine anglaise. Et le procédé ne rapporte vraiment qu'en [1960|mille neuf cent soixante].",
+      "vo": "[amused] Il lui faut des années d'essais, dans son usine anglaise. Et le procédé ne rapporte vraiment qu'en mille neuf cent soixante."
+    },
+    {
+      "id": "flotte",
+      "text": "L'étain est plus lourd que le verre. Alors le verre flotte. Il s'étale tout seul, et sa surface devient plane… sans que personne n'y touche.",
+      "vo": "[warm, conversational] L'étain est plus lourd que le verre. Alors le verre flotte. Il s'étale tout seul, et sa surface devient plane... sans que personne n'y touche."
+    },
+    {
+      "id": "pourquoi",
+      "text": "Et pourquoi l'étain ? Il reste liquide sur toute la plage où le verre durcit. Et il ne bout pas : il ne s'évapore presque pas.",
+      "vo": "[curious] Et pourquoi l'étain ? Il reste liquide sur toute la plage où le verre durcit. Et il ne bout pas : il ne s'évapore presque pas."
+    },
+    {
+      "id": "ruban",
+      "text": "Un ruban de trois à quatre mètres de large glisse sur le bain. Il entre vers [1100°C|mille cent degrés]… et ressort vers [600°C|six cents], assez dur pour rouler.",
+      "vo": "[conversational, curious] Un ruban de trois à quatre mètres de large glisse sur le bain. Il entre vers mille cent degrés... et ressort vers six cents, assez dur pour rouler."
+    },
+    {
+      "id": "azote",
+      "text": "Au-dessus, un gaz d'azote et d'hydrogène, pour que l'étain ne s'oxyde pas. Et l'épaisseur ? C'est la vitesse : plus on tire vite, plus le verre est fin. De moins d'un demi-millimètre… à deux centimètres et demi.",
+      "vo": "[warm, conversational] Au-dessus, un gaz d'azote et d'hydrogène, pour que l'étain ne s'oxyde pas. Et l'épaisseur ? C'est la vitesse : plus on tire vite, plus le verre est fin. De moins d'un demi-millimètre... à deux centimètres et demi."
+    },
+    {
+      "id": "lignes",
+      "text": "On l'appelle le verre flotté. Environ [370|trois cent soixante-dix] lignes comme celle-ci tournent dans le monde.",
+      "vo": "[curious] On l'appelle le verre flotté. Environ trois cent soixante-dix lignes comme celle-ci tournent dans le monde."
+    },
+    {
+      "id": "lames",
+      "hold": 1.2,
+      "text": "Mais attention : ce verre-là ne protège encore de *rien*. S'il casse… il fait des lames.",
+      "vo": "[serious] Mais attention : ce verre-là ne protège encore de rien. S'il casse... il fait des lames.",
+      "midroll": true
+    },
+    {
+      "id": "etenderie",
+      "chap": "L'étenderie",
+      "text": "D'abord, il faut le refroidir. Trop vite, il garderait des *tensions* à l'intérieur, et il pourrait casser à la découpe.",
+      "vo": "[conversational, curious] D'abord, il faut le refroidir. Trop vite, il garderait des tensions à l'intérieur, et il pourrait casser à la découpe."
+    },
+    {
+      "id": "tunnel",
+      "text": "Alors on le laisse descendre lentement, dans un tunnel d'une centaine de mètres. Au bout, des machines le découpent.",
+      "vo": "[warm, conversational] Alors on le laisse descendre lentement, dans un tunnel d'une centaine de mètres. Au bout, des machines le découpent."
+    },
+    {
+      "id": "km",
+      "text": "Une seule ligne sort environ seize kilomètres de verre par jour. Six mille par an : autant que Paris-New York.",
+      "vo": "[curious] Une seule ligne sort environ seize kilomètres de verre par jour. Six mille par an : autant que Paris-New York.",
+      "hold": 1.2
+    },
+    {
+      "id": "plie",
+      "text": "Mais ce n'est encore qu'une vitre. Plate. Pour en faire ton pare-brise, il va falloir la découper… l'imprimer… et la plier.",
+      "vo": "[conversational, curious] Mais ce n'est encore qu'une vitre. Plate. Pour en faire ton pare-brise, il va falloir la découper... l'imprimer... et la plier."
+    },
+    {
+      "id": "forme",
+      "chap": "Découpe et bande noire",
+      "text": "Ton pare-brise commence ici : deux feuilles, découpées à sa forme. On adoucit les bords. On lave. On sèche.",
+      "vo": "[warm, conversational] Ton pare-brise commence ici : deux feuilles, découpées à sa forme. On adoucit les bords. On lave. On sèche."
+    },
+    {
+      "id": "bande",
+      "text": "Puis on imprime la bande noire, au bord. Ce n'est pas de la déco : ton pare-brise est *collé* à ta voiture. La bande cache le cordon de colle… et la protège du soleil.",
+      "vo": "[amused] Puis on imprime la bande noire, au bord. Ce n'est pas de la déco : ton pare-brise est collé à ta voiture. La bande cache le cordon de colle... et la protège du soleil."
+    },
+    {
+      "id": "argent",
+      "text": "Même procédé pour les fils de dégivrage : des lignes de pâte d'+argent+, imprimées sur le verre.",
+      "vo": "[curious] Même procédé pour les fils de dégivrage : des lignes de pâte d'argent, imprimées sur le verre."
+    },
+    {
+      "id": "tampon",
+      "text": "Et le tampon du coin ? Un E et un chiffre : le pays qui l'a homologué. E2, c'est la France. Un chiffre romain : [I|un], trempé. [II|deux], feuilleté.",
+      "vo": "[conversational, curious] Et le tampon du coin ? Un E et un chiffre : le pays qui l'a homologué. E2, c'est la France. Un chiffre romain : un, trempé. Deux, feuilleté.",
+      "hold": 1.2
+    },
+    {
+      "id": "bombage",
+      "chap": "Le bombage",
+      "text": "Maintenant, il faut le courber. On pose les deux feuilles l'une sur l'autre, sur le même moule. Et on chauffe, à plus de [600°C|six cents degrés].",
+      "vo": "[warm, conversational] Maintenant, il faut le courber. On pose les deux feuilles l'une sur l'autre, sur le même moule. Et on chauffe, à plus de six cents degrés."
+    },
+    {
+      "id": "gravite",
+      "text": "Le verre ramollit. Et il s'affaisse, tout seul, sous son propre poids.",
+      "vo": "[curious] Le verre ramollit. Et il s'affaisse, tout seul, sous son propre poids."
+    },
+    {
+      "id": "ensemble",
+      "hold": 0.2,
+      "text": "Courbées ensemble, les deux feuilles épousent exactement la même forme. Parce qu'entre elles… il faut glisser quelque chose.",
+      "vo": "[conversational, curious] Courbées ensemble, les deux feuilles épousent exactement la même forme. Parce qu'entre elles... il faut glisser quelque chose."
+    },
+    {
+      "id": "seuil",
+      "text": "Ce quelque chose, c'est lui qui va prendre le choc, tout à l'heure. Si tu veux voir ça… +abonne-toi+, on y arrive.",
+      "vo": "[conversational, curious] Ce quelque chose, c'est lui qui va prendre le choc, tout à l'heure. Si tu veux voir ça... abonne-toi, on y arrive.",
+      "hold": 1.2
+    },
+    {
+      "id": "salle",
+      "chap": "La salle blanche",
+      "text": "On entre en salle blanche. Air filtré, air sec. Entre les deux verres, on glisse le film : du [PVB|pé-vé-bé], un plastique souple qui colle au verre.",
+      "vo": "[warm, conversational] On entre en salle blanche. Air filtré, air sec. Entre les deux verres, on glisse le film : du pé-vé-bé, un plastique souple qui colle au verre."
+    },
+    {
+      "id": "humide",
+      "text": "Pourquoi sec ? Ce film boit l'humidité de l'air. Humide, il ferait des *bulles*.",
+      "vo": "[curious] Pourquoi sec ? Ce film boit l'humidité de l'air. Humide, il ferait des bulles."
+    },
+    {
+      "id": "flacon",
+      "text": "Ce film, on le doit à un Français. Chimiste, mais aussi peintre. Novembre [1903|mille neuf cent trois]. Édouard Bénédictus range son laboratoire. Un flacon lui échappe… et tombe.",
+      "vo": "[conversational, curious] Ce film, on le doit à un Français. Chimiste, mais aussi peintre. Novembre mille neuf cent trois. Édouard Bénédictus range son laboratoire. Un flacon lui échappe... et tombe."
+    },
+    {
+      "id": "etoile",
+      "text": "Il le ramasse. Le verre est étoilé de partout… mais il ne s'est pas *brisé*. Il tient d'un seul morceau.",
+      "vo": "[warm, conversational] Il le ramasse. Le verre est étoilé de partout... mais il ne s'est pas brisé. Il tient d'un seul morceau."
+    },
+    {
+      "id": "nitro",
+      "text": "Le flacon avait contenu une solution de nitrocellulose. En séchant, elle avait laissé un +film+ sur la paroi. Et ce film tenait les éclats.",
+      "vo": "[curious] Le flacon avait contenu une solution de nitrocellulose. En séchant, elle avait laissé un film sur la paroi. Et ce film tenait les éclats."
+    },
+    {
+      "id": "oubli",
+      "hold": 0.4,
+      "text": "Il colle une étiquette dessus. Le range. Et n'y prête plus attention… pendant six ans.",
+      "vo": "[conversational, curious] Il colle une étiquette dessus. Le range. Et n'y prête plus attention... pendant six ans.",
+      "midroll": true
+    },
+    {
+      "id": "brevet",
+      "text": "En [1909|mille neuf cent neuf], il dépose son brevet : du verre, du celluloïd, du verre. Deux ans plus tard naît la Société du Verre Triplex.",
+      "vo": "[warm, conversational] En mille neuf cent neuf, il dépose son brevet : du verre, du celluloïd, du verre. Deux ans plus tard naît la Société du Verre Triplex."
+    },
+    {
+      "id": "premier",
+      "text": "Il n'est pas le premier à y penser : un brevet français collait déjà du celluloïd sur du verre en [1902|mille neuf cent deux]. Mais c'est son Triplex qui va s'imposer.",
+      "vo": "[curious] Il n'est pas le premier à y penser : un brevet français collait déjà du celluloïd sur du verre en mille neuf cent deux. Mais c'est son Triplex qui va s'imposer."
+    },
+    {
+      "id": "anglais",
+      "text": "Les Anglais s'y mettent l'année suivante : English Triplex. Plus tard, elle s'allie… à Pilkington. Le même nom que le bain d'étain.",
+      "vo": "[conversational, curious] Les Anglais s'y mettent l'année suivante : English Triplex. Plus tard, elle s'allie... à Pilkington. Le même nom que le bain d'étain."
+    },
+    {
+      "id": "loi",
+      "text": "Dans les années trente, l'Angleterre impose un verre de sécurité devant le conducteur. En France, Saint-Gobain mise d'abord… sur l'autre verre de ce film.",
+      "vo": "[warm, conversational] Dans les années trente, l'Angleterre impose un verre de sécurité devant le conducteur. En France, Saint-Gobain mise d'abord... sur l'autre verre de ce film."
+    },
+    {
+      "id": "pvb",
+      "text": "Le celluloïd vieillit mal. L'acétate qui le remplace jaunit, et se décolle. Il faut attendre les années trente et quarante pour le [PVB|pé-vé-bé]… celui de ton pare-brise.",
+      "vo": "[curious] Le celluloïd vieillit mal. L'acétate qui le remplace jaunit, et se décolle. Il faut attendre les années trente et quarante pour le pé-vé-bé... celui de ton pare-brise.",
+      "hold": 1.2
+    },
+    {
+      "id": "autoclave",
+      "chap": "L'autoclave",
+      "text": "Retour à l'usine. Le sandwich est encore *laiteux* : il reste de l'air entre les couches. On le chasse. Puis tout part en autoclave : une cuve sous pression, vers [140°C|cent quarante degrés].",
+      "vo": "[conversational, curious] Retour à l'usine. Le sandwich est encore laiteux : il reste de l'air entre les couches. On le chasse. Puis tout part en autoclave : une cuve sous pression, vers cent quarante degrés."
+    },
+    {
+      "id": "transparent",
+      "text": "Le film colle au verre, pour de bon. Et le pare-brise ressort… parfaitement +transparent+.",
+      "vo": "[warm, conversational] Le film colle au verre, pour de bon. Et le pare-brise ressort... parfaitement transparent."
+    },
+    {
+      "id": "bulle",
+      "text": "Une bulle oubliée, et le film pourrait se décoller du verre. Or au test, c'est lui qui va tout *encaisser*.",
+      "vo": "[serious] Une bulle oubliée, et le film pourrait se décoller du verre. Or au test, c'est lui qui va tout encaisser."
+    },
+    {
+      "id": "yeux",
+      "text": "Dernière touche : capteur de pluie, support de caméra. Ton pare-brise porte les yeux de ta voiture. Et chaque vitrage est inspecté.",
+      "vo": "[curious] Dernière touche : capteur de pluie, support de caméra. Ton pare-brise porte les yeux de ta voiture. Et chaque vitrage est inspecté.",
+      "hold": 1.2
+    },
+    {
+      "id": "route",
+      "chap": "Sur la route",
+      "text": "Puis il part sur la route. Et là, son ennemi, c'est un *gravillon*.",
+      "vo": "[serious] Puis il part sur la route. Et là, son ennemi, c'est un gravillon."
+    },
+    {
+      "id": "impact",
+      "text": "Un impact, c'est un point où tout le verre tire. Le soleil, le froid, le dégivrage : le verre se dilate de façon inégale… et la fissure peut avancer.",
+      "vo": "[conversational, curious] Un impact, c'est un point où tout le verre tire. Le soleil, le froid, le dégivrage : le verre se dilate de façon inégale... et la fissure peut avancer."
+    },
+    {
+      "id": "resine",
+      "text": "Tant qu'il est petit, loin du bord et de tes yeux, on le comble avec une +résine+. Sinon, c'est tout le pare-brise qu'on change.",
+      "vo": "[warm, conversational] Tant qu'il est petit, loin du bord et de tes yeux, on le comble avec une résine. Sinon, c'est tout le pare-brise qu'on change.",
+      "hold": 1.2
+    },
+    {
+      "id": "trempe",
+      "text": "Et ta vitre de côté, celle du début ? Elle, souvent, est faite autrement : un seul verre, chauffé vers [620°C|six cent vingt degrés]… puis refroidi d'un coup, par des jets d'air.",
+      "vo": "[curious] Et ta vitre de côté, celle du début ? Elle, souvent, est faite autrement : un seul verre, chauffé vers six cent vingt degrés... puis refroidi d'un coup, par des jets d'air.",
+      "chap": "Le verre trempé"
+    },
+    {
+      "id": "compression",
+      "text": "La surface se fige d'abord, et reste comprimée. Le verre devient environ quatre fois plus résistant. On dit qu'il est *trempé*.",
+      "vo": "[conversational, curious] La surface se fige d'abord, et reste comprimée. Le verre devient environ quatre fois plus résistant. On dit qu'il est trempé."
+    },
+    {
+      "id": "fissure",
+      "text": "Pourquoi plus résistant ? Le verre casse presque toujours par une rayure qu'on tire. Là, la surface est serrée : la rayure reste fermée.",
+      "vo": "[warm, conversational] Pourquoi plus résistant ? Le verre casse presque toujours par une rayure qu'on tire. Là, la surface est serrée : la rayure reste fermée."
+    },
+    {
+      "id": "coeur",
+      "text": "Mais au centre, le verre tire dans l'autre sens. Une énergie enfermée, qui n'attend qu'une fissure assez profonde.",
+      "vo": "[curious] Mais au centre, le verre tire dans l'autre sens. Une énergie enfermée, qui n'attend qu'une fissure assez profonde."
+    },
+    {
+      "id": "grains",
+      "text": "Mais quand il casse, toute cette tension part d'un coup. Il éclate en milliers de petits grains. Des grains… pas des lames.",
+      "vo": "[conversational, curious] Mais quand il casse, toute cette tension part d'un coup. Il éclate en milliers de petits grains. Des grains... pas des lames."
+    },
+    {
+      "id": "piege",
+      "text": "Pour une vitre de côté, c'est parfait. Pour un pare-brise, c'est un *piège* : éclaté en grains, il ne laisse presque plus rien voir. Et tu perds la route.",
+      "vo": "[serious] Pour une vitre de côté, c'est parfait. Pour un pare-brise, c'est un piège : éclaté en grains, il ne laisse presque plus rien voir. Et tu perds la route."
+    },
+    {
+      "id": "nickel",
+      "text": "Et parfois, une vitre trempée éclate… toute seule. Des années plus tard. La faute à un grain minuscule, du sulfure de nickel, resté dans le verre.",
+      "vo": "[warm, conversational] Et parfois, une vitre trempée éclate... toute seule. Des années plus tard. La faute à un grain minuscule, du sulfure de nickel, resté dans le verre.",
+      "hold": 1.2,
+      "midroll": true
+    },
+    {
+      "id": "pret",
+      "chap": "Le test",
+      "hold": 0.3,
+      "text": "Ton pare-brise est fini. Maintenant… on va essayer de le *détruire*.",
+      "vo": "[amused] Ton pare-brise est fini. Maintenant... on va essayer de le détruire."
+    },
+    {
+      "id": "optique",
+      "text": "Mais d'abord, on regarde au travers. Il doit laisser passer au moins [70 %|soixante-dix pour cent] de la lumière. Et ne pas tordre la route, ni la dédoubler. Devant tes yeux, la déformation tolérée est trois fois plus faible que sur les bords.",
+      "vo": "[curious] Mais d'abord, on regarde au travers. Il doit laisser passer au moins soixante-dix pour cent de la lumière. Et ne pas tordre la route, ni la dédoubler. Devant tes yeux, la déformation tolérée est trois fois plus faible que sur les bords."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Dernière étape. On le *frappe*.",
+      "vo": "[conversational, curious] Dernière étape. On le frappe."
+    },
+    {
+      "id": "bille",
+      "text": "Une bille d'acier de plus de deux kilos. Lâchée de quatre mètres. Elle frappe. Le verre casse. Le film tient. Elle ne doit pas passer. Et pas une fois : onze plaques sur douze doivent tenir.",
+      "vo": "[warm, conversational] Une bille d'acier de plus de deux kilos. Lâchée de quatre mètres. Elle frappe. Le verre casse. Le film tient. Elle ne doit pas passer. Et pas une fois : onze plaques sur douze doivent tenir."
+    },
+    {
+      "id": "froid",
+      "text": "Une petite bille, cette fois, de [227 g|deux cent vingt-sept grammes]. Lâchée d'environ neuf mètres, sur une plaque de feuilleté à plus quarante degrés… puis à moins vingt. Ce qui se détache ne doit pas dépasser vingt-cinq grammes.",
+      "vo": "[curious] Une petite bille, cette fois, de deux cent vingt-sept grammes. Lâchée d'environ neuf mètres, sur une plaque de feuilleté à plus quarante degrés... puis à moins vingt. Ce qui se détache ne doit pas dépasser vingt-cinq grammes."
+    },
+    {
+      "id": "tete",
+      "text": "Puis une tête. Une tête factice de dix kilos, lâchée d'un mètre cinquante. Elle tombe.",
+      "vo": "[conversational, curious] Puis une tête. Une tête factice de dix kilos, lâchée d'un mètre cinquante. Elle tombe."
+    },
+    {
+      "id": "surprise",
+      "text": "Et là, pour réussir l'essai… le pare-brise doit *casser*. Des cercles de fissures, tout autour de la tête. Les plus proches, à moins de huit centimètres.",
+      "vo": "[amused] Et là, pour réussir l'essai... le pare-brise doit casser. Des cercles de fissures, tout autour de la tête. Les plus proches, à moins de huit centimètres."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Ces fissures dissipent une partie du choc. Et chaque éclat reste collé au +film+. Rien ne vole. Rien ne passe.",
+      "vo": "[warm, conversational] Ces fissures dissipent une partie du choc. Et chaque éclat reste collé au film. Rien ne vole. Rien ne passe."
+    },
+    {
+      "id": "temoin",
+      "text": "À côté, un verre trempé. Un coup sec. On compte les grains dans un carré de cinq centimètres : pas moins de quarante.",
+      "vo": "[curious] À côté, un verre trempé. Un coup sec. On compte les grains dans un carré de cinq centimètres : pas moins de quarante.",
+      "hold": 1.2
+    },
+    {
+      "id": "recap",
+      "chap": "Ce qu'il faut retenir",
+      "text": "Résumons. Du sable fondu. Flotté sur de l'étain. Refroidi lentement. Courbé par son propre poids. Collé à un film, en salle blanche. Cuit sous pression. Et frappé, exprès.",
+      "vo": "[warm, conversational] Résumons. Du sable fondu. Flotté sur de l'étain. Refroidi lentement. Courbé par son propre poids. Collé à un film, en salle blanche. Cuit sous pression. Et frappé, exprès."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Ton pare-brise n'a jamais été fait pour *tenir*. Il a été fait pour casser… sans te +lâcher+.",
+      "vo": "[warm, conversational] Ton pare-brise n'a jamais été fait pour tenir. Il a été fait pour casser... sans te lâcher."
+    },
+    {
+      "id": "du",
+      "text": "Et ta vitre de côté ? Souvent trempée : c'est par elle qu'on sort, avec un brise-vitre. Mais de plus en plus de voitures ont des vitres de côté *feuilletées*.",
+      "vo": "[serious] Et ta vitre de côté ? Souvent trempée : c'est par elle qu'on sort, avec un brise-vitre. Mais de plus en plus de voitures ont des vitres de côté feuilletées."
+    },
+    {
+      "id": "aaa",
+      "text": "Aux États-Unis, environ une voiture sur trois en [2018|deux mille dix-huit]. Et six brise-vitres essayés dessus : aucun ne l'a cassée.",
+      "vo": "[conversational, curious] Aux États-Unis, environ une voiture sur trois en deux mille dix-huit. Et six brise-vitres essayés dessus : aucun ne l'a cassée."
+    },
+    {
+      "id": "trempe4",
+      "text": "Et même sur une vitre trempée, deux de ces outils sur six ont échoué.",
+      "vo": "[warm, conversational] Et même sur une vitre trempée, deux de ces outils sur six ont échoué."
+    },
+    {
+      "id": "etiquette",
+      "text": "Alors la prochaine fois que tu montes en voiture, regarde le petit marquage dans le coin de chaque vitre. C'est lui qui te dit laquelle viser.",
+      "vo": "[conversational, curious] Alors la prochaine fois que tu montes en voiture, regarde le petit marquage dans le coin de chaque vitre. C'est lui qui te dit laquelle viser."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et dis-moi en +commentaire+ ce qui est écrit sur ta vitre conducteur. Je suis curieux de voir combien vous en avez, des feuilletées.",
+      "vo": "[curious] Et dis-moi en commentaire ce qui est écrit sur ta vitre conducteur. Je suis curieux de voir combien vous en avez, des feuilletées."
+    },
+    {
+      "id": "like",
+      "text": "Si ça t'a appris quelque chose, un petit +like+, ça nous aide vraiment. Et envoie-la à quelqu'un qui garde un brise-vitre dans sa boîte à gants : ce jour-là, il saura quelle vitre viser.",
+      "vo": "[warm] Si ça t'a appris quelque chose, un petit like, ça nous aide vraiment. Et envoie-la à quelqu'un qui garde un brise-vitre dans sa boîte à gants : ce jour-là, il saura quelle vitre viser."
+    },
+    {
+      "id": "abo",
+      "text": "On se retrouve très vite, dans une autre usine, pour un autre objet qui veille sur toi.",
+      "vo": "[warm] On se retrouve très vite, dans une autre usine, pour un autre objet qui veille sur toi."
+    },
+    {
+      "id": "boucle",
+      "text": "Un objet qui attend, lui aussi, le jour où…",
+      "vo": "[calm] Un objet qui attend, lui aussi, le jour où,"
+    }
+  ],
+  "cues": {
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "tete:tombe",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:casser",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:jour"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "music",
+      "gain": -21,
+      "curve": [
+        [
+          0,
+          0.9,
+          0.5
+        ],
+        [
+          "ouvre-0.4",
+          0.55,
+          0
+        ],
+        [
+          "four-1",
+          1,
+          0.55
+        ],
+        [
+          "etain",
+          1,
+          0.7
+        ],
+        [
+          "lames",
+          0.9,
+          0.2
+        ],
+        [
+          "etenderie-1",
+          1,
+          0.45
+        ],
+        [
+          "seuil",
+          1,
+          0.8
+        ],
+        [
+          "salle-1",
+          0.85,
+          0.15
+        ],
+        [
+          "flacon",
+          0.75,
+          0
+        ],
+        [
+          "autoclave-1",
+          1,
+          0.5
+        ],
+        [
+          "route-1",
+          0.9,
+          0.3
+        ],
+        [
+          "trempe-1",
+          1,
+          0.55
+        ],
+        [
+          "pret-1",
+          1,
+          0.9
+        ],
+        [
+          "tete:tombe",
+          1,
+          1
+        ],
+        [
+          "recap-0.5",
+          0.9,
+          0.4
+        ],
+        [
+          "chute",
+          0.7,
+          0
+        ],
+        [
+          "comment",
+          0.9,
+          0.3
+        ],
+        [
+          "boucle",
+          0.8,
+          0.5
+        ]
+      ]
+    },
+    {
+      "type": "drone",
+      "gain": -27,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "tozero",
+          1
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.5
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "chapters",
+      "skip": [
+        "ouvre"
+      ]
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ],
+  "thumb": {
+    "at": 452.7,
+    "title": [
+      "IL DOIT",
+      "CASSER"
+    ],
+    "tone": "signal",
+    "tag": "Test · 10 kg",
+    "cam": {
+      "d": 130,
+      "az": 15,
+      "el": 25,
+      "side": -420,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  },
+  "thumb2": {
+    "at": 428,
+    "title": [
+      "ÇA NE",
+      "PASSE PAS"
+    ],
+    "tone": "veille",
+    "tag": "Bille · 2,26 kg",
+    "cam": {
+      "d": 60,
+      "az": 10,
+      "el": 28,
+      "side": -430,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  },
+  "thumb3": {
+    "at": 482.5,
+    "title": [
+      "PAS FAIT",
+      "POUR TENIR"
+    ],
+    "tone": "signal",
+    "tag": "Ton pare-brise",
+    "cam": {
+      "d": 250,
+      "az": -45,
+      "el": 35,
+      "side": -330,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  }
+}

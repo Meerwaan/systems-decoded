@@ -1,0 +1,25 @@
+{ "//": "L01 · 15/10, Merwan : « trop monotone, pas de dynamisme, trop formel : plus humain ». Le bain d'étain (histoire + explication), chaque essai dans sa propre requête courte.",
+  "phrases": ["etain", "essais", "flotte", "pourquoi"],
+  "essais": [
+    { "nom": "H1-temoin", "note": "la direction du film, en requête courte : ce que change la seule longueur de la requête" },
+    { "nom": "H2-conversation", "note": "des balises de conversation au lieu de « ferme » ou « réfléchi »",
+      "vo": {
+        "etain": "[conversational, curious] En mille neuf cent cinquante-deux, un Britannique, Alastair Pilkington, a une idée étrange : verser le verre... sur du métal liquide. De l'étain.",
+        "essais": "[amused] Il lui faut des années d'essais, dans son usine anglaise. Et le procédé ne rapporte vraiment qu'en mille neuf cent soixante.",
+        "flotte": "[warm, conversational] L'étain est plus lourd que le verre. Alors le verre flotte. Il s'étale tout seul, et sa surface devient plane... sans que personne n'y touche.",
+        "pourquoi": "[curious] Et pourquoi l'étain ? Il reste liquide sur toute la plage où le verre durcit. Et il ne bout pas : il ne s'évapore presque pas." } },
+    { "nom": "H3-sans-balise", "note": "aucune balise, stabilité 0,3 : Eric lit comme il parle",
+      "stability": 0.3,
+      "vo": {
+        "etain": "En mille neuf cent cinquante-deux, un Britannique, Alastair Pilkington, a une idée étrange : verser le verre... sur du métal liquide. De l'étain.",
+        "essais": "Il lui faut des années d'essais, dans son usine anglaise. Et le procédé ne rapporte vraiment qu'en mille neuf cent soixante.",
+        "flotte": "L'étain est plus lourd que le verre. Alors le verre flotte. Il s'étale tout seul, et sa surface devient plane... sans que personne n'y touche.",
+        "pourquoi": "Et pourquoi l'étain ? Il reste liquide sur toute la plage où le verre durcit. Et il ne bout pas : il ne s'évapore presque pas." } },
+    { "nom": "H4-conversation-libre", "note": "H2, stabilité 0,25 : plus de liberté de jeu",
+      "stability": 0.25,
+      "vo": {
+        "etain": "[conversational, curious] En mille neuf cent cinquante-deux, un Britannique, Alastair Pilkington, a une idée étrange : verser le verre... sur du métal liquide. De l'étain.",
+        "essais": "[amused] Il lui faut des années d'essais, dans son usine anglaise. Et le procédé ne rapporte vraiment qu'en mille neuf cent soixante.",
+        "flotte": "[warm, conversational] L'étain est plus lourd que le verre. Alors le verre flotte. Il s'étale tout seul, et sa surface devient plane... sans que personne n'y touche.",
+        "pourquoi": "[curious] Et pourquoi l'étain ? Il reste liquide sur toute la plage où le verre durcit. Et il ne bout pas : il ne s'évapore presque pas." } }
+  ] }

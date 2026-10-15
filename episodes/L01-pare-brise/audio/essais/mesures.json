@@ -1,0 +1,191 @@
+{
+ "phrases": [
+  "etain",
+  "essais",
+  "flotte",
+  "pourquoi"
+ ],
+ "film": null,
+ "essais": [
+  {
+   "nom": "H1-temoin",
+   "note": "la direction du film, en requête courte : ce que change la seule longueur de la requête",
+   "stability": 0.4,
+   "model": "eleven_v4_turbo",
+   "rows": [
+    {
+     "id": "etain",
+     "register": 2.53208355011792,
+     "level": -2.1327547751020894,
+     "rate": -16.5746373430827,
+     "spread": 4.991853655583127,
+     "pause": 0.4200000000000002,
+     "flags": []
+    },
+    {
+     "id": "essais",
+     "register": 0.007772069590434416,
+     "level": -0.9735118794288979,
+     "rate": 4.874410612118685,
+     "spread": 3.7389000998650705,
+     "pause": 0.3000000000000001,
+     "flags": []
+    },
+    {
+     "id": "flotte",
+     "register": 1.8710957743322294,
+     "level": -2.5568487788534,
+     "rate": -6.657234537438961,
+     "spread": 4.187741282377044,
+     "pause": 0.3100000000000001,
+     "flags": []
+    },
+    {
+     "id": "pourquoi",
+     "register": 3.85255996726372,
+     "level": -1.2294796785488273,
+     "rate": 4.923832036178322,
+     "spread": 4.585418670722681,
+     "pause": 0.34000000000000014,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\L01-pare-brise\\audio\\essais\\L01-essai-H1-temoin.mp3"
+  },
+  {
+   "nom": "H2-conversation",
+   "note": "des balises de conversation au lieu de « ferme » ou « réfléchi »",
+   "stability": 0.4,
+   "model": "eleven_v4_turbo",
+   "rows": [
+    {
+     "id": "etain",
+     "register": 3.235145967903399,
+     "level": -0.8774998571952253,
+     "rate": -15.41755880415181,
+     "spread": 5.400566552581174,
+     "pause": 0.4400000000000002,
+     "flags": []
+    },
+    {
+     "id": "essais",
+     "register": 2.1285284453894393,
+     "level": 0.812745094114117,
+     "rate": -4.42296621519681,
+     "spread": 4.40961406592559,
+     "pause": 0.4200000000000002,
+     "flags": []
+    },
+    {
+     "id": "flotte",
+     "register": 1.8315843127188118,
+     "level": -1.9645894416432554,
+     "rate": -4.068609720369565,
+     "spread": 4.562865923457422,
+     "pause": 0.4400000000000002,
+     "flags": []
+    },
+    {
+     "id": "pourquoi",
+     "register": 4.410592594509245,
+     "level": -0.6295089843924835,
+     "rate": 6.435080645752889,
+     "spread": 4.737602164602797,
+     "pause": 0.37000000000000016,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\L01-pare-brise\\audio\\essais\\L01-essai-H2-conversation.mp3"
+  },
+  {
+   "nom": "H3-sans-balise",
+   "note": "aucune balise, stabilité 0,3 : Eric lit comme il parle",
+   "stability": 0.3,
+   "model": "eleven_v4_turbo",
+   "rows": [
+    {
+     "id": "etain",
+     "register": 1.6495560977868426,
+     "level": -0.6210615504693777,
+     "rate": -13.620481441633792,
+     "spread": 4.860661094237169,
+     "pause": 0.5400000000000003,
+     "flags": []
+    },
+    {
+     "id": "essais",
+     "register": 1.0305204103159442,
+     "level": 0.1214643728743674,
+     "rate": 8.680336803687517,
+     "spread": 3.734306422184465,
+     "pause": 0.3200000000000001,
+     "flags": []
+    },
+    {
+     "id": "flotte",
+     "register": 0.38716926441983984,
+     "level": -3.0042252492731265,
+     "rate": -6.210618434747284,
+     "spread": 3.9840829168515097,
+     "pause": 0.4200000000000002,
+     "flags": []
+    },
+    {
+     "id": "pourquoi",
+     "register": 1.581593900232348,
+     "level": -0.9169776592216614,
+     "rate": 0.6370606883967289,
+     "spread": 4.213368937185345,
+     "pause": 0.6000000000000003,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\L01-pare-brise\\audio\\essais\\L01-essai-H3-sans-balise.mp3"
+  },
+  {
+   "nom": "H4-conversation-libre",
+   "note": "H2, stabilité 0,25 : plus de liberté de jeu",
+   "stability": 0.25,
+   "model": "eleven_v4_turbo",
+   "rows": [
+    {
+     "id": "etain",
+     "register": 3.7347136058720887,
+     "level": -0.8226483465931409,
+     "rate": -16.345761176671402,
+     "spread": 5.366487567632137,
+     "pause": 0.3900000000000002,
+     "flags": []
+    },
+    {
+     "id": "essais",
+     "register": 2.399057147444767,
+     "level": 0.3178909462678732,
+     "rate": -0.7266168423038621,
+     "spread": 4.419774239297214,
+     "pause": 0.45000000000000023,
+     "flags": []
+    },
+    {
+     "id": "flotte",
+     "register": 1.3295957557182831,
+     "level": -2.322528244149801,
+     "rate": -4.380581721278942,
+     "spread": 4.437866455709114,
+     "pause": 0.37000000000000016,
+     "flags": []
+    },
+    {
+     "id": "pourquoi",
+     "register": 4.462048545348016,
+     "level": -0.4739748903363399,
+     "rate": 3.662222833338502,
+     "spread": 4.73233841947112,
+     "pause": 0.4200000000000002,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\L01-pare-brise\\audio\\essais\\L01-essai-H4-conversation-libre.mp3"
+  }
+ ]
+}

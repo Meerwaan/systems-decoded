@@ -1,0 +1,3 @@
+{ "//": "L01 · la porte bombage → seuil → salle blanche, d'un seul tenant : la référence.",
+  "phrases": ["gravite", "ensemble", "seuil", "salle", "humide", "flacon"],
+  "essais": [{ "nom": "B-continu", "note": "une seule requête" }] }
