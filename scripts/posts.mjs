@@ -195,6 +195,50 @@ const POSTS = {
       hashtags: ["#shorts", "#irm", "#hopital", "#radiologie", "#science"],
     },
   },
+  "018-cocotte-minute": {
+    instagram: {
+      caption: "Ta cocotte-minute siffle. Sous le couvercle, la vapeur pousse : plus de 350 kilos.\n\nDossier 018 : la cocotte-minute ouverte. Ses deux soupapes, son couvercle verrouillé… et le jour où elle se tait.\n\nElle te fait peur, ta cocotte-minute ?",
+      hashtags: ["#cocotteminute", "#cuisine", "#securite", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Cocotte-minute : pourquoi elle siffle, et ce qui se passe le jour où elle se tait",
+      description: "Dossier 018 — la cocotte-minute ouverte : pourquoi l'eau y bout à plus de 110 degrés, ses deux soupapes, son couvercle verrouillé… et le jour où la mousse monte vers la soupape.\n\nElle te fait peur, ta cocotte-minute ?",
+      hashtags: ["#shorts", "#cocotteminute", "#cuisine", "#physique", "#science"],
+    },
+  },
+  "019-pretensionneur": {
+    instagram: {
+      caption: "Choc frontal. Tu n'as pas encore bougé… et ta ceinture se resserre, seule.\n\nDossier 019 : le prétensionneur de ceinture de sécurité, demandé en commentaire. Une charge explosive, une turbine, une vingtaine de millièmes de seconde — et il ne sert qu'une fois.\n\nTa voiture… elle a déjà tapé ?",
+      hashtags: ["#ceinturedesecurite", "#pretensionneur", "#securiteroutiere", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Prétensionneur de ceinture de sécurité : la charge explosive qui la retend au choc",
+      description: "Dossier 019 — le prétensionneur de ceinture de sécurité, ouvert : l'enrouleur, la charge, la turbine, et ce qui se passe dans la sangle en une vingtaine de millièmes de seconde, avant même que ton corps arrive.\n\nTa voiture… elle a déjà tapé ?",
+      hashtags: ["#shorts", "#ceinturedesecurite", "#pretensionneur", "#securiteroutiere", "#science"],
+    },
+  },
+  "020-taipei-101": {
+    instagram: {
+      caption: "Typhon sur Taipei. Tu es au sommet d'une tour… et elle se balance.\n\nDossier 020 : Taipei 101 et la boule d'acier de 660 tonnes suspendue tout en haut. Typhon Soudelor, 2015 : on la regarde bouger, centimètre par centimètre.\n\nUn jour de typhon… tu montes ?",
+      hashtags: ["#taipei101", "#architecture", "#ingenierie", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Taipei 101 : la boule d'acier de 660 tonnes suspendue en haut de la tour (typhon Soudelor)",
+      description: "Dossier 020 — Taipei 101, 2015 : le typhon Soudelor frappe la tour, et tout en haut une boule d'acier de 660 tonnes se met à bouger. Ses plaques, ses câbles, ses vérins, sa butée… et ce que ça donne au pic de la tempête.\n\nUn jour de typhon… tu montes ?",
+      hashtags: ["#shorts", "#taipei101", "#architecture", "#ingenierie", "#science"],
+    },
+  },
+  "022-batterie-telephone": {
+    instagram: {
+      caption: "Ton téléphone charge, sous ton oreiller. Dedans, sa batterie chauffe.\n\nDossier 022 : la batterie de téléphone. Entre ses deux électrodes, un film de plastique plus fin qu'un cheveu : son dernier rempart. Et ton oreiller travaille contre lui.\n\nTu le charges où, la nuit ?",
+      hashtags: ["#batterietelephone", "#smartphone", "#lithium", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Batterie de téléphone : ce qui se passe quand elle chauffe sous ton oreiller",
+      description: "Dossier 022 — la batterie de téléphone ouverte : deux électrodes séparées par presque rien, un film de plastique plus fin qu'un cheveu, un petit circuit qui surveille tout. Et ce qui se passe quand tu la charges sous l'oreiller.\n\nTu le charges où, la nuit ?",
+      hashtags: ["#shorts", "#batterietelephone", "#smartphone", "#lithium", "#science"],
+    },
+  },
 };
 
 const problems = [];

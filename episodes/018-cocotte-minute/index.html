@@ -7,18 +7,32 @@
     <link rel="stylesheet" href="gen/brand.css" />
     <script src="gen/gsap.min.js"></script>
     <style>
-      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
+      /* Les dispositifs récurrents (en-tête, étiquettes, jauge, titre barré, les trois appels à l'action) sont stylés dans
          kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
 
-      /* le second compteur de l'en-tête (.hud__count est signal par défaut) */
-      #hud-count { color: var(--ink); }
-      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
-      #chip-toi { color: var(--ink); }
-      #chip-coeur { color: var(--veille); }
+      /* rien de ceci n'est à l'écran tant qu'un acte ne l'a pas fait entrer */
+      .chip--live, #gauge, #retitle, #net, #next, #cta-field, .rail { opacity: 0; }
+
+      /* le second compteur de l'en-tête (main.js fixe sa couleur) */
+      #hud-count { color: var(--veille); }
+
+      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut).
+         signal : la pression, ce qui la retient · veille : ce qui la laisse sortir · encre : un fait */
+      #chip-110 { color: var(--ink); }
+      #chip-poids, #chip-regle, #chip-tige, #chip-secu, #chip-joint, #chip-feu, #chip-attends, #chip-nettoie, #chip-moitie { color: var(--veille); }
+
+      /* la jauge de l'acte 3 : la pression sous le couvercle, contre la pression de cuisson — SANS chiffre
+         (aucune pression d'ouverture n'est sourcée). acte3.js règle le remplissage (bar / 2) et sa couleur. */
+      #gauge-th { left: 50%; }
+      #gauge-fill { transform: scaleX(0.5); }
+      #gauge-s1, #gauge-s2 { opacity: 0; }
+
+      /* le prochain dossier : un fait, sur deux lignes */
+      #next-fact span { font-size: 40px; line-height: 1.2; letter-spacing: 0.06em; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="60" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="100.067" data-width="1080" data-height="1920">
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
@@ -28,8 +42,8 @@
       <header id="hud">
         <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 018</span></div>
         <div class="hud__title" id="hud-title">Cocotte-minute</div>
-        <div class="hud__clock" id="hud-clock">T−3,0 s</div>
-        <div class="hud__count" id="hud-count"><span id="hud-count-l">Mesure</span><b id="hud-count-v">0</b></div>
+        <div class="hud__clock" id="hud-clock">+350 kg</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Soupape</span><b id="hud-count-v">Siffle</b></div>
         <div class="hud__rule"></div>
         <nav class="hud__acts">
           <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
@@ -37,26 +51,56 @@
         </nav>
       </header>
 
-      <!-- 01 · MENACE (acte1.js) -->
-      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <!-- 01 · MENACE (acte1.js) : l'accroche a ses cartes — une étiquette n'entre que pour un chiffre -->
+      <div id="chip-350" class="chip chip--live"><span>Sous le couvercle</span><b>Plus de 350 kilos</b></div>
+      <div id="chip-110" class="chip chip--live"><span>Dedans, l'eau bout à</span><b>Plus de 110 degrés</b></div>
+      <div id="chip-trop" class="chip chip--live"><span>Ce soir</span><b>Trop remplie</b></div>
 
-      <!-- 02 · AUTOPSIE (acte2.js) -->
-      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>En veille</b></div>
+      <!-- 02 · AUTOPSIE (acte2.js) : les légendes des pièces de l'éclaté se font avec co.add -->
+      <div id="chip-poids" class="chip chip--live"><span>Celle qui siffle</span><b>Un poids sur un trou</b></div>
+      <div id="chip-regle" class="chip chip--live"><span>Ce bruit</span><b>La pression se règle</b></div>
+      <div id="chip-tige" class="chip chip--live"><span>Encore de la pression</span><b>Couvercle bloqué</b></div>
 
       <!-- le seuil (fin d'acte2.js) : la demande d'abonnement dite à la porte de l'acte 3 — des chevrons, jamais un panneau -->
       <div id="rail-seuil" class="rail"><i></i><i></i><i></i></div>
 
       <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
+      <section id="gauge" class="panel">
+        <div class="panel__h"><span>Sous le couvercle · la pression</span><span id="gauge-v">Réglée</span></div>
+        <div id="gauge-track">
+          <div id="gauge-fill"></div>
+          <div id="gauge-th" data-layout-allow-overflow><span>Pression de cuisson</span></div>
+        </div>
+        <div id="gauge-status">
+          <span id="gauge-s0" class="is-veille">● La soupape siffle — elle se règle</span>
+          <span id="gauge-s1" class="is-signal">● Plus rien ne sort — elle monte</span>
+          <span id="gauge-s2" class="is-veille">● Ça fuit — elle tombe</span>
+        </div>
+      </section>
+      <div id="chip-secu" class="chip chip--live"><span>Deuxième sortie</span><b>Soupape de sécurité</b></div>
+      <div id="chip-joint" class="chip chip--live"><span>Dernière sortie</span><b>Le joint fuit exprès</b></div>
 
       <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
       <div id="retitle">
-        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
+        <div class="kicker" id="retitle-k">Une cocotte aux normes</div>
         <div id="retitle-main">
           <span id="retitle-slot">
-            <span id="retitle-a">L'idée reçue<i id="retitle-strike"></i></span>
-            <span id="retitle-b" class="is-veille">La vérité</span>
+            <span id="retitle-a">Explose<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Fuit</span>
           </span>
         </div>
+      </div>
+      <div id="chip-brule" class="chip chip--live"><span>Ce qui brûle</span><b>Ouvert sous pression</b></div>
+
+      <!-- ce que le film doit encore (fin.js) : « et si la tienne se tait ? » — quatre gestes, un à la fois, à place fixe -->
+      <div id="chip-feu" class="chip chip--live"><span>Elle se tait · 1</span><b>Coupe le feu</b></div>
+      <div id="chip-attends" class="chip chip--live"><span>Elle se tait · 2</span><b>Laisse retomber</b></div>
+      <div id="chip-force" class="chip chip--live"><span>Elle se tait · 3</span><b>Ne force jamais</b></div>
+      <div id="chip-nettoie" class="chip chip--live"><span>Elle se tait · 4</span><b>Nettoie la soupape</b></div>
+      <div id="cta-field">
+        <div class="kicker">Elle te fait peur, ta cocotte ?</div>
+        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de caractères : 6) -->
+        <div id="cta-field-v"><span id="cta-typed" class="is-veille">UN PEU</span><span id="cta-caret"></span></div>
       </div>
 
       <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
@@ -68,20 +112,16 @@
         <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 personne</span></div>
         <div id="net-grid"><i id="net-wave"></i></div>
       </section>
+      <div id="chip-moitie" class="chip chip--live"><span>Ce qui mousse</span><b>Jamais plus de la moitié</b></div>
 
+      <!-- le prochain dossier, en tout dernier : la voix ne redemande pas l'abonnement, c'est le panneau qui le porte -->
       <section id="next">
-        <div class="panel__h"><span>Prochain dossier · 000</span><span>Classé</span></div>
+        <div class="panel__h"><span>Prochain dossier · 019</span><span>Classé</span></div>
         <div id="next-title"><span id="next-redact"></span></div>
-        <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
-        <div id="next-fact"><span>Un fait, un seul.</span></div>
+        <!-- un seul fait comme appât, celui que dit la voix ; aucun chiffre -->
+        <div id="next-fact"><span>Une charge explosive<br />dans son enrouleur. Exprès.</span></div>
         <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
       </section>
-
-      <div id="cta-field">
-        <div class="kicker">La question de l'accroche ?</div>
-        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de lettres) -->
-        <div id="cta-field-v"><span id="cta-typed" class="is-veille">RÉPONSE</span><span id="cta-caret"></span></div>
-      </div>
 
       <div id="callouts" class="layer"></div>
       <div id="hook"></div>
@@ -89,6 +129,8 @@
       <div id="flash" class="layer"></div>
 
       <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
       <!-- AUDIO:END -->
     </div>
 
