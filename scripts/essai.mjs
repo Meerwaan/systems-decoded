@@ -28,7 +28,7 @@ const letters = (beat) => beat.tokens.reduce((n, t) => n + t.s.replace(/[^\p{L}\
  * the tags, the punctuation and the capitals may change (checked before anything is paid for).
  * `model`: the same passage on another ElevenLabs model, billed at that model's own rate.
  */
-export async function essai(dir, { file, budget = 0 } = {}) {
+export async function essai(dir, { file, budget = 0, ref = null } = {}) {
   if (!file) throw new Error("npm run essai -- <ep> --file <essais.json> [--budget <crédits>]");
   const ep = loadEpisode(dir);
   const plan = JSON.parse(fs.readFileSync(path.resolve(file), "utf8"));
@@ -72,10 +72,12 @@ export async function essai(dir, { file, budget = 0 } = {}) {
   }
   // the narrator of this film: his median pitch, his usual level and pace — what a trial is heard against.
   // Read before anything is paid for: a film whose voice cannot be measured stops the bench for free.
-  const film = await voice(dir, { quiet: true });
+  // `ref`: a film with no voice yet (a new script) is heard against the same narrator in another film
+  const film = await voice(ref ?? dir, { quiet: true });
   const whole = film.recs.filter((r) => r.good.size >= 6);
   const hz = median((whole.length ? whole : film.recs).map((r) => r.qa.medianHz));
-  const now = Object.fromEntries(beats.map((b) => [b.id, film.grid[b.id][film.comp[b.id]]]));
+  const now = ref ? null : Object.fromEntries(beats.map((b) => [b.id, film.grid[b.id][film.comp[b.id]]]));
+  if (ref) console.log(`  Repère : le narrateur de ${path.basename(ref)} (ce film n'a pas encore de voix)`);
 
   let spent = 0;
   let halted = null;
@@ -110,7 +112,7 @@ export async function essai(dir, { file, budget = 0 } = {}) {
   console.log("\n  essai          phrase        intention      registre   niveau    débit   variation   à vérifier à l'oreille");
   const line = (name, id, mood, m, flags = []) =>
     console.log(`  ${name.padEnd(14)} ${id.padEnd(13)} ${mood.slice(0, 13).padEnd(13)} ${signed(m.register).padStart(6)} dt ${signed(m.level).padStart(5)} dB ${signed(m.rate, 0).padStart(5)} %  ${m.spread.toFixed(2).padStart(6)} dt   ${flags.join(", ")}`);
-  for (const b of beats) line("dans le film", b.id, now[b.id].mood, { ...now[b.id], rate: 100 * (now[b.id].rate / film.shared.rate - 1) }, now[b.id].flags);
+  if (now) for (const b of beats) line("dans le film", b.id, now[b.id].mood, { ...now[b.id], rate: 100 * (now[b.id].rate / film.shared.rate - 1) }, now[b.id].flags);
   const results = [];
   for (const t of trials) {
     const meta = JSON.parse(fs.readFileSync(t.meta, "utf8"));

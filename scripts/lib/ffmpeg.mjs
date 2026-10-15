@@ -139,9 +139,22 @@ export function assemble(clips, out, { format = "wav" } = {}) {
  * Recordings played one after the other, as one file — sample for sample, no fade and no gap: where each
  * begins in the result is the sum of the lengths before it. MP3 at 320 kbit/s: a second encoding nobody hears.
  */
-export function joinAudio(files, out) {
+export function joinAudio(files, out, { match = false } = {}) {
   if (!tool("ffmpeg") || !files.length) return null;
-  const inputs = files.map((_, i) => `[${i}:a]aresample=44100,aformat=sample_fmts=fltp:channel_layouts=mono[a${i}]`).join(";");
+  // `match`: requests recorded apart do not come back at the same level — each piece is brought to the first one's
+  // loudness, and meets the next through a 6 ms fade (no click). Gains and fades leave every sample where it was.
+  const ref = match ? loudness(files[0])?.i : null;
+  const gain = (f) => {
+    const l = ref != null ? loudness(f)?.i : null;
+    return l != null && Number.isFinite(l) && Number.isFinite(ref) ? Math.max(-6, Math.min(6, ref - l)) : 0;
+  };
+  const inputs = files
+    .map((f, i) => {
+      const g = match && i > 0 ? gain(f) : 0;
+      const edge = match ? `,afade=t=in:d=0.006${i < files.length - 1 ? `,areverse,afade=t=in:d=0.006,areverse` : ""}` : "";
+      return `[${i}:a]aresample=44100,aformat=sample_fmts=fltp:channel_layouts=mono${g ? `,volume=${g.toFixed(2)}dB` : ""}${match && i === 0 && files.length > 1 ? ",areverse,afade=t=in:d=0.006,areverse" : i > 0 ? edge : ""}[a${i}]`;
+    })
+    .join(";");
   const graph = `${inputs};${files.map((_, i) => `[a${i}]`).join("")}concat=n=${files.length}:v=0:a=1[out]`;
   const res = run([...files.flatMap((f) => ["-i", f]), "-filter_complex", graph, "-map", "[out]", "-ar", "44100", "-ac", "1", "-c:a", "libmp3lame", "-b:a", "320k", out]);
   return res.status === 0 && fs.existsSync(out) ? out : null;

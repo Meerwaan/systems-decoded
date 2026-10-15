@@ -424,12 +424,17 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, alone = 
   // A film whose voice has "acts" is recorded act by act: one request per act, joined into one take.
   // Heard and measured on the bench of 2026-10-13: played in its own short request an act keeps the
   // register its direction asks for, where a 90-second request lets the narrator settle on one low tone.
-  const byAct = ep.voice.acts != null;
+  // A long film (more than ElevenLabs takes in one request) names in `voice.parts` the phrases where a new request
+  // starts — at a chapter card, where a change of breath goes unheard. Its pieces are levelled at the join.
+  const cuts = Array.isArray(ep.voice.parts) ? ep.voice.parts : null;
+  const byAct = ep.voice.acts != null || cuts != null;
   const actOf = acts(ep);
+  const partOf = {};
+  { let n = 1; ep.beats.forEach((b, i) => { if (i > 0 && cuts?.includes(b.id)) n++; partOf[b.id] = cuts ? `partie${n}` : actOf[b.id]; }); }
   const parts = [];
   for (const b of ep.beats) {
-    if (parts.at(-1)?.act === actOf[b.id]) parts.at(-1).beats.push(b);
-    else parts.push({ act: actOf[b.id], beats: [b], stability: stabilityOf(ep, b) });
+    if (parts.at(-1)?.act === partOf[b.id]) parts.at(-1).beats.push(b);
+    else parts.push({ act: partOf[b.id], beats: [b], stability: stabilityOf(ep, b) });
   }
   for (let s = base; plan.length + wholeHere.length < wantWhole; s++) {
     if (!wholeHere.includes(s)) plan.push({ beats: ep.beats, seed: s, folder: hash, base: `take-${s}`, parts: byAct ? parts : null });
@@ -442,7 +447,7 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, alone = 
     const runs = [];
     for (const i of wanted) {
       // act by act, a run stops at the door of the next act: one request, one act, one setting
-      const joins = runs.length && runs.at(-1).at(-1) === i - 1 && (!byAct || actOf[ep.beats[i].id] === actOf[ep.beats[i - 1].id]);
+      const joins = runs.length && runs.at(-1).at(-1) === i - 1 && (!byAct || partOf[ep.beats[i].id] === partOf[ep.beats[i - 1].id]);
       if (joins) runs.at(-1).push(i);
       else runs.push([i]);
     }
@@ -477,9 +482,20 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, alone = 
         return { ...part, text, stability, cache, stamp, paid: cache != null && readJson(`${cache}.json`)?.stamp === stamp && fs.existsSync(`${cache}.mp3`) };
       }),
     );
+    // the script's own check, run on each request's text before anything is paid for: a word displayed one way and
+    // directed another ("I" on screen, "un" in the voice) is caught here, for free — not after a paid request.
+    for (const q of requests.flat()) {
+      if (q.paid) continue;
+      const chars = [...q.text];
+      try {
+        alignTokens(ep, { characters: chars, character_start_times_seconds: chars.map((_, i) => i), character_end_times_seconds: chars.map((_, i) => i + 1) }, q.beats);
+      } catch (err) {
+        throw new Error(`Rien n'a été payé : ${err.message}`);
+      }
+    }
     const guard = spendGuard(budget, await creditRate(ep.voice.model)); // today's rate, asked of ElevenLabs
     const estimate = requests.flat().reduce((n, q) => n + (q.paid ? 0 : guard.estimate(q.text.length)), 0);
-    const what = plan[0].target ? `${plan.length} reprise${plan.length > 1 ? "s" : ""} (${[...new Set(plan.flatMap((p) => p.target))].join(", ")})` : `${plan.length} prise${plan.length > 1 ? "s" : ""} complète${plan.length > 1 ? "s" : ""}${byAct ? `, acte par acte (${parts.length} requêtes chacune)` : ""}`;
+    const what = plan[0].target ? `${plan.length} reprise${plan.length > 1 ? "s" : ""} (${[...new Set(plan.flatMap((p) => p.target))].join(", ")})` : `${plan.length} prise${plan.length > 1 ? "s" : ""} complète${plan.length > 1 ? "s" : ""}${byAct ? `, ${cuts ? "partie par partie" : "acte par acte"} (${parts.length} requêtes chacune)` : ""}`;
     if (budget < estimate) {
       say(`\n  À enregistrer : ${what} ≈ ${estimate} crédits ElevenLabs.`);
       say(`  Rien n'a été enregistré. Avec l'accord de Merwan : ajoute --budget ${Math.ceil(estimate / 50) * 50}  (solde : npm run credits)`);
@@ -501,6 +517,11 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, alone = 
             if (!quiet) process.stdout.write(`  ${name}${q.act && p.parts ? ` · ${q.act}` : ""} … `);
             const out = await synthesize(ep, q.text, p.seed, q.stability);
             spent += out.cost;
+            if (q.cache) {
+              // what is paid is on disk before anything else can fail
+              fs.mkdirSync(path.dirname(q.cache), { recursive: true });
+              fs.writeFileSync(`${q.cache}.mp3`, out.audio);
+            }
             part = { stamp: q.stamp, cost: out.cost, act: q.act, stability: q.stability, words: alignTokens(ep, out.alignment, q.beats), tags: tagSpans(out.alignment) };
             if (q.cache) {
               fs.mkdirSync(path.dirname(q.cache), { recursive: true });
@@ -527,7 +548,7 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, alone = 
           const lengths = [];
           for (const f of files) lengths.push((await decodeAudio(f)).duration);
           const at = lengths.map((_, i) => lengths.slice(0, i).reduce((a, b) => a + b, 0));
-          if (!joinAudio(files, file)) throw new Error(`Impossible d'assembler les actes de la ${name} (ffmpeg) : ils restent dans ${path.join(p.folder, "parts")}, déjà payés.`);
+          if (!joinAudio(files, file, { match: cuts != null })) throw new Error(`Impossible d'assembler les actes de la ${name} (ffmpeg) : ils restent dans ${path.join(p.folder, "parts")}, déjà payés.`);
           const total = (await decodeAudio(file)).duration;
           if (Math.abs(total - (at.at(-1) + lengths.at(-1))) > 0.03) throw new Error(`Assemblage de la ${name} : ${total.toFixed(3)} s pour ${(at.at(-1) + lengths.at(-1)).toFixed(3)} s attendues — les mots ne seraient plus calés.`);
           const shift = (list, d) => list.map((x) => ({ ...x, ...(x.s != null ? { s: x.s + d, e: x.e + d } : { start: x.start + d, end: x.end + d }) }));
