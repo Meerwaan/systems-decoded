@@ -3,11 +3,79 @@
   "episodes": {
     "001": {
       "titre": "Détecteur de fumée",
-      "publie": "2026-10-05"
+      "publie": "2026-10-05",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "CsnxbYOSphc",
+        "duree": 79,
+        "vues": 738,
+        "vuesEngagees": 334,
+        "pctRegarde": 84.15,
+        "ontContinue": 46.44,
+        "abonnes": 6,
+        "impressions": 460,
+        "heures": 6.2913
+      },
+      "duree": 79,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-08T03:36",
+        "vues": 145189,
+        "couverture": 101968,
+        "likes": 15159,
+        "commentaires": 53,
+        "partages": 1711,
+        "enregistrements": 1456,
+        "abonnes": 244,
+        "dureeMoyenne": 40
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 480,
+        "vues3s": 258,
+        "dureeMoyenne": 31
+      }
     },
     "002": {
       "titre": "Airbag",
-      "publie": "2026-10-06"
+      "publie": "2026-10-06",
+      "releve": "2026-10-15",
+      "vues": 5860,
+      "likes": 296,
+      "commentaires": 6,
+      "partages": 13,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7693315493855300896",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "ez7aDFlV5oc",
+        "duree": 95,
+        "vues": 1884,
+        "vuesEngagees": 1151,
+        "pctRegarde": 55.56,
+        "ontContinue": 61.49,
+        "abonnes": 18,
+        "impressions": 542,
+        "heures": 17.1726
+      },
+      "duree": 95,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-08T03:36",
+        "vues": 64163,
+        "couverture": 40298,
+        "likes": 4001,
+        "commentaires": 32,
+        "partages": 323,
+        "enregistrements": 296,
+        "abonnes": 145,
+        "dureeMoyenne": 51
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 1121,
+        "vues3s": 517,
+        "dureeMoyenne": 21
+      }
     },
     "003": {
       "titre": "Ascenseur",
@@ -64,43 +132,754 @@
           73.7,
           10
         ]
-      ]
+      ],
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "2X68K0qiWmE",
+        "duree": 83,
+        "vues": 2797,
+        "vuesEngagees": 1528,
+        "pctRegarde": 78.48,
+        "ontContinue": 56.57,
+        "abonnes": 27,
+        "impressions": 527,
+        "heures": 28.1208
+      },
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-08T03:39",
+        "vues": 415174,
+        "couverture": 321991,
+        "likes": 30002,
+        "commentaires": 108,
+        "partages": 4836,
+        "enregistrements": 3122,
+        "abonnes": 1980,
+        "dureeMoyenne": 38
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 2038,
+        "vues3s": 900,
+        "dureeMoyenne": 21
+      }
     },
     "004": {
       "titre": "Différentiel",
-      "publie": "2026-10-06T17:00"
+      "publie": "2026-10-06T17:00",
+      "releve": "2026-10-15",
+      "vues": 3458,
+      "likes": 292,
+      "commentaires": 12,
+      "partages": 35,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7693567298442972449",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "5ZSFZlTInac",
+        "duree": 86,
+        "vues": 175,
+        "vuesEngagees": 100,
+        "pctRegarde": 64.16,
+        "ontContinue": 55,
+        "abonnes": 3,
+        "impressions": 528,
+        "heures": 1.5584
+      },
+      "duree": 86,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-08T03:41",
+        "vues": 825666,
+        "couverture": 663770,
+        "likes": 55655,
+        "commentaires": 287,
+        "partages": 14119,
+        "enregistrements": 11939,
+        "abonnes": 4026,
+        "dureeMoyenne": 37
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 435,
+        "vues3s": 374,
+        "dureeMoyenne": 54
+      }
     },
     "005": {
       "titre": "Arrêt d'urgence",
-      "publie": "2026-10-07"
+      "publie": "2026-10-07",
+      "releve": "2026-10-15",
+      "vues": 1155,
+      "likes": 69,
+      "commentaires": 2,
+      "partages": 2,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7693769917799091489",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "OFcNIwW__8M",
+        "duree": 85,
+        "vues": 1543,
+        "vuesEngagees": 829,
+        "pctRegarde": 59.16,
+        "ontContinue": 56.47,
+        "abonnes": 7,
+        "impressions": 628,
+        "heures": 11.8735
+      },
+      "duree": 85,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-08T04:41",
+        "vues": 93351,
+        "couverture": 64899,
+        "likes": 5092,
+        "commentaires": 52,
+        "partages": 316,
+        "enregistrements": 428,
+        "abonnes": 305,
+        "dureeMoyenne": 39
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 816,
+        "vues3s": 457,
+        "dureeMoyenne": 21
+      }
     },
     "006": {
       "titre": "Défibrillateur",
-      "publie": "2026-10-07"
+      "publie": "2026-10-07",
+      "releve": "2026-10-15",
+      "vues": 2770,
+      "likes": 207,
+      "commentaires": 4,
+      "partages": 21,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7693945279971609888",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "_Lw1hvU7pcg",
+        "duree": 86,
+        "vues": 1659,
+        "vuesEngagees": 901,
+        "pctRegarde": 53.59,
+        "ontContinue": 52.94,
+        "abonnes": 14,
+        "impressions": 575,
+        "heures": 11.874
+      },
+      "duree": 86,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-08T04:41",
+        "vues": 218897,
+        "couverture": 162588,
+        "likes": 21343,
+        "commentaires": 111,
+        "partages": 2413,
+        "enregistrements": 2990,
+        "abonnes": 732,
+        "dureeMoyenne": 36
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 401,
+        "vues3s": 306,
+        "dureeMoyenne": 44
+      }
     },
     "007": {
       "titre": "Siège éjectable",
-      "publie": null
+      "publie": "2026-10-08",
+      "releve": "2026-10-15",
+      "vues": 2820,
+      "likes": 94,
+      "commentaires": 2,
+      "partages": 2,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7694083348515294496",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "vTBbY4ZAzUo",
+        "duree": 86,
+        "vues": 1664,
+        "vuesEngagees": 1083,
+        "pctRegarde": 59.67,
+        "ontContinue": 67.99,
+        "abonnes": 1,
+        "impressions": 978,
+        "heures": 15.6443
+      },
+      "duree": 86,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-08T04:43",
+        "vues": 311318,
+        "couverture": 256631,
+        "likes": 14755,
+        "commentaires": 58,
+        "partages": 1564,
+        "enregistrements": 1192,
+        "abonnes": 620,
+        "dureeMoyenne": 41
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 444,
+        "vues3s": 324,
+        "dureeMoyenne": 52
+      }
     },
     "008": {
       "titre": "Paratonnerre",
-      "publie": null
+      "publie": "2026-10-08",
+      "releve": "2026-10-15",
+      "vues": 8734,
+      "likes": 607,
+      "commentaires": 3,
+      "partages": 28,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7694307743804460321",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "rPB0ZPzBN4I",
+        "duree": 87,
+        "vues": 1887,
+        "vuesEngagees": 1070,
+        "pctRegarde": 55.76,
+        "ontContinue": 55.19,
+        "abonnes": 11,
+        "impressions": 521,
+        "heures": 14.6957
+      },
+      "duree": 87,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-08T16:37",
+        "vues": 60507,
+        "couverture": 37585,
+        "likes": 4063,
+        "commentaires": 21,
+        "partages": 283,
+        "enregistrements": 314,
+        "abonnes": 47,
+        "dureeMoyenne": 42
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 499,
+        "vues3s": 386,
+        "dureeMoyenne": 49
+      }
     },
     "009": {
       "titre": "Micro-ondes",
-      "publie": null
+      "publie": "2026-10-08",
+      "releve": "2026-10-15",
+      "vues": 47885,
+      "likes": 1423,
+      "commentaires": 15,
+      "partages": 77,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7694345387687169312",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "U9LbUhPxqRY",
+        "duree": 79,
+        "vues": 1924,
+        "vuesEngagees": 1210,
+        "pctRegarde": 47.35,
+        "ontContinue": 61.17,
+        "abonnes": 16,
+        "impressions": 773,
+        "heures": 12.8069
+      },
+      "duree": 79,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-08T19:02",
+        "vues": 435387,
+        "couverture": 366280,
+        "likes": 18430,
+        "commentaires": 96,
+        "partages": 2020,
+        "enregistrements": 2067,
+        "abonnes": 29,
+        "dureeMoyenne": 33
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 567,
+        "vues3s": 472,
+        "dureeMoyenne": 46
+      }
     },
     "010": {
       "titre": "Scie sur table",
-      "publie": null
+      "publie": "2026-10-08",
+      "releve": "2026-10-15",
+      "vues": 30508,
+      "likes": 1458,
+      "commentaires": 24,
+      "partages": 41,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7694394895137656097",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "L6wLdT4CQa0",
+        "duree": 84,
+        "vues": 1371,
+        "vuesEngagees": 958,
+        "pctRegarde": 40.32,
+        "ontContinue": 68.75,
+        "abonnes": 10,
+        "impressions": 487,
+        "heures": 9.1566
+      },
+      "duree": 84,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-08T22:16",
+        "vues": 296333,
+        "couverture": 235289,
+        "likes": 18705,
+        "commentaires": 69,
+        "partages": 1560,
+        "enregistrements": 1399,
+        "abonnes": 19,
+        "dureeMoyenne": 36
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 620,
+        "vues3s": 490,
+        "dureeMoyenne": 46
+      }
     },
     "011": {
       "titre": "Fusible pyro",
-      "publie": null
+      "publie": "2026-10-09",
+      "releve": "2026-10-15",
+      "vues": 14801,
+      "likes": 584,
+      "commentaires": 12,
+      "partages": 41,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7694646654414228768",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "xO8QPhQfL4c",
+        "duree": 88,
+        "vues": 1566,
+        "vuesEngagees": 902,
+        "pctRegarde": 63.97,
+        "ontContinue": 59.81,
+        "abonnes": 6,
+        "impressions": 634,
+        "heures": 14.3347
+      },
+      "duree": 88,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-09T02:56",
+        "vues": 127747,
+        "couverture": 100431,
+        "likes": 7672,
+        "commentaires": 28,
+        "partages": 610,
+        "enregistrements": 558,
+        "abonnes": 8,
+        "dureeMoyenne": 37
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 684,
+        "vues3s": 476,
+        "dureeMoyenne": 37
+      }
     },
     "012": {
       "titre": "Gazinière",
-      "publie": null
+      "publie": "2026-10-09",
+      "releve": "2026-10-15",
+      "vues": 15401,
+      "likes": 461,
+      "commentaires": 9,
+      "partages": 33,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7694680477218786592",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "vgRCqczpUE0",
+        "duree": 89,
+        "vues": 1798,
+        "vuesEngagees": 1165,
+        "pctRegarde": 40.2,
+        "ontContinue": 65.21,
+        "abonnes": 14,
+        "impressions": 795,
+        "heures": 11.8071
+      },
+      "duree": 89,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-09T16:36",
+        "vues": 155653,
+        "couverture": 117686,
+        "likes": 7587,
+        "commentaires": 30,
+        "partages": 925,
+        "enregistrements": 838,
+        "abonnes": 6,
+        "dureeMoyenne": 30
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 800,
+        "vues3s": 624,
+        "dureeMoyenne": 38
+      }
+    },
+    "013": {
+      "titre": "Halo",
+      "publie": "2026-10-10",
+      "releve": "2026-10-15",
+      "vues": 6262,
+      "likes": 319,
+      "commentaires": 7,
+      "partages": 5,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7695040070977441056",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "Yug24ZW17qk",
+        "duree": 91,
+        "vues": 1952,
+        "vuesEngagees": 1119,
+        "pctRegarde": 38.57,
+        "ontContinue": 56.18,
+        "abonnes": 3,
+        "impressions": 1406,
+        "heures": 11.2737
+      },
+      "duree": 91,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-10T15:38",
+        "vues": 110660,
+        "couverture": 73013,
+        "likes": 6815,
+        "commentaires": 47,
+        "partages": 257,
+        "enregistrements": 384,
+        "abonnes": 1,
+        "dureeMoyenne": 34
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 3776,
+        "vues3s": 1860,
+        "dureeMoyenne": 15
+      }
+    },
+    "014": {
+      "titre": "ABS",
+      "publie": "2026-10-11",
+      "releve": "2026-10-15",
+      "vues": 16036,
+      "likes": 554,
+      "commentaires": 1,
+      "partages": 23,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7695493002143272224",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "agYPsTuUuWI",
+        "duree": 88,
+        "vues": 2661,
+        "vuesEngagees": 1609,
+        "pctRegarde": 46.53,
+        "ontContinue": 59.59,
+        "abonnes": 11,
+        "impressions": 569,
+        "heures": 18.7089
+      },
+      "duree": 88,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-10T18:58",
+        "vues": 212153,
+        "couverture": 154423,
+        "likes": 11970,
+        "commentaires": 63,
+        "partages": 883,
+        "enregistrements": 1156,
+        "abonnes": 21,
+        "dureeMoyenne": 33
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 9716,
+        "vues3s": 7207,
+        "dureeMoyenne": 25
+      }
+    },
+    "015": {
+      "titre": "Brin d'arrêt",
+      "publie": "2026-10-11",
+      "releve": "2026-10-15",
+      "vues": 96384,
+      "likes": 2966,
+      "commentaires": 3,
+      "partages": 50,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7695518710588558624",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "6sgrK2fte1Y",
+        "duree": 93,
+        "vues": 6455,
+        "vuesEngagees": 4407,
+        "pctRegarde": 41.18,
+        "ontContinue": 67.25,
+        "abonnes": 31,
+        "impressions": 1627,
+        "heures": 47.8551
+      },
+      "duree": 93,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-11T13:25",
+        "vues": 376952,
+        "couverture": 176835,
+        "likes": 15144,
+        "commentaires": 55,
+        "partages": 567,
+        "enregistrements": 994,
+        "abonnes": 5,
+        "dureeMoyenne": 34
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 140113,
+        "vues3s": 109918,
+        "dureeMoyenne": 29
+      }
+    },
+    "016": {
+      "titre": "Disjoncteur",
+      "publie": "2026-10-12",
+      "releve": "2026-10-15",
+      "vues": 12190,
+      "likes": 544,
+      "commentaires": 3,
+      "partages": 37,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7695719926157364512",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "sJg-uhMvbQ0",
+        "duree": 99,
+        "vues": 1992,
+        "vuesEngagees": 1184,
+        "pctRegarde": 56.49,
+        "ontContinue": 62.71,
+        "abonnes": 14,
+        "impressions": 558,
+        "heures": 18.6766
+      },
+      "duree": 99,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-12T12:10",
+        "vues": 330724,
+        "couverture": 134881,
+        "likes": 13258,
+        "commentaires": 38,
+        "partages": 1379,
+        "enregistrements": 2296,
+        "abonnes": 14,
+        "dureeMoyenne": 36
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 139283,
+        "vues3s": 101861,
+        "dureeMoyenne": 31
+      }
+    },
+    "017": {
+      "titre": "IRM",
+      "publie": "2026-10-13",
+      "releve": "2026-10-15",
+      "vues": 5245,
+      "likes": 146,
+      "commentaires": 3,
+      "partages": 9,
+      "lien": "https://www.tiktok.com/@hors.ligne_mw/video/7696153171663572256",
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "2oP0eUfO7L0",
+        "duree": 96,
+        "vues": 1134,
+        "vuesEngagees": 611,
+        "pctRegarde": 45.58,
+        "ontContinue": 53.09,
+        "abonnes": 4,
+        "impressions": 170,
+        "heures": 7.6122
+      },
+      "duree": 96,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-13T15:56",
+        "vues": 107651,
+        "couverture": 54389,
+        "likes": 4899,
+        "commentaires": 45,
+        "partages": 335,
+        "enregistrements": 596,
+        "abonnes": 5,
+        "dureeMoyenne": 35
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 25388,
+        "vues3s": 15513,
+        "dureeMoyenne": 29
+      }
+    },
+    "018": {
+      "titre": "Cocotte-minute",
+      "publie": null,
+      "youtube": {
+        "releve": "2026-10-15",
+        "id": "VbM0HncGM5s",
+        "duree": 101,
+        "vues": 121,
+        "vuesEngagees": 72,
+        "pctRegarde": 67.24,
+        "ontContinue": 67.92,
+        "abonnes": 1,
+        "impressions": 131,
+        "heures": 1.3727
+      },
+      "duree": 101,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-14T19:05",
+        "vues": 113210,
+        "couverture": 39180,
+        "likes": 3830,
+        "commentaires": 37,
+        "partages": 332,
+        "enregistrements": 394,
+        "abonnes": 0,
+        "dureeMoyenne": 41
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 49189,
+        "vues3s": 32025,
+        "dureeMoyenne": 29
+      }
+    },
+    "019": {
+      "titre": "Prétensionneur",
+      "publie": null,
+      "instagram": {
+        "releve": "2026-10-15",
+        "publie": "2026-10-15T15:58",
+        "vues": 20256,
+        "couverture": 7603,
+        "likes": 994,
+        "commentaires": 13,
+        "partages": 6,
+        "enregistrements": 112,
+        "abonnes": 0,
+        "dureeMoyenne": 36
+      },
+      "facebook": {
+        "releve": "2026-10-15",
+        "couverture": 5236,
+        "vues3s": 3262,
+        "dureeMoyenne": 29
+      }
     }
-  }
+  },
+  "//youtube": "`youtube` : l'export de YouTube Studio (Shorts). `ontContinue` = la part qui n'a pas balayé (« Ont continué de regarder ») ; `vues` compte chaque lecture et relecture, `vuesEngagees` l'ancienne façon de compter.",
+  "comptes": {
+    "//": "Les totaux de compte, relevé par relevé. TikTok : semaine du 7 au 13 octobre (l'export s'arrête là).",
+    "2026-10-15": {
+      "tiktok": {
+        "compte": "@hors.ligne_mw",
+        "periode": "2026-10-07/2026-10-13",
+        "vues": 235244,
+        "vuesProfil": 2294,
+        "likes": 8988,
+        "commentaires": 120,
+        "partages": 397,
+        "abonnesDebut": 482,
+        "abonnesFin": 1366,
+        "hommes": 0.63,
+        "france": 0.672,
+        "belgique": 0.053,
+        "suisse": 0.02,
+        "heurePic": "19h-22h"
+      },
+      "youtube": {
+        "periode": "2026-10-05/2026-10-14",
+        "vues": 33322,
+        "vuesEngagees": 20232,
+        "abonnes": 273,
+        "heures": 260.8,
+        "ontContinue": 60.88,
+        "pctRegarde": 51.12,
+        "dureeMoyenne": 45
+      },
+      "instagram": {
+        "compte": "systemesdecodes",
+        "periode": "2026-09-17/2026-10-14",
+        "vues": 3977875,
+        "couverture": 1132066,
+        "abonnesGagnes": 31200,
+        "abonnesPerdus": 142,
+        "interactions": 370900,
+        "partFollowers": 0.084,
+        "vuesParJour": {
+          "2026-10-07": 74983,
+          "2026-10-08": 1431066,
+          "2026-10-09": 756341,
+          "2026-10-10": 559118,
+          "2026-10-11": 471807,
+          "2026-10-12": 270042,
+          "2026-10-13": 230474,
+          "2026-10-14": 183995
+        },
+        "abonnesParJour": [
+          918,
+          15403,
+          6161,
+          3853,
+          2441,
+          1440,
+          1019
+        ]
+      },
+      "facebook": {
+        "compte": "Systèmes Décodés",
+        "periode": "2026-09-17/2026-10-14",
+        "vues": 246200,
+        "spectateurs": 189520,
+        "abonnesGagnes": 3000,
+        "abonnesPerdus": 39,
+        "visitesPage": 3400,
+        "partFollowers": 0.03,
+        "vuesParJour": {
+          "2026-10-09": 2421,
+          "2026-10-10": 4356,
+          "2026-10-11": 24066,
+          "2026-10-12": 61506,
+          "2026-10-13": 34568,
+          "2026-10-14": 119309
+        },
+        "abonnesParJour": {
+          "2026-10-11": 153,
+          "2026-10-12": 861,
+          "2026-10-13": 520,
+          "2026-10-14": 1400
+        }
+      }
+    }
+  },
+  "//meta": "`instagram` et `facebook` : Meta Business Suite, Statistiques → Contenu, filtres « Fil Instagram » / « Fil Facebook ». La colonne « Vues » d'un reel croisé est celle d'Instagram ; pour Facebook on garde la couverture et les vues de 3 s. `abonnes` = la colonne « Followers en plus » du reel (presque nulle depuis le 009 alors que le compte en gagne des milliers : à vérifier dans l'appli)."
 }
