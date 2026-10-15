@@ -8,33 +8,28 @@
   "voice": {
     "name": "Eric",
     "voiceId": "9osbeK6KzhDRV0yX4rTq",
-    "model": "eleven_v4_turbo",
+    "model": "eleven_v4",
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21,
-    "acts": {
-      "menace": {
-        "stability": 0.2
-      }
-    }
+    "seed": 21
   },
   "cover": {
-    "at": "eclate$",
+    "at": "p1-0.1",
     "title": [
       "La boule",
       "de Taipei 101"
     ],
     "cam": {
       "tx": 0,
-      "ty": 8,
+      "ty": 600,
       "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
-      "shift": -430,
-      "side": 0,
+      "d": 8600,
+      "az": -36,
+      "el": 30,
       "fov": 28,
+      "shift": -500,
+      "side": 0,
       "roll": 0
     }
   },
@@ -47,7 +42,28 @@
       "#architecture",
       "#ingenierie"
     ],
-    "pinned": "660 tonnes d'acier suspendues tout en haut de la tour Taipei 101, visibles du public. Un jour de typhon… tu montes ?"
+    "pinned": "660 tonnes d'acier suspendues tout en haut de la tour Taipei 101, visibles du public. Un jour de typhon… tu montes ?",
+    "instagram": {
+      "caption": "Typhon sur Taipei. Tu es au sommet d'une tour… et elle se balance.\n\nDossier 020 : Taipei 101 et la boule d'acier de 660 tonnes suspendue tout en haut. Typhon Soudelor, 2015 : on la regarde bouger, centimètre par centimètre.\n\nUn jour de typhon… tu montes ?",
+      "hashtags": [
+        "#taipei101",
+        "#architecture",
+        "#ingenierie",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Taipei 101 : la boule d'acier de 660 tonnes suspendue en haut de la tour (typhon Soudelor)",
+      "description": "Dossier 020 — Taipei 101, 2015 : le typhon Soudelor frappe la tour, et tout en haut une boule d'acier de 660 tonnes se met à bouger. Ses plaques, ses câbles, ses vérins, sa butée… et ce que ça donne au pic de la tempête.\n\nUn jour de typhon… tu montes ?",
+      "hashtags": [
+        "#shorts",
+        "#taipei101",
+        "#architecture",
+        "#ingenierie",
+        "#science"
+      ]
+    }
   },
   "sources": [
     "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/020-taipei-101.md ; contre-vérification phrase par phrase : docs/faits/020-contre-verification.md",
@@ -56,22 +72,22 @@
     "Le record : typhon Soudelor, 8 août 2015, 6 h 59, environ un mètre, avec des vents d'environ 160 km/h (Taiwan News, Focus Taiwan, Guinness). En séisme : environ 20 cm le 18 avril 2019, le plus grand mouvement dû à un séisme ; les vérins brident alors la boule (« lock down », Structure magazine) et c'est la structure de la tour qui résiste. Taipei 101 ne publie plus ces mouvements depuis octobre 2021.",
     "Simplifications assumées : la scène (toi au sommet pendant le typhon) est un scénario ; « cinquante centimètres, soixante-dix » sont des étapes de la montée vers le mètre mesuré, pas des relevés ; « le mal de mer » traduit le but de confort annoncé par la tour (Structure magazine y ajoute la sécurité de la structure), aucune accélération avec ou sans boule n'est publiée ; 6 h 59 est l'heure du déplacement maximal ; « 160 km/h » : les sources ne disent pas s'il s'agit d'un vent moyen ou d'une rafale ; « jamais relevée plus loin » : record publié, la tour ne publie plus ces mouvements depuis 2021 ; la période de la tour (quelques secondes) n'est pas chiffrée.",
     "À ne pas dire : 728 tonnes (tonnes courtes), « la plus lourde du monde », « elle empêche la tour de tomber », « elle réduit le mouvement de 40 % » (chiffre du propriétaire, sans mesure), un mouvement pour le séisme de 2024.",
-    "Prochain dossier (021) : la veille automatique du TGV — docs/faits/021-vacma-tgv.md."
+    "Prochain dossier (021) : la veille automatique du TGV — docs/faits/021-vacma-tgv.md.",
+    "Image : la tour est une maquette — son balancement est très exagéré pour se voir et aucune longueur ne s'affiche sur elle ; les câbles sont raccourcis.",
+    "Image : les 92 câbles sont dessinés regroupés en huit brins, une lecture d'image.",
+    "Image : la course de 30 cm de l'acte 1 est un scénario ; les valeurs dites par la voix (50, 70, 100 cm, la butée à 1,50 m) sont celles de la recherche."
   ],
   "beats": [
     {
       "id": "accroche",
       "text": "Typhon sur Taipei. Tu es au sommet d'une tour… et elle se *balance*.",
-      "vo": "[tense] Typhon sur Taipei. Tu es au sommet d'une tour... et elle se balance.",
-      "voAlt": [
-        "[firm, matter-of-fact] Typhon sur Taipei. Tu es au sommet d'une tour... et elle se balance."
-      ]
+      "vo": "[tense] Typhon sur Taipei. Tu es au sommet d'une tour... et elle se balance."
     },
     {
       "id": "promesse",
       "hold": 0.3,
       "text": "Ce qui la +calme+ : [660|six cent soixante] tonnes d'acier, qui bougent à contretemps. Pour les séismes ? Pas *vraiment*.",
-      "vo": "[firm, matter-of-fact] Ce qui la calme : six cent soixante tonnes d'acier, qui bougent à contretemps. [short pause] [serious] Pour les séismes ? Pas vraiment."
+      "vo": "[firm, matter-of-fact] Ce qui la calme : six cent soixante tonnes d'acier, qui bougent à contretemps. [short pause] Pour les séismes ? Pas vraiment."
     },
     {
       "id": "scene",
@@ -94,7 +110,7 @@
     {
       "id": "repos",
       "text": "C'est un pendule, accordé sur la tour. La tour part d'un côté… la boule traîne, et la retient. Et à chaque aller-retour, ses vérins changent l'élan en *chaleur*.",
-      "vo": "[thoughtful] C'est un pendule, accordé sur la tour. [curious] La tour part d'un côté... la boule traîne, et la retient. Et à chaque aller-retour, ses vérins changent l'élan en chaleur."
+      "vo": "[thoughtful] C'est un pendule, accordé sur la tour. La tour part d'un côté... la boule traîne, et la retient. Et à chaque aller-retour, ses vérins changent l'élan en chaleur."
     },
     {
       "id": "seuil",
@@ -105,25 +121,25 @@
       "id": "zero",
       "hold": 0.2,
       "text": "Six heures cinquante-neuf. Le pic du typhon. La tour part. La boule aussi. Cinquante centimètres. Soixante-dix. La butée est à un mètre cinquante… et elle avance *encore*.",
-      "vo": "[urgent] Six heures cinquante-neuf. Le pic du typhon. La tour part. La boule aussi. Cinquante centimètres. Soixante-dix. [short pause] [ominous] La butée est à un mètre cinquante... et elle avance encore."
+      "vo": "[tense] Six heures cinquante-neuf. Le pic du typhon. La tour part. La boule aussi. Cinquante centimètres. Soixante-dix. [short pause] La butée est à un mètre cinquante... et elle avance encore."
     },
     {
       "id": "reponse",
       "hold": 0.3,
       "text": "Un mètre. Les vérins freinent. Elle s'arrête. Elle repart dans l'autre sens. On ne l'a jamais relevée plus +loin+ : c'est son record.",
-      "vo": "[urgent] Un mètre. Les vérins freinent. Elle s'arrête. Elle repart dans l'autre sens. [short pause] [relieved] On ne l'a jamais relevée plus loin : c'est son record."
+      "vo": "[tense] Un mètre. Les vérins freinent. Elle s'arrête. Elle repart dans l'autre sens. [short pause] On ne l'a jamais relevée plus loin : c'est son record."
     },
     {
       "id": "chute",
       "hold": 0.4,
       "text": "Voilà son secret : cette boule n'empêche pas la tour de tomber. La tour tient *seule*. La boule est là… d'abord pour ton +confort+.",
-      "vo": "[low, grave voice] Voilà son secret : cette boule n'empêche pas la tour de tomber. La tour tient seule. La boule est là... d'abord pour ton confort."
+      "vo": "[firm, matter-of-fact] Voilà son secret : cette boule n'empêche pas la tour de tomber. La tour tient seule. La boule est là... d'abord pour ton confort."
     },
     {
       "id": "comment",
       "hold": 0.3,
       "text": "Et les séismes ? Là, ses vérins la brident : vingt centimètres, son record en séisme. C'est le squelette de la tour qui encaisse. En +commentaire+ : un jour de typhon… tu montes ?",
-      "vo": "[curious] Et les séismes ? [short pause] [serious] Là, ses vérins la brident : vingt centimètres, son record en séisme. C'est le squelette de la tour qui encaisse. [short pause] [curious] En commentaire : un jour de typhon... tu montes ?"
+      "vo": "[curious] Et les séismes ? [short pause] Là, ses vérins la brident : vingt centimètres, son record en séisme. C'est le squelette de la tour qui encaisse. [short pause] En commentaire : un jour de typhon... tu montes ?"
     },
     {
       "id": "like",
@@ -143,13 +159,82 @@
     }
   ],
   "cues": {
+    "sommet": "accroche:sommet-0.1",
+    "sways": "accroche:balance-0.1",
+    "calm": "promesse:calme-0.1",
+    "tons": "promesse:tonnes-0.1",
+    "counter": "promesse:contretemps-0.1",
+    "seisms": "promesse:séismes-0.1",
+    "notreally": "promesse:vraiment-0.1",
+    "toscene": "scene-0.14",
+    "soudelor": "scene:Soudelor-0.1",
+    "winds": "scene:vents-0.1",
+    "floors": "scene:étages-0.1",
+    "bends": "scene:plient-0.1",
+    "comes": "scene:reviennent-0.1",
+    "goes": "scene:repartent-0.1",
+    "boat": "scene:bateau-0.1",
+    "without": "scene:Sans-0.1",
+    "seasick": "scene:mal-0.1",
+    "tosystem": "ouvre-0.14",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "p1": "eclate:boule-0.15",
+    "p2": "eclate:41-0.1",
+    "welded": "eclate:soudées-0.1",
+    "p3": "eclate:92-0.1",
+    "p4": "eclate:Huit-0.1",
+    "around": "eclate:autour-0.1",
+    "p5": "eclate:anneau-0.15",
+    "torepos": "repos-0.14",
+    "pendulum": "repos:pendule-0.1",
+    "tuned": "repos:accordé-0.1",
+    "leaves": "repos:part-0.1",
+    "lags": "repos:traîne-0.1",
+    "holds": "repos:retient-0.1",
+    "each": "repos:chaque-0.1",
+    "dampers": "repos:vérins-0.1",
+    "heat": "repos:chaleur-0.1",
+    "toseuil": "seuil-0.1",
     "tozero": "zero-0.12",
+    "peak": "zero:pic-0.1",
+    "towergo": "zero:part-0.1",
+    "ballgo": "zero:aussi-0.1",
+    "c50": "zero:Cinquante#2-0.05",
+    "c70": "zero:Soixante-0.05",
+    "bumper": "zero:butée-0.1",
+    "m150": "zero:mètre-0.1",
+    "still": "zero:avance-0.1",
+    "more": "zero:encore-0.1",
+    "toreponse": "reponse-0.12",
     "trigger": "reponse:mètre-0.05",
+    "brakes": "reponse:freinent-0.1",
+    "stops": "reponse:arrête-0.1",
+    "returns": "reponse:repart-0.1",
+    "never": "reponse:jamais-0.1",
+    "record": "reponse:record-0.1",
     "toverdict": "chute-0.12",
+    "secret": "chute:secret-0.1",
+    "deny": "chute:empêche-0.1",
+    "notfall": "chute:tomber-0.1",
+    "alone": "chute:seule-0.1",
+    "abord": "chute:abord-0.1",
     "verdict": "chute:confort",
     "tocta": "comment-0.12",
+    "quakes": "comment:séismes-0.1",
+    "bridle": "comment:brident-0.1",
+    "c20": "comment:vingt-0.1",
+    "skeleton": "comment:squelette-0.1",
+    "takes": "comment:encaisse-0.1",
+    "ask": "comment:commentaire-0.3",
+    "answer": "comment:montes",
+    "tolike": "like-0.12",
+    "believes": "like:croit-0.1",
+    "nomove": "like:bouge-0.1",
+    "toabo": "abo-0.1",
+    "next": "abo:Prochain-0.1",
+    "tgv": "abo:TGV-0.1",
+    "nobody": "abo:personne-0.1",
     "toloop": "boucle-0.12",
     "rewind": "boucle:besoin"
   },
@@ -161,11 +246,15 @@
       "curve": [
         [
           0,
-          0.8
+          0.85
         ],
         [
-          "explode",
+          "tosystem",
           0.5
+        ],
+        [
+          "torepos",
+          0.55
         ],
         [
           "tozero",
@@ -174,6 +263,10 @@
         [
           "trigger",
           1
+        ],
+        [
+          "stops",
+          0.6
         ],
         [
           "toverdict",
@@ -190,10 +283,28 @@
       ]
     },
     {
+      "type": "rain",
+      "from": 0,
+      "to": "tosystem",
+      "gain": -29
+    },
+    {
       "type": "impact",
       "at": 0.03,
       "gain": -14,
       "size": 1.2
+    },
+    {
+      "type": "whoosh",
+      "at": "sways",
+      "dur": 1.4,
+      "gain": -22
+    },
+    {
+      "type": "whoosh",
+      "at": "bends",
+      "dur": 1.6,
+      "gain": -23
     },
     {
       "type": "riser",
@@ -208,10 +319,54 @@
       "size": 0.8
     },
     {
+      "type": "tick",
+      "at": "p2",
+      "count": 6,
+      "every": 0.09,
+      "gain": -25
+    },
+    {
+      "type": "hiss",
+      "from": "dampers",
+      "to": "repos$",
+      "gain": -28,
+      "tone": 0.5
+    },
+    {
+      "type": "rain",
+      "from": "tozero",
+      "to": "toverdict",
+      "gain": -28
+    },
+    {
       "type": "impact",
       "at": "tozero",
       "gain": -12,
       "size": 1.2
+    },
+    {
+      "type": "whoosh",
+      "at": "towergo",
+      "dur": 1.2,
+      "gain": -21
+    },
+    {
+      "type": "blip",
+      "at": "c50",
+      "gain": -17,
+      "pitch": 0.8
+    },
+    {
+      "type": "blip",
+      "at": "c70",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "riser",
+      "to": "trigger",
+      "dur": 1.1,
+      "gain": -22
     },
     {
       "type": "impact",
@@ -220,11 +375,46 @@
       "size": 1.4
     },
     {
+      "type": "hiss",
+      "from": "brakes",
+      "to": "stops",
+      "gain": -24,
+      "tone": 0.5
+    },
+    {
+      "type": "clack",
+      "at": "stops",
+      "gain": -11
+    },
+    {
+      "type": "blip",
+      "at": "record",
+      "gain": -16,
+      "pitch": 0.7
+    },
+    {
       "type": "blip",
       "at": "verdict",
       "gain": -15,
       "pitch": 0.7,
       "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "quakes",
+      "gain": -14,
+      "size": 1.1
+    },
+    {
+      "type": "clack",
+      "at": "bridle",
+      "gain": -13
+    },
+    {
+      "type": "rain",
+      "from": "toloop",
+      "to": "boucle$",
+      "gain": -29
     },
     {
       "type": "impact",
