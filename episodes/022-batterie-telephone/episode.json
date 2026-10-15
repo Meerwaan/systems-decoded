@@ -20,21 +20,21 @@
     }
   },
   "cover": {
-    "at": "eclate$",
+    "at": "separator+0.45",
     "title": [
       "La batterie",
       "de ton téléphone"
     ],
     "cam": {
-      "tx": 0,
-      "ty": 8,
+      "tx": 5,
+      "ty": 4.3,
       "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
-      "shift": -430,
-      "side": 0,
+      "d": 105,
+      "az": -36,
+      "el": 34,
       "fov": 28,
+      "shift": -520,
+      "side": 0,
       "roll": 0
     }
   },
@@ -47,7 +47,28 @@
       "#telephone",
       "#lithium"
     ],
-    "pinned": "Jamais sous l'oreiller ni sous la couette pendant la charge. Batterie gonflée : on arrête. Tu le charges où, la nuit ?"
+    "pinned": "Jamais sous l'oreiller ni sous la couette pendant la charge. Batterie gonflée : on arrête. Tu le charges où, la nuit ?",
+    "instagram": {
+      "caption": "Ton téléphone charge, sous ton oreiller. Dedans, sa batterie chauffe.\n\nDossier 022 : la batterie de téléphone. Entre ses deux électrodes, un film de plastique plus fin qu'un cheveu : son dernier rempart. Et ton oreiller travaille contre lui.\n\nTu le charges où, la nuit ?",
+      "hashtags": [
+        "#batterietelephone",
+        "#smartphone",
+        "#lithium",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Batterie de téléphone : ce qui se passe quand elle chauffe sous ton oreiller",
+      "description": "Dossier 022 — la batterie de téléphone ouverte : deux électrodes séparées par presque rien, un film de plastique plus fin qu'un cheveu, un petit circuit qui surveille tout. Et ce qui se passe quand tu la charges sous l'oreiller.\n\nTu le charges où, la nuit ?",
+      "hashtags": [
+        "#shorts",
+        "#batterietelephone",
+        "#smartphone",
+        "#lithium",
+        "#science"
+      ]
+    }
   },
   "sources": [
     "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/022-batterie-telephone.md ; contre-vérification phrase par phrase : docs/faits/022-contre-verification.md. Peu de sources primaires dans ce dossier : la CPSC seule a été lue en entier.",
@@ -56,7 +77,10 @@
     "Le rappel de 2016 (CPSC, 15 septembre 2016) : Samsung Galaxy Note 7, environ un million d'appareils rappelés aux États-Unis, 92 signalements de surchauffe, 26 brûlures, 55 dégâts matériels ; interdit à bord des avions aux États-Unis le 15 octobre 2016. La marque n'est pas dite dans le film.",
     "La charge de nuit : la page de sécurité d'Apple n'a pas pu être lue (la presse en cite « under a blanket, pillow, or your body », et Apple parle de chaleur sur la peau et de ventilation, pas d'incendie) : la marque n'est pas nommée dans le film ; Fondation MAIF : ni sous l'oreiller ni sur un canapé ; batterie gonflée, chaude ou qui sent : on arrête la charge et on l'isole (INRS).",
     "Simplifications assumées : la scène de l'acte 3 est un scénario qui suppose une batterie abîmée — l'oreiller seul n'amène pas l'intérieur à 130 °C, un téléphone sain réduit ou coupe sa charge bien avant ; « pas d'abord le courant » : un court-circuit interne est aussi un courant ; « cuivre, aluminium » sont les feuilles qui portent les deux électrodes ; « enroulé ou empilé » : les deux existent, le nombre de couches n'est pas sourcé ; aucune température d'emballement n'est affichée. À ne pas dire : « le séparateur sauve le téléphone », une statistique française d'incendies, tout mélange avec trottinettes et vélos.",
-    "Prochain dossier (023) : l'éolienne de secours des avions de ligne — docs/faits/023-eolienne-de-secours.md."
+    "Prochain dossier (023) : l'éolienne de secours des avions de ligne — docs/faits/023-eolienne-de-secours.md.",
+    "Image : le thermomètre de l'en-tête est illustratif, sauf « vers 130 degrés », la fermeture du séparateur dite par la voix.",
+    "Image : les pores du séparateur sont dessinés comme des trous droits, énormément agrandis ; la maquette n'est pas à l'échelle et aucune longueur ne s'y affiche.",
+    "Étiquette « Environ un million » : le rappel américain du 15 septembre 2016 (CPSC, niveau A). Aucune marque n'est nommée ni reconnaissable à l'image."
   ],
   "beats": [
     {
@@ -143,13 +167,97 @@
     }
   ],
   "cues": {
+    "charging": "accroche:charge-0.1",
+    "under": "accroche:oreiller-0.1",
+    "inside": "accroche:Dedans-0.1",
+    "heats": "accroche:chauffe-0.1",
+    "dive": "promesse-0.1",
+    "film": "promesse:film-0.12",
+    "hairy": "promesse:cheveu-0.1",
+    "back": "promesse:Et-0.14",
+    "against": "promesse:contre-0.1",
+    "toscene": "scene-0.14",
+    "electrodes": "scene:électrodes-0.1",
+    "nothing": "scene:presque-0.1",
+    "fluid": "scene:liquide-0.1",
+    "contact": "scene:touchent-0.1",
+    "calls": "scene:appelle-0.1",
+    "to2016": "scene:2016-0.14",
+    "model": "scene:modèle-0.1",
+    "recalled": "scene:rappelé-0.1",
+    "banned": "scene:interdit-0.1",
+    "alone": "scene$+0.1",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "sheets": "eclate:feuilles-0.15",
+    "coated": "eclate:enduites-0.1",
+    "copper": "eclate:cuivre-0.15",
+    "alu": "eclate:aluminium-0.15",
+    "between": "eclate:Entre-0.14",
+    "thefilm": "eclate:film-0.12",
+    "separator": "eclate:séparateur-0.1",
+    "rolled": "eclate:enroulé-0.15",
+    "stacked": "eclate:empilé-0.1",
+    "layers": "eclate:couches-0.1",
+    "tip": "eclate:bout-0.15",
+    "board": "eclate:circuit-0.1",
+    "torepos": "repos-0.14",
+    "watch": "repos:surveille-0.1",
+    "over": "repos:chargée-0.1",
+    "empty": "repos:vidée-0.1",
+    "hot": "repos:chaude-0.1",
+    "cuts": "repos:coupe-0.1",
+    "topores": "repos:Le#2-0.12",
+    "passes": "repos:laisse-0.1",
+    "lithium": "repos:lithium-0.1",
+    "holes": "repos:pores-0.1",
+    "waits": "repos:attend-0.1",
+    "toseuil": "seuil-0.1",
+    "hair2": "seuil:cheveu-0.1",
+    "look": "seuil:regarde-0.1",
     "tozero": "zero-0.12",
+    "kept": "zero:chaleur-0.1",
+    "stays": "zero:sort-0.1",
+    "torise": "zero:La#2-0.12",
+    "climbs": "zero:monte-0.1",
+    "tocutoff": "zero:Le-0.12",
+    "cutoff": "zero:coupe-0.1",
+    "but": "zero:Mais-0.14",
+    "damaged": "zero:abîmée-0.1",
+    "point": "zero:point-0.1",
+    "still": "zero:encore-0.1",
+    "toreponse": "reponse-0.12",
+    "deg130": "reponse:trente-0.1",
     "trigger": "reponse:fond-0.05",
+    "shut": "reponse:ferment-0.1",
+    "blocked": "reponse:passe-0.1",
+    "stops": "reponse:arrête-0.1",
+    "last": "reponse:dernier-0.1",
     "toverdict": "chute-0.12",
+    "secret": "chute:secret-0.1",
+    "notcurrent": "chute:courant-0.1",
     "verdict": "chute:chaleur",
+    "holds": "chute:retient-0.1",
+    "melts": "chute:fond-0.1",
     "tocta": "comment-0.12",
+    "keeps": "comment:garde-0.1",
+    "rules": "comment:consignes-0.1",
+    "nopillow": "comment:pas-0.1",
+    "nocover": "comment:couverture-0.1",
+    "toswollen": "comment:Batterie-0.12",
+    "swollen": "comment:gonflée-0.1",
+    "unplug": "comment:débranches-0.1",
+    "away": "comment:éloignes-0.1",
+    "ask": "comment:commentaire-0.3",
+    "answer": "comment:nuit",
+    "tolike": "like-0.12",
+    "tonight": "like:soir-0.1",
+    "onit": "like:dessus-0.1",
+    "toabo": "abo-0.1",
+    "next": "abo:Prochain-0.1",
+    "plane": "abo:avion-0.1",
+    "engines": "abo:moteurs-0.1",
+    "ocean": "abo:Atlantique-0.1",
     "toloop": "boucle-0.12",
     "rewind": "boucle:nuit"
   },
@@ -161,10 +269,14 @@
       "curve": [
         [
           0,
-          0.8
+          0.85
         ],
         [
-          "explode",
+          "to2016",
+          0.7
+        ],
+        [
+          "tobench",
           0.5
         ],
         [
@@ -174,6 +286,10 @@
         [
           "trigger",
           1
+        ],
+        [
+          "stops",
+          0.5
         ],
         [
           "toverdict",
@@ -197,6 +313,42 @@
     },
     {
       "type": "riser",
+      "to": "film",
+      "dur": 0.9,
+      "gain": -24
+    },
+    {
+      "type": "whoosh",
+      "at": "back",
+      "dur": 1.1,
+      "gain": -23
+    },
+    {
+      "type": "impact",
+      "at": "against",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "zap",
+      "at": "contact",
+      "gain": -19
+    },
+    {
+      "type": "impact",
+      "at": "calls",
+      "gain": -13,
+      "size": 1.2
+    },
+    {
+      "type": "tick",
+      "at": "recalled",
+      "count": 6,
+      "every": 0.12,
+      "gain": -23
+    },
+    {
+      "type": "riser",
       "to": "explode",
       "dur": 0.8,
       "gain": -25
@@ -208,16 +360,51 @@
       "size": 0.8
     },
     {
+      "type": "clack",
+      "at": "cuts",
+      "gain": -14
+    },
+    {
       "type": "impact",
       "at": "tozero",
       "gain": -12,
       "size": 1.2
     },
     {
+      "type": "clack",
+      "at": "cutoff",
+      "gain": -10
+    },
+    {
+      "type": "blip",
+      "at": "still",
+      "gain": -17,
+      "pitch": 0.8
+    },
+    {
+      "type": "riser",
+      "to": "trigger",
+      "dur": 1.1,
+      "gain": -22
+    },
+    {
       "type": "impact",
       "at": "trigger",
       "gain": -10,
       "size": 1.4
+    },
+    {
+      "type": "tick",
+      "at": "shut",
+      "count": 8,
+      "every": 0.13,
+      "gain": -22
+    },
+    {
+      "type": "blip",
+      "at": "stops",
+      "gain": -16,
+      "pitch": 0.7
     },
     {
       "type": "blip",

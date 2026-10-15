@@ -10,15 +10,25 @@
       /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
          kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
 
-      /* le second compteur de l'en-tête (.hud__count est signal par défaut) */
+      /* rien de ceci n'est à l'écran tant qu'un acte ne l'a pas fait entrer */
+      .chip--live, #retitle, #net, #next, #cta-field, .rail { opacity: 0; }
+
+      /* le second compteur de l'en-tête (main.js fixe sa couleur) */
       #hud-count { color: var(--ink); }
-      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
-      #chip-toi { color: var(--ink); }
-      #chip-coeur { color: var(--veille); }
+
+      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut : la chaleur) */
+      #chip-cheveu { color: var(--ink); }
+      #chip-film, #chip-trop1, #chip-trop2, #chip-trop3, #chip-pores, #chip-coupe, #chip-ferme, #chip-dernier, #chip-rien { color: var(--veille); }
+
+      /* la chute, puis les appels à l'action */
+      #retitle-main { font-size: 112px; }
+      #retitle-slot { height: 112px; }
+      #retitle-strike { top: 54px; }
+      #next-fact span { font-size: 44px; line-height: 1.2; letter-spacing: 0.06em; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="60" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="125.067" data-width="1080" data-height="1920">
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
@@ -28,8 +38,8 @@
       <header id="hud">
         <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 022</span></div>
         <div class="hud__title" id="hud-title">Batterie</div>
-        <div class="hud__clock" id="hud-clock">T−3,0 s</div>
-        <div class="hud__count" id="hud-count"><span id="hud-count-l">Mesure</span><b id="hud-count-v">0</b></div>
+        <div class="hud__clock" id="hud-clock">≈ 34 °C</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Charge</span><b id="hud-count-v">En cours</b></div>
         <div class="hud__rule"></div>
         <nav class="hud__acts">
           <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
@@ -37,51 +47,68 @@
         </nav>
       </header>
 
-      <!-- 01 · MENACE (acte1.js) -->
-      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <!-- 01 · MENACE (acte1.js) : à l'échelle des pores, aucune longueur ne s'affiche -->
+      <div id="chip-film" class="chip chip--live"><span>Le séparateur</span><b>Un film de plastique</b></div>
+      <div id="chip-cheveu" class="chip chip--live"><span>Pour l'échelle</span><b>Un cheveu</b></div>
+      <div id="chip-liquide" class="chip chip--live"><span>Entre les deux</span><b>Liquide inflammable</b></div>
+      <div id="chip-2016" class="chip chip--live"><span>États-Unis, 2016</span><b>Environ un million</b></div>
+      <div id="chip-avion" class="chip chip--live"><span>États-Unis · 2016</span><b>Interdit d'avion</b></div>
 
-      <!-- 02 · AUTOPSIE (acte2.js) -->
-      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>En veille</b></div>
+      <!-- 02 · AUTOPSIE (acte2.js) : les légendes des pièces se font avec co.add -->
+      <div id="chip-trop1" class="chip chip--live"><span>Trop chargée</span><b>Il coupe</b></div>
+      <div id="chip-trop2" class="chip chip--live"><span>Trop vidée</span><b>Il coupe</b></div>
+      <div id="chip-trop3" class="chip chip--live"><span>Trop chaude</span><b>Il coupe</b></div>
+      <div id="chip-pores" class="chip chip--live"><span>Par ses pores</span><b>Le lithium passe</b></div>
 
       <!-- le seuil (fin d'acte2.js) : la demande d'abonnement dite à la porte de l'acte 3 — des chevrons, jamais un panneau -->
       <div id="rail-seuil" class="rail"><i></i><i></i><i></i></div>
 
-      <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
+      <!-- 03 · RÉPONSE (acte3.js) : une seule étiquette à la fois dans la zone haute ; aucun seuil du circuit n'est affiché -->
+      <div id="chip-piege" class="chip chip--live"><span>Sous l'oreiller</span><b>La chaleur reste</b></div>
+      <div id="chip-coupe" class="chip chip--live"><span>Le circuit</span><b>Charge coupée</b></div>
+      <div id="chip-abime" class="chip chip--live"><span>Batterie abîmée</span><b>Un point chaud</b></div>
+      <div id="chip-130" class="chip chip--live"><span>Le film fond</span><b>Vers 130 degrés</b></div>
+      <div id="chip-ferme" class="chip chip--live"><span>Pores fermés</span><b>Le lithium ne passe plus</b></div>
 
-      <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
+      <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée — la vérité est la menace : signal -->
       <div id="retitle">
-        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
+        <div class="kicker" id="retitle-k">Ce qui menace ta batterie</div>
         <div id="retitle-main">
           <span id="retitle-slot">
-            <span id="retitle-a">L'idée reçue<i id="retitle-strike"></i></span>
-            <span id="retitle-b" class="is-veille">La vérité</span>
+            <span id="retitle-a">Le courant<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-signal">La chaleur</span>
           </span>
         </div>
       </div>
+      <div id="chip-dernier" class="chip chip--live"><span>Le séparateur</span><b>Dernier recours</b></div>
+
+      <!-- ce que le film doit encore (fin.js) -->
+      <div id="chip-rien" class="chip chip--live"><span>Pendant la charge</span><b>Rien dessus</b></div>
+      <div id="chip-gonflee" class="chip chip--live"><span>Batterie gonflée</span><b>Débranche, éloigne</b></div>
 
       <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
       <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
       <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
       <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
 
+      <div id="cta-field">
+        <div class="kicker">Tu le charges où, la nuit ?</div>
+        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = 13, espaces compris) -->
+        <div id="cta-field-v"><span id="cta-typed" class="is-veille">SUR LE BUREAU</span><span id="cta-caret"></span></div>
+      </div>
+
       <section id="net" class="panel">
         <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 personne</span></div>
         <div id="net-grid"><i id="net-wave"></i></div>
       </section>
 
+      <!-- le prochain dossier, en tout dernier : un seul fait, celui du script ; aucun chiffre -->
       <section id="next">
-        <div class="panel__h"><span>Prochain dossier · 000</span><span>Classé</span></div>
+        <div class="panel__h"><span>Prochain dossier · 023</span><span>Classé</span></div>
         <div id="next-title"><span id="next-redact"></span></div>
-        <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
-        <div id="next-fact"><span>Un fait, un seul.</span></div>
+        <div id="next-fact"><span>Deux moteurs éteints. Au-dessus de l'Atlantique.</span></div>
         <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
       </section>
-
-      <div id="cta-field">
-        <div class="kicker">La question de l'accroche ?</div>
-        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de lettres) -->
-        <div id="cta-field-v"><span id="cta-typed" class="is-veille">RÉPONSE</span><span id="cta-caret"></span></div>
-      </div>
 
       <div id="callouts" class="layer"></div>
       <div id="hook"></div>
@@ -89,6 +116,7 @@
       <div id="flash" class="layer"></div>
 
       <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
       <!-- AUDIO:END -->
     </div>
 
