@@ -143,13 +143,98 @@
     }
   ],
   "cues": {
+    "atlantic": "accroche:Atlantique-0.1",
+    "nomotor": "accroche:moteur-0.1",
+    "alive": "promesse:vivant-0.1",
+    "out": "promesse:sortir-0.1",
+    "problem": "promesse:problème-0.1",
+    "brakes0": "promesse:freins-0.1",
+    "toscene": "scene-0.14",
+    "airbus": "scene:Airbus-0.1",
+    "pax": "scene:personnes-0.1",
+    "leak": "scene:fuite-0.1",
+    "empty": "scene:vidé-0.1",
+    "nomore": "scene:Plus-0.1",
+    "gens": "scene:générateurs-0.1",
+    "pressure": "scene:pression-0.1",
+    "surfaces0": "scene:gouvernes-0.1",
+    "runway0": "scene:piste-0.1",
+    "azores": "scene:Açores-0.1",
+    "km120": "scene:kilomètres-0.1",
+    "tosystem": "ouvre-0.14",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "p1": "eclate:trappe-0.1",
+    "p2": "eclate:bras-0.1",
+    "spring": "eclate:ressort-0.1",
+    "p3": "eclate:hélice-0.1",
+    "behind": "eclate:derrière-0.1",
+    "p4": "eclate:pompe-0.1",
+    "torepos": "repos-0.14",
+    "sleeps": "repos:dort-0.1",
+    "folded": "repos:repliée-0.1",
+    "door2": "repos:trappe-0.1",
+    "allstop": "repos:arrêtent-0.1",
+    "flight": "repos:vol-0.1",
+    "sorts": "repos:sort-0.1",
+    "self": "repos:seule-0.1",
+    "nomotor2": "repos:Pas-0.1",
+    "wind": "repos:vent-0.1",
+    "spins": "repos:tourner-0.1",
+    "pushes": "repos:pousse-0.1",
+    "oil": "repos:huile-0.1",
+    "circuit": "repos:circuit-0.1",
+    "toseuil": "seuil-0.1",
+    "plane0": "seuil:plané-0.1",
+    "ocean": "seuil:océan-0.1",
+    "whole": "seuil:entier-0.1",
     "tozero": "zero-0.12",
+    "h626": "zero:heures-0.1",
+    "second": "zero:second-0.1",
+    "dies": "zero:s'éteint-0.1",
+    "m10k": "zero:mètres-0.1",
+    "nopilot": "zero:pilote-0.1",
+    "descends": "zero:descend-0.1",
     "trigger": "reponse:L'hélice-0.05",
+    "rsort": "reponse:sort-0.1",
+    "rturn": "reponse:tourne-0.1",
+    "rcircuit": "reponse:circuit-0.1",
+    "revive": "reponse:revit-0.1",
+    "surf": "reponse:gouvernes-0.1",
+    "respond": "reponse:répondent-0.1",
+    "captain": "reponse:commandant-0.1",
+    "island": "reponse:île-0.1",
+    "m19": "reponse:minutes-0.1",
+    "glide": "reponse:plané-0.1",
+    "runway": "reponse:piste-0.1",
+    "there": "reponse$-0.35",
     "toverdict": "chute-0.12",
+    "secret": "chute:secret-0.1",
+    "nofall": "chute:tombe-0.1",
     "verdict": "chute:plane",
+    "cwind": "chute:vent-0.1",
+    "cdesc": "chute:descente-0.1",
+    "pilot": "chute:piloter-0.1",
     "tocta": "comment-0.12",
+    "brakesQ": "comment:freins-0.1",
+    "reversers": "comment:inverseurs-0.1",
+    "normal": "comment:normal-0.1",
+    "arrives": "comment:arrive-0.1",
+    "kmh": "comment:kilomètres-0.1",
+    "emergency": "comment:secours-0.1",
+    "tires": "comment:pneus-0.1",
+    "stops": "comment:s'arrête-0.1",
+    "nodeath": "comment:Aucun-0.1",
+    "ask": "comment:commentaire-0.3",
+    "answer": "comment:peur",
+    "tolike": "like-0.12",
+    "armrest": "like:accoudoir-0.1",
+    "takeoff": "like:décollage-0.1",
+    "toabo": "abo-0.1",
+    "next": "abo:Prochain-0.1",
+    "bloc": "abo:bloc-0.1",
+    "fault": "abo:défaut-0.1",
+    "cutoff": "abo:couper-0.1",
     "toloop": "boucle-0.12",
     "rewind": "boucle:besoin"
   },
@@ -161,11 +246,19 @@
       "curve": [
         [
           0,
-          0.8
+          0.85
         ],
         [
-          "explode",
+          "tosystem",
           0.5
+        ],
+        [
+          "torepos",
+          0.55
+        ],
+        [
+          "toseuil",
+          0.75
         ],
         [
           "tozero",
@@ -176,11 +269,19 @@
           1
         ],
         [
+          "there",
+          0.55
+        ],
+        [
           "toverdict",
           0.45
         ],
         [
           "tocta",
+          0.55
+        ],
+        [
+          "tolike",
           0.4
         ],
         [
@@ -196,6 +297,18 @@
       "size": 1.2
     },
     {
+      "type": "whoosh",
+      "at": "out",
+      "dur": 1.2,
+      "gain": -22
+    },
+    {
+      "type": "impact",
+      "at": "nomore",
+      "gain": -15,
+      "size": 1
+    },
+    {
       "type": "riser",
       "to": "explode",
       "dur": 0.8,
@@ -208,10 +321,40 @@
       "size": 0.8
     },
     {
+      "type": "clack",
+      "at": "sorts",
+      "gain": -14
+    },
+    {
+      "type": "whoosh",
+      "at": "wind",
+      "dur": 1.4,
+      "gain": -23
+    },
+    {
+      "type": "hiss",
+      "from": "pushes",
+      "to": "repos$",
+      "gain": -28,
+      "tone": 0.5
+    },
+    {
       "type": "impact",
       "at": "tozero",
       "gain": -12,
       "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "dies",
+      "gain": -13,
+      "size": 1.1
+    },
+    {
+      "type": "riser",
+      "to": "trigger",
+      "dur": 1.1,
+      "gain": -22
     },
     {
       "type": "impact",
@@ -220,11 +363,47 @@
       "size": 1.4
     },
     {
+      "type": "whoosh",
+      "at": "rturn",
+      "dur": 1.2,
+      "gain": -21
+    },
+    {
+      "type": "blip",
+      "at": "revive",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "blip",
+      "at": "there",
+      "gain": -16,
+      "pitch": 0.7
+    },
+    {
       "type": "blip",
       "at": "verdict",
       "gain": -15,
       "pitch": 0.7,
       "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "arrives",
+      "gain": -13,
+      "size": 1.2
+    },
+    {
+      "type": "hiss",
+      "from": "emergency",
+      "to": "stops",
+      "gain": -25,
+      "tone": 0.3
+    },
+    {
+      "type": "clack",
+      "at": "stops",
+      "gain": -12
     },
     {
       "type": "impact",
