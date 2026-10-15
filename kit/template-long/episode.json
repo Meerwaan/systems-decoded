@@ -1,0 +1,209 @@
+{
+  "id": "__ID__",
+  "slug": "__SLUG__",
+  "title": "__TITLE__",
+  "format": "long",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "parts": [
+      "ouvre",
+      "etape1",
+      "etape2"
+    ]
+  },
+  "post": {
+    "youtube": {
+      "title": "L'accroche la plus forte du film : la promesse avec le mot cherché",
+      "titleAlts": [
+        "Le paradoxe que le film prouve : ce qu'on y apprend",
+        "La scène choc, telle qu'elle est dans le film : ce qu'elle cache"
+      ],
+      "titleNote": "Putaclic mais fidèle (docs/recette-long.md, « Le titre ») : l'accroche d'abord, chaque mot vrai dans le film, 60 à 90 caractères.",
+      "descriptionTemplate": "Les deux premières lignes : l'accroche et le mot que les gens cherchent.\n\nChapitres\n__CHAPITRES__\n\nSources : …\n\nFabriqué pour te sauver : comment on fabrique les objets qui te protègent. Abonne-toi : on se retrouve très vite, dans une autre usine.\n\nLa question du commentaire ?",
+      "hashtags": [
+        "#commentcestfait",
+        "#fabrication"
+      ],
+      "pinned": "La question du commentaire, et sa réponse en une phrase (150 caractères au plus).",
+      "endScreen": "Les 15 dernières secondes laissent la moitié droite de l'image libre pour l'écran de fin."
+    }
+  },
+  "thumb": {
+    "at": "etape2+1",
+    "title": [
+      "DEUX MOTS",
+      "ÉNORMES"
+    ],
+    "tone": "signal",
+    "tag": "Un fait · un chiffre",
+    "cam": {
+      "side": -420,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  },
+  "thumb2": {
+    "at": "etape1+1",
+    "title": [
+      "UN AUTRE",
+      "OBJET"
+    ],
+    "tone": "veille",
+    "tag": "Un autre fait",
+    "cam": {
+      "side": -420,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  },
+  "thumb3": {
+    "at": "ouvre+1",
+    "title": [
+      "UNE AUTRE",
+      "PHRASE"
+    ],
+    "tone": "signal",
+    "tag": "L'objet",
+    "cam": {
+      "side": -420,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  },
+  "sources": [],
+  "beats": [
+    {
+      "id": "accroche",
+      "chap": "Introduction",
+      "text": "Une phrase *choc*, pour toi, au présent.",
+      "vo": "[conversational, curious] Une phrase choc, pour toi, au présent."
+    },
+    {
+      "id": "ouvre",
+      "chap": "On l'ouvre",
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "etape1",
+      "chap": "Première étape",
+      "text": "La première machine de la chaîne, et ce qu'elle *risque*.",
+      "vo": "[warm, conversational] La première machine de la chaîne, et ce qu'elle risque."
+    },
+    {
+      "id": "etape2",
+      "chap": "Deuxième étape",
+      "text": "La suivante, et ce qu'elle +garde+.",
+      "vo": "[curious] La suivante, et ce qu'elle garde.",
+      "midroll": true
+    },
+    {
+      "id": "boucle",
+      "text": "Une dernière phrase qui retombe sur…",
+      "vo": "[conversational, curious] Une dernière phrase qui retombe sur,"
+    }
+  ],
+  "cues": {
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:retombe"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "music",
+      "gain": -21,
+      "curve": [
+        [
+          0,
+          0.9,
+          0.5
+        ],
+        [
+          "ouvre-0.4",
+          0.55,
+          0
+        ],
+        [
+          "etape1-1",
+          1,
+          0.55
+        ],
+        [
+          "boucle",
+          0.8,
+          0.5
+        ]
+      ]
+    },
+    {
+      "type": "drone",
+      "gain": -27,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "chapters",
+      "skip": [
+        "ouvre"
+      ]
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

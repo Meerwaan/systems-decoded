@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Système Décodé · __ID__ · __TITLE__</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <link rel="stylesheet" href="gen/long.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* The recurring devices of the long format are styled in kit/long.css (header, chapter cards, keywords,
+         facts). The chapters create their facts and chips from script (kit/lib/long.js: fact, chipEl): this page
+         does not change from one chapter to the next, so several hands can stage chapters at the same time. */
+    </style>
+  </head>
+  <body class="long">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="60" data-width="1920" data-height="1080">
+      <canvas id="stage" width="1920" height="1080"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1920 1080"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier __ID__ · Fabriqué pour te sauver</span></div>
+        <div class="hud__title" id="hud-title">__TITLE__</div>
+        <div class="hud__step"><div class="hud__step-n" id="hud-step-n">Hors chaîne</div><div class="hud__step-t" id="hud-step-t"></div></div>
+        <div class="hud__temp"><div class="hud__temp-l">Température du verre</div><div class="hud__temp-v" id="hud-temp-v">—</div></div>
+        <div class="hud__rule"></div>
+        <div class="hud__line" id="hud-line"></div>
+        <em class="hud__brand">Système Décodé</em>
+      </header>
+
+      <!-- the chapters' chips and facts are created here by script -->
+      <div id="chips" class="layer"></div>
+      <div id="facts" class="layer"></div>
+
+      <!-- the chute (kit/lib/blocks.js · retitle) -->
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">L'idée reçue<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">La vérité</span>
+          </span>
+        </div>
+      </div>
+
+      <div id="callouts" class="layer"></div>
+      <div id="keywords"></div>
+      <div id="chapters"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
