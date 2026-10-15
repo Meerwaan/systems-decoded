@@ -106,6 +106,90 @@ export function sfx(dir, { ep = loadEpisode(dir), sched = schedule(ep), force = 
         return (tone + lp * 2.0 + (airA - airB) * 0.16) * g * levelAt(t) * edge * (0.85 + 0.15 * Math.sin(TAU * 0.19 * t));
       }, under);
     },
+    // The long format: under each chapter card (it comes 0.9 s before the chapter's first word) a whoosh and a hit,
+    // which also hide the seam between two voice requests. `skip`: chapter beats that carry their own sound.
+    chapters({ skip = [], gain = -17, whoosh = -22 }) {
+      sched.beats.filter((b) => b.chap).slice(1).forEach((b) => {
+        if (skip.includes(b.id)) return;
+        synth.whoosh({ at: `${b.id}-1.35`, dur: 0.9, gain: whoosh });
+        synth.impact({ at: `${b.id}-0.9`, gain, size: 0.9 });
+      });
+    },
+    // The long format's music (a computer, a television: there is room for it), under the voice like the drone.
+    // A minor progression, two bars a chord (Dm · B♭ · F · C): a pad of detuned voices, a bass on the half bar,
+    // and — where the story pushes ("drive" > 0) — an arpeggio and a soft kick. "curve": [[moment, level, drive], …].
+    // Read from wavetables: nine minutes are written in a few seconds. Deterministic, like everything here.
+    music({ gain = -24, bpm = 84, root = 73.42, curve = [[0, 1, 0]], from = 0, to }) {
+      const pts = curve.map(([ref, level, drive = 0]) => [at(ref), level, drive]).sort((a, b) => a[0] - b[0]);
+      const valueAt = (t, k) => {
+        if (t <= pts[0][0]) return pts[0][k];
+        for (let j = 1; j < pts.length; j++) {
+          if (t < pts[j][0]) {
+            const u = (t - pts[j - 1][0]) / (pts[j][0] - pts[j - 1][0]);
+            return pts[j - 1][k] + (pts[j][k] - pts[j - 1][k]) * (u * u * (3 - 2 * u));
+          }
+        }
+        return pts.at(-1)[k];
+      };
+      const t0 = at(from);
+      const t1 = to == null ? total : at(to);
+      const SIZE = 2048;
+      const table = (harm) => Float32Array.from({ length: SIZE + 1 }, (_, i) => harm.reduce((v, a, n) => v + a * Math.sin((TAU * (n + 1) * i) / SIZE), 0));
+      const padWave = table([1, 0.5, 0.33, 0.22, 0.14, 0.09, 0.05]);
+      const pluck = table([1, 0, 0.11, 0, 0.04]);
+      const read = (w, ph) => w[((ph - Math.floor(ph)) * SIZE) | 0];
+      const semi = (n) => Math.pow(2, n / 12);
+      const CHORDS = [[0, 3, 7], [-4, 0, 3], [3, 7, 10], [-2, 2, 5]]; // Dm, B♭, F, C — around D
+      const beat = 60 / bpm;
+      const span = beat * 8; // two bars
+      const g = db(gain);
+      const pad = [0, 0, 0, 0, 0, 0];
+      let lpL = 0;
+      let lpBass = 0;
+      write(t0, t1 - t0, 0, (t) => {
+        const T = t0 + t;
+        const level = valueAt(T, 1);
+        const drive = valueAt(T, 2);
+        const edge = Math.min(1, t / 2) * Math.min(1, (t1 - T) / 1.5);
+        const c = Math.floor(T / span);
+        const u = (T - c * span) / span;
+        const cur = CHORDS[c % 4];
+        const prev = CHORDS[(c + 3) % 4];
+        const x = Math.min(1, u / 0.12); // a slow crossfade into each chord
+        // the pad: three voices, each two detuned oscillators, an octave above the root
+        let p = 0;
+        for (let v = 0; v < 3; v++) {
+          const fa = root * 2 * semi(cur[v]);
+          const fb = root * 2 * semi(prev[v]);
+          const ph = T * fa;
+          const phb = T * fb;
+          p += x * (read(padWave, ph * 1.0015) + read(padWave, ph * 0.9985)) + (1 - x) * (read(padWave, phb * 1.0015) + read(padWave, phb * 0.9985));
+        }
+        const cutoff = 0.05 + 0.03 * Math.sin(TAU * 0.031 * T) + 0.04 * drive;
+        lpL += cutoff * (p - lpL);
+        // the bass: the chord's root, on each half bar, a soft attack and a long tail
+        const half = beat * 2;
+        const kb = (T % half) / half;
+        const bassEnv = Math.min(1, (T % half) / 0.03) * Math.exp(-kb * 2.2);
+        const fr = root * semi(cur[0] < 0 ? cur[0] + 12 : cur[0]) / (cur[0] > 5 ? 2 : 1);
+        const bassRaw = Math.sin(TAU * fr * T) + 0.35 * Math.sin(TAU * 2 * fr * T);
+        lpBass += 0.2 * (bassRaw - lpBass);
+        let out = lpL * 0.22 + lpBass * 0.5 * bassEnv;
+        if (drive > 0.01) {
+          // the arpeggio: eighth notes over the chord, two octaves up, plucked
+          const e = beat / 2;
+          const n = Math.floor(T / e);
+          const te = T - n * e;
+          const order = [0, 1, 2, 1, 2, 0, 1, 2];
+          const fa = root * 4 * semi(cur[order[n % 8]]);
+          out += drive * 0.16 * read(pluck, T * fa) * Math.exp(-te * 9) * Math.min(1, te / 0.004);
+          // a soft kick on beats one and three
+          const kbt = T % (beat * 2);
+          if (kbt < 0.3) out += drive * 0.42 * Math.sin(TAU * (48 + 60 * Math.exp(-kbt * 30)) * kbt) * Math.exp(-kbt * 11);
+        }
+        return out * g * level * edge;
+      }, under);
+    },
     // a hit with weight: pitch-dropping sub + a short dull transient. The sub is for headphones;
     // a phone plays the saturated body (240 Hz and its odd harmonics) and, on the hits that count
     // (above −14 dB, full above −10), a short crack around 2 kHz. Same peak as the sub alone.
