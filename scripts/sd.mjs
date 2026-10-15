@@ -25,7 +25,7 @@ for (let i = 0; i < rest.length; i++) {
 // Every working command leaves one line in metrics/commandes.jsonl (what ran, on which episode, how long):
 // `npm run metrics` reads them back. Servers and one-line lookups are not timed.
 const TIMED = new Set(["build", "voice", "sfx", "snap", "check", "lint", "render", "review", "look", "cover", "phone", "qa"]);
-const metric = { t: new Date().toISOString(), cmd, ep: /^\d{3}/.test(args[0] ?? "") ? args[0].slice(0, 3) : undefined };
+const metric = { t: new Date().toISOString(), cmd, ep: /^(\d{3}|L\d{2})/.test(args[0] ?? "") ? args[0].slice(0, 3) : undefined };
 const started = Date.now();
 if (flags.draft) metric.draft = true;
 process.on("exit", (code) => {
@@ -38,7 +38,7 @@ function hf(sub, dir, extra = []) {
 }
 
 const HELP = `
-  npm run new     -- <numéro> <slug> "<Titre>"   crée episodes/<numéro>-<slug> depuis le kit
+  npm run new     -- <numéro> <slug> "<Titre>"   crée episodes/<numéro>-<slug> depuis le kit (L02… : un long, depuis kit/template-long)
   npm run build   -- <ep>                        données de timing + bundle + pistes audio
   npm run voice   -- <ep>                        séance de doublage : mesure les prises du disque, monte la meilleure par phrase
                      [--takes 3] [--retake phrase,…] [--count 3]   ce qu'il faudrait enregistrer : le coût est annoncé, rien n'est dépensé
@@ -47,6 +47,7 @@ const HELP = `
                      [--pick phrase=enregistrement,…] [--solo enregistrement]
   npm run credits                                solde ElevenLabs (appel gratuit)
   npm run essai   -- <ep> --file essais.json [--budget 300]   banc d'essai voix : un passage joué sous plusieurs directions, mesuré contre le narrateur du film
+                     --ref <ep>                                   …un film sans voix encore : mesuré contre le narrateur d'un autre film
                      --garder <essai>                             …l'essai retenu à l'oreille entre dans le film : sa direction dans le script, son enregistrement en reprise (gratuit)
   npm run sfx     -- <ep>                        régénère l'habillage sonore (audio/bed.wav) — le build le fait seul quand le timing bouge
   npm run script  -- <ep>                        affiche le script, le minutage et les cues
@@ -57,6 +58,8 @@ const HELP = `
   npm run preview -- <ep>                        studio HyperFrames (lecture en direct)
   npm run render  -- <ep> [--draft]              MP4 final dans renders/
   npm run qa      -- <ep> [--file x.mp4]         contrôle le MP4 rendu : voix calée, niveau, images parasites, fluidité
+  npm run srt     -- <ep>                        format long : sous-titres (renders/<ep>.srt) et chapitres horodatés de la description YouTube
+  npm run cover   -- <ep> [--alt 2|3]   (un long : renders/<ep>-miniature[-2|-3].png, depuis thumb, thumb2, thumb3)
   npm run cover   -- <ep>                        couverture de grille (PNG 1080×1920 dans renders/)
   npm run phone   -- <ep>                        copie du film sous 30 Mio (renders/<ep>-iphone.mp4) : ce que l'app Claude peut envoyer au téléphone hors du Wi-Fi
   npm run brand                                  exporte la photo de profil (brand/avatar.svg → .png)
@@ -111,7 +114,7 @@ try {
         const { build } = await import("./build.mjs");
         await garder(dir, { file: flags.file, nom: String(flags.garder) });
         await build(dir);
-      } else await essai(dir, { file: flags.file, budget: flags.budget != null ? Number(flags.budget) : 0 });
+      } else await essai(dir, { file: flags.file, budget: flags.budget != null ? Number(flags.budget) : 0, ref: flags.ref ? resolveEpisode(String(flags.ref)) : null });
       break;
     }
     case "credits": {
@@ -198,9 +201,14 @@ try {
       });
       break;
     }
+    case "srt": {
+      const { srt } = await import("./srt.mjs");
+      srt(resolveEpisode(args[0]));
+      break;
+    }
     case "cover": {
       const { cover } = await import("./cover.mjs");
-      await cover(resolveEpisode(args[0]));
+      await cover(resolveEpisode(args[0]), { alt: flags.alt === true ? 2 : Number(flags.alt ?? 0) });
       break;
     }
     case "phone": {
