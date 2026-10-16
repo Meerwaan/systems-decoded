@@ -1,6 +1,6 @@
 # La recette du décorateur (courts et longs)
 
-Demandée par Merwan le 2026-10-16 : « mettre en place un agent qui rentre dans le process pour ajouter des détails aux décors pour les rendre plus immersifs pour les prochaines vidéos » — d'abord pour les longs, « mais aussi pour les courts, c'est pas bête ». Essayée le même jour sur le 020 (Taipei 101), le prochain court à sortir : planche avant / après, `episodes/020-taipei-101/src/habillage.js`.
+Demandée par Merwan le 2026-10-16 : « mettre en place un agent qui rentre dans le process pour ajouter des détails aux décors pour les rendre plus immersifs pour les prochaines vidéos » — d'abord pour les longs, « mais aussi pour les courts, c'est pas bête ». Essayée le même jour sur le 020 (Taipei 101) — déjà en ligne : l'essai sert de référence, **le décorateur vaut pour les dossiers suivants** (Merwan, 16/10 : « c'est pour les suivantes »). Planche avant / après, `episodes/020-taipei-101/src/habillage.js`.
 
 Ce que reçoit l'agent décorateur. Elle complète `docs/recette-agents.md`, dont le cadre vaut en entier (un journal tenu au fur et à mesure, pas de sous-agent, planches et `essais.json` dans le dossier temporaire de la consigne — **jamais dans `renders/`**).
 

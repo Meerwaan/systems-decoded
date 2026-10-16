@@ -1,6 +1,6 @@
 # 020 · habillage — l'essai du décorateur (2026-10-16)
 
-Premier passage du décorateur (`docs/recette-decorateur.md`), fait à la main par celui qui orchestre, sur le 020 (le prochain court à sortir, choix de Merwan). Fichier : `episodes/020-taipei-101/src/habillage.js` ; quatre lignes dans `src/tour.js` (l'import, `dressTour(mount)`, `group.add`, l'appel dans `update`). **Ni le système, ni `world.js`, ni les actes n'ont bougé.** Le film rendu (`renders/020-taipei-101.mp4`) n'est PAS refait : l'habillage n'y entrera qu'avec l'accord de Merwan, au prochain rendu.
+Premier passage du décorateur (`docs/recette-decorateur.md`), fait à la main par celui qui orchestre, sur le 020 (choix de Merwan ; il était en fait publié le jour même, 16/10 à 17 h). Fichier : `episodes/020-taipei-101/src/habillage.js` ; quatre lignes dans `src/tour.js` (l'import, `dressTour(mount)`, `group.add`, l'appel dans `update`). **Ni le système, ni `world.js`, ni les actes n'ont bougé.** Le film publié (`renders/020-taipei-101.mp4`) n'est PAS refait et ne le sera pas.
 
 ## Avant
 
@@ -30,4 +30,4 @@ Brouillon rendu dans un dossier temporaire (2 min) : 3 606 images, **aucune imag
 
 ## Décision
 
-**Validé par Merwan le 2026-10-16** : l'habillage reste dans le 020, et le décorateur entre dans la chaîne des courts et des longs. L'habillage entrera dans le film au prochain rendu du 020 (avec sa voix, à refaire : un build du 020 ne trouve pas de voix valide aujourd'hui).
+**Validé par Merwan le 2026-10-16** : l'habillage reste dans le 020, et le décorateur entre dans la chaîne des courts et des longs. Le 020 étant déjà en ligne, il ne se rend pas à nouveau : son habillage reste dans le code comme **référence** du décorateur (un exemple complet d'`habillage.js`), et le décorateur vaut pour les dossiers suivants (« c'est pour les suivantes »). Ne pas relancer `render` sur le 020 : le film changerait par rapport à celui qui est publié.
