@@ -29,6 +29,7 @@ Les blocs des courts qui désignent les boutons de TikTok (`followCall`, `likeCa
 | 0. Kit 16:9 (une fois) | celui qui orchestre | ≈ 35 min |
 | 1. Architecte : `plan.js` (sans import), `world.js` (le contrat), un bouchon par décor avec sa vraie interface, les fichiers de chapitres vides, `docs/<ep>-decors.md`, `docs/<ep>-actes.md` (les phrases sur les vrais instants de la voix) | 1 agent | 27 min · 417 k |
 | 2. Décors, en parallèle, un fichier chacun | 5 agents | 23 à 28 min · 330 à 400 k chacun · 1,83 M |
+| 2 bis. **Habillage** (depuis le 16/10, pas encore mesuré sur un long) : la vie de chaque lieu — `docs/recette-decorateur.md`, `kit/lib/details.js` ; il tourne pendant l'intégration | 1 à 2 agents | visé : 20 à 25 min · 250 à 400 k chacun |
 | 3. Intégration des « À changer ailleurs » des décors dans le contrat, et la planche des candidates de la première image | 1 agent | 8 min · 272 k |
 | 4. Choisir la première image (planche de six) | celui qui orchestre | 2 min |
 | 5. Chapitres, en parallèle, un fichier par groupe de chapitres (≈ 60 à 110 s de film chacun) | 7 agents | 11 à 19 min · 280 à 380 k chacun · 2,21 M |

@@ -8,7 +8,7 @@ Ce que reçoit tout agent qui monte un acte (`acte1.js`, `acte2.js`, `acte3.js`,
 2. `docs/<ep>-actes.md` EN ENTIER (le haut vaut pour tous les actes, puis ton tableau), puis `docs/<ep>-actes-maj.md` s'il existe : ce qui a changé depuis que le plan est écrit — **ses lignes priment**.
 3. `episodes/<dossier>/src/world.js` (le contrat : `FIRST`, `POSE0`, `VIEW`, `BENCHED`, `STAGED`) et `main.js` (ce que lit l'en-tête).
 4. `kit/lib/direct.js`, `kit/lib/blocks.js`.
-5. Les journaux des décors, `docs/journal/<ep>-*.md` : ce que fait chaque nombre, **les poses qui cadrent** (pars d'elles : elles ont été vues, celles de `VIEW` ont souvent été réglées sur des bouchons), ce qui n'est pas au niveau.
+5. Les journaux des décors et de l'habillage, `docs/journal/<ep>-*.md` (l'habillage est déjà posé quand tu montes : ne cadre pas un plan pour le cacher, signale-le s'il gêne) : ce que fait chaque nombre, **les poses qui cadrent** (pars d'elles : elles ont été vues, celles de `VIEW` ont souvent été réglées sur des bouchons), ce qui n'est pas au niveau.
 6. La forme d'un acte : le même fichier dans `episodes/017-irm/src/`. Pour `fin.js` : `kit/template/src/fin.js` aussi — l'ordre de la fin à partir du 018.
 7. `episodes/<dossier>/index.html` pour les étiquettes qui existent ; `npm run script -- <ep>` pour la table des repères.
 

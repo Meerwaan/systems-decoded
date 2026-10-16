@@ -27,6 +27,7 @@ import { rng } from "@kit/rng.js";
 import { makeFigure } from "@kit/figure.js";
 import { glass, asShell, lineMat, anchor, fatLine } from "@kit/build3d.js";
 import { TOWER, CAGE, LEAN, GALLERY, YOU, BONES, CITY } from "./plan.js";
+import { dressTour } from "./habillage.js";
 
 const INK = new THREE.Color(BRAND.ink);
 const VEILLE = new THREE.Color(BRAND.veille);
@@ -623,6 +624,7 @@ export function buildTour() {
     const tip = P.tip ?? 0;
     const k = clamp01(((P.shell ?? 1) - 0.15) / 0.85);
     const quake = clamp01(P.quake ?? 0);
+    dress.update({ shell: k, city: clamp01(P.city ?? 0) }, time); // the life of the place: habillage.js
 
     // the bend, slice by slice
     for (let i = 0; i < slices.length; i++) {
@@ -700,5 +702,7 @@ export function buildTour() {
     }
   }
 
+  const dress = dressTour(mount);
+  group.add(dress.group);
   return { group, mount, A, update };
 }
