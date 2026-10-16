@@ -100,6 +100,19 @@ export function nextFile(tl, { showAt, factAt, hideAt, railFrom = showAt, railTo
 }
 
 /**
+ * HORS-SÉRIE — the long the promo sends to (#film): a cartouche in the top zone, the bar fills like a video
+ * that starts, the account name lights up in the header. The word YouTube, never its logo. One call only.
+ */
+export function filmCall(tl, { showAt, hideAt, barFrom = showAt + 0.3, barTo = hideAt - 0.3 }) {
+  tl.fromTo("#film", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, showAt);
+  tl.fromTo("#film-bar i", { scaleX: 0 }, { scaleX: 1, duration: Math.max(0.3, barTo - barFrom), ease: "none" }, barFrom);
+  const brand = document.querySelectorAll(".hud__brand");
+  tl.to(brand, { color: "#5cffb0", duration: 0.2, ease: "power2.out" }, showAt);
+  tl.to("#film", { opacity: 0, y: -24, duration: 0.25, ease: "power2.in" }, hideAt);
+  tl.to(brand, { color: "rgba(233, 228, 216, 0.62)", duration: 0.3 }, hideAt);
+}
+
+/**
  * THE THRESHOLD — the subscribe call that is heard. On the first curve the account got (003), one viewer in
  * ten was still there for the "Abonne-toi" of the end; at the door of act 3 (≈ 25–32 s) they are three to four
  * times as many, and they have just been given something. So the call is ONE sentence, said there, three seconds

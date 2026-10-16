@@ -914,6 +914,11 @@
           "nom": "rendu",
           "debut": "2026-10-14T16:43:03.425Z",
           "fin": "2026-10-14T16:48:17.113Z"
+        },
+        {
+          "nom": "decorateur",
+          "debut": "2026-10-16T02:35:45.857Z",
+          "fin": "2026-10-16T02:53:11.284Z"
         }
       ],
       "agents": [
@@ -1143,6 +1148,11 @@
           "nom": "rendu",
           "debut": "2026-10-14T16:53:29.949Z",
           "fin": "2026-10-14T16:59:31.100Z"
+        },
+        {
+          "nom": "decorateur",
+          "debut": "2026-10-16T02:44:43.026Z",
+          "fin": "2026-10-16T02:53:10.601Z"
         }
       ],
       "agents": [
@@ -1674,6 +1684,110 @@
           "quoi": "fin",
           "session": 35,
           "hebdo": 65
+        }
+      ]
+    },
+    "HS01": {
+      "etapes": [
+        {
+          "nom": "script",
+          "debut": "2026-10-16T02:59:15.047Z",
+          "fin": "2026-10-16T02:59:25.810Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-10-16T02:59:25.810Z",
+          "fin": "2026-10-16T03:07:49.182Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-10-16T03:46:25.572Z",
+          "fin": "2026-10-16T03:46:44.014Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-10-16T03:56:33.297Z",
+          "fin": "2026-10-16T03:56:50.047Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-10-16T03:57:14.144Z",
+          "fin": "2026-10-16T04:10:11.602Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-16T04:10:11.602Z",
+          "fin": "2026-10-16T04:16:40.537Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-10-16T04:16:40.537Z",
+          "fin": "2026-10-16T04:18:32.751Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-16T04:18:32.751Z",
+          "fin": "2026-10-16T04:23:11.028Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-16T04:23:11.028Z",
+          "fin": "2026-10-16T04:33:05.365Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "architecte",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 280758,
+          "minutes": 12,
+          "outils": 39,
+          "images": 30
+        },
+        {
+          "nom": "acte1",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 216991,
+          "minutes": 4,
+          "outils": 20,
+          "images": 26
+        },
+        {
+          "nom": "acte2",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 227075,
+          "minutes": 5,
+          "outils": 20,
+          "images": 26
+        },
+        {
+          "nom": "acte3",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 234763,
+          "minutes": 6,
+          "outils": 20,
+          "images": 26
+        },
+        {
+          "nom": "fin",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 214642,
+          "minutes": 4,
+          "outils": 20,
+          "images": 26
+        }
+      ],
+      "jauges": [
+        {
+          "t": "2026-10-16T03:57:14.854Z",
+          "quoi": "début image HS01",
+          "session": 13,
+          "hebdo": 68
         }
       ]
     }

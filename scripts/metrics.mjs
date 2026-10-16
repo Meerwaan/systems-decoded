@@ -56,7 +56,7 @@ function when(at) {
 }
 
 export function chrono(ep, what, name, flags) {
-  if (!/^(\d{3}|L\d{2})$/.test(ep ?? "") || !what) throw new Error("Usage : npm run chrono -- 012 <étape> | stop | agent <nom> --jetons … | jauge --session … --hebdo …");
+  if (!/^(\d{3}|L\d{2}|HS\d{2})$/.test(ep ?? "") || !what) throw new Error("Usage : npm run chrono -- 012 <étape> | stop | agent <nom> --jetons … | jauge --session … --hebdo …");
   const data = readJson(FILES.prod, { cibles: { minutes: 120, jetons: 1500000, imagesParAgent: 30 }, episodes: {} });
   const e = (data.episodes[ep] ??= {});
   e.etapes ??= [];

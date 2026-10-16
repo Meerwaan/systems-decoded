@@ -68,7 +68,7 @@ export async function review(dir, { cols = 8, only, every, zones = true } = {}) 
     figcaption { padding: 7px 2px 0; display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; }
     figcaption i { opacity: 0.55; font-style: normal; font-variant-numeric: tabular-nums; } figcaption span { grid-column: 1 / -1; opacity: 0.7; font-size: 13px; min-height: 17px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     figure.cue b { color: #5cffb0; } figure.edge b { color: #ff5b2e; }
-  </style><h1>Dossier ${esc(ep.id)} — ${esc(ep.title)}<small>${sched.duration.toFixed(1)} s · ${sched.beats.length} phrases · ${Object.keys(sched.cues).length} repères · timing ${sched.estimated ? "estimé" : "voix réelle"}</small></h1><main>${cells}</main>`;
+  </style><h1>${ep.serie === "hors-serie" ? "Hors-série" : "Dossier"} ${esc(ep.id)} — ${esc(ep.title)}<small>${sched.duration.toFixed(1)} s · ${sched.beats.length} phrases · ${Object.keys(sched.cues).length} repères · timing ${sched.estimated ? "estimé" : "voix réelle"}</small></h1><main>${cells}</main>`;
   const sheet = path.join(shots, "planche.html");
   fs.writeFileSync(sheet, html);
 

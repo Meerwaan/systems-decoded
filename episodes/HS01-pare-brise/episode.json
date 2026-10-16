@@ -1,0 +1,246 @@
+{
+  "id": "HS01",
+  "serie": "hors-serie",
+  "slug": "pare-brise",
+  "title": "Ton pare-brise",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": 3.2,
+    "title": [
+      "Ton",
+      "pare-brise"
+    ],
+    "tone": "signal",
+    "cam": {
+      "tx": -37,
+      "ty": 126,
+      "tz": -29,
+      "d": 190,
+      "az": -150,
+      "el": 12,
+      "fov": 34,
+      "shift": -420,
+      "side": 0,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Ton pare-brise doit casser pour réussir son test. Pourquoi ? On l'a suivi du sable jusqu'au crash-test. Notre premier grand film est sur notre chaîne YouTube : lien en bio.",
+    "hashtags": [
+      "#parebrise",
+      "#commentcestfait",
+      "#voiture",
+      "#securiteroutiere",
+      "#apprendresurtiktok"
+    ],
+    "pinned": "Le film entier : « Moins d'1 mm entre ta tête et la route : comment on fabrique ton pare-brise », sur notre chaîne YouTube. Lien en bio.",
+    "instagram": {
+      "caption": "Ton pare-brise doit casser pour réussir son test. Pourquoi ? On l'a suivi du sable jusqu'au jour où on lâche une tête de dix kilos dessus.\n\nHors-série 01 : notre tout premier grand format, près de neuf minutes. Il t'attend sur notre chaîne YouTube : le lien est en bio.\n\nTa vitre conducteur, tu sais lire le petit tampon dans son coin ?",
+      "hashtags": [
+        "#parebrise",
+        "#commentcestfait",
+        "#voiture",
+        "#securiteroutiere",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ton pare-brise DOIT casser : notre premier grand film t'explique pourquoi",
+      "description": "Hors-série 01 — on a suivi ton pare-brise du sable en fusion jusqu'au test où on lâche une tête de dix kilos dessus. Le film complet (8 min 51) est sur la chaîne, lié juste sous ce Short.\n\nTa vitre conducteur, tu sais lire le petit tampon dans son coin ?",
+      "hashtags": [
+        "#shorts",
+        "#parebrise",
+        "#commentcestfait",
+        "#voiture",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Hors-série 01 : la promo du L01 (le pare-brise). Aucun fait neuf : chaque phrase est payée par un beat de episodes/L01-pare-brise/episode.json, dont les sources font foi (docs/faits/L01-pare-brise.md, L01-contre-verification.md). Brief : docs/HS01-brief.md.",
+    "accroche ← L01 accroche, surprise, reponse, chute (l'essai : le pare-brise doit casser).",
+    "promesse ← L01 promesse (un film de moins d'un millimètre), reponse.",
+    "curiosite ← L01 curiosite, trempe, du, aaa, etiquette — non payée ici, voulu : la réponse est dans le long.",
+    "lancement ← le L01 entier (8 min 51) ; les dossiers courts font 79 à 98 s.",
+    "four ← L01 four, calcin (autour de 1 500 °C), fusion (une pâte orange).",
+    "flotte ← L01 plat, etain, flotte, pourquoi (le bain d'étain, non nommé ici).",
+    "flacon ← L01 flacon, etoile, nitro (Bénédictus, novembre 1903). On ne dit pas qu'il est le seul inventeur : le L01 cite un brevet de 1902 (beat premier).",
+    "tampon ← L01 tampon (E2, I trempé, II feuilleté), etiquette (laquelle viser) — non lu ici.",
+    "tete ← L01 tete (tête factice de 10 kg, lâchée d'1,5 m), surprise, reponse.",
+    "bande ← L01 bande (la bande noire cache et protège le cordon de colle) — non dit ici.",
+    "nickel ← L01 nickel (une vitre trempée peut éclater seule, des années après : sulfure de nickel) — non dit ici."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ta tête part dans le pare-brise. Il *casse*… exactement comme prévu.",
+      "vo": "[tense] Ta tête part dans le pare-brise. Il casse... exactement comme prévu."
+    },
+    {
+      "id": "promesse",
+      "text": "Entre ta tête et la route : moins d'un +millimètre+.",
+      "vo": "[serious] Entre ta tête et la route : moins d'un millimètre."
+    },
+    {
+      "id": "curiosite",
+      "hold": 0.4,
+      "text": "Et ta vitre de côté… ne l'a peut-être *pas*.",
+      "vo": "[conversational, curious] Et ta vitre de côté... ne l'a peut-être pas."
+    },
+    {
+      "id": "lancement",
+      "text": "Jusqu'ici, on ouvrait des systèmes en moins de deux minutes. Cette fois, on a suivi ton pare-brise dans l'usine. Près de neuf minutes.",
+      "vo": "[warm, conversational] Jusqu'ici, on ouvrait des systèmes en moins de deux minutes. Cette fois, on a suivi ton pare-brise dans l'usine. Près de neuf minutes."
+    },
+    {
+      "id": "four",
+      "text": "Du sable qui devient une rivière *orange*, vers [1500 °C|mille cinq cents degrés].",
+      "vo": "[curious] Du sable qui devient une rivière orange, vers mille cinq cents degrés."
+    },
+    {
+      "id": "flotte",
+      "text": "Pour qu'il soit parfaitement plat, on le fait flotter. Pas sur de l'eau.",
+      "vo": "[conversational, curious] Pour qu'il soit parfaitement plat, on le fait flotter. [short pause] Pas sur de l'eau.",
+      "hold": 0.4
+    },
+    {
+      "id": "bande",
+      "text": "Et la bande noire, au bord de ton pare-brise ? Ce n'est *pas* de la déco.",
+      "vo": "[conversational, curious] Et la bande noire, au bord de ton pare-brise ? Ce n'est pas de la déco."
+    },
+    {
+      "id": "flacon",
+      "text": "Et on est remontés jusqu'en novembre [1903|mille neuf cent trois]. Un flacon tombe par terre. Il aurait dû voler en *éclats*.",
+      "vo": "[warm, conversational] Et on est remontés jusqu'en novembre mille neuf cent trois. Un flacon tombe par terre. Il aurait dû voler en éclats.",
+      "hold": 0.5
+    },
+    {
+      "id": "tampon",
+      "text": "Un petit tampon, dans le coin de ta vitre. Le jour où il faut sortir… tu sais le lire ?",
+      "vo": "[curious] Un petit tampon, dans le coin de ta vitre. Le jour où il faut sortir... tu sais le lire ?"
+    },
+    {
+      "id": "nickel",
+      "hold": 0.5,
+      "text": "Et parfois, une vitre *éclate*… toute seule. Des années plus tard.",
+      "vo": "[serious] Et parfois, une vitre éclate... toute seule. Des années plus tard."
+    },
+    {
+      "id": "tete",
+      "text": "Et à la fin, on lâche sur lui une tête de dix kilos.",
+      "vo": "[serious] Et à la fin, on lâche sur lui une tête de dix kilos.",
+      "hold": 1.2
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.5,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[nonchalant, confident] Alors... [short pause] on l'ouvre.",
+      "voAlt": [
+        "[casual, charismatic] Alors... [short pause] on l'ouvre."
+      ]
+    },
+    {
+      "id": "pasici",
+      "hold": 0.6,
+      "text": "Pas ici.",
+      "vo": "[amused] Pas ici."
+    },
+    {
+      "id": "youtube",
+      "text": "Ce film, c'est notre tout premier grand format. Il t'attend sur notre chaîne +YouTube+ : le lien est en bio.",
+      "vo": "[warm, conversational] Ce film, c'est notre tout premier grand format. Il t'attend sur notre chaîne YouTube : le lien est en bio.",
+      "hold": 1.2
+    },
+    {
+      "id": "boucle",
+      "text": "Et tu sauras enfin ce qui se passe, le jour où…",
+      "vo": "[calm] Et tu sauras enfin ce qui se passe, le jour où,"
+    }
+  ],
+  "cues": {
+    "explode": "ouvre:on",
+    "black": "ouvre$",
+    "drop": "tete:lâche",
+    "verdict": "youtube:chaîne",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:enfin"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "drop",
+          1
+        ],
+        [
+          "black",
+          0.2
+        ],
+        [
+          "verdict",
+          0.5
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "black",
+      "dur": 0.9,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "black",
+      "gain": -12,
+      "size": 1.3
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

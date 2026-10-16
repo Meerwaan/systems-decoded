@@ -620,8 +620,8 @@
   }
 
   function render(s) {
-    document.title = `Cabine · Dossier ${s.id}`;
-    title.replaceChildren(h("span", { text: `Dossier ${s.id}${SP}—` }), " ", s.title);
+    document.title = `Cabine · ${/^HS[0-9]/.test(s.id) ? "Hors-série" : "Dossier"} ${s.id}`;
+    title.replaceChildren(h("span", { text: `${/^HS[0-9]/.test(s.id) ? "Hors-série" : "Dossier"} ${s.id}${SP}—` }), " ", s.title);
     // What a card is made of. The rest (what is kept, where the phrase sits, its note) is painted on it:
     // a field being typed in is never taken from under the fingers.
     const made = JSON.stringify(s.beats.map((b) => [b.id, b.text, b.vo, b.voAlt, b.mood, b.takes.map((t) => [t.id, t.name, t.mood, t.flags, t.spread, t.url])]));

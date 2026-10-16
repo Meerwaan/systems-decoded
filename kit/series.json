@@ -1,0 +1,5 @@
+{
+  "_": "Les séries du compte : l'étiquette de l'en-tête et de la couverture, et les trois actes. Un épisode la déclare dans episode.json → \"serie\" (absent : \"dossier\"). npm run new la choisit d'après l'identifiant (HSnn → hors-serie). Une série de plus = une ligne ici.",
+  "dossier": { "tag": "Dossier", "acts": ["01 Menace", "02 Autopsie", "03 Réponse"] },
+  "hors-serie": { "tag": "Hors-série", "acts": ["01 Menace", "02 L'usine", "03 Rendez-vous"] }
+}

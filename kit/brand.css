@@ -150,7 +150,8 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
    .rail        chevrons pointing at TikTok's own buttons (follow / like / comment)
    #net         like: the film reaches other people
    #cta-field   comment: the question, and an answer typing itself
-   #next        subscribe: the next file, classified                                   */
+   #next        subscribe: the next file, classified
+   #film        hors-série: the long it sends to (the word YouTube, never its logo)         */
 #fireglow {
   position: absolute; left: -200px; right: -200px; bottom: -420px; height: 1500px;
   background: radial-gradient(ellipse 60% 55% at 28% 100%, rgba(255, 91, 46, 0.62) 0, rgba(255, 91, 46, 0.2) 38%, rgba(255, 91, 46, 0) 70%);
@@ -222,6 +223,12 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 #next-fact { margin-top: 26px; display: flex; align-items: baseline; gap: 22px; color: var(--signal); }
 #next-fact b { font: 800 150px/0.86 var(--mono); letter-spacing: -0.04em; }
 #next-fact span { font: 500 26px/1.25 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; }
+#film { position: absolute; left: var(--safe-l); right: var(--safe-r); top: calc(var(--slot-top) + 6px); padding: 30px 34px 34px; border: 2px solid var(--veille); background: rgba(7, 10, 12, 0.86); opacity: 0; }
+#film .panel__h { color: var(--veille); }
+#film-title { margin-top: 22px; font: 800 96px/0.95 var(--display); text-transform: uppercase; color: var(--ink); }
+#film-bar { margin-top: 28px; height: 8px; background: var(--ink-faint); }
+#film-bar i { display: block; height: 100%; background: var(--veille); transform: scaleX(0); transform-origin: 0 50%; box-shadow: 0 0 18px var(--veille); }
+#film-where { margin-top: 26px; display: flex; justify-content: space-between; align-items: baseline; font: 700 30px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--veille); }
 #next-cta { margin-top: 30px; display: flex; justify-content: space-between; align-items: center; font: 700 28px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--veille); }
 
 /* ─────────────────────────────────────────────── THE HOOK (buildHook)

@@ -25,7 +25,7 @@ for (let i = 0; i < rest.length; i++) {
 // Every working command leaves one line in metrics/commandes.jsonl (what ran, on which episode, how long):
 // `npm run metrics` reads them back. Servers and one-line lookups are not timed.
 const TIMED = new Set(["build", "voice", "sfx", "snap", "check", "lint", "render", "review", "look", "cover", "phone", "qa"]);
-const metric = { t: new Date().toISOString(), cmd, ep: /^(\d{3}|L\d{2})/.test(args[0] ?? "") ? args[0].slice(0, 3) : undefined };
+const metric = { t: new Date().toISOString(), cmd, ep: /^(\d{3}|L\d{2}|HS\d{2})/.exec(args[0] ?? "")?.[0] };
 const started = Date.now();
 if (flags.draft) metric.draft = true;
 process.on("exit", (code) => {

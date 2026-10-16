@@ -239,6 +239,17 @@ const POSTS = {
       hashtags: ["#shorts", "#batterietelephone", "#smartphone", "#lithium", "#science"],
     },
   },
+  "HS01-pare-brise": {
+    instagram: {
+      caption: "Ton pare-brise doit casser pour réussir son test. Pourquoi ? On l'a suivi du sable jusqu'au jour où on lâche une tête de dix kilos dessus.\n\nHors-série 01 : notre tout premier grand format, près de neuf minutes. Il t'attend sur notre chaîne YouTube : le lien est en bio.\n\nTa vitre conducteur, tu sais lire le petit tampon dans son coin ?",
+      hashtags: ["#parebrise", "#commentcestfait", "#voiture", "#securiteroutiere", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ton pare-brise DOIT casser : notre premier grand film t'explique pourquoi",
+      description: "Hors-série 01 — on a suivi ton pare-brise du sable en fusion jusqu'au test où on lâche une tête de dix kilos dessus. Le film complet (8 min 51) est sur la chaîne, lié juste sous ce Short.\n\nTa vitre conducteur, tu sais lire le petit tampon dans son coin ?",
+      hashtags: ["#shorts", "#parebrise", "#commentcestfait", "#voiture", "#science"],
+    },
+  },
 };
 
 const problems = [];

@@ -10,6 +10,8 @@ import { build } from "./build.mjs";
 import { resolveMoment } from "../kit/lib/ref.mjs";
 import { frameOf } from "./lib/frame.mjs";
 
+const SERIES = JSON.parse(fs.readFileSync(path.join(ROOT, "kit", "series.json"), "utf8"));
+
 // The long format's thumbnail (1280×720, drawn at 1920×1080 and scaled): one object, two or three words that read
 // at 160 px wide. episode.json → "thumb": { "at", "cam", "state", "title": ["IL DOIT", "CASSER"], "tone": "signal" }.
 // The last line takes the tone; the words sit on the left, the object on the right.
@@ -88,7 +90,7 @@ export async function cover(dir, { alt = false } = {}) {
         let size = parseFloat(getComputedStyle(h1).fontSize);
         while (size > 90 && h1.scrollWidth > h1.clientWidth) h1.style.fontSize = `${(size -= 4)}px`;
       },
-      { at, cam: cfg.cam ?? {}, lines, id: ep.id, style: F.long ? LONG : STYLE, state: cfg.state ?? null, tone: cfg.tone ?? "veille", tag: cfg.tag ?? null, grade: cfg.grade ?? null },
+      { at, cam: cfg.cam ?? {}, lines, id: ep.id, style: F.long ? LONG : STYLE, state: cfg.state ?? null, tone: cfg.tone ?? "veille", tag: cfg.tag ?? `${SERIES[ep.serie ?? "dossier"]?.tag ?? "Dossier"} ${ep.serie && ep.serie !== "dossier" ? ep.id.replace(/^[A-Z]+/, "") : ep.id}`, grade: cfg.grade ?? null },
     );
     await page.screenshot({ path: out, clip: { x: 0, y: 0, width: F.w, height: F.h } });
   } finally {

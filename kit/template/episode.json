@@ -1,5 +1,6 @@
 {
   "id": "__ID__",
+  "serie": "__SERIE__",
   "slug": "__SLUG__",
   "title": "__TITLE__",
   "fps": 30,
