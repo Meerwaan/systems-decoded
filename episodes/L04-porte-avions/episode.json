@@ -1,0 +1,1004 @@
+{
+  "id": "L04",
+  "slug": "porte-avions",
+  "title": "Porte-avions",
+  "format": "long",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "parts": [
+      "bravo",
+      "avance",
+      "fonce",
+      "gite",
+      "r2menace",
+      "tombee",
+      "lso",
+      "ely",
+      "approche",
+      "du"
+    ]
+  },
+  "post": {
+    "youtube": {
+      "title": "De 0 à 240 km/h en 75 mètres : les machines cachées du porte-avions Charles de Gaulle",
+      "titleAlts": [
+        "Ses réacteurs nucléaires lancent ses avions : dans les machines du porte-avions Charles de Gaulle",
+        "Catapulte, miroir, câbles : comment le porte-avions Charles de Gaulle lance et rattrape ses Rafale"
+      ],
+      "titleNote": "Putaclic mais fidèle : le fait du titre est dit à ≈ 0:08 (promesse) — un Rafale « passe de 0 à 130 nœuds sur les 75 mètres de la catapulte » (Journal de l'Aviation, lu le 21/10, B), soit ≈ 240 km/h ; « 0 à 250 km/h en 75 mètres » selon la fiche du ministère (A, vue en résumé). « Les machines cachées » : les cylindres de la catapulte sous le pont, les masses dans la coque, le frein sous les câbles. Mot cherché (autocomplétion de YouTube, relevée le 21/10) : « porte avion charles de gaulle » (1re suggestion de « porte avion ») ; aussi « catapulte porte avion », « porte avion charles de gaulle decollage ». Écrit avec l'orthographe juste, « porte-avions Charles de Gaulle » (que la recherche de YouTube ne sépare pas de « porte avion » : supposé, pas vérifié). Variante 1 : le paradoxe des réacteurs, au pluriel (contre-vérification du 21/10 : exacte au sens de la fiche du ministère, « vapeur produite par la chaufferie nucléaire », lue en résumé seulement — la relire avant de la mettre en test A/B) ; variante 2 : la version « comment », avec « catapulte ». Aucun mot des trois miniatures (IL NE BOUGE PAS, FAITE POUR CASSER, REVENIR DE NUIT) dans le titre.",
+      "keyword": "porte-avions Charles de Gaulle",
+      "descriptionTemplate": "Porte-avions Charles de Gaulle : sa catapulte lance ton Rafale de 0 à 240 km/h en 75 mètres, retenu jusqu'au dernier instant par une pièce faite pour casser. Et le soir, il faut revenir t'y poser… de nuit, sur trois câbles.\n\nChapitres\n__CHAPITRES__\n\nSources : Marine nationale et ministère des Armées (fiche « Porte-avions », Bulletin de la Marine n° 80, Bulletin de la Marine n° 237 « Entre ciel et mer : histoire et technique de l'appontage », kit pédagogique « Le grand Charles ») · Musée national de la Marine (fiche « chien jaune ») · Le Journal de l'Aviation · Naval Technology · ENS Paris-Saclay (sujet de concours 2022, la stabilisation) · US Navy : Naval Safety Command et Naval History and Heritage Command (USS Forrestal, 1967).\n\nSystème Décodé : on ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite.\n\nEt toi, sur ce pont : chien jaune… ou pilote ?",
+      "hashtags": [
+        "#porteavions",
+        "#charlesdegaulle",
+        "#rafale",
+        "#marinenationale",
+        "#catapulte"
+      ],
+      "pinned": "Si tu as servi sur le Charles de Gaulle : ton poste ? Sinon, réponds juste « chien jaune » ou « pilote ».",
+      "thumbnail": "16:9, fond noir, trois miniatures, trois promesses, chacune payée avant 30 s. (1) IL NE BOUGE / PAS (dernier mot en signal) : le Rafale M plein, éclairé, de trois quarts avant, au tiers droit, ses deux tuyères allumées, la barre de retenue tendue sous son train, le pont qui file en diagonale jusqu'à la mer ; cartouche « PLEINE POUSSÉE · RAFALE M » — payée par l'accroche (« ne bouge pas », ≈ 0:03). (2) FAITE POUR / CASSER (signal) : la barre de retenue en gros plan, pleine et éclairée, sa pièce calibrée qui se rompt dans un éclat, la vapeur qui jaillit de la fente de la catapulte ; cartouche « CATAPULTE À VAPEUR » — payée par la promesse (« faite pour casser », ≈ 0:07). (3) REVENIR / DE NUIT (veille) : la crosse du Rafale qui attrape le troisième câble, de nuit, la boule du miroir allumée au bord de la piste, la mer noire au bout du pont ; cartouche « APPONTAGE · 3 CÂBLES » — payée par le défi (« de nuit », ≈ 0:20). Rien dans le quart bas droit (la durée de YouTube), jamais de personnage de verre, aucun logo.",
+      "endScreen": "Les 15 dernières secondes (like → rendez-vous → boucle) laissent la moitié droite de l'image libre pour l'écran de fin."
+    }
+  },
+  "thumb": {
+    "at": "plein:tient",
+    "title": [
+      "IL NE BOUGE",
+      "PAS"
+    ],
+    "tone": "signal",
+    "tag": "Pleine poussée · Rafale M",
+    "cam": {
+      "side": -420,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  },
+  "thumb2": {
+    "at": "casse:casse",
+    "title": [
+      "FAITE POUR",
+      "CASSER"
+    ],
+    "tone": "signal",
+    "tag": "Catapulte à vapeur",
+    "cam": {
+      "side": -420,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  },
+  "thumb3": {
+    "at": "attrape:andromède",
+    "title": [
+      "REVENIR",
+      "DE NUIT"
+    ],
+    "tone": "veille",
+    "tag": "Appontage · 3 câbles",
+    "cam": {
+      "side": -420,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  },
+  "sources": [
+    "Faits : docs/faits/L04-porte-avions.md (recherche du 21/10, niveaux A/B/C) et, pour l'appontage, docs/faits/015-brin-arret.md et 015-contre-verification.md. Vérifié en plus pour ce script, le 21/10 : Le Journal de l'Aviation (journal-aviation.com/?p=25530, B), lu à la source — vapeur « contenue dans un ballon de 54 m3 et régulée à 30 bars », « libérée via la vanne de lancement, dans les cylindres vapeur qui se situent sous le pont » ; « un chariot relié à deux ensembles mobiles et auquel est relié le croc » ; les annonces « Tensionnement… paré pont… je valide… paré partout… paré feu » ; un Rafale « passe de 0 à 130 noeuds sur les 75 mètres de la catapulte latérale » ; « le vent relatif, qui doit être de 28 noeuds » ; « Un appontage par minute, toutes les deux minutes de nuit, sur une surface grande comme un terrain de tennis » ; Athéna « déesse de la guerre », Aphrodite, Andromède « sauvée de justesse par Persée » ; « Chaque brin est changé tous les 125 appontages » ; le Pedro « vole à bâbord du porte-avions lors de chaque catapultage et chaque appontage » ; « des petites maquettes représentant les aéronefs sont placées sur une représentation à plat du pont d'envol » ; « Bravo – 30 minutes, bravo représentant l'heure du catapultage ». Cette page NE DIT PAS d'où vient la vapeur. La fiche du ministère « Les catapultes du porte-avions Charles de Gaulle » (archives.defense.gouv.fr) reste injoignable (essayé le 21/10). Contre-vérification faite le 21/10 : docs/faits/L04-contre-verification.md (huit phrases corrigées : bruit, gestes, vapeur2, paire, avance, ascenseur, juge, biais).",
+    "Le navire : 261,5 m, 42 000 t, 27 nœuds au plus, environ 2 000 marins, une quarantaine d'aéronefs, 3 200 t de carburant aviation (fiche Marine « Porte-avions » et BM n° 80, A) ; « deux centrales nucléaires » (kit « Le grand Charles », A) ; seul porte-avions à propulsion nucléaire hors des États-Unis (Wikipédia FR, presse, B) ; avec les Nimitz, le seul à catapultes à vapeur (Wikipédia FR, B) ; les plus récents (Ford américain, Fujian chinois) à catapultes électromagnétiques (B, le Fujian vu en résumé). « Plus de 260 mètres » arrondit 261,5 m.",
+    "Catapultes : deux catapultes à vapeur américaines C13-3, 75 m de course, l'une dans l'axe à l'avant, l'autre sur la piste oblique (navypedia, Wikipédia FR, B) ; « des avions de plus de vingt tonnes » : la fiche du ministère (résumé) parle d'avions de 8 à 23 t, le Rafale M pèse environ 22 t au maximum (contre-vérification) ; les 27 t (60 000 lb) sont la capacité du modèle C13-3 américain, pas une donnée du navire : non dites ; la vitesse d'ouverture de la vanne dépend de la masse de l'avion et de la vitesse demandée, réglée par l'équipe de la cabine, pas par le pilote ; cabine au ras du pont, un ingénieur et un opérateur (Journal de l'Aviation, B) ; barre de retenue entre l'arrière du train avant et le pont, pièce calibrée qui cède quand la pression dépasse la valeur réglée (Wikipédia EN, B ; fiche du ministère « hold-back dont une pièce cassante cède », A vue en résumé) ; mise en tension qui retire le mou (Wikipédia EN, B) ; un avion toutes les 30 s (BM n° 80, A ; le Journal de l'Aviation dit 45 s en alternance). « Deux secondes environ » est un calcul : 75 m en accélération régulière jusqu'à 67 m/s, ≈ 2,2 s. « Une longue fente » : la fente de la catapulte, visible sur toute photo du pont, non citée.",
+    "La vapeur vient de la chaufferie nucléaire : fiche du ministère « Les catapultes du porte-avions Charles de Gaulle » (« vapeur à 30 bar produite par la chaufferie nucléaire (1 chaufferie/catapulte) »), lue en résumé seulement, page injoignable (essayée trois fois) ; ni la fiche Marine ni Wikipédia FR ne disent d'où vient la vapeur. D'où la phrase vapeur2 « La chaufferie nucléaire qui fait avancer le bateau… vient de te lancer » (le mot de la fiche, plus « le réacteur ») et la variante 1 du titre au pluriel. Si la fiche s'ouvre un jour, relire ces deux phrases. « Une chaufferie par catapulte » n'est pas dit.",
+    "Le vent : 28 nœuds de vent relatif (≈ 52 km/h, Journal de l'Aviation, B) ; le navire se met face au vent et file à 27 nœuds au plus (A) : « presque tout le vent qu'il te faut… à lui seul » compare 27 et 28 nœuds ; « de la vitesse en plus sous tes ailes » : la physique du vent relatif, non citée.",
+    "Le pont sans radio : « Pour ne pas créer d'interférences entre les différentes opérations, les communications par radio sont interdites » — la raison, pas le bruit ; l'officier d'appontage, lui, parle bien au pilote à la radio (BM n° 237) ; une centaine de gestes compris de tous ceux qui en ont besoin (« compris de tous ceux du pont »), chiens jaunes qui « coordonnent l'ensemble des mouvements du personnel et des appareils sur le pont », chiens jaunes en gilet jaune qui ordonnent le catapultage et gèrent l'appontage, gilet porté aussi, à quelques exceptions près, dans les marines américaine, britannique et espagnole, surnom tiré du jaune et de « wave off » dit vite, fort et plusieurs fois, qui ressemble à un aboiement (Musée national de la Marine, fiche « chien jaune », B+) ; « Bravo », les maquettes à plat, le pont en six zones, les pastilles (vert disponible, rouge indisponibilité longue), les feux de couleur de la passerelle aviation pour le roulage (Journal de l'Aviation, B). Simplifications : « ton chien jaune te place sur la catapulte », « fait avancer l'avion suivant », « ont dégagé la piste », « sous les yeux de ton chien jaune » (le soir, à l'appontage) appliquent aux chiens jaunes leur rôle de coordination des mouvements sur le pont et de gestion de l'appontage (Musée de la Marine ; « personnels responsables du pont d'envol », Journal de l'Aviation) ; personne ne dit qu'ils rangent les avions : `ascenseur` est au passif. Leurs gestes précis ne sont ni décrits ni montrés comme exacts (non trouvés). Le « wave off » de la nuit est dit par l'officier d'appontage (BM n° 237) ; `du` dit seulement que le spectateur l'a entendu.",
+    "La cueillette (chapitre retirable) : tous les matins, en ligne, tête baissée, « le moindre débris pourrait être dangereux pour les avions » (kit « Le grand Charles », A) ; pilotes, mécaniciens et matelots sur les 12 000 m² (reportage, B ; surface : fiche Marine, A). « Ton moteur peut l'avaler » : la façon dont un débris est dangereux (aspiré par les entrées d'air) n'est pas écrite dans la source lue — à confirmer ou à retirer. « Presque deux terrains de football » : 12 000 / 7 140 m², calcul. Le sigle « FOD » n'est pas dit.",
+    "La stabilisation : des masses qui roulent sur des rails, en travers de la coque, commandées par ordinateur, pour compenser la gîte (vent, virages, avions déplacés) (sujet de concours ENS Paris-Saclay 2022, B+ ; Wikipédia FR, Naval Technology, B) ; « plusieurs centaines de tonnes » (240 à 520 t selon les sources : aucun chiffre dit) ; deux paires d'ailerons stabilisateurs et le gouvernail, un pont visé à 0,5° près de l'horizontale, opérations aériennes jusqu'à la mer 5-6, dite « mer forte » (Naval Technology, navypedia, B) ; hangar d'environ 4 000 m², haut d'environ 6 m, deux ascenseurs de 36 t au bord du pont, chacun pour deux avions (Wikipédia FR, navypedia, Naval Technology, B). Ni plomb, ni nombre de masses, ni vitesse, ni « Cogite », ni « SATRAP ».",
+    "Le feu (chapitre retirable) : USS Forrestal, 29 juillet 1967 — une surtension dans un F-4 tire une roquette Zuni sur un A-4 chargé de carburant et d'armes ; 134 morts, 161 blessés, 21 avions détruits ; des équipes non formées au feu lancées dans un combat désordonné ; depuis, chaque marin américain suit une formation incendie, l'armement n'est plus stocké sur les avions, les avions ne restent plus longtemps pleins sur le pont (Naval Safety Command ; Naval History and Heritage Command, H-gram 008, A). Aucun numéro d'avion cité (contesté). Charles de Gaulle : une centaine de marins-pompiers (kit « Le grand Charles », A), environ 1 000 détecteurs d'incendie, une cloison coupe-feu qui sépare le hangar en deux (Wikipédia FR, B). « En pleine mer, impossible de fuir un incendie » : phrase d'auteur. L'incendie à quai de Toulon (date non vérifiée) n'est pas cité.",
+    "L'appontage : piste oblique de 195 m (Naval Technology, B : « d'à peine deux cents mètres ») ; on ne peut pas catapulter et apponter en même temps (Wikipédia FR, B), la seconde catapulte étant sur la piste oblique (navypedia, B) ; le navire se place pour que le vent arrive dans l'axe de la piste oblique, pour la vitesse relative la plus faible (« Le navire s'est placé pour que le vent arrive dans l'axe de cette piste ») ; miroir d'appontage, « meatball », raquettes de couleur jusqu'aux années 1960 et au Clemenceau, miroir utile « lorsque la visibilité le permet », phase finale de 15 à 20 s, pente / incidence / alignement, officier d'appontage ancien pilote très expérimenté qui suit à vue, corrige à la radio, surveille ce que le miroir ne donne pas (le miroir gère la pente, le pilote maîtrise le reste : « Lui surveille tout le reste »), peut ordonner un wave off et dont le rôle est crucial de nuit, aide laser DALAS-NG (détection plus rapide, meilleur suivi), viseur tête haute de nuit, ravitaillement en vol ou déroutement à terre, cinq marines (États-Unis, Chine, Russie, Inde, France), un appontage par minute de jour, pleine puissance au toucher (BM n° 237, A) ; un toutes les deux minutes de nuit, Athéna, Aphrodite, Andromède, un brin changé tous les 125 appontages, dit « environ » (Journal de l'Aviation, B, presse spécialisée) ; tension et course des brins réglées pour l'avion qui va se poser (Wikipédia FR « Brin d'arrêt », B, voir 015) ; Eugene Ely, 18 janvier 1911, cordes lestées de sacs de sable (Wikipédia EN, B) ; Paul Teste, 20 octobre 1920, sur le Béarn (BM n° 237, A). « Au-dessus de la ligne, trop haut ; en dessous, trop bas » : la lecture du miroir, déduite de « sa position par rapport au plan à tenir » (BM n° 237), non citée mot pour mot. Le frein hydraulique n'est pas réexpliqué (voir le 015).",
+    "La scène à la deuxième personne est une reconstitution : un Rafale M catapulté le matin, revenu de nuit ; le wave off à la première approche, Athéna et Aphrodite manquées, Andromède attrapée sont un scénario possible, pas un vol réel. « Sauvé de justesse » reprend la légende d'Andromède. La chute (« ce n'est pas juste une piste… on l'a lancé… on l'a rattrapé ») résume le catapultage et l'appontage avec brins ; « tout seul » parce que le pilote est à pleine poussée dans les deux cas. Aucune capacité militaire n'est citée ; le carburant (3 200 t) est dit comme une grandeur.",
+    "Deux chapitres sont retirables sans casser l'histoire : « La cueillette du matin » (r1aube → r1vent) et « Le feu sur le pont : le Forrestal, 1967 » (r2menace → r2nuit). Sans eux : les repères r1… et r2…, la coupure pub après r2nuit et les deux entrées r1aube et r2menace de voice.parts disparaissent avec eux ; le reste se raccorde tel quel (pedro → fonce, seuil → tombee)."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "chap": "Moteurs à fond, et tu ne bouges pas",
+      "text": "Tes moteurs sont à fond. Et ton Rafale ne bouge *pas*.",
+      "vo": "[tense] Tes moteurs sont à fond. Et ton Rafale ne bouge pas.",
+      "voAlt": [
+        "[tense] Tes moteurs sont à fond. [short pause] Et ton Rafale ne bouge pas."
+      ]
+    },
+    {
+      "id": "promesse",
+      "fil": "piece",
+      "text": "Une seule pièce de métal le retient. Elle est faite pour *casser*. Et quand elle cède, tu passes de zéro à [240|deux cent quarante] kilomètres-heure… en [75|soixante-quinze] mètres.",
+      "vo": "[conversational, curious] Une seule pièce de métal le retient. Elle est faite pour casser. Et quand elle cède, tu passes de zéro à deux cent quarante kilomètres-heure... en soixante-quinze mètres."
+    },
+    {
+      "id": "defi",
+      "fil": "nuit",
+      "text": "Et ce soir, il faudra revenir. Te poser sur ce même pont, sur une zone grande comme un terrain de tennis… de *nuit*.",
+      "vo": "[serious] Et ce soir, il faudra revenir. Te poser sur ce même pont, sur une zone grande comme un terrain de tennis... de nuit."
+    },
+    {
+      "id": "curiosite",
+      "fil": "chien",
+      "text": "Devant toi, un marin en gilet jaune. Pas un mot : que des gestes. À bord, on l'appelle… le +chien jaune+. Pourquoi « chien » ?",
+      "vo": "[curious] Devant toi, un marin en gilet jaune. Pas un mot : que des gestes. À bord, on l'appelle... le chien jaune. Pourquoi chien ?"
+    },
+    {
+      "id": "dessous",
+      "text": "Mais d'abord, cette pièce qui te retient. Et ce qui va la briser… se cache juste sous tes roues.",
+      "vo": "[conversational, curious] Mais d'abord, cette pièce qui te retient. Et ce qui va la briser... se cache juste sous tes roues."
+    },
+    {
+      "id": "ouvre",
+      "chap": "Comment marche la catapulte",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ]
+    },
+    {
+      "id": "eclate",
+      "text": "Sous le pont, sur [75|soixante-quinze] mètres : deux longs cylindres. Dans chacun, un piston. Les deux tirent un même chariot… et ce chariot porte un +croc+, accroché à ton avion.",
+      "vo": "[conversational, curious] Sous le pont, sur soixante-quinze mètres : deux longs cylindres. Dans chacun, un piston. Les deux tirent un même chariot... et ce chariot porte un croc, accroché à ton avion."
+    },
+    {
+      "id": "fente",
+      "text": "Du pont, tu n'en vois presque rien : une longue fente… et le croc qui en dépasse.",
+      "vo": "[curious] Du pont, tu n'en vois presque rien : une longue fente... et le croc qui en dépasse."
+    },
+    {
+      "id": "paire",
+      "text": "Le Charles de Gaulle en a deux : une à l'avant, dans l'axe du navire… et une sur le côté. Deux catapultes américaines, capables de lancer des avions de plus de [20|vingt] tonnes.",
+      "vo": "[warm, conversational] Le Charles de Gaulle en a deux : une à l'avant, dans l'axe du navire... et une sur le côté. Deux catapultes américaines, capables de lancer des avions de plus de vingt tonnes."
+    },
+    {
+      "id": "retenue",
+      "fil": "piece",
+      "text": "Et derrière ta roue avant, la pièce du début : la barre de +retenue+. Elle te relie au pont… jusqu'à ce qu'elle cède.",
+      "vo": "[curious] Et derrière ta roue avant, la pièce du début : la barre de retenue. Elle te relie au pont... jusqu'à ce qu'elle cède."
+    },
+    {
+      "id": "ballon",
+      "fil": "vapeur",
+      "text": "Et quelque part dans le navire, un grand ballon rempli de vapeur, tenue à [30|trente] bars. Cette vapeur, retiens-la : tout à l'heure, tu sauras d'où elle vient.",
+      "vo": "[conversational, curious] Et quelque part dans le navire, un grand ballon rempli de vapeur, tenue à trente bars. Cette vapeur, retiens-la : tout à l'heure, tu sauras d'où elle vient."
+    },
+    {
+      "id": "vanne",
+      "hold": 1.2,
+      "text": "Entre lui et les cylindres, une seule porte : la vanne de +lancement+. Et ce n'est pas toi qui l'ouvres. Alors… qui ?",
+      "vo": "[curious] Entre lui et les cylindres, une seule porte : la vanne de lancement. Et ce n'est pas toi qui l'ouvres. Alors... qui ?"
+    },
+    {
+      "id": "bravo",
+      "chap": "Sans radio : les gestes du pont d'envol",
+      "text": "Pour le savoir, remonte d'une demi-heure. À bord, l'heure de ton départ a un nom : +Bravo+. Et à « Bravo moins trente », ton avion doit être prêt.",
+      "vo": "[warm, conversational] Pour le savoir, remonte d'une demi-heure. À bord, l'heure de ton départ a un nom : Bravo. Et à Bravo moins trente, ton avion doit être prêt."
+    },
+    {
+      "id": "maquette",
+      "text": "Pour suivre tout le pont, découpé en six zones, on a une table : un plan à plat… et de petites maquettes d'avions, une pour chaque appareil.",
+      "vo": "[curious] Pour suivre tout le pont, découpé en six zones, on a une table : un plan à plat... et de petites maquettes d'avions, une pour chaque appareil."
+    },
+    {
+      "id": "pastille",
+      "text": "En vert, les avions disponibles. En rouge… ceux qui ne voleront pas de sitôt.",
+      "vo": "[conversational, curious] En vert, les avions disponibles. En rouge... ceux qui ne voleront pas de sitôt."
+    },
+    {
+      "id": "bruit",
+      "text": "Sur ce navire, près de deux mille marins. Une quarantaine d'avions et d'hélicoptères. Et sur le pont, pour ne pas brouiller les opérations… la radio est interdite.",
+      "vo": "[curious] Sur ce navire, près de deux mille marins. Une quarantaine d'avions et d'hélicoptères. Et sur le pont, pour ne pas brouiller les opérations... la radio est interdite."
+    },
+    {
+      "id": "gestes",
+      "text": "Alors, on se parle avec les mains. Une centaine de gestes… compris de tous ceux du pont.",
+      "vo": "[conversational, curious] Alors, on se parle avec les mains. Une centaine de gestes... compris de tous ceux du pont."
+    },
+    {
+      "id": "feux",
+      "text": "Et pour te faire rouler jusqu'à ta catapulte, la passerelle aviation allume des feux de couleur.",
+      "vo": "[curious] Et pour te faire rouler jusqu'à ta catapulte, la passerelle aviation allume des feux de couleur."
+    },
+    {
+      "id": "chef",
+      "fil": "chien",
+      "text": "Et celui qui ordonne ton catapultage, c'est lui : ton +chien jaune+. Son gilet, on le retrouve aussi chez les Américains, les Britanniques, les Espagnols.",
+      "vo": "[warm, conversational] Et celui qui ordonne ton catapultage, c'est lui : ton chien jaune. Son gilet, on le retrouve aussi chez les Américains, les Britanniques, les Espagnols."
+    },
+    {
+      "id": "cabine",
+      "text": "À côté de la catapulte, au ras du pont, une petite cabine. Dedans, un ingénieur et un opérateur vérifient les derniers réglages du tir.",
+      "vo": "[curious] À côté de la catapulte, au ras du pont, une petite cabine. Dedans, un ingénieur et un opérateur vérifient les derniers réglages du tir."
+    },
+    {
+      "id": "reglage",
+      "text": "Le plus important, c'est la vitesse à laquelle la vanne va s'ouvrir. Elle dépend de la masse de ton avion… et de la vitesse qu'on veut te donner.",
+      "vo": "[conversational, curious] Le plus important, c'est la vitesse à laquelle la vanne va s'ouvrir. Elle dépend de la masse de ton avion... et de la vitesse qu'on veut te donner."
+    },
+    {
+      "id": "toi",
+      "fil": "piece",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Toi, tu ne choisis ni ta vitesse, ni le moment. Il ne te reste qu'une chose à faire : pousser les gaz… et attendre que la pièce *casse*.",
+      "vo": "[curious] Toi, tu ne choisis ni ta vitesse, ni le moment. Il ne te reste qu'une chose à faire : pousser les gaz... et attendre que la pièce casse."
+    },
+    {
+      "id": "avance",
+      "chap": "Le catapultage, seconde par seconde",
+      "fil": "chien",
+      "text": "Bravo. Ton chien jaune te place sur la catapulte. Le croc s'accroche à ton train avant. Derrière, la barre de retenue se fixe au pont.",
+      "vo": "[warm, conversational] Bravo. Ton chien jaune te place sur la catapulte. Le croc s'accroche à ton train avant. Derrière, la barre de retenue se fixe au pont."
+    },
+    {
+      "id": "tension",
+      "text": "Les annonces s'enchaînent. « Tensionnement » : la catapulte tire ton avion vers l'avant… et le mou disparaît.",
+      "vo": "[curious] Les annonces s'enchaînent. Tensionnement : la catapulte tire ton avion vers l'avant... et le mou disparaît."
+    },
+    {
+      "id": "plein",
+      "text": "Toi, tu pousses les gaz. À fond. Ton avion tire, la catapulte tire… et la pièce tient.",
+      "vo": "[conversational, curious] Toi, tu pousses les gaz. À fond. Ton avion tire, la catapulte tire... et la pièce tient."
+    },
+    {
+      "id": "tremble",
+      "text": "Tes moteurs hurlent. Tout ton avion tremble… retenu par une seule pièce.",
+      "vo": "[curious] Tes moteurs hurlent. Tout ton avion tremble... retenu par une seule pièce."
+    },
+    {
+      "id": "pare",
+      "text": "Puis : « Paré pont. » « Paré partout. » « Paré feu. »",
+      "vo": "[conversational, curious] Puis : Paré pont. Paré partout. Paré feu."
+    },
+    {
+      "id": "souffle",
+      "fil": "vapeur",
+      "text": "La vanne s'ouvre. La vapeur se jette dans les cylindres. La pression monte… monte…",
+      "vo": "[curious] La vanne s'ouvre. La vapeur se jette dans les cylindres. La pression monte... monte..."
+    },
+    {
+      "id": "casse",
+      "paie": "piece",
+      "hold": 0.3,
+      "text": "Et la pièce *casse*.",
+      "vo": "[conversational, curious] Et la pièce casse."
+    },
+    {
+      "id": "arrache",
+      "text": "Le piston file dans son cylindre. Le chariot t'arrache vers l'avant. Ton corps s'écrase dans le siège.",
+      "vo": "[curious] Le piston file dans son cylindre. Le chariot t'arrache vers l'avant. Ton corps s'écrase dans le siège."
+    },
+    {
+      "id": "secondes",
+      "text": "Deux secondes environ… et le pont s'arrête sous toi.",
+      "vo": "[conversational, curious] Deux secondes environ... et le pont s'arrête sous toi."
+    },
+    {
+      "id": "vol",
+      "hold": 0.4,
+      "text": "[240|Deux cent quarante] kilomètres-heure. Tu +voles+.",
+      "vo": "[curious] Deux cent quarante kilomètres-heure. Tu voles."
+    },
+    {
+      "id": "trait",
+      "text": "Derrière toi, le navire n'est déjà plus qu'un trait sur la mer.",
+      "vo": "[conversational, curious] Derrière toi, le navire n'est déjà plus qu'un trait sur la mer."
+    },
+    {
+      "id": "suivant",
+      "fil": "chien",
+      "text": "En bas, ton chien jaune fait déjà avancer l'avion suivant. Ici, un avion peut partir toutes les [30|trente] secondes.",
+      "vo": "[curious] En bas, ton chien jaune fait déjà avancer l'avion suivant. Ici, un avion peut partir toutes les trente secondes."
+    },
+    {
+      "id": "pedro",
+      "fil": "nuit",
+      "hold": 1.2,
+      "text": "Et à gauche du navire, un hélicoptère vole. Un plongeur à bord. Il est là à chaque lancement… et il sera là ce soir, à ton retour.",
+      "vo": "[warm, conversational] Et à gauche du navire, un hélicoptère vole. Un plongeur à bord. Il est là à chaque lancement... et il sera là ce soir, à ton retour."
+    },
+    {
+      "id": "fonce",
+      "chap": "Le réacteur nucléaire qui lance les avions",
+      "text": "Et sous toi, le navire fonce, face au vent. Parce que pour te lancer, il faut du vent sur le pont : une cinquantaine de kilomètres-heure.",
+      "vo": "[warm, conversational] Et sous toi, le navire fonce, face au vent. Parce que pour te lancer, il faut du vent sur le pont : une cinquantaine de kilomètres-heure."
+    },
+    {
+      "id": "fabrique",
+      "text": "Ce vent, c'est de la vitesse en plus sous tes ailes, avant même de partir. Et quand il n'y en a pas assez… le navire le fabrique : il fonce dedans.",
+      "vo": "[curious] Ce vent, c'est de la vitesse en plus sous tes ailes, avant même de partir. Et quand il n'y en a pas assez... le navire le fabrique : il fonce dedans."
+    },
+    {
+      "id": "vitesse",
+      "text": "Lui peut filer à [27|vingt-sept] nœuds : cinquante kilomètres-heure. Presque tout le vent qu'il te faut… à lui seul.",
+      "vo": "[conversational, curious] Lui peut filer à vingt-sept nœuds : cinquante kilomètres-heure. Presque tout le vent qu'il te faut... à lui seul."
+    },
+    {
+      "id": "nucleaire",
+      "text": "Plus de [260|deux cent soixante] mètres, [42 000|quarante-deux mille] tonnes. Et pour pousser tout ça… deux +réacteurs nucléaires+.",
+      "vo": "[curious] Plus de deux cent soixante mètres, quarante-deux mille tonnes. Et pour pousser tout ça... deux réacteurs nucléaires."
+    },
+    {
+      "id": "unique",
+      "text": "C'est le seul porte-avions nucléaire au monde… qui ne soit pas américain.",
+      "vo": "[warm, conversational] C'est le seul porte-avions nucléaire au monde... qui ne soit pas américain."
+    },
+    {
+      "id": "vapeur2",
+      "paie": "vapeur",
+      "text": "Et ta vapeur, du début ? Elle vient de là. La chaufferie nucléaire qui fait avancer le bateau… vient de te +lancer+.",
+      "vo": "[amused] Et ta vapeur, du début ? Elle vient de là. La chaufferie nucléaire qui fait avancer le bateau... vient de te lancer."
+    },
+    {
+      "id": "nimitz",
+      "text": "Avec les grands porte-avions américains de la classe Nimitz, c'est le seul à lancer ses avions avec ces catapultes à vapeur.",
+      "vo": "[conversational, curious] Avec les grands porte-avions américains de la classe Nimitz, c'est le seul à lancer ses avions avec ces catapultes à vapeur."
+    },
+    {
+      "id": "aimants",
+      "text": "Les tout derniers, américains comme chinois, lancent leurs avions avec des catapultes électromagnétiques. Lui est resté… à la vapeur.",
+      "vo": "[curious] Les tout derniers, américains comme chinois, lancent leurs avions avec des catapultes électromagnétiques. Lui est resté... à la vapeur."
+    },
+    {
+      "id": "penche",
+      "fil": "plat",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Mais un navire qui vire, que le vent pousse… ça *penche*. Alors comment ce pont reste-t-il à plat… quand il faut y poser un avion ?",
+      "vo": "[serious] Mais un navire qui vire, que le vent pousse... ça penche. Alors comment ce pont reste-t-il à plat... quand il faut y poser un avion ?"
+    },
+    {
+      "id": "gite",
+      "chap": "Des centaines de tonnes sous le pont",
+      "text": "À plat… ce n'est pas si simple. Dans un virage serré, le navire penche. Quand le vent le pousse sur le côté, aussi.",
+      "vo": "[warm, conversational] À plat... ce n'est pas si simple. Dans un virage serré, le navire penche. Quand le vent le pousse sur le côté, aussi."
+    },
+    {
+      "id": "hangar",
+      "text": "Et même ses avions le font pencher. Sous le pont, ils dorment dans un hangar de [4 000|quatre mille] mètres carrés, haut de six mètres. Pour monter, deux ascenseurs, au bord du navire.",
+      "vo": "[curious] Et même ses avions le font pencher. Sous le pont, ils dorment dans un hangar de quatre mille mètres carrés, haut de six mètres. Pour monter, deux ascenseurs, au bord du navire."
+    },
+    {
+      "id": "ascenseur",
+      "text": "Chacun peut porter deux avions : jusqu'à [36|trente-six] tonnes. Et quand quelques avions sont rangés d'un même côté… tout le pont se met à pencher.",
+      "vo": "[conversational, curious] Chacun peut porter deux avions : jusqu'à trente-six tonnes. Et quand quelques avions sont rangés d'un même côté... tout le pont se met à pencher."
+    },
+    {
+      "id": "masses",
+      "paie": "plat",
+      "text": "Alors, dans la coque, quelque chose se met en marche. Des masses de métal, sur des rails, en travers du navire… qui roulent de l'autre +côté+.",
+      "vo": "[curious] Alors, dans la coque, quelque chose se met en marche. Des masses de métal, sur des rails, en travers du navire... qui roulent de l'autre côté."
+    },
+    {
+      "id": "tonnes",
+      "text": "Combien ? Plusieurs centaines de tonnes. Qui se baladent d'un bord à l'autre… pour que ton pont reste plat.",
+      "vo": "[amused] Combien ? Plusieurs centaines de tonnes. Qui se baladent d'un bord à l'autre... pour que ton pont reste plat."
+    },
+    {
+      "id": "ordinateur",
+      "text": "C'est un ordinateur qui les commande. Le navire penche d'un côté… elles glissent de l'autre.",
+      "vo": "[conversational, curious] C'est un ordinateur qui les commande. Le navire penche d'un côté... elles glissent de l'autre."
+    },
+    {
+      "id": "ailerons",
+      "text": "Et avec ses ailerons sous la coque et son gouvernail, le navire vise un pont plat… à un demi-degré près. De quoi faire voler ses avions, même par mer forte.",
+      "vo": "[warm, conversational] Et avec ses ailerons sous la coque et son gouvernail, le navire vise un pont plat... à un demi-degré près. De quoi faire voler ses avions, même par mer forte."
+    },
+    {
+      "id": "seuil",
+      "fil": [
+        "nuit",
+        "chien"
+      ],
+      "hold": 1.2,
+      "text": "Ce pont plat, ce soir, il faudra le retrouver. De nuit, sous les yeux de ton +chien jaune+. Si tu veux voir comment on s'y pose… +abonne-toi+ : on y arrive.",
+      "vo": "[conversational, curious] Ce pont plat, ce soir, il faudra le retrouver. De nuit, sous les yeux de ton chien jaune. Si tu veux voir comment on s'y pose... abonne-toi : on y arrive."
+    },
+    {
+      "id": "r2menace",
+      "chap": "Le feu sur le pont : le Forrestal, 1967",
+      "fil": "feu",
+      "text": "Mais avant la nuit, il y a une menace qui ne vient ni de la mer… ni du ciel. Elle est déjà à bord : le *feu*.",
+      "vo": "[serious] Mais avant la nuit, il y a une menace qui ne vient ni de la mer... ni du ciel. Elle est déjà à bord : le feu."
+    },
+    {
+      "id": "r2soutes",
+      "text": "Dans ses soutes, plus de [3 000|trois mille] tonnes de carburant pour ses avions. Et sur le pont, des moteurs allumés, à quelques mètres les uns des autres.",
+      "vo": "[conversational, curious] Dans ses soutes, plus de trois mille tonnes de carburant pour ses avions. Et sur le pont, des moteurs allumés, à quelques mètres les uns des autres."
+    },
+    {
+      "id": "r2fuir",
+      "text": "Et en pleine mer, impossible de fuir un incendie : il faut le combattre.",
+      "vo": "[curious] Et en pleine mer, impossible de fuir un incendie : il faut le combattre."
+    },
+    {
+      "id": "r2date",
+      "text": "Le [29|vingt-neuf] juillet [1967|mille neuf cent soixante-sept], sur un porte-avions américain, le Forrestal, des avions attendent leur départ.",
+      "vo": "[conversational, curious] Le vingt-neuf juillet mille neuf cent soixante-sept, sur un porte-avions américain, le Forrestal, des avions attendent leur départ."
+    },
+    {
+      "id": "r2roquette",
+      "text": "Dans l'un d'eux, une surtension électrique. Et une roquette part… toute seule.",
+      "vo": "[curious] Dans l'un d'eux, une surtension électrique. Et une roquette part... toute seule."
+    },
+    {
+      "id": "r2feu",
+      "text": "Elle frappe un autre avion, plein de carburant et d'armes. Et le pont prend *feu*.",
+      "vo": "[serious] Elle frappe un autre avion, plein de carburant et d'armes. Et le pont prend feu."
+    },
+    {
+      "id": "r2equipes",
+      "text": "Beaucoup de ceux qui se jettent dans le combat… n'ont jamais été formés au feu.",
+      "vo": "[curious] Beaucoup de ceux qui se jettent dans le combat... n'ont jamais été formés au feu."
+    },
+    {
+      "id": "r2bilan",
+      "hold": 0.5,
+      "text": "[134|Cent trente-quatre] morts. [21|Vingt et un] avions détruits.",
+      "vo": "[serious] Cent trente-quatre morts. Vingt et un avions détruits."
+    },
+    {
+      "id": "r2depuis",
+      "paie": "feu",
+      "text": "Depuis, dans la marine américaine, chaque marin apprend à combattre le feu. Et un avion ne reste plus longtemps sur le pont… plein et armé.",
+      "vo": "[warm, conversational] Depuis, dans la marine américaine, chaque marin apprend à combattre le feu. Et un avion ne reste plus longtemps sur le pont... plein et armé."
+    },
+    {
+      "id": "r2cdg",
+      "text": "Et sur le Charles de Gaulle ? Une centaine de marins-pompiers. Près de mille détecteurs d'incendie. Et dans le hangar, une cloison qui peut le couper en deux.",
+      "vo": "[curious] Et sur le Charles de Gaulle ? Une centaine de marins-pompiers. Près de mille détecteurs d'incendie. Et dans le hangar, une cloison qui peut le couper en deux."
+    },
+    {
+      "id": "r2nuit",
+      "fil": "nuit",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Ce soir, c'est sur ce pont-là, au milieu de tout ça, que tu vas devoir te poser. De *nuit*.",
+      "vo": "[serious] Ce soir, c'est sur ce pont-là, au milieu de tout ça, que tu vas devoir te poser. De nuit."
+    },
+    {
+      "id": "tombee",
+      "chap": "De nuit : le miroir d'appontage",
+      "fil": "chien",
+      "text": "La nuit est tombée. Sur le pont, les chiens jaunes ont dégagé la piste. Plus aucun avion ne part.",
+      "vo": "[warm, conversational] La nuit est tombée. Sur le pont, les chiens jaunes ont dégagé la piste. Plus aucun avion ne part."
+    },
+    {
+      "id": "simultane",
+      "text": "Sur ce navire, on ne peut pas lancer et rattraper en même temps : l'une des deux catapultes est posée… sur la piste où tu vas te poser.",
+      "vo": "[curious] Sur ce navire, on ne peut pas lancer et rattraper en même temps : l'une des deux catapultes est posée... sur la piste où tu vas te poser."
+    },
+    {
+      "id": "biais",
+      "text": "Une piste en biais, d'à peine deux cents mètres. Le navire s'est placé pour que le vent arrive dans l'axe de cette piste. Pour que tu arrives le moins vite possible, par rapport à lui.",
+      "vo": "[conversational, curious] Une piste en biais, d'à peine deux cents mètres. Le navire s'est placé pour que le vent arrive dans l'axe de cette piste. Pour que tu arrives le moins vite possible, par rapport à lui."
+    },
+    {
+      "id": "cadence",
+      "text": "De jour, on rattrape un avion par minute. De nuit… un toutes les deux minutes.",
+      "vo": "[curious] De jour, on rattrape un avion par minute. De nuit... un toutes les deux minutes."
+    },
+    {
+      "id": "viseur",
+      "text": "Dans ton viseur tête haute, tes informations de vol s'affichent devant tes yeux. Mais dehors… tout est noir.",
+      "vo": "[conversational, curious] Dans ton viseur tête haute, tes informations de vol s'affichent devant tes yeux. Mais dehors... tout est noir."
+    },
+    {
+      "id": "miroir",
+      "text": "Devant toi, un repère : au bord de la piste, un panneau de lumières. Le +miroir+ d'appontage.",
+      "vo": "[curious] Devant toi, un repère : au bord de la piste, un panneau de lumières. Le miroir d'appontage."
+    },
+    {
+      "id": "boule",
+      "text": "Au centre, une boule de lumière monte ou descend. Au-dessus de la ligne, tu es trop haut. En dessous… trop bas.",
+      "vo": "[conversational, curious] Au centre, une boule de lumière monte ou descend. Au-dessus de la ligne, tu es trop haut. En dessous... trop bas."
+    },
+    {
+      "id": "meatball",
+      "text": "Les pilotes l'appellent… la +meatball+. La boulette de viande.",
+      "vo": "[amused] Les pilotes l'appellent... la meatball. La boulette de viande."
+    },
+    {
+      "id": "raquettes",
+      "text": "Avant elle, jusqu'aux années soixante, un officier guidait les pilotes avec des raquettes de couleur.",
+      "vo": "[warm, conversational] Avant elle, jusqu'aux années soixante, un officier guidait les pilotes avec des raquettes de couleur."
+    },
+    {
+      "id": "visibilite",
+      "text": "Mais ce miroir, il faut encore le voir. Il ne marche que si la visibilité le permet.",
+      "vo": "[curious] Mais ce miroir, il faut encore le voir. Il ne marche que si la visibilité le permet."
+    },
+    {
+      "id": "quinze",
+      "text": "Et dans la dernière ligne droite, tu as quinze à vingt secondes pour tout tenir : ta pente, l'angle de ton avion… et l'axe de la piste.",
+      "vo": "[conversational, curious] Et dans la dernière ligne droite, tu as quinze à vingt secondes pour tout tenir : ta pente, l'angle de ton avion... et l'axe de la piste."
+    },
+    {
+      "id": "regarde",
+      "hold": 1.2,
+      "text": "Mais tu n'es pas seul. Au bord de la piste, quelqu'un te regarde arriver… et il peut tout *annuler*.",
+      "vo": "[serious] Mais tu n'es pas seul. Au bord de la piste, quelqu'un te regarde arriver... et il peut tout annuler."
+    },
+    {
+      "id": "lso",
+      "chap": "L'officier d'appontage",
+      "text": "Lui, c'est l'officier d'appontage. Un ancien pilote de l'aéronavale, très expérimenté.",
+      "vo": "[warm, conversational] Lui, c'est l'officier d'appontage. Un ancien pilote de l'aéronavale, très expérimenté."
+    },
+    {
+      "id": "radio",
+      "text": "Il te suit des yeux, et il te parle à la radio : un peu plus haut, un peu plus à gauche.",
+      "vo": "[curious] Il te suit des yeux, et il te parle à la radio : un peu plus haut, un peu plus à gauche."
+    },
+    {
+      "id": "juge",
+      "text": "Le miroir te donne ta pente. Lui surveille tout le reste. Et de nuit… c'est lui qui compte le plus.",
+      "vo": "[conversational, curious] Le miroir te donne ta pente. Lui surveille tout le reste. Et de nuit... c'est lui qui compte le plus."
+    },
+    {
+      "id": "laser",
+      "text": "Un laser l'aide même à te repérer plus tôt… et à mieux te suivre.",
+      "vo": "[curious] Un laser l'aide même à te repérer plus tôt... et à mieux te suivre."
+    },
+    {
+      "id": "pouvoir",
+      "fil": "recommence",
+      "text": "Et il a un pouvoir : te faire *recommencer*. Tu remets les gaz, tu refais un tour… et tu reviens.",
+      "vo": "[serious] Et il a un pouvoir : te faire recommencer. Tu remets les gaz, tu refais un tour... et tu reviens."
+    },
+    {
+      "id": "planb",
+      "hold": 1.2,
+      "text": "Et si ça ne passe toujours pas ? Un avion ravitailleur peut te redonner du carburant pour réessayer… ou on t'envoie te poser à terre.",
+      "vo": "[conversational, curious] Et si ça ne passe toujours pas ? Un avion ravitailleur peut te redonner du carburant pour réessayer... ou on t'envoie te poser à terre."
+    },
+    {
+      "id": "ely",
+      "chap": "Les trois brins d'arrêt",
+      "text": "Se poser sur un navire, c'est une vieille histoire. La toute première fois, en [1911|mille neuf cent onze] : un Américain, Eugene Ely, arrêté par des cordes… lestées de sacs de sable.",
+      "vo": "[curious] Se poser sur un navire, c'est une vieille histoire. La toute première fois, en mille neuf cent onze : un Américain, Eugene Ely, arrêté par des cordes... lestées de sacs de sable."
+    },
+    {
+      "id": "teste",
+      "text": "En France, le premier, c'est Paul Teste, en [1920|mille neuf cent vingt], sur le Béarn.",
+      "vo": "[warm, conversational] En France, le premier, c'est Paul Teste, en mille neuf cent vingt, sur le Béarn."
+    },
+    {
+      "id": "cinq",
+      "text": "Aujourd'hui, seules cinq marines au monde savent rattraper un avion sur un câble. La France en fait partie.",
+      "vo": "[curious] Aujourd'hui, seules cinq marines au monde savent rattraper un avion sur un câble. La France en fait partie."
+    },
+    {
+      "id": "brins",
+      "text": "Sur ton pont, trois câbles t'attendent. Et ils ont des noms. Le premier : Athéna, la déesse de la guerre. Le deuxième : Aphrodite.",
+      "vo": "[conversational, curious] Sur ton pont, trois câbles t'attendent. Et ils ont des noms. Le premier : Athéna, la déesse de la guerre. Le deuxième : Aphrodite."
+    },
+    {
+      "id": "andromede",
+      "fil": "andro",
+      "text": "Et le troisième, le dernier avant la mer : +Andromède+. Comme la princesse de la légende… sauvée de justesse.",
+      "vo": "[curious] Et le troisième, le dernier avant la mer : Andromède. Comme la princesse de la légende... sauvée de justesse."
+    },
+    {
+      "id": "usure",
+      "text": "Chacun est changé environ tous les [125|cent vingt-cinq] appontages. Et avant chaque appontage, sous le pont, on règle leur frein… pour l'avion qui arrive.",
+      "vo": "[warm, conversational] Chacun est changé environ tous les cent vingt-cinq appontages. Et avant chaque appontage, sous le pont, on règle leur frein... pour l'avion qui arrive."
+    },
+    {
+      "id": "bolter",
+      "text": "Au moment de toucher, tu ne freineras pas : tu mettras plein gaz. Si ta crosse rate les trois câbles… tu repars.",
+      "vo": "[curious] Au moment de toucher, tu ne freineras pas : tu mettras plein gaz. Si ta crosse rate les trois câbles... tu repars."
+    },
+    {
+      "id": "decide",
+      "fil": "nuit",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Ce soir, l'officier est là, au bord de la piste. Et dans quelques secondes… c'est lui qui va *décider*.",
+      "vo": "[serious] Ce soir, l'officier est là, au bord de la piste. Et dans quelques secondes... c'est lui qui va décider."
+    },
+    {
+      "id": "approche",
+      "chap": "Andromède, la dernière chance",
+      "text": "Première approche. Dans le noir, le navire n'est qu'une poignée de lumières. Et la boule… descend sous la ligne.",
+      "vo": "[curious] Première approche. Dans le noir, le navire n'est qu'une poignée de lumières. Et la boule... descend sous la ligne."
+    },
+    {
+      "id": "waveoff",
+      "fil": "chien",
+      "paie": "recommence",
+      "text": "Trop bas. Dans ta radio : « Wave off. Wave off. Wave off. »",
+      "vo": "[conversational, curious] Trop bas. Dans ta radio : Wave off. Wave off. Wave off."
+    },
+    {
+      "id": "tour",
+      "text": "Tu remets les gaz. Tu repasses au-dessus du pont… et tu refais le tour.",
+      "vo": "[curious] Tu remets les gaz. Tu repasses au-dessus du pont... et tu refais le tour."
+    },
+    {
+      "id": "deuxieme",
+      "text": "Deuxième approche. Cette fois, la boule reste au centre. Tu la gardes. Tu la gardes.",
+      "vo": "[conversational, curious] Deuxième approche. Cette fois, la boule reste au centre. Tu la gardes. Tu la gardes."
+    },
+    {
+      "id": "tiens",
+      "text": "Ta pente. Ton angle. Ton axe. Tu tiens tout.",
+      "vo": "[curious] Ta pente. Ton angle. Ton axe. Tu tiens tout."
+    },
+    {
+      "id": "compte",
+      "text": "Quinze secondes. Dix. Cinq.",
+      "vo": "[conversational, curious] Quinze secondes. Dix. Cinq."
+    },
+    {
+      "id": "toucher",
+      "text": "Tes roues frappent le pont. Et tu mets… *plein gaz*.",
+      "vo": "[curious] Tes roues frappent le pont. Et tu mets... plein gaz."
+    },
+    {
+      "id": "manque",
+      "text": "Athéna… manquée. Aphrodite… manquée.",
+      "vo": "[conversational, curious] Athéna... manquée. Aphrodite... manquée."
+    },
+    {
+      "id": "bout",
+      "text": "Le bout du pont fonce vers toi. Derrière… la mer, noire.",
+      "vo": "[curious] Le bout du pont fonce vers toi. Derrière... la mer, noire."
+    },
+    {
+      "id": "attrape",
+      "paie": "andro",
+      "hold": 0.3,
+      "text": "Et ta crosse attrape… +Andromède+.",
+      "vo": "[conversational, curious] Et ta crosse attrape... Andromède."
+    },
+    {
+      "id": "arret",
+      "paie": "nuit",
+      "hold": 0.3,
+      "text": "Le câble se déroule. Sous le pont, le frein avale ta vitesse. Et tu t'arrêtes… sauvé de justesse.",
+      "vo": "[curious] Le câble se déroule. Sous le pont, le frein avale ta vitesse. Et tu t'arrêtes... sauvé de justesse."
+    },
+    {
+      "id": "chute",
+      "hold": 1.2,
+      "text": "Un porte-avions, ce n'est pas juste une piste. Ce matin, ton avion n'a pas décollé tout seul : on l'a lancé. Ce soir, il ne s'est pas arrêté tout seul… on l'a +rattrapé+.",
+      "vo": "[warm, conversational] Un porte-avions, ce n'est pas juste une piste. Ce matin, ton avion n'a pas décollé tout seul : on l'a lancé. Ce soir, il ne s'est pas arrêté tout seul... on l'a rattrapé."
+    },
+    {
+      "id": "du",
+      "chap": "Pourquoi « chien jaune » ?",
+      "paie": "chien",
+      "text": "Et ton chien jaune, du début ? Le jaune, c'est son gilet. Et le chien… tu l'as entendu ce soir.",
+      "vo": "[curious] Et ton chien jaune, du début ? Le jaune, c'est son gilet. Et le chien... tu l'as entendu ce soir."
+    },
+    {
+      "id": "aboie",
+      "text": "Ce « wave off », crié vite, fort, plusieurs fois… ça ressemble à un +aboiement+. C'est de là que vient le surnom.",
+      "vo": "[warm, conversational] Ce wave off, crié vite, fort, plusieurs fois... ça ressemble à un aboiement. C'est de là que vient le surnom."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et toi, sur ce pont ? Dis-moi en +commentaire+. Si tu y as servi : ton poste. Sinon… chien jaune ? Ou pilote ?",
+      "vo": "[curious] Et toi, sur ce pont ? Dis-moi en commentaire. Si tu y as servi : ton poste. Sinon... [short pause] chien jaune ? Ou pilote ?"
+    },
+    {
+      "id": "like",
+      "text": "Et envoie cette vidéo à quelqu'un qui croit qu'un porte-avions, c'est juste une piste sur la mer : il va changer d'avis. Et si tu as appris quelque chose, un petit +like+.",
+      "vo": "[warm] Et envoie cette vidéo à quelqu'un qui croit qu'un porte-avions, c'est juste une piste sur la mer : il va changer d'avis. Et si tu as appris quelque chose, un petit like."
+    },
+    {
+      "id": "abo",
+      "text": "On se retrouve très vite, pour ouvrir un autre système qui veille sur toi.",
+      "vo": "[warm] On se retrouve très vite, pour ouvrir un autre système qui veille sur toi."
+    },
+    {
+      "id": "boucle",
+      "text": "Et demain matin, sur cette catapulte…",
+      "vo": "[calm] Et demain matin, sur cette catapulte,"
+    }
+  ],
+  "cues": {
+    "titre": "promesse:mètres",
+    "miniature": "accroche:bouge",
+    "miniature2": "promesse:casser",
+    "miniature3": "defi:nuit",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "croc": "eclate:croc",
+    "slot": "fente:fente",
+    "pair": "paire:deux",
+    "holdback": "retenue:retenue",
+    "tank": "ballon:ballon",
+    "valve": "vanne:lancement",
+    "bravo": "bravo:bravo",
+    "board": "maquette:maquettes",
+    "tokens": "pastille:vert",
+    "hands": "gestes:mains",
+    "lights": "feux:feux",
+    "dog": "chef:chien",
+    "cabin": "cabine:cabine",
+    "hookup": "avance:croc",
+    "tension": "tension:tensionnement",
+    "throttle": "plein:gaz",
+    "ready": "pare:feu",
+    "steam": "souffle:vapeur",
+    "release": "casse:casse",
+    "shot": "arrache:chariot",
+    "deckend": "secondes:arrête",
+    "airborne": "vol:voles",
+    "next": "suivant:suivant",
+    "pedro": "pedro:hélicoptère",
+    "wind": "fonce:vent",
+    "reactor": "nucleaire:réacteurs",
+    "heel": "gite:penche",
+    "lift": "ascenseur:porter",
+    "masses": "masses:roulent",
+    "fins": "ailerons:ailerons",
+    "r2rocket": "r2roquette:roquette",
+    "r2fire": "r2feu:feu",
+    "night": "tombee:nuit",
+    "mirror": "miroir:miroir",
+    "ball": "boule:boule",
+    "lso": "lso:officier",
+    "wires": "brins:câbles",
+    "andromeda": "andromede:andromède",
+    "waveoff": "waveoff:wave",
+    "touch": "toucher:frappent",
+    "catch": "attrape:andromède",
+    "stop": "arret:arrêtes",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:rattrapé",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:demain"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "space",
+      "mix": 0.22,
+      "size": 0.84,
+      "damp": 0.35
+    },
+    {
+      "type": "music",
+      "width": 0.7,
+      "sections": "chapters",
+      "skip": [
+        "ouvre"
+      ],
+      "drop": 0.5,
+      "gain": -21,
+      "phone": 0.25,
+      "curve": [
+        [
+          0,
+          0.9,
+          0.5
+        ],
+        [
+          "ouvre-0.4",
+          0.55,
+          0
+        ],
+        [
+          "bravo-1",
+          1,
+          0.55
+        ],
+        [
+          "avance-1",
+          1,
+          0.8
+        ],
+        [
+          "fonce-1",
+          1,
+          0.5
+        ],
+        [
+          "tombee-1",
+          1,
+          0.6
+        ],
+        [
+          "approche-1",
+          1,
+          0.85
+        ],
+        [
+          "chute",
+          0.7,
+          0
+        ],
+        [
+          "boucle",
+          0.8,
+          0.5
+        ]
+      ]
+    },
+    {
+      "type": "drone",
+      "gain": -27,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "ambience",
+      "preset": "wind",
+      "from": 0,
+      "gain": -36
+    },
+    {
+      "type": "chapters",
+      "style": "film",
+      "skip": [
+        "ouvre"
+      ]
+    },
+    {
+      "type": "boom",
+      "at": 0.03,
+      "gain": -13,
+      "size": 1.2
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.3,
+      "gain": -18
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "boom",
+      "at": "ouvre$+0.05",
+      "gain": -15,
+      "size": 0.7
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.22",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.38",
+      "gain": -19,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.54",
+      "gain": -20,
+      "pitch": 1.15
+    },
+    {
+      "type": "drop",
+      "at": "release",
+      "pre": 0.55
+    },
+    {
+      "type": "boom",
+      "at": "casse$+0.05",
+      "gain": -14
+    },
+    {
+      "type": "drop",
+      "at": "catch",
+      "pre": 0.55
+    },
+    {
+      "type": "boom",
+      "at": "attrape$+0.05",
+      "gain": -14
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ],
+  "retires": {
+    "cueillette": {
+      "note": "Chapitre retiré le 22/10 (film ≈ 11 min 20) : calme, sans menace, au milieu du film. Remettre ces beats après « pedro » pour le rétablir.",
+      "beats": [
+        {
+          "id": "r1aube",
+          "chap": "La cueillette du matin",
+          "text": "Ton retour, ce pont le prépare depuis l'aube. Ce matin, comme tous les matins, tous ceux qui y travaillent sont sortis… et se sont mis en ligne.",
+          "vo": "[conversational, curious] Ton retour, ce pont le prépare depuis l'aube. Ce matin, comme tous les matins, tous ceux qui y travaillent sont sortis... et se sont mis en ligne."
+        },
+        {
+          "id": "r1ligne",
+          "text": "Pilotes, mécaniciens, matelots. Côte à côte, d'un bord à l'autre. Et ils avancent… tête baissée.",
+          "vo": "[curious] Pilotes, mécaniciens, matelots. Côte à côte, d'un bord à l'autre. Et ils avancent... tête baissée."
+        },
+        {
+          "id": "r1nom",
+          "text": "À bord, on appelle ça… la +cueillette+.",
+          "vo": "[amused] À bord, on appelle ça... la cueillette."
+        },
+        {
+          "id": "r1quoi",
+          "text": "Ils cherchent le moindre objet qui traîne. Une vis. Un écrou. Un éclat de métal.",
+          "vo": "[conversational, curious] Ils cherchent le moindre objet qui traîne. Une vis. Un écrou. Un éclat de métal."
+        },
+        {
+          "id": "r1danger",
+          "text": "Parce que sur ce pont, le plus petit débris peut être *dangereux* pour un avion.",
+          "vo": "[serious] Parce que sur ce pont, le plus petit débris peut être dangereux pour un avion."
+        },
+        {
+          "id": "r1moteur",
+          "text": "Une vis devant tes entrées d'air, au moment où tu pousses les gaz… et ton moteur peut l'avaler.",
+          "vo": "[curious] Une vis devant tes entrées d'air, au moment où tu pousses les gaz... et ton moteur peut l'avaler."
+        },
+        {
+          "id": "r1surface",
+          "text": "Alors [12 000|douze mille] mètres carrés de pont, presque deux terrains de football, sont inspectés pas à pas. Tous les matins.",
+          "vo": "[warm, conversational] Alors douze mille mètres carrés de pont, presque deux terrains de football, sont inspectés pas à pas. Tous les matins."
+        },
+        {
+          "id": "r1yeux",
+          "text": "Sur un navire de guerre plein d'électronique, ta sécurité commence comme ça : des yeux, au ras du sol.",
+          "vo": "[curious] Sur un navire de guerre plein d'électronique, ta sécurité commence comme ça : des yeux, au ras du sol."
+        },
+        {
+          "id": "r1vent",
+          "hold": 1.2,
+          "text": "Un pont propre, donc. Mais pour te lancer, il manquait encore une chose. Une chose qu'on ne ramasse pas… et que le navire doit fabriquer.",
+          "vo": "[conversational, curious] Un pont propre, donc. Mais pour te lancer, il manquait encore une chose. Une chose qu'on ne ramasse pas... et que le navire doit fabriquer."
+        }
+      ],
+      "cues": {
+        "r1line": "r1aube:ligne",
+        "r1heads": "r1ligne:tête"
+      }
+    }
+  }
+}
