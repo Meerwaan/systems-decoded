@@ -1,0 +1,702 @@
+{
+  "id": "027",
+  "serie": "dossier",
+  "slug": "voie-de-detresse",
+  "title": "Voie de détresse",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "La voie",
+      "de détresse"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 0,
+      "tz": -1505,
+      "d": 9500,
+      "az": -18,
+      "el": 32,
+      "shift": -480,
+      "side": 0,
+      "fov": 34,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Voie de détresse, le lit d'arrêt des poids lourds : ton camion n'a plus de freins, et ce qui va t'arrêter, ce sont des cailloux. Toi, en descente… frein, ou moteur ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#poidslourd",
+      "#camion",
+      "#securiteroutiere"
+    ],
+    "pinned": "Réponds juste : « frein » ou « moteur ». En descente : le rapport de la montée, et des freinages par à-coups, jamais en continu.",
+    "keyword": "Voie de détresse",
+    "instagram": {
+      "caption": "Ton camion n'a plus de freins. Ils ne sont pas cassés : ils sont trop chauds.\n\nDossier 027 : la voie de détresse, le lit d'arrêt des poids lourds. Ce qui va t'arrêter, ce sont des cailloux… et pas n'importe lesquels. Et tes freins, c'est ton propre pied qui les a fait chauffer.\n\nToi, en descente : frein, ou moteur ?",
+      "hashtags": [
+        "#poidslourd",
+        "#camion",
+        "#securiteroutiere",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ton camion n'a plus de freins : ce qui va t'arrêter, ce sont des cailloux (voie de détresse)",
+      "description": "Dossier 027 — la voie de détresse ouverte : le lit d'arrêt, ses grains ronds, sa glissière, sa butte de terre. Pourquoi les freins d'un poids lourd lâchent dans une longue descente, et comment quarante tonnes s'arrêtent sans toucher la pédale.\n\nToi, en descente : frein, ou moteur ?",
+      "hashtags": [
+        "#shorts",
+        "#poidslourd",
+        "#camion",
+        "#securiteroutiere",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits, niveaux de source et « à ne pas dire » : docs/faits/027-voie-de-detresse.md (recherche du 2026-10-21) ; contre-vérification du script : docs/faits/027-contre-verification.md.",
+    "La scène est un scénario : aucun cas français de camion sauvé par un lit d'arrêt n'a été trouvé. La descente, les vitesses (80, 90) et le ravin sont illustratifs.",
+    "Des freins qui chauffent (fading : la garniture dégaze, le tambour se dilate, la pédale s'enfonce) : supports de formation et presse professionnelle [S] ; aucun seuil unique de température n'est dit.",
+    "Le lit d'arrêt : dossier d'enquête DIRMED, RN 85, Laffrey (isere.gouv.fr) — pré-signalisation à 1 km, biseau de 150 m et 21 m droits, glissière béton, merlon d'1 m au plus en bout, granulats 10/14, décélération de calcul 4,9 m/s² (≈ 0,5 g) [P] ; 0,516 g pour les lits de référence aux États-Unis [S].",
+    "Des grains ronds exprès : essais du Pennsylvania Transportation Institute (1988) — le gravier roulé donne plus de pénétration des pneus et plus de décélération que le concassé [S].",
+    "« Quarante tonnes » : ordre de grandeur d'un ensemble articulé (40 à 44 t en France).",
+    "La consigne en descente (le rapport utilisé pour monter, des freinages par à-coups, jamais en continu) : supports de formation des conducteurs [S].",
+    "Annonce du 028 — une centaine de morts par an du monoxyde de carbone en France : ARS Normandie 2023, Santé publique France [S].",
+    "L'image est une maquette resserrée : la descente, le virage, le ravin et la voie sont à l'échelle vraie en largeur et en profondeur (camion de 16,6 m, voie de 4,5 m, gravier 10/14 mm), mais les distances le long de la route sont raccourcies (le panneau à 52 m de la fosse au lieu d'un kilomètre sur le projet de Laffrey, une fosse de 66 m, le camion arrêté 40 m après l'entrée) : aucune distance n'est dite ni écrite.",
+    "En-tête (illustratif) : la vitesse (72, puis 80 et 90 quand la voix les dit, 0 à l'arrêt) et « Pédale » (où est ton pied, de 0 à 100 %) sont l'état de la scène, pas des mesures. La décélération affichée dans le gravier (« ≈ 0,5 g ») est la valeur de calcul du projet de Laffrey (4,9 m/s²) [P] ; 0,516 g mesuré aux États-Unis [S].",
+    "La comparaison sur l'établi (le même lit, une moitié de grains ronds, l'autre de grains concassés, deux roues lancées ensemble) montre le rapport de l'étude québécoise de 1998 (≈ 77 m contre 192 m pour une entrée à 70 km/h) sans chiffre ; la coupe (les grains qui roulent sous la roue qui s'enfonce) est une illustration.",
+    "Le tambour ouvert, chauffé au rouge, illustre le fading (la garniture perd sa friction, le tambour se dilate) : aucune température n'est affichée."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ton camion n'a plus de *freins*. Ils ne sont pas cassés : ils sont trop *chauds*.",
+      "vo": "[tense] Ton camion n'a plus de freins. Ils ne sont pas cassés : ils sont trop chauds.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ton camion n'a plus de freins. Ils ne sont pas cassés : ils sont trop chauds."
+      ]
+    },
+    {
+      "id": "promesse",
+      "text": "Ce qui va t'arrêter ? Des +cailloux+. Et ce qui les a fait chauffer… c'est ton propre *pied*.",
+      "vo": "[firm, matter-of-fact] Ce qui va t'arrêter ? Des cailloux. [short pause] Et ce qui les a fait chauffer... c'est ton propre pied.",
+      "hold": 0.3
+    },
+    {
+      "id": "scene",
+      "text": "Tu appuies : la pédale s'enfonce, le camion *non*. [80|Quatre-vingts]. [90|Quatre-vingt-dix]. En bas, un virage… et le *ravin*. À droite, une voie de +gravier+. Tu as deux secondes.",
+      "vo": "[tense] Tu appuies : la pédale s'enfonce, le camion non. Quatre-vingts. Quatre-vingt-dix. En bas, un virage... et le ravin. À droite, une voie de gravier. Tu as deux secondes.",
+      "hold": 0.3
+    },
+    {
+      "id": "ouvre",
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "hold": 0.4
+    },
+    {
+      "id": "eclate",
+      "text": "Un panneau, bien avant. Puis la voie quitte la route : une fosse de +gravier+, une glissière de béton… et au bout, une butte de terre.",
+      "vo": "[curious] Un panneau, bien avant. Puis la voie quitte la route : une fosse de gravier, une glissière de béton... et au bout, une butte de terre.",
+      "voAlt": [
+        "[conversational, curious] Un panneau, bien avant. Puis la voie quitte la route : une fosse de gravier, une glissière de béton... et au bout, une butte de terre."
+      ],
+      "hold": 0.2
+    },
+    {
+      "id": "repos",
+      "text": "Dans la fosse, des grains *ronds*. Exprès : ils arrêtent plus court que des grains concassés. Ronds, ils roulent sous la roue… qui +s'enfonce+. Et ton camion arrive à [90|quatre-vingt-dix].",
+      "vo": "[curious] Dans la fosse, des grains ronds. Exprès : ils arrêtent plus court que des grains concassés. Ronds, ils roulent sous la roue... qui s'enfonce. [short pause] Et ton camion arrive à quatre-vingt-dix.",
+      "voAlt": [
+        "[warm, conversational] Dans la fosse, des grains ronds. Exprès : ils arrêtent plus court que des grains concassés. Ronds, ils roulent sous la roue... qui s'enfonce. [short pause] Et ton camion arrive à quatre-vingt-dix."
+      ]
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : tes quarante tonnes… regarde-les *s'enfoncer*.",
+      "vo": "[tense] Abonne-toi : tes quarante tonnes... regarde-les s'enfoncer."
+    },
+    {
+      "id": "zero",
+      "text": "Tu braques à droite. Tes roues avant quittent le bitume… et plongent dans le *gravier*.",
+      "vo": "[firm, matter-of-fact] Tu braques à droite. Tes roues avant quittent le bitume... et plongent dans le gravier.",
+      "hold": 0.2
+    },
+    {
+      "id": "reponse",
+      "text": "Les pneus s'enfoncent. Chaque tour de roue pousse le gravier devant elle. Environ une demi-gravité de freinage. Sans toucher la +pédale+. Et tes quarante tonnes… s'arrêtent.",
+      "vo": "[tense] Les pneus s'enfoncent. Chaque tour de roue pousse le gravier devant elle. Environ une demi-gravité de freinage. Sans toucher la pédale. Et tes quarante tonnes... s'arrêtent.",
+      "hold": 0.3
+    },
+    {
+      "id": "chute",
+      "text": "Voilà le secret : cette voie n'a aucun *frein*. Elle fait payer chacun de tes tours de +roue+… jusqu'au dernier.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : cette voie n'a aucun frein. Elle fait payer chacun de tes tours de roue... jusqu'au dernier.",
+      "hold": 0.4
+    },
+    {
+      "id": "comment",
+      "text": "Et ton pied ? Il freinait sans arrêt depuis le haut du col. En descente, on garde en général le rapport de la montée, et on freine par à-coups. En +commentaire+ : toi, en descente… *frein*, ou moteur ?",
+      "vo": "[curious] Et ton pied ? [short pause] Il freinait sans arrêt depuis le haut du col. En descente, on garde en général le rapport de la montée, et on freine par à-coups. [short pause] En commentaire : toi, en descente... frein, ou moteur ?",
+      "voAlt": [
+        "[conversational, curious] Et ton pied ? [short pause] Il freinait sans arrêt depuis le haut du col. En descente, on garde en général le rapport de la montée, et on freine par à-coups. [short pause] En commentaire : toi, en descente... frein, ou moteur ?"
+      ],
+      "hold": 0.3
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : ça remontera chez un chauffeur qui descend un col ce *soir*.",
+      "vo": "[firm, matter-of-fact] Like : [short pause] ça remontera chez un chauffeur qui descend un col ce soir.",
+      "voAlt": [
+        "[warm, conversational] Like : [short pause] ça remontera chez un chauffeur qui descend un col ce soir."
+      ]
+    },
+    {
+      "id": "abo",
+      "text": "Prochain dossier : chez toi, un gaz sans odeur. Une centaine de morts par an… et un *boîtier*.",
+      "vo": "[serious] Prochain dossier : chez toi, un gaz sans odeur. Une centaine de morts par an... et un boîtier.",
+      "hold": 0.2
+    },
+    {
+      "id": "boucle",
+      "text": "Lui aussi attend… le jour où…",
+      "vo": "[calm] Lui aussi attend... le jour où,"
+    }
+  ],
+  "cues": {
+    "choc": "accroche:freins",
+    "intact": "accroche:cassés-0.1",
+    "chauds": "accroche:chauds-0.1",
+    "cailloux": "promesse:cailloux-0.1",
+    "chauffer": "promesse:chauffer-0.1",
+    "pied": "promesse:pied-0.1",
+    "appuies": "scene:appuies-0.1",
+    "pedale": "scene:pédale-0.1",
+    "enfonce": "scene:s'enfonce-0.1",
+    "non": "scene:non-0.1",
+    "v80": "scene:80-0.06",
+    "v90": "scene:90-0.06",
+    "bas": "scene:bas-0.1",
+    "virage": "scene:virage-0.1",
+    "ravin": "scene:ravin-0.1",
+    "droite": "scene:droite-0.1",
+    "gravier1": "scene:gravier-0.1",
+    "secondes": "scene:secondes-0.1",
+    "freeze": "scene$",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "panneau": "eclate:panneau-0.1",
+    "avant": "eclate:avant-0.1",
+    "access": "eclate:Puis-0.1",
+    "route": "eclate:route-0.1",
+    "fosse": "eclate:fosse-0.1",
+    "gravier2": "eclate:gravier-0.1",
+    "glissiere": "eclate:glissière-0.1",
+    "beton": "eclate:béton-0.1",
+    "bout": "eclate:bout-0.1",
+    "butte": "eclate:butte-0.1",
+    "terre": "eclate:terre-0.1",
+    "torepos": "repos-0.14",
+    "dansfosse": "repos:fosse-0.1",
+    "ronds": "repos:ronds-0.1",
+    "expres": "repos:exprès-0.1",
+    "arretent": "repos:arrêtent-0.1",
+    "court": "repos:court-0.1",
+    "concasses": "repos:concassés-0.1",
+    "ronds2": "repos:ronds#2-0.1",
+    "roulent": "repos:roulent-0.1",
+    "roue1": "repos:roue-0.1",
+    "enfonce2": "repos:s'enfonce-0.1",
+    "toarrive": "repos:Et-0.14",
+    "arrive": "repos:arrive-0.1",
+    "v90b": "repos:90-0.06",
+    "toseuil": "seuil-0.1",
+    "tonnes1": "seuil:tonnes-0.1",
+    "regarde": "seuil:regarde-0.1",
+    "enfoncer": "seuil:s'enfoncer-0.1",
+    "tozero": "zero-0.12",
+    "braques": "zero:braques-0.1",
+    "droite2": "zero:droite-0.1",
+    "roues": "zero:roues-0.1",
+    "quittent": "zero:quittent-0.1",
+    "bitume": "zero:bitume-0.1",
+    "plongent": "zero:plongent-0.1",
+    "gravier3": "zero:gravier-0.1",
+    "trigger": "reponse-0.12",
+    "pneus": "reponse:pneus-0.1",
+    "enfoncent": "reponse:s'enfoncent-0.1",
+    "tour": "reponse:tour-0.1",
+    "pousse": "reponse:pousse-0.1",
+    "devant": "reponse:devant-0.1",
+    "environ": "reponse:environ-0.1",
+    "gravite": "reponse:demi-0.1",
+    "freinage": "reponse:freinage-0.1",
+    "sans": "reponse:sans-0.1",
+    "pedale2": "reponse:pédale-0.1",
+    "tonnes2": "reponse:tonnes-0.1",
+    "stop": "reponse:s'arrêtent-0.1",
+    "toverdict": "chute-0.12",
+    "secret": "chute:secret-0.1",
+    "strike": "chute:aucun",
+    "frein1": "chute:frein-0.1",
+    "verdict": "chute:payer-0.05",
+    "tours": "chute:tours-0.1",
+    "dernier": "chute:dernier-0.1",
+    "tocta": "comment-0.12",
+    "pied2": "comment:pied-0.1",
+    "freinait": "comment:freinait-0.1",
+    "col": "comment:col-0.1",
+    "descente": "comment:descente-0.1",
+    "rapport": "comment:rapport-0.1",
+    "montee": "comment:montée-0.1",
+    "acoups": "comment:à-coups-0.1",
+    "ask": "comment:commentaire-0.3",
+    "choiceA": "comment:frein#3-0.05",
+    "choiceB": "comment:moteur-0.05",
+    "tolike": "like-0.12",
+    "chauffeur": "like:chauffeur-0.1",
+    "soir": "like:soir-0.1",
+    "toabo": "abo-0.1",
+    "cheztoi": "abo:chez-0.1",
+    "gaz": "abo:gaz-0.1",
+    "morts": "abo:morts-0.1",
+    "boitier": "abo:boîtier-0.1",
+    "toloop": "boucle-0.12",
+    "attend": "boucle:attend-0.1",
+    "rewind": "boucle:jour"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "toarrive",
+          0.75
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "stop",
+          0.5
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "ambience",
+      "preset": "wind",
+      "from": 0,
+      "to": "tobench",
+      "gain": -33
+    },
+    {
+      "type": "ambience",
+      "preset": "wind",
+      "from": "toarrive",
+      "to": "toverdict",
+      "gain": -33
+    },
+    {
+      "type": "ambience",
+      "preset": "wind",
+      "from": "tocta",
+      "gain": -33
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.18,
+      "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "accroche:freins$+0.04",
+      "gain": -14
+    },
+    {
+      "type": "screech",
+      "from": "accroche:freins$+0.1",
+      "to": "accroche:Ils-0.05",
+      "gain": -24,
+      "pitch": 1.35
+    },
+    {
+      "type": "click",
+      "at": "accroche:cassés$+0.04",
+      "gain": -17,
+      "pitch": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "accroche$+0.04",
+      "gain": -13
+    },
+    {
+      "type": "hiss",
+      "from": "accroche$+0.08",
+      "to": "promesse-0.05",
+      "gain": -29,
+      "tone": 0.5
+    },
+    {
+      "type": "click",
+      "at": "promesse:cailloux$+0.04",
+      "gain": -16,
+      "pitch": 1.2
+    },
+    {
+      "type": "hit",
+      "at": "promesse$+0.05",
+      "gain": -14
+    },
+    {
+      "type": "hiss",
+      "from": "scene:appuies$+0.05",
+      "to": "scene:la-0.06",
+      "gain": -26,
+      "tone": 0.6
+    },
+    {
+      "type": "clack",
+      "at": "scene:s'enfonce$+0.03",
+      "gain": -18
+    },
+    {
+      "type": "hit",
+      "at": "scene:non$+0.04",
+      "gain": -14
+    },
+    {
+      "type": "blip",
+      "at": "scene:80$+0.03",
+      "gain": -19,
+      "pitch": 0.9
+    },
+    {
+      "type": "blip",
+      "at": "scene:90$+0.04",
+      "gain": -18,
+      "pitch": 1.05
+    },
+    {
+      "type": "swish",
+      "at": "scene:virage$+0.02",
+      "dur": 0.24,
+      "gain": -19
+    },
+    {
+      "type": "hit",
+      "at": "scene:ravin$+0.04",
+      "gain": -14,
+      "pitch": 0.8
+    },
+    {
+      "type": "click",
+      "at": "scene:gravier$+0.04",
+      "gain": -16,
+      "pitch": 1.1
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "tobench-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "tobench",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.06",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.3",
+      "gain": -18,
+      "pitch": 0.95
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.55",
+      "gain": -19,
+      "pitch": 1.2
+    },
+    {
+      "type": "click",
+      "at": "eclate:panneau$+0.03",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "eclate:route$+0.04",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "eclate:gravier$+0.04",
+      "gain": -16,
+      "pitch": 1.05
+    },
+    {
+      "type": "click",
+      "at": "eclate:béton$+0.04",
+      "gain": -16,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "eclate$+0.04",
+      "gain": -16,
+      "pitch": 0.95
+    },
+    {
+      "type": "hit",
+      "at": "repos:ronds$+0.04",
+      "gain": -15,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "repos:exprès$+0.04",
+      "gain": -17,
+      "pitch": 0.8
+    },
+    {
+      "type": "hit",
+      "at": "repos:concassés$+0.04",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "rain",
+      "from": "repos:roue$+0.04",
+      "to": "repos:qui-0.04",
+      "gain": -28
+    },
+    {
+      "type": "impact",
+      "at": "repos:s'enfonce$+0.04",
+      "gain": -17,
+      "size": 0.7
+    },
+    {
+      "type": "blip",
+      "at": "repos$+0.04",
+      "gain": -18,
+      "pitch": 1.05
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "screech",
+      "from": "zero:droite$+0.02",
+      "to": "zero:Tes-0.03",
+      "gain": -24,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": "zero:bitume$+0.03",
+      "gain": -18,
+      "size": 0.6
+    },
+    {
+      "type": "impact",
+      "at": "zero$+0.04",
+      "gain": -12,
+      "size": 1.3,
+      "crack": 0.8
+    },
+    {
+      "type": "rain",
+      "from": "zero$+0.08",
+      "to": "reponse-0.05",
+      "gain": -26
+    },
+    {
+      "type": "rain",
+      "from": "reponse:s'enfoncent$+0.03",
+      "to": "reponse:chaque-0.04",
+      "gain": -27
+    },
+    {
+      "type": "rain",
+      "from": "reponse:elle$+0.04",
+      "to": "reponse:environ-0.04",
+      "gain": -27
+    },
+    {
+      "type": "hit",
+      "at": "reponse:freinage$+0.04",
+      "gain": -15
+    },
+    {
+      "type": "click",
+      "at": "reponse:pédale$+0.04",
+      "gain": -16,
+      "pitch": 0.8
+    },
+    {
+      "type": "rain",
+      "from": "reponse:tonnes$+0.04",
+      "to": "reponse:s'arrêtent-0.05",
+      "gain": -28
+    },
+    {
+      "type": "blip",
+      "at": "reponse$+0.05",
+      "gain": -16,
+      "pitch": 1
+    },
+    {
+      "type": "hit",
+      "at": "chute:frein$+0.04",
+      "gain": -14
+    },
+    {
+      "type": "blip",
+      "at": "chute:roue$+0.02",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "click",
+      "at": "comment:pied$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "hiss",
+      "from": "comment:col$+0.03",
+      "to": "comment:en-0.04",
+      "gain": -27,
+      "tone": 0.6
+    },
+    {
+      "type": "hiss",
+      "from": "comment:à-coups$+0.03",
+      "to": "comment:à-coups$+0.13",
+      "gain": -27,
+      "tone": 0.6
+    },
+    {
+      "type": "hiss",
+      "from": "comment:à-coups$+0.25",
+      "to": "comment:à-coups$+0.36",
+      "gain": -27,
+      "tone": 0.6
+    },
+    {
+      "type": "click",
+      "at": "comment:commentaire$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "blip",
+      "at": "comment:frein#3$+0.03",
+      "gain": -17,
+      "pitch": 0.8
+    },
+    {
+      "type": "blip",
+      "at": "comment$+0.04",
+      "gain": -17,
+      "pitch": 1.15
+    },
+    {
+      "type": "click",
+      "at": "like:like$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "blip",
+      "at": "abo$+0.04",
+      "gain": -17,
+      "pitch": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
