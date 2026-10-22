@@ -1,0 +1,294 @@
+{
+  "id": "028",
+  "serie": "dossier",
+  "slug": "detecteur-co",
+  "title": "Détecteur de CO",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Détecteur de CO"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Détecteur de monoxyde de carbone (CO) : ta chaudière t'empoisonne, et le boîtier au mur a le droit d'attendre une heure avant de sonner. Toi, au plafond : fumée… ou CO ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#monoxydedecarbone",
+      "#chauffage",
+      "#maison"
+    ],
+    "pinned": "Réponds juste : « fumée » ou « CO ». Un détecteur qui n'est que de fumée ne voit pas le monoxyde de carbone.",
+    "keyword": "Détecteur de monoxyde de carbone",
+    "instagram": {
+      "caption": "Ta chaudière t'empoisonne. Et ton détecteur… ne dit rien.\n\nDossier 028 : le détecteur de monoxyde de carbone. Un gaz sans odeur, une centaine de morts par an en France, et un boîtier qui a le droit d'attendre une heure avant de sonner. Pourquoi ?\n\nLe tien, au plafond : fumée… ou CO ?",
+      "hashtags": [
+        "#monoxydedecarbone",
+        "#chauffage",
+        "#maison",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ta chaudière t'empoisonne… et ton détecteur de CO a le droit d'attendre une heure",
+      "description": "Dossier 028 — le détecteur de monoxyde de carbone ouvert : la membrane, l'électrode où le gaz s'oxyde, la puce, la pile. Pourquoi il ne sonne pas tout de suite, et pourquoi un détecteur qui n'est que de fumée ne voit pas ce gaz.\n\nLe tien, au plafond : fumée… ou CO ?",
+      "hashtags": [
+        "#shorts",
+        "#monoxydedecarbone",
+        "#chauffage",
+        "#maison",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits, niveaux de source et « à ne pas dire » : docs/faits/028-detecteur-co.md (recherche du 2026-10-21) ; contre-vérification du script : docs/faits/028-contre-verification.md.",
+    "La scène est un scénario. Cas proche : Palluau (Vendée), nuit du 23 au 24 novembre 2025, un détecteur réveille un couple et ses deux filles, personne n'a de symptômes (ICI, 24/11/2025) [S].",
+    "Une centaine de morts par an en France, près de 3 000 personnes intoxiquées, plus de trois cas sur quatre pendant la saison de chauffe : Santé publique France (12/12/2022) [P], ARS Normandie (2023) [S].",
+    "Le CO prend la place de l'oxygène sur l'hémoglobine (affinité 200 à 250 fois supérieure) : StatPearls [S]. Maux de tête, nausées, somnolence.",
+    "La cellule électrochimique : le CO s'oxyde sur une électrode, le courant est proportionnel à la concentration ; la pile alimente la puce et le buzzer — le gaz ne fait pas marcher l'alarme (fiches Winsen, brevets) [S]. « Brûle » simplifie « s'oxyde ».",
+    "Seuils de la norme EN 50291-1, lus chez des fabricants qui la citent (norme non lue) : 50 ppm, alarme entre 60 et 90 min ; 100 ppm, entre 10 et 40 min ; 300 ppm, moins de 3 min [S]. La puce compare la dose (concentration et durée) à cette table : « l'additionne » simplifie.",
+    "Détecteur de fumée obligatoire dans les logements depuis 2015 ; détecteur de CO non obligatoire (propositions de loi de 2024, aucun vote final trouvé) [S].",
+    "Annonce du 029 — un sac gonflé divise par deux le risque de mourir dans une avalanche : Haegeli et al., Resuscitation 2014 (22 % → 11 %) [P, résumé]."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ta chaudière t'*empoisonne*. Et ton détecteur… ne dit *rien*.",
+      "vo": "[tense] Ta chaudière t'empoisonne. Et ton détecteur... ne dit rien.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ta chaudière t'empoisonne. Et ton détecteur... ne dit rien."
+      ]
+    },
+    {
+      "id": "promesse",
+      "text": "Normal : à faible concentration, il a le droit d'attendre une +heure+. Sauf si ce détecteur… n'a jamais su voir ce *gaz*.",
+      "vo": "[firm, matter-of-fact] Normal : à faible concentration, il a le droit d'attendre une heure. [short pause] Sauf si ce détecteur... n'a jamais su voir ce gaz.",
+      "hold": 0.3
+    },
+    {
+      "id": "scene",
+      "text": "Le monoxyde sort de ta chaudière, sans odeur. Dans ton sang, il prend la place de l'*oxygène*. Mal de tête… tu te rendors. Au mur, le boîtier +compte+.",
+      "vo": "[tense] Le monoxyde sort de ta chaudière, sans odeur. Dans ton sang, il prend la place de l'oxygène. Mal de tête... tu te rendors. Au mur, le boîtier compte.",
+      "hold": 0.3
+    },
+    {
+      "id": "ouvre",
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "hold": 0.4
+    },
+    {
+      "id": "eclate",
+      "text": "L'air de ta chambre entre par la grille. Il traverse une +membrane+… et touche une électrode. Derrière : une puce, un buzzer, et une *pile*.",
+      "vo": "[curious] L'air de ta chambre entre par la grille. Il traverse une membrane... et touche une électrode. Derrière : une puce, un buzzer, et une pile.",
+      "voAlt": [
+        "[conversational, curious] L'air de ta chambre entre par la grille. Il traverse une membrane... et touche une électrode. Derrière : une puce, un buzzer, et une pile."
+      ],
+      "hold": 0.2
+    },
+    {
+      "id": "repos",
+      "text": "Sur cette électrode, le monoxyde *brûle*. Ça fait un petit courant, proportionnel au gaz. La puce l'additionne, minute après minute… comme ton +sang+.",
+      "vo": "[curious] Sur cette électrode, le monoxyde brûle. Ça fait un petit courant, proportionnel au gaz. La puce l'additionne, minute après minute... comme ton sang.",
+      "voAlt": [
+        "[warm, conversational] Sur cette électrode, le monoxyde brûle. Ça fait un petit courant, proportionnel au gaz. La puce l'additionne, minute après minute... comme ton sang."
+      ]
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : cette heure… regarde-la *passer*.",
+      "vo": "[tense] Abonne-toi : cette heure... regarde-la passer."
+    },
+    {
+      "id": "zero",
+      "text": "Une heure passe. Le gaz monte encore. Ton sang se *charge*… et le boîtier compte toujours.",
+      "vo": "[firm, matter-of-fact] Une heure passe. Le gaz monte encore. Ton sang se charge... et le boîtier compte toujours.",
+      "hold": 0.2
+    },
+    {
+      "id": "reponse",
+      "text": "Dix minutes. Vingt. La dose atteint son seuil. Le boîtier *hurle*. Tu ouvres les yeux. La fenêtre. Dehors. Et tes enfants… +respirent+.",
+      "vo": "[tense] Dix minutes. Vingt. La dose atteint son seuil. Le boîtier hurle. Tu ouvres les yeux. La fenêtre. Dehors. Et tes enfants... respirent.",
+      "hold": 0.3
+    },
+    {
+      "id": "chute",
+      "text": "Voilà le secret : il ne sonne pas dès qu'il *sent* le gaz. Il compte ta dose… et sonne avant qu'elle soit +dangereuse+.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : il ne sonne pas dès qu'il sent le gaz. Il compte ta dose... et sonne avant qu'elle soit dangereuse.",
+      "hold": 0.4
+    },
+    {
+      "id": "comment",
+      "text": "Et le détecteur blanc, au plafond ? S'il n'est que de fumée, il ne voit pas ce gaz. Jamais. Celui de fumée est obligatoire. Celui de [CO|cé-o], non. En +commentaire+ : le tien… *fumée*, ou [CO|cé-o] ?",
+      "vo": "[curious] Et le détecteur blanc, au plafond ? [short pause] S'il n'est que de fumée, il ne voit pas ce gaz. Jamais. Celui de fumée est obligatoire. Celui de cé-o, non. [short pause] En commentaire : le tien... fumée, ou cé-o ?",
+      "voAlt": [
+        "[conversational, curious] Et le détecteur blanc, au plafond ? [short pause] S'il n'est que de fumée, il ne voit pas ce gaz. Jamais. Celui de fumée est obligatoire. Celui de cé-o, non. [short pause] En commentaire : le tien... fumée, ou cé-o ?"
+      ],
+      "hold": 0.3
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : ça remontera chez quelqu'un qui rallume sa chaudière ce *soir*.",
+      "vo": "[firm, matter-of-fact] Like : [short pause] ça remontera chez quelqu'un qui rallume sa chaudière ce soir.",
+      "voAlt": [
+        "[warm, conversational] Like : [short pause] ça remontera chez quelqu'un qui rallume sa chaudière ce soir."
+      ]
+    },
+    {
+      "id": "abo",
+      "text": "Prochain dossier : une avalanche… et un sac qui, gonflé, divise ton risque par *deux*.",
+      "vo": "[serious] Prochain dossier : une avalanche... et un sac qui, gonflé, divise ton risque par deux.",
+      "hold": 0.2
+    },
+    {
+      "id": "boucle",
+      "text": "Dehors comme chez toi… le jour où…",
+      "vo": "[calm] Dehors comme chez toi... le jour où,"
+    }
+  ],
+  "cues": {
+    "choc": "accroche:empoisonne",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:hurle-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:compte",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:jour"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

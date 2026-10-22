@@ -1,0 +1,294 @@
+{
+  "id": "029",
+  "serie": "dossier",
+  "slug": "airbag-avalanche",
+  "title": "Airbag d'avalanche",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Airbag d'avalanche"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Airbag d'avalanche, le sac airbag du hors-piste : la neige casse sous tes skis, et un ballon sort de ton dos en quelques secondes… si ta main tire. Toi, en hors-piste : avec airbag… ou sans ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#avalanche",
+      "#ski",
+      "#horspiste"
+    ],
+    "pinned": "Réponds juste : « avec » ou « sans ». Un sac sur cinq ne se gonfle pas : le plus souvent, la poignée n'a pas été tirée.",
+    "keyword": "Airbag d'avalanche",
+    "instagram": {
+      "caption": "Sous tes skis, la neige casse. La pente part avec toi.\n\nDossier 029 : l'airbag d'avalanche. Une poignée, une cartouche, un ballon sorti de ton dos en quelques secondes… si ta main tire. Et ce qui te fait remonter n'est pas ce que tu crois.\n\nToi, en hors-piste : avec airbag… ou sans ?",
+      "hashtags": [
+        "#avalanche",
+        "#ski",
+        "#horspiste",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "La neige casse sous tes skis… et un ballon sort de ton dos (airbag d'avalanche)",
+      "description": "Dossier 029 — l'airbag d'avalanche ouvert : la poignée, la cartouche, le venturi qui aspire l'air, le ballon d'au moins 150 litres. Ce qui se passe dans la neige qui coule, et pourquoi un sac sur cinq ne se gonfle pas.\n\nToi, en hors-piste : avec airbag… ou sans ?",
+      "hashtags": [
+        "#shorts",
+        "#avalanche",
+        "#ski",
+        "#horspiste",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits, niveaux de source et « à ne pas dire » : docs/faits/029-airbag-avalanche.md (recherche du 2026-10-21) ; contre-vérification du script : docs/faits/029-contre-verification.md.",
+    "La scène est un scénario. Cas proche : 29 novembre 2025, Bridger Range (Montana) — un skieur emporté sur ≈ 75 m tire son sac, reste en surface et se dégage seul (presse locale) [S].",
+    "La survie d'un enseveli s'effondre après une dizaine de minutes : CMAJ 2011 (94 % sous 10 min, 71 % de 11 à 20 min) [P] ; fenêtre de 10 min dans une étude de 2024 (JAMA Network Open, via Eurac) [S].",
+    "Le principe : la ségrégation inverse — dans une masse de grains qui coule, ce qui est gros remonte et ce qui est petit descend —, pas la flottabilité (SLF, Mammut, EPFL) [S]. C'est le principe admis, pas une preuve directe.",
+    "Le mécanisme : poignée sur la bretelle (50 à 150 N), cartouche percée, venturi qui aspire l'air ambiant, ballons de 150 L au moins, gonflés en 5 s au plus (EN 16716 via Edelrid, norme non lue ; Mammut) [S].",
+    "« Tu triples de volume » : calcul — un corps adulte ≈ 70 L, plus 150 L de ballons —, ordre de grandeur.",
+    "Mortalité de 22 % à 11 % avec un sac gonflé ; un sac sur cinq ne se gonfle pas, et 60 % de ces échecs viennent de l'utilisateur (poignée non tirée) : Haegeli et al., Resuscitation 2014 [P, résumé].",
+    "Annonce du 030 — le conducteur de protection vert-jaune et la prise de terre : docs/faits/030-prise-de-terre.md."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Sous tes skis, la neige *casse*. La pente part avec toi.",
+      "vo": "[tense] Sous tes skis, la neige casse. La pente part avec toi.",
+      "voAlt": [
+        "[firm, matter-of-fact] Sous tes skis, la neige casse. La pente part avec toi."
+      ]
+    },
+    {
+      "id": "promesse",
+      "text": "Ce qui peut te sauver ? Un +ballon+, sorti de ton dos en quelques secondes. Sauf si ta main… ne *tire* pas.",
+      "vo": "[firm, matter-of-fact] Ce qui peut te sauver ? Un ballon, sorti de ton dos en quelques secondes. [short pause] Sauf si ta main... ne tire pas.",
+      "hold": 0.3
+    },
+    {
+      "id": "scene",
+      "text": "La neige t'emporte. Elle te roule, elle t'*avale*. Enseveli, tu as une dizaine de minutes. Sur ta bretelle, une +poignée+. Tire.",
+      "vo": "[tense] La neige t'emporte. Elle te roule, elle t'avale. Enseveli, tu as une dizaine de minutes. Sur ta bretelle, une poignée. Tire.",
+      "hold": 0.3
+    },
+    {
+      "id": "ouvre",
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "hold": 0.4
+    },
+    {
+      "id": "eclate",
+      "text": "Ta poignée tire un câble. Il *perce* une cartouche de gaz. Le gaz file dans un venturi… qui aspire l'air autour. Et derrière, un +ballon+ plié.",
+      "vo": "[curious] Ta poignée tire un câble. Il perce une cartouche de gaz. Le gaz file dans un venturi... qui aspire l'air autour. Et derrière, un ballon plié.",
+      "voAlt": [
+        "[conversational, curious] Ta poignée tire un câble. Il perce une cartouche de gaz. Le gaz file dans un venturi... qui aspire l'air autour. Et derrière, un ballon plié."
+      ],
+      "hold": 0.2
+    },
+    {
+      "id": "repos",
+      "text": "Le gaz ne remplit pas le ballon tout seul : il aspire l'air autour de toi. Au moins [150|cent cinquante] +litres+, en quelques secondes. Encore faut-il… que ta main *tire*.",
+      "vo": "[curious] Le gaz ne remplit pas le ballon tout seul : il aspire l'air autour de toi. Au moins cent cinquante litres, en quelques secondes. [short pause] Encore faut-il... que ta main tire.",
+      "voAlt": [
+        "[warm, conversational] Le gaz ne remplit pas le ballon tout seul : il aspire l'air autour de toi. Au moins cent cinquante litres, en quelques secondes. [short pause] Encore faut-il... que ta main tire."
+      ]
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ce ballon… regarde-le te *sortir* de là.",
+      "vo": "[tense] Abonne-toi : ce ballon... regarde-le te sortir de là."
+    },
+    {
+      "id": "zero",
+      "text": "Dans la neige qui coule, les gros blocs +remontent+. Les petits s'enfoncent. Et toi… tu es trop *petit*.",
+      "vo": "[firm, matter-of-fact] Dans la neige qui coule, les gros blocs remontent. Les petits s'enfoncent. Et toi... tu es trop petit.",
+      "hold": 0.2
+    },
+    {
+      "id": "reponse",
+      "text": "Tu tires. Le gaz part. Le ballon s'ouvre. En quelques secondes, ton volume fait presque le *triple*. La neige passe sous toi. Et tu remontes… vers la +surface+.",
+      "vo": "[tense] Tu tires. Le gaz part. Le ballon s'ouvre. En quelques secondes, ton volume fait presque le triple. La neige passe sous toi. Et tu remontes... vers la surface.",
+      "hold": 0.3
+    },
+    {
+      "id": "chute",
+      "text": "Voilà le secret : ton sac ne te fait pas *flotter*. Il te rend +gros+. Et dans une avalanche, ce qui est gros… remonte.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : ton sac ne te fait pas flotter. Il te rend gros. Et dans une avalanche, ce qui est gros... remonte.",
+      "hold": 0.4
+    },
+    {
+      "id": "comment",
+      "text": "Et ta main ? Dans les avalanches étudiées, un sac sur cinq ne se gonfle pas. Le plus souvent… personne n'a *tiré*. En +commentaire+ : toi, en hors-piste… avec airbag, ou sans ?",
+      "vo": "[curious] Et ta main ? [short pause] Dans les avalanches étudiées, un sac sur cinq ne se gonfle pas. Le plus souvent... personne n'a tiré. [short pause] En commentaire : toi, en hors-piste... avec airbag, ou sans ?",
+      "voAlt": [
+        "[conversational, curious] Et ta main ? [short pause] Dans les avalanches étudiées, un sac sur cinq ne se gonfle pas. Le plus souvent... personne n'a tiré. [short pause] En commentaire : toi, en hors-piste... avec airbag, ou sans ?"
+      ],
+      "hold": 0.3
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : ça remontera chez quelqu'un qui part en hors-piste cet *hiver*.",
+      "vo": "[firm, matter-of-fact] Like : [short pause] ça remontera chez quelqu'un qui part en hors-piste cet hiver.",
+      "voAlt": [
+        "[warm, conversational] Like : [short pause] ça remontera chez quelqu'un qui part en hors-piste cet hiver."
+      ]
+    },
+    {
+      "id": "abo",
+      "text": "Prochain dossier : un fil vert-jaune, sous ta maison. Inutile… jusqu'au jour du *défaut*.",
+      "vo": "[serious] Prochain dossier : un fil vert-jaune, sous ta maison. Inutile... jusqu'au jour du défaut.",
+      "hold": 0.2
+    },
+    {
+      "id": "boucle",
+      "text": "Comme ton sac… le jour où…",
+      "vo": "[calm] Comme ton sac... le jour où,"
+    }
+  ],
+  "cues": {
+    "choc": "accroche:casse",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:tires-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:rend",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:jour"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
