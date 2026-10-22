@@ -1,0 +1,253 @@
+{
+  "id": "HS02",
+  "serie": "hors-serie",
+  "acts": [
+    "01 Menace",
+    "02 Le poste",
+    "03 Rendez-vous"
+  ],
+  "slug": "poste-haute-tension",
+  "title": "Poste haute tension",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": 23.6,
+    "title": [
+      "Poste",
+      "haute tension"
+    ],
+    "tone": "signal",
+    "cam": {
+      "tx": 0,
+      "ty": 748,
+      "tz": 0,
+      "d": 330,
+      "az": -28,
+      "el": 8,
+      "fov": 32,
+      "shift": -480,
+      "side": 0,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Une ligne de 400 000 volts, coupée. Le détecteur dit : rien. Et pourtant, un seul geste de travers suffit. Notre nouveau grand format : le film complet est sur notre chaîne YouTube, lien en bio.",
+    "hashtags": [
+      "#electricien",
+      "#hautetension",
+      "#consignation",
+      "#electricite",
+      "#apprendresurtiktok"
+    ],
+    "pinned": "Le film entier : « Coupée, mais encore mortelle : les 5 gestes qui te gardent en vie à 400 000 volts », sur notre chaîne YouTube. Lien en bio.",
+    "lien": "Le L02 sort d'abord sur YouTube ; HS02 dans l'heure qui suit (le lien doit exister). Shorts : YouTube Studio, « Vidéo associée » → le L02, au moment de publier le Short. Instagram : lien du L02 en bio + une story avec l'autocollant de lien (npm run social -- --only stories → story-youtube.png). TikTok : lien en bio s'il est actif ; sinon, épingler « Sur YouTube : Coupée, mais encore mortelle : les 5 gestes qui te gardent en vie à 400 000 volts ». Facebook : le lien du L02 en premier commentaire.",
+    "instagram": {
+      "caption": "Une ligne de 400 000 volts, coupée. Ton détecteur ne réagit pas. Tout a l'air mort… et elle peut encore te tuer.\n\nCinq gestes pour rentrer chez toi : les cinq opérations de la consignation. Et le dernier, dans le mauvais ordre, tue. Le bon, tu le connais ?\n\nNotre nouveau grand format t'emmène là où tu n'entres jamais, dans un poste électrique. Le film complet, plus de neuf minutes, t'attend sur notre chaîne YouTube : le lien est en bio.",
+      "hashtags": [
+        "#electricien",
+        "#hautetension",
+        "#consignation",
+        "#electricite",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Coupée… et pourtant mortelle : 400 000 volts, et 5 gestes pour rentrer chez toi",
+      "description": "Une ligne de 400 000 volts coupée peut encore te tuer. Notre nouveau grand format t'emmène dans un poste électrique, là où tu n'entres jamais : les cinq gestes de la consignation, un par un. Le film complet (9 min 10) est sur la chaîne, lié juste sous ce Short.\n\nLe dernier geste, dans le mauvais ordre, tue. Le bon, tu le connais ?",
+      "hashtags": [
+        "#shorts",
+        "#electricien",
+        "#hautetension",
+        "#consignation",
+        "#electricite"
+      ]
+    }
+  },
+  "sources": [
+    "Hors-série 02 : la promo du L02 (le poste haute tension, le deuxième format long). Aucun fait neuf : chaque phrase est payée par un beat de episodes/L02-poste-haute-tension/episode.json, dont les sources font foi. Brief : docs/HS02-brief.md.",
+    "accroche ← L02 accroche (400 000 V, coupée, peut encore te tuer), vat4, induit2, chute.",
+    "promesse ← L02 promesse (rentrer chez toi, cinq gestes), tst5, recap.",
+    "curiosite ← L02 curiosite (1987, une pince défaite dans le mauvais ordre), virginie, apprenti, regle — non payée ici, voulu : l'ordre est dans le long.",
+    "lancement ← le L02 entier, un nouveau format long (pas une série : Merwan, 20/10) ; abo : « un autre endroit où tu n'entres jamais » ; lieu : un poste électrique sur une ligne de 400 000 V.",
+    "champ ← L02 champ (sans rien toucher, tu baignes dans un champ électrique ; tu ne sens rien) — le mot « champ » et le chiffre ne sont pas dits.",
+    "arc ← L02 disj2 (un arc, un éclair qui refuse de mourir), disj3 (approche les vingt mille degrés), disj4 (on attend le bon moment : le passage par zéro) — ni le gaz ni l'instant ne sont dits.",
+    "gravier ← L02 gravier (« entre tes pieds et la terre » ; la phrase même, sans sa réponse : la résistance entre tes pieds et la terre).",
+    "sanscouper ← L02 tst1 (on ne la coupe pas du tout), tst3 (sans jamais couper le courant), tst4 (pendant qu'on les répare), tst5 (« Mais toi, aujourd'hui […] Toi, tu coupes ») — l'hélicoptère n'est ni dit ni montré.",
+    "detecteur ← L02 vat2 (on le présente à chaque conducteur, avant de monter : pret), vat3 (le détecteur ne réagit pas, tout a l'air mort), vat4, induit2 — ce qu'il rate n'est pas dit.",
+    "test ← L02 defi, pret (tu montes ; la voisine reste sous tension), orage (à des kilomètres, sur la voisine, un court-circuit) — coupé avant defaut.",
+    "ouvre ← L02 ouvre, couches (coupé au noir : « Pas ici. »).",
+    "youtube ← le L02 (550 s, 9 min 10 : « neuf minutes » ; defi : « tout en haut »).",
+    "boucle ← retombe sur « Quatre cent mille volts » (accroche)."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "[400 000 V|Quatre cent mille volts]. La ligne est *coupée*… et elle peut te tuer.",
+      "vo": "[tense] Quatre cent mille volts. La ligne est coupée... et elle peut te tuer."
+    },
+    {
+      "id": "promesse",
+      "text": "Cinq gestes pour rentrer chez toi.",
+      "vo": "[serious] Cinq gestes pour rentrer chez toi."
+    },
+    {
+      "id": "curiosite",
+      "hold": 0.4,
+      "text": "Et le dernier, dans le *mauvais* ordre… tue. Le bon, tu le connais ?",
+      "vo": "[conversational, curious] Et le dernier, dans le mauvais ordre... tue. Le bon, tu le connais ?"
+    },
+    {
+      "id": "lancement",
+      "text": "Notre nouveau grand format t'emmène là où tu n'entres jamais : un poste à [400 000 V|quatre cent mille volts].",
+      "vo": "[warm, conversational] Notre nouveau grand format t'emmène là où tu n'entres jamais : un poste à quatre cent mille volts."
+    },
+    {
+      "id": "champ",
+      "text": "Sous la ligne, sans rien toucher… tu baignes déjà dedans. Et tu ne sens rien.",
+      "vo": "[curious] Sous la ligne, sans rien toucher... tu baignes déjà dedans. Et tu ne sens rien."
+    },
+    {
+      "id": "arc",
+      "hold": 0.4,
+      "text": "Couper ce courant, c'est éteindre un éclair qui approche les [20 000 °C|vingt mille degrés]. Et pour ça… on attend un instant très précis.",
+      "vo": "[conversational, curious] Couper ce courant, c'est éteindre un éclair qui approche les vingt mille degrés. Et pour ça... on attend un instant très précis."
+    },
+    {
+      "id": "gravier",
+      "text": "Et le gravier, partout au sol, sous tes pieds ? Ce n'est *pas* pour faire propre.",
+      "vo": "[warm, conversational] Et le gravier, partout au sol, sous tes pieds ? Ce n'est pas pour faire propre."
+    },
+    {
+      "id": "sanscouper",
+      "text": "Et parfois, ces lignes, on les répare… sans jamais couper le courant. Mais toi, aujourd'hui, tu coupes.",
+      "vo": "[curious] Et parfois, ces lignes, on les répare... sans jamais couper le courant. Mais toi, aujourd'hui, tu coupes."
+    },
+    {
+      "id": "detecteur",
+      "text": "Avant de monter, tu vérifies. Ton détecteur ne réagit pas. Tout a l'air *mort*. Tu le crois ?",
+      "vo": "[conversational, curious] Avant de monter, tu vérifies. Ton détecteur ne réagit pas. Tout a l'air mort. Tu le crois ?"
+    },
+    {
+      "id": "test",
+      "hold": 0.5,
+      "text": "Tu montes. Juste à côté, sa voisine est toujours *sous tension*. Et là, à des kilomètres… un *court-circuit*.",
+      "vo": "[serious] Tu montes. Juste à côté, sa voisine est toujours sous tension. Et là, à des kilomètres... un court-circuit."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.5,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[nonchalant, confident] Alors... [short pause] on l'ouvre.",
+      "voAlt": [
+        "[casual, charismatic] Alors... [short pause] on l'ouvre."
+      ]
+    },
+    {
+      "id": "pasici",
+      "hold": 0.6,
+      "text": "Pas ici.",
+      "vo": "[amused] Pas ici."
+    },
+    {
+      "id": "youtube",
+      "hold": 1.2,
+      "text": "Le film entier, plus de neuf minutes, t'attend sur notre chaîne +YouTube+. Le lien est en bio.",
+      "vo": "[warm, conversational] Le film entier, plus de neuf minutes, t'attend sur notre chaîne YouTube. Le lien est en bio."
+    },
+    {
+      "id": "boucle",
+      "text": "Et tu sauras enfin ce qui t'attend, là-haut, à…",
+      "vo": "[calm] Et tu sauras enfin ce qui t'attend, là-haut, à,"
+    }
+  ],
+  "cues": {
+    "noir": "test$",
+    "explode": "ouvre:on",
+    "black": "ouvre$",
+    "verdict": "youtube:chaîne",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:enfin"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "noir",
+          1
+        ],
+        [
+          "black",
+          0.2
+        ],
+        [
+          "verdict",
+          0.5
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "noir",
+      "gain": -13,
+      "size": 1.1
+    },
+    {
+      "type": "riser",
+      "to": "black",
+      "dur": 0.9,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "black",
+      "gain": -12,
+      "size": 1.3
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

@@ -1,0 +1,696 @@
+{
+  "id": "L02",
+  "slug": "poste-haute-tension",
+  "title": "Poste haute tension",
+  "format": "long",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "parts": [
+      "lieu",
+      "disj1",
+      "tst1",
+      "sec1",
+      "cad1",
+      "vat1",
+      "induit1",
+      "orage",
+      "recap"
+    ]
+  },
+  "post": {
+    "youtube": {
+      "title": "Coupée, mais encore mortelle : les 5 gestes qui te gardent en vie à 400 000 volts",
+      "titleAlts": [
+        "Le détecteur dit « rien »… et la ligne peut encore te tuer : 400 000 volts décodés",
+        "On répare du 400 000 volts sans couper, en hélicoptère : voici comment on survit dans un poste"
+      ],
+      "titleNote": "Putaclic mais fidèle (docs/recette-long.md, « Le titre ») : l'accroche d'abord, chaque mot vrai dans le film, 60 à 90 caractères.",
+      "descriptionTemplate": "Quatre cent mille volts. La ligne est coupée, le détecteur dit : rien… et elle peut encore te tuer. Dans un poste électrique haute tension, les cinq gestes de la consignation, un par un : séparer, condamner, identifier, vérifier, mettre à la terre et en court-circuit.\n\nChapitres\n__CHAPITRES__\n\nSources : INRS, brochure ED 6109 « Consignations et déconsignations » · Code du travail, articles R4544-1 à R4544-11 · RTE (réseau, travaux sous tension en hélicoptère, juillet 2025) · NIOSH, rapport FACE 87-42 · CIGRE, simulations de tensions induites sur lignes à double circuit · Westinghouse (premier disjoncteur haute tension au SF6, 1956).\n\nSystème Décodé : on ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite, dans un autre endroit où tu n'entres jamais.\n\nToi qui es habilité : lequel de ces cinq gestes est le plus dur à tenir, un soir de fatigue ?",
+      "hashtags": [
+        "#electricien",
+        "#hautetension",
+        "#electricite",
+        "#consignation",
+        "#securite"
+      ],
+      "pinned": "La première pince que tu poses : côté terre. La dernière que tu enlèves : côté terre. Et toi, quel geste est le plus dur à tenir ?",
+      "thumbnail": "16:9, fond noir. Le disjoncteur ouvert en coupe, plein cadre en diagonale : l'arc blanc-orange entre ses contacts, soufflé par le gaz. En grand, Barlow Condensed : COUPÉE / ET MORTELLE (« MORTELLE » en signal). Cartouche au-dessus : 400 000 V. Variantes : les pinces de terre sur les trois câbles, « 5 GESTES » en veille ; la nacelle sous l'hélicoptère, « SANS COUPER ».",
+      "endScreen": "Les 15 dernières secondes (like → rendez-vous → boucle) laissent la moitié droite de l'image libre pour l'écran de fin.",
+      "description": "Quatre cent mille volts. La ligne est coupée, le détecteur dit : rien… et elle peut encore te tuer. Dans un poste électrique haute tension, les cinq gestes de la consignation, un par un : séparer, condamner, identifier, vérifier, mettre à la terre et en court-circuit.\n\nChapitres\n00:00 Introduction\n00:36 On l'ouvre\n00:48 Le poste\n02:07 Le disjoncteur\n03:28 Sans couper\n04:10 Séparer\n04:35 Condamner, identifier\n05:36 Vérifier\n06:06 Mettre à la terre\n07:09 L'incident\n07:53 Ce qu'il faut retenir\n\nSources : INRS, brochure ED 6109 « Consignations et déconsignations » · Code du travail, articles R4544-1 à R4544-11 · RTE (réseau, travaux sous tension en hélicoptère, juillet 2025) · NIOSH, rapport FACE 87-42 · CIGRE, simulations de tensions induites sur lignes à double circuit · Westinghouse (premier disjoncteur haute tension au SF6, 1956).\n\nSystème Décodé : on ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite, dans un autre endroit où tu n'entres jamais.\n\nToi qui es habilité : lequel de ces cinq gestes est le plus dur à tenir, un soir de fatigue ?",
+      "chapters": [
+        "00:00 Introduction",
+        "00:36 On l'ouvre",
+        "00:48 Le poste",
+        "02:07 Le disjoncteur",
+        "03:28 Sans couper",
+        "04:10 Séparer",
+        "04:35 Condamner, identifier",
+        "05:36 Vérifier",
+        "06:06 Mettre à la terre",
+        "07:09 L'incident",
+        "07:53 Ce qu'il faut retenir"
+      ]
+    }
+  },
+  "thumb": {
+    "at": "disj3:approche",
+    "title": [
+      "COUPÉE",
+      "ET MORTELLE"
+    ],
+    "tone": "signal",
+    "tag": "400 000 V",
+    "cam": {
+      "tx": 0,
+      "ty": 748,
+      "tz": 0,
+      "d": 215,
+      "az": -30,
+      "el": 5,
+      "fov": 28,
+      "shift": 0,
+      "side": -330,
+      "roll": 0,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    },
+    "state": {
+      "set": 1,
+      "see": 1,
+      "open": 1,
+      "arc": 1,
+      "heat": 0.15,
+      "mood": 1,
+      "hot": 0.42,
+      "fx": 0,
+      "fy": 750,
+      "fz": 0,
+      "fs": 300
+    }
+  },
+  "thumb2": {
+    "at": "malt3:dedans",
+    "title": [
+      "5 GESTES",
+      "POUR VIVRE"
+    ],
+    "tone": "veille",
+    "tag": "Consignation · 400 000 V",
+    "cam": {
+      "tx": 300,
+      "ty": 1000,
+      "tz": 0,
+      "d": 1300,
+      "az": -72,
+      "el": 4,
+      "fov": 28,
+      "shift": 0,
+      "side": 0,
+      "roll": 0,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    },
+    "state": {
+      "clamps": 2,
+      "earthed": 1,
+      "zone": 1,
+      "named": 8
+    }
+  },
+  "thumb3": {
+    "at": "tst3:entretoises",
+    "title": [
+      "SANS",
+      "COUPER"
+    ],
+    "tone": "signal",
+    "tag": "400 000 V · en hélicoptère",
+    "cam": {
+      "tx": 60010,
+      "ty": 3700,
+      "tz": 880,
+      "d": 560,
+      "az": -40,
+      "el": 10,
+      "fov": 28,
+      "shift": 0,
+      "side": -120,
+      "roll": 0,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    },
+    "state": {
+      "set": 2,
+      "you": 0,
+      "live": 1,
+      "mood": 1,
+      "hot": 0.1,
+      "fx": 60000,
+      "fy": 3500,
+      "fz": 0,
+      "fs": 6000,
+      "day": 1,
+      "heli": 1,
+      "fly": 60000,
+      "basket": 1,
+      "spacer": 0.75
+    }
+  },
+  "sources": [
+    "Faits : docs/faits/L02-poste-haute-tension.md (deux passes, niveaux A/B/C). Contre-vérification : docs/faits/L02-contre-verification.md.",
+    "Les cinq opérations de la consignation et leur ordre (séparation, condamnation en position d'ouverture, identification, vérification d'absence de tension, mise à la terre et en court-circuit immédiatement après la VAT), le chargé de consignation qui délivre l'attestation, la VAT sur chaque conducteur avec un dispositif conçu pour cela, le détecteur qui ne détecte pas les tensions induites, la MALT-CC raccordée côté terre d'abord, la dépose côté conducteur d'abord : INRS, ED 6109 « Consignations et déconsignations » (A).",
+    "Cadre : Code du travail R4544-1 à R4544-11 (A, via l'INRS) ; la NF C 18-510 est d'application volontaire, référentiel de l'arrêté du 20/11/2017 : le film ne dit pas qu'elle est obligatoire.",
+    "Réseau : près de 100 000 km de lignes aériennes, ≈ 2 900 postes (RTE, A). Champ électrique au sol sous une ligne 400 kV ≈ 5 kV/m (INRS, A).",
+    "Disjoncteur : coupure jusqu'à 63 kA en 2 à 2,5 périodes, l'arc refroidi d'≈ 20 000 K à moins de 2 000 K en quelques centaines de microsecondes, extinction au passage par zéro (B) ; Westinghouse 1956, 115 kV, six chambres en série par pôle (B) ; SF6 : plus de 20 000 fois le CO2 (B, valeurs 23 500 à 24 300 selon les sources).",
+    "Travaux sous tension : RTE, communiqué du 09/07/2025, ligne 400 000 V Dunkerque-Arras, ≈ 400 entretoises en deux semaines, nacelle sous hélicoptère à 40-80 m, combinaisons protectrices, 1 400 jours de coupure évités par an (A). Le film ne dit ni « mise au potentiel » ni « cage de Faraday ».",
+    "Tension et courant induits : simulations CIGRE 2012 (ABB/AEP) sur des lignes américaines de 345 kV à double circuit — jusqu'à 23 kV sur le circuit ouvert, des dizaines d'ampères dans les terres, 807 A lors d'un défaut et jusqu'à 5 138 A dans le pire cas simulé (A). Ce sont des simulations, pas des mesures RTE à 400 kV : le film le dit.",
+    "Zone équipotentielle : OSHA 1910.269, appendice C (A).",
+    "Accident : NIOSH FACE 87-42, Virginie, 12/03/1987, circuit 230 kV mis hors tension et à la terre de part et d'autre ; de nuit, un apprenti saisit le côté pylône d'une terre encore reliée à la ligne ; la procédure de l'entreprise demandait de retirer d'abord les côtés ligne (A). Accident américain : il n'est attribué ni à la France ni à RTE.",
+    "Simplifications : l'intervention est un scénario (une pièce à changer à l'arrivée d'une ligne, sa voisine sur les mêmes pylônes) ; l'incident (un défaut sur la ligne voisine, à distance, pendant les travaux) est reconstitué ; la foudre a été écartée (on ne reste pas en hauteur sous un orage menaçant) ; aucune distance réglementaire n'est chiffrée (les sources se contredisent : « des mètres ») ; aucun délai de réenclenchement n'est donné."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "chap": "Introduction",
+      "text": "[400 000 V|Quatre cent mille volts]. La ligne est *coupée*. Le détecteur dit : rien. Et pourtant… si tu la touches, elle peut encore te tuer.",
+      "vo": "[tense] Quatre cent mille volts. La ligne est coupée. Le détecteur dit : rien. Et pourtant... si tu la touches, elle peut encore te tuer."
+    },
+    {
+      "id": "promesse",
+      "text": "Pour travailler dessus et rentrer chez toi, tu as cinq gestes. Toujours les mêmes, toujours dans le même ordre. Et le dernier… c'est lui qui te garde +en vie+.",
+      "vo": "[conversational, curious] Pour travailler dessus et rentrer chez toi, tu as cinq gestes. Toujours les mêmes, toujours dans le même ordre. Et le dernier... c'est lui qui te garde en vie."
+    },
+    {
+      "id": "curiosite",
+      "hold": 0.3,
+      "text": "Un soir de [1987|mille neuf cent quatre-vingt-sept], un apprenti est mort à cause d'une pince de terre, défaite dans le *mauvais* ordre. Le bon ordre… tu l'auras à la fin.",
+      "vo": "[serious] Un soir de mille neuf cent quatre-vingt-sept, un apprenti est mort à cause d'une pince de terre, défaite dans le mauvais ordre. Le bon ordre... tu l'auras à la fin."
+    },
+    {
+      "id": "defi",
+      "hold": 1.2,
+      "text": "Aujourd'hui, c'est toi qui montes. Une pièce à changer, tout en haut, là où arrive une ligne. Et juste à côté, sa voisine reste *sous tension*.",
+      "vo": "[curious] Aujourd'hui, c'est toi qui montes. Une pièce à changer, tout en haut, là où arrive une ligne. Et juste à côté, sa voisine reste sous tension."
+    },
+    {
+      "id": "abohook",
+      "text": "Entre elle et toi, il n'y a que ces cinq gestes. +Abonne-toi+, et monte avec moi : on va les voir, un par un.",
+      "vo": "[serious] Entre elle et toi, il n'y a que ces cinq gestes. Abonne-toi, et monte avec moi : on va les voir, un par un."
+    },
+    {
+      "id": "ouvre",
+      "chap": "On l'ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "couches",
+      "text": "Un portique, où la ligne arrive. Des isolateurs. Un disjoncteur. Un sectionneur. Et sous tes pieds… un maillage de métal, +enterré+. Tu vas vite comprendre pourquoi.",
+      "vo": "[conversational, curious] Un portique, où la ligne arrive. Des isolateurs. Un disjoncteur. Un sectionneur. Et sous tes pieds... un maillage de métal, enterré. Tu vas vite comprendre pourquoi."
+    },
+    {
+      "id": "lieu",
+      "chap": "Le poste",
+      "text": "Tu es dans un poste électrique. Le carrefour où les grandes lignes se croisent, avant de descendre vers les villes.",
+      "vo": "[warm, conversational] Tu es dans un poste électrique. Le carrefour où les grandes lignes se croisent, avant de descendre vers les villes."
+    },
+    {
+      "id": "reseau",
+      "text": "En France, il y en a près de [2900|deux mille neuf cents]. Reliés par presque cent mille kilomètres de lignes aériennes. Et aujourd'hui, c'est dans celui-ci que tu travailles.",
+      "vo": "[curious] En France, il y en a près de deux mille neuf cents. Reliés par presque cent mille kilomètres de lignes aériennes. Et aujourd'hui, c'est dans celui-ci que tu travailles."
+    },
+    {
+      "id": "champ",
+      "text": "Même sans rien toucher, tu baignes dans un champ électrique. Sous une ligne de quatre cent mille volts, au niveau du sol : environ cinq mille volts par mètre. Et tu ne sens rien.",
+      "vo": "[conversational, curious] Même sans rien toucher, tu baignes dans un champ électrique. Sous une ligne de quatre cent mille volts, au niveau du sol : environ cinq mille volts par mètre. Et tu ne sens rien."
+    },
+    {
+      "id": "air",
+      "text": "Et l'air, lui, n'isole que jusqu'à un certain point. Trop près d'un conducteur, il cède… et l'arc vient te *chercher*. Sans que tu aies touché quoi que ce soit.",
+      "vo": "[serious] Et l'air, lui, n'isole que jusqu'à un certain point. Trop près d'un conducteur, il cède... et l'arc vient te chercher. Sans que tu aies touché quoi que ce soit."
+    },
+    {
+      "id": "distance",
+      "text": "Alors ici, on ne parle pas en centimètres. Autour des conducteurs, il y a des distances qu'on ne franchit pas sans y être formé, et autorisé. Des mètres entiers… d'air interdit.",
+      "vo": "[warm, conversational] Alors ici, on ne parle pas en centimètres. Autour des conducteurs, il y a des distances qu'on ne franchit pas sans y être formé, et autorisé. Des mètres entiers... d'air interdit."
+    },
+    {
+      "id": "sol",
+      "text": "Et le maillage enterré, sous tes pieds ? Le jour où un défaut envoie du courant dans le sol, la terre ne monte pas partout pareil. Entre tes deux pieds, il peut y avoir une différence de tension : la *tension de pas*.",
+      "vo": "[curious] Et le maillage enterré, sous tes pieds ? Le jour où un défaut envoie du courant dans le sol, la terre ne monte pas partout pareil. Entre tes deux pieds, il peut y avoir une différence de tension : la tension de pas."
+    },
+    {
+      "id": "toucher",
+      "text": "Pose la main sur une structure de métal à ce moment-là, et c'est entre ta main et tes pieds : la tension de toucher. Le maillage relie tout le poste, pour que tout monte +ensemble+.",
+      "vo": "[conversational, curious] Pose la main sur une structure de métal à ce moment-là, et c'est entre ta main et tes pieds : la tension de toucher. Le maillage relie tout le poste, pour que tout monte ensemble."
+    },
+    {
+      "id": "gravier",
+      "text": "Et le gravier, partout au sol ? Ce n'est pas pour faire propre. Il ajoute une résistance entre tes pieds et la terre : le courant qui te traverserait est limité.",
+      "vo": "[amused] Et le gravier, partout au sol ? Ce n'est pas pour faire propre. Il ajoute une résistance entre tes pieds et la terre : le courant qui te traverserait est limité."
+    },
+    {
+      "id": "voisine",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Le problème : ta ligne et sa voisine sont deux circuits, côte à côte, sur les mêmes pylônes. Et pour l'instant… les deux sont *sous tension*. Tu vas en couper une seule. Et l'autre… que va-t-elle faire à la tienne ?",
+      "vo": "[curious] Le problème : ta ligne et sa voisine sont deux circuits, côte à côte, sur les mêmes pylônes. Et pour l'instant... les deux sont sous tension. Tu vas en couper une seule. Et l'autre... que va-t-elle faire à la tienne ?"
+    },
+    {
+      "id": "disj1",
+      "chap": "Le disjoncteur",
+      "text": "Première chose : arrêter le courant. Et pour ça, il y a lui. Le disjoncteur.",
+      "vo": "[warm, conversational] Première chose : arrêter le courant. Et pour ça, il y a lui. Le disjoncteur."
+    },
+    {
+      "id": "disj2",
+      "text": "Couper quatre cent mille volts, ce n'est pas appuyer sur un interrupteur. Quand ses contacts s'écartent, le courant ne s'arrête pas : il saute entre eux. Un *arc*. Un éclair qui refuse de mourir.",
+      "vo": "[serious] Couper quatre cent mille volts, ce n'est pas appuyer sur un interrupteur. Quand ses contacts s'écartent, le courant ne s'arrête pas : il saute entre eux. Un arc. Un éclair qui refuse de mourir."
+    },
+    {
+      "id": "disj3",
+      "text": "Cet arc approche les vingt mille degrés. Il faut le refroidir à moins de deux mille… en quelques centaines de millionièmes de seconde.",
+      "vo": "[conversational, curious] Cet arc approche les vingt mille degrés. Il faut le refroidir à moins de deux mille... en quelques centaines de millionièmes de seconde."
+    },
+    {
+      "id": "disj4",
+      "text": "Alors on le souffle, dans un gaz : le [SF6|S-F-six]. Et on attend le bon moment. Le courant alternatif change de sens cent fois par seconde. À chaque fois, il passe par +zéro+.",
+      "vo": "[warm, conversational] Alors on le souffle, dans un gaz : le S-F-six. Et on attend le bon moment. Le courant alternatif change de sens cent fois par seconde. À chaque fois, il passe par zéro."
+    },
+    {
+      "id": "disj5",
+      "text": "C'est là que le gaz étouffe l'arc : il capte les électrons libres. Il peut couper jusqu'à [63 000 A|soixante-trois mille ampères]. Entre l'ordre et la coupure : une cinquantaine de millièmes de seconde. Moins qu'un clignement d'œil.",
+      "vo": "[curious] C'est là que le gaz étouffe l'arc : il capte les électrons libres. Il peut couper jusqu'à soixante-trois mille ampères. Entre l'ordre et la coupure : une cinquantaine de millièmes de seconde. Moins qu'un clignement d'œil.",
+      "hold": 0.5
+    },
+    {
+      "id": "histoire",
+      "text": "Ce combat contre l'arc dure depuis [1956|mille neuf cent cinquante-six]. Cette année-là, l'américain Westinghouse construit le premier disjoncteur haute tension au [SF6|S-F-six]. Il coupe [5 000 A|cinq mille ampères] sous cent quinze mille volts, avec six chambres de coupure, en série.",
+      "vo": "[conversational, curious] Ce combat contre l'arc dure depuis mille neuf cent cinquante-six. Cette année-là, l'américain Westinghouse construit le premier disjoncteur haute tension au S-F-six. Il coupe cinq mille ampères sous cent quinze mille volts, avec six chambres de coupure, en série."
+    },
+    {
+      "id": "climat",
+      "text": "Seul défaut : à quantité égale, ce gaz réchauffe la planète plus de vingt mille fois plus que le [CO2|cé-o-deux]. Le meilleur ami de l'électricien… est un très mauvais élève pour le climat.",
+      "vo": "[amused] Seul défaut : à quantité égale, ce gaz réchauffe la planète plus de vingt mille fois plus que le cé-o-deux. Le meilleur ami de l'électricien... est un très mauvais élève pour le climat."
+    },
+    {
+      "id": "vide",
+      "text": "Alors on cherche à s'en passer. Les nouveaux disjoncteurs coupent dans le +vide+… sans ce gaz.",
+      "vo": "[curious] Alors on cherche à s'en passer. Les nouveaux disjoncteurs coupent dans le vide... sans ce gaz."
+    },
+    {
+      "id": "piege",
+      "hold": 1.2,
+      "text": "Mais attention : un disjoncteur ouvert, ce n'est pas une ligne *sûre*. Ses contacts sont enfermés. Tu ne les vois pas. Et un disjoncteur… ça se referme. Il faudrait pouvoir *voir* la coupure.",
+      "vo": "[serious] Mais attention : un disjoncteur ouvert, ce n'est pas une ligne sûre. Ses contacts sont enfermés. Tu ne les vois pas. Et un disjoncteur... ça se referme. Il faudrait pouvoir voir la coupure."
+    },
+    {
+      "id": "tst1",
+      "chap": "Sans couper",
+      "text": "Mais couper une grande ligne, ça coûte. Alors parfois… on ne la coupe *pas du tout*.",
+      "vo": "[amused] Mais couper une grande ligne, ça coûte. Alors parfois... on ne la coupe pas du tout."
+    },
+    {
+      "id": "tst2",
+      "text": "Juillet [2025|deux mille vingt-cinq], entre Dunkerque et Arras. Une ligne de quatre cent mille volts, *en service*. Et deux techniciens dans une nacelle… suspendue sous un hélicoptère.",
+      "vo": "[conversational, curious] Juillet deux mille vingt-cinq, entre Dunkerque et Arras. Une ligne de quatre cent mille volts, en service. Et deux techniciens dans une nacelle... suspendue sous un hélicoptère."
+    },
+    {
+      "id": "tst3",
+      "text": "Entre quarante et quatre-vingts mètres du sol, en combinaisons protectrices, ils remplacent près de quatre cents entretoises — les pièces qui écartent les conducteurs. En deux semaines. Sans jamais couper le courant.",
+      "vo": "[warm, conversational] Entre quarante et quatre-vingts mètres du sol, en combinaisons protectrices, ils remplacent près de quatre cents entretoises, les pièces qui écartent les conducteurs. En deux semaines. Sans jamais couper le courant."
+    },
+    {
+      "id": "tst4",
+      "text": "Selon RTE, ces méthodes évitent jusqu'à [1 400|mille quatre cents] jours de coupure par an. Des lignes qui restent sous tension… pendant qu'on les répare.",
+      "vo": "[curious] Selon RTE, ces méthodes évitent jusqu'à mille quatre cents jours de coupure par an. Des lignes qui restent sous tension... pendant qu'on les répare."
+    },
+    {
+      "id": "tst5",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Mais toi, aujourd'hui, tu ne voles pas. Toi, tu coupes. Et une ligne coupée… il faut encore la rendre *sûre*. En cinq gestes : les cinq opérations de la consignation.",
+      "vo": "[conversational, curious] Mais toi, aujourd'hui, tu ne voles pas. Toi, tu coupes. Et une ligne coupée... il faut encore la rendre sûre. En cinq gestes : les cinq opérations de la consignation."
+    },
+    {
+      "id": "sec1",
+      "chap": "Séparer",
+      "text": "Premier geste : *séparer*. Le disjoncteur a arrêté le courant. Mais ses contacts, tu ne les vois pas. Alors il faut ouvrir l'air.",
+      "vo": "[warm, conversational] Premier geste : séparer. Le disjoncteur a arrêté le courant. Mais ses contacts, tu ne les vois pas. Alors il faut ouvrir l'air."
+    },
+    {
+      "id": "sec2",
+      "text": "Voici le sectionneur. Lui, il n'a pas de pouvoir de coupure : on ne l'ouvre qu'une fois le courant coupé. Mais quand il s'ouvre… tu le +vois+.",
+      "vo": "[curious] Voici le sectionneur. Lui, il n'a pas de pouvoir de coupure : on ne l'ouvre qu'une fois le courant coupé. Mais quand il s'ouvre... tu le vois."
+    },
+    {
+      "id": "sec3",
+      "hold": 1.2,
+      "text": "Ses bras s'écartent : entre les contacts, de l'air, bien visible. Une séparation que tu vérifies de tes propres yeux. Mais un sectionneur… ça se referme.",
+      "vo": "[conversational, curious] Ses bras s'écartent : entre les contacts, de l'air, bien visible. Une séparation que tu vérifies de tes propres yeux. Mais un sectionneur... ça se referme."
+    },
+    {
+      "id": "cad1",
+      "chap": "Condamner, identifier",
+      "text": "Deuxième geste : *condamner*. Le sectionneur est ouvert. Il doit le rester, quoi qu'il arrive.",
+      "vo": "[serious] Deuxième geste : condamner. Le sectionneur est ouvert. Il doit le rester, quoi qu'il arrive."
+    },
+    {
+      "id": "cad2",
+      "text": "On le bloque en position ouverte : serrure, cadenas. On pose une pancarte : condamné, défense de manœuvrer. Personne ne doit pouvoir le refermer… par erreur.",
+      "vo": "[warm, conversational] On le bloque en position ouverte : serrure, cadenas. On pose une pancarte : condamné, défense de manœuvrer. Personne ne doit pouvoir le refermer... par erreur."
+    },
+    {
+      "id": "cad3",
+      "text": "Celui qui consigne a un nom : le chargé de consignation. Quand tout est fait, il remet un papier au chargé de travaux, le chef de ton équipe. Une +attestation+. Sans elle, rien ne commence.",
+      "vo": "[curious] Celui qui consigne a un nom : le chargé de consignation. Quand tout est fait, il remet un papier au chargé de travaux, le chef de ton équipe. Une attestation. Sans elle, rien ne commence."
+    },
+    {
+      "id": "habil",
+      "text": "Et toi, pour monter, il te faut une *habilitation*. Un titre que te donne ton employeur, et qui dit exactement ce que tu as le droit de faire. B pour la basse tension. H… pour la haute.",
+      "vo": "[conversational, curious] Et toi, pour monter, il te faut une habilitation. Un titre que te donne ton employeur, et qui dit exactement ce que tu as le droit de faire. B pour la basse tension. H... pour la haute."
+    },
+    {
+      "id": "ident",
+      "text": "Troisième geste : *identifier*. Sur le lieu de travail, cette fois. Ici, tout se ressemble : des portiques, des câbles, encore des portiques. Alors on vérifie qu'on est au pied du bon ouvrage. Celui qu'on a coupé.",
+      "vo": "[conversational, curious] Troisième geste : identifier. Sur le lieu de travail, cette fois. Ici, tout se ressemble : des portiques, des câbles, encore des portiques. Alors on vérifie qu'on est au pied du bon ouvrage. Celui qu'on a coupé."
+    },
+    {
+      "id": "ident2",
+      "text": "Couper la bonne ligne… et monter sur sa voisine, celle qui reste *sous tension*. Il suffit d'une seconde d'inattention.",
+      "vo": "[serious] Couper la bonne ligne... et monter sur sa voisine, celle qui reste sous tension. Il suffit d'une seconde d'inattention."
+    },
+    {
+      "id": "seuil",
+      "hold": 1.2,
+      "text": "Maintenant, il faut s'assurer que tout est mort. Un détecteur va te répondre que oui… mais il ne voit pas tout. +Abonne-toi+ : ce qu'il rate, on te le montre juste après.",
+      "vo": "[conversational, curious] Maintenant, il faut s'assurer que tout est mort. Un détecteur va te répondre que oui... mais il ne voit pas tout. Abonne-toi : ce qu'il rate, on te le montre juste après."
+    },
+    {
+      "id": "vat1",
+      "chap": "Vérifier",
+      "text": "Quatrième geste : *vérifier*. La [VAT|vé-a-té] : vérification d'absence de tension. On ne croit personne. Ni le papier, ni le sectionneur.",
+      "vo": "[warm, conversational] Quatrième geste : vérifier. La vé-a-té : vérification d'absence de tension. On ne croit personne. Ni le papier, ni le sectionneur."
+    },
+    {
+      "id": "vat2",
+      "text": "Avec un détecteur fait pour ça, au bout d'une perche isolante. Pas un voltmètre, pas un tournevis testeur. Et on le présente à chaque conducteur… un par un.",
+      "vo": "[curious] Avec un détecteur fait pour ça, au bout d'une perche isolante. Pas un voltmètre, pas un tournevis testeur. Et on le présente à chaque conducteur... un par un."
+    },
+    {
+      "id": "vat3",
+      "text": "Le détecteur ne réagit pas. Absence de tension. Tout a l'air *mort*.",
+      "vo": "[serious] Le détecteur ne réagit pas. Absence de tension. Tout a l'air mort."
+    },
+    {
+      "id": "vat4",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Sauf que ce détecteur-là ne voit pas tout. Une tension que la voisine fait *naître* dans ta ligne… il ne la détecte pas. Alors ta ligne… est-elle vraiment morte ?",
+      "vo": "[serious] Sauf que ce détecteur-là ne voit pas tout. Une tension que la voisine fait naître dans ta ligne... il ne la détecte pas. Alors ta ligne... est-elle vraiment morte ?"
+    },
+    {
+      "id": "induit1",
+      "chap": "Mettre à la terre",
+      "text": "Cette tension vient de la voisine. Vos deux lignes courent côte à côte, sur des kilomètres. Elle est sous tension… et à travers l'air, elle *agit* sur la tienne, sans jamais la toucher.",
+      "vo": "[curious] Cette tension vient de la voisine. Vos deux lignes courent côte à côte, sur des kilomètres. Elle est sous tension... et à travers l'air, elle agit sur la tienne, sans jamais la toucher."
+    },
+    {
+      "id": "induit2",
+      "text": "Des ingénieurs l'ont simulé, sur des lignes américaines de trois cent quarante-cinq mille volts : sur un circuit pourtant ouvert, plus de vingt mille volts peuvent apparaître. Et ton détecteur n'en voit rien.",
+      "vo": "[serious] Des ingénieurs l'ont simulé, sur des lignes américaines de trois cent quarante-cinq mille volts : sur un circuit pourtant ouvert, plus de vingt mille volts peuvent apparaître. Et ton détecteur n'en voit rien."
+    },
+    {
+      "id": "malt1",
+      "text": "Alors, cinquième geste. On *met à la terre*… et en court-circuit. Immédiatement après avoir vérifié.",
+      "vo": "[warm, conversational] Alors, cinquième geste. On met à la terre... et en court-circuit. Immédiatement après avoir vérifié."
+    },
+    {
+      "id": "malt2",
+      "text": "De grosses pinces, au bout de câbles de cuivre. On les accroche d'abord côté +terre+. Et seulement ensuite… aux conducteurs de la ligne.",
+      "vo": "[curious] De grosses pinces, au bout de câbles de cuivre. On les accroche d'abord côté terre. Et seulement ensuite... aux conducteurs de la ligne."
+    },
+    {
+      "id": "malt3",
+      "text": "Les trois phases sont reliées entre elles, et à la terre. Des deux côtés de l'endroit où tu travailles. Entre les deux, tout est au même potentiel : une +zone équipotentielle+. Et toi, tu es dedans.",
+      "vo": "[conversational, curious] Les trois phases sont reliées entre elles, et à la terre. Des deux côtés de l'endroit où tu travailles. Entre les deux, tout est au même potentiel : une zone équipotentielle. Et toi, tu es dedans."
+    },
+    {
+      "id": "malt4",
+      "text": "Si du courant arrive, il file par les pinces. Et entre ta main et tes pieds… presque plus rien ne le pousse à passer par toi.",
+      "vo": "[warm, conversational] Si du courant arrive, il file par les pinces. Et entre ta main et tes pieds... presque plus rien ne le pousse à passer par toi."
+    },
+    {
+      "id": "malt5",
+      "text": "C'est tout le paradoxe : pour te protéger d'un court-circuit… on en fabrique un. *Exprès*.",
+      "vo": "[amused] C'est tout le paradoxe : pour te protéger d'un court-circuit... on en fabrique un. Exprès."
+    },
+    {
+      "id": "pret",
+      "hold": 1.2,
+      "text": "Les cinq gestes sont faits. Tu montes. Ta ligne est coupée, vérifiée, à la terre… et sa voisine reste *sous tension*. Tu commences à travailler.",
+      "vo": "[serious] Les cinq gestes sont faits. Tu montes. Ta ligne est coupée, vérifiée, à la terre... et sa voisine reste sous tension. Tu commences à travailler."
+    },
+    {
+      "id": "orage",
+      "chap": "L'incident",
+      "text": "Et là, à des kilomètres de toi, sur la voisine : un défaut. Une branche trop proche. Un isolateur qui lâche. Un *court-circuit*.",
+      "vo": "[serious] Et là, à des kilomètres de toi, sur la voisine : un défaut. Une branche trop proche. Un isolateur qui lâche. Un court-circuit."
+    },
+    {
+      "id": "defaut",
+      "text": "Le courant de la voisine s'emballe. Et dans ta ligne, pourtant coupée, le courant induit *grimpe*. D'un coup.",
+      "vo": "[curious] Le courant de la voisine s'emballe. Et dans ta ligne, pourtant coupée, le courant induit grimpe. D'un coup."
+    },
+    {
+      "id": "chiffre",
+      "text": "Dans les simulations des ingénieurs, le courant dans les terres passe de quelques dizaines à plusieurs centaines d'ampères. Et dans le pire des cas… à plus de [5 000|cinq mille].",
+      "vo": "[serious] Dans les simulations des ingénieurs, le courant dans les terres passe de quelques dizaines à plusieurs centaines d'ampères. Et dans le pire des cas... à plus de cinq mille."
+    },
+    {
+      "id": "passe",
+      "text": "Mais ce courant ne passe pas par toi. Il file par les pinces, vers la terre. Autour de toi, tout monte ensemble. Et entre ta main et tes pieds… presque rien ne bouge.",
+      "vo": "[warm, conversational] Mais ce courant ne passe pas par toi. Il file par les pinces, vers la terre. Autour de toi, tout monte ensemble. Et entre ta main et tes pieds... presque rien ne bouge."
+    },
+    {
+      "id": "coupe",
+      "text": "Là-bas, le disjoncteur de la voisine fait ce que tu as vu. Il attend le passage par zéro. Le gaz étouffe l'arc. Et il +coupe+. En quelques centièmes de seconde.",
+      "vo": "[conversational, curious] Là-bas, le disjoncteur de la voisine fait ce que tu as vu. Il attend le passage par zéro. Le gaz étouffe l'arc. Et il coupe. En quelques centièmes de seconde."
+    },
+    {
+      "id": "calme",
+      "hold": 1.2,
+      "text": "Toi, tu n'as rien senti. À peine un claquement sec, quelque part dans le poste.",
+      "vo": "[warm, conversational] Toi, tu n'as rien senti. À peine un claquement sec, quelque part dans le poste."
+    },
+    {
+      "id": "recap",
+      "chap": "Ce qu'il faut retenir",
+      "text": "Qu'est-ce qui t'a sauvé ? Pas le détecteur : il ne voit pas la tension induite. Cinq gestes, dans l'ordre : séparer, condamner, identifier, vérifier. Et mettre à la terre, et en court-circuit. Chacun part du principe que le précédent a pu rater.",
+      "vo": "[curious] Qu'est-ce qui t'a sauvé ? Pas le détecteur : il ne voit pas la tension induite. Cinq gestes, dans l'ordre : séparer, condamner, identifier, vérifier. Et mettre à la terre, et en court-circuit. Chacun part du principe que le précédent a pu rater."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Une ligne coupée n'est pas une ligne morte. Couper le courant, ça ne suffit *jamais*. Ce qui te garde en vie, c'est la +terre+ : posée avant qu'il revienne.",
+      "vo": "[conversational, curious] Une ligne coupée n'est pas une ligne morte. Couper le courant, ça ne suffit jamais. Ce qui te garde en vie, c'est la terre : posée avant qu'il revienne."
+    },
+    {
+      "id": "virginie",
+      "text": "Et ce soir de [1987|mille neuf cent quatre-vingt-sept] ? Virginie, États-Unis. Un circuit de [230 000 V|deux cent trente mille volts], coupé, mis à la terre de part et d'autre.",
+      "vo": "[serious] Et ce soir de mille neuf cent quatre-vingt-sept ? Virginie, États-Unis. Un circuit de deux cent trente mille volts, coupé, mis à la terre de part et d'autre."
+    },
+    {
+      "id": "apprenti",
+      "text": "La nuit est tombée. On défait les terres. Un apprenti saisit le bout d'une pince, côté pylône… alors qu'elle est encore reliée à la ligne. Le courant induit le *traverse*.",
+      "vo": "[curious] La nuit est tombée. On défait les terres. Un apprenti saisit le bout d'une pince, côté pylône... alors qu'elle est encore reliée à la ligne. Le courant induit le traverse."
+    },
+    {
+      "id": "regle",
+      "hold": 0.3,
+      "text": "La règle de son entreprise était claire : on défait le côté ligne d'abord. Le côté terre, en dernier. Elle n'a pas été suivie. La première pince que tu poses, c'est côté +terre+… et c'est la dernière que tu enlèves.",
+      "vo": "[warm, conversational] La règle de son entreprise était claire : on défait le côté ligne d'abord. Le côté terre, en dernier. Elle n'a pas été suivie. La première pince que tu poses, c'est côté terre... et c'est la dernière que tu enlèves."
+    },
+    {
+      "id": "comment",
+      "text": "Cette règle-là, un habilité la connaît. Dis-moi en +commentaire+ lequel de ces cinq gestes est le plus dur à tenir, un soir de fatigue. Et si tu ne l'es pas… lequel tu aurais oublié ?",
+      "vo": "[curious] Cette règle-là, un habilité la connaît. Dis-moi en commentaire lequel de ces cinq gestes est le plus dur à tenir, un soir de fatigue. Et si tu ne l'es pas... lequel tu aurais oublié ?"
+    },
+    {
+      "id": "like",
+      "text": "Et pour savoir si on a tout dit, le mieux, c'est un vrai électricien. Envoie-lui cette vidéo : il te dira ce qui manque. Et si tu as appris quelque chose, un petit +like+.",
+      "vo": "[warm] Et pour savoir si on a tout dit, le mieux, c'est un vrai électricien. Envoie-lui cette vidéo : il te dira ce qui manque. Et si tu as appris quelque chose, un petit like."
+    },
+    {
+      "id": "abo",
+      "text": "Et on se retrouve très vite, dans un autre endroit où tu n'entres jamais.",
+      "vo": "[warm] Et on se retrouve très vite, dans un autre endroit où tu n'entres jamais."
+    },
+    {
+      "id": "boucle",
+      "text": "Un endroit où, même quand tout est coupé, il reste…",
+      "vo": "[calm] Un endroit où, même quand tout est coupé, il reste,"
+    }
+  ],
+  "cues": {
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "orage-0.12",
+    "trigger": "orage:lâche",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:jamais",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:reste",
+    "arcair": "air:cède",
+    "faultsol": "sol:défaut",
+    "bondall": "toucher:relie",
+    "contacts": "disj2:s'écartent",
+    "arcon": "disj2:saute",
+    "zero": "disj4:zéro",
+    "quench": "disj5:étouffe",
+    "era56": "histoire:1956",
+    "linecut": "tst5:coupes",
+    "sopen": "sec2:s'ouvre",
+    "locked": "cad2:cadenas",
+    "signed": "cad2:pancarte",
+    "paper": "cad3:remet",
+    "mute": "vat3:réagit",
+    "induce": "vat4:naître",
+    "earthend": "malt2:terre",
+    "lineend": "malt2:conducteurs",
+    "zoneon": "malt3:zone",
+    "climbs": "pret:montes",
+    "surge": "defaut:grimpe",
+    "worst": "chiffre:pire",
+    "vcut": "coupe:coupe",
+    "undo87": "apprenti:défait",
+    "grab87": "apprenti:saisit",
+    "shock87": "apprenti:traverse",
+    "linefirst": "regle:ligne",
+    "earthlast": "regle:dernier"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "music",
+      "gain": -21,
+      "curve": [
+        [
+          0,
+          0.9,
+          0.5
+        ],
+        [
+          "ouvre-0.4",
+          0.55,
+          0
+        ],
+        [
+          "lieu-1",
+          1,
+          0.55
+        ],
+        [
+          "orage-1",
+          1,
+          0.85
+        ],
+        [
+          "calme",
+          0.75,
+          0.3
+        ],
+        [
+          "recap-0.5",
+          0.85,
+          0.5
+        ],
+        [
+          "boucle",
+          0.8,
+          0.5
+        ]
+      ]
+    },
+    {
+      "type": "drone",
+      "gain": -27,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "riser",
+      "to": "explode",
+      "dur": 0.8,
+      "gain": -25
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "chapters",
+      "skip": [
+        "ouvre"
+      ]
+    },
+    {
+      "type": "zap",
+      "at": "trigger",
+      "gain": -14
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    },
+    {
+      "type": "clack",
+      "at": "calme:sec",
+      "gain": -16
+    }
+  ]
+}
