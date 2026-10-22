@@ -189,7 +189,7 @@ async function coverFrame(browser, ep, file) {
     ({ at, cam }) => {
       const { stage } = window.SD;
       window.__timelines.main.time(at);
-      stage.pose = { ...cam, drift: 0 };
+      stage.pose = { dof: 0, ...cam, drift: 0 }; // sharp unless the frame asks for a lens: a close-up's blur is not inherited
       stage.renderAt(at);
     },
     { at, cam: cfg.cam ?? {} },
@@ -224,7 +224,7 @@ export async function social({ out = path.join(ROOT, "renders"), only } = {}) {
       await page.evaluate(({ pose, state }) => {
         const { stage } = window.SD;
         window.__timelines.main.time(0.05);
-        stage.pose = pose;
+        stage.pose = pose ? { dof: 0, ...pose } : pose;
         window.SD.force = state;
         stage.renderAt(0.05);
       }, f);

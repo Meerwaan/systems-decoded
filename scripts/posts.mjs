@@ -228,6 +228,17 @@ const POSTS = {
       hashtags: ["#shorts", "#taipei101", "#architecture", "#ingenierie", "#science"],
     },
   },
+  "021-veille-tgv": {
+    instagram: {
+      caption: "Ton TGV file à 255 km/h. Dans la cabine… plus personne.\n\nDossier 021 : la veille automatique du TGV (la VACMA). Une pédale sous le pupitre, un compte à rebours, et un train qui sait s'arrêter seul. Mais elle a un angle mort.\n\nCette pédale, tu connaissais ?",
+      hashtags: ["#tgv", "#sncf", "#train", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "TGV sans conducteur à 255 km/h : la pédale qui arrête le train toute seule (VACMA)",
+      description: "Dossier 021 — la veille automatique du TGV, ouverte : la pédale, les touches, le compte à rebours, la sonnerie, et ce qui se passe quand plus personne ne répond. Jusqu'au train arrêté, 2 320 mètres plus loin.\n\nCette pédale, tu connaissais ?",
+      hashtags: ["#shorts", "#tgv", "#sncf", "#train", "#science"],
+    },
+  },
   "022-batterie-telephone": {
     instagram: {
       caption: "Ton téléphone charge, sous ton oreiller. Dedans, sa batterie chauffe.\n\nDossier 022 : la batterie de téléphone. Entre ses deux électrodes, un film de plastique plus fin qu'un cheveu : son dernier rempart. Et ton oreiller travaille contre lui.\n\nTu le charges où, la nuit ?",
@@ -239,6 +250,94 @@ const POSTS = {
       hashtags: ["#shorts", "#batterietelephone", "#smartphone", "#lithium", "#science"],
     },
   },
+  "023-eolienne-de-secours": {
+    instagram: {
+      caption: "Au-dessus de l'Atlantique, ton avion n'a plus un seul moteur.\n\nDossier 023 : l'éolienne de secours des avions de ligne. Une petite hélice qui sort du ventre, toute seule, et qui garde l'avion pilotable. 24 août 2001 : un Airbus plane dix-neuf minutes jusqu'aux Açores. Mais elle ne fait pas tout.\n\nEn avion, tu as peur ?",
+      hashtags: ["#avion", "#aviation", "#airbus", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Plus aucun moteur au-dessus de l'Atlantique : la petite hélice qui sauve l'avion",
+      description: "Dossier 023 — l'éolienne de secours d'un avion de ligne (la RAT), ouverte : la trappe, le bras, l'hélice, la pompe. Et le vol Air Transat 236, qui a plané dix-neuf minutes sans moteur jusqu'aux Açores, en 2001.\n\nEn avion, tu as peur ?",
+      hashtags: ["#shorts", "#avion", "#aviation", "#airbus", "#science"],
+    },
+  },
+  "024-bloc-operatoire": {
+    instagram: {
+      caption: "Tu dors, sur la table d'opération. Dans un appareil, un fil touche le métal.\n\nDossier 024 : le bloc opératoire. Chez toi, ça ferait tout sauter. Ici, rien ne coupe : c'est voulu, et ça porte un nom, le schéma IT médical. Mais ça ne marche qu'une fois.\n\nÉlectriciens : qu'est-ce qu'on a simplifié ?",
+      hashtags: ["#electricite", "#electricien", "#hopital", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Au bloc opératoire, un défaut électrique ne doit RIEN couper : le schéma IT médical",
+      description: "Dossier 024 — le bloc opératoire ouvert : le transformateur d'isolement, le contrôleur permanent d'isolement, l'alarme. Pourquoi, ici, le premier défaut ne coupe rien… et pourquoi le deuxième, si.\n\nÉlectriciens : qu'est-ce qu'on a simplifié ?",
+      hashtags: ["#shorts", "#electricite", "#electricien", "#hopital", "#science"],
+    },
+  },
+  "025-esp": {
+    instagram: {
+      caption: "Un sanglier. Tu braques d'un coup… et l'arrière de ta voiture décroche.\n\nDossier 025 : l'ESP, demandé en commentaire. Ta voiture compare où tu veux aller et où elle va, et freine une seule roue pour te remettre dans l'axe. Et ce réflexe, elle le doit à un élan.\n\nLa tienne, elle est d'avant ou d'après 2014 ?",
+      hashtags: ["#esp", "#voiture", "#securiteroutiere", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ta voiture décroche : l'ESP freine UNE roue pour te rattraper (et c'est grâce à un élan)",
+      description: "Dossier 025 — l'ESP ouvert : le capteur d'angle du volant, le capteur de lacet, le calculateur, le bloc qui freine une roue à la fois. Et le test de l'élan, en Suède, en 1997.\n\nLa tienne, elle est d'avant ou d'après 2014 ?",
+      hashtags: ["#shorts", "#esp", "#voiture", "#securiteroutiere", "#science"],
+    },
+  },
+  "026-soyouz-ms10": {
+    instagram: {
+      caption: "Ta fusée lâche, en pleine montée. Et ta tour de sauvetage… vient de partir.\n\nDossier 026 : Soyouz MS-10, le 11 octobre 2018. Il te reste quatre petits moteurs. Et ce qui a fait lâcher ta fusée était là avant même le décollage.\n\nToi, tu remontes… ou plus jamais ?",
+      hashtags: ["#soyouz", "#espace", "#fusee", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ta fusée lâche en pleine montée… et ta tour de sauvetage vient de partir (Soyouz MS-10)",
+      description: "Dossier 026 — Soyouz MS-10, 11 octobre 2018 : à cinquante kilomètres du sol, un propulseur se détache mal et frappe la fusée. La tour de sauvetage est déjà partie. Ce qui ramène l'équipage tient en quatre petits moteurs. On l'ouvre.\n\nToi, tu remontes… ou plus jamais ?",
+      hashtags: ["#shorts", "#soyouz", "#espace", "#fusee", "#science"],
+    },
+  },
+  "027-voie-de-detresse": {
+    instagram: {
+      caption: "Ton camion n'a plus de freins. Ils ne sont pas cassés : ils sont trop chauds.\n\nDossier 027 : la voie de détresse, le lit d'arrêt des poids lourds. Ce qui va t'arrêter, ce sont des cailloux… et pas n'importe lesquels. Et tes freins, c'est ton propre pied qui les a fait chauffer.\n\nToi, en descente : frein, ou moteur ?",
+      hashtags: ["#poidslourd", "#camion", "#securiteroutiere", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ton camion n'a plus de freins : ce qui va t'arrêter, ce sont des cailloux (voie de détresse)",
+      description: "Dossier 027 — la voie de détresse ouverte : le lit d'arrêt, ses grains ronds, sa glissière, sa butte de terre. Pourquoi les freins d'un poids lourd lâchent dans une longue descente, et comment quarante tonnes s'arrêtent sans toucher la pédale.\n\nToi, en descente : frein, ou moteur ?",
+      hashtags: ["#shorts", "#poidslourd", "#camion", "#securiteroutiere", "#science"],
+    },
+  },
+  "028-detecteur-co": {
+    instagram: {
+      caption: "Ta chaudière t'empoisonne. Et ton détecteur… ne dit rien.\n\nDossier 028 : le détecteur de monoxyde de carbone. Un gaz sans odeur, une centaine de morts par an en France, et un boîtier qui a le droit d'attendre une heure avant de sonner. Pourquoi ?\n\nLe tien, au plafond : fumée… ou CO ?",
+      hashtags: ["#monoxydedecarbone", "#chauffage", "#maison", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ta chaudière t'empoisonne… et ton détecteur de CO a le droit d'attendre une heure",
+      description: "Dossier 028 — le détecteur de monoxyde de carbone ouvert : la membrane, l'électrode où le gaz s'oxyde, la puce, la pile. Pourquoi il ne sonne pas tout de suite, et pourquoi un détecteur qui n'est que de fumée ne voit pas ce gaz.\n\nLe tien, au plafond : fumée… ou CO ?",
+      hashtags: ["#shorts", "#monoxydedecarbone", "#chauffage", "#maison", "#science"],
+    },
+  },
+  "029-airbag-avalanche": {
+    instagram: {
+      caption: "Sous tes skis, la neige casse. La pente part avec toi.\n\nDossier 029 : l'airbag d'avalanche. Une poignée, une cartouche, un ballon sorti de ton dos en quelques secondes… si ta main tire. Et ce qui te fait remonter n'est pas ce que tu crois.\n\nToi, en hors-piste : avec airbag… ou sans ?",
+      hashtags: ["#avalanche", "#ski", "#horspiste", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "La neige casse sous tes skis… et un ballon sort de ton dos (airbag d'avalanche)",
+      description: "Dossier 029 — l'airbag d'avalanche ouvert : la poignée, la cartouche, le venturi qui aspire l'air, le ballon d'au moins 150 litres. Ce qui se passe dans la neige qui coule, et pourquoi un sac sur cinq ne se gonfle pas.\n\nToi, en hors-piste : avec airbag… ou sans ?",
+      hashtags: ["#shorts", "#avalanche", "#ski", "#horspiste", "#science"],
+    },
+  },
+  "030-prise-de-terre": {
+    instagram: {
+      caption: "Ta machine à laver est sous tension. Et rien n'a sauté.\n\nDossier 030 : la prise de terre. Un fil vert-jaune, une broche sur ta prise, un câble de cuivre nu autour des fondations. Ton différentiel marche… mais sans elle, il attend que le courant passe par toi.\n\nChez toi : des prises avec broche… ou sans ?",
+      hashtags: ["#electricite", "#electricien", "#maison", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ta machine à laver est sous tension… et rien n'a sauté : la prise de terre",
+      description: "Dossier 030 — la prise de terre ouverte : le conducteur de protection vert-jaune, la broche de la prise, le tableau, le câble de cuivre nu autour des fondations. Ce qu'elle fait vraiment le jour d'un défaut.\n\nÉlectriciens : qu'est-ce qu'on a simplifié ? Et chez toi : avec broche… ou sans ?",
+      hashtags: ["#shorts", "#electricite", "#electricien", "#maison", "#science"],
+    },
+  },
   "HS01-pare-brise": {
     instagram: {
       caption: "Ton pare-brise doit casser pour réussir son test. Pourquoi ? On l'a suivi du sable jusqu'au jour où on lâche une tête de dix kilos dessus.\n\nHors-série 01 : notre tout premier grand format, près de neuf minutes. Il t'attend sur notre chaîne YouTube : le lien est en bio.\n\nTa vitre conducteur, tu sais lire le petit tampon dans son coin ?",
@@ -248,6 +347,17 @@ const POSTS = {
       title: "Ton pare-brise DOIT casser : notre premier grand film t'explique pourquoi",
       description: "Hors-série 01 — on a suivi ton pare-brise du sable en fusion jusqu'au test où on lâche une tête de dix kilos dessus. Le film complet (8 min 51) est sur la chaîne, lié juste sous ce Short.\n\nTa vitre conducteur, tu sais lire le petit tampon dans son coin ?",
       hashtags: ["#shorts", "#parebrise", "#commentcestfait", "#voiture", "#science"],
+    },
+  },
+  "HS02-poste-haute-tension": {
+    instagram: {
+      caption: "Une ligne de 400 000 volts, coupée. Ton détecteur ne réagit pas. Tout a l'air mort… et elle peut encore te tuer.\n\nCinq gestes pour rentrer chez toi : les cinq opérations de la consignation. Et le dernier, dans le mauvais ordre, tue. Le bon, tu le connais ?\n\nNotre nouveau grand format t'emmène là où tu n'entres jamais, dans un poste électrique. Le film complet, plus de neuf minutes, t'attend sur notre chaîne YouTube : le lien est en bio.",
+      hashtags: ["#electricien", "#hautetension", "#consignation", "#electricite", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Coupée… et pourtant mortelle : 400 000 volts, et 5 gestes pour rentrer chez toi",
+      description: "Une ligne de 400 000 volts coupée peut encore te tuer. Notre nouveau grand format t'emmène dans un poste électrique, là où tu n'entres jamais : les cinq gestes de la consignation, un par un. Le film complet (9 min 10) est sur la chaîne, lié juste sous ce Short.\n\nLe dernier geste, dans le mauvais ordre, tue. Le bon, tu le connais ?",
+      hashtags: ["#shorts", "#electricien", "#hautetension", "#consignation", "#electricite"],
     },
   },
 };
