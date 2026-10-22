@@ -136,11 +136,21 @@ try {
       const words = s.beats.reduce((n, b) => n + b.words.length, 0);
       console.log(`\n  ${ep.title} · ${s.duration}s · ${words} mots affichés · timing ${s.estimated ? "estimé" : "voix réelle"}\n`);
       for (const b of s.beats) {
-        console.log(`  ${b.start.toFixed(2).padStart(6)} → ${b.end.toFixed(2).padStart(6)}  ${b.id.padEnd(10)} ${b.words.map((w) => w.t).join(" ")}`);
+        // a long: its chapter cards and its mid-roll ads, where they fall (a short has neither)
+        if (b.chap) console.log(`  ── ${b.chap} ──`);
+        console.log(`  ${b.start.toFixed(2).padStart(6)} → ${b.end.toFixed(2).padStart(6)}  ${b.id.padEnd(10)} ${b.words.map((w) => w.t).join(" ")}${b.midroll ? "   ⏸ pub" : ""}`);
       }
       console.log("\n  cues:");
       for (const [k, v] of Object.entries(s.cues)) console.log(`    ${v.toFixed(2).padStart(6)}  ${k}`);
       console.log("");
+      // the writing checks (a short: docs/recette-script.md; a long: docs/recette-long.md, with its map of chapters,
+      // mid-rolls and threads): warnings only, never in the way of the table above
+      try {
+        const { printEcriture } = await import("./lib/ecriture.mjs");
+        printEcriture(ep, s);
+      } catch (err) {
+        console.log(`  (contrôles d'écriture indisponibles : ${err.message})\n`);
+      }
       break;
     }
     case "snap": {
@@ -208,7 +218,11 @@ try {
     }
     case "cover": {
       const { cover } = await import("./cover.mjs");
-      await cover(resolveEpisode(args[0]), { alt: flags.alt === true ? 2 : Number(flags.alt ?? 0) });
+      await cover(resolveEpisode(args[0]), {
+        alt: flags.alt === true ? 2 : Number(flags.alt ?? 0),
+        out: flags.out ? path.resolve(String(flags.out)) : null, // a trial goes outside renders/: Merwan sees renders/
+        gpu: !!flags.gpu,
+      });
       break;
     }
     case "phone": {

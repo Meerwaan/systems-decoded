@@ -15,7 +15,7 @@ import { creditRate, spendGuard } from "./credits.mjs";
 
 const API = "https://api.elevenlabs.io/v1";
 const ANALYSIS = 4; // bump when what is stored next to a recording changes
-const DEFAULT_TAKES = 3; // whole takes for a new script
+const DEFAULT_TAKES = 1; // whole takes for a new script — one per film since 018 (three takes of a phrase differ by 0.7 st)
 const RETAKES = 3; // recordings of one phrase when it is retaken alone
 const SWITCH = 0.7; // what a change of recording must earn: phrases stay together unless one is clearly better elsewhere
 const WHOLE = 6; // a recording of at least this many phrases is a "take"; shorter, a retake
@@ -145,7 +145,11 @@ function pool(dir, ep) {
 /* ---------------------------------------------------------------- measuring one recording */
 
 /** Where to cut between two phrases: the quietest instant of the silence, preferably near its middle. */
-function quietest(frames, a, b) {
+function quietest(frames, a, b, from = a) {
+  // A gap the alignment squeezes under a quarter of a second may be misplaced: eleven_v4_turbo's word ends come
+  // ≈ 0.1 s late (HS02: the true silence sat 0.1–0.2 s before the gap, and a hold cut into the next phrase's first
+  // word). So look back into the last word, never before it starts, and a little past the next word's start.
+  if (b - a < 0.25) [a, b] = [Math.max(from, a - 0.35), b + 0.05];
   const mid = (a + b) / 2;
   if (b - a < 0.12) return mid;
   const half = (b - a) / 2;
@@ -165,7 +169,7 @@ function analyse(ep, rec) {
   const frames = unpack(rec.meta.frames);
   const round = (x) => Math.round(x * 1000) / 1000;
   const bounds = [round(Math.max(0, words[order[0]][0].s - 0.15))];
-  for (let k = 1; k < order.length; k++) bounds.push(round(quietest(frames, words[order[k - 1]].at(-1).e, words[order[k]][0].s)));
+  for (let k = 1; k < order.length; k++) bounds.push(round(quietest(frames, words[order[k - 1]].at(-1).e, words[order[k]][0].s, words[order[k - 1]].at(-1).s)));
   bounds.push(round(Math.min(duration, words[order.at(-1)].at(-1).e + 0.5)));
   const cuts = Object.fromEntries(order.map((id, k) => [id, [bounds[k], bounds[k + 1]]]));
 
@@ -235,14 +239,21 @@ const PENALTY = {
   "accent manqué": 0.5,
   "question qui tombe": 0.4,
   "fin qui retombe": 0.4,
+  "« on l'ouvre » traîne": 1.5,
 };
+
+// "Alors… on l'ouvre", the account's signature: in 005 to 017 (one request, right after the tense scene) it lasts
+// 1.06 to 1.36 s at 10.5 to 15.9 l/s — offhand, sure of itself. In 018 to 020, where it opened the autopsy's own
+// request, it dragged to 1.7 s at 7.5 l/s and viewers heard a narrator who no longer wanted to open anything.
+const SIGNATURE = /on l.ouvre/i;
+const isSignature = (b) => SIGNATURE.test(b.text ?? b.vo ?? "");
 
 /**
  * Score one phrase of one recording (higher = better played) and list what an ear should check.
  * `ref`: the usual rate and level of the takes — a phrase is fast or loud against them.
  * `seconds`: how long the other recordings needed for the same phrase (an outlier is often a stumble).
  */
-function judge(dir, seg, ref, seconds, first) {
+function judge(dir, seg, ref, seconds, first, signature) {
   const flags = [];
   const rate = seg.rate - ref.rate;
   const level = seg.db - ref.db;
@@ -277,6 +288,7 @@ function judge(dir, seg, ref, seconds, first) {
   if (dir.ending === "question" && seg.tail < -1.5) flags.push("question qui tombe");
   if (dir.ending === "suspendu" && seg.tail < -2.5) flags.push("fin qui retombe");
   if (seg.spokenTag) flags.push("balise prononcée");
+  if (signature && (seg.seconds > 1.5 || seg.rate < 9.5)) flags.push("« on l'ouvre » traîne");
 
   for (const f of flags) score -= PENALTY[f] ?? 0;
   return { score: Math.round(score * 100) / 100, flags };
@@ -431,6 +443,8 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, alone = 
   const actOf = acts(ep);
   const partOf = {};
   { let n = 1; ep.beats.forEach((b, i) => { if (i > 0 && cuts?.includes(b.id)) n++; partOf[b.id] = cuts ? `partie${n}` : actOf[b.id]; }); }
+  // "Alors… on l'ouvre" never starts a request: said cold, it drags (018 to 020). It rides on the breath of the scene before it.
+  ep.beats.forEach((b, i) => { if (i > 0 && isSignature(b)) partOf[b.id] = partOf[ep.beats[i - 1].id]; });
   const parts = [];
   for (const b of ep.beats) {
     if (parts.at(-1)?.act === partOf[b.id]) parts.at(-1).beats.push(b);
@@ -458,7 +472,9 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, alone = 
       for (let n = first; n < first + count; n++) {
         // `alone`: the run by itself, in its own request. Measured on the bench (017, act 3): the same lines sit two
         // semitones higher than inside a 90-second take, where the narrator settles into his low register.
-        const beats = alone || byAct ? run.map((i) => ep.beats[i]) : ep.beats.slice(Math.max(0, run[0] - 1), run.at(-1) + 2);
+        // …except the signature, which is always retaken behind the phrase before it (said cold, it drags: 018 to 020)
+        const lead = isSignature(ep.beats[run[0]]) ? 1 : 0;
+        const beats = alone || byAct ? ep.beats.slice(Math.max(0, run[0] - lead), run.at(-1) + 1) : ep.beats.slice(Math.max(0, run[0] - 1), run.at(-1) + 2);
         const vo = Object.fromEntries(beats.map((b) => [b.id, directions(b)[(n - 1) % directions(b).length]]));
         plan.push({ beats, vo, seed: base + 100 + n, folder: "reprises", base: `${id}-${n}`, target: run.map((i) => ep.beats[i].id), stability: stabilityOf(ep, ep.beats[run[0]]) });
       }
@@ -642,7 +658,7 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, alone = 
       const ref = whole.includes(r) ? refOf([r]) : shared;
       const given = direction({ vo: r.meta.vo?.[b.id] ?? b.vo }); // each recording is judged against the direction it was given
       grid[b.id][r.id] = {
-        ...judge(given, s, ref, seconds, index[b.id] === 0),
+        ...judge(given, s, ref, seconds, index[b.id] === 0, isSignature(b)),
         mood: given.label,
         register: s.register,
         spread: s.spread,

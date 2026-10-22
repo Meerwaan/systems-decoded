@@ -15,6 +15,7 @@ import path from "node:path";
 import { ROOT } from "./lib/env.mjs";
 import { loadEpisode, schedule } from "./lib/episode.mjs";
 import { tool } from "./lib/ffmpeg.mjs";
+import { frameOf } from "./lib/frame.mjs";
 import { choose, readPicks } from "./voice.mjs";
 
 const FRONT = path.join(ROOT, "front");
@@ -25,6 +26,7 @@ const EPISODES = path.join(ROOT, "episodes");
 const AUDIENCE = path.join(ROOT, "metrics", "audience.json");
 const PUBLICATION = path.join(ROOT, "metrics", "publication.json");
 const PLATFORMS = ["tiktok", "instagram", "youtube"]; // where a film goes: episode.json → post, post.instagram, post.youtube
+const LONG_PLATFORMS = ["youtube"]; // a long (16:9, "Fabriqué pour te sauver") only goes up on YouTube
 const VIGNETTES = path.join(ROOT, ".cache", "vignettes"); // the covers, small: made here, never in renders/
 
 const MIME = {
@@ -36,13 +38,14 @@ const MIME = {
   ".mp3": "audio/mpeg",
   ".wav": "audio/wav",
   ".png": "image/png",
+  ".srt": "text/plain; charset=utf-8", // a long's subtitles, handed to YouTube Studio
   ".woff2": "font/woff2",
 };
 
 // URL prefix → the one folder it may read, and the file types it may hand out.
 const FOLDERS = {
   "": { dir: FRONT, types: [".html", ".css", ".js"] },
-  media: { dir: RENDERS, types: [".mp4", ".png"] },
+  media: { dir: RENDERS, types: [".mp4", ".png", ".srt"] },
   fonts: { dir: FONTS, types: [".woff2"] },
 };
 
@@ -106,7 +109,8 @@ const making = new Map(); // dossier → its small cover, while ffmpeg draws it
  * Resolves with the file to send, or null when the dossier has no cover.
  */
 function vignette(dir) {
-  const cover = path.join(RENDERS, `${dir}-couverture.png`);
+  // a short's cover, or a long's first YouTube thumbnail (16:9: the same 360 px wide)
+  const cover = [`${dir}-couverture.png`, `${dir}-miniature.png`].map((name) => path.join(RENDERS, name)).find((file) => fs.existsSync(file)) ?? "";
   const small = path.join(VIGNETTES, `${dir}.jpg`);
   let drawn;
   try {
@@ -162,15 +166,35 @@ function postOf(post) {
     pinned: typeof post.pinned === "string" ? post.pinned : "",
     // the same film on the other two platforms (scripts/posts.mjs)
     instagram: alsoOn(post.instagram, ["caption"]),
-    youtube: alsoOn(post.youtube, ["title", "description"]),
+    // a long's block also carries the other titles of YouTube's test, its pinned comment and the end-screen reminder
+    youtube: alsoOn(post.youtube, ["title", "description", "pinned", "endScreen"], ["titleAlts"]),
   };
 }
 
-function alsoOn(block, fields) {
+function alsoOn(block, fields, lists = []) {
   if (!block || typeof block !== "object") return null;
-  const out = { hashtags: Array.isArray(block.hashtags) ? block.hashtags.filter((t) => typeof t === "string") : [] };
+  const strings = (x) => (Array.isArray(x) ? x.filter((t) => typeof t === "string") : []);
+  const out = { hashtags: strings(block.hashtags) };
   for (const f of fields) out[f] = typeof block[f] === "string" ? block[f] : "";
+  for (const f of lists) out[f] = strings(block[f]);
   return out;
+}
+
+/**
+ * The three thumbnails of a long, for YouTube's A/B test (npm run cover -- <ep>, --alt 2, --alt 3):
+ * <dossier>-miniature.png reads episode.json → "thumb", -miniature-2.png "thumb2", -miniature-3.png "thumb3".
+ * Each comes with the words drawn on it, so that the page can say which is which.
+ */
+function thumbnailsOf(dir, ep) {
+  return ["", "2", "3"]
+    .map((n) => {
+      const file = rendered(`${dir}-miniature${n ? `-${n}` : ""}.png`);
+      if (!file) return null;
+      const cfg = isMap(ep[`thumb${n}`]) ? ep[`thumb${n}`] : {};
+      const title = Array.isArray(cfg.title) ? cfg.title.filter((t) => typeof t === "string").join(" ") : "";
+      return { n: n ? Number(n) : 1, ...file, title, tag: typeof cfg.tag === "string" ? cfg.tag : "", tone: cfg.tone === "veille" ? "veille" : "signal" };
+    })
+    .filter(Boolean);
 }
 
 /** The folders of episodes/ that hold an episode.json: the only names a URL may use for a dossier. */
@@ -207,14 +231,14 @@ function publication() {
  * true (online, nobody knows since when) or false. A dossier nobody ticked for TikTok falls back on
  * the date of metrics/audience.json (`publie`), where the first films were written down by hand.
  */
-function postedOf(dir, kept, audience) {
+function postedOf(dir, kept, audience, platforms = PLATFORMS) {
   const mine = own(kept, dir);
   const out = {};
-  for (const platform of PLATFORMS) {
+  for (const platform of platforms) {
     const value = own(mine, platform);
     out[platform] = value === true || (typeof value === "string" && value !== "") ? value : false;
   }
-  if (own(mine, "tiktok") === undefined) {
+  if (platforms.includes("tiktok") && own(mine, "tiktok") === undefined) {
     const known = own(own(audience, /^\d+/.exec(dir)?.[0] ?? ""), "publie");
     if (typeof known === "string" && known !== "") out.tiktok = known;
   }
@@ -238,8 +262,9 @@ function keepPublication(dir, asked) {
   const file = readJson(PUBLICATION);
   const all = isMap(file?.dossiers) ? file.dossiers : {};
   const audience = readJson(AUDIENCE)?.episodes;
-  const before = postedOf(dir, all, audience);
-  const written = postedOf(dir, {}, audience); // what audience.json says on its own
+  const platforms = platformsOf(dir);
+  const before = postedOf(dir, all, audience, platforms);
+  const written = postedOf(dir, {}, audience, platforms); // what audience.json says on its own
   const mine = { ...(isMap(own(all, dir)) ? all[dir] : {}) };
   const said = [];
   for (const [platform, on] of Object.entries(asked)) {
@@ -264,6 +289,11 @@ function keepPublication(dir, asked) {
   return said;
 }
 
+/** Is this dossier a long (16:9)? Read off its page, the way cover.mjs reads it. */
+const isLong = (dir) => frameOf(path.join(EPISODES, dir)).long;
+/** Where a dossier goes up: the three platforms for a short, YouTube alone for a long. */
+const platformsOf = (dir) => (isLong(dir) ? LONG_PLATFORMS : PLATFORMS);
+
 /** Every episode folder, newest id first. Renders are named after the folder. */
 function dossiers() {
   const kept = publication();
@@ -272,6 +302,24 @@ function dossiers() {
     .map((dir) => {
       // an episode.json caught half-written must not take the desk down: fall back on the folder name
       const ep = readJson(path.join(EPISODES, dir, "episode.json")) ?? {};
+      if (isLong(dir)) {
+        // a long: the 16:9 film (≈ 1 Go, played in byte ranges), its three thumbnails, its subtitles
+        const thumbnails = thumbnailsOf(dir, ep);
+        const files = { video: rendered(`${dir}.mp4`), thumbnails, srt: rendered(`${dir}.srt`), cover: thumbnails[0] ?? null };
+        if (files.cover) files.thumb = { url: `/vignette/${encodeURIComponent(dir)}`, mtime: files.cover.mtime };
+        return {
+          ...named(ep, dir),
+          dir,
+          long: true,
+          platforms: LONG_PLATFORMS,
+          post: postOf(ep.post),
+          files,
+          ready: files.video !== null,
+          posted: postedOf(dir, kept, audience, LONG_PLATFORMS),
+          voiced: fs.existsSync(path.join(EPISODES, dir, "audio", "vo.json")),
+          booth: false, // a long's voice is recorded chapter by chapter: no takes to compare
+        };
+      }
       const files = {
         video: rendered(`${dir}.mp4`),
         cover: rendered(`${dir}-couverture.png`),
@@ -283,6 +331,8 @@ function dossiers() {
       return {
         ...named(ep, dir),
         dir,
+        long: false,
+        platforms: PLATFORMS,
         post: postOf(ep.post),
         files,
         ready: files.video !== null,
@@ -628,9 +678,10 @@ async function postedJson(req, dir, stranger) {
 /** POST /api/publication/<dossier>: { platform: "now" | true | false } — tick or untick, then answer with the desk as it now stands. */
 async function publicationPost(req, res, dir) {
   const asked = await postedJson(req, dir, "Origine refusée : seule la page du bureau peut cocher un dossier");
-  if (!isMap(asked) || Object.keys(asked).length === 0) throw refuse(400, `Corps attendu : { ${PLATFORMS.join(" | ")} : "now", true ou false }`);
+  const platforms = platformsOf(dir);
+  if (!isMap(asked) || Object.keys(asked).length === 0) throw refuse(400, `Corps attendu : { ${platforms.join(" | ")} : "now", true ou false }`);
   for (const [platform, on] of Object.entries(asked)) {
-    if (!PLATFORMS.includes(platform)) throw refuse(400, `Plateforme inconnue : ${shown(platform)}`);
+    if (!platforms.includes(platform)) throw refuse(400, `Plateforme inconnue pour ce dossier : ${shown(platform)}`);
     if (on !== "now" && on !== true && on !== false) throw refuse(400, `Valeur refusée pour ${platform} : "now", true ou false`);
   }
   let said;

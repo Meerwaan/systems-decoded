@@ -5,6 +5,8 @@
 //   npm run look -- 003 --file essais.json      [{ "at": "poulie:surveille", "pose": { "d": 240 }, "label": "plus près" }, …]
 //   …and, in a film staged with kit/lib/direct.js, "state": { "explode": 1 } holds numbers of the world's state for that frame:
 //   a model or a set is judged before any act is written.
+//   …and "kit": { "dof": 4, "focus": 0, "air": 1, "airColor": "#FF5B2E", "finish": 1, "grade": { … } } tries the studio's options (kit/lib/stage.js)
+//   on that frame alone: the same moment twice, without and with, is a before / after. SD_KIT='{"dof":4}' does it for the whole page.
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
@@ -31,7 +33,7 @@ const drawnBy = (page) =>
     return gl ? String(info ? gl.getParameter(info.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER)) : "";
   });
 
-/** `shots`: [{ at, pose?, state?, label? }] · `width`: px of one frame on the sheet · `bare`: the 3D alone, no text over it · `cpu`: draw in software, like the render. */
+/** `shots`: [{ at, pose?, state?, kit?, label? }] · `width`: px of one frame on the sheet · `bare`: the 3D alone, no text over it · `cpu`: draw in software, like the render. */
 export async function look(dir, { shots, cols = 4, width = 405, zones = true, bare = false, cpu = false, out } = {}) {
   const { sched } = await build(dir, { quiet: true });
   const F = frameOf(dir);
@@ -56,9 +58,10 @@ export async function look(dir, { shots, cols = 4, width = 405, zones = true, ba
     const page = await browser.newPage();
     await page.setViewport({ width: F.w, height: F.h, deviceScaleFactor: 1 });
     // the film expects the HyperFrames runtime to have created this registry
-    await page.evaluateOnNewDocument(() => {
+    await page.evaluateOnNewDocument((kit) => {
       window.__timelines = {};
-    });
+      if (kit) window.__SD_KIT = kit; // the stage's options, as if the film had asked for them
+    }, process.env.SD_KIT ? JSON.parse(process.env.SD_KIT) : null);
     const errors = [];
     page.on("pageerror", (e) => errors.push(e.message));
     page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
@@ -68,15 +71,35 @@ export async function look(dir, { shots, cols = 4, width = 405, zones = true, ba
     if (bare) await page.addStyleTag({ content: "#root > :not(#stage):not(#vignette) { display: none !important; }" });
 
     for (const [i, s] of list.entries()) {
-      await page.evaluate(
-        ({ t, pose, state }) => {
+      s.ms = await page.evaluate(
+        ({ t, pose, state, kit }) => {
           const { stage } = window.SD;
           window.__timelines.main.time(t);
           stage.pose = pose ? { ...pose, drift: 0 } : null;
           window.SD.force = state; // numbers of the world's state held whatever the timeline says (kit/lib/direct.js)
+          // the studio's options on this frame alone, put back as they were once it is drawn
+          const was = { air: stage.air && { ...stage.air, color: stage.air.color?.clone() }, finish: stage.finish, grade: { ...stage.grade } };
+          if (kit) {
+            const lens = Object.fromEntries(Object.entries({ dof: kit.dof, focus: kit.focus }).filter(([, v]) => v != null));
+            if (Object.keys(lens).length) stage.pose = { ...stage.pose, ...lens };
+            if (kit.air != null && stage.air) stage.air.amount = kit.air;
+            if (kit.airColor && stage.air) stage.air.color.set(kit.airColor);
+            for (const k of ["depth", "spread", "lift", "x", "floor"]) if (kit["air" + k[0].toUpperCase() + k.slice(1)] != null && stage.air) stage.air[k] = kit["air" + k[0].toUpperCase() + k.slice(1)];
+            if (kit.finish != null) stage.finish = kit.finish;
+            if (kit.grade) Object.assign(stage.grade, kit.grade);
+          }
+          const t0 = performance.now();
           stage.renderAt(t);
+          stage.renderer.getContext().finish(); // the picture really drawn: what one frame costs
+          const ms = performance.now() - t0;
+          if (kit) {
+            if (was.air) Object.assign(stage.air, was.air);
+            stage.finish = was.finish;
+            Object.assign(stage.grade, was.grade);
+          }
+          return ms;
         },
-        { t: s.t, pose: s.pose ?? null, state: s.state ?? null },
+        { t: s.t, pose: s.pose ?? null, state: s.state ?? null, kit: s.kit ?? null },
       );
       if (errors.length) throw new Error(`Erreur à ${s.t} s: ${errors[0]}`);
       s.file = path.join(folder, `${String(i).padStart(2, "0")}.jpg`);
@@ -107,6 +130,9 @@ export async function look(dir, { shots, cols = 4, width = 405, zones = true, ba
     await browser.close();
     fs.rmSync(folder, { recursive: true, force: true });
   }
-  console.log(`\n  essais: ${list.length} images → ${sheet}\n  dessinées par : ${renderer}\n`);
+  // what one frame costs to draw: the median (a frame that meets a material for the first time also compiles it)
+  const times = list.map((s) => s.ms ?? 0).sort((a, b) => a - b);
+  const per = times[Math.floor(times.length / 2)] ?? 0;
+  console.log(`\n  essais: ${list.length} images → ${sheet}\n  dessinées par : ${renderer} · ${per.toFixed(0)} ms par image (médiane)\n`);
   return { sheet, shots: list };
 }
