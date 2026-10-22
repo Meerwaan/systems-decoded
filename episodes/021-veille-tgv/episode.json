@@ -12,12 +12,7 @@
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21,
-    "acts": {
-      "menace": {
-        "stability": 0.2
-      }
-    }
+    "seed": 21
   },
   "cover": {
     "at": "eclate$",
@@ -26,13 +21,13 @@
       "du TGV"
     ],
     "cam": {
-      "tx": 0,
-      "ty": 8,
-      "tz": 0,
-      "d": 120,
+      "tx": -18,
+      "ty": 113,
+      "tz": 15,
+      "d": 440,
       "az": -40,
-      "el": 14,
-      "shift": -430,
+      "el": 28,
+      "shift": -560,
       "side": 0,
       "fov": 28,
       "roll": 0
@@ -47,7 +42,28 @@
       "#sncf",
       "#train"
     ],
-    "pinned": "Dans la cabine d'un train, une pédale à relâcher au moins une fois par minute, sinon il s'arrête seul. Tu connaissais ?"
+    "pinned": "Dans la cabine d'un train, une pédale à relâcher au moins une fois par minute, sinon il s'arrête seul. Tu connaissais ?",
+    "instagram": {
+      "caption": "Ton TGV file à 255 km/h. Dans la cabine… plus personne.\n\nDossier 021 : la veille automatique du TGV (la VACMA). Une pédale sous le pupitre, un compte à rebours, et un train qui sait s'arrêter seul. Mais elle a un angle mort.\n\nCette pédale, tu connaissais ?",
+      "hashtags": [
+        "#tgv",
+        "#sncf",
+        "#train",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "TGV sans conducteur à 255 km/h : la pédale qui arrête le train toute seule (VACMA)",
+      "description": "Dossier 021 — la veille automatique du TGV, ouverte : la pédale, les touches, le compte à rebours, la sonnerie, et ce qui se passe quand plus personne ne répond. Jusqu'au train arrêté, 2 320 mètres plus loin.\n\nCette pédale, tu connaissais ?",
+      "hashtags": [
+        "#shorts",
+        "#tgv",
+        "#sncf",
+        "#train",
+        "#science"
+      ]
+    }
   },
   "sources": [
     "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/021-vacma-tgv.md ; contre-vérification phrase par phrase : docs/faits/021-contre-verification.md",
@@ -71,13 +87,13 @@
       "id": "promesse",
       "hold": 0.3,
       "text": "Il va s'arrêter +tout seul+. Mais ce qui l'arrête… a un *angle mort*.",
-      "vo": "[firm, matter-of-fact] Il va s'arrêter tout seul. [short pause] [serious] Mais ce qui l'arrête... a un angle mort."
+      "vo": "[firm, matter-of-fact] Il va s'arrêter tout seul. [short pause] Mais ce qui l'arrête... a un angle mort."
     },
     {
       "id": "scene",
       "hold": 0.3,
       "text": "Ce n'est pas un scénario. Vingt-quatre décembre [2024|deux mille vingt-quatre] : le conducteur tombe du train. Derrière lui, [393|trois cent quatre-vingt-treize] passagers. Aucun ne le voit. Et le train avale soixante-dix mètres par *seconde*.",
-      "vo": "[serious] Ce n'est pas un scénario. Vingt-quatre décembre deux mille vingt-quatre : le conducteur tombe du train. [short pause] [tense] Derrière lui, trois cent quatre-vingt-treize passagers. Aucun ne le voit. Et le train avale soixante-dix mètres par seconde."
+      "vo": "[tense] Ce n'est pas un scénario. Vingt-quatre décembre deux mille vingt-quatre : le conducteur tombe du train. [short pause] Derrière lui, trois cent quatre-vingt-treize passagers. Aucun ne le voit. Et le train avale soixante-dix mètres par seconde."
     },
     {
       "id": "ouvre",
@@ -94,7 +110,7 @@
     {
       "id": "repos",
       "text": "Appuyer ne suffit pas. Près d'une minute sans lâcher : une sonnerie. Il faut relâcher. Puis réappuyer. Toute la journée. Pourquoi relâcher ? Parce qu'un corps effondré… peut appuyer *encore*.",
-      "vo": "[thoughtful] Appuyer ne suffit pas. Près d'une minute sans lâcher : une sonnerie. Il faut relâcher. Puis réappuyer. Toute la journée. [short pause] [curious] Pourquoi relâcher ? [serious] Parce qu'un corps effondré... peut appuyer encore."
+      "vo": "[curious] Appuyer ne suffit pas. Près d'une minute sans lâcher : une sonnerie. Il faut relâcher. Puis réappuyer. Toute la journée. [short pause] Pourquoi relâcher ? Parce qu'un corps effondré... peut appuyer encore."
     },
     {
       "id": "seuil",
@@ -105,19 +121,19 @@
       "id": "zero",
       "hold": 0.2,
       "text": "La pédale se relève. Deux secondes et demie, environ. Une sonnerie. Personne ne répond. Le train, lui… file *toujours*.",
-      "vo": "[urgent] La pédale se relève. Deux secondes et demie, environ. Une sonnerie. Personne ne répond. [short pause] [ominous] Le train, lui... file toujours."
+      "vo": "[firm, matter-of-fact] La pédale se relève. Deux secondes et demie, environ. Une sonnerie. Personne ne répond. [short pause] Le train, lui... file toujours."
     },
     {
       "id": "reponse",
       "hold": 0.3,
       "text": "Encore autant. Verdict : absent. Le courant est coupé. L'air des freins s'échappe : freinage d'urgence. [2320|Deux mille trois cent vingt] mètres plus loin… le train est +arrêté+. Et il prévient lui-même, par radio.",
-      "vo": "[urgent] Encore autant. Verdict : absent. Le courant est coupé. L'air des freins s'échappe. Freinage d'urgence. [short pause] [relieved] Deux mille trois cent vingt mètres plus loin... le train est arrêté. Et il prévient lui-même, par radio."
+      "vo": "[tense] Encore autant. Verdict : absent. Le courant est coupé. L'air des freins s'échappe. Freinage d'urgence. [short pause] Deux mille trois cent vingt mètres plus loin... le train est arrêté. Et il prévient lui-même, par radio."
     },
     {
       "id": "chute",
       "hold": 0.4,
       "text": "Voilà son secret : elle ne surveille pas le conducteur. Elle ne sait pas s'il dort. Elle sait une seule chose… quelqu'un a *bougé*.",
-      "vo": "[low, grave voice] Voilà son secret : elle ne surveille pas le conducteur. Elle ne sait pas s'il dort. Elle sait une seule chose... quelqu'un a bougé."
+      "vo": "[firm, matter-of-fact] Voilà son secret : elle ne surveille pas le conducteur. Elle ne sait pas s'il dort. Elle sait une seule chose... quelqu'un a bougé."
     },
     {
       "id": "comment",
@@ -143,13 +159,77 @@
     }
   ],
   "cues": {
+    "cabine": "accroche:cabine-0.1",
+    "personne": "accroche:personne-0.1",
+    "seul": "promesse:seul-0.1",
+    "stops": "promesse:l'arrête-0.1",
+    "angle": "promesse:angle-0.1",
+    "toscene": "scene-0.14",
+    "date": "scene:décembre-0.3",
+    "driver": "scene:conducteur-0.1",
+    "behind": "scene:Derrière-0.1",
+    "passengers": "scene:passagers-0.1",
+    "nobody": "scene:Aucun-0.1",
+    "toride": "scene:avale-0.5",
+    "persec": "scene:seconde-0.1",
+    "tosystem": "ouvre-0.14",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "pedale": "eclate:pédale-0.1",
+    "touches": "eclate:touches-0.1",
+    "doigts": "eclate:doigts-0.1",
+    "derriere": "eclate:derrière-0.1",
+    "compte": "eclate:compte-0.1",
+    "torepos": "repos-0.14",
+    "press": "repos:Appuyer-0.1",
+    "minute": "repos:minute-0.1",
+    "ring1": "repos:sonnerie-0.1",
+    "release": "repos:relâcher-0.1",
+    "repress": "repos:réappuyer-0.1",
+    "day": "repos:journée-0.1",
+    "why": "repos:Pourquoi-0.1",
+    "body": "repos:corps-0.1",
+    "inert": "repos:encore-0.1",
+    "toseuil": "seuil-0.1",
+    "empty": "seuil:vide-0.1",
+    "watch": "seuil:regarde-0.1",
     "tozero": "zero-0.12",
+    "rises": "zero:relève-0.1",
+    "secs": "zero:secondes-0.1",
+    "ring2": "zero:sonnerie-0.1",
+    "noone": "zero:Personne-0.12",
+    "runs": "zero:train-0.2",
+    "again": "reponse-0.12",
+    "judge": "reponse:Verdict-0.1",
     "trigger": "reponse:absent-0.05",
+    "current": "reponse:courant-0.1",
+    "air": "reponse:L'air-0.1",
+    "urgence": "reponse:freinage-0.1",
+    "metres": "reponse:mètres-0.1",
+    "stopped": "reponse:arrêté-0.1",
+    "warns": "reponse:prévient-0.1",
+    "radiow": "reponse:radio-0.1",
     "toverdict": "chute-0.12",
+    "secret": "chute:secret-0.1",
+    "strike": "chute:pas-0.05",
+    "sleep": "chute:dort-0.1",
+    "one": "chute:seule-0.1",
     "verdict": "chute:bougé",
     "tocta": "comment-0.12",
+    "minute2": "comment:minute-0.1",
+    "doze": "comment:s'assoupit-0.1",
+    "unseen": "comment:voit-0.1",
+    "others": "comment:systèmes-0.1",
+    "speed": "comment:vitesse-0.1",
+    "ask": "comment:commentaire-0.3",
+    "answer": "comment:connaissais-0.05",
+    "tolike": "like-0.12",
+    "drive": "like:conduisent-0.1",
+    "hundreds": "like:centaines-0.1",
+    "toabo": "abo-0.1",
+    "battery": "abo:batterie-0.1",
+    "poles": "abo:pôles-0.1",
+    "hair": "abo:cheveu-0.1",
     "toloop": "boucle-0.12",
     "rewind": "boucle:partout"
   },
@@ -237,6 +317,38 @@
       "at": "rewind",
       "dur": 1,
       "gain": -21
+    },
+    {
+      "type": "beeps",
+      "from": "ring1",
+      "to": "release",
+      "gain": -21,
+      "freq": 2400
+    },
+    {
+      "type": "beeps",
+      "from": "ring2",
+      "to": "trigger",
+      "gain": -21,
+      "freq": 3100
+    },
+    {
+      "type": "clack",
+      "at": "current+0.08",
+      "gain": -10
+    },
+    {
+      "type": "hiss",
+      "from": "air",
+      "to": "stopped",
+      "gain": -22,
+      "tone": 0.5
+    },
+    {
+      "type": "blip",
+      "at": "radiow",
+      "gain": -18,
+      "pitch": 1.3
     }
   ]
 }
