@@ -12,12 +12,7 @@
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21,
-    "acts": {
-      "menace": {
-        "stability": 0.2
-      }
-    }
+    "seed": 21
   },
   "cover": {
     "at": "eclate$",
@@ -26,12 +21,12 @@
       "de secours"
     ],
     "cam": {
-      "tx": 0,
-      "ty": 8,
+      "tx": 15,
+      "ty": 160,
       "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
+      "d": 1550,
+      "az": -44,
+      "el": 16,
       "shift": -430,
       "side": 0,
       "fov": 28,
@@ -47,7 +42,28 @@
       "#aviation",
       "#airbus"
     ],
-    "pinned": "24 août 2001 : un Airbus plane 19 minutes sans moteur au-dessus de l'Atlantique et se pose. Aucun mort. En avion, tu as peur ?"
+    "pinned": "24 août 2001 : un Airbus plane 19 minutes sans moteur au-dessus de l'Atlantique et se pose. Aucun mort. En avion, tu as peur ?",
+    "instagram": {
+      "caption": "Au-dessus de l'Atlantique, ton avion n'a plus un seul moteur.\n\nDossier 023 : l'éolienne de secours des avions de ligne. Une petite hélice qui sort du ventre, toute seule, et qui garde l'avion pilotable. 24 août 2001 : un Airbus plane dix-neuf minutes jusqu'aux Açores. Mais elle ne fait pas tout.\n\nEn avion, tu as peur ?",
+      "hashtags": [
+        "#avion",
+        "#aviation",
+        "#airbus",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Plus aucun moteur au-dessus de l'Atlantique : la petite hélice qui sauve l'avion",
+      "description": "Dossier 023 — l'éolienne de secours d'un avion de ligne (la RAT), ouverte : la trappe, le bras, l'hélice, la pompe. Et le vol Air Transat 236, qui a plané dix-neuf minutes sans moteur jusqu'aux Açores, en 2001.\n\nEn avion, tu as peur ?",
+      "hashtags": [
+        "#shorts",
+        "#avion",
+        "#aviation",
+        "#airbus",
+        "#science"
+      ]
+    }
   },
   "sources": [
     "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/023-eolienne-de-secours.md ; contre-vérification phrase par phrase : docs/faits/023-contre-verification.md",
@@ -71,7 +87,7 @@
       "id": "promesse",
       "hold": 0.3,
       "text": "Tu te poseras, vivant : dehors, une petite hélice vient de +sortir+. Reste un problème : tes *freins*.",
-      "vo": "[firm, matter-of-fact] Tu te poseras, vivant : dehors, une petite hélice vient de sortir. [short pause] [serious] Reste un problème : tes freins."
+      "vo": "[firm, matter-of-fact] Tu te poseras, vivant : dehors, une petite hélice vient de sortir. [short pause] Reste un problème : tes freins."
     },
     {
       "id": "scene",
@@ -94,7 +110,7 @@
     {
       "id": "repos",
       "text": "Elle dort, repliée, derrière une trappe. Tous les moteurs s'arrêtent en vol ? Elle sort seule. Pas de moteur pour elle : c'est le vent de l'avion qui la fait tourner. Et elle pousse l'huile… dans un *seul* circuit.",
-      "vo": "[thoughtful] Elle dort, repliée, derrière une trappe. [curious] Tous les moteurs s'arrêtent en vol ? Elle sort seule. Pas de moteur pour elle : c'est le vent de l'avion qui la fait tourner. [serious] Et elle pousse l'huile... dans un seul circuit."
+      "vo": "[curious] Elle dort, repliée, derrière une trappe. Tous les moteurs s'arrêtent en vol ? Elle sort seule. Pas de moteur pour elle : c'est le vent de l'avion qui la fait tourner. Et elle pousse l'huile... dans un seul circuit."
     },
     {
       "id": "seuil",
@@ -105,19 +121,19 @@
       "id": "zero",
       "hold": 0.2,
       "text": "Six heures vingt-six. Le second moteur s'éteint. Dix mille mètres. Plus de pilote automatique. Et l'avion… *descend*.",
-      "vo": "[urgent] Six heures vingt-six. Le second moteur s'éteint. Dix mille mètres. Plus de pilote automatique. [short pause] [ominous] Et l'avion... descend."
+      "vo": "[firm, matter-of-fact] Six heures vingt-six. Le second moteur s'éteint. Dix mille mètres. Plus de pilote automatique. [short pause] Et l'avion... descend."
     },
     {
       "id": "reponse",
       "hold": 0.3,
       "text": "L'hélice sort. Elle tourne. Un circuit sur trois revit. Les gouvernes répondent. Le commandant vise une île. Dix-neuf minutes de plané. Et la piste est +là+.",
-      "vo": "[urgent] L'hélice sort. Elle tourne. Un circuit sur trois revit. Les gouvernes répondent. Le commandant vise une île. Dix-neuf minutes de plané. [short pause] [relieved] Et la piste est là."
+      "vo": "[tense] L'hélice sort. Elle tourne. Un circuit sur trois revit. Les gouvernes répondent. Le commandant vise une île. Dix-neuf minutes de plané. [short pause] Et la piste est là."
     },
     {
       "id": "chute",
       "hold": 0.4,
       "text": "Voilà le secret : un avion sans moteur ne tombe pas. Il *plane*. Et c'est le vent de sa descente… qui lui rend de quoi piloter.",
-      "vo": "[low, grave voice] Voilà le secret : un avion sans moteur ne tombe pas. Il plane. Et c'est le vent de sa descente... qui lui rend de quoi piloter."
+      "vo": "[firm, matter-of-fact] Voilà le secret : un avion sans moteur ne tombe pas. Il plane. Et c'est le vent de sa descente... qui lui rend de quoi piloter."
     },
     {
       "id": "comment",

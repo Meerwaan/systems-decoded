@@ -36,7 +36,7 @@ const [BX, BY, BZ] = BAY.at;
 // at night, from below and in front on its left, the near engine big and dead (signal), your lit window along the
 // cabin, the black sea far below. The RAT is still in its bay: it comes out on « sortir ». (Act 1 tries four frames
 // and gives the best one back.)
-export const POSE0 = { tx: -700, ty: -250, tz: 500, d: 5200, az: -38, el: -9, fov: 34, shift: 160, side: 0, roll: 0, drift: 0 };
+export const POSE0 = { tx: -640, ty: -155, tz: 400, d: 5200, az: -48, el: -22, fov: 40, shift: 170, side: 0, roll: 0, drift: 0 };
 
 export const FIRST = {
   set: SET.SKY,
@@ -84,33 +84,34 @@ export const VIEW = {
   hook: POSE0,
   /* ── in the sky (plane's frame) ── */
   // the whole plane, three quarters front-left, a little below (fs 3500)
-  plane: { ...P, tx: 0, ty: -100, tz: 0, d: 13000, az: -40, el: -6, fov: 32, shift: 170 },
+  plane: { ...P, tx: 0, ty: -100, tz: 0, d: 13000, az: -40, el: -16, fov: 42, shift: 170 },
   // the plane small over the sea, the horizon, the island far ahead (fs 8000) — « au-dessus de l'océan », « cent vingt kilomètres »
-  wide: { ...P, tx: -9000, ty: -3000, tz: 0, d: 42000, az: -62, el: 8, fov: 40, shift: 160 },
+  wide: { ...P, tx: -18560, ty: -5616, tz: 0, d: 48000, az: 90, el: 14, fov: 40, shift: 0 },
   // the near (left) engine, close, three quarters front (fs 600)
   engine: { ...P, tx: ENGINES.x, ty: ENGINES.y, tz: ENGINES.z, d: 1900, az: -34, el: -4, shift: 150 },
   // you at the window, from outside, the wing and the near engine behind you (fs 500)
-  you: { ...P, tx: YOU.at[0], ty: YOU.at[1] + 60, tz: YOU.at[2], d: 1300, az: -24, el: 4, fov: 34, shift: 150 },
+  you: { ...P, tx: -1460, ty: 10, tz: 240, d: 950, az: -18, el: 2, fov: 32, shift: 120 },
   // the belly and the RAT's bay, from below and to the left: the door, then the arm and the propeller in the wind (fs 300)
   bay: { ...P, tx: BX, ty: BY - 90, tz: BZ, d: 900, az: -42, el: -14, shift: 150 },
   // the main gear's bay, from below: « tes freins » (fs 400)
-  gear: { ...P, tx: GEAR.main[0], ty: -330, tz: GEAR.main[1], d: 1400, az: -36, el: -18, shift: 150 },
+  gear: { ...P, tx: 80, ty: -470, tz: 530, d: 1300, az: 55, el: 8, fov: 30, shift: 120 },
   // the three circuits along the belly, out to the wing and the tail, from below (fs 3000)
   circuits: { ...P, tx: 400, ty: -260, tz: 0, d: 9000, az: -30, el: -24, fov: 34, shift: 170 },
   // the tail and its surfaces (fs 1200)
-  tail: { ...P, tx: TAIL.x, ty: 200, tz: 0, d: 3600, az: -50, el: 8, shift: 160 },
+  tail: { ...P, tx: 1200, ty: 0, tz: 0, d: 13000, az: 90, el: 6, fov: 40, shift: 0 },
   // the approach: from behind and above the plane, the island and its runway ahead (fs 6000)
-  approach: { ...P, tx: -4000, ty: -1500, tz: 0, d: 16000, az: -118, el: 10, fov: 38, shift: 170 },
+  approach: { ...P, tx: -20000, ty: -2296, tz: 0, d: 34500, az: 90, el: 9.7, fov: 38, shift: 0 },
   // the RAT in the plane, alone lit: act 2 cuts to the bench from it (on the bench: the same pose, less BAY.at plus BENCHAT)
   system: { ...P, tx: BX, ty: BY - 70, tz: BZ, d: 620, az: -40, el: -8, shift: 150 },
   /* ── on the bench (the hinge at BENCHAT) ── */
-  whole: { ...P, tx: 0, ty: 170, tz: 0, d: 620, az: -40, el: 6, shift: 160 },
+  whole: { ...P, tx: 40, ty: 150, tz: 0, d: 760, az: -40, el: 8, shift: 60 },
   // the exploded view, in ONE vertical frame (fs 300)
-  exploded: { ...P, tx: 0, ty: 170, tz: 0, d: 900, az: -40, el: 8, shift: 170 },
+  exploded: { ...P, tx: 15, ty: 160, tz: 0, d: 1060, az: -44, el: 12, shift: -50 },
   // the door and the spring, close · the propeller, nearly square on · the pump and the three lines
-  door: { ...P, tx: 0, ty: 225, tz: 0, d: 380, az: -36, el: 14, shift: 150 },
-  prop: { ...P, tx: 0, ty: 85, tz: 0, d: 420, az: -62, el: 4, shift: 150 },
-  pump: { ...P, tx: 30, ty: 110, tz: 0, d: 380, az: -30, el: 10, shift: 150 },
+  door: { ...P, tx: 70, ty: 205, tz: 0, d: 480, az: -26, el: 8, shift: 100 },
+  row: { ...P, tx: 95, ty: 235, tz: 0, d: 520, az: -32, el: 24, shift: 100 },
+  prop: { ...P, tx: -40, ty: 75, tz: 0, d: 520, az: -66, el: 6, shift: 130 },
+  pump: { ...P, tx: 20, ty: 140, tz: 0, d: 640, az: -34, el: 6, shift: 60 },
 };
 
 /** What a cut to the bench sets, whatever came before: the RAT out (arm 1, door 1), still, nothing lit. */
@@ -154,6 +155,7 @@ export function buildWorld(stage) {
         bench.set({ pool: S.pool, grid: S.grid, mood: S.mood });
       } else {
         avion.update({
+          whirl: S.whirl,
           ground: groundOf(S), threshold: thresholdOf(S), ahead: S.ahead, pitch: S.pitch, bank: S.bank, dawn: S.dawn, wind: S.wind,
           shell: S.shell, engines: S.engines, fuel: S.fuel, leak: S.leak, lines: S.lines, press: S.press, flow: S.flow, surf: S.surf, stick: S.stick,
           pax: S.pax, you: S.you, grip: S.grip, brakes: S.brakes, gear: S.gear, tires: S.tires, runway: S.runway, made: S.made, mood: S.mood,

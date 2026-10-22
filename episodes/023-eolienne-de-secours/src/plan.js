@@ -20,7 +20,7 @@ export const FUSE = { len: 5880, r: 282, nose: -2900, tail: 2980, cockpit: -2550
 /** The wings: low on the fuselage, swept back (toward +x), with their fuel tanks (solid in the glass). */
 export const WING = { span: 6030, root: 1050, tip: 270, sweep: 30, y: -150, x: -150, dihedral: 5 };
 /** The two engines under the wings: L = +z (near, dies at 06:26), R = −z (far, leaked, dies at 06:13). */
-export const ENGINES = { z: 960, x: -620, y: -380, r: 150, len: 520 };
+export const ENGINES = { z: 960, x: -360, y: -335, r: 150, len: 520 };
 /** The tail: fin and stabiliser, at the back (+x). */
 export const TAIL = { x: 2350, fin: 880, stab: 1940 };
 /** The control surfaces the green circuit moves: ailerons (outer wings), elevators, rudder. */
@@ -43,11 +43,11 @@ export const HYD = { n: 3, live: 1, gap: 22, y: -230 };
    (y > −12); extended, the arm hangs down out of the door, the propeller faces the wind (its axis along −x: the air
    comes from the nose). */
 /** The bay above the door, and the door in the belly skin (it opens downward, hinged on its +z edge). */
-export const DOOR = { len: 170, w: 76, y: -12, bay: 62 };
+export const DOOR = { len: 226, w: 76, y: -12, bay: 62 };
 /** The arm: from the hinge, stowed along +x (folded back), it swings DOWN through `travel` degrees. */
 export const ARM = { len: 150, r: 8, travel: 100 };
 /** The spring actuator: from the bay's roof to the arm's middle; it lengthens as the arm goes out. */
-export const SPRING = { from: [-40, 48, 0], at: 0.5, r: 6 };
+export const SPRING = { from: [112, 52, 0], at: 0.5, r: 6 };
 /** The propeller at the arm's end: two blades, its axis along x, facing −x (the wind). */
 export const PROP = { r: 55, blades: 2, hub: 12 };
 /** Behind the propeller (aft, +x), in the pod: the pump. */
@@ -64,6 +64,6 @@ export const BENCHAT = [0, 230, 0];
 export const ALT = { cruise: 10500, depth: 30000 };
 /** The island and its runway: the threshold stands `far` cm ahead (−x) when `ahead` is 1, under the wheels at 0;
  *  the runway runs on toward −x for `len`; the island's top stands `h` above the sea. */
-export const ISLAND = { far: 80000, len: 26000, w: 900, h: 1500, r: 16000 };
+export const ISLAND = { far: 80000, len: 26000, w: 4500, h: 1500, r: 16000 };
 /** The sea and the sky: a dome around the plane. */
 export const SKY = { dome: 85000 };
