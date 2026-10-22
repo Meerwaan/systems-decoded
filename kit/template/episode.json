@@ -13,12 +13,7 @@
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21,
-    "acts": {
-      "menace": {
-        "stability": 0.2
-      }
-    }
+    "seed": 21
   },
   "cover": {
     "at": "eclate$",
@@ -39,7 +34,7 @@
     }
   },
   "post": {
-    "caption": "Une phrase qui prolonge l'accroche sans la répéter ni dire la chute, avec le mot que les gens cherchent, puis la question du CTA commentaire.",
+    "caption": "Le mot que les gens cherchent, et son synonyme courant : (« ESP, le contrôle de trajectoire : »). Puis l'accroche prolongée, sans la répéter ni dire la chute. Puis la question du commentaire : ceci… ou cela ?",
     "hashtags": [
       "#apprendresurtiktok",
       "#commentcamarche",
@@ -47,85 +42,101 @@
       "#sujet2",
       "#communaute"
     ],
-    "pinned": "La question du CTA commentaire, en 150 caractères au plus."
+    "pinned": "Les deux réponses à recopier, 150 caractères au plus : « Réponds juste : ceci ou cela. »"
   },
   "sources": [],
   "beats": [
     {
       "id": "accroche",
-      "text": "Une phrase *choc*, pour toi, au présent.",
-      "vo": "[tense] Une phrase choc, pour toi, au présent.",
+      "text": "Ta main *glisse*. Le mot-choc tombe avant trois secondes.",
+      "vo": "[tense] Ta main glisse. Le mot-choc tombe avant trois secondes.",
       "voAlt": [
-        "[firm, matter-of-fact] Une phrase choc, pour toi, au présent."
+        "[firm, matter-of-fact] Ta main glisse. Le mot-choc tombe avant trois secondes."
       ]
     },
     {
       "id": "promesse",
       "hold": 0.3,
-      "text": "Voilà ce que tu y +gagnes+. Sauf si… une *condition*.",
-      "vo": "[firm, matter-of-fact] Voilà ce que tu y gagnes. [short pause] [serious] Sauf si... une condition."
+      "text": "Un fait qu'on a du mal à croire : pas un +soulagement+. Et la question… qu'on ne paie qu'à la *fin*.",
+      "vo": "[firm, matter-of-fact] Un fait qu'on a du mal à croire : pas un soulagement. [short pause] Et la question... qu'on ne paie qu'à la fin."
     },
     {
       "id": "scene",
-      "text": "Dans [3 s|trois secondes], il sera *trop tard*. Une seule chose peut encore l'arrêter.",
-      "vo": "[tense] Dans trois secondes, il sera trop tard. Une seule chose peut encore l'arrêter."
+      "hold": 0.3,
+      "text": "Même seconde, même lieu. Une image par phrase, l'enjeu monte. Ta tâche, avant qu'il soit *trop* tard.",
+      "vo": "[tense] Même seconde, même lieu. Une image par phrase, l'enjeu monte. Ta tâche, avant qu'il soit trop tard."
     },
     {
       "id": "ouvre",
       "hold": 0.4,
       "text": "Alors… on l'ouvre.",
-      "vo": "[calm] Alors... on l'ouvre."
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ]
     },
     {
       "id": "eclate",
       "hold": 0.2,
-      "text": "Une première pièce. Une deuxième. Et au centre… +le cœur+.",
-      "vo": "[curious] Une première pièce. Une deuxième. Et au centre... le cœur."
+      "text": "On suit la pièce qui agit, d'un bout à l'autre. Et au bout… +le cœur+.",
+      "vo": "[conversational, curious] On suit la pièce qui agit, d'un bout à l'autre. Et au bout... le cœur.",
+      "voAlt": [
+        "[curious] On suit la pièce qui agit, d'un bout à l'autre. Et au bout... le cœur."
+      ]
     },
     {
       "id": "repos",
-      "text": "Il attend. Sans bruit. Depuis des années.",
-      "vo": "[thoughtful] Il attend. Sans bruit. Depuis des années."
+      "text": "Comment il attend, sans bruit. Et sa dernière phrase *retend*.",
+      "vo": "[warm, conversational] Comment il attend, sans bruit. Et sa dernière phrase retend.",
+      "voAlt": [
+        "[curious] Comment il attend, sans bruit. Et sa dernière phrase retend."
+      ]
     },
     {
       "id": "seuil",
-      "text": "+Abonne-toi+ : ce qui arrive maintenant, on te le montre en *entier*.",
-      "vo": "[tense] Abonne-toi : ce qui arrive maintenant, on te le montre en entier."
+      "text": "+Abonne-toi+ : les mots de l'accroche reviennent… *regarde*.",
+      "vo": "[tense] Abonne-toi : les mots de l'accroche reviennent... regarde."
     },
     {
       "id": "zero",
       "hold": 0.2,
-      "text": "*Zéro*. Le danger arrive.",
-      "vo": "[urgent] Zéro. Le danger arrive."
+      "text": "*Zéro*. Le danger arrive. Des points. Pas de virgules.",
+      "vo": "[firm, matter-of-fact] Zéro. Le danger arrive. Des points. Pas de virgules."
     },
     {
       "id": "reponse",
       "hold": 0.3,
-      "text": "Et pour la première fois… le système +réagit+.",
-      "vo": "[urgent] Et pour la première fois. [short pause] [relieved] Le système réagit."
+      "text": "Le système agit. Mot par mot. Et pour la première fois… il +réagit+.",
+      "vo": "[tense] Le système agit. Mot par mot. Et pour la première fois... il réagit."
     },
     {
       "id": "chute",
       "hold": 0.4,
       "text": "Voilà son secret : ce n'est *pas* ce que tu croyais. C'est +l'inverse+.",
-      "vo": "[low, grave voice] Voilà son secret : ce n'est pas ce que tu croyais. C'est l'inverse."
+      "vo": "[firm, matter-of-fact] Voilà son secret : ce n'est pas ce que tu croyais. C'est l'inverse."
     },
     {
       "id": "comment",
       "hold": 0.3,
-      "text": "Et la condition ? La voilà. En +commentaire+ : et toi, tu le savais ?",
-      "vo": "[curious] Et la condition ? [short pause] [serious] La voilà. [short pause] [curious] En commentaire : et toi, tu le savais ?"
+      "text": "Et la question du début ? Sa réponse, en une phrase. En +commentaire+ : toi, tu savais lire ça… ou *pas* ?",
+      "vo": "[conversational, curious] Et la question du début ? [short pause] Sa réponse, en une phrase. [short pause] En commentaire : toi, tu savais lire ça... ou pas ?",
+      "voAlt": [
+        "[curious] Et la question du début ? [short pause] Sa réponse, en une phrase. [short pause] En commentaire : toi, tu savais lire ça... ou pas ?"
+      ]
     },
     {
       "id": "like",
-      "text": "+Like+. Quelqu'un d'autre le saura grâce à toi.",
-      "vo": "[firm, matter-of-fact] Like. [short pause] Quelqu'un d'autre le saura grâce à toi."
+      "text": "+Like+ : une raison tirée de l'histoire, pour quelqu'un d'autre.",
+      "vo": "[warm, conversational] Like : [short pause] une raison tirée de l'histoire, pour quelqu'un d'autre.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] une raison tirée de l'histoire, pour quelqu'un d'autre."
+      ]
     },
     {
       "id": "abo",
-      "text": "Prochain dossier : encore plus *étrange*.",
-      "vo": "[serious] Prochain dossier : encore plus étrange.",
-      "hold": 0.2
+      "hold": 0.2,
+      "text": "Prochain dossier : un seul fait, et il *menace*.",
+      "vo": "[serious] Prochain dossier : un seul fait, et il menace."
     },
     {
       "id": "boucle",
@@ -134,6 +145,7 @@
     }
   ],
   "cues": {
+    "choc": "accroche:glisse",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
     "tozero": "zero-0.12",
@@ -181,16 +193,34 @@
       ]
     },
     {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
       "type": "impact",
       "at": 0.03,
       "gain": -14,
       "size": 1.2
     },
     {
-      "type": "riser",
-      "to": "explode",
-      "dur": 0.8,
-      "gain": -25
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
     },
     {
       "type": "impact",

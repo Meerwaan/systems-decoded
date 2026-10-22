@@ -17,23 +17,26 @@
     "parts": [
       "ouvre",
       "etape1",
-      "etape2"
+      "etape2",
+      "test",
+      "du"
     ]
   },
   "post": {
     "youtube": {
-      "title": "L'accroche la plus forte du film : la promesse avec le mot cherché",
+      "title": "Le fait le plus fou du film : comment on fabrique (ce que les gens tapent)",
       "titleAlts": [
-        "Le paradoxe que le film prouve : ce qu'on y apprend",
-        "La scène choc, telle qu'elle est dans le film : ce qu'elle cache"
+        "La même accroche : la promesse dite autrement, avec le mot cherché",
+        "Un autre paradoxe que le film prouve : comment on fabrique, en clair"
       ],
-      "titleNote": "Putaclic mais fidèle (docs/recette-long.md, « Le titre ») : l'accroche d'abord, chaque mot vrai dans le film, 60 à 90 caractères.",
-      "descriptionTemplate": "Les deux premières lignes : l'accroche et le mot que les gens cherchent.\n\nChapitres\n__CHAPITRES__\n\nSources : …\n\nFabriqué pour te sauver : comment on fabrique les objets qui te protègent. Abonne-toi : on se retrouve très vite, dans une autre usine.\n\nLa question du commentaire ?",
+      "titleNote": "Putaclic mais fidèle (docs/recette-long.md, « Le titre ») : l'accroche d'abord, puis « : » et ce que les gens tapent (autocomplétion de YouTube, vérifiée) ; chaque mot vrai dans le film ; 60 à 90 caractères ; jamais les mots d'une miniature.",
+      "keyword": "comment on fabrique",
+      "descriptionTemplate": "L'accroche en une phrase, puis comment on fabrique ce que les gens cherchent : ces deux premières lignes sont celles que montre la recherche.\n\nChapitres\n__CHAPITRES__\n\nSources : …\n\nFabriqué pour te sauver : comment on fabrique les objets qui te protègent. Abonne-toi : on se retrouve très vite, dans une autre usine.\n\nLa question du commentaire ?",
       "hashtags": [
         "#commentcestfait",
         "#fabrication"
       ],
-      "pinned": "La question du commentaire, et sa réponse en une phrase (150 caractères au plus).",
+      "pinned": "La question du commentaire, et sa réponse en une phrase.",
       "endScreen": "Les 15 dernières secondes laissent la moitié droite de l'image libre pour l'écran de fin."
     }
   },
@@ -92,46 +95,161 @@
   "beats": [
     {
       "id": "accroche",
-      "chap": "Introduction",
-      "text": "Une phrase *choc*, pour toi, au présent.",
-      "vo": "[conversational, curious] Une phrase choc, pour toi, au présent."
+      "chap": "La scène, pas « Introduction »",
+      "fil": "test",
+      "text": "Ta tête *frappe*. Une scène, à toi, au présent : le titre et la miniature tenus dès la première phrase.",
+      "vo": "[tense] Ta tête frappe. Une scène, à toi, au présent : le titre et la miniature tenus dès la première phrase."
+    },
+    {
+      "id": "promesse",
+      "text": "Le fait du titre, dit avant trente secondes : un fait qu'on a du mal à *croire*. Pas un soulagement.",
+      "vo": "[conversational, curious] Le fait du titre, dit avant trente secondes : un fait qu'on a du mal à croire. Pas un soulagement."
+    },
+    {
+      "id": "curiosite",
+      "fil": "du",
+      "hold": 0.3,
+      "text": "Et une question à toi, dont la réponse n'arrive qu'à la *fin*… pas avant.",
+      "vo": "[serious] Et une question à toi, dont la réponse n'arrive qu'à la fin... pas avant."
+    },
+    {
+      "id": "defi",
+      "fil": "test",
+      "hold": 1.2,
+      "text": "Pas de sommaire : un défi. Pour réussir son dernier test… il devra *casser*.",
+      "vo": "[curious] Pas de sommaire : un défi. Pour réussir son dernier test... il devra casser."
     },
     {
       "id": "ouvre",
       "chap": "On l'ouvre",
+      "hold": 0.4,
       "text": "Alors… on l'ouvre.",
-      "vo": "[calm] Alors... on l'ouvre."
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ]
+    },
+    {
+      "id": "eclate",
+      "text": "On suit la pièce qui compte, couche par couche. Et au bout… +le cœur+, qu'on retrouvera au test.",
+      "vo": "[conversational, curious] On suit la pièce qui compte, couche par couche. Et au bout... le cœur, qu'on retrouvera au test."
+    },
+    {
+      "id": "avant",
+      "hold": 1.2,
+      "text": "Avant lui, ce qui t'arrivait : la *menace* qu'il a fait disparaître. Et tout commence… bien plus loin.",
+      "vo": "[serious] Avant lui, ce qui t'arrivait : la menace qu'il a fait disparaître. Et tout commence... bien plus loin."
     },
     {
       "id": "etape1",
-      "chap": "Première étape",
-      "text": "La première machine de la chaîne, et ce qu'elle *risque*.",
-      "vo": "[warm, conversational] La première machine de la chaîne, et ce qu'elle risque."
+      "chap": "Première étape : ce qu'on cherche",
+      "text": "La première machine de la chaîne : ce qu'elle fait, et pourquoi. Le titre du chapitre est ce que le public *tape*.",
+      "vo": "[warm, conversational] La première machine de la chaîne : ce qu'elle fait, et pourquoi. Le titre du chapitre est ce que le public tape."
+    },
+    {
+      "id": "menace1",
+      "text": "Et si on sautait cette étape ? Une *menace* qu'on voit, en une phrase.",
+      "vo": "[serious] Et si on sautait cette étape ? Une menace qu'on voit, en une phrase."
+    },
+    {
+      "id": "relance1",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Un chapitre ne finit jamais sur un fait : il laisse une question. Laquelle… juste après la pause ?",
+      "vo": "[curious] Un chapitre ne finit jamais sur un fait : il laisse une question. Laquelle... juste après la pause ?"
     },
     {
       "id": "etape2",
-      "chap": "Deuxième étape",
-      "text": "La suivante, et ce qu'elle +garde+.",
-      "vo": "[curious] La suivante, et ce qu'elle garde.",
-      "midroll": true
+      "chap": "Deuxième étape : la promesse du chapitre",
+      "text": "La suivante naît de la phrase d'avant. Une idée par phrase, un chiffre au plus, et ce qu'elle +garde+.",
+      "vo": "[warm, conversational] La suivante naît de la phrase d'avant. Une idée par phrase, un chiffre au plus, et ce qu'elle garde."
+    },
+    {
+      "id": "paradoxe",
+      "text": "Un paradoxe de la chaîne, dit avec le sourire : il faut le *casser* pour qu'il tienne.",
+      "vo": "[amused] Un paradoxe de la chaîne, dit avec le sourire : il faut le casser pour qu'il tienne."
+    },
+    {
+      "id": "seuil",
+      "fil": "test",
+      "hold": 1.2,
+      "text": "Et ce qu'il garde, c'est lui qui va prendre le choc, tout à l'heure. Si tu veux voir ça… +abonne-toi+, on y arrive.",
+      "vo": "[conversational, curious] Et ce qu'il garde, c'est lui qui va prendre le choc, tout à l'heure. Si tu veux voir ça... abonne-toi, on y arrive."
+    },
+    {
+      "id": "test",
+      "chap": "Le test",
+      "text": "Dernière étape. On le *frappe*. Des phrases de trois à huit mots, pas de chiffre au milieu.",
+      "vo": "[curious] Dernière étape. On le frappe. Des phrases de trois à huit mots, pas de chiffre au milieu."
+    },
+    {
+      "id": "reponse",
+      "paie": "test",
+      "hold": 0.3,
+      "text": "Il casse. Le +film+ tient. Rien ne passe.",
+      "vo": "[conversational, curious] Il casse. Le film tient. Rien ne passe."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Il n'a jamais été fait pour *tenir*. Il a été fait pour casser… sans te +lâcher+.",
+      "vo": "[warm, conversational] Il n'a jamais été fait pour tenir. Il a été fait pour casser... sans te lâcher."
+    },
+    {
+      "id": "du",
+      "chap": "Le fil du début, payé",
+      "paie": "du",
+      "text": "Et la question du début ? Sa réponse, maintenant, en deux phrases : ce que le film te *devait*.",
+      "vo": "[serious] Et la question du début ? Sa réponse, maintenant, en deux phrases : ce que le film te devait."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Va regarder chez toi, puis dis-moi en +commentaire+ : ceci… ou cela ?",
+      "vo": "[curious] Va regarder chez toi, puis dis-moi en commentaire : [short pause] ceci... ou cela ?"
+    },
+    {
+      "id": "like",
+      "text": "Et envoie-la à quelqu'un qui en a besoin, avec sa raison. Si tu as appris quelque chose, un petit +like+.",
+      "vo": "[warm] Et envoie-la à quelqu'un qui en a besoin, avec sa raison. Si tu as appris quelque chose, un petit like."
+    },
+    {
+      "id": "abo",
+      "text": "On se retrouve très vite, dans un autre lieu, pour un autre objet qui veille sur toi.",
+      "vo": "[warm] On se retrouve très vite, dans un autre lieu, pour un autre objet qui veille sur toi."
     },
     {
       "id": "boucle",
-      "text": "Une dernière phrase qui retombe sur…",
-      "vo": "[conversational, curious] Une dernière phrase qui retombe sur,"
+      "text": "Un objet qui attend, lui aussi, le jour où ta tête…",
+      "vo": "[calm] Un objet qui attend, lui aussi, le jour où ta tête,"
     }
   ],
   "cues": {
+    "titre": "promesse:fait",
+    "miniature": "accroche:frappe",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
     "toloop": "boucle-0.12",
-    "rewind": "boucle:retombe"
+    "rewind": "boucle:jour"
   },
   "bedVolume": 0.8,
   "sfx": [
     {
+      "type": "space",
+      "mix": 0.22,
+      "size": 0.84,
+      "damp": 0.35
+    },
+    {
       "type": "music",
+      "width": 0.7,
+      "sections": "chapters",
+      "skip": [
+        "ouvre"
+      ],
+      "drop": 0.5,
       "gain": -21,
+      "phone": 0.25,
       "curve": [
         [
           0,
@@ -147,6 +265,16 @@
           "etape1-1",
           1,
           0.55
+        ],
+        [
+          "test-1",
+          1,
+          0.85
+        ],
+        [
+          "chute",
+          0.7,
+          0
         ],
         [
           "boucle",
@@ -170,28 +298,58 @@
       ]
     },
     {
-      "type": "impact",
-      "at": 0.03,
-      "gain": -14,
-      "size": 1.2
-    },
-    {
-      "type": "riser",
-      "to": "explode",
-      "dur": 0.8,
-      "gain": -25
-    },
-    {
-      "type": "impact",
-      "at": "explode",
-      "gain": -16,
-      "size": 0.8
+      "type": "ambience",
+      "preset": "room",
+      "from": 0,
+      "gain": -36
     },
     {
       "type": "chapters",
+      "style": "film",
       "skip": [
         "ouvre"
       ]
+    },
+    {
+      "type": "boom",
+      "at": 0.03,
+      "gain": -13,
+      "size": 1.2
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.3,
+      "gain": -18
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "boom",
+      "at": "ouvre$+0.05",
+      "gain": -15,
+      "size": 0.7
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.22",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.38",
+      "gain": -19,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.54",
+      "gain": -20,
+      "pitch": 1.15
     },
     {
       "type": "impact",

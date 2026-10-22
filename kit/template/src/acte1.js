@@ -10,8 +10,13 @@ export default function acte1({ D, world }) {
   const t = D.times({ promesse: "promesse", scene: "scene", tard: "scene:trop", seule: "scene:Une", tobench: "tobench" });
   setAct(tl, 1, 0);
 
-  // A — the camera moves before the first half-second, toward what the hook names
+  // A — the camera moves before the first half-second, toward what the hook names (frame 1 already moving: a speed ramp,
+  // glide(s0, s1) from @kit/direct.js, if the subject stays in the frame — docs/recette-actes.md, « La grille »)
   shot(0, t.promesse, { d: 300, az: -30, el: 10 }, "sine.inOut", POSE0.d);
+  // the words marked *…* / +…+ in the script land bigger on the captions, and settle
+  D.captionStyle({ hit: 0.25 });
+  // THE WORD THAT HITS — on the word a sentence turns on, one a sentence at most, never on a cut, never two within a
+  // second: D.punch(t.mot, 0.06), with a "hit" in episode.json → sfx in the breath after the word
   chip("chip-toi", world.hero.A.top, -44, -130, 0, 0.55);
   // B · C — …
   shot(t.promesse, t.scene - t.promesse, { d: 190, az: -26, el: 14, fov: 34 }, "sine.inOut", 300);

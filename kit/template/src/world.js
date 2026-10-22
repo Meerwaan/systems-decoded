@@ -24,8 +24,16 @@ export const HOME = [0, 140, 0];
 /** ≈ the radius of the system: sizes the bench, the light, the shadows. */
 export const SIZE = 9;
 
-// The first frame is the hook: the strongest picture of the film, and it already shows what the hook says.
-export const POSE0 = { tx: 0, ty: 150, tz: 0, d: 520, az: -34, el: 6, fov: 44, shift: 150, side: 0, roll: 0, drift: 0 };
+/** The studio (kit/lib/stage.js, docs/recette-agents.md « Les options du plateau »). ONE line switches it off: { dof: 0, air: 0, finish: 0 }.
+ *  `dof`    the lens, on the CLOSE-UPS only (the poses that spread CLOSE): the part in focus, what lies in front and behind melts
+ *  `air`    light in the air behind the plane in focus — kept only where it is a net gain at 270 px wide
+ *  `finish` the surface of the solid parts: machining grain and handling marks that break the reflections
+ *  Every pose says its lens (dof 0 unless it spreads CLOSE): a cut never inherits the blur of the shot before. */
+export const LOOK = { dof: 8, air: 0, finish: 1, ...(typeof window !== "undefined" ? window.__SD_KIT : null) }; // SD_KIT='{"dof":0,"air":0,"finish":0}' npm run look: the film without them
+const CLOSE = { dof: LOOK.dof };
+
+// The first frame is the hook: the strongest picture of the film, and it already shows what the hook says. Sharp (dof 0).
+export const POSE0 = { tx: 0, ty: 150, tz: 0, d: 520, az: -34, el: 6, fov: 44, shift: 150, side: 0, roll: 0, drift: 0, dof: 0 };
 export const FIRST = {
   set: SET.SCENE,
   // the scene — `shell`: how much of the X-ray shows; `threat`: the danger, 0 → 1
@@ -39,11 +47,11 @@ export const FIRST = {
 /** The poses one act hands to the next (complete: nothing is inherited across a cut). */
 export const VIEW = {
   // where act 1 ends, close on the system in the scene — act 2 cuts to the bench from it (benchCut)
-  system: { tx: HOME[0], ty: HOME[1] + 2, tz: HOME[2], d: 62, az: -30, el: 24, fov: 28, shift: 150, side: 0, roll: 0, drift: 0.3 },
-  // the exploded view on the bench
-  exploded: { tx: 0, ty: 7, tz: 0, d: 96, az: -42, el: 16, fov: 28, shift: 165, side: 0, roll: 0, drift: 0.3 },
+  system: { tx: HOME[0], ty: HOME[1] + 2, tz: HOME[2], d: 62, az: -30, el: 24, fov: 28, shift: 150, side: 0, roll: 0, drift: 0.3, ...CLOSE },
+  // the exploded view on the bench — sharp: every part reads
+  exploded: { tx: 0, ty: 7, tz: 0, d: 96, az: -42, el: 16, fov: 28, shift: 165, side: 0, roll: 0, drift: 0.3, dof: 0 },
   // the system whole again, on the bench: the three calls to action play over it
-  whole: { tx: 0, ty: 2.4, tz: 0, d: 74, az: -40, el: 18, fov: 28, shift: 40, side: 0, roll: 0, drift: 0.3 },
+  whole: { tx: 0, ty: 2.4, tz: 0, d: 74, az: -40, el: 18, fov: 28, shift: 40, side: 0, roll: 0, drift: 0.3, dof: 0 },
 };
 /** What a cut to the bench sets, whatever came before. */
 export const BENCHED = { shell: 0, threat: 0, explode: 0, heart: 0.3, mood: 0, gel: 0, pool: 0.2, grid: 0.16, fx: 0, fy: 2, fz: 0, fs: SIZE };

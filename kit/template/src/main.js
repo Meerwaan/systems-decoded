@@ -7,7 +7,7 @@
 import { createStage } from "@kit/stage.js";
 import { createDirector, along } from "@kit/direct.js";
 import { createCallouts } from "@kit/overlay.js";
-import { buildWorld, FIRST, POSE0, SIZE } from "./world.js";
+import { buildWorld, FIRST, POSE0, SIZE, LOOK } from "./world.js";
 import acte1 from "./acte1.js";
 import acte2 from "./acte2.js";
 import acte3 from "./acte3.js";
@@ -16,7 +16,7 @@ import fin from "./fin.js";
 const $ = (id) => document.getElementById(id);
 
 function build() {
-  const stage = createStage($("stage"), { scale: SIZE, far: 6000, keySize: 2.5 });
+  const stage = createStage($("stage"), { scale: SIZE, far: 6000, keySize: 2.5, ...LOOK }); // LOOK (world.js): the lens, the air, the surface
   window.SD.stage = stage; // lets `look` and the cover exporter pose the camera
   const world = buildWorld(stage);
   const D = createDirector({ stage, first: FIRST, pose0: POSE0 });

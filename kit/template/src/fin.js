@@ -9,7 +9,7 @@
 //   boucle       the tail of that announcement: an unfinished half-sentence, two seconds at most, no new fact,
 //                that lands on the first words of the hook; the last frame IS the first
 // A title or a panel has finished leaving BEFORE the cut that follows it.
-import { retitle, likeCall, nextFile, commentCall } from "@kit/blocks.js";
+import { retitle, likeCall, nextFile, commentCall, duelCall } from "@kit/blocks.js";
 import { SET, VIEW, BENCHED, STAGED, FIRST } from "./world.js";
 
 export default function fin({ D }) {
@@ -31,6 +31,11 @@ export default function fin({ D }) {
   cut(t.tocta, SET.BENCH, VIEW.whole, BENCHED);
   shot(t.tocta, t.like - 0.2 - t.tocta, { d: 70, az: -34 }, "sine.inOut");
   commentCall(tl, { from: t.commentaire - 0.5, word: t.commentaire, typedAt: t.savais, chars: 7, to: t.like - 0.3 });
+  // …the field types the answer the FILM owes (the C of the hook). A question put to the VIEWER is never answered on
+  // screen: if it is a choice the voice says (« d'avant… ou d'après ? »), ask it as a duel — each answer lights on its
+  // word (two cues), the caret waits under « À toi » (the #duel markup is in index.html):
+  // duelCall(tl, { from: t.commentaire - 0.5, aAt: t.reponseA, bAt: t.reponseB, to: t.like - 0.3, toneA: "signal", toneB: "veille" });
+  void duelCall;
 
   /* LIKE */
   shot(t.like - 0.2, t.abo - t.like, { d: 74, az: -26 }, "sine.inOut");

@@ -10,13 +10,14 @@ import { createStage } from "@kit/stage.js";
 import { createDirector } from "@kit/direct.js";
 import { createCallouts } from "@kit/overlay.js";
 import { lineHud } from "@kit/long.js";
-import { buildWorld, FIRST, POSE0, SIZE, FAR, STEPS, CARD, KEYWORDS_SKIP } from "./world.js";
+import { buildWorld, FIRST, POSE0, SIZE, FAR, STEPS, CARD, KEYWORDS_SKIP, LOOK } from "./world.js";
 import CHAPTERS from "./chapters.js";
 
 const $ = (id) => document.getElementById(id);
 
 function build() {
-  const stage = createStage($("stage"), { scale: SIZE, far: FAR, keySize: 2.5 });
+  // LOOK (world.js): the air and the surface for the whole film; the lens is a pose number (CLOSE / SHARP), never the film's
+  const stage = createStage($("stage"), { scale: SIZE, far: FAR, keySize: 2.5, air: LOOK.air, finish: LOOK.finish });
   window.SD.stage = stage; // lets `look` and the cover exporter pose the camera
   const world = buildWorld(stage);
   const D = createDirector({ stage, first: FIRST, pose0: POSE0 });
