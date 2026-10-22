@@ -1,0 +1,780 @@
+{
+  "id": "L03",
+  "slug": "evacuation-avion",
+  "title": "Évacuation d'un avion",
+  "format": "long",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "parts": [
+      "gonfle",
+      "origine",
+      "a380",
+      "manch1",
+      "lum1",
+      "siege1",
+      "t1",
+      "p1",
+      "du"
+    ]
+  },
+  "post": {
+    "youtube": {
+      "title": "Ton avion brûle, 5 portes sur 8 fermées : comment 379 personnes sont sorties vivantes",
+      "titleAlts": [
+        "On éteint la lumière, on condamne la moitié des portes : ton avion a 90 secondes",
+        "Évacuation avion : la règle des 90 secondes, dans le noir, avec la moitié des portes"
+      ],
+      "titleNote": "Putaclic mais fidèle : la scène de l'accroche d'abord (le vol JL516, vérifié : cinq portes sur huit restées fermées à cause du feu, 379 personnes à bord, toutes vivantes), puis la promesse que le film tient (comment). Variante 1 : le paradoxe de l'essai de certification. Variante 2 : la requête telle qu'on la tape (autocomplétion de YouTube, 21/10 : « evacuation avion 90 secondes », « evacuation avion »). Aucun mot des trois miniatures (90 SECONDES, LA FUMÉE DESCEND, TON SAC TU LE PRENDS ?) dans le titre.",
+      "keyword": "évacuation avion",
+      "descriptionTemplate": "Évacuation avion : pour avoir le droit de voler, ton avion a dû prouver qu'on le vide en 90 secondes, dans le noir, par la moitié de ses portes. Le 2 janvier 2024, à Tokyo, il lui en restait trois sur huit, pour 379 personnes.\n\nChapitres\n__CHAPITRES__\n\nSources : FAA, 14 CFR 25.803 et son annexe J · Federal Register, 18 juillet 1995 · FAA, amendement 25-58 (1984) et SAFO 25003 (2025) · EASA, certification de l'A380 (2006) · Japan Airlines et Airbus (vol JL516) · AAIB, accident de Manchester (1985) · GCAA, accident d'Emirates 521 (2016).\n\nSystème Décodé : on ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite.\n\nSois honnête : ton sac, tu le laisses ou tu le prends ?",
+      "hashtags": [
+        "#avion",
+        "#aviation",
+        "#evacuation",
+        "#securiteaerienne",
+        "#toboggan"
+      ],
+      "pinned": "Sois honnête : ton sac, tu le laisses ou tu le prends ? Réponds juste « laissé » ou « pris ». La FAA, elle, a déjà répondu en 2025.",
+      "thumbnail": "16:9, fond noir, trois miniatures, trois promesses, chacune payée avant 30 s. (1) 90 / SECONDES (veille) : le toboggan plein, éclairé, qui jaillit de la porte en diagonale sur les deux tiers du cadre, l'A350 aux rayons X derrière, la lueur du feu en bas à gauche ; cartouche « DANS LE NOIR · ½ DES PORTES » — payée par la promesse (≈ 0:10). (2) LA FUMÉE / DESCEND (signal) : la cabine de nuit, la nappe orange qui descend du plafond jusqu'aux appuie-tête, une rangée de sièges pleins au premier plan, la ligne de lumière au sol ; cartouche « ÉVACUATION · A350 » — payée par l'accroche (≈ 0:02). (3) TON SAC, / TU LE PRENDS ? (dernière ligne en signal) : un sac plein, éclairé, posé dans l'allée sur la ligne de lumière, la porte ouverte et son toboggan au bout ; cartouche « ÉVACUATION » — payée par la question de l'accroche (≈ 0:20). Rien dans le quart bas droit (la durée de YouTube), jamais de personnage de verre.",
+      "endScreen": "Les 15 dernières secondes (like → rendez-vous → boucle) laissent la moitié droite de l'image libre pour l'écran de fin."
+    }
+  },
+  "thumb": {
+    "at": "plein:debout",
+    "title": [
+      "90",
+      "SECONDES"
+    ],
+    "tone": "veille",
+    "tag": "Dans le noir · ½ des portes",
+    "cam": {
+      "side": -420,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  },
+  "thumb2": {
+    "at": "accroche:descend",
+    "title": [
+      "LA FUMÉE",
+      "DESCEND"
+    ],
+    "tone": "signal",
+    "tag": "Évacuation · A350",
+    "cam": {
+      "side": -420,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  },
+  "thumb3": {
+    "at": "curiosite:sac",
+    "title": [
+      "TON SAC,",
+      "TU LE PRENDS ?"
+    ],
+    "tone": "signal",
+    "tag": "Évacuation",
+    "cam": {
+      "side": -420,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  },
+  "sources": [
+    "Faits : docs/faits/L03-evacuation-avion.md (recherche du 21/10, niveaux A/B/C). Vérifié en plus pour ce script (Wikipedia, « 2024 Haneda Airport runway collision », lue le 21/10, B) : « Smoke filled the A350's cabin quickly after the accident » et l'avion « destroyed in the post-crash fire ». Contre-vérification : docs/faits/L03-contre-verification.md (six phrases corrigées : debit, rate1991, top, p2b, p3, dubai ; « l'équipage a gardé fermées les portes côté feu » est ce qui est sourcé, pas un choix porte par porte ; réserve à lever avant l'image : les trois instants de Manchester dans le PDF de l'AAIB).",
+    "La règle : 14 CFR 25.803(c) et son annexe J (A, Cornell LII) — au-delà de 44 sièges, la charge maximale, équipage compris, évacuée jusqu'au sol en 90 s, en conditions d'urgence simulées ; une sortie de chaque paire ; seul l'éclairage de secours ; des bagages, couvertures et oreillers répartis dans les allées comme obstacles ; au moins 40 % de femmes, 35 % de plus de 50 ans ; trois poupées pour les bébés de moins de 2 ans ; aucune répétition ; équipage de conduite sans rôle actif ; ceintures bouclées ; le chrono s'arrête quand le dernier occupant est au sol. Preuve par démonstration, ou par analyse appuyée sur des essais (depuis 1978, amendement 25-46).",
+    "Histoire : 1965, première démonstration exigée des compagnies, 120 s avec la moitié des sorties ; 24 octobre 1967, 25.803 créé et limite à 90 s ; coût humain : 269 blessés sur 5 797 participants dans 19 démonstrations de 1972 à 1991, soit 4,6 % (« presque un sur vingt ») ; deux démonstrations ratées le 26 octobre 1991, un participant gravement blessé cette année-là (le Federal Register ne dit pas lequel des deux essais ratés a causé la blessure grave : le film ne les lie pas) — Federal Register, 18/07/1995 (A).",
+    "A380, Hambourg, 26 mars 2006 : 853 passagers plus l'équipage en 78 s (EASA, communiqué du 12/12/2006, A) ; dans le noir, par 8 sorties sur 16, 33 blessés dont une jambe cassée (document Airbus et presse via résumé de recherche, B/C). Toujours dits ensemble, jamais « 853 en 78 s » seul. Certification EASA et FAA le 12 décembre 2006 (EASA, A). « En moyenne, plus d'une personne par seconde, à chaque porte » est un calcul : plus de 853 personnes, 8 portes, 78 s (≈ 1,4 par seconde et par porte, en supposant une répartition égale, jamais sourcée).",
+    "Toboggan : armement par un levier, barre d'arrimage reliée au plancher, la porte tire le paquet hors de son logement, désarmement avant l'ouverture au sol pour éviter un déploiement intempestif (Smithsonian Air & Space via résumé, B) ; gonflage par une bouteille de gaz comprimé dont le jet, dans des aspirateurs à clapet, entraîne l'air ambiant ; clapets refermés quand le toboggan est plein (brevets US 4 368 009, 6 004 176, 11 333 174, A pour le principe) ; gaz : azote, en général mêlé de CO₂ (mêmes brevets) ; un clapet rouvert après le gonflage par un doigt ou un débris peut dégonfler le toboggan (brevet US 11 608 838, A pour l'énoncé du problème). Ni durée de gonflage ni part d'air aspiré : « quelques secondes », « pas toute seule ».",
+    "Manchester, 22 août 1985 (British Airtours 28M, Boeing 737-236) : 137 à bord, 55 morts dont 48 par inhalation de fumée ; décollage interrompu après un bruit sourd ; l'incendie perce le plancher et la paroi en moins d'une minute ; porte avant gauche ouverte après ≈ 25 s ; porte avant droite coincée par un défaut du système de toboggan, ouverte environ une minute après l'arrêt ; issue sur l'aile disponible 45 s après l'arrêt, trappe de 22 kg, passage de 27 cm, aucun briefing exigé pour les passagers de cette rangée (Wikipedia citant l'AAIB, rapport 8/1988, B). Changements au Royaume-Uni après l'accident : panneaux résistants au feu, plus d'extincteurs, un siège retiré près des issues sur l'aile, balisage au sol (Wikipedia citant le Manchester Evening News et la BBC, B). Les cagoules anti-fumée, non adoptées, ne sont pas citées.",
+    "Balisage au sol : amendements FAA 25-58 et 121-183 du 26 octobre 1984 (A, via résumé) — dix mois AVANT Manchester : le film dit « dix mois avant Manchester », jamais « après » ; utile quand l'éclairage situé à plus de 1,20 m du plancher est noyé par la fumée ; éléments photoluminescents admis par l'AC 25.812-2 (1997).",
+    "Sièges : depuis 1988, sièges 16 g (essai dynamique avec mannequin et critères de blessure, 14 CFR 25.562) exigés sur tout avion de transport nouvellement développé ; avant, approbation à 9 g statique sans critère de blessure (FAA via résumé, B). « 16 g » est la décélération de l'essai, pas ce que subit un passager : le film le dit. Coussins « fire blocking » : règle de 1984, essai au brûleur à kérosène, environ 650 000 coussins remplacés dans la flotte américaine (FAA via résumé, B).",
+    "Tokyo-Haneda, 2 janvier 2024, vol JL516 (A350-941) : collision à l'atterrissage vers 17 h 47, 52 min après le coucher du soleil (Airbus, A) ; 379 à bord, dont 8 enfants de moins de 2 ans (JAL, A) ; tous ont survécu (JAL, A) ; sonorisation en panne, consignes au mégaphone ou à la voix (JAL, A) ; 3 toboggans sur 8 (1L, 1R, 4L), les autres portes restées fermées à cause du feu, moteur droit encore en marche, passagers qui suivent les autres, presque aucun bagage emporté, feu dans la cabine dans les minutes qui suivent la fin de l'évacuation (Wikipedia, Aviation Herald, Reuters, B). Durée : « moins de vingt minutes » (18 min selon JAL, 11 selon une révision attribuée au JTSB, rapport non lu), toujours dite avec « moins de la moitié des portes ». Ni l'heure d'ouverture de la porte 4L, ni les refus d'ouvrir des PNC, ni la portée des mégaphones (sources C) ; aucun nombre de blessés (17 selon JAL, autre bilan ailleurs).",
+    "Garde-côtes : Dash 8 JA722A, en mission après le séisme de Noto, 6 membres d'équipage, 5 morts (Wikipedia citant les pompiers de Tokyo, B) — une phrase, sans nom, sans cause, aucune faute attribuée (le rapport d'étape du JTSB n'a pas été lu ; l'enquête n'est pas finie).",
+    "Bagages : Emirates 521, Dubaï, 3 août 2016, atterrissage manqué, 300 à bord, tous survivants ; l'équipage a demandé de laisser les bagages et plusieurs passagers ont pris le temps de récupérer leurs bagages (CBS, rapport préliminaire du GCAA, B) ; le rapport final n'a pas été lu ; évacuation à Denver en juillet 2025, des passagers descendus avec sacs à dos et valises, puis FAA, SAFO 25003 du 19/09/2025, non contraignante : les bagages emportés pendant une évacuation la retardent, augmentent les blessures et compromettent la survie (CNN, CTV, NBC, B) ; « tu écoutes l'équipage » (JAL, JTSB). Aeroflot 1492 n'est pas cité : le lien entre bagages et victimes n'y est pas établi.",
+    "Simplifications : « dans le noir » = seul l'éclairage de secours allumé ; « portes » pour « sorties » (l'A350 et l'A380 n'ont que des portes) ; la scène à la deuxième personne reconstitue le vol JL516 ; « ceux du milieu remontent l'allée » se déduit des trois portes utilisées (deux à l'avant, une à l'arrière), aucun récit de passager n'est cité ; « il est fait pour brûler… après toi » résume le but des règles de survie (gagner le temps d'évacuer) et le fait du JL516 (le feu entre dans la cabine après le dernier passager) — ce n'est pas une phrase d'un règlement. Aucune consigne de passager n'est donnée hors des bagages et de l'équipage, les seules sourcées."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "chap": "Ton avion brûle",
+      "text": "Ton avion *brûle*. La fumée descend du plafond… et les haut-parleurs se taisent.",
+      "vo": "[tense] Ton avion brûle. La fumée descend du plafond... et les haut-parleurs se taisent.",
+      "voAlt": [
+        "[tense] Ton avion brûle. [short pause] La fumée descend du plafond... et les haut-parleurs se taisent."
+      ]
+    },
+    {
+      "id": "scene",
+      "text": "Sur huit portes, cinq restent fermées : derrière elles, il y a le *feu*.",
+      "vo": "[serious] Sur huit portes, cinq restent fermées : derrière elles, il y a le feu."
+    },
+    {
+      "id": "promesse",
+      "text": "Pourtant, pour avoir le droit de voler, ton avion a dû le prouver : on peut le vider en [90|quatre-vingt-dix] secondes. Dans le noir. Par la moitié de ses portes.",
+      "vo": "[conversational, curious] Pourtant, pour avoir le droit de voler, ton avion a dû le prouver : on peut le vider en quatre-vingt-dix secondes. Dans le noir. Par la moitié de ses portes."
+    },
+    {
+      "id": "defi",
+      "fil": "tokyo",
+      "text": "Ce soir, il t'en reste trois. Trois toboggans… pour [379|trois cent soixante-dix-neuf] personnes.",
+      "vo": "[serious] Ce soir, il t'en reste trois. Trois toboggans... pour trois cent soixante-dix-neuf personnes."
+    },
+    {
+      "id": "curiosite",
+      "fil": "sac",
+      "hold": 0.3,
+      "text": "Et ce soir-là, presque personne n'a pris son *sac*. Toi… tu l'aurais pris ?",
+      "vo": "[curious] Et ce soir-là, presque personne n'a pris son sac. Toi... tu l'aurais pris ?"
+    },
+    {
+      "id": "paquet",
+      "text": "Pour sortir, il te faut d'abord ce qui dort, plié… dans chaque porte.",
+      "vo": "[serious] Pour sortir, il te faut d'abord ce qui dort, plié... dans chaque porte."
+    },
+    {
+      "id": "ouvre",
+      "chap": "On l'ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ]
+    },
+    {
+      "id": "eclate",
+      "text": "Un toboggan, plié serré. Contre lui, une bouteille de gaz comprimé. Des bouches qui avalent l'air. Retiens-les : ce sont elles, le +secret+. Et tout en bas… une barre de métal : la barre d'arrimage.",
+      "vo": "[conversational, curious] Un toboggan, plié serré. Contre lui, une bouteille de gaz comprimé. Des bouches qui avalent l'air. Retiens-les : ce sont elles, le secret. Et tout en bas... une barre de métal : la barre d'arrimage."
+    },
+    {
+      "id": "avant",
+      "hold": 1.2,
+      "text": "Sans lui, ta porte s'ouvre sur le *vide*. Et il doit être prêt… avant que tu y arrives.",
+      "vo": "[serious] Sans lui, ta porte s'ouvre sur le vide. Et il doit être prêt... avant que tu y arrives."
+    },
+    {
+      "id": "gonfle",
+      "chap": "Comment se gonfle le toboggan",
+      "text": "Pendant le vol, chaque porte est +armée+. Un levier, et la barre d'arrimage se retrouve accrochée au plancher.",
+      "vo": "[warm, conversational] Pendant le vol, chaque porte est armée. Un levier, et la barre d'arrimage se retrouve accrochée au plancher."
+    },
+    {
+      "id": "ouverture",
+      "text": "La porte s'ouvre, et tire le paquet hors de son logement. Retenu au plancher par sa barre, le toboggan tombe dehors.",
+      "vo": "[curious] La porte s'ouvre, et tire le paquet hors de son logement. Retenu au plancher par sa barre, le toboggan tombe dehors."
+    },
+    {
+      "id": "bouteille",
+      "text": "Et là, sa bouteille libère son gaz : de l'azote, souvent mêlé de gaz carbonique. Mais contrairement à ce qu'on croit… ce n'est pas elle qui le gonfle. Pas toute seule.",
+      "vo": "[conversational, curious] Et là, sa bouteille libère son gaz : de l'azote, souvent mêlé de gaz carbonique. Mais contrairement à ce qu'on croit... ce n'est pas elle qui le gonfle. Pas toute seule."
+    },
+    {
+      "id": "jet",
+      "text": "Son gaz file à toute vitesse dans ces bouches. Ce jet crée un vide… et un clapet s'ouvre.",
+      "vo": "[curious] Son gaz file à toute vitesse dans ces bouches. Ce jet crée un vide... et un clapet s'ouvre."
+    },
+    {
+      "id": "aspire",
+      "text": "Alors l'air du dehors s'engouffre avec le gaz. Ton toboggan se gonfle… en +avalant l'air+ autour de lui.",
+      "vo": "[amused] Alors l'air du dehors s'engouffre avec le gaz. Ton toboggan se gonfle... en avalant l'air autour de lui."
+    },
+    {
+      "id": "plein",
+      "text": "Quand il est plein, les clapets se referment. En quelques secondes, il est debout : ta porte donne sur une pente, jusqu'au sol.",
+      "vo": "[warm, conversational] Quand il est plein, les clapets se referment. En quelques secondes, il est debout : ta porte donne sur une pente, jusqu'au sol."
+    },
+    {
+      "id": "fuite",
+      "text": "Et ces clapets doivent rester fermés. Un doigt, un débris qui en rouvre un… et le toboggan peut se *dégonfler*.",
+      "vo": "[serious] Et ces clapets doivent rester fermés. Un doigt, un débris qui en rouvre un... et le toboggan peut se dégonfler."
+    },
+    {
+      "id": "desarme",
+      "text": "Et à l'arrivée ? L'équipage désarme les portes avant d'ouvrir. Sinon, au terminal, le toboggan se gonflerait… pour rien.",
+      "vo": "[conversational, curious] Et à l'arrivée ? L'équipage désarme les portes avant d'ouvrir. Sinon, au terminal, le toboggan se gonflerait... pour rien."
+    },
+    {
+      "id": "relance1",
+      "fil": "origine",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Un toboggan, c'est quelques secondes. Mais ces [90|quatre-vingt-dix] secondes pour vider tout l'avion… d'où viennent-elles ?",
+      "vo": "[curious] Un toboggan, c'est quelques secondes. Mais ces quatre-vingt-dix secondes pour vider tout l'avion... d'où viennent-elles ?"
+    },
+    {
+      "id": "origine",
+      "chap": "D'où viennent les 90 secondes",
+      "paie": "origine",
+      "text": "Des États-Unis. En [1965|mille neuf cent soixante-cinq], les compagnies doivent déjà prouver qu'elles vident un avion en deux minutes, avec la moitié des sorties.",
+      "vo": "[warm, conversational] Des États-Unis. En mille neuf cent soixante-cinq, les compagnies doivent déjà prouver qu'elles vident un avion en deux minutes, avec la moitié des sorties."
+    },
+    {
+      "id": "regle67",
+      "text": "Deux ans plus tard, la règle entre dans la certification des avions. Et le chrono descend à [90|quatre-vingt-dix] secondes. Il n'a plus bougé.",
+      "vo": "[curious] Deux ans plus tard, la règle entre dans la certification des avions. Et le chrono descend à quatre-vingt-dix secondes. Il n'a plus bougé."
+    },
+    {
+      "id": "essai",
+      "text": "Pour le prouver, on fait un essai grandeur nature : un vrai avion, plein à craquer, et de vrais gens.",
+      "vo": "[conversational, curious] Pour le prouver, on fait un essai grandeur nature : un vrai avion, plein à craquer, et de vrais gens."
+    },
+    {
+      "id": "noir",
+      "fil": "tokyo",
+      "text": "On éteint tout, sauf l'éclairage de secours. On condamne une porte de chaque paire : la *moitié*. À Tokyo, ce soir-là, tu n'en auras même pas autant.",
+      "vo": "[curious] On éteint tout, sauf l'éclairage de secours. On condamne une porte de chaque paire : la moitié. À Tokyo, ce soir-là, tu n'en auras même pas autant."
+    },
+    {
+      "id": "passagers",
+      "text": "Et les passagers ressemblent aux vrais : au moins [40 %|quarante pour cent] de femmes, plus d'un tiers de plus de cinquante ans. Des gens comme toi.",
+      "vo": "[conversational, curious] Et les passagers ressemblent aux vrais : au moins quarante pour cent de femmes, plus d'un tiers de plus de cinquante ans. Des gens comme toi."
+    },
+    {
+      "id": "poupees",
+      "text": "Dans leurs bras, trois poupées… qui jouent les bébés.",
+      "vo": "[warm, conversational] Dans leurs bras, trois poupées... qui jouent les bébés."
+    },
+    {
+      "id": "obstacles",
+      "fil": "sac",
+      "text": "Et dans les allées, on pose des sacs, des couvertures, des oreillers. Exprès : ce sont des *obstacles*.",
+      "vo": "[curious] Et dans les allées, on pose des sacs, des couvertures, des oreillers. Exprès : ce sont des obstacles."
+    },
+    {
+      "id": "pilotes",
+      "text": "Même les pilotes n'ont pas le droit d'aider.",
+      "vo": "[amused] Même les pilotes n'ont pas le droit d'aider."
+    },
+    {
+      "id": "top",
+      "text": "Aucun volontaire n'a fait d'essai semblable depuis six mois. Ceintures bouclées. Le chrono part… et il ne s'arrête que quand le dernier a les pieds au sol.",
+      "vo": "[conversational, curious] Aucun volontaire n'a fait d'essai semblable depuis six mois. Ceintures bouclées. Le chrono part... et il ne s'arrête que quand le dernier a les pieds au sol."
+    },
+    {
+      "id": "indemnes",
+      "hold": 1.2,
+      "text": "Et ces volontaires, dans le noir… ne ressortent pas tous *indemnes*.",
+      "vo": "[serious] Et ces volontaires, dans le noir... ne ressortent pas tous indemnes."
+    },
+    {
+      "id": "a380",
+      "chap": "853 personnes dans le noir",
+      "text": "Prends le plus gros avion de ligne du monde : l'[A380|A trois cent quatre-vingts]. Hambourg, [2006|deux mille six].",
+      "vo": "[warm, conversational] Prends le plus gros avion de ligne du monde : l'A trois cent quatre-vingts. Hambourg, deux mille six."
+    },
+    {
+      "id": "bord",
+      "text": "À bord : [853|huit cent cinquante-trois] passagers, plus l'équipage. Dans le noir. Et huit portes condamnées sur seize.",
+      "vo": "[curious] À bord : huit cent cinquante-trois passagers, plus l'équipage. Dans le noir. Et huit portes condamnées sur seize."
+    },
+    {
+      "id": "top2",
+      "text": "Top. Les toboggans jaillissent… et le dernier touche le sol en [78|soixante-dix-huit] secondes. Douze secondes d'+avance+.",
+      "vo": "[conversational, curious] Top. Les toboggans jaillissent... et le dernier touche le sol en soixante-dix-huit secondes. Douze secondes d'avance."
+    },
+    {
+      "id": "debit",
+      "text": "En moyenne, plus d'une personne par seconde… à chaque porte. En décembre, l'Europe et les États-Unis lui donnent son certificat.",
+      "vo": "[warm, conversational] En moyenne, plus d'une personne par seconde... à chaque porte. En décembre, l'Europe et les États-Unis lui donnent son certificat."
+    },
+    {
+      "id": "blesses",
+      "hold": 0.3,
+      "text": "Mais trente-trois blessés. Dont une jambe *cassée*.",
+      "vo": "[serious] Mais trente-trois blessés. Dont une jambe cassée."
+    },
+    {
+      "id": "cout",
+      "text": "Et ce n'est pas une exception : sur une vingtaine d'années d'essais, presque un volontaire sur vingt en est ressorti blessé.",
+      "vo": "[curious] Et ce n'est pas une exception : sur une vingtaine d'années d'essais, presque un volontaire sur vingt en est ressorti blessé."
+    },
+    {
+      "id": "rate1991",
+      "text": "En [1991|mille neuf cent quatre-vingt-onze], deux essais ratent le même jour. Et cette année-là, un volontaire est gravement *blessé*.",
+      "vo": "[serious] En mille neuf cent quatre-vingt-onze, deux essais ratent le même jour. Et cette année-là, un volontaire est gravement blessé."
+    },
+    {
+      "id": "calcul",
+      "text": "Depuis [1978|mille neuf cent soixante-dix-huit], d'ailleurs, un calcul appuyé sur des essais peut remplacer le grand essai.",
+      "vo": "[warm, conversational] Depuis mille neuf cent soixante-dix-huit, d'ailleurs, un calcul appuyé sur des essais peut remplacer le grand essai."
+    },
+    {
+      "id": "fumee",
+      "fil": "fumee",
+      "hold": 1.2,
+      "text": "Mais dans ces essais, il n'y a ni feu, ni fumée. Et la fumée… c'est elle qui a tout *changé*.",
+      "vo": "[serious] Mais dans ces essais, il n'y a ni feu, ni fumée. Et la fumée... c'est elle qui a tout changé."
+    },
+    {
+      "id": "manch1",
+      "chap": "Manchester, 1985 : la fumée",
+      "text": "Manchester, un matin d'août [1985|mille neuf cent quatre-vingt-cinq]. Un Boeing accélère sur la piste pour décoller. Cent trente-sept personnes à bord.",
+      "vo": "[curious] Manchester, un matin d'août mille neuf cent quatre-vingt-cinq. Un Boeing accélère sur la piste pour décoller. Cent trente-sept personnes à bord."
+    },
+    {
+      "id": "manch2",
+      "text": "Un bruit sourd. L'équipage interrompt le décollage. L'avion s'arrête… et le feu perce la cabine en moins d'une *minute*.",
+      "vo": "[serious] Un bruit sourd. L'équipage interrompt le décollage. L'avion s'arrête... et le feu perce la cabine en moins d'une minute."
+    },
+    {
+      "id": "manch3",
+      "text": "Devant à gauche, la porte s'ouvre au bout de vingt-cinq secondes. Devant à droite, elle reste coincée : un défaut de son toboggan. Il faudra près d'une minute.",
+      "vo": "[conversational, curious] Devant à gauche, la porte s'ouvre au bout de vingt-cinq secondes. Devant à droite, elle reste coincée : un défaut de son toboggan. Il faudra près d'une minute."
+    },
+    {
+      "id": "manch4",
+      "text": "Au milieu, l'issue sur l'aile : une trappe de vingt-deux kilos, et un passage de vingt-sept centimètres pour l'atteindre. Rien n'obligeait à expliquer aux passagers assis là comment l'ouvrir.",
+      "vo": "[curious] Au milieu, l'issue sur l'aile : une trappe de vingt-deux kilos, et un passage de vingt-sept centimètres pour l'atteindre. Rien n'obligeait à expliquer aux passagers assis là comment l'ouvrir."
+    },
+    {
+      "id": "manch4b",
+      "text": "Elle ne s'ouvre qu'au bout de quarante-cinq secondes.",
+      "vo": "[conversational, curious] Elle ne s'ouvre qu'au bout de quarante-cinq secondes."
+    },
+    {
+      "id": "manch5",
+      "paie": "fumee",
+      "hold": 0.4,
+      "text": "Mais ce n'est pas le feu qui tue le plus. Sur cinquante-cinq morts, quarante-huit sont morts de la *fumée*. Dans un avion qui n'avait jamais quitté le sol.",
+      "vo": "[serious] Mais ce n'est pas le feu qui tue le plus. Sur cinquante-cinq morts, quarante-huit sont morts de la fumée. Dans un avion qui n'avait jamais quitté le sol."
+    },
+    {
+      "id": "apres",
+      "text": "Après Manchester, au Royaume-Uni, la cabine change. Des panneaux qui brûlent moins. Plus d'extincteurs. Et à côté des issues sur l'aile… un siège en moins.",
+      "vo": "[warm, conversational] Après Manchester, au Royaume-Uni, la cabine change. Des panneaux qui brûlent moins. Plus d'extincteurs. Et à côté des issues sur l'aile... un siège en moins."
+    },
+    {
+      "id": "relance2",
+      "midroll": true,
+      "hold": 1.2,
+      "fil": [
+        "lumiere",
+        "tokyo"
+      ],
+      "text": "Mais la fumée, elle, descend du plafond. Et les lumières sont en haut. Alors ce soir-là, à Tokyo, dans la *fumée*… comment trouves-tu ta porte ?",
+      "vo": "[curious] Mais la fumée, elle, descend du plafond. Et les lumières sont en haut. Alors ce soir-là, à Tokyo, dans la fumée... comment trouves-tu ta porte ?"
+    },
+    {
+      "id": "lum1",
+      "chap": "Le balisage lumineux au sol",
+      "paie": "lumiere",
+      "text": "En [1984|mille neuf cent quatre-vingt-quatre], dix mois avant Manchester, les États-Unis imposent une idée simple : mettre la lumière +en bas+. Après l'accident, le Royaume-Uni suit.",
+      "vo": "[warm, conversational] En mille neuf cent quatre-vingt-quatre, dix mois avant Manchester, les États-Unis imposent une idée simple : mettre la lumière en bas. Après l'accident, le Royaume-Uni suit."
+    },
+    {
+      "id": "lum2",
+      "text": "Une ligne de lumière, au ras du plancher, tout le long de l'allée. Elle te mène jusqu'aux sorties. Pas pour faire joli : pour le moment où tu ne verras plus rien d'autre.",
+      "vo": "[curious] Une ligne de lumière, au ras du plancher, tout le long de l'allée. Elle te mène jusqu'aux sorties. Pas pour faire joli : pour le moment où tu ne verras plus rien d'autre."
+    },
+    {
+      "id": "lum3",
+      "text": "Parce que la fumée remplit la cabine par le haut. Au-dessus d'un mètre vingt, les lumières disparaissent les premières. En bas, la ligne reste +visible+.",
+      "vo": "[conversational, curious] Parce que la fumée remplit la cabine par le haut. Au-dessus d'un mètre vingt, les lumières disparaissent les premières. En bas, la ligne reste visible."
+    },
+    {
+      "id": "lum4",
+      "text": "Aujourd'hui, certaines de ces lignes n'ont même plus besoin d'électricité : elles brillent toutes seules, dans le noir.",
+      "vo": "[warm, conversational] Aujourd'hui, certaines de ces lignes n'ont même plus besoin d'électricité : elles brillent toutes seules, dans le noir."
+    },
+    {
+      "id": "lum5",
+      "fil": "tokyo",
+      "text": "Et ce soir-là, à Tokyo, la fumée remplit la cabine très *vite*.",
+      "vo": "[serious] Et ce soir-là, à Tokyo, la fumée remplit la cabine très vite."
+    },
+    {
+      "id": "seuil",
+      "fil": [
+        "sac",
+        "tokyo"
+      ],
+      "hold": 1.2,
+      "text": "Ce qui se passe dans cette fumée, qui en sort, et avec quoi dans les mains… si tu veux le voir, +abonne-toi+ : on y arrive.",
+      "vo": "[conversational, curious] Ce qui se passe dans cette fumée, qui en sort, et avec quoi dans les mains... si tu veux le voir, abonne-toi : on y arrive."
+    },
+    {
+      "id": "siege1",
+      "chap": "Ton siège : 16 g",
+      "text": "Mais pour sortir, il faut d'abord pouvoir te lever. Et ça, ça dépend de ton siège.",
+      "vo": "[warm, conversational] Mais pour sortir, il faut d'abord pouvoir te lever. Et ça, ça dépend de ton siège."
+    },
+    {
+      "id": "neufg",
+      "text": "Avant, on l'approuvait à neuf g, en appuyant dessus. Sans mesurer ce que ton corps aurait subi.",
+      "vo": "[curious] Avant, on l'approuvait à neuf g, en appuyant dessus. Sans mesurer ce que ton corps aurait subi."
+    },
+    {
+      "id": "seizeg",
+      "text": "En [1988|mille neuf cent quatre-vingt-huit], tout nouveau modèle d'avion de ligne doit avoir des sièges testés à seize g. Pour de vrai : lancés, puis arrêtés net… avec un mannequin attaché dessus.",
+      "vo": "[conversational, curious] En mille neuf cent quatre-vingt-huit, tout nouveau modèle d'avion de ligne doit avoir des sièges testés à seize g. Pour de vrai : lancés, puis arrêtés net... avec un mannequin attaché dessus."
+    },
+    {
+      "id": "mannequin",
+      "text": "C'est lui qui juge : il mesure ce qu'un passager aurait encaissé. Seize g, c'est la violence de l'essai… pas forcément celle d'un vrai choc.",
+      "vo": "[curious] C'est lui qui juge : il mesure ce qu'un passager aurait encaissé. Seize g, c'est la violence de l'essai... pas forcément celle d'un vrai choc."
+    },
+    {
+      "id": "coussin",
+      "text": "Et le coussin, sous toi ? Depuis les années quatre-vingt, il doit résister à la flamme d'un brûleur au kérosène. Aux États-Unis, environ [650 000|six cent cinquante mille] coussins ont dû être changés.",
+      "vo": "[warm, conversational] Et le coussin, sous toi ? Depuis les années quatre-vingt, il doit résister à la flamme d'un brûleur au kérosène. Aux États-Unis, environ six cent cinquante mille coussins ont dû être changés."
+    },
+    {
+      "id": "tout",
+      "hold": 1.2,
+      "text": "Un siège qui tient. Un coussin qui résiste. Une ligne au sol. Un toboggan qui avale l'air. Et un soir de janvier, à Tokyo, il va falloir tout ça… en même temps.",
+      "vo": "[conversational, curious] Un siège qui tient. Un coussin qui résiste. Une ligne au sol. Un toboggan qui avale l'air. Et un soir de janvier, à Tokyo, il va falloir tout ça... en même temps."
+    },
+    {
+      "id": "t1",
+      "chap": "Tokyo, 2 janvier 2024",
+      "text": "Le deux janvier [2024|deux mille vingt-quatre], à Tokyo. Il est presque six heures du soir, la nuit est tombée. Un [A350|A trois cent cinquante] de Japan Airlines se pose.",
+      "vo": "[curious] Le deux janvier deux mille vingt-quatre, à Tokyo. Il est presque six heures du soir, la nuit est tombée. Un A trois cent cinquante de Japan Airlines se pose."
+    },
+    {
+      "id": "t2",
+      "text": "Sur la piste, il y a un petit avion des garde-côtes, en route pour porter secours après un séisme. Les deux avions se percutent. À bord du petit, cinq des six membres d'équipage perdent la vie.",
+      "vo": "[serious] Sur la piste, il y a un petit avion des garde-côtes, en route pour porter secours après un séisme. Les deux avions se percutent. À bord du petit, cinq des six membres d'équipage perdent la vie."
+    },
+    {
+      "id": "t3",
+      "hold": 0.3,
+      "text": "L'[A350|A trois cent cinquante], en feu, finit par s'arrêter. À bord, vous êtes [379|trois cent soixante-dix-neuf]. Dont huit bébés. Des vrais, cette fois.",
+      "vo": "[conversational, curious] L'A trois cent cinquante, en feu, finit par s'arrêter. À bord, vous êtes trois cent soixante-dix-neuf. Dont huit bébés. Des vrais, cette fois."
+    },
+    {
+      "id": "t4",
+      "text": "Les haut-parleurs ne marchent plus. L'équipage crie les consignes, au mégaphone ou à pleine voix. La fumée remplit la cabine.",
+      "vo": "[curious] Les haut-parleurs ne marchent plus. L'équipage crie les consignes, au mégaphone ou à pleine voix. La fumée remplit la cabine."
+    },
+    {
+      "id": "t5",
+      "text": "Cinq portes donnent sur le feu : elles restent fermées. Devant, deux portes s'ouvrent. Deux toboggans jaillissent… et avalent l'air de la nuit. Ceux du milieu remontent l'allée.",
+      "vo": "[conversational, curious] Cinq portes donnent sur le feu : elles restent fermées. Devant, deux portes s'ouvrent. Deux toboggans jaillissent... et avalent l'air de la nuit. Ceux du milieu remontent l'allée."
+    },
+    {
+      "id": "t6",
+      "text": "À l'arrière, une seule porte. La quatrième, à gauche. Et à droite, un moteur *tourne* encore.",
+      "vo": "[curious] À l'arrière, une seule porte. La quatrième, à gauche. Et à droite, un moteur tourne encore."
+    },
+    {
+      "id": "t7",
+      "fil": "sac",
+      "text": "On avance dans la fumée. On suit ceux de devant. Presque personne ne prend son sac.",
+      "vo": "[conversational, curious] On avance dans la fumée. On suit ceux de devant. Presque personne ne prend son sac."
+    },
+    {
+      "id": "t8",
+      "paie": "tokyo",
+      "hold": 0.4,
+      "text": "Un par un, tout le monde glisse jusqu'au sol. Et le dernier sort. [379|Trois cent soixante-dix-neuf] personnes. Toutes +vivantes+.",
+      "vo": "[warm, conversational] Un par un, tout le monde glisse jusqu'au sol. Et le dernier sort. Trois cent soixante-dix-neuf personnes. Toutes vivantes."
+    },
+    {
+      "id": "t9",
+      "text": "Quelques minutes plus tard, le feu entre dans la cabine.",
+      "vo": "[curious] Quelques minutes plus tard, le feu entre dans la cabine."
+    },
+    {
+      "id": "t10",
+      "fil": "regle",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Il aura fallu moins de vingt minutes. Pas quatre-vingt-dix secondes. Mais avec moins de la moitié des portes… alors, la règle a-t-elle *échoué* ?",
+      "vo": "[conversational, curious] Il aura fallu moins de vingt minutes. Pas quatre-vingt-dix secondes. Mais avec moins de la moitié des portes... alors, la règle a-t-elle échoué ?"
+    },
+    {
+      "id": "p1",
+      "chap": "Pourquoi pas 90 secondes ?",
+      "paie": "regle",
+      "text": "Non. La règle ne chronomètre pas les accidents : elle juge l'avion, avant qu'il ait le droit de voler.",
+      "vo": "[warm, conversational] Non. La règle ne chronomètre pas les accidents : elle juge l'avion, avant qu'il ait le droit de voler."
+    },
+    {
+      "id": "p2",
+      "text": "Avec la moitié des portes, prêtes dès la première seconde. Des volontaires en bonne santé. Et ni feu, ni fumée.",
+      "vo": "[curious] Avec la moitié des portes, prêtes dès la première seconde. Des volontaires en bonne santé. Et ni feu, ni fumée."
+    },
+    {
+      "id": "p2b",
+      "text": "Un vrai accident dure plus longtemps : des portes ne s'ouvrent pas, la fumée gêne. Ça ne rend pas la règle fausse.",
+      "vo": "[conversational, curious] Un vrai accident dure plus longtemps : des portes ne s'ouvrent pas, la fumée gêne. Ça ne rend pas la règle fausse."
+    },
+    {
+      "id": "p3",
+      "text": "Ce soir-là, rien de tout ça : trois portes sur huit, plus de haut-parleurs, et la fumée. Mais il y avait tout ce qu'on vient de voir… et un équipage qui a gardé fermées les portes côté feu.",
+      "vo": "[curious] Ce soir-là, rien de tout ça : trois portes sur huit, plus de haut-parleurs, et la fumée. Mais il y avait tout ce qu'on vient de voir... et un équipage qui a gardé fermées les portes côté feu."
+    },
+    {
+      "id": "p4",
+      "text": "À Manchester, le feu avait percé la cabine en moins d'une minute. Ce soir-là, il n'est entré qu'après le dernier passager.",
+      "vo": "[conversational, curious] À Manchester, le feu avait percé la cabine en moins d'une minute. Ce soir-là, il n'est entré qu'après le dernier passager."
+    },
+    {
+      "id": "chute",
+      "hold": 1.2,
+      "text": "Un avion n'est pas fait pour ne jamais brûler. Il est fait pour brûler… +après toi+.",
+      "vo": "[warm, conversational] Un avion n'est pas fait pour ne jamais brûler. Il est fait pour brûler... après toi."
+    },
+    {
+      "id": "du",
+      "chap": "Ton sac, tu le prends ?",
+      "paie": "sac",
+      "text": "Et ton sac, du début ? À Dubaï, en [2016|deux mille seize], un avion d'Emirates rate son atterrissage. L'équipage dit de tout laisser… et plusieurs passagers sortent quand même avec leurs bagages.",
+      "vo": "[curious] Et ton sac, du début ? À Dubaï, en deux mille seize, un avion d'Emirates rate son atterrissage. L'équipage dit de tout laisser... et plusieurs passagers sortent quand même avec leurs bagages."
+    },
+    {
+      "id": "dubai",
+      "text": "Les trois cents personnes à bord survivent. Mais plusieurs ont pris le temps de récupérer leurs bagages.",
+      "vo": "[conversational, curious] Les trois cents personnes à bord survivent. Mais plusieurs ont pris le temps de récupérer leurs bagages."
+    },
+    {
+      "id": "denver",
+      "text": "En juillet [2025|deux mille vingt-cinq], à Denver, des passagers descendent encore le toboggan… avec sacs à dos et valises.",
+      "vo": "[curious] En juillet deux mille vingt-cinq, à Denver, des passagers descendent encore le toboggan... avec sacs à dos et valises."
+    },
+    {
+      "id": "safo",
+      "text": "Deux mois plus tard, l'aviation civile américaine l'écrit noir sur blanc aux compagnies : un bagage emporté, c'est une évacuation plus lente, plus de blessés… et des vies en *jeu*.",
+      "vo": "[serious] Deux mois plus tard, l'aviation civile américaine l'écrit noir sur blanc aux compagnies : un bagage emporté, c'est une évacuation plus lente, plus de blessés... et des vies en jeu."
+    },
+    {
+      "id": "derriere",
+      "text": "Un sac, c'est une seconde de trop… pour celui qui est derrière toi.",
+      "vo": "[warm, conversational] Un sac, c'est une seconde de trop... pour celui qui est derrière toi."
+    },
+    {
+      "id": "conseil",
+      "text": "Alors le jour où ça t'arrive, tu écoutes l'équipage. Et tu laisses tout.",
+      "vo": "[conversational, curious] Alors le jour où ça t'arrive, tu écoutes l'équipage. Et tu laisses tout."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Mais sois honnête, et dis-moi en +commentaire+ : ton sac… tu le laisses ? Ou tu le prends ?",
+      "vo": "[curious] Mais sois honnête, et dis-moi en commentaire : [short pause] ton sac... tu le laisses ? Ou tu le prends ?"
+    },
+    {
+      "id": "like",
+      "text": "Et envoie cette vidéo à quelqu'un qui prend l'avion bientôt : il saura quoi laisser derrière lui. Si tu as appris quelque chose, un petit +like+.",
+      "vo": "[warm] Et envoie cette vidéo à quelqu'un qui prend l'avion bientôt : il saura quoi laisser derrière lui. Si tu as appris quelque chose, un petit like."
+    },
+    {
+      "id": "abo",
+      "text": "On se retrouve très vite… pour ouvrir un autre système qui veille sur toi.",
+      "vo": "[warm] On se retrouve très vite... [short pause] pour ouvrir un autre système qui veille sur toi.",
+      "voAlt": [
+        "[warm] On se retrouve très vite... [short pause] pour ouvrir un autre système... qui veille sur toi."
+      ]
+    },
+    {
+      "id": "boucle",
+      "text": "Un système qui attend, lui aussi, le jour où…",
+      "vo": "[calm] Un système qui attend, lui aussi, le jour où,"
+    }
+  ],
+  "cues": {
+    "titre": "scene:fermées",
+    "miniature": "promesse:secondes",
+    "miniature2": "accroche:descend",
+    "miniature3": "curiosite:sac",
+    "fire": "accroche:brûle",
+    "silence": "accroche:taisent",
+    "three": "defi:trois",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "girt": "eclate:arrimage",
+    "arm": "gonfle:armée",
+    "pull": "ouverture:tire",
+    "drop": "ouverture:tombe",
+    "gas": "bouteille:libère",
+    "venturi": "jet:vide",
+    "valve": "jet:clapet",
+    "gulp": "aspire:avalant",
+    "full": "plein:debout",
+    "disarm": "desarme:désarme",
+    "lightsoff": "noir:éteint",
+    "half": "noir:moitié",
+    "dolls": "poupees:poupées",
+    "aisle": "obstacles:sacs",
+    "go": "top:chrono",
+    "ground": "top:sol",
+    "a380go": "top2:jaillissent",
+    "a380end": "top2:soixante-dix-huit",
+    "thump": "manch2:sourd",
+    "breach": "manch2:perce",
+    "jam": "manch3:coincée",
+    "hatch": "manch4:trappe",
+    "smokekills": "manch5:fumée",
+    "floor": "lum1:bas",
+    "glow": "lum4:brillent",
+    "sled": "seizeg:arrêtés",
+    "burner": "coussin:brûleur",
+    "collide": "t2:percutent",
+    "stop": "t3:finit",
+    "pa": "t4:marchent",
+    "closed": "t5:fermées",
+    "slides": "t5:jaillissent",
+    "rear": "t6:quatrième",
+    "engine": "t6:tourne",
+    "last": "t8:dernier",
+    "alive": "t8:vivantes",
+    "firein": "t9:entre",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:après",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:jour"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "space",
+      "mix": 0.22,
+      "size": 0.84,
+      "damp": 0.35
+    },
+    {
+      "type": "music",
+      "width": 0.7,
+      "sections": "chapters",
+      "skip": [
+        "ouvre"
+      ],
+      "drop": 0.5,
+      "gain": -21,
+      "phone": 0.25,
+      "curve": [
+        [
+          0,
+          0.9,
+          0.5
+        ],
+        [
+          "ouvre-0.4",
+          0.55,
+          0
+        ],
+        [
+          "gonfle-1",
+          1,
+          0.55
+        ],
+        [
+          "t1-1",
+          1,
+          0.85
+        ],
+        [
+          "chute",
+          0.7,
+          0
+        ],
+        [
+          "boucle",
+          0.8,
+          0.5
+        ]
+      ]
+    },
+    {
+      "type": "drone",
+      "gain": -27,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "ambience",
+      "preset": "room",
+      "from": 0,
+      "gain": -36
+    },
+    {
+      "type": "chapters",
+      "style": "film",
+      "skip": [
+        "ouvre"
+      ]
+    },
+    {
+      "type": "boom",
+      "at": 0.03,
+      "gain": -13,
+      "size": 1.2
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.3,
+      "gain": -18
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "boom",
+      "at": "ouvre$+0.05",
+      "gain": -15,
+      "size": 0.7
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.22",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.38",
+      "gain": -19,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.54",
+      "gain": -20,
+      "pitch": 1.15
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
