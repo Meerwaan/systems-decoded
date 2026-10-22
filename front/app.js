@@ -1,3 +1,5 @@
+// HS01, HS02…: a hors-série (a promo of a long, later a sponsored film), shown as such
+const kindOf = (d) => (/^HS[0-9]/.test(d.id) ? "Hors-série" : d.long ? "Vidéo longue" : "Dossier");
 // Système Décodé — bureau de publication.
 // Plain script, no build step. An index of the dossiers (to post, posted, in the making) and one
 // sheet at a time: the phone shows one or the other, a wide screen both side by side.
@@ -17,6 +19,8 @@
     { id: "instagram", name: "Instagram", short: "IG" },
     { id: "youtube", name: "YouTube", short: "YT" },
   ];
+  /** Where this dossier goes up: the three platforms for a short, YouTube alone for a long (the PC says which). */
+  const platformsOf = (d) => (d && Array.isArray(d.platforms) ? PLATFORMS.filter((p) => d.platforms.includes(p.id)) : PLATFORMS);
 
   // TikTok's settings that are easy to forget, in the order they come up
   const STEPS = [
@@ -26,6 +30,16 @@
     { id: "ai", label: `«${SP}Contenu généré par l'IA${SP}»` },
     { id: "hd", label: `«${SP}Importer en HD${SP}»` },
     { id: "live", label: "Commentaire épinglé" },
+  ];
+
+  // the same for a long, in YouTube Studio
+  const LONG_STEPS = [
+    { id: "upload", label: "Vidéo HD importée" },
+    { id: "words", label: "Titre et description" },
+    { id: "thumbs", label: `«${SP}Tester et comparer${SP}» : 3 miniatures` },
+    { id: "srt", label: "Sous-titres .srt" },
+    { id: "end", label: "Écran de fin" },
+    { id: "pinned", label: "Commentaire épinglé" },
   ];
 
   const FILTERS = [
@@ -54,6 +68,7 @@
   const oneDecimal = new Intl.NumberFormat("fr-FR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   /** Sizes the way iOS shows them (1 Mo = 1 000 000 octets), so they match the download bar. */
   function size(bytes) {
+    if (bytes >= 1e9) return `${oneDecimal.format(bytes / 1e9)}${SP}Go`; // a long's film
     if (bytes >= 1e8) return `${Math.round(bytes / 1e6)}${SP}Mo`;
     if (bytes >= 1e6) return `${oneDecimal.format(bytes / 1e6)}${SP}Mo`;
     return `${Math.max(1, Math.round(bytes / 1e3))}${SP}Ko`;
@@ -269,11 +284,11 @@
     return true;
   }
   function openCover(event, d) {
-    view(event, `Couverture · Dossier ${d.id}`, h("img", { src: fresh(d.files.cover), alt: `Couverture du dossier ${d.id}, ${d.title}` }), "Appui long sur l'image pour l'enregistrer dans Photos.");
+    view(event, `Couverture · ${kindOf(d)} ${d.id}`, h("img", { src: fresh(d.files.cover), alt: `Couverture du dossier ${d.id}, ${d.title}` }), "Appui long sur l'image pour l'enregistrer dans Photos.");
   }
   function openFilm(event, d, film) {
     const video = h("video", { controls: true, playsinline: true, src: fresh(film.file), poster: d.files.cover && fresh(d.files.cover), "aria-label": `Film du dossier ${d.id}` });
-    if (view(event, `${film.mute ? "Aperçu muet" : "Film"} · Dossier ${d.id}`, video, film.note)) video.play().catch(() => {}); // inside the tap: it starts with its sound
+    if (view(event, `${film.mute ? "Aperçu muet" : "Film"} · ${kindOf(d)} ${d.id}`, video, film.note)) video.play().catch(() => {}); // inside the tap: it starts with its sound
   }
   const quiet = (root) => {
     for (const video of root.querySelectorAll("video")) video.pause(); // a film taken off the page would go on talking
@@ -321,8 +336,8 @@
   /** Does the PC keep the ticks? A desk started before this page was written does not: this device keeps them meanwhile. */
   const keeps = () => !state.data.dossiers.some((d) => d.posted === undefined);
   const postedOn = (d) => d.posted || mem.all().posted[d.dir] || {};
-  const online = (d) => PLATFORMS.filter((p) => postedOn(d)[p.id]);
-  const waiting = (d) => PLATFORMS.filter((p) => !postedOn(d)[p.id]);
+  const online = (d) => platformsOf(d).filter((p) => postedOn(d)[p.id]);
+  const waiting = (d) => platformsOf(d).filter((p) => !postedOn(d)[p.id]);
   const bucket = (d) => (!d.ready ? "wip" : waiting(d).length === 0 ? "done" : "todo");
   const names = (list) => list.map((p) => p.name).join(", ");
 
@@ -338,7 +353,8 @@
       const now = find(dir);
       if (!on) return `${names(which)} décoché.`;
       const left = waiting(now);
-      return left.length === 0 ? `Dossier ${now.id} : en ligne partout.` : `${names(which)} coché. Reste : ${names(left)}.`;
+      if (now.long) return `${now.id} : en ligne sur YouTube.`;
+      return left.length === 0 ? `${kindOf(now)} ${now.id} : en ligne partout.` : `${names(which)} coché. Reste : ${names(left)}.`;
     };
     if (!keeps()) {
       mem.all().posted[dir] = { ...postedOn(d), ...patch(on) };
@@ -379,7 +395,7 @@
       for (const [dir, was] of Object.entries(local)) {
         const d = find(dir);
         const ask = {};
-        if (d && was) for (const p of PLATFORMS) if (was[p.id] === true && !d.posted[p.id]) ask[p.id] = true; // online, since nobody knows when: no date
+        if (d && was) for (const p of platformsOf(d)) if (was[p.id] === true && !d.posted[p.id]) ask[p.id] = true; // online, since nobody knows when: no date
         if (Object.keys(ask).length > 0) {
           const res = await fetch(`/api/publication/${encodeURIComponent(dir)}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(ask) });
           if (!res.ok) return; // next visit
@@ -414,22 +430,26 @@
     const left = waiting(d);
     const stands = !d.ready
       ? d.voiced ? "rendu manquant" : "sans voix"
-      : left.length === 0 ? "en ligne partout" : left.length === PLATFORMS.length ? "à poster" : `en ligne sur ${names(online(d))}, reste ${names(left)}`;
+      : left.length === 0 ? (d.long ? "en ligne sur YouTube" : "en ligne partout") : left.length === platformsOf(d).length ? "à poster" : `en ligne sur ${names(online(d))}, reste ${names(left)}`;
     const a = h(
       "a",
-      { class: "row", href: link(d.dir), "data-dir": d.dir, "aria-label": `Dossier ${d.id}, ${d.title} : ${stands}` },
-      h("span", { class: thumb ? "row__thumb" : "row__thumb row__thumb--none" }, thumb && h("img", { src: fresh(thumb), alt: "", width: "360", height: "640", loading: "lazy", decoding: "async" })),
+      { class: "row", href: link(d.dir), "data-dir": d.dir, "aria-label": `${kindOf(d)} ${d.id}, ${d.title} : ${stands}` },
+      h(
+        "span",
+        { class: `row__thumb${d.long ? " row__thumb--wide" : ""}${thumb ? "" : " row__thumb--none"}` },
+        thumb && h("img", { src: fresh(thumb), alt: "", width: "360", height: d.long ? "203" : "640", loading: "lazy", decoding: "async" }),
+      ),
       h(
         "span",
         { class: "row__body" },
-        h("span", { class: "row__top" }, h("b", { text: d.id }), next && h("em", { text: "Suivant" })),
+        h("span", { class: "row__top" }, h("b", { text: d.id }), d.long && h("span", { class: "row__long", text: "Long" }), next && h("em", { text: "Suivant" })),
         h("span", { class: "row__title", text: d.title }),
         d.ready
           ? h(
               "span",
               { class: "row__state" },
-              h("span", { class: "pips" }, PLATFORMS.map((p) => h("i", { class: posted[p.id] ? "pip is-on" : "pip", text: p.short }))),
-              left.length === 0 && day(posted.tiktok) && h("span", { class: "row__meta", text: day(posted.tiktok) }),
+              h("span", { class: "pips" }, platformsOf(d).map((p) => h("i", { class: posted[p.id] ? "pip is-on" : "pip", text: p.short }))),
+              left.length === 0 && day(posted[platformsOf(d)[0].id]) && h("span", { class: "row__meta", text: day(posted[platformsOf(d)[0].id]) }),
             )
           : h("span", { class: "row__state" }, h("span", { class: "chip chip--missing" }, h("i", {}), d.voiced ? "Rendu manquant" : "Sans voix")),
       ),
@@ -520,30 +540,7 @@
         blocks.push(block("Commentaire à épingler", null, quote, copyButton("Copier le commentaire", pinned, { source: quote })));
       }
       // TikTok's settings, ticked as they are done: kept on this device, they are nobody else's business
-      const count = h("small", {});
-      const checks = () => mem.all().checks[d.dir] || {};
-      const paint = () => (count.textContent = `${STEPS.filter((step) => checks()[step.id]).length}/${STEPS.length}`);
-      paint();
-      blocks.push(
-        block(
-          "Avant de publier",
-          count,
-          h(
-            "ul",
-            { class: "memos" },
-            STEPS.map((step, i) => {
-              const input = h("input", { type: "checkbox" });
-              input.checked = checks()[step.id] === true;
-              input.addEventListener("change", () => {
-                mem.all().checks[d.dir] = { ...checks(), [step.id]: input.checked };
-                mem.save();
-                paint();
-              });
-              return h("li", {}, h("label", { class: "memo" }, input, h("span", { class: "memo__box", "aria-hidden": "true", text: String(i + 1) }), h("span", { class: "memo__t", text: step.label })));
-            }),
-          ),
-        ),
-      );
+      blocks.push(memoBlock(d, STEPS));
       return numbered(blocks);
     }
     if (platform === "instagram") {
@@ -599,7 +596,219 @@
     return { el: h("nav", { class: "sheet__bar", "aria-label": along ? "D'un dossier à l'autre" : "Retour" }, back, along && [pos, prev, next]), paint };
   }
 
+  /** Ticks to remember, kept on this device for one dossier: TikTok's settings, or YouTube Studio's for a long. */
+  function memoBlock(d, steps) {
+    const count = h("small", {});
+    const checks = () => mem.all().checks[d.dir] || {};
+    const paint = () => (count.textContent = `${steps.filter((step) => checks()[step.id]).length}/${steps.length}`);
+    paint();
+    return block(
+      "Avant de publier",
+      count,
+      h(
+        "ul",
+        { class: "memos" },
+        steps.map((step, i) => {
+          const input = h("input", { type: "checkbox" });
+          input.checked = checks()[step.id] === true;
+          input.addEventListener("change", () => {
+            mem.all().checks[d.dir] = { ...checks(), [step.id]: input.checked };
+            mem.save();
+            paint();
+          });
+          return h("li", {}, h("label", { class: "memo" }, input, h("span", { class: "memo__box", "aria-hidden": "true", text: String(i + 1) }), h("span", { class: "memo__t", text: step.label })));
+        }),
+      ),
+    );
+  }
+
+  const LETTERS = ["A", "B", "C"];
+
+  /**
+   * The sheet of a long: YouTube only. The 16:9 film, streamed in byte ranges (≈ 1 Go: never loaded
+   * whole), its three thumbnails for YouTube's A/B test, its subtitles; then the three titles, the
+   * description with its chapters, the hashtags, the pinned comment and the end-screen reminder.
+   */
+  function longSheet(d) {
+    const { video, srt } = d.files;
+    const thumbnails = d.files.thumbnails || [];
+    const yt = (d.post && d.post.youtube) || {};
+    const key = d.dir.replace(/[^\w-]/g, "_");
+    const headingId = `dossier-${key}`;
+    const bar = sheetBar(d.dir);
+    const first = thumbnails[0];
+
+    const openThumb = (event, t, i) =>
+      view(
+        event,
+        `Miniature ${LETTERS[i]} · ${d.id}`,
+        h("img", { src: fresh(t), alt: `Miniature ${LETTERS[i]} : ${t.title}` }),
+        "1280 × 720, la taille que demande YouTube. Appui long sur l'image pour l'enregistrer dans Photos.",
+      );
+
+    /* who it is: the first thumbnail, its number, where it stands */
+    const chip = h("p", {});
+    let face;
+    if (first) {
+      face = h(
+        "a",
+        { class: "sheet__cover sheet__cover--wide", href: fresh(first), "aria-label": `Voir la miniature A de ${d.id} en entier` },
+        h("img", { src: fresh(d.files.thumb || first), alt: "", width: "360", height: "203", decoding: "async" }),
+        h("i", { class: "sheet__zoom" }),
+      );
+      face.addEventListener("click", (event) => openThumb(event, first, 0));
+    } else {
+      face = h("div", { class: "sheet__cover sheet__cover--wide sheet__cover--none", role: "img", "aria-label": "Pas encore de miniature" });
+    }
+    const head = h(
+      "header",
+      { class: "sheet__head sheet__head--long" },
+      face,
+      h(
+        "div",
+        { class: "sheet__id" },
+        h("div", { class: "sheet__top" }, h("p", { class: "tag" }, h("i", { class: "dot" }), h("span", { text: `Long ${d.id} · YouTube` }))),
+        h("h2", { class: "sheet__title", id: headingId, text: d.title }),
+        h("div", { class: "sheet__foot" }, chip, video && h("small", { class: "sheet__meta", text: `rendu le ${when(video.mtime)}` })),
+      ),
+    );
+
+    /* online: one tick, YouTube */
+    const tick = h("button", { type: "button", class: "tick", "aria-pressed": "false" }, h("i", { "aria-hidden": "true" }), h("span", { text: "YouTube" }));
+    tick.addEventListener("click", () => setPosted(d.dir, "youtube", tick.getAttribute("aria-pressed") !== "true"));
+    const tickBar = d.ready && h("div", { class: "ticks", role: "group", "aria-label": "En ligne sur" }, h("div", { class: "ticks__k" }, h("span", { text: "En ligne sur" })), h("div", { class: "ticks__row ticks__row--one" }, tick));
+
+    /* the files */
+    const absent = (what, command) => h("div", { class: "absent" }, h("b", { text: what }), h("code", { text: command }));
+    const sub = (text) => h("h3", { class: "film__h", text });
+    const files = h(
+      "section",
+      { class: "film film--long", "aria-label": "Le film, ses miniatures et ses sous-titres" },
+      video
+        ? [
+            // preload none: nothing comes down before a tap; then the phone asks for the bytes it plays, as it plays them
+            h(
+              "video",
+              { class: "player player--wide", controls: true, playsinline: true, preload: "none", poster: first && fresh(first), "aria-label": `Film ${d.id}` },
+              h("source", { src: fresh(video), type: "video/mp4" }),
+            ),
+            h("p", { class: "note film__note", text: `Lecture du fichier HD au fil de l'eau (${size(video.bytes)}) : rien n'est chargé d'avance.` }),
+            h(
+              "a",
+              { class: "btn btn--primary btn--split", href: `${video.url}?dl=1`, download: `${d.dir}.mp4` },
+              h("span", { text: "Télécharger la vidéo HD" }),
+              h("span", { class: "btn__data", text: size(video.bytes) }),
+            ),
+            h("p", { class: "note", text: `Un fichier de ${size(video.bytes)} : il s'envoie plus vite à YouTube depuis l'ordinateur (studio.youtube.com).` }),
+          ]
+        : absent(d.voiced ? "Vidéo HD pas encore rendue" : "Pas encore de voix, pas de vidéo HD", d.voiced ? `npm run render -- ${d.id}` : `npm run voice -- ${d.id}`),
+
+      sub("Miniatures · test A/B"),
+      thumbnails.length > 0 &&
+        h(
+          "ul",
+          { class: "thumbs" },
+          thumbnails.map((t, i) => {
+            const pic = h("a", { class: "thumb__img", href: fresh(t), "aria-label": `Voir la miniature ${LETTERS[i]} en entier` }, h("img", { src: fresh(t), alt: "", width: "1280", height: "720", loading: "lazy", decoding: "async" }));
+            pic.addEventListener("click", (event) => openThumb(event, t, i));
+            return h(
+              "li",
+              { class: "thumb" },
+              pic,
+              h("p", { class: "thumb__k", text: `${LETTERS[i]} · ${size(t.bytes)}` }),
+              t.title && h("p", { class: `thumb__t thumb__t--${t.tone}`, text: t.title }),
+              t.tag && h("p", { class: "thumb__tag", text: t.tag }),
+              h("a", { class: "btn thumb__dl", href: `${t.url}?dl=1`, download: t.url.split("/").pop() }, h("span", { text: "Télécharger" })),
+            );
+          }),
+        ),
+      thumbnails.length < 3 && absent(thumbnails.length === 0 ? "Miniatures pas encore faites" : `${3 - thumbnails.length} miniature(s) manquante(s)`, `npm run cover -- ${d.id} (puis --alt 2, --alt 3)`),
+
+      sub("Sous-titres"),
+      srt
+        ? h(
+            "a",
+            { class: "btn btn--split", href: `${srt.url}?dl=1`, download: `${d.dir}.srt` },
+            h("span", { text: "Télécharger les sous-titres .srt" }),
+            h("span", { class: "btn__data", text: size(srt.bytes) }),
+          )
+        : absent("Sous-titres pas encore faits", `npm run srt -- ${d.id}`),
+      srt && h("p", { class: "note", text: "YouTube Studio : Sous-titres, Ajouter, « Importer un fichier », avec minutage." }),
+    );
+
+    /* the words */
+    const blocks = [];
+    const titles = [yt.title, ...(yt.titleAlts || [])].filter(Boolean);
+    if (titles.length > 0) {
+      blocks.push(
+        block(
+          "Titres",
+          h("small", { text: titles.length > 1 ? `${titles.length} à tester` : "" }),
+          titles.map((title, i) => {
+            const quote = h("div", { class: "quote" }, h("p", { text: title }));
+            const over = title.length > 100;
+            return h(
+              "div",
+              { class: "variant" },
+              h("p", { class: "variant__k" }, h("span", { text: i === 0 ? `Titre ${LETTERS[i]} · principal` : `Titre ${LETTERS[i]}` }), h("span", { class: over ? "variant__n is-over" : "variant__n", text: `${title.length} / 100` })),
+              quote,
+              copyButton(`Copier le titre ${LETTERS[i]}`, title, { primary: i === 0, source: quote }),
+            );
+          }),
+        ),
+      );
+    } else {
+      blocks.push(block("Titres", null, toWrite("Titres YouTube")));
+    }
+    if (yt.description) {
+      const quote = h("div", { class: "quote quote--long" }, h("p", { text: yt.description }));
+      blocks.push(block("Description", h("small", { text: `${yt.description.length} / 5 000` }), h("p", { class: "note note--top", text: "Les chapitres sont dedans : YouTube les lit tels quels." }), quote, copyButton("Copier la description", yt.description, { primary: true, source: quote })));
+    } else {
+      blocks.push(block("Description", null, toWrite("Description YouTube")));
+    }
+    const tags = (yt.hashtags || []).join(" ");
+    if (tags) {
+      const quote = h("div", { class: "quote" }, h("p", { class: "quote__tags quote__tags--alone", text: tags }));
+      blocks.push(block("Hashtags", h("small", { text: `${yt.hashtags.length} / 5` }), quote, copyButton("Copier les hashtags", tags, { source: quote }), h("p", { class: "note", text: "À la fin de la description : YouTube affiche les trois premiers au-dessus du titre." })));
+    }
+    if (yt.pinned) {
+      const quote = h("div", { class: "quote" }, h("p", { text: yt.pinned }));
+      blocks.push(block("Commentaire à épingler", null, quote, copyButton("Copier le commentaire", yt.pinned, { source: quote })));
+    }
+    if (yt.endScreen) {
+      blocks.push(block("Écran de fin", h("small", { text: "rappel" }), h("div", { class: "quote quote--memo" }, h("p", { text: yt.endScreen }))));
+    }
+    blocks.push(memoBlock(d, LONG_STEPS));
+
+    const done = h("div", { class: "done", hidden: true });
+    const words = h("section", { class: "words words--long", "aria-label": "Les textes à coller" }, done, numbered(blocks));
+
+    const el = h("article", { class: d.ready ? "dossier dossier--long" : "dossier dossier--long dossier--wip", "aria-labelledby": headingId }, bar.el, h("div", { class: "sheet__lead" }, head, tickBar), h("div", { class: "sheet__cols sheet__cols--long" }, files, words));
+
+    function paint(now) {
+      const on = Boolean(postedOn(now).youtube);
+      const [kind, said] = !now.ready ? ["missing", now.voiced ? "Rendu manquant" : "Sans voix"] : on ? ["posted", "Sur YouTube"] : ["ready", "Prêt à poster"];
+      chip.className = `chip chip--${kind}`;
+      chip.replaceChildren(h("i", {}), said);
+      tick.setAttribute("aria-pressed", String(on));
+      tick.title = on && day(postedOn(now).youtube) ? `Coché le ${day(postedOn(now).youtube)}` : "";
+      const next = state.groups.todo.find((other) => other.dir !== now.dir);
+      done.hidden = !(now.ready && on);
+      const onward = next && h("a", { class: "btn", href: link(next.dir) }, h("span", { text: `Suivant à poster : ${next.id} · ${next.title}` }));
+      if (onward) {
+        onward.addEventListener("click", (event) => {
+          event.preventDefault();
+          location.replace(onward.getAttribute("href"));
+        });
+      }
+      done.replaceChildren(h("p", { text: `${now.id} : en ligne sur YouTube.` }), onward || h("p", { class: "note", text: "Plus rien à poster." }));
+      bar.paint();
+    }
+    return { el, paint };
+  }
+
   function dossierSheet(d) {
+    if (d.long) return longSheet(d);
     const { video, cover } = d.files;
     const thumb = d.files.thumb || cover;
     const film = filmOf(d);
@@ -630,7 +839,7 @@
       h(
         "div",
         { class: "sheet__id" },
-        h("div", { class: "sheet__top" }, h("p", { class: "tag" }, h("i", { class: "dot" }), h("span", { text: `Dossier ${d.id}` })), booth),
+        h("div", { class: "sheet__top" }, h("p", { class: "tag" }, h("i", { class: "dot" }), h("span", { text: `${kindOf(d)} ${d.id}` })), booth),
         h("h2", { class: "sheet__title", id: headingId, text: d.title }),
         h("div", { class: "sheet__foot" }, chip, video && h("small", { class: "sheet__meta", text: `rendu le ${when(video.mtime)}` })),
       ),
@@ -735,7 +944,7 @@
           location.replace(onward.getAttribute("href")); // from sheet to sheet: "back" still leads to the list
         });
       }
-      done.replaceChildren(h("p", { text: `Dossier ${now.id} : en ligne partout.` }), onward || h("p", { class: "note", text: "Plus rien à poster." }));
+      done.replaceChildren(h("p", { text: `${kindOf(now)} ${now.id} : en ligne partout.` }), onward || h("p", { class: "note", text: "Plus rien à poster." }));
       bar.paint();
     }
     /** A platform has just been ticked: if its words are the ones open, on to the next one that waits. */
@@ -850,6 +1059,8 @@
     document.title = name ? `Publication · ${name}` : "Publication";
     $("#brand").textContent = name || "Publication";
     $("#notice").hidden = keeps();
+    // a long on a PC desk started before longs existed: it shows as a short until publier.cmd is started again
+    $("#notice-long").hidden = !state.data.dossiers.some((d) => d.long === undefined && /^L\d/.test(d.dir));
     drawIndex();
     route(!state.started);
     state.started = true;

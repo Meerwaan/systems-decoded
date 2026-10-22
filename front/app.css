@@ -415,3 +415,46 @@ a.textbtn { display: inline-flex; align-items: center; } /* a link keeps the 44p
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* ─────────────────────────────────────────────── a long (16:9, YouTube only) */
+.row__thumb--wide { width: 64px; aspect-ratio: 16 / 9; }
+.row__long { padding: 3px 5px 2px; border: 1px solid var(--ink-line); color: var(--ink); letter-spacing: 0.12em; }
+.sheet__cover--wide { width: 136px; aspect-ratio: 16 / 9; align-self: flex-start; }
+.sheet__head--long .sheet__title { font-size: 30px; }
+.ticks__row--one { grid-template-columns: minmax(0, 1fr); }
+.player--wide { display: block; aspect-ratio: 16 / 9; }
+.film--long .film__note { display: block; margin: 8px 0 12px; font-size: 15px; }
+.film--long .player + .film__note + .btn { margin-top: 0; }
+.film__h { margin: 26px 0 12px; padding-top: 16px; border-top: 1px solid var(--ink-faint); font: 500 12px/1.2 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; }
+.film--long > .film__h:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+/* the three thumbnails of YouTube's test, side by side: at this size, about what YouTube shows (160 px) */
+.thumbs { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.thumb { display: flex; flex-direction: column; min-width: 0; }
+.thumb__img { display: block; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--ink-faint); background: var(--ink-wash); }
+.thumb__img img { width: 100%; height: 100%; object-fit: cover; }
+.thumb__k { margin-top: 8px; font: 500 10.5px/1.2 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-dim); white-space: nowrap; }
+.thumb__t { margin-top: 5px; font: 800 16px/1 var(--display); letter-spacing: 0.01em; text-transform: uppercase; overflow-wrap: anywhere; }
+.thumb__t--signal { color: var(--signal); }
+.thumb__t--veille { color: var(--veille); }
+.thumb__tag { margin-top: 4px; font: 500 14px/1.15 var(--display); color: var(--ink-dim); }
+.thumb .thumb__dl { margin-top: auto; min-height: 44px; padding: 6px 4px; font-size: 14px; letter-spacing: 0.02em; }
+.thumb > p:nth-last-child(2) { margin-bottom: 10px; } /* the buttons line up under three captions of different heights */
+.thumbs + .absent { margin-top: 8px; }
+/* the titles of the test, one under the other */
+.variant + .variant { margin-top: 16px; }
+.variant__k { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 8px; font: 500 11px/1.2 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-dim); }
+.variant__n { letter-spacing: 0.04em; }
+.variant__n.is-over { color: var(--signal); }
+.quote--long { font-size: 18px; } /* shown whole, as it will be pasted */
+.quote--memo { border-left-color: var(--ink-line); color: var(--ink-dim); font-size: 18px; }
+.quote__tags--alone { margin-top: 0; font-size: 13.5px; color: var(--ink); }
+.note--top { margin: 0 0 10px; }
+
+@media (min-width: 960px) {
+  .sheet__cover--wide { width: 216px; }
+  .sheet__head--long .sheet__title { font-size: 46px; }
+  /* the film wide, the words beside it: the column of the film is no longer the 9:16 one */
+  .sheet__cols--long { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .film--long { position: static; }
+  .thumb__t { font-size: 18px; }
+}
