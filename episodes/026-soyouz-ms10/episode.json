@@ -1,0 +1,794 @@
+{
+  "id": "026",
+  "serie": "dossier",
+  "slug": "soyouz-ms10",
+  "title": "Soyouz MS-10",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Soyouz",
+      "MS-10"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 420,
+      "tz": 0,
+      "d": 4700,
+      "az": -30,
+      "el": 30,
+      "fov": 30,
+      "shift": -440,
+      "side": 0,
+      "roll": 0
+    },
+    "state": {
+      "set": 0,
+      "explode": 1,
+      "tilt": 0,
+      "tower": 400,
+      "shed": 0,
+      "litMotors": 4,
+      "litShip": 0.5,
+      "litMate": 0.6,
+      "litYou": 1,
+      "litSensors": 1,
+      "sense": 1,
+      "punch": 0,
+      "fx": 0,
+      "fy": 480,
+      "fz": 0,
+      "fs": 650
+    }
+  },
+  "post": {
+    "caption": "Soyouz MS-10, la fusée qui lâche en pleine montée : ta tour de sauvetage vient de partir, et il te reste quatre petits moteurs. Toi, tu remontes… ou plus jamais ?",
+    "keyword": "Soyouz",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#soyouz",
+      "#espace",
+      "#fusee"
+    ],
+    "pinned": "Réponds juste : « je remonte » ou « plus jamais ». Eux sont repartis cinq mois plus tard, ensemble (Soyouz MS-12, mars 2019).",
+    "instagram": {
+      "caption": "Ta fusée lâche, en pleine montée. Et ta tour de sauvetage… vient de partir.\n\nDossier 026 : Soyouz MS-10, le 11 octobre 2018. Il te reste quatre petits moteurs. Et ce qui a fait lâcher ta fusée était là avant même le décollage.\n\nToi, tu remontes… ou plus jamais ?",
+      "hashtags": [
+        "#soyouz",
+        "#espace",
+        "#fusee",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ta fusée lâche en pleine montée… et ta tour de sauvetage vient de partir (Soyouz MS-10)",
+      "description": "Dossier 026 — Soyouz MS-10, 11 octobre 2018 : à cinquante kilomètres du sol, un propulseur se détache mal et frappe la fusée. La tour de sauvetage est déjà partie. Ce qui ramène l'équipage tient en quatre petits moteurs. On l'ouvre.\n\nToi, tu remontes… ou plus jamais ?",
+      "hashtags": [
+        "#shorts",
+        "#soyouz",
+        "#espace",
+        "#fusee",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits, niveaux de source et « à ne pas dire » : docs/faits/026-soyouz-ms10.md (recherche du 2026-10-21). Aucune source primaire (Roscosmos, NASA) n'a pu être ouverte : les instants viennent de RussianSpaceWeb, qui cite le vice-Premier ministre Borisov et la chronologie de Roscosmos ; le PDF de la NASA (sma.nasa.gov) est la première source à ouvrir. Contre-vérification du script : à faire (docs/faits/026-contre-verification.md).",
+    "La fusée lâche en pleine montée (Soyouz-FG, Soyouz MS-10, Baïkonour, 11 octobre 2018) : la séparation des quatre blocs latéraux commence à T+117,8 s, vers 50 km d'altitude (Borisov, via RussianSpaceWeb) ; l'un d'eux ne s'écarte pas comme prévu et heurte le bloc central vers T+119 s (SpaceNews, Mark Vande Hei, NASA).",
+    "La tour de sauvetage était déjà larguée (T+114,6 s, RussianSpaceWeb ; « several seconds after the tower was jettisoned », SpaceNews) : la voix dit « vient de partir » et ne dit jamais que la tour a sauvé l'équipage.",
+    "Quatre petits moteurs à poudre en haut de la coiffe arrachent la tête de sauvetage (coiffe, module orbital, module de descente) à la fusée (Wikipedia, Soyuz abort modes ; « shroud thrusters », Vande Hei, SpaceNews ; moteurs RDG, RussianSpaceWeb). Leur fenêtre va du largage de la tour (≈ T+115 s) à celui de la coiffe (≈ T+157 s) : « quarante secondes, environ » (Wikipedia, Soyuz abort modes). Poussée et durée de combustion non publiées : jamais dites.",
+    "Ça secoue de gauche à droite, puis l'équipage est plaqué dans ses sièges quand les moteurs tirent (Nick Hague, CBS News).",
+    "Personne n'appuie : l'abandon est déclenché automatiquement par l'ordinateur de bord (Spaceflight Now, CBS) ; des capteurs de vitesse angulaire sur les étages donnent l'ordre au-delà d'un écart de 7° (RussianSpaceWeb) — le film dit « des capteurs qui la sentent tourner », sans chiffre ; le signal « avaria » s'affiche au pupitre (RussianSpaceWeb) : dit « avarie ».",
+    "« Trois secondes » : du heurt (≈ T+119 s) à l'allumage des moteurs de la coiffe (≈ T+122 s ; spacefacts.de donne le déclenchement à 121,57 s) — un ordre de grandeur, les sources divergent d'une à deux secondes.",
+    "Sommet à 93 km, vol suborbital (Wikipedia) ; descente balistique à ≈ 6,7 g (briefing ISS via RussianSpaceWeb, CBS ; Hague : « about seven Gs ») : « près de sept fois ton poids » ; un parachute, puis les rétrofusées (« rocket-assisted touchdown », CBS) ; l'équipage rentre sans blessure grave.",
+    "La cause : une pièce faussée à l'assemblage — un capteur tordu selon l'enquête préliminaire (RussianSpaceWeb, Spaceflight Now), une rotule déformée selon le rapport final cité par Wikipedia : la voix ne tranche pas (« une pièce faussée, au montage »).",
+    "Cinq mois plus tard, Alexeï Ovtchinine et Nick Hague repartent ensemble : Soyouz MS-12, décollage le 14 mars 2019, ≈ 203 jours dans l'espace (Wikipedia Soyuz MS-12, spacefacts.de).",
+    "Simplifications assumées : le récit est à la deuxième personne (le spectateur à la place de l'un des deux hommes) ; « ta fusée tourne » pour la perte de contrôle mesurée par les capteurs ; « un propulseur se détache mal » pour le bloc D qui ne s'écarte pas ; « avarie » pour « avaria » ; la vitesse au moment de l'avarie n'a pas été trouvée : ni dite, ni affichée.",
+    "Image (maquette, règle du 008) : la fusée et le vaisseau sont à peu près à leur taille, jamais mesurés à l'écran ; 50 et 93 km ne sont pas modélisés — ce sont l'altitude de l'en-tête (50 km, Borisov ; 93 km, Wikipedia et RussianSpaceWeb ; entre les deux un compteur qui glisse, illustratif) et la courbe de la Terre ; la tour s'éloigne de quelques dizaines de mètres ; le parachute est dessiné plus petit qu'il n'est. L'horloge de l'en-tête compte les secondes depuis la frappe du propulseur (« trois secondes » jusqu'aux moteurs : un ordre de grandeur), jamais l'heure du vol (les sources divergent sur la seconde de l'avarie). Les places des capteurs, des quatre moteurs et de la pièce faussée sont illustratives ; la lampe du pupitre écrit АВАРИЯ (RussianSpaceWeb). Les dates de l'en-tête au pas de tir : 11 octobre 2018 (MS-10), 14 mars 2019 (MS-12).",
+    "Prochain dossier (027, à valider par Merwan) : la voie de détresse des poids lourds — aucun fait sourcé à ce jour ; l'annonce ne dit qu'un scénario (un poids lourd sans freins en descente, une sortie au bord de la route).",
+    "L'image reconstitue : la courbe de la Terre est accentuée (le limbe reste à l'angle vrai de l'altitude) ; le parachute est dessiné plus petit qu'en vrai ; les quatre moteurs de coiffe sont dessinés 1,3 fois plus grands, pour se lire sur la tête vue en entier."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ta fusée *lâche*, en pleine montée. Et ta tour de sauvetage… vient de *partir*.",
+      "vo": "[tense] Ta fusée lâche, en pleine montée. Et ta tour de sauvetage... vient de partir.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ta fusée lâche, en pleine montée. Et ta tour de sauvetage... vient de partir."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Il te reste quatre petits +moteurs+. Et ce qui la fait lâcher… était là *avant le décollage*.",
+      "vo": "[firm, matter-of-fact] Il te reste quatre petits moteurs. [short pause] Et ce qui la fait lâcher... était là avant le décollage."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "À cinquante kilomètres du sol, un propulseur se détache mal. Il *frappe* ta fusée. Ça secoue, de gauche à droite. Au-dessus de toi, plus de tour… juste la +coiffe+.",
+      "vo": "[tense] À cinquante kilomètres du sol, un propulseur se détache mal. Il frappe ta fusée. Ça secoue, de gauche à droite. Au-dessus de toi, plus de tour... juste la coiffe."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ]
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Tout en haut : quatre petits moteurs à +poudre+. Juste dessous : ton vaisseau, ton équipier, toi. Et plus bas, sur la fusée, des capteurs… qui la sentent *tourner*.",
+      "vo": "[curious] Tout en haut : quatre petits moteurs à poudre. Juste dessous : ton vaisseau, ton équipier, toi. Et plus bas, sur la fusée, des capteurs... qui la sentent tourner.",
+      "voAlt": [
+        "[conversational, curious] Tout en haut : quatre petits moteurs à poudre. Juste dessous : ton vaisseau, ton équipier, toi. Et plus bas, sur la fusée, des capteurs... qui la sentent tourner."
+      ]
+    },
+    {
+      "id": "repos",
+      "text": "Pour te sauver, ces moteurs n'ont qu'une fenêtre : de la tour qui part à la coiffe qui tombe. Quarante secondes, environ. Et ta fusée lâche… pile dans cette *fenêtre*.",
+      "vo": "[curious] Pour te sauver, ces moteurs n'ont qu'une fenêtre : de la tour qui part à la coiffe qui tombe. Quarante secondes, environ. [short pause] Et ta fusée lâche... pile dans cette fenêtre.",
+      "voAlt": [
+        "[warm, conversational] Pour te sauver, ces moteurs n'ont qu'une fenêtre : de la tour qui part à la coiffe qui tombe. Quarante secondes, environ. [short pause] Et ta fusée lâche... pile dans cette fenêtre."
+      ]
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ces quatre petits moteurs… regarde-les *tirer*.",
+      "vo": "[tense] Abonne-toi : ces quatre petits moteurs... regarde-les tirer."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Le propulseur frappe. Ta fusée tourne. Personne n'appuie sur rien. Au pupitre, un mot s'allume : *avarie*.",
+      "vo": "[firm, matter-of-fact] Le propulseur frappe. Ta fusée tourne. Personne n'appuie sur rien. [short pause] Au pupitre, un mot s'allume : avarie."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Trois secondes. Les quatre moteurs +tirent+. Ils t'arrachent à la fusée. Plaqué dans ton siège, tu montes encore… jusqu'à [93|quatre-vingt-treize] kilomètres. Puis tu retombes : près de sept fois ton *poids*.",
+      "vo": "[tense] Trois secondes. Les quatre moteurs tirent. Ils t'arrachent à la fusée. Plaqué dans ton siège, tu montes encore... jusqu'à quatre-vingt-treize kilomètres. Puis tu retombes : près de sept fois ton poids."
+    },
+    {
+      "id": "sol",
+      "hold": 0.3,
+      "text": "Un parachute. Une dernière poussée… et tu touches le sol. +Vivant+.",
+      "vo": "[serious] Un parachute. Une dernière poussée... et tu touches le sol. Vivant.",
+      "voAlt": [
+        "[warm, conversational] Un parachute. Une dernière poussée... et tu touches le sol. Vivant."
+      ]
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : quand ta tour s'en va, ton sauvetage ne part *pas* avec elle. Il reste… sur la +coiffe+.",
+      "vo": "[firm, matter-of-fact] Voilà son secret : quand ta tour s'en va, ton sauvetage ne part pas avec elle. Il reste... sur la coiffe."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et ce qui l'a fait lâcher ? Une pièce faussée, au montage. Cinq mois plus tard, ton équipier et toi… vous repartez. Ensemble. En +commentaire+ : toi, tu remontes… ou *plus jamais* ?",
+      "vo": "[curious] Et ce qui l'a fait lâcher ? [short pause] Une pièce faussée, au montage. Cinq mois plus tard, ton équipier et toi... vous repartez. Ensemble. [short pause] En commentaire : toi, tu remontes... ou plus jamais ?",
+      "voAlt": [
+        "[conversational, curious] Et ce qui l'a fait lâcher ? [short pause] Une pièce faussée, au montage. Cinq mois plus tard, ton équipier et toi... vous repartez. Ensemble. [short pause] En commentaire : toi, tu remontes... ou plus jamais ?"
+      ]
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : envoie ce dossier plus haut que ta *fusée*.",
+      "vo": "[firm, matter-of-fact] Like : [short pause] envoie ce dossier plus haut que ta fusée.",
+      "voAlt": [
+        "[warm, conversational] Like : [short pause] envoie ce dossier plus haut que ta fusée."
+      ]
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : un poids lourd sans freins, en pleine descente. Et au bord de la route… une *sortie*.",
+      "vo": "[serious] Prochain dossier : un poids lourd sans freins, en pleine descente. Et au bord de la route... une sortie."
+    },
+    {
+      "id": "boucle",
+      "text": "Pour quand tout lâche. Comme…",
+      "vo": "[calm] Pour quand tout lâche. Comme,"
+    }
+  ],
+  "cues": {
+    "choc": "accroche:lâche",
+    "climb": "accroche:montée-0.1",
+    "tower": "accroche:tour-0.1",
+    "rescue": "accroche:sauvetage-0.1",
+    "gone": "accroche:partir-0.1",
+    "left": "promesse:reste-0.1",
+    "four": "promesse:quatre-0.1",
+    "motors4": "promesse:moteurs-0.1",
+    "why": "promesse:lâcher-0.1",
+    "topad": "promesse:était-0.12",
+    "before": "promesse:décollage-0.1",
+    "toscene": "scene-0.14",
+    "fifty": "scene:cinquante-0.1",
+    "booster": "scene:propulseur-0.1",
+    "badly": "scene:détache-0.1",
+    "hit": "scene:frappe-0.1",
+    "shake": "scene:secoue-0.1",
+    "swayL": "scene:gauche-0.05",
+    "swayR": "scene:droite-0.05",
+    "above": "scene:Au-dessus-0.1",
+    "notower": "scene:tour-0.1",
+    "justcoiffe": "scene:juste-0.1",
+    "coiffe": "scene:coiffe-0.1",
+    "tosystem": "ouvre-0.14",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "top": "eclate:haut-0.1",
+    "motors": "eclate:moteurs-0.1",
+    "powder": "eclate:poudre-0.1",
+    "below": "eclate:dessous-0.1",
+    "ship": "eclate:vaisseau-0.1",
+    "crew": "eclate:équipier-0.1",
+    "you": "eclate:toi-0.1",
+    "lower": "eclate:bas-0.1",
+    "rocket": "eclate:fusée-0.1",
+    "sensors": "eclate:capteurs-0.1",
+    "turn": "eclate:tourner-0.1",
+    "torepos": "repos-0.14",
+    "save": "repos:sauver-0.1",
+    "window": "repos:fenêtre-0.1",
+    "towerleaves": "repos:part-0.1",
+    "fairingdrops": "repos:tombe-0.1",
+    "forty": "repos:Quarante-0.1",
+    "lets": "repos:lâche-0.1",
+    "inwindow": "repos:pile-0.1",
+    "toseuil": "seuil-0.1",
+    "seuilmotors": "seuil:moteurs-0.1",
+    "watch": "seuil:regarde-les-0.1",
+    "tozero": "zero-0.12",
+    "strike": "zero:frappe-0.05",
+    "spin": "zero:tourne-0.1",
+    "nobody": "zero:Personne-0.1",
+    "console": "zero:pupitre-0.1",
+    "lights": "zero:s'allume-0.1",
+    "avarie": "zero:avarie-0.1",
+    "toreponse": "reponse-0.12",
+    "three": "reponse:Trois-0.1",
+    "trigger": "reponse:tirent-0.05",
+    "torn": "reponse:t'arrachent-0.1",
+    "pressed": "reponse:Plaqué-0.1",
+    "climbs": "reponse:montes-0.1",
+    "apogee": "reponse:kilomètres-0.1",
+    "fall": "reponse:retombes-0.1",
+    "seven": "reponse:sept-0.1",
+    "seveng": "reponse:poids-0.1",
+    "tosol": "sol-0.12",
+    "parachute": "sol:parachute-0.1",
+    "retro": "sol:poussée-0.1",
+    "ground": "sol:touches-0.1",
+    "alive": "sol:Vivant-0.05",
+    "toverdict": "chute-0.12",
+    "secret": "chute:secret-0.1",
+    "towergoes": "chute:tour-0.1",
+    "deny": "chute:pas-0.05",
+    "stays": "chute:reste-0.1",
+    "verdict": "chute:coiffe-0.05",
+    "tocta": "comment-0.12",
+    "cause": "comment:pièce-0.1",
+    "faulty": "comment:faussée-0.1",
+    "assembly": "comment:montage-0.1",
+    "fivemonths": "comment:mois-0.1",
+    "again": "comment:repartez-0.1",
+    "together": "comment:Ensemble-0.1",
+    "ask": "comment:commentaire-0.3",
+    "upagain": "comment:remontes-0.05",
+    "never": "comment:plus#2-0.05",
+    "answer": "comment:jamais",
+    "tolike": "like-0.12",
+    "high": "like:haut-0.1",
+    "toabo": "abo-0.1",
+    "truck": "abo:poids-0.1",
+    "descent": "abo:descente-0.1",
+    "road": "abo:route-0.1",
+    "exit": "abo:sortie-0.1",
+    "toloop": "boucle-0.12",
+    "allgo": "boucle:lâche-0.1",
+    "rewind": "boucle:Comme"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "tobench",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "parachute",
+          0.55
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hiss",
+      "from": 0,
+      "to": "topad",
+      "gain": -31,
+      "tone": 0.15
+    },
+    {
+      "type": "hiss",
+      "from": "toscene",
+      "to": "tosystem",
+      "gain": -31,
+      "tone": 0.15
+    },
+    {
+      "type": "hiss",
+      "from": "tozero",
+      "to": "fall",
+      "gain": -31,
+      "tone": 0.15
+    },
+    {
+      "type": "ambience",
+      "preset": "wind",
+      "from": "fall",
+      "to": "ground",
+      "gain": -31
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.04,
+      "dur": 0.26,
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "accroche:lâche$+0.02",
+      "gain": -13,
+      "size": 1.2,
+      "crack": 0.8
+    },
+    {
+      "type": "swish",
+      "at": "accroche:montée$+0.21",
+      "dur": 0.38,
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "accroche$+0.04",
+      "gain": -14,
+      "pitch": 0.8
+    },
+    {
+      "type": "click",
+      "at": "promesse:moteurs$+0.03",
+      "gain": -17,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "promesse:moteurs$+0.12",
+      "gain": -17,
+      "pitch": 1
+    },
+    {
+      "type": "click",
+      "at": "promesse:moteurs$+0.21",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "promesse:moteurs$+0.3",
+      "gain": -17,
+      "pitch": 1.2
+    },
+    {
+      "type": "hit",
+      "at": "topad",
+      "gain": -15,
+      "pitch": 0.7
+    },
+    {
+      "type": "impact",
+      "at": "toscene",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "swish",
+      "at": "scene:sol$+0.12",
+      "dur": 0.2,
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "scene:fusée$+0.02",
+      "gain": -12,
+      "size": 1.3,
+      "crack": 0.8
+    },
+    {
+      "type": "hit",
+      "at": "scene:droite$+0.03",
+      "gain": -15,
+      "pitch": 0.85
+    },
+    {
+      "type": "hush",
+      "from": "scene:tour$+0.02",
+      "to": "scene:juste-0.04",
+      "depth": -8
+    },
+    {
+      "type": "suck",
+      "to": "tosystem+0.1",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "ouvre$+0.02",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.08",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.32",
+      "gain": -18,
+      "pitch": 0.95
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.56",
+      "gain": -19,
+      "pitch": 1.2
+    },
+    {
+      "type": "click",
+      "at": "eclate:haut$+0.03",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:poudre$+0.03",
+      "gain": -17,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "eclate:poudre$+0.12",
+      "gain": -17,
+      "pitch": 1
+    },
+    {
+      "type": "click",
+      "at": "eclate:poudre$+0.21",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "eclate:poudre$+0.3",
+      "gain": -17,
+      "pitch": 1.2
+    },
+    {
+      "type": "click",
+      "at": "eclate:vaisseau$+0.03",
+      "gain": -16,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "eclate:équipier$+0.03",
+      "gain": -16,
+      "pitch": 1
+    },
+    {
+      "type": "hit",
+      "at": "eclate:toi$+0.03",
+      "gain": -16,
+      "pitch": 1.1
+    },
+    {
+      "type": "swish",
+      "at": "eclate:toi$+0.14",
+      "dur": 0.32,
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "eclate:capteurs$+0.01",
+      "gain": -17,
+      "pitch": 1.05
+    },
+    {
+      "type": "hit",
+      "at": "eclate$+0.04",
+      "gain": -15,
+      "pitch": 0.8
+    },
+    {
+      "type": "click",
+      "at": "repos:fenêtre$+0.02",
+      "gain": -17
+    },
+    {
+      "type": "swish",
+      "at": "repos:tombe$+0.19",
+      "dur": 0.34,
+      "gain": -18
+    },
+    {
+      "type": "blip",
+      "at": "repos:environ$+0.04",
+      "gain": -17,
+      "pitch": 1
+    },
+    {
+      "type": "hit",
+      "at": "repos:lâche$+0.02",
+      "gain": -14
+    },
+    {
+      "type": "click",
+      "at": "repos$+0.04",
+      "gain": -17,
+      "pitch": 1.15
+    },
+    {
+      "type": "swish",
+      "at": "seuil:moteurs$+0.19",
+      "dur": 0.34,
+      "gain": -18
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "zero:frappe$+0.02",
+      "gain": -12,
+      "size": 1.3,
+      "crack": 0.8
+    },
+    {
+      "type": "hit",
+      "at": "zero:tourne$+0.03",
+      "gain": -14,
+      "pitch": 0.8
+    },
+    {
+      "type": "hush",
+      "from": "zero:rien$+0.02",
+      "to": "zero:Au-0.04",
+      "depth": -8
+    },
+    {
+      "type": "beeps",
+      "from": "zero$+0.02",
+      "to": "reponse-0.06",
+      "gain": -18
+    },
+    {
+      "type": "tick",
+      "at": "reponse:secondes$+0.04",
+      "gain": -20
+    },
+    {
+      "type": "impact",
+      "at": "reponse:tirent$+0.02",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "boom",
+      "at": "reponse:tirent$+0.03",
+      "gain": -14,
+      "size": 1.1
+    },
+    {
+      "type": "swish",
+      "at": "reponse:fusée$+0.17",
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "reponse:siège$+0.01",
+      "gain": -15,
+      "pitch": 0.7
+    },
+    {
+      "type": "blip",
+      "at": "reponse:kilomètres$+0.04",
+      "gain": -16,
+      "pitch": 1.2
+    },
+    {
+      "type": "swish",
+      "at": "reponse:retombes$+0.14",
+      "dur": 0.24,
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "reponse$+0.04",
+      "gain": -14,
+      "pitch": 0.7
+    },
+    {
+      "type": "swish",
+      "at": "sol:parachute$+0.16",
+      "dur": 0.28,
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "sol:poussée$+0.02",
+      "gain": -14,
+      "size": 0.7,
+      "crack": 0.7
+    },
+    {
+      "type": "impact",
+      "at": "sol:sol$+0.02",
+      "gain": -13,
+      "size": 0.9
+    },
+    {
+      "type": "heartbeat",
+      "from": "sol$+0.04",
+      "to": "chute-0.1",
+      "bpm": 60,
+      "gain": -22,
+      "body": true
+    },
+    {
+      "type": "click",
+      "at": "chute:secret$+0.03",
+      "gain": -17
+    },
+    {
+      "type": "swish",
+      "at": "chute:va$+0.12",
+      "dur": 0.2,
+      "gain": -18
+    },
+    {
+      "type": "hit",
+      "at": "chute:pas$+0.02",
+      "gain": -13
+    },
+    {
+      "type": "blip",
+      "at": "chute$+0.04",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "hit",
+      "at": "comment:lâcher$+0.02",
+      "gain": -15,
+      "pitch": 0.75
+    },
+    {
+      "type": "boom",
+      "at": "comment:repartez$+0.02",
+      "gain": -16,
+      "size": 1
+    },
+    {
+      "type": "click",
+      "at": "comment:remontes$+0.03",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "comment$+0.04",
+      "gain": -17,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "abo:dossier$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "boucle$+0.02",
+      "dur": 0.84,
+      "gain": -21
+    },
+    {
+      "type": "click",
+      "at": "chute:reste$+0.02",
+      "gain": -17,
+      "pitch": 1.15
+    },
+    {
+      "type": "hit",
+      "at": "comment:faussée$+0.02",
+      "gain": -15,
+      "pitch": 0.8
+    }
+  ]
+}

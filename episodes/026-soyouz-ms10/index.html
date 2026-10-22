@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · 026 · Soyouz MS-10</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
+         kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+
+      /* rien de ceci n'est à l'écran tant qu'un acte ne l'a pas fait entrer */
+      .chip--live, #retitle, #net, #next, #window, .rail { opacity: 0; }
+
+      /* le second compteur de l'en-tête : l'altitude (main.js fixe sa couleur) */
+      #hud-count { color: var(--ink); }
+
+      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
+      #chip-tour { color: var(--ink); }
+      #chip-moteurs, #chip-ms12 { color: var(--veille); }
+
+      /* LA FENÊTRE (acte 2) : de la tour qui part à la coiffe qui tombe, ≈ 40 secondes ; la frappe tombe à 10 % de son
+         début (world.js, WINDOW). La barre se remplit de gauche à droite (scaleX), la marque signal se pose dessus. */
+      #window { left: var(--safe-l); right: var(--safe-r); top: var(--slot-top); }
+      #window-span { margin-top: 22px; font: 700 64px/1 var(--display); letter-spacing: 0.02em; text-transform: uppercase; color: var(--veille); }
+      #window-bar { position: relative; margin-top: 26px; height: 16px; border: 2px solid var(--ink-faint); }
+      #window-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; background: var(--veille); opacity: 0.8; transform-origin: 0 50%; }
+      #window-hit { position: absolute; left: 10.4%; top: -22px; bottom: -22px; width: 6px; margin-left: -3px; background: var(--signal); transform-origin: 50% 100%; }
+      #window-ends { margin-top: 26px; display: flex; justify-content: space-between; gap: 24px; font: 500 21px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-dim); }
+
+      /* la chute, puis les trois appels à l'action */
+      #retitle-main { font-size: 104px; }
+      #retitle-slot { height: 104px; }
+      #retitle-strike { top: 50px; }
+      #next-fact span { font-size: 34px; line-height: 1.2; letter-spacing: 0.06em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="91.1" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 026</span></div>
+        <div class="hud__title" id="hud-title">Soyouz MS-10</div>
+        <!-- l'horloge de l'histoire : les secondes depuis la frappe du propulseur (main.js) ; au pas de tir, la date -->
+        <div class="hud__clock" id="hud-clock">T−0,8 s</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Altitude</span><b id="hud-count-v">50 km</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- 01 · MENACE (acte1.js) : l'en-tête porte l'heure et l'altitude ; une étiquette au plus à la fois -->
+      <!-- la tour, déjà partie : un point qui s'éloigne dans le noir — l'étiquette le nomme (jamais « elle t'a sauvé ») -->
+      <div id="chip-tour" class="chip chip--live"><span>Ta tour de sauvetage</span><b>Partie</b></div>
+      <div id="chip-moteurs" class="chip chip--live"><span>Il te reste</span><b>4 petits moteurs</b></div>
+
+      <!-- 02 · AUTOPSIE (acte2.js) : les pièces se nomment avec co.add, sans chiffre ; puis la fenêtre -->
+      <section id="window" class="panel">
+        <div class="panel__h"><span>Pour te sauver</span><span>Une fenêtre</span></div>
+        <div id="window-span">Quarante secondes, environ</div>
+        <div id="window-bar"><i id="window-fill"></i><b id="window-hit"></b></div>
+        <div id="window-ends"><span id="window-a">La tour part</span><span id="window-b">La coiffe tombe</span></div>
+      </section>
+
+      <!-- le seuil (fin d'acte2.js) : la demande d'abonnement dite à la porte de l'acte 3 — des chevrons, jamais un panneau -->
+      <div id="rail-seuil" class="rail"><i></i><i></i><i></i></div>
+
+      <!-- 03 · RÉPONSE (acte3.js) : une seule étiquette à la fois dans la zone haute -->
+      <!-- « avaria » au pupitre (RussianSpaceWeb) : dit « avarie » -->
+      <div id="chip-avarie" class="chip chip--live"><span>Au pupitre</span><b>Avarie</b></div>
+
+      <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Ton sauvetage</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">Sur la tour<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Sur la coiffe</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- ce que le film doit encore (fin.js) : la pièce faussée — capteur ou rotule, la voix ne tranche pas ; puis MS-12 -->
+      <div id="chip-piece" class="chip chip--live"><span>Au montage</span><b>Une pièce faussée</b></div>
+      <div id="chip-ms12" class="chip chip--live"><span>Cinq mois plus tard</span><b>Soyouz MS-12</b></div>
+      <!-- la question du commentaire en deux réponses (duelCall) : chacune s'allume quand la voix la dit, le film ne répond pas -->
+      <div id="duel">
+        <div class="kicker">Et toi ?</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">Je remonte</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Plus jamais</span></div>
+        <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
+      </div>
+
+      <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 personne</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <!-- le prochain dossier, en tout dernier : un seul fait, celui que dit la voix ; aucun chiffre sur le panneau
+           (027, la voie de détresse des poids lourds : aucun fait sourcé à ce jour, `sources`) -->
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 027</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <div id="next-fact"><span>Un poids lourd sans freins, en pleine descente. Au bord de la route, une sortie.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
