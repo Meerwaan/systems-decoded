@@ -1,0 +1,292 @@
+{
+  "id": "030",
+  "serie": "dossier",
+  "slug": "prise-de-terre",
+  "title": "Prise de terre",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Prise de terre"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Prise de terre, le fil vert-jaune de ta maison : ta machine à laver est sous tension, et rien n'a sauté. Souvent, ce qui manque se voit sur tes prises. Chez toi : avec broche… ou sans ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#electricite",
+      "#electricien",
+      "#maison"
+    ],
+    "pinned": "Réponds juste : « avec » ou « sans ». Sans broche, pas de terre ; avec broche, pas toujours : un électricien peut vérifier la tienne.",
+    "keyword": "Prise de terre",
+    "instagram": {
+      "caption": "Ta machine à laver est sous tension. Et rien n'a sauté.\n\nDossier 030 : la prise de terre. Un fil vert-jaune, une broche sur ta prise, un câble de cuivre nu autour des fondations. Ton différentiel marche… mais sans elle, il attend que le courant passe par toi.\n\nChez toi : des prises avec broche… ou sans ?",
+      "hashtags": [
+        "#electricite",
+        "#electricien",
+        "#maison",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ta machine à laver est sous tension… et rien n'a sauté : la prise de terre",
+      "description": "Dossier 030 — la prise de terre ouverte : le conducteur de protection vert-jaune, la broche de la prise, le tableau, le câble de cuivre nu autour des fondations. Ce qu'elle fait vraiment le jour d'un défaut.\n\nÉlectriciens : qu'est-ce qu'on a simplifié ? Et chez toi : avec broche… ou sans ?",
+      "hashtags": [
+        "#shorts",
+        "#electricite",
+        "#electricien",
+        "#maison",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits, niveaux de source et « à ne pas dire » : docs/faits/030-prise-de-terre.md (recherche du 2026-10-21) ; contre-vérification du script : docs/faits/030-contre-verification.md.",
+    "La scène est un scénario (aucun cas daté retenu) : une phase au contact d'une masse non reliée à la terre porte cette masse à la tension du réseau, sans que rien ne coupe.",
+    "Le régime TT et le chemin du courant de défaut — masse, conducteur de protection, borne principale de terre, conducteur de terre (barrette de mesure), prise de terre, sol, terre du neutre au poste — et les pièces (boucle à fond de fouille en cuivre nu de 25 mm², piquet) : Promotelec, Legrand, Chauvin Arnoux [P/S].",
+    "Sans terre, un différentiel 30 mA ne coupe qu'une fois que le défaut passe par le corps ; avec la terre, le courant de défaut le fait couper sans contact : guides Promotelec et cours d'électrotechnique [S] — la NF C 15-100 n'a pas été lue.",
+    "La prise de terre ou la mise à la terre défectueuse, anomalie la plus fréquente des installations de plus de quinze ans : baromètre ONSE 2024 et 2025 (via Batiweb et le Sénat) [S].",
+    "La prise française : deux alvéoles et une broche de terre portée par le socle (Legrand) [S]."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ta machine à laver est sous *tension*. Et rien n'a sauté.",
+      "vo": "[tense] Ta machine à laver est sous tension. Et rien n'a sauté.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ta machine à laver est sous tension. Et rien n'a sauté."
+      ]
+    },
+    {
+      "id": "promesse",
+      "text": "Ton différentiel marche. Mais il attend… que le courant passe par *toi*. Souvent, ce qui manque se voit sur tes +prises+.",
+      "vo": "[firm, matter-of-fact] Ton différentiel marche. Mais il attend... que le courant passe par toi. [short pause] Souvent, ce qui manque se voit sur tes prises.",
+      "hold": 0.3
+    },
+    {
+      "id": "scene",
+      "text": "Un fil de phase touche la carcasse : tout le métal est à [230|deux cent trente] *volts*. Pieds nus, mouillé, ta main se tend vers le +capot+.",
+      "vo": "[tense] Un fil de phase touche la carcasse : tout le métal est à deux cent trente volts. Pieds nus, mouillé, ta main se tend vers le capot.",
+      "hold": 0.3
+    },
+    {
+      "id": "ouvre",
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "hold": 0.4
+    },
+    {
+      "id": "eclate",
+      "text": "Sur la carcasse, un fil vert-jaune : le conducteur de +protection+. Par la broche de ta prise, il rejoint le tableau… puis la *terre*, sous la maison.",
+      "vo": "[curious] Sur la carcasse, un fil vert-jaune : le conducteur de protection. Par la broche de ta prise, il rejoint le tableau... puis la terre, sous la maison.",
+      "voAlt": [
+        "[conversational, curious] Sur la carcasse, un fil vert-jaune : le conducteur de protection. Par la broche de ta prise, il rejoint le tableau... puis la terre, sous la maison."
+      ],
+      "hold": 0.2
+    },
+    {
+      "id": "repos",
+      "text": "Autour des fondations, un câble de cuivre nu : la +prise de terre+. Elle ne fait rien… tant que tout va bien. Mais ici, ce fil… n'arrive *nulle part*.",
+      "vo": "[curious] Autour des fondations, un câble de cuivre nu : la prise de terre. Elle ne fait rien... tant que tout va bien. [short pause] Mais ici, ce fil... n'arrive nulle part.",
+      "voAlt": [
+        "[warm, conversational] Autour des fondations, un câble de cuivre nu : la prise de terre. Elle ne fait rien... tant que tout va bien. [short pause] Mais ici, ce fil... n'arrive nulle part."
+      ]
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : on rejoue la scène… avec ce *fil*.",
+      "vo": "[tense] Abonne-toi : on rejoue la scène... avec ce fil."
+    },
+    {
+      "id": "zero",
+      "text": "Sans ce fil, ta main touche le capot. Le courant passe par *toi*… jusqu'au sol.",
+      "vo": "[firm, matter-of-fact] Sans ce fil, ta main touche le capot. Le courant passe par toi... jusqu'au sol.",
+      "hold": 0.2
+    },
+    {
+      "id": "reponse",
+      "text": "Ton différentiel coupe. *Après* toi. On rejoue, avec le fil. Le courant file dans la terre. Le tableau le voit. Il coupe… +avant+ ta main.",
+      "vo": "[tense] Ton différentiel coupe. Après toi. On rejoue, avec le fil. Le courant file dans la terre. Le tableau le voit. Il coupe... avant ta main.",
+      "hold": 0.3
+    },
+    {
+      "id": "chute",
+      "text": "Voilà le secret : la terre ne te *protège* pas seule. Elle donne un chemin au courant… pour que ton tableau coupe +avant+ toi.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : la terre ne te protège pas seule. Elle donne un chemin au courant... pour que ton tableau coupe avant toi.",
+      "hold": 0.4
+    },
+    {
+      "id": "comment",
+      "text": "Et tes prises ? Sans broche, pas de terre. Avec broche… pas toujours. Dans les logements anciens, la terre défectueuse est l'anomalie la plus fréquente. En +commentaire+ : chez toi… avec *broche*, ou sans ?",
+      "vo": "[curious] Et tes prises ? [short pause] Sans broche, pas de terre. Avec broche... pas toujours. Dans les logements anciens, la terre défectueuse est l'anomalie la plus fréquente. [short pause] En commentaire : chez toi... avec broche, ou sans ?",
+      "voAlt": [
+        "[conversational, curious] Et tes prises ? [short pause] Sans broche, pas de terre. Avec broche... pas toujours. Dans les logements anciens, la terre défectueuse est l'anomalie la plus fréquente. [short pause] En commentaire : chez toi... avec broche, ou sans ?"
+      ],
+      "hold": 0.3
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour quelqu'un qui a encore des prises sans *broche*.",
+      "vo": "[firm, matter-of-fact] Like : [short pause] pour quelqu'un qui a encore des prises sans broche.",
+      "voAlt": [
+        "[warm, conversational] Like : [short pause] pour quelqu'un qui a encore des prises sans broche."
+      ]
+    },
+    {
+      "id": "abo",
+      "text": "Prochain dossier : classé. Un autre système qui veille sur toi… sans que tu le *saches*.",
+      "vo": "[serious] Prochain dossier : classé. Un autre système qui veille sur toi... sans que tu le saches.",
+      "hold": 0.2
+    },
+    {
+      "id": "boucle",
+      "text": "Comme ce fil… le jour où…",
+      "vo": "[calm] Comme ce fil... le jour où,"
+    }
+  ],
+  "cues": {
+    "choc": "accroche:tension",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:rejoue-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:chemin",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:jour"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
