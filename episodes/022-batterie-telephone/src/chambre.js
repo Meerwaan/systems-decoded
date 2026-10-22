@@ -24,6 +24,7 @@ import { rng } from "@kit/rng.js";
 import { makeFigure } from "@kit/figure.js";
 import { solid, glass, asShell, box, plate, placed, lineMat, fatLine, makePart, addMesh, setPartOpacity, mergeGeometries } from "@kit/build3d.js";
 import { ROOM, BED, PILLOW, YOU, TABLE, SOCKET, SPOTS, phoneSpot, PHONE, PORT, BATT, RANKS } from "./plan.js";
+import { dressChambre } from "./habillage.js";
 
 const INK = new THREE.Color(BRAND.ink);
 const SIGNAL = new THREE.Color(BRAND.signal);
@@ -1066,6 +1067,8 @@ export function buildChambre() {
 
   /* ═════════════ every frame ═════════════ */
 
+  const dress = dressChambre(); // the decorator's file: the street through the shutter, a glass of water
+  group.add(dress.group);
   const shellBase = shellLines.map((mat) => mat.opacity);
   const spot = [0, 0, 0];
 
@@ -1084,6 +1087,7 @@ export function buildChambre() {
 
     // the X-ray of the room: glass, lines, grid; the duvet is the bed's
     const shell = clamp01(s.shell) * fade;
+    dress.update({ shell }, time, px);
     for (let i = 0; i < shellGlass.length; i++) shellGlass[i].uniforms.uAmount.value = shell;
     for (let i = 0; i < shellLines.length; i++) shellLines[i].opacity = shellBase[i] * shell;
     fx.floor.uniforms.uAmount.value = 0.2 * shell;

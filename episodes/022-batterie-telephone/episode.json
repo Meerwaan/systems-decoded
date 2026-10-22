@@ -12,12 +12,7 @@
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21,
-    "acts": {
-      "menace": {
-        "stability": 0.2
-      }
-    }
+    "seed": 21
   },
   "cover": {
     "at": "separator+0.45",
@@ -95,7 +90,7 @@
       "id": "promesse",
       "hold": 0.3,
       "text": "Son dernier rempart : un film de plastique, plus fin qu'un +cheveu+. Et ton oreiller… travaille *contre lui*.",
-      "vo": "[firm, matter-of-fact] Son dernier rempart : un film de plastique, plus fin qu'un cheveu. [short pause] [serious] Et ton oreiller... travaille contre lui."
+      "vo": "[firm, matter-of-fact] Son dernier rempart : un film de plastique, plus fin qu'un cheveu. [short pause] Et ton oreiller... travaille contre lui."
     },
     {
       "id": "scene",
@@ -107,7 +102,10 @@
       "id": "ouvre",
       "hold": 0.4,
       "text": "Alors… on l'ouvre.",
-      "vo": "[calm] Alors... on l'ouvre."
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ]
     },
     {
       "id": "eclate",
@@ -118,7 +116,7 @@
     {
       "id": "repos",
       "text": "Le circuit surveille tout : trop chargée, trop vidée, trop chaude… il coupe. Le film, lui, laisse passer le lithium par des pores invisibles. Et il *attend*.",
-      "vo": "[thoughtful] Le circuit surveille tout : trop chargée, trop vidée, trop chaude... il coupe. [curious] Le film, lui, laisse passer le lithium par des pores invisibles. [serious] Et il attend."
+      "vo": "[curious] Le circuit surveille tout : trop chargée, trop vidée, trop chaude... il coupe. Le film, lui, laisse passer le lithium par des pores invisibles. Et il attend."
     },
     {
       "id": "seuil",
@@ -129,19 +127,19 @@
       "id": "zero",
       "hold": 0.2,
       "text": "Sous l'oreiller, la chaleur ne sort plus. La batterie monte. Le circuit coupe la charge. Mais si la batterie est abîmée, un point chauffe… *encore*.",
-      "vo": "[urgent] Sous l'oreiller. La chaleur ne sort plus. La batterie monte. Le circuit coupe la charge. [short pause] [ominous] Mais si la batterie est abîmée, un point chauffe... encore."
+      "vo": "[firm, matter-of-fact] Sous l'oreiller. La chaleur ne sort plus. La batterie monte. Le circuit coupe la charge. [short pause] Mais si la batterie est abîmée, un point chauffe... encore."
     },
     {
       "id": "reponse",
       "hold": 0.3,
       "text": "Vers cent trente degrés, le film fond. Ses pores se ferment. Le lithium ne passe plus. Le courant +s'arrête+. C'était son dernier geste.",
-      "vo": "[urgent] Vers cent trente degrés. Le film fond. Ses pores se ferment. Le lithium ne passe plus. [short pause] [relieved] Le courant s'arrête. [serious] C'était son dernier geste."
+      "vo": "[tense] Vers cent trente degrés. Le film fond. Ses pores se ferment. Le lithium ne passe plus. [short pause] Le courant s'arrête. C'était son dernier geste."
     },
     {
       "id": "chute",
       "hold": 0.4,
       "text": "Voilà son secret : ce n'est pas d'abord le courant qui menace ta batterie. C'est la *chaleur*. Et ce qui la retient, à la fin… c'est un film qui fond.",
-      "vo": "[low, grave voice] Voilà son secret : ce n'est pas d'abord le courant qui menace ta batterie. C'est la chaleur. Et ce qui la retient, à la fin... c'est un film qui fond."
+      "vo": "[firm, matter-of-fact] Voilà son secret : ce n'est pas d'abord le courant qui menace ta batterie. C'est la chaleur. Et ce qui la retient, à la fin... c'est un film qui fond."
     },
     {
       "id": "comment",
