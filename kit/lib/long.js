@@ -107,8 +107,10 @@ export const tempTone = (c) => (c >= 450 ? TONE.danger : INK);
 /**
  * The header's line of steps: `steps` names, `step(time)` → the step on screen (0 = off the line). Writes
  * #hud-step-n, #hud-step-t and the ticks of #hud-line, every frame (only when they change).
+ * Optional, for a long that is not a factory line (defaults: the line of L01): `word` names a step ("Geste"),
+ * `off` is shown at step 0, `fmt(value)` writes the readout and `tone(value)` colours it (temperature by default).
  */
-export function lineHud(stage, { steps, step, temp }) {
+export function lineHud(stage, { steps, step, temp, word = "Étape", off = "Hors chaîne", fmt = fmtTemp, tone = tempTone }) {
   const $ = (id) => document.getElementById(id);
   const n = $("hud-step-n");
   const t = $("hud-step-t");
@@ -121,16 +123,16 @@ export function lineHud(stage, { steps, step, temp }) {
     const k = step(time);
     if (k !== last) {
       last = k;
-      n.textContent = k > 0 ? `Étape ${String(k).padStart(2, "0")} / ${String(steps.length).padStart(2, "0")}` : "Hors chaîne";
+      n.textContent = k > 0 ? `${word} ${String(k).padStart(2, "0")} / ${String(steps.length).padStart(2, "0")}` : off;
       t.textContent = k > 0 ? steps[k - 1] : "";
       ticks.forEach((i, j) => (i.className = j + 1 === k ? "is-on" : j + 1 < k ? "is-done" : ""));
     }
     const c = temp(time);
-    const text = c == null ? "—" : fmtTemp(c);
+    const text = c == null ? "—" : fmt(c);
     if (text !== lastT) {
       lastT = text;
       v.textContent = text;
-      v.style.color = c == null ? INK : tempTone(c);
+      v.style.color = c == null ? INK : tone(c);
     }
   });
 }

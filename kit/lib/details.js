@@ -317,6 +317,63 @@ export function makeDresser({ order = 26, tone = 1, seed = 11 } = {}) {
       }
       return api;
     },
+    /**
+     * A drawer trolley on casters (the anaesthetist's cart, a workshop's): its body, the seams and handles of its
+     * drawers on its front (+z, turned by `rotY`), a rim round its top; `syringes`: that many lying on it, ready.
+     */
+    trolley({ at, w = 60, d = 45, h = 92, drawers = 4, rotY = 0, syringes = 3 }) {
+      const m = matrix({ at, rotY });
+      const c = 10; // the casters' height
+      part(m, G.flat, box(w, h - c, d, 1.4), { pos: [0, c + (h - c) / 2, 0], lines: "fine" });
+      const y0 = c + 4;
+      const step = (h - c - 12) / drawers;
+      for (let i = 1; i < drawers; i++) line(m, L.faint, [-w / 2 + 3, y0 + step * i, d / 2 + 0.3], [w / 2 - 3, y0 + step * i, d / 2 + 0.3]);
+      for (let i = 0; i < drawers; i++) line(m, L.fine, [-7, y0 + step * (i + 0.62), d / 2 + 0.8], [7, y0 + step * (i + 0.62), d / 2 + 0.8]);
+      const top = h + 2.2; // the rim that keeps things on it
+      for (const [a, b] of [[[-1, -1], [1, -1]], [[1, -1], [1, 1]], [[1, 1], [-1, 1]], [[-1, 1], [-1, -1]]])
+        line(m, L.fine, [a[0] * (w / 2 - 1), top, a[1] * (d / 2 - 1)], [b[0] * (w / 2 - 1), top, b[1] * (d / 2 - 1)]);
+      for (const [x, z] of [[-1, -1], [1, -1], [1, 1], [-1, 1]]) part(m, G.round, cyl(3.4, 2.6, 0.4, 18), { pos: [x * (w / 2 - 6), 3.6, z * (d / 2 - 6)], rotZ: 90 * DEG });
+      for (let i = 0; i < syringes; i++) {
+        const z = -d / 4 + (i * d) / (2 * Math.max(1, syringes - 1)) * 0.8;
+        part(m, G.round, cyl(0.9, 13, 0.1, 14), { pos: [-w / 8 + i * 2.5, h + 1, z], rotZ: 90 * DEG });
+        part(m, G.round, cyl(0.25, 4, 0.05, 8), { pos: [-w / 8 + i * 2.5 + 8.5, h + 1, z], rotZ: 90 * DEG }); // its needle, capped
+      }
+      return api;
+    },
+    /** A drip stand (pied à perfusion): a five-legged base on casters, its pole `h` cm, a bar, `bags` bags hanging, their lines coiled down the pole. */
+    drip({ at, h = 200, bags = 2 }) {
+      const m = matrix({ at });
+      for (let i = 0; i < 5; i++) {
+        const a = (i / 5) * Math.PI * 2 + 0.3;
+        tube(m, [[0, 9, 0], [Math.cos(a) * 16, 6.5, Math.sin(a) * 16], [Math.cos(a) * 30, 4.5, Math.sin(a) * 30]], 0.9, G.round, 8);
+        part(m, G.round, new THREE.SphereGeometry(2.4, 12, 8), { pos: [Math.cos(a) * 30, 2.4, Math.sin(a) * 30] });
+      }
+      part(m, G.flat, cyl(1.1, h - 9, 0.1, 14), { pos: [0, 9 + (h - 9) / 2, 0] }); // seen side-on a round rod is all rim: flat glass
+      line(m, L.fine, [-15, h - 1, 0], [15, h - 1, 0]);
+      for (let b = 0; b < bags; b++) {
+        const x = bags > 1 ? -11 + (22 * b) / (bags - 1) : 0;
+        part(m, G.flat, box(10, 17, 2.6, 1.3), { pos: [x, h - 13, 0], lines: "faint" });
+        part(m, G.fill, box(8.4, 9 - b * 3, 1.8, 0.8), { pos: [x, h - 17.5 + b * 1.5, 0] }); // how much is left: less in the one that has been running
+        tube(m, [[x, h - 22, 0], [x * 0.9, h - 34, 0.6], [x * 0.4, h - 52, 1.6], [1.6, h - 70, 1.2], [1.4, h - 92, -1.2]], 0.28, G.round, 30);
+      }
+      return api;
+    },
+    /** A ceiling boom (bras de plafond): a column from the ceiling at `from`, an arm out to the monitor at `at`, its face toward +z turned by `rotY`, a still trace on it. */
+    boom({ from, at, w = 42, h = 30, rotY = 0 }) {
+      const I = new THREE.Matrix4();
+      const y = at[1] + h / 2 + 10;
+      part(I, G.flat, cyl(4.2, from[1] - y, 0.3, 24), { pos: [from[0], (from[1] + y) / 2, from[2]], lines: "faint" });
+      tube(I, [[from[0], y, from[2]], [(from[0] + at[0]) / 2, y + 1, (from[2] + at[2]) / 2], [at[0], y, at[2]]], 2.2, G.flat, 12);
+      tube(I, [[at[0], y, at[2]], [at[0], at[1] + h / 2, at[2]]], 1.4, G.flat, 4);
+      const m = matrix({ at, rotY });
+      part(m, G.flat, box(w, h, 4, 1.2), { lines: "fine" });
+      part(m, G.fill, box(w - 5, h - 5, 0.4, 0.2), { pos: [0, 0, 2.1] });
+      // a still trace (a heartbeat, drawn once): never a sweep, never a blink
+      const tr = [[-0.42, 0], [-0.18, 0], [-0.14, 0.06], [-0.1, 0], [-0.04, 0], [-0.01, -0.08], [0.02, 0.32], [0.05, -0.14], [0.08, 0], [0.18, 0.04], [0.24, 0], [0.42, 0]];
+      for (let i = 1; i < tr.length; i++) line(m, L.fine, [tr[i - 1][0] * w, tr[i - 1][1] * h + h * 0.12, 2.4], [tr[i][0] * w, tr[i][1] * h + h * 0.12, 2.4]);
+      line(m, L.faint, [-0.42 * w, -h * 0.22, 2.4], [0.42 * w, -h * 0.22, 2.4]);
+      return api;
+    },
     /** A light that has a place: a bright core, a long tail. `kind`: "lamp" follows `lamp` in update, "far" follows `amount`. */
     glow({ at, size = 6, k = 1, kind = "lamp" }) {
       const mat = glowMaterial(k);
@@ -340,6 +397,43 @@ export function makeDresser({ order = 26, tone = 1, seed = 11 } = {}) {
       mesh.renderOrder = order + 1;
       group.add(mesh);
       glows.push({ mat, kind: "lamp" });
+      return api;
+    },
+    /**
+     * The night coming in through a shutter: soft bands of street light laid on a surface (a wall, a headboard).
+     * `at` the centre of the patch, `w` × `h`, front +z turned by `rotY`; `n` how many bands; `skew` how far the top
+     * leans over (cm: the light comes in at a slant); `k` how bright (≤ 0.2: it is a light that has a place, not a veil).
+     * The bands are wide and soft-edged, the patch fades to nothing on every side: nothing in it flickers.
+     */
+    slats({ at, w = 80, h = 40, rotY = 0, n = 5, skew = 14, k = 0.12 }) {
+      const geo = new THREE.PlaneGeometry(1, 1);
+      const p = geo.attributes.position;
+      for (let i = 0; i < p.count; i++) p.setXY(i, p.getX(i) * w + p.getY(i) * skew, p.getY(i) * h);
+      const mat = new THREE.ShaderMaterial({
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+        uniforms: { uColor: { value: INK.clone().multiplyScalar(k) }, uAmount: { value: 1 }, uN: { value: n } },
+        vertexShader: /* glsl */ `
+          varying vec2 vUv;
+          void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`,
+        fragmentShader: /* glsl */ `
+          uniform vec3 uColor; uniform float uAmount; uniform float uN; varying vec2 vUv;
+          void main() {
+            float f = fract(clamp(vUv.y, 0.0, 1.0) * uN);
+            float band = smoothstep(0.04, 0.26, f) * (1.0 - smoothstep(0.5, 0.74, f));
+            float e = smoothstep(0.0, 0.22, vUv.x) * smoothstep(0.0, 0.22, 1.0 - vUv.x) * smoothstep(0.0, 0.12, vUv.y) * smoothstep(0.0, 0.12, 1.0 - vUv.y);
+            float a = band * e * (0.55 + 0.45 * vUv.y);
+            gl_FragColor = vec4(uColor * a * uAmount, 1.0);
+          }`,
+      });
+      const mesh = new THREE.Mesh(geo, mat);
+      mesh.position.set(...at);
+      mesh.rotation.y = rotY;
+      mesh.frustumCulled = false;
+      mesh.renderOrder = order + 1;
+      group.add(mesh);
+      glows.push({ mat, kind: "far" });
       return api;
     },
     /** Something suspended in the air of the place (steam, dust, flour), drifting by `drift` cm/s: streaks, never dots. */

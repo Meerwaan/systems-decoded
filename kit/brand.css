@@ -216,6 +216,13 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 #cta-field-v span { display: inline-block; vertical-align: top; }
 #cta-typed { width: 0ch; height: 70px; overflow: hidden; white-space: nowrap; }
 #cta-caret { width: 6px; height: 62px; margin: 4px 0 0 8px; background: var(--veille); }
+/* the comment as a choice (duelCall): two answers, each lit when it is said, the caret waiting under « À toi » */
+#duel { position: absolute; left: var(--safe-l); right: var(--safe-r); top: var(--slot-top); padding: 22px 26px 26px; border: 2px solid var(--ink-faint); background: rgba(7, 10, 12, 0.84); opacity: 0; }
+#duel-row { margin-top: 26px; display: flex; align-items: center; gap: 18px; }
+.duel__opt { flex: 1; padding: 16px 0 12px; text-align: center; border: 3px solid var(--ink-faint); color: var(--ink-dim); font: 800 70px/1 var(--display); text-transform: uppercase; }
+.duel__or { font: 500 22px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-dim); }
+#duel-you { margin-top: 22px; display: flex; align-items: center; gap: 12px; font: 500 22px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--veille); }
+#duel-caret { display: block; width: 4px; height: 28px; background: var(--veille); }
 
 #next { position: absolute; left: var(--safe-l); right: var(--safe-r); top: calc(var(--slot-top) + 6px); padding: 30px 34px 34px; border: 2px solid var(--ink-faint); background: rgba(7, 10, 12, 0.86); }
 #next-title { margin-top: 22px; font: 800 96px/0.95 var(--display); text-transform: uppercase; }
@@ -229,6 +236,14 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 #film-bar { margin-top: 28px; height: 8px; background: var(--ink-faint); }
 #film-bar i { display: block; height: 100%; background: var(--veille); transform: scaleX(0); transform-origin: 0 50%; box-shadow: 0 0 18px var(--veille); }
 #film-where { margin-top: 26px; display: flex; justify-content: space-between; align-items: baseline; font: 700 30px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--veille); }
+/* #film.is-titre — filmTitle (blocks.js), the option of filmCall (2026-10-21): no box, the long's title as a trailer's end title
+   over the scene (#title-shade under it), the bar a rule that draws itself. Without the class nothing here applies. */
+#film.is-titre { padding: 0; border: 0; background: none; }
+#film.is-titre .panel__h { justify-content: flex-start; gap: 28px; font-size: 26px; letter-spacing: 0.2em; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95); }
+#film.is-titre #film-title { margin-top: 16px; line-height: 0.88; letter-spacing: 0.004em; -webkit-text-stroke: 2px rgba(7, 10, 12, 0.85); text-shadow: 0 6px 0 rgba(0, 0, 0, 0.7), 0 0 44px rgba(0, 0, 0, 0.9); }
+#film.is-titre #film-bar { margin-top: 22px; width: 58%; height: 5px; background: none; }
+#film.is-titre #film-where { margin-top: 20px; justify-content: flex-start; gap: 34px; font-size: 34px; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95); }
+#film.is-titre #film-where span + span { color: var(--ink); }
 #next-cta { margin-top: 30px; display: flex; justify-content: space-between; align-items: center; font: 700 28px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--veille); }
 
 /* ─────────────────────────────────────────────── THE HOOK (buildHook)
@@ -272,3 +287,10 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 /* a chip that follows a point of the 3D scene and shows a live value (placed by the film every frame) */
 .chip--live { left: 0; top: 0; color: var(--signal); font-size: 26px; }
 .chip--live b { font: 700 42px/1 var(--mono); letter-spacing: -0.02em; }
+
+/* the long's open thread (blocks.js · threadCall): the question a chapter leaves open, under the chapter card after a mid-roll */
+.thread { position: absolute; z-index: 2; opacity: 0; pointer-events: none; } /* above the cards, whenever they are built */
+.thread__k { display: flex; align-items: center; gap: 12px; font: 500 18px/1 var(--mono); letter-spacing: 0.2em; text-transform: uppercase; color: var(--signal); }
+.thread__k i { display: block; width: 10px; height: 10px; border-radius: 50%; background: currentColor; box-shadow: 0 0 12px currentColor; }
+.thread__t { margin-top: 12px; font: 700 46px/1.05 var(--display); letter-spacing: 0.01em; color: var(--ink); white-space: nowrap; text-shadow: 0 2px 0 rgba(0, 0, 0, 0.7), 0 0 14px rgba(0, 0, 0, 0.9); }
+.thread.is-veille .thread__k { color: var(--veille); }

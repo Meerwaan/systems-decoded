@@ -122,8 +122,11 @@ export function captionBlocks(EP, { maxChars = 17, maxWords = 4, skip = [], minD
  * when it is said, never before (accent colour for marked words).
  * `skip`: beats that have their own text on screen (the hook cards). `lastEnd`: when the last
  * line leaves, if not on the final frame (a film that loops hands the frame back to its first card).
+ * `hit` (0 = off, 0.2–0.3): THE KEY WORD HITS — a word marked in the script (`*mot*`, `+mot+`) lands that much bigger
+ * and settles, in its own place (the line does not move): the eye goes to the word the sentence turns on.
+ * D.commit({ captions: { hit: 0.25 } }).
  */
-export function buildCaptions(container, EP, tl, { maxChars = 17, maxWords = 4, skip = [], lastEnd } = {}) {
+export function buildCaptions(container, EP, tl, { maxChars = 17, maxWords = 4, skip = [], lastEnd, hit = 0 } = {}) {
   const blocks = captionBlocks(EP, { maxChars, maxWords, skip });
   const chunks = blocks.map((rows) => rows.flat());
 
@@ -153,6 +156,10 @@ export function buildCaptions(container, EP, tl, { maxChars = 17, maxWords = 4, 
     // Each one comes up in the place the block keeps for it: the lines do not re-centre as they fill.
     words.forEach((w, k) => {
       tl.fromTo(spans[k], { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.14, ease: "back.out(2)" }, Math.max(start, w.s - 0.04));
+      if (hit && w.a) {
+        // (.cap__w is an inline-block: it scales round its own centre, the line does not move)
+        tl.fromTo(spans[k], { scale: 1 + hit }, { scale: 1, duration: 0.32, ease: "power3.out", immediateRender: false }, Math.max(start, w.s - 0.04));
+      }
     });
     tl.set(cap, { visibility: "hidden" }, end);
   });
@@ -403,6 +410,71 @@ export function typeAnswer(tl, { showAt, typedAt, chars, hideAt }) {
   for (let i = 1; i <= chars; i++) tl.set("#cta-typed", { width: `${i}ch` }, typedAt + (i - 1) * 0.055);
   tl.set("#cta-caret", { opacity: 1 }, typedAt);
   tl.to("#cta-field", { opacity: 0, y: -24, duration: 0.28, ease: "power2.in" }, hideAt);
+}
+
+/* ───────────── THE PROMO (hors-série), 2026-10-21 ─────────────
+   The promos of the longs (HS01, HS02) count their open threads in the header (« Fils ouverts » 0 → 7): a 34-px
+   figure that changed in silence — on a phone nobody saw seven questions pile up. And the answer they keep for
+   YouTube went to a black that lasted up to 2.7 s: on TikTok a black screen is a thumb that swipes. These two only
+   exist when an act calls D.threads / D.cliff (kit/lib/direct.js): a film that does not call them is drawn as
+   before. Their styles are inline; the class names (.thread-ghost, .cliff) are the ones to give them in kit/brand.css. */
+
+/** One thread opens: the counter's figure swells (×2.6) and glows, holds, settles; a « +1 » leaves it, upward. */
+export function threadPop(tl, fig, at, n) {
+  const glow = "0 0 26px rgba(255, 91, 46, 1)";
+  const none = "0 0 0px rgba(255, 91, 46, 0)";
+  fig.style.transformOrigin = "100% 72%";
+  // from the figure at rest (what a seek before `at` shows) to the peak, then back: never a stale peak
+  tl.fromTo(fig, { scale: 1, textShadow: none }, { scale: 2.6, textShadow: glow, duration: 0.06, ease: "power2.out", immediateRender: false }, at);
+  tl.to(fig, { scale: 1, textShadow: none, duration: 0.45, ease: "power3.out" }, at + 0.2); // (held 0.14 s at its peak)
+  const ghost = document.createElement("span");
+  ghost.className = "thread-ghost";
+  ghost.dataset.n = String(n);
+  ghost.textContent = "+1";
+  Object.assign(ghost.style, { position: "absolute", right: "0", top: "-4px", font: "700 30px/1 var(--mono)", color: "var(--signal)", opacity: "0", pointerEvents: "none" });
+  fig.parentElement.appendChild(ghost);
+  tl.fromTo(ghost, { opacity: 0, y: 0 }, { opacity: 1, y: -8, duration: 0.08, ease: "power2.out", immediateRender: false }, at);
+  tl.to(ghost, { opacity: 0, y: -46, duration: 0.6, ease: "power2.out" }, at + 0.08);
+}
+
+let cliffs = 0;
+/**
+ * The answer cut to black: two black shutters close on the picture in `snap` s (top and bottom, to a line), the line
+ * flashes and dies, the black holds `dur` s with its `stamp` (the dossier's mono, in `tone`). Page elements only —
+ * the canvas is not touched: before `at − snap` and after `at + dur`, nothing on the page has changed.
+ */
+export function cliffCut(tl, stage, at, { dur = 0.6, snap = 0.12, stamp = null, tone = "veille" } = {}) {
+  const layer = document.createElement("div");
+  layer.id = `cliff-${++cliffs}`;
+  layer.className = "layer cliff";
+  Object.assign(layer.style, { opacity: "0", pointerEvents: "none", overflow: "hidden" });
+  const bar = (top) => {
+    const b = document.createElement("i");
+    Object.assign(b.style, { position: "absolute", left: "0", right: "0", height: "0%", background: "#000", [top ? "top" : "bottom"]: "0" });
+    layer.appendChild(b);
+    return b;
+  };
+  const shutters = [bar(true), bar(false)];
+  const line = document.createElement("i");
+  Object.assign(line.style, { position: "absolute", left: "0", right: "0", top: "50%", height: "4px", marginTop: "-2px", background: "var(--ink)", boxShadow: "0 0 26px var(--ink)", opacity: "0" });
+  layer.appendChild(line);
+  let mark = null;
+  if (stamp) {
+    mark = document.createElement("b");
+    mark.textContent = stamp;
+    Object.assign(mark.style, { position: "absolute", left: "0", right: "0", top: "calc(50% + 46px)", textAlign: "center", font: "700 36px/1 var(--mono)", letterSpacing: "0.18em", textTransform: "uppercase", color: `var(--${tone})`, opacity: "0" });
+    layer.appendChild(mark);
+  }
+  // above the picture and any black of the page, under the header and the captions (the word said stays on screen)
+  const anchor = document.getElementById("hud-shade");
+  if (anchor) anchor.parentElement.insertBefore(layer, anchor);
+  else stage.insertAdjacentElement("afterend", layer);
+  tl.fromTo(layer, { opacity: 0 }, { opacity: 1, duration: 0.001, immediateRender: false }, at - snap);
+  tl.fromTo(shutters, { height: "0%" }, { height: "50.2%", duration: snap, ease: "power2.in", immediateRender: false }, at - snap);
+  tl.fromTo(line, { opacity: 0, scaleX: 1 }, { opacity: 1, scaleX: 1, duration: 0.001, immediateRender: false }, at);
+  tl.to(line, { opacity: 0, scaleX: 0.03, duration: 0.3, ease: "power2.in" }, at + 0.05);
+  if (mark) tl.fromTo(mark, { opacity: 0 }, { opacity: 1, duration: 0.16, ease: "power2.out", immediateRender: false }, at + 0.12);
+  tl.to(layer, { opacity: 0, duration: 0.001 }, at + dur);
 }
 
 export const pad2 = (n) => String(Math.floor(n)).padStart(2, "0");
