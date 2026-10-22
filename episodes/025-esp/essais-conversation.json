@@ -1,0 +1,23 @@
+{
+  "//": "Banc d'essai du 2026-10-21 (script et voix, « scale TikTok ») : sortir les courts du « même ton partout » sans refaire le 018. Un passage de 25 s qui traverse la porte de l'acte 2 — la fin de la scène, « Alors… on l'ouvre », les deux premières phrases de l'autopsie —, joué d'un tenant : une requête par essai, « on l'ouvre » dans la même requête que la phrase tendue d'avant. Deux directions, rien d'autre ne change (mêmes mots, même modèle, même stabilité) : celle du film, et celle du long (H2 du L01 : une balise de conversation par phrase, en tête de ligne, [amused] une seule fois, sur le paradoxe). npm run essai -- 025 --file episodes/025-esp/essais-conversation.json",
+  "phrases": ["scene", "ouvre", "eclate", "repos"],
+  "essais": [
+    {
+      "nom": "A-film",
+      "note": "la direction du film, en requête courte : le témoin. « On l'ouvre » tel que le film le garde (sa reprise, avec [short pause]).",
+      "vo": {
+        "ouvre": "[calm] Alors... [short pause] on l'ouvre."
+      }
+    },
+    {
+      "nom": "B-conversation",
+      "note": "la recette du long transposée au court : [serious] sur la menace hachée, [calm] sur « on l'ouvre », puis [conversational, curious] et [amused] sur le paradoxe (vingt-cinq fois par seconde la même question… et il ne fait rien).",
+      "vo": {
+        "scene": "[serious] Ton volant dit : à gauche. Ta voiture, elle, pivote trop. Elle commence une toupie. [short pause] Contre-braquer ? Trop tard... ou trop fort.",
+        "ouvre": "[calm] Alors... [short pause] on l'ouvre.",
+        "eclate": "[conversational, curious] Un capteur dans le volant : où tu veux aller. Un capteur de lacet : où la voiture va vraiment. Un capteur par roue. Et un calculateur... qui compare.",
+        "repos": "[amused] Vingt-cinq fois par seconde, il pose la même question : elle va là où tu braques ? [short pause] Tant que la réponse est oui... il ne fait rien."
+      }
+    }
+  ]
+}

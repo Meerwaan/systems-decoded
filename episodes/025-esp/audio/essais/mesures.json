@@ -1,0 +1,156 @@
+{
+ "phrases": [
+  "scene",
+  "ouvre",
+  "eclate",
+  "repos"
+ ],
+ "film": {
+  "scene": {
+   "score": 4.56,
+   "flags": [],
+   "mood": "tendu",
+   "register": 2.9806973602685667,
+   "spread": 4.529979999176135,
+   "rate": 16.52021089630931,
+   "pause": 0.4300000000000002,
+   "seconds": 7.373000000000001,
+   "level": 0.4463715510789612,
+   "lift": 0,
+   "clip": "audio/takes/af132340/cut/take-21.scene.mp3"
+  },
+  "ouvre": {
+   "score": 3.93,
+   "flags": [],
+   "mood": "posé",
+   "register": -2.9450646353144654,
+   "spread": 3.4302576419882715,
+   "rate": 15.853658536585364,
+   "pause": 0.4100000000000002,
+   "seconds": 1.3070000000000004,
+   "level": -6.608770118088149,
+   "lift": -0.11,
+   "clip": "audio/takes/reprises/cut/ouvre-2.ouvre.mp3"
+  },
+  "eclate": {
+   "score": 4.44,
+   "flags": [],
+   "mood": "curious",
+   "register": 0.3455620557696801,
+   "spread": 4.43998659508519,
+   "rate": 18.823529411764707,
+   "pause": 0.4300000000000002,
+   "seconds": 8.016000000000002,
+   "level": 0.3376205357343416,
+   "lift": 0,
+   "clip": "audio/takes/af132340/cut/take-21.eclate.mp3"
+  },
+  "repos": {
+   "score": 4.02,
+   "flags": [],
+   "mood": "curious",
+   "register": 2.1245232011688233,
+   "spread": 4.02290452681905,
+   "rate": 19.393939393939394,
+   "pause": 0.4000000000000002,
+   "seconds": 6.079999999999998,
+   "level": -0.0935890390046481,
+   "lift": 0,
+   "clip": "audio/takes/af132340/cut/take-21.repos.mp3"
+  }
+ },
+ "essais": [
+  {
+   "nom": "A-film",
+   "note": "la direction du film, en requête courte : le témoin. « On l'ouvre » tel que le film le garde (sa reprise, avec [short pause]).",
+   "stability": 0.4,
+   "model": "eleven_v4_turbo",
+   "rows": [
+    {
+     "id": "scene",
+     "register": 1.7695589067226187,
+     "level": -0.6881473769806128,
+     "rate": -10.148783426367524,
+     "spread": 4.182796807466244,
+     "pause": 0.48000000000000026,
+     "flags": []
+    },
+    {
+     "id": "ouvre",
+     "register": -4.032258192916356,
+     "level": -6.611707140921258,
+     "rate": -36.233809066585025,
+     "spread": 2.5249005798648185,
+     "pause": 0.3300000000000001,
+     "flags": []
+    },
+    {
+     "id": "eclate",
+     "register": -0.19414754992046362,
+     "level": 0.04968568601682577,
+     "rate": 2.0003414981010215,
+     "spread": 4.321344566124874,
+     "pause": 0.4100000000000002,
+     "flags": []
+    },
+    {
+     "id": "repos",
+     "register": 2.3593803213052946,
+     "level": 1.0400065553989926,
+     "rate": 10.683139345803895,
+     "spread": 3.8870575158355076,
+     "pause": 0.4100000000000002,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\025-esp\\audio\\essais\\025-essai-A-film.mp3"
+  },
+  {
+   "nom": "B-conversation",
+   "note": "la recette du long transposée au court : [serious] sur la menace hachée, [calm] sur « on l'ouvre », puis [conversational, curious] et [amused] sur le paradoxe (vingt-cinq fois par seconde la même question… et il ne fait rien).",
+   "stability": 0.4,
+   "model": "eleven_v4_turbo",
+   "rows": [
+    {
+     "id": "scene",
+     "register": -0.5075226274705928,
+     "level": -1.6682693128346422,
+     "rate": -10.454920450468496,
+     "spread": 3.6900156226728407,
+     "pause": 0.5300000000000002,
+     "flags": []
+    },
+    {
+     "id": "ouvre",
+     "register": -5.056799282464645,
+     "level": -8.338022172265969,
+     "rate": -35.66950649195303,
+     "spread": 1.6785549223890273,
+     "pause": 0.26000000000000006,
+     "flags": [
+      "très grave"
+     ]
+    },
+    {
+     "id": "eclate",
+     "register": 1.4468548470529523,
+     "level": -0.31680927929887304,
+     "rate": 0.6884399997331814,
+     "spread": 4.4640932576123316,
+     "pause": 0.3900000000000002,
+     "flags": []
+    },
+    {
+     "id": "repos",
+     "register": 1.756688926422092,
+     "level": -0.2754028112983882,
+     "rate": 10.228588465533672,
+     "spread": 4.09221058962185,
+     "pause": 0.45000000000000023,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\025-esp\\audio\\essais\\025-essai-B-conversation.mp3"
+  }
+ ]
+}

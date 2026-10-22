@@ -12,12 +12,7 @@
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21,
-    "acts": {
-      "menace": {
-        "stability": 0.2
-      }
-    }
+    "seed": 21
   },
   "cover": {
     "at": "eclate$",
@@ -27,19 +22,19 @@
     ],
     "cam": {
       "tx": 0,
-      "ty": 8,
-      "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
-      "shift": -430,
-      "side": 0,
-      "fov": 28,
+      "ty": 50,
+      "tz": -10,
+      "d": 1600,
+      "az": -8,
+      "el": 50,
+      "fov": 30,
+      "shift": -480,
+      "side": 60,
       "roll": 0
     }
   },
   "post": {
-    "caption": "ESP : dans un virage qui tourne mal, ta voiture freine une roue toute seule pour te remettre dans l'axe. Et elle le doit à un élan. La tienne, elle est d'avant ou d'après 2014 ?",
+    "caption": "ESP, le contrôle de trajectoire : quand l'arrière décroche, ta voiture freine une seule roue pour te remettre dans l'axe. Et ce réflexe, elle le doit à un élan. La tienne : d'avant ou d'après 2014 ?",
     "hashtags": [
       "#apprendresurtiktok",
       "#commentcamarche",
@@ -47,7 +42,28 @@
       "#voiture",
       "#securiteroutiere"
     ],
-    "pinned": "Demandé en commentaire : l'ESP. Obligatoire sur toute voiture neuve en Europe depuis novembre 2014. La tienne, avant ou après ?"
+    "pinned": "Demandé en commentaire : l'ESP. Réponds juste « avant » ou « après » 2014 : il est obligatoire sur toute voiture neuve en Europe depuis novembre 2014.",
+    "instagram": {
+      "caption": "Un sanglier. Tu braques d'un coup… et l'arrière de ta voiture décroche.\n\nDossier 025 : l'ESP, demandé en commentaire. Ta voiture compare où tu veux aller et où elle va, et freine une seule roue pour te remettre dans l'axe. Et ce réflexe, elle le doit à un élan.\n\nLa tienne, elle est d'avant ou d'après 2014 ?",
+      "hashtags": [
+        "#esp",
+        "#voiture",
+        "#securiteroutiere",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ta voiture décroche : l'ESP freine UNE roue pour te rattraper (et c'est grâce à un élan)",
+      "description": "Dossier 025 — l'ESP ouvert : le capteur d'angle du volant, le capteur de lacet, le calculateur, le bloc qui freine une roue à la fois. Et le test de l'élan, en Suède, en 1997.\n\nLa tienne, elle est d'avant ou d'après 2014 ?",
+      "hashtags": [
+        "#shorts",
+        "#esp",
+        "#voiture",
+        "#securiteroutiere",
+        "#science"
+      ]
+    }
   },
   "sources": [
     "Dossier de faits complet, avec le niveau de chaque source et ce qu'il ne faut pas dire : docs/faits/025-esp.md ; contre-vérification phrase par phrase : docs/faits/025-contre-verification.md",
@@ -55,8 +71,9 @@
     "Quelle roue : en survirage (l'arrière part), la roue avant extérieure au virage ; en sous-virage, la roue arrière intérieure — et une seconde roue si l'écart est fort. Source secondaire (Wikipédia, « Electronic stability control ») : aucune source primaire lue sur ce point — Bosch dit seulement « des roues, une par une », après avoir réduit la puissance du moteur. Le film ne montre que le survirage.",
     "Le test de l'élan : 21 octobre 1997, en Suède, Robert Collin, du magazine Teknikens Värld, renverse la Mercedes Classe A dans une manœuvre d'évitement ; la voiture bascule (« umgekippt » ; sur le toit ou le flanc, les sources ne le disent pas) ; Mercedes conteste d'abord, puis arrête les livraisons et monte l'ESP en série (autohaus.de, presse ; le récit officiel de Mercedes n'a pas pu être lu). Premier ESP de série : Mercedes S 600 Coupé, 1995, avec Bosch. Aucune vitesse du test ni nombre de voitures rappelées : les sources divergent.",
     "L'obligation : dans l'Union européenne, sur toutes les voitures neuves au 1er novembre 2014, sur les nouveaux modèles dès novembre 2011 (règlement (CE) n° 661/2009, Commission européenne). Efficacité : −56 % d'accidents mortels à un seul véhicule dans une étude américaine de 2006 (IIHS), non dite dans le film.",
+    "En-tête (illustratif) : « 80 km/h », la vitesse d'une route bidirectionnelle française, n'est jamais dite ; « Écart » est l'angle, mesuré dans la scène, entre où pointe la voiture et où le volant demande d'aller. Le comparateur à deux aiguilles sur le calculateur est une image du calcul, pas une pièce réelle. Pendant 1997, l'en-tête n'affiche aucune vitesse (aucune n'est sourcée).",
     "Simplifications assumées : la scène (un sanglier, un coup de volant) est un scénario ; le film montre le survirage et une seule roue freinée ; « elle freine pour tourner » : l'ESP ne crée pas d'adhérence, il ne peut rien au-delà de ce que tiennent les pneus. À ne pas dire : un délai en millisecondes, « elle freine toujours une seule roue », qui possède la marque ESP.",
-    "L'annonce du prochain dossier et la boucle restent à écrire : le 026 n'est pas choisi."
+    "Prochain dossier (026, Soyouz MS-10) : le 11 octobre 2018, défaillance d’un propulseur d appoint environ deux minutes après le décollage de Baïkonour ; la capsule est séparée du lanceur, descente balistique, Nick Hague et Alexeï Ovtchinine récupérés indemnes (space.com, Planetary Society, NASASpaceflight). Le mode de sauvetage exact (tour ou moteurs de la coiffe) est incertain : l’annonce ne le dit pas."
   ],
   "beats": [
     {
@@ -71,7 +88,7 @@
       "id": "promesse",
       "hold": 0.3,
       "text": "Elle se rattrape seule : elle freine une roue. +Pas les quatre+. Et ce réflexe, elle le doit… à un *élan*.",
-      "vo": "[firm, matter-of-fact] Elle se rattrape seule : elle freine une roue. Pas les quatre. [short pause] [serious] Et ce réflexe, elle le doit... à un élan."
+      "vo": "[firm, matter-of-fact] Elle se rattrape seule : elle freine une roue. Pas les quatre. [short pause] Et ce réflexe, elle le doit... à un élan."
     },
     {
       "id": "scene",
@@ -83,7 +100,10 @@
       "id": "ouvre",
       "hold": 0.4,
       "text": "Alors… on l'ouvre.",
-      "vo": "[calm] Alors... on l'ouvre."
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ]
     },
     {
       "id": "eclate",
@@ -94,7 +114,7 @@
     {
       "id": "repos",
       "text": "Vingt-cinq fois par seconde, il pose la même question : elle va là où tu braques ? Tant que la réponse est oui… il ne fait *rien*.",
-      "vo": "[thoughtful] Vingt-cinq fois par seconde, il pose la même question : [curious] elle va là où tu braques ? [short pause] [serious] Tant que la réponse est oui... il ne fait rien."
+      "vo": "[curious] Vingt-cinq fois par seconde, il pose la même question : elle va là où tu braques ? [short pause] Tant que la réponse est oui... il ne fait rien."
     },
     {
       "id": "seuil",
@@ -105,19 +125,19 @@
       "id": "zero",
       "hold": 0.2,
       "text": "L'arrière part. Le volant dit gauche. La voiture tourne trop. La réponse est *non*. Et la toupie… a commencé.",
-      "vo": "[urgent] L'arrière part. Le volant dit gauche. La voiture tourne trop. La réponse est non. [short pause] [ominous] Et la toupie... a commencé."
+      "vo": "[firm, matter-of-fact] L'arrière part. Le volant dit gauche. La voiture tourne trop. La réponse est non. [short pause] Et la toupie... a commencé."
     },
     {
       "id": "reponse",
       "hold": 0.3,
       "text": "Il coupe les gaz. Puis il freine. Une roue : l'avant, à l'extérieur du virage. Freinée par ce seul coin, la voiture se redresse. Le nez revient. L'arrière suit. Tu es +droit+.",
-      "vo": "[urgent] Il coupe les gaz. Puis il freine. Une roue. L'avant. À l'extérieur du virage. Freinée par ce seul coin, la voiture se redresse. Le nez revient. L'arrière suit. [short pause] [relieved] Tu es droit."
+      "vo": "[tense] Il coupe les gaz. Puis il freine. Une roue. L'avant. À l'extérieur du virage. Freinée par ce seul coin, la voiture se redresse. Le nez revient. L'arrière suit. [short pause] Tu es droit."
     },
     {
       "id": "chute",
       "hold": 0.4,
       "text": "Voilà son secret : ta voiture ne freine pas d'abord pour ralentir. Elle freine *une* roue… pour +tourner+.",
-      "vo": "[low, grave voice] Voilà son secret : ta voiture ne freine pas d'abord pour ralentir. Elle freine une roue... pour tourner."
+      "vo": "[firm, matter-of-fact] Voilà son secret : ta voiture ne freine pas d'abord pour ralentir. Elle freine une roue... pour tourner."
     },
     {
       "id": "comment",
@@ -133,25 +153,95 @@
     {
       "id": "abo",
       "hold": 0.2,
-      "text": "Prochain dossier : à choisir.",
-      "vo": "[serious] Prochain dossier : à choisir."
+      "text": "Prochain dossier : une fusée lâche, en pleine montée. Et ses deux passagers… rentrent *vivants*.",
+      "vo": "[serious] Prochain dossier : une fusée lâche, en pleine montée. Et ses deux passagers... rentrent vivants."
     },
     {
       "id": "boucle",
-      "text": "Et tout recommence avec…",
-      "vo": "[calm] Et tout recommence avec,"
+      "text": "Comme toi, face à…",
+      "vo": "[calm] Comme toi, face à,"
     }
   ],
   "cues": {
+    "boar": "accroche:sanglier-0.1",
+    "swerve": "accroche:braques-0.1",
+    "lets": "accroche:décroche-0.1",
+    "catch": "promesse:rattrape-0.1",
+    "onewheel": "promesse:roue-0.1",
+    "notfour": "promesse:Pas-0.1",
+    "four": "promesse:quatre-0.1",
+    "reflex": "promesse:réflexe-0.1",
+    "moose1": "promesse:élan-0.1",
+    "toscene": "scene-0.14",
+    "left": "scene:gauche-0.1",
+    "pivot": "scene:pivote-0.1",
+    "toupie": "scene:toupie-0.1",
+    "counter": "scene:Contre-braquer-0.1",
+    "late": "scene:tard-0.1",
+    "strong": "scene:fort-0.1",
+    "tosystem": "ouvre-0.14",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "volant": "eclate:volant-0.1",
+    "want": "eclate:veux-0.1",
+    "lacet": "eclate:lacet-0.1",
+    "really": "eclate:vraiment-0.1",
+    "perwheel": "eclate:roue-0.1",
+    "calc": "eclate:calculateur-0.1",
+    "compare": "eclate:compare-0.1",
+    "torepos": "repos-0.14",
+    "question": "repos:question-0.1",
+    "braques": "repos:braques-0.1",
+    "oui": "repos:oui-0.1",
+    "rien": "repos:rien-0.1",
+    "toseuil": "seuil-0.1",
+    "thiswheel": "seuil:roue-0.1",
+    "watch": "seuil:regarde-0.1",
     "tozero": "zero-0.12",
+    "part": "zero:part-0.1",
+    "volant2": "zero:volant-0.1",
+    "tourne": "zero:tourne-0.1",
+    "non": "zero:non-0.1",
+    "toupie2": "zero:toupie-0.1",
+    "gaz": "reponse:gaz-0.1",
     "trigger": "reponse:freine-0.05",
+    "une": "reponse:Une-0.1",
+    "avant": "reponse:l'avant-0.1",
+    "exterieur": "reponse:l'extérieur-0.1",
+    "coin": "reponse:coin-0.1",
+    "redresse": "reponse:redresse-0.1",
+    "nez": "reponse:nez-0.1",
+    "suit": "reponse:suit-0.1",
+    "droit": "reponse:droit-0.1",
     "toverdict": "chute-0.12",
+    "secret": "chute:secret-0.1",
+    "strike": "chute:pas-0.05",
+    "ralentir": "chute:ralentir-0.1",
+    "one": "chute:Elle-0.1",
     "verdict": "chute:tourner",
     "tocta": "comment-0.12",
+    "date": "comment:Octobre-0.1",
+    "journalist": "comment:journaliste-0.1",
+    "avoid": "comment:l'évitement-0.1",
+    "tips": "comment:bascule-0.1",
+    "stops": "comment:livraisons-0.1",
+    "serie": "comment:système-0.1",
+    "since": "comment:Depuis-0.1",
+    "europe": "comment:Europe-0.1",
+    "ask": "comment:commentaire-0.3",
+    "answer": "comment:d'après-0.05",
+    "tolike": "like-0.12",
+    "road": "like:route-0.1",
+    "ditch": "like:fossé-0.1",
+    "toabo": "abo-0.1",
+    "rocket": "abo:fusée-0.1",
+    "lets2": "abo:lâche-0.1",
+    "climb": "abo:montée-0.1",
+    "crew": "abo:passagers-0.1",
+    "alive": "abo:vivants-0.1",
     "toloop": "boucle-0.12",
-    "rewind": "boucle:recommence"
+    "rewind": "boucle:face",
+    "before": "comment:d'avant-0.05"
   },
   "bedVolume": 0.8,
   "sfx": [
@@ -176,6 +266,10 @@
           1
         ],
         [
+          "droit",
+          0.5
+        ],
+        [
           "toverdict",
           0.45
         ],
@@ -190,16 +284,141 @@
       ]
     },
     {
+      "type": "rain",
+      "from": 0,
+      "to": "tobench",
+      "gain": -30
+    },
+    {
+      "type": "rain",
+      "from": "tozero",
+      "to": "toverdict",
+      "gain": -30
+    },
+    {
+      "type": "rain",
+      "from": "tolike",
+      "to": "rewind",
+      "gain": -31
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
       "type": "impact",
       "at": 0.03,
       "gain": -14,
       "size": 1.2
     },
     {
-      "type": "riser",
-      "to": "explode",
-      "dur": 0.8,
-      "gain": -25
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "swerve",
+      "gain": -18,
+      "size": 0.8
+    },
+    {
+      "type": "screech",
+      "from": "swerve+0.8",
+      "to": "swerve+1.26",
+      "gain": -21
+    },
+    {
+      "type": "screech",
+      "from": "lets+0.53",
+      "to": "catch-0.12",
+      "gain": -20,
+      "pitch": 1.06
+    },
+    {
+      "type": "hit",
+      "at": "lets+0.53",
+      "gain": -13
+    },
+    {
+      "type": "hush",
+      "from": "catch",
+      "to": "toscene",
+      "depth": -6
+    },
+    {
+      "type": "click",
+      "at": "onewheel+0.37",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "four+0.32",
+      "gain": -19,
+      "pitch": 0.75
+    },
+    {
+      "type": "hit",
+      "at": "moose1+0.42",
+      "gain": -16,
+      "pitch": 0.7
+    },
+    {
+      "type": "swish",
+      "at": "toscene-0.1",
+      "dur": 0.4,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "left+0.44",
+      "gain": -17
+    },
+    {
+      "type": "screech",
+      "from": "pivot+0.61",
+      "to": "toupie-0.5",
+      "gain": -21,
+      "pitch": 1.08
+    },
+    {
+      "type": "screech",
+      "from": "toupie+0.42",
+      "to": "counter-0.02",
+      "gain": -20,
+      "pitch": 1.12
+    },
+    {
+      "type": "hit",
+      "at": "counter",
+      "gain": -13
+    },
+    {
+      "type": "hit",
+      "at": "late-0.22",
+      "gain": -15,
+      "pitch": 0.85
+    },
+    {
+      "type": "hit",
+      "at": "strong+0.36",
+      "gain": -12
+    },
+    {
+      "type": "suck",
+      "to": "tosystem+0.1",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
     },
     {
       "type": "impact",
@@ -208,10 +427,87 @@
       "size": 0.8
     },
     {
+      "type": "click",
+      "at": "ouvre$+0.06",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.3",
+      "gain": -18,
+      "pitch": 0.95
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.55",
+      "gain": -19,
+      "pitch": 1.2
+    },
+    {
+      "type": "click",
+      "at": "volant+0.37",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "lacet+0.52",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "really+0.45",
+      "gain": -16,
+      "pitch": 0.8
+    },
+    {
+      "type": "click",
+      "at": "perwheel+0.42",
+      "gain": -16,
+      "pitch": 1.05
+    },
+    {
+      "type": "click",
+      "at": "calc+0.83",
+      "gain": -16,
+      "pitch": 0.85
+    },
+    {
+      "type": "hit",
+      "at": "compare+0.52",
+      "gain": -16,
+      "pitch": 1.1
+    },
+    {
       "type": "impact",
       "at": "tozero",
       "gain": -12,
       "size": 1.2
+    },
+    {
+      "type": "screech",
+      "from": "part+0.36",
+      "to": "part+0.5",
+      "gain": -21
+    },
+    {
+      "type": "screech",
+      "from": "toupie2+1.38",
+      "to": "gaz-0.38",
+      "gain": -22,
+      "pitch": 1.1
+    },
+    {
+      "type": "hit",
+      "at": "non+0.28",
+      "gain": -14
+    },
+    {
+      "type": "impact",
+      "at": "gaz",
+      "gain": -16,
+      "size": 0.8
     },
     {
       "type": "impact",
@@ -220,11 +516,34 @@
       "size": 1.4
     },
     {
+      "type": "clack",
+      "at": "une",
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "redresse+0.62",
+      "gain": -15,
+      "pitch": 1.1
+    },
+    {
+      "type": "blip",
+      "at": "droit",
+      "gain": -16,
+      "pitch": 1
+    },
+    {
       "type": "blip",
       "at": "verdict",
       "gain": -15,
       "pitch": 0.7,
       "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "tips",
+      "gain": -14,
+      "size": 1
     },
     {
       "type": "impact",
