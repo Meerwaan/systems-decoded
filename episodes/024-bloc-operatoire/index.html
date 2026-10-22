@@ -10,15 +10,26 @@
       /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
          kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
 
-      /* le second compteur de l'en-tête (.hud__count est signal par défaut) */
+      /* rien de ceci n'est à l'écran tant qu'un acte ne l'a pas fait entrer */
+      .chip--live, #retitle, #net, #next, #cta-field, .rail { opacity: 0; }
+
+      /* l'en-tête : l'heure de l'opération (main.js fixe sa couleur) et le compteur des défauts */
+      #hud-clock { color: var(--ink); }
       #hud-count { color: var(--ink); }
+
       /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
-      #chip-toi { color: var(--ink); }
-      #chip-coeur { color: var(--veille); }
+      #chip-chez { color: var(--ink); }
+      #chip-ici, #chip-alarme, #chip-repare { color: var(--veille); }
+
+      /* la chute, puis les trois appels à l'action */
+      #retitle-main { font-size: 112px; }
+      #retitle-slot { height: 112px; }
+      #retitle-strike { top: 54px; }
+      #next-fact span { font-size: 36px; line-height: 1.2; letter-spacing: 0.06em; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="60" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="93.9" data-width="1080" data-height="1920">
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
@@ -28,8 +39,8 @@
       <header id="hud">
         <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 024</span></div>
         <div class="hud__title" id="hud-title">Bloc opératoire</div>
-        <div class="hud__clock" id="hud-clock">T−3,0 s</div>
-        <div class="hud__count" id="hud-count"><span id="hud-count-l">Mesure</span><b id="hud-count-v">0</b></div>
+        <div class="hud__clock" id="hud-clock">01:12:40</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Défauts</span><b id="hud-count-v">0</b></div>
         <div class="hud__rule"></div>
         <nav class="hud__acts">
           <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
@@ -37,26 +48,38 @@
         </nav>
       </header>
 
-      <!-- 01 · MENACE (acte1.js) -->
-      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <!-- 01 · MENACE (acte1.js) : « chez toi » est la pièce du 016 — l'étiquette dit où l'on est, d'un coup d'œil -->
+      <div id="chip-chez" class="chip chip--live"><span>Chez toi</span><b>Le différentiel saute</b></div>
 
-      <!-- 02 · AUTOPSIE (acte2.js) -->
-      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>En veille</b></div>
+      <!-- 02 · AUTOPSIE (acte2.js) : les pièces se nomment avec co.add ; une seule étiquette à la fois -->
+      <div id="chip-retour" class="chip chip--live"><span>Chez toi</span><b>Retour par la terre</b></div>
+      <div id="chip-ici" class="chip chip--live"><span>Ici</span><b>Presque rien</b></div>
 
       <!-- le seuil (fin d'acte2.js) : la demande d'abonnement dite à la porte de l'acte 3 — des chevrons, jamais un panneau -->
       <div id="rail-seuil" class="rail"><i></i><i></i><i></i></div>
 
-      <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
+      <!-- 03 · RÉPONSE (acte3.js) : une seule étiquette à la fois dans la zone haute ; aucune valeur (ni kΩ, ni mA) -->
+      <div id="chip-isole" class="chip chip--live"><span>Le circuit</span><b>N'est plus isolé</b></div>
+      <div id="chip-alarme" class="chip chip--live"><span>Alarme</span><b>Dans la salle</b></div>
+      <div id="chip-repare" class="chip chip--live"><span>Le défaut</span><b>Cherché · réparé</b></div>
 
       <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
       <div id="retitle">
-        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
+        <div class="kicker" id="retitle-k">Au bloc, la sécurité</div>
         <div id="retitle-main">
           <span id="retitle-slot">
-            <span id="retitle-a">L'idée reçue<i id="retitle-strike"></i></span>
-            <span id="retitle-b" class="is-veille">La vérité</span>
+            <span id="retitle-a">Couper<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Tenir</span>
           </span>
         </div>
+      </div>
+
+      <!-- ce que le film doit encore (fin.js) : « qu'une fois ? », puis la question du commentaire -->
+      <div id="chip-deux" class="chip chip--live"><span>Deuxième défaut</span><b>Ça coupe</b></div>
+      <div id="cta-field">
+        <div class="kicker">Électriciens : on a simplifié quoi ?</div>
+        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de signes : 10) -->
+        <div id="cta-field-v"><span id="cta-typed" class="is-veille">À VOUS</span><span id="cta-caret"></span></div>
       </div>
 
       <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
@@ -69,19 +92,13 @@
         <div id="net-grid"><i id="net-wave"></i></div>
       </section>
 
+      <!-- le prochain dossier, en tout dernier : un seul fait, celui que dit la voix ; aucun chiffre sur le panneau -->
       <section id="next">
-        <div class="panel__h"><span>Prochain dossier · 000</span><span>Classé</span></div>
+        <div class="panel__h"><span>Prochain dossier · 025</span><span>Classé</span></div>
         <div id="next-title"><span id="next-redact"></span></div>
-        <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
-        <div id="next-fact"><span>Un fait, un seul.</span></div>
+        <div id="next-fact"><span>Dans un virage, ta voiture freine une roue… sans toi.</span></div>
         <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
       </section>
-
-      <div id="cta-field">
-        <div class="kicker">La question de l'accroche ?</div>
-        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de lettres) -->
-        <div id="cta-field-v"><span id="cta-typed" class="is-veille">RÉPONSE</span><span id="cta-caret"></span></div>
-      </div>
 
       <div id="callouts" class="layer"></div>
       <div id="hook"></div>
@@ -89,6 +106,8 @@
       <div id="flash" class="layer"></div>
 
       <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
       <!-- AUDIO:END -->
     </div>
 
