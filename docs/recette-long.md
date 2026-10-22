@@ -2,11 +2,95 @@
 
 Écrite le 2026-10-15 au soir, à la fin du montage du L01 (« Fabriqué pour te sauver : ton pare-brise », 8 min 51), sur les mesures de `npm run metrics -- L01` (`metrics/production.json`). Le but de Merwan : **2 à 3 longs par semaine au départ, au moindre coût en jetons, sans rien céder sur la qualité**. Ce fichier dit comment, et ce qui coûte. Le format lui-même (le principe, la voix, la forme) est dans CLAUDE.md, « Le format long (YouTube) ».
 
+**Trois recettes pour un long (depuis le 21/10)** : l'écriture et la voix ici (« L'écriture d'un long », juste après) ; l'image, le décor et la miniature dans `docs/recette-long-image.md` ; ce qui retient et fait dire « wow, il est trop fort » dans `docs/recette-long-retention.md`. Le diagnostic chiffré d'où sort la partie écriture : `docs/scale/long-1-script-voix.md`.
+
 ## Trois exigences de Merwan, qui valent pour tous les longs
 
 - **« Si c'est trop statique on perd l'attention »** : la caméra ne s'arrête jamais ; un nouveau plan (coupe, ou mouvement qui révèle autre chose) toutes les 5 à 10 s ; jamais plus de 4 s sans mouvement visible ; on suit l'objet le long de la chaîne ; un mouvement vif (un « fouet ») sous chaque carte de chapitre.
 - **« Il ne faut pas que l'image soit vide, mais pas trop remplie non plus »** : un sujet par plan qui occupe le tiers à la moitié du cadre ; toujours un fond qui situe (machine aux rayons X, grille, lueur), plus sombre et plus fin que le sujet ; jamais un petit objet seul dans du noir ; une seule information écrite à la fois (mot-clé OU fait OU étiquette) ; ce dont on ne parle pas s'éteint.
 - **Un long n'est pas un gabarit où seul l'objet change** (« trop simple, un manque de qualité et de professionnalisme ») : ce qui se réutilise, c'est l'outillage et le savoir-faire ; chaque long a ses machines fidèles à SON procédé réel, sa pièce maîtresse visuelle (ici le ruban orange sur l'étain), sa première image et sa mise en scène.
+
+## L'écriture d'un long (21/10, d'après le L01 et le L02)
+
+À lire avant d'écrire le `episode.json` d'un long. `npm run script -- Lnn` en vérifie l'écriture (`scripts/lib/ecriture.mjs`, des avertissements, rien de bloqué) et dessine sa carte : les chapitres et la façon dont chacun finit, les coupures pub à poser, les requêtes de la voix, les fils. Le modèle (`kit/template-long/episode.json`) porte la recette : un film neuf en est le squelette.
+
+### Ce que disent les deux premiers longs (des pistes : aucune courbe YouTube n'est encore lue)
+
+- **Le rythme** : L01, 1 663 mots, 8 min 51, 13 chapitres ; L02, 1 787 mots, 9 min 10, 11 chapitres — 188 à 195 mots par minute, silences compris.
+- **La promesse du titre est tenue tôt** dans les deux : L01 « ta tête » à 0,4 s, « moins d'un millimètre » vers 8 s, « il devra casser » vers 24 s ; L02 « coupée » vers 2 s, « te tuer » vers 7 s, « cinq gestes… en vie » vers 14 s. **Pas toujours celle des miniatures** : la nacelle du L02 (« SANS COUPER ») n'arrive qu'à 3:34.
+- **Les fins de chapitre** : six sur douze finissent à plat dans le L01 (« Dans le sable. », « Deux, feuilleté. », « Et chaque vitrage est inspecté. », « …resté dans le verre. »…) ; une sur dix dans le L02, relu chapitre par chapitre avant la voix.
+- **Les promesses de l'accroche oubliées en route** : la vitre de côté du L01 reste 5:36 sans un mot, l'ordre des pinces du L02 6:17 ; le test du L01, 3:13 (fils déclarés à la main sur une copie des deux scripts).
+- **Une coupure pub mal placée** : la troisième du L01 (6:39) tombe après un fait clos, cinq secondes avant la meilleure relance du film (« Maintenant… on va essayer de le détruire. », 6:44).
+- **Le climax freiné** : « on va essayer de le détruire », puis 42 mots de normes optiques avant le premier coup ; une petite bille à cinq chiffres entre la grosse bille et la tête (L01). « Dans les simulations des ingénieurs… » au milieu de l'incident (L02).
+- **Un chapitre « Ce qu'il faut retenir »** à la fin des deux (L01 : « Résumons. ») : le signal classique pour partir. À lire sur les courbes, à 7:48 et 7:53.
+- **Les appels à l'action** sont amenés depuis la réécriture du L01 (le seuil continue la phrase d'avant), mais le L01 dit son marquage et son commentaire 25 et 32 % plus vite que le reste du film : ses deux phrases les plus rapides.
+- **La voix H2** : d'une phrase à l'autre, 1,3 demi-ton dans les deux films (le verdict des courts dirait « même ton partout » : sur un long, c'est l'oreille de Merwan qui tranche, et elle a dit « masterclass ») ; « on l'ouvre » à 1,30 s dans les deux ; le climax du L02 ne monte pas (« L'incident » +0,3 dt, contre +2,1 pour « Sans couper »).
+
+### 1. L'emballage s'écrit avec l'accroche
+
+Le titre, les trois miniatures et l'accroche s'écrivent ensemble (titres et miniatures, c'est nous qui les tranchons ; l'accroche, Merwan la valide avec le devis voix). **Ce qu'ils promettent est dit avant 30 s** : le mot qui tient la promesse du titre et celui de la miniature se déclarent dans les repères (`"titre": "promesse:millimètre"`, `"miniature": "accroche:casse"`) et `npm run script` dit à quelle seconde ils tombent. Une miniature dont la promesse n'est pas dans les 30 premières secondes sort de la rotation : le test A/B de YouTube la jugerait à la durée de visionnage, et ceux qu'elle fait cliquer partent avant.
+
+**Le mot que les gens cherchent** (`post.youtube.keyword`) se lit dans l'autocomplétion de YouTube — gratuite, sans compte : `https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&hl=fr&gl=fr&q=<début de la requête>` (WebFetch). Relevé le 21/10 : « comment est fabriqué le verre », « verre feuilleté ou verre trempé », « consignation haute tension », « ligne haute tension hélicoptère », « comment est fabriqué un pneu ». Il va après les deux points du titre et dans les deux premières lignes de la description.
+
+### 2. Les 30 premières secondes
+
+- **0 → 10 s** : A (une scène, à toi, au présent) et le fait du titre. « Ta tête part dans le pare-brise. Il *casse*… exactement comme prévu. » Une première phrase de douze mots au plus.
+- **10 → 30 s** : C (une question à toi, payée à la fin) et le défi (payé au test). **Jamais de sommaire** (« dans cette vidéo », « on va voir », « au programme ») : les étapes, c'est l'en-tête qui les montre. « On y reviendra. » est une phrase de trop (L01).
+- **« Alors… on l'ouvre. »** entre 25 et 45 s (L01 : 0:27, L02 : 0:37), mot pour mot, `[calm]`. Avant elle, 110 mots au plus (L01 : 86).
+- **Pas d'abonnement dans la première minute** tant que la courbe du L02 (demande à 0:31, sur la demande de Merwan) n'a pas dit ce qu'elle coûte contre celle du L01 à la même seconde.
+
+### 3. Les chapitres
+
+- **8 à 13 chapitres, de 20 à 90 s chacun** (YouTube ignore tous les chapitres si l'un fait moins de 10 s).
+- **Le titre d'un chapitre se lit deux fois** : sur la carte, et dans la recherche (les « moments clés » de YouTube et de Google). Ce que les gens tapent, ou ce qu'ils attendent : « Verre trempé ou verre feuilleté ? », « Étape 5 : la mise à la terre ». Le premier, à 00:00, n'a pas de carte : jamais « Introduction », la scène (« Ta tête dans le pare-brise »). Le dernier jamais « Ce qu'il faut retenir » : le fil qu'il paie (« La vitre à viser pour sortir »).
+- **Un chapitre naît du précédent et relance le suivant** : sa première phrase reprend le mot ou l'idée de la dernière d'avant ; sa dernière phrase finit sur une question, une menace (un mot `*signal*`), une promesse (« tout à l'heure », « juste après ») ou une suspension (« … »). **Jamais sur un fait clos.** `npm run script` écrit « À PLAT » en face de ceux qui ferment.
+
+### 4. Les fils
+
+- **Ils se déclarent dans le script** : `"fil": "test"` sur la phrase qui ouvre un fil (ou le rappelle, s'il est déjà ouvert), `"paie": "test"` sur celle qui le paie (une chaîne ou une liste). `npm run script` en dessine la carte et vérifie le reste.
+- **Trois fils au moins** : la question de l'accroche (C, payée après la chute), le défi (payé au test), un ou deux au milieu (L01 : le petit tampon du coin, ouvert à 0:29 et payé à 3:00 ; « pendant six ans », dit juste avant la coupure pub de 4:17 et payé juste après).
+- **Le test se rappelle au moins une fois par tiers du film** (Merwan) : `npm run script` prévient d'un fil resté plus d'un tiers du film sans rappel.
+- **Un fil se paie seul, tard** : jamais deux réponses dans la même phrase.
+- **Une digression de plus de 20 s ouvre ou paie un fil.** Le flacon de Bénédictus, oui (il tombe, il tient, « pendant six ans » : une histoire). Le brevet de 1902, English Triplex et la loi anglaise des années 1930, non : 21 s qui peuvent sauter.
+
+### 5. Les coupures pub
+
+- **Trois pour 9 min**, vers 2:00, 4:15 et 6:30 : 90 s d'écart au moins, aucune avant 1:30 ni dans la dernière minute. Il faut 8 min de film pour en avoir : **1 550 mots au moins**.
+- **Juste après une phrase qui laisse une question en l'air** (« ? », « … », une menace), avec au moins un fil ouvert. Une pub qui tombe après un fait clos perd ceux qui n'attendaient plus rien.
+- **Posées à la main** dans YouTube Studio, aux instants que donne `npm run script` (« Coupures pub — à poser à la main… », au dixième de seconde, dans le silence qui suit la phrase, avant la carte suivante). Jamais le placement automatique : il peut couper une phrase.
+
+### 6. Le test (le climax)
+
+- **Des phrases de trois à huit mots, un chiffre au plus par phrase, une montée qui ne recule jamais** (petit → grand : au L01, la petite bille après la grosse redescend).
+- **Ni normes ni précautions au milieu** : les chiffres qui prouvent vont à l'étape d'avant, les « dans les simulations » dans la réponse due ou dans les sources. Entre « on va essayer de le détruire » et le premier coup : cinq secondes au plus.
+
+### 7. La fin, dans l'ordre
+
+**Chute → ce qui est dû (le fil de l'accroche) → commentaire → like → rendez-vous → boucle.** Pas de résumé annoncé (« Résumons », « Ce qu'il faut retenir ») : si le film enseigne une liste, c'est une question dans la chute (« Qu'est-ce qui t'a sauvé ? Pas le détecteur… », L02). Le rendez-vous ne nomme ni sujet ni date (Merwan, 15/10). La boucle retombe sur les premiers mots de l'accroche (« …le jour où… » → « Ta tête part dans le pare-brise »).
+
+### 8. Les appels à l'action (« smooth et bien amenés » ; au L01 : « trop brut »)
+
+- **Abonnement** : une fois, à la porte du test (25 à 65 % du film ; L01 : 39 %, L02 : 60 %), dans la phrase qui continue la précédente — jamais en commençant par « Abonne-toi ». Au L01 : « …il faut glisser quelque chose. » → « Ce quelque chose, c'est lui qui va prendre le choc, tout à l'heure. Si tu veux voir ça… abonne-toi, on y arrive. » 32 mots au plus.
+- **Commentaire** : il prolonge le geste qu'on vient d'apprendre (« regarde le marquage » → « dis-moi ce qui est écrit sur ta vitre conducteur »), une lecture à faire chez soi ou un camp à choisir, une réponse d'un mot si possible (« trempée… ou feuilletée ? »), deux publics s'il y en a deux (L02 : l'habilité, et celui qui ne l'est pas).
+- **Like** : avec un partage et sa raison (« envoie-la à quelqu'un qui garde un brise-vitre dans sa boîte à gants » ; « à un vrai électricien : il te dira ce qui manque »).
+- **Rendez-vous** : « On se retrouve très vite, dans… ».
+- **Dits au pas du film, ou plus lents** : un `[short pause]` avant la question ; `npm run script` prévient au-delà de +20 % (L01 : « comment » et « etiquette »).
+
+### 9. Le budget
+
+**1 650 à 1 850 mots** (≈ 8 min 45 à 9 min 45), jamais sous 1 550 (les coupures pub), jamais gonflé vers 12 min. Avant « on l'ouvre », 110 mots au plus ; un chapitre, 90 s au plus ; une phrase, 40 mots au plus et deux chiffres au plus (un, c'est mieux : L01 « froid » en dit cinq).
+
+### 10. La voix (H2, validée par Merwan le 15/10)
+
+- **Une requête par chapitre** : `voice.parts` = la première phrase de chaque chapitre ; « on l'ouvre » reste d'office dans la requête de l'accroche (`voice.mjs`). Mesuré : 10 et 13 requêtes de 370 à 1 740 caractères (L02, L01). Jamais plus de 2 500 caractères (une requête longue installe Eric dans son registre bas : banc H1), ni plus de 10 000 (la limite d'ElevenLabs). Une requête commence toujours sous une carte de chapitre.
+- **Les balises** : `[conversational, curious]`, `[warm, conversational]` et `[curious]` en rotation, jamais trois fois la même de suite ; `[serious]` sur les menaces ; `[amused]` sur quatre paradoxes au plus, jamais sur l'accroche, une victime, la chute ; `[tense]` pour l'accroche seulement ; `[calm]` pour « on l'ouvre » et la boucle ; `[warm]` pour le like et le rendez-vous. **Interdites sur un long** : `[firm, matter-of-fact]` et `[thoughtful]` (un ton de présentateur : « trop formel »), et toutes celles qui le sont sur un court (`[urgent]`, `[dramatic]`, `[ominous]`, `[low, grave voice]`, `[relieved]`, `[nervous]`, `[slowly]`).
+- **Le climax monte par l'écriture** (phrases courtes, aucune précaution) **et sans `[serious]`** : elle fait descendre Eric (banc du 025 : 2,3 dt sous `[tense]`, mêmes mots). Mesuré : au L02, les deux phrases `[serious]` de l'incident sortent à −0,5 et −0,6 dt quand `[curious]` y monte à +2,8, et le chapitre reste à +0,3 dt (« Sans couper » : +2,1) ; au L01, le test n'en a aucune et c'est le chapitre le plus haut du film (+1,7 dt). Au test : `[curious]` et `[conversational, curious]`, `[serious]` gardée pour une menace posée hors du climax.
+- **Ce qui se mesure** : le débit des appels à l'action (+20 % au plus) et « on l'ouvre » (1,07 à 1,5 s). Le verdict « même ton partout » est calculé sur les actes d'un court : sur un long, il ne dit rien.
+- **Le coût** : une prise en turbo, 5 200 à 5 700 crédits annoncés, 2 400 à 2 500 facturés (≈ 0,44 de l'annonce) ; une phrase reprise seule ≈ 25 crédits.
+
+### 11. La chaîne d'écriture
+
+Faits (deux passes) → le plan des fils et des chapitres (les coupures pub y sont) → le script → `npm run script` (tout ce qui est mécanique) → la relecture (au L02 : un relecteur par chapitre, neuf agents légers, 1,7 M de jetons ; maintenant que la machine compte les fins à plat, les chiffres et les balises, un seul relecteur pour tout le film suffirait, sur l'exactitude, le vocabulaire et une note d'image par phrase — à décider par Merwan) → l'accroche, l'emballage et le devis voix en un seul oui → la voix, une requête par chapitre → son écoute. La courbe de rétention se pose ensuite phrase par phrase, comme pour les courts (les instants sont dans la carte de `npm run script`) ; ce qu'on y lit : `docs/recette-long-retention.md`.
 
 ## Ce que le pilote a construit une fois (et qui ne se refait plus)
 
@@ -91,3 +175,10 @@ On cherche l'image sur une planche `look --bare` de six angles autour de l'insta
 - **Corrigé le même jour par Merwan : « pas assez accrocheur, beaucoup trop niche ; il faut limite du putaclic, mais qui reste fidèle ».** Le titre ne décrit pas la vidéo, il donne le fait le plus incroyable qu'elle prouve, en une phrase courte (≈ 45 à 55 caractères), au plus un mot en capitales. Retenu : **« S'il ne casse pas, ton pare-brise est refusé »** ; pour le test : « On lâche 10 kg sur ton pare-brise. Il DOIT casser » et « Ton pare-brise est fait de sable (et on le frappe exprès) ». Le mot de recherche (« comment on fabrique ») va dans la description, pas en tête du titre. Fidèle veut dire : chaque mot est vrai dans le film (ici, l'essai de la tête du R43).
 - **Puis, plus choc encore (sa demande, « vrai titre YouTube »)** : **« Moins d'1 mm entre ta tête et la route »** — l'enjeu (ta tête), un chiffre qui intrigue, aucun mot technique ; pour le test : « Ton pare-brise DOIT casser pour te sauver la vie » et « On lâche une tête de 10 kg sur ton pare-brise ».
 - **Et plus long** (« là c'est vraiment court ») : l'accroche d'abord, puis « : » et la promesse avec le mot cherché — **« Moins d'1 mm entre ta tête et la route : comment on fabrique ton pare-brise »** (75 caractères). Ce qui doit tenir si le téléphone coupe vers 60 caractères, c'est l'accroche, pas le mot-clé.
+
+### Ce que le L02 ajoute (21/10)
+
+- **Le titre ne redit pas une miniature, aucune des trois** : « Coupée, mais encore mortelle : les 5 gestes… » répète « COUPÉE ET MORTELLE » et « 5 GESTES ». `npm run script` compare le titre à `thumb`, `thumb2`, `thumb3`.
+- **Le mot cherché est un mot qu'on tape**, vérifié dans l'autocomplétion de YouTube (voir « L'écriture d'un long », 1) : « consignation haute tension » plutôt que « les 5 gestes ». Il se déclare dans `post.youtube.keyword` ; `npm run script` le cherche dans les titres et les 160 premiers caractères de la description.
+- **Le test A/B de YouTube Studio** (« Tester et comparer », sur ordinateur, fonctions avancées activées) fait tourner jusqu'à trois titres, trois miniatures ou trois paires, de quelques jours à deux semaines, et garde **celle qui donne le plus de durée de visionnage, pas le meilleur taux de clic** (aide YouTube, « A/B test titles & thumbnails ») : une promesse que les 30 premières secondes ne tiennent pas y perd. On teste des paires titre + miniature qui se complètent, avec l'emballage en ligne comme témoin.
+- **Les deux premières lignes de la description** (≈ 150 caractères, ce que montre la recherche) : le mot cherché dans une phrase qui donne envie, puis l'accroche ; les chapitres ensuite, puis les sources.

@@ -32,6 +32,26 @@ Ce que reçoit tout agent qui monte un acte (`acte1.js`, `acte2.js`, `acte3.js`,
 - Un chiffre que la voix ne dit pas n'entre ni dans l'en-tête ni dans une étiquette, sauf s'il est sourcé et que le plan le nomme. Les étiquettes sont en capitales : aucune unité à symbole.
 - Toi, de près, es un mannequin de verre : jamais en très gros plan, jamais la main seule. Personne n'est blessé à l'image.
 
+## La grille seconde par seconde : ce qui retient (21/10)
+
+Les courbes TikTok du 015 (le meilleur film, ≈ 100 k vues) et du 012 perdent les gens à deux endroits : **la première seconde**, puis **de la fin de l'accroche (≈ 10 s) à ≈ 25 s** — le 015 y perd 19 points, le 012 25. Ce que les films rendus mesurent là (`npm run qa` l'imprime sous « rythme » ; le détail : `docs/scale/3-retention-wow.md`) :
+
+| Instant | Ce que l'image et le son font | Repère mesuré |
+| --- | --- | --- |
+| 0 → 0,5 s | l'image bouge dès l'image 1 **et le sujet reste dans le cadre** ; un son qu'un téléphone joue avant le premier mot (`hit`, `swish`) | mouvement de la première demi-seconde : 015 9,8 · 010, 013, 014 3,3 à 3,7 · 024 2,7 · 025 1,4 · 012 1,3 |
+| 0,5 → 10 s | l'accroche : chaque phrase a sa démonstration ; le mot sur lequel elle se retourne **frappe** (`D.punch` + `hit` dans le souffle qui suit) | |
+| 10 → 25 s | la scène est une **deuxième accroche** : un changement toutes les 2 à 3 s (un geste, une coupe, une étiquette, un mouvement de caméra) — **aucune plage lente de 2 s** (mouvement < 1) ; un son dans le souffle qui suit chaque mot-clé ; « Alors… on l'ouvre » dans un quasi-silence (`suck` puis `hush`) ; le clic de chaque pièce de l'éclaté | attaques qu'un téléphone entend, 0 → 25 s : 010 18 · 015 3 · 025 2 avant le 21/10, 21 après |
+| portes d'acte | une coupe ou un changement franc d'échelle, et son coup (`hit`) dans le souffle | |
+| fin | la question du commentaire : si c'est un choix que dit la voix, **`duelCall`** ; jamais la réponse tapée à la place du spectateur | commentaires TikTok : 0,5 pour 1 000 vues |
+
+**Les dispositifs, une ligne chacun** (en option : sans eux, un film reste ce qu'il était, image et son à l'octet près) :
+- `D.punch(t.mot, 0.06)` — **le mot qui frappe** : l'objectif se resserre de 6 % en 0,08 s, tient, relâche. Un par phrase au plus, sur son mot-clé (`*mot*`, `+mot+`), jamais deux à moins d'une seconde, **jamais sur une coupe** (il a relâché avant : `{ hold, down }` plus courts), jamais sur l'image 0.
+- `glide(s0, s1)` (`@kit/direct.js`) — **la rampe de vitesse** de la première image : `shot(0, …, pose, glide(3, 0.5))` part à trois fois sa vitesse moyenne. **À vérifier à 0,3 et 0,7 s avec `look` : le sujet ne doit pas sortir du cadre** (essayé sur le 025 : le sanglier glissait hors champ à 0,7 s — pas gardé). Si la caméra suit un objet qui avance, c'est l'objet qui doit faire la rampe, pas la caméra seule.
+- `D.captionStyle({ hit: 0.25 })` — **le mot-clé du sous-titre** arrive 25 % plus gros et se pose, à sa place (la ligne ne bouge pas). Une fois, n'importe où dans un acte (le modèle l'appelle dans `acte1.js`).
+- `duelCall(tl, { from, aAt, bAt, to, toneA, toneB })` (`@kit/blocks.js`, balisage `#duel` dans `index.html`) — **la question du commentaire en deux réponses**, chacune allumée sur son mot (deux repères), le curseur qui attend sous « À toi ». Le film ne répond jamais à la place du spectateur (le 025 tapait « APRÈS » : c'est le « LES MASSES » du 022).
+- Le son (`episode.json` → `sfx`, synthétisé par `scripts/sfx.mjs`, tout entre 600 Hz et 5 kHz : ce qu'un téléphone joue) : `hit` (le mot-clé, une coupe, un titre barré) · `click` (une pièce qui se pose, une lumière qui s'allume) · `swish` (un mouvement rapide de caméra) · `screech` (des pneus qui lâchent) · `suck` (la respiration avant « Alors… », elle s'arrête net) · `hush` (tout l'habillage recule de `depth` dB entre deux instants : le silence autour de la phrase signature, le temps arrêté) · `impact` + `crack` (le craquement à 2 kHz forcé, sinon un impact sous −14 dB est muet sur un téléphone).
+- **Jamais un son sur un mot.** Un son se pose dans le souffle qui suit le mot qu'il ponctue (les trous de la voix : `npm run script` donne les mots, l'écart se lit entre deux mots) ; un son continu (`screech`) tient dans un souffle, pas sous une phrase. `npm run qa` liste « sons posés sur un mot » : la liste doit être vide pour tout ce que tu ajoutes. Mesuré sur le 025 : l'habillage est 2,5 dB plus bas sous les mots qu'avant, et 9,5 dB plus haut dans les souffles.
+
 ## Avant de rendre
 
 `npm run check -- <ep>` ne montre aucune erreur qui vienne de ton acte.

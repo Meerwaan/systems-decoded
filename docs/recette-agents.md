@@ -38,6 +38,30 @@ Si le build échoue dans un fichier qui n'est pas le tien, c'est qu'un autre age
 
 Une pose : `{ tx, ty, tz, d, az, el, fov, shift, side }` — le point visé, la distance, l'azimut et l'élévation en degrés (`el` négatif : la caméra regarde vers le haut), `shift` / `side` en pixels (l'image poussée vers le haut / la gauche). La lumière clé vient de −x, +y, +z : on filme le plus souvent avec `az` entre −20 et −70.
 
+## La première image (règle du 2026-10-21)
+
+Les courbes TikTok du 015 (≈ 100 k vues) et du 012 (15 k) disent la même chose : « la plupart ont cessé de regarder à 0:01 ». Le 015 garde 59 % à 0:07 et ≈ 40 % vers 0:23, le 012 52 % à 0:09 et ≈ 27 %. Ce que l'image 0 du 015 (le Rafale de dos, ses deux tuyères, les étincelles, le brin vert en travers) a, et celle du 012 (la casserole et sa mousse) n'a pas :
+
+1. **Un événement déjà en cours, pas un état.** L'avion touche le pont dans une gerbe d'étincelles ; la casserole est posée, sa mousse immobile. Dans l'image 0, quelque chose agit et laisse une trace d'énergie (étincelles, traînées, phares qui foncent).
+2. **Une perspective qui tire l'œil.** Caméra basse, lignes qui filent vers un point de fuite proche du sujet : la vitesse se lit sans le son. Le 012 est vu de trois quarts haut, comme une fiche produit.
+3. **La menace derrière le sujet.** L'horizon signal derrière l'avion, qui s'y découpe ; au 012 le rouge est caché sous la casserole, et la masse claire (la mousse) ne dit aucun danger.
+4. **Une forme que tout le monde reconnaît en un tiers de seconde**, vue d'où on ne la voit jamais (de dos, au ras du pont), grande : 40 % de la largeur au moins.
+5. **Le système déjà là, petit mais lisible** — le brin vert en travers du pont : la promesse du film, sans légende.
+6. **Elle bouge dès l'image 1, par son sujet.** Le « rythme » de `qa` sur la première demi-seconde : 9,8 au 015 (c'est l'avion qui fonce), 3,3 à 3,7 aux 010, 013, 014, 1,4 au 025. Une poussée de caméra seule ne suffit pas : le sujet, ou un premier plan, traverse le cadre.
+
+Sur la planche des quatre candidates, chacune est notée sur ces six points ; celle qui en coche le moins sort, même belle. Les options du plateau (ci-dessous) ne rattrapent pas une composition : sur l'accroche du 025, elles n'ont rien apporté de net à 270 px et n'y sont pas.
+
+## L'image d'un studio : les options du plateau (depuis le 2026-10-21)
+
+Trois options de `kit/lib/stage.js`, éteintes par défaut : un film qui ne les demande pas est dessiné exactement comme avant (vérifié octet pour octet sur le 015). Merwan, devant le 025 : « la version là est déjà très bien » — **une option n'entre dans un film que si la planche avant / après montre un gain net à l'œil ; dans le doute, rien**.
+
+- **L'optique (`dof`)** — une profondeur de champ par accumulation : chaque instant de l'obturateur voit la scène d'un autre point de l'objectif, sans passe de plus. C'est un nombre de pose (`cam.dof` : le flou, en pixels, de ce qui est très loin derrière le point visé ; `cam.focus` : où tombe la mise au point, en fraction de `d` — 1 le point visé, 0 `stage.focus`). **On la donne aux gros plans** (une pièce qu'on nomme, la caméra à quelques fois sa taille) : 6 à 8, jamais plus de 10 (les seize instants se séparent alors en copies). **Jamais** sur un plan large, une vue éclatée, une carte vue de haut, une chute : tout s'y lit d'un bord à l'autre. Dans `world.js`, chaque pose dit son optique — `const P = { …, dof: 0 }`, et `const CLOSE = { dof: LOOK.dof }` étalé dans les seules poses de gros plan (`unit: { ...P, ...CLOSE, … }`) — : une coupe n'hérite jamais du flou du plan d'avant, et la boucle revient sur `POSE0` avec le sien. Sur le 025 : le bloc ESP net, le disque de frein du premier plan et les traits du fond fondus — l'œil va où va la voix.
+- **La matière (`finish`)** — le grain d'usinage (des anneaux le long de l'axe de la pièce, trois au centimètre) et des traces de main qui cassent le reflet des pièces pleines du kit (`solid()`), effacés avant de devenir plus fins que quatre pixels. Se voit en plein écran sur un gros plan, pas sur une vignette. `material.userData.finish = false` garde une pièce nue (un cadran, un écran). Si `qa` trouve une image parasite sur une pièce qui bouge, c'est la première à éteindre.
+- **L'air (`air`)** — la lumière qui reste dans l'air **derrière** le plan net (la profondeur de l'image le dit) : rien devant le sujet, presque rien sur lui, un halo serré autour d'une source (`stage.air.source` : un point du monde, une lampe, des phares). Pour un vrai contre-jour seulement (l'horizon signal du 015). Essayé sur le 025 : sur l'accroche (les phares sous la pluie), pas de gain net à 270 px ; sur l'établi, il grise le vert — **éteint**. `floor` reste à 0 : au-dessus, c'est un voile.
+- **L'interrupteur, une ligne** — dans `world.js` : `export const LOOK = { dof: 8, air: 0, finish: 1, ...(typeof window !== "undefined" ? window.__SD_KIT : null) };`, et dans `main.js` : `createStage($("stage"), { scale: SIZE, far: …, keySize: 2.5, ...LOOK })`. `{ dof: 0, air: 0, finish: 0 }` rend le film d'avant.
+- **Juger** — `SD_KIT='{"dof":0,"air":0,"finish":0}' npm run look -- <ep> --file … --out …` tire l'avant, la même commande sans `SD_KIT` l'après (sous PowerShell : `$env:SD_KIT='…'`, puis `Remove-Item Env:SD_KIT`). Dans `essais.json`, `"kit": { "dof": 8, "finish": 1 }` essaie un réglage sur une image seule (une pose, la matière ; l'air d'un film dont le monde le règle à chaque image, non). `look` affiche ce qu'une image coûte à dessiner (médiane, en ms).
+- **Ce que ça coûte** — aucune passe de plus ; `finish` ajoute un peu de calcul sur les pièces pleines. Mesuré dans `look` sur le 025 (carte graphique partagée, mesure bruitée) : ≈ +10 à +20 % par image.
+
 ## La barre
 
 Chaque dossier doit montrer quelque chose que le précédent ne savait pas faire : le niveau de finition attendu est celui du dernier épisode rendu, **au-dessus**. Une image seulement « correcte » se refait avant de passer à la suivante.

@@ -84,8 +84,12 @@ L'habillage suit un nombre qui existe déjà : le `shell` du décor (quand le d�
 | `window({ lights })` | une fenêtre dans un mur et, loin derrière, quelques lumières de la nuit |
 | `glow({ at, size, k })` | une lumière qui a un endroit (un halo calculé dans son shader, toujours face à la caméra) |
 | `wash({ at, w, h })` | la coulée de lumière d'une lampe sur le mur sous elle |
+| `slats({ at, w, h, n, skew, k })` | la nuit qui entre par un volet : des bandes douces de lumière de la rue posées sur un mur ou une tête de lit (022) — larges, fondues sur tous les bords, fixes |
 | `motes({ min, size, drift })` | ce qui flotte dans l'air du lieu (vapeur, poussière), en traînées lentes |
 | `nightLights({ r0, r1, cell })` | une ville la nuit vue d'en haut : des lumières alignées sur les rues jusqu'à l'horizon |
+| `trolley({ at, w, d, h, drawers, syringes })` | un chariot à tiroirs sur roulettes (anesthésie, atelier), façade vers +z, quelques seringues posées dessus (024) |
+| `drip({ at, h, bags })` | un pied à perfusion : piètement à cinq branches, barre, poches (la plus entamée plus basse), tubulures enroulées (024) |
+| `boom({ from, at, w, h })` | un bras de plafond et son écran, un tracé de cœur fixe dessus — jamais un balayage (024) |
 
 Les objets sont aux dimensions réelles en centimètres ; ceux qui ont une face (`socket`, `clock`, `window`) la tournent avec `rotY`. **Le catalogue grandit dossier après dossier** : une brique écrite pour un épisode et qui resservira entre dans `details.js`, avec sa ligne dans ce tableau. Pour les longs, les prochaines à écrire sont celles de l'usine : chemins de câbles et tuyauteries au plafond, marquages au sol en pointillé, palettes, rampes de lumière, poussière dans un faisceau, silhouettes de verre au loin.
 
@@ -97,6 +101,12 @@ Les objets sont aux dimensions réelles en centimètres ; ceux qui ont une face 
 4. Une reprise au plus, puis le message final.
 
 Avec les zones TikTok au moins une fois (sans `--no-zones`) : rien de l'habillage ne doit attirer l'œil sous l'en-tête ni sous les boutons.
+
+## La première image, l'air et la matière (depuis le 2026-10-21)
+
+- **La première image passe avant tout le reste.** Les six points de `docs/recette-agents.md` (« La première image ») valent pour l'habillage : une touche qui brouille la silhouette du sujet, cache la menace qui est derrière lui, ou alourdit la perspective qui tire l'œil, sort — même juste. Sur la planche avant / après, l'image 0 se juge à 270 px de large, à côté de celle d'avant : au moins aussi forte, sinon on retire.
+- **Le décorateur sait où sont les lumières de son lieu** (une lampe, une fenêtre, des phares). Quand une vraie lumière est **derrière** le sujet dans un plan qui compte, il peut proposer l'air du plateau autour d'elle — `stage.air.source` = un point du monde attaché à cette lampe (un `Object3D` dans le décor, sa position monde lue à chaque image), `amount` ≈ 2, `spread` ≈ 0,15, `floor` 0 — sous « À changer ailleurs » dans son journal, avec sa planche : celui qui orchestre l'écrit dans `world.js`, si la planche montre un gain net à 270 px. Jamais un voile sur tout le plan, jamais sur l'établi (il grise son halo).
+- Ce qu'il pose reste aux rayons X : la matière (`finish`, le grain des pièces pleines) n'est pas pour l'habillage.
 
 ## Ce qu'il rend
 
