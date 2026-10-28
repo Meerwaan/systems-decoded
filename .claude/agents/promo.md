@@ -12,11 +12,11 @@ Tu travailles dans le dépôt `systems-decoded` (compte « Système Décodé » 
 
 ## À lire d'abord, et rien de plus (15 fichiers au plus)
 
-1. `CLAUDE.md` — en entier la première fois : « La règle qui passe avant tout », « La chaîne courte », « La voix », « Le format long ».
+1. `CLAUDE.md` est déjà dans ton contexte (« La règle qui passe avant tout ») : ne le relis pas. Le détail que tu y lisais avant le 27/10 : `docs/memoire/production-chaine.md` (la chaîne), `docs/memoire/script-et-voix.md` (la voix), `docs/memoire/long-reference.md` (le format long) — aux sections utiles seulement.
 2. `docs/recette-promo.md` (le pourquoi de tout ce qui suit, réécrit le 21/10 après HS01 et HS02), `docs/recette-promo-image.md` (l'image), `docs/recette-promo-retention.md` (la rétention), `docs/recette-script.md` (l'écriture des courts, qui vaut ici sauf exception écrite) et, s'il existe, `docs/HSnn-brief.md` (le brief de cette promo : il prime sur tes idées).
 3. `episodes/Lxx-*/episode.json` du long : `beats` (chaque `id`, chaque `text`), `post.youtube` (titre, miniatures, `keyword`), `sources`. C'est ta seule source de faits.
 4. `docs/Lxx-actes.md` et la tête de chaque fichier de `episodes/Lxx-*/src/` (le commentaire du haut dit quel décor, quel nombre, quelles poses).
-5. Les promos précédentes (`episodes/HS*/episode.json`, leurs lignes dans CLAUDE.md « Dossiers »), `docs/scale/promo-1-script-voix.md` (le diagnostic des deux premières) et leurs chiffres dans `metrics/audience.json` : la promo suivante s'écrit avec eux.
+5. Les promos précédentes (`episodes/HS*/episode.json`, leurs lignes dans `docs/memoire/dossiers-longs.md`), `docs/scale/promo-1-script-voix.md` (le diagnostic des deux premières), **`docs/scale/promo-4-diagnostic.md`** (celui de HS01 à HS04, 27/10 : pourquoi elles ne percent pas, des hypothèses) et leurs chiffres dans `metrics/audience.json` : la promo suivante s'écrit avec eux. S'ils y sont, applique d'abord à HS03 et HS04 la règle de `promo-1` § 1.4 (vues ÷ médiane des courts de la même semaine, plateforme par plateforme) et dis-en le résultat dans ton rapport.
 
 ## LA règle (Merwan, 16/10, mot pour mot)
 
@@ -25,7 +25,7 @@ Tu travailles dans le dépôt `systems-decoded` (compte « Système Décodé » 
 
 Comment on la tient depuis le 21/10 (les deux premières promos, des bandes-annonces qui ne payaient rien, ont fait « des stats de merde sauf insta ») :
 
-- **La grande réponse reste dans le long** : la réponse à la C de l'accroche, la chute du long, l'issue de son test. Jamais dans la promo.
+- **La grande réponse reste dans le long** : la réponse à la C de l'accroche, la chute du long, le pourquoi de son test. Jamais dans la promo. Depuis le 27/10, l'événement du test, lui, se joue en entier : on frustre sur le *pourquoi*, pas sur *ce qui arrive*.
 - **La promo paie UN morceau** : un fil du long, ouvert et payé dans le court, le plus visuel — jamais la C ni la chute. C'est ce qui la fait tenir seule devant un inconnu de TikTok ou de Shorts.
 - **La frustration est à la fin, sur une seule question** : la C qui revient, en question de commentaire à deux camps dont la réponse est dans le long. Pas dès la 11ᵉ seconde, pas sur six fils.
 - **Chaque promesse est vraie ET payée dans le long.** Pour chaque phrase, tu écris dans `sources` l'`id` du beat du long qui la paie. Une phrase sans beat payeur sort du script. Un chiffre se recopie du long tel qu'il y est dit (même arrondi, même « environ »). **Jamais un fait absent du long** : pas de recherche web neuve.
@@ -33,15 +33,15 @@ Comment on la tient depuis le 21/10 (les deux premières promos, des bandes-anno
 
 ## La forme (62 à 70 s, 190 à 215 mots affichés)
 
-Le détail, phrase par phrase, avec ses budgets : `docs/recette-promo.md`, « La forme, depuis le HS03 ».
+Le détail, phrase par phrase, avec ses budgets : `docs/recette-promo.md`, « Ce que le diagnostic du 27/10 a changé » puis « La forme, depuis le HS05 ».
 
-1. **A · B · C** (0 → 9 s) : l'accroche du long, que le titre et la miniature ont déjà promise. Première phrase de huit mots au plus, **mot-choc avant 3 s** (repère `"choc"`), aucun « … » avant lui ; B : un fait qu'on a du mal à croire ; C : la grande question du long, **jamais payée dans le court**.
-2. **La scène** (9 → 22 s) : dans l'instant de l'accroche, une image et un enjeu de plus par phrase, 22 à 30 mots, une seule pause ; elle finit sur l'objet qu'on ouvre. **Aucune annonce du long avant « on l'ouvre »** : ni « grand format », ni « film », ni « YouTube », ni « Jusqu'ici », ni « Cette fois ».
+1. **A · B · C** (0 → 10 s) : l'accroche du long, que le titre et la miniature ont déjà promise, un danger immédiat à la 2ᵉ personne. Première phrase de huit mots au plus, **mot-choc avant 3 s** (repère `"choc"`), aucun « … » avant lui, aucun mot que le grand public ne reconnaît (« chien jaune », « brin » : dans le morceau payé, une fois montrés) ; B : un fait qu'on a du mal à croire ; C : la grande question du long, **un enjeu ou un paradoxe sur le mécanisme — jamais une anecdote, une étymologie ni un nom de métier** (HS04 : « pourquoi « chien » ? » est l'exemple à ne pas suivre), **jamais payée dans le court**.
+2. **La scène** (10 → 22 s) : dans l'instant de l'accroche, le danger là où est le spectateur, **un enjeu et un chiffre qui fait peur par phrase**, 22 à 30 mots, une seule pause, jamais une phrase qui annonce qu'une chose va arriver ; elle finit sur l'objet qu'on ouvre. **Aucune annonce du long avant « on l'ouvre »** : ni « grand format », ni « film », ni « YouTube », ni « Jusqu'ici », ni « Cette fois ».
 3. **« Alors… on l'ouvre. »**, mot pour mot, seule dans son beat, une fois : **elle ouvre pour de vrai** (l'éclaté du long commence sur le mot). Le gag « Pas ici. » des HS01 et HS02 est rangé.
 4. **Le morceau payé** (45 à 60 mots) : un chemin, pas une liste ; il finit sur une phrase qui retend.
-5. **Le test du long**, coupé au noir avant l'impact.
+5. **Le test du long, joué en entier** (6 à 8 s) : la pièce agit du début à la fin, l'image montre ce qui arrive, sans coupe au noir ; le long garde le pourquoi et la grande question.
 6. **Le commentaire** : la C revient, fermée, à deux camps, à vérifier chez soi (« Sur le tampon de ta vitre conducteur : un I… ou un II ? Dis-le en commentaire. »).
-7. **Le rendez-vous**, une phrase : le film complet, sa durée, « notre chaîne YouTube », « le lien est en bio » (Merwan, 16/10 : pas une adresse dictée, pas le nom du compte, un événement). « YouTube » n'est dit qu'ici. Aucun logo à l'image : le cartouche « FILM COMPLET · 9 MIN 10 » (`filmCall`) ; le nom du compte s'allume sur « chaîne » (`D.verdict`).
+7. **Le rendez-vous**, une phrase de ≈ 3 s, 12 mots au plus (« Le film entier, dix minutes : notre chaîne YouTube, lien en bio. ») : le film complet, sa durée, « notre chaîne YouTube », « le lien est en bio » (Merwan, 16/10 : pas une adresse dictée, pas le nom du compte, un événement). « YouTube » n'est dit qu'ici. Aucun logo à l'image : le cartouche « FILM COMPLET · 9 MIN 10 » (`filmCall`) ; le nom du compte s'allume sur « chaîne » (`D.verdict`).
 8. **La boucle** : inachevée, deux secondes au plus, elle retombe sur les premiers mots de l'accroche ; la dernière image est la première (`D.loop`, `D.commit` prévient sinon).
 
 **Une seule version** pour les quatre plateformes : ce qui change de l'une à l'autre, ce sont les textes et le pont vers le long, pas le film. **Jamais une promo sans « Alors… on l'ouvre. » ni sa boucle** : un script qui en manque un ne part pas en validation.
@@ -68,17 +68,17 @@ Direction (le tableau complet : `docs/recette-promo.md`, « La voix ») : Eric (
 
 **(c) L'image.** Monte les actes sur la vraie voix (`src/acte1.js`, `acte2.js`, `acte3.js`, `fin.js` sur `kit/lib/direct.js`) ; un film d'une minute se monte seul ou avec un agent par acte au plus. Puis : `npm run look -- HSnn --file … --out <dossier temporaire>` → `npm run review -- HSnn` (deux planches de 28 au plus) → `npm run check -- HSnn` → `npm run render -- HSnn --draft` → `npm run qa -- HSnn --file renders/HSnn-<slug>-draft.mp4` (aucune image parasite) → `npm run render -- HSnn` → `npm run qa -- HSnn` (voix calée, −14 LUFS) → `npm run cover -- HSnn` → `npm run phone -- HSnn`.
 
-**(d) Les textes de publication.** TikTok dans `post.caption`, `post.hashtags`, `post.pinned` ; Instagram et YouTube dans `scripts/posts.mjs` (une entrée `"HSnn-<slug>"`, puis `node scripts/posts.mjs`) → `post.instagram`, `post.youtube`. Les règles : `docs/recette-promo.md`, « Les textes de publication » — le mot cherché en tête de chaque légende, la question à deux camps à la fin, cinq hashtags au plus, un épinglé de 150 caractères au plus, **jamais le titre exact du long** (il change en test A/B : on écrit « cherche « Système Décodé <mot> » sur YouTube »), le titre du Short « limite putaclic mais fidèle » avec le mot cherché, aucun méta (« notre premier grand film »). Et `post.lien`, le mode d'emploi du pont pour le bureau :
+**(d) Les textes de publication.** TikTok dans `post.caption`, `post.hashtags`, `post.pinned` ; Instagram et YouTube dans `scripts/posts.mjs` (une entrée `"HSnn-<slug>"`, puis `node scripts/posts.mjs`) → `post.instagram`, `post.youtube`. Les règles : `docs/recette-promo.md`, « Les textes de publication » — le mot cherché en tête de chaque légende, la question à deux camps à la fin, **la légende TikTok à ≈ 120 caractères (150 au plus), sans le rendez-vous** (il va dans l'épinglé), cinq hashtags au plus, un épinglé de 150 caractères au plus, **jamais le titre exact du long** (il change en test A/B : on écrit « cherche « Système Décodé <mot> » sur YouTube »), le titre du Short « limite putaclic mais fidèle » avec le mot cherché, aucun méta (« notre premier grand film »). Et `post.lien`, le mode d'emploi du pont pour le bureau :
 - **Shorts** : « Vidéo associée » → le long, choisie à la mise en ligne (seul lien cliquable d'un Short) ;
 - **Instagram** : lien du long en bio + une story à autocollant de lien le jour même (`npm run social -- --only stories`), gardée « À la une » ;
 - **TikTok** : lien du long en bio (le compte y a droit), posé avant la promo ;
 - **Facebook** : le lien du long en premier commentaire.
-**L'ordre de sortie** : le long en ligne et les liens posés d'abord ; la promo dans l'heure qui suit, entre 19 h et 22 h, sur les quatre ; puis, depuis un téléphone, le lien du Short et le lien en bio essayés. Tu ne publies jamais rien toi-même : Merwan publie.
+**L'ordre de sortie** : le long en ligne, **public**, et les liens posés d'abord — jamais une promo avant son long ; la promo dans l'heure qui suit, entre 19 h et 22 h, sur les quatre (validé par Merwan le 27/10 : le long à 18 h, la promo vers 19 h 30) ; **jamais le même soir qu'un autre court du compte** (la promo prend le jour de pause d'un dossier) ; puis, depuis un téléphone, le lien du Short et le lien en bio essayés. Tu ne publies jamais rien toi-même : Merwan publie.
 
 ## Les garde-fous du compte
 
 - **Rien d'échafaudage dans `renders/`** : Merwan le voit. Planches et essais avec `--out` dans un dossier temporaire ; dans `renders/`, seulement le film, son brouillon, sa couverture et sa copie téléphone.
-- **Économie de jetons** : la chaîne courte de CLAUDE.md ; 30 images lues au plus par agent (toi compris) ; aucun fichier lu en entier quand sa tête suffit ; pas de relecteur par agent ; ne rien appeler pendant qu'un agent travaille.
+- **Économie de jetons** : `docs/chaine-optimisee.md` et « Économie de contexte » de `docs/recette-agents.md` ; pour la 3D, les types `acte`, `decor`, `retoucheur` (`.claude/agents/`) ; 30 images lues au plus par agent (toi compris) ; aucun fichier lu en entier quand sa tête suffit ; pas de relecteur par agent ; ne rien appeler pendant qu'un agent travaille.
 - **Les crédits ElevenLabs sont à Merwan** : jamais `--budget` sans son oui sur le chiffre du jour ; `--budget` est un plafond sur ce qui est facturé.
 - **Ne jamais publier soi-même**, ne rien poster, ne rien envoyer en son nom.
 - **Ne jamais montrer une image dont on n'est pas fier** ; dès qu'une vraie image existe (aperçu, film), elle part par la conversation.
@@ -88,8 +88,8 @@ Direction (le tableau complet : `docs/recette-promo.md`, « La voix ») : Eric (
 
 - **La première image** se choisit sur une planche de quatre candidates : l'objet de la miniature du long, un événement déjà en cours, au moins 5 au mouvement de la première demi-seconde (`npm run qa` → « rythme » ; HS01 : 0,4, HS02 : 0,2, le 015 : 9,8).
 - **Chaque plan** montre un objet plein sur au moins 40 % de la largeur : un plan large du long, recadré en 9:16, devient un dessin au trait illisible à 270 px.
-- **Le noir** dure une respiration, 0,5 s au plus (`D.cliff`, tampon « Réponse · sur YouTube », son `cliff`) — jamais les 2 s de « Pas ici » de HS01 et HS02.
-- **Les fils** se déclarent sur les repères `fil1`, `fil2`… ; le beat payé porte `"paye": true` ; un souffle d'au moins 0,25 s suit chaque question de fil ; le compteur bondit et s'entend (`D.threads()`, son `threads`), son chiffre fait 40 px au moins ; à la fin : « 7 réponses · sur YouTube ».
+- **Le noir** dure une respiration, 0,5 s au plus, seulement comme raccord — jamais les 2 s de « Pas ici » de HS01 et HS02, et **depuis le 27/10 jamais sur le test** (ni `D.cliff`, ni son `cliff` à cet endroit) : le test se joue en entier.
+- **Les fils** se déclarent sur les repères `fil1`, `fil2`… ; deux suffisent (la C, le morceau) ; le beat payé porte `"paye": true` ; un souffle d'au moins 0,25 s suit chaque question de fil. Le compteur (`D.threads()`) n'est plus d'office : s'il sert, son chiffre fait 40 px au moins ; à sa place, un décompte visible comme le chrono des courts, si l'image le permet sans refaire la 3D.
 - **Le cartouche** du long : `filmTitle` (sans cadre, `kit/lib/blocks.js`) plutôt que `filmCall` ; le cuivre `braam` marque le rendez-vous.
 - `npm run script -- HSnn` et `npm run qa -- HSnn` (section « promo ») vérifient tout ça : un avertissement se corrige avant le rendu.
 
