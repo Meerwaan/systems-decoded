@@ -18,18 +18,19 @@
   "cover": {
     "at": "eclate$",
     "title": [
-      "Détecteur de CO"
+      "Ton détecteur",
+      "de CO"
     ],
     "cam": {
       "tx": 0,
-      "ty": 8,
-      "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
-      "shift": -430,
+      "ty": 5.7,
+      "tz": 6,
+      "d": 252,
+      "az": -14,
+      "el": 30,
+      "fov": 30,
+      "shift": -400,
       "side": 0,
-      "fov": 28,
       "roll": 0
     }
   },
@@ -74,7 +75,11 @@
     "La cellule électrochimique : le CO s'oxyde sur une électrode, le courant est proportionnel à la concentration ; la pile alimente la puce et le buzzer — le gaz ne fait pas marcher l'alarme (fiches Winsen, brevets) [S]. « Brûle » simplifie « s'oxyde ».",
     "Seuils de la norme EN 50291-1, lus chez des fabricants qui la citent (norme non lue) : 50 ppm, alarme entre 60 et 90 min ; 100 ppm, entre 10 et 40 min ; 300 ppm, moins de 3 min [S]. La puce compare la dose (concentration et durée) à cette table : « l'additionne » simplifie.",
     "Détecteur de fumée obligatoire dans les logements depuis 2015 ; détecteur de CO non obligatoire (propositions de loi de 2024, aucun vote final trouvé) [S].",
-    "Annonce du 029 — un sac gonflé divise par deux le risque de mourir dans une avalanche : Haegeli et al., Resuscitation 2014 (22 % → 11 %) [P, résumé]."
+    "Annonce du 029 — un sac gonflé divise par deux le risque de mourir dans une avalanche : Haegeli et al., Resuscitation 2014 (22 % → 11 %) [P, résumé].",
+    "L'image reconstitue : l'appartement (chambre du 022, couloir, chaudière, chambre des enfants) est un scénario, à l'échelle vraie ; la fuite de la chaudière, son trajet et la brume du gaz sont dessinés (le CO est invisible : il se mélange à l'air à toutes les hauteurs, il ne s'étage pas). Les pièces du détecteur ont des tailles illustratives ; la « somme » de la puce (l'anneau et la jauge) est une image du calcul, pas un affichage réel.",
+    "Le sang est une maquette à son échelle propre (aucune longueur affichée) : des globules de verre et leurs perles d'oxygène (veille) ou de CO (signal) — une image de l'affinité du CO pour l'hémoglobine, pas une vue au microscope.",
+    "L'en-tête : l'heure de la nuit est celle du scénario (01:48 → 03:10). Les ppm affichés ne s'arrêtent que sur 50 et 100, les zones de la norme EN 50291-1 telles que les fabricants les publient (50 ppm : alarme entre 60 et 90 min ; 100 ppm : entre 10 et 40 min) ; entre les deux le compteur court.",
+    "Vue éclatée : les petites pièces (membrane, cellule, buzzer, pile) sont montrées plus grandes qu'en vrai, pour se lire ; une seule électrode est dessinée ; l'anneau de douze segments est une image du calcul, pas un affichage réel."
   ],
   "beats": [
     {
@@ -177,13 +182,81 @@
   ],
   "cues": {
     "choc": "accroche:empoisonne",
+    "detecteur": "accroche:détecteur-0.1",
+    "rien": "accroche:rien-0.1",
+    "normal": "promesse-0.1",
+    "faible": "promesse:faible-0.1",
+    "heure1": "promesse:heure-0.1",
+    "sauf": "promesse:Sauf-0.1",
+    "cegaz": "promesse:gaz-0.1",
+    "toscene": "scene-0.14",
+    "monoxyde": "scene:monoxyde-0.1",
+    "chaudiere": "scene:chaudière-0.1",
+    "odeur": "scene:odeur-0.1",
+    "sang": "scene:sang-0.1",
+    "place": "scene:place-0.1",
+    "oxygene": "scene:l'oxygène-0.1",
+    "tete": "scene:Mal-0.1",
+    "rendors": "scene:rendors-0.1",
+    "mur": "scene:mur-0.1",
+    "compte1": "scene:compte-0.1",
+    "tosystem": "ouvre-0.14",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "air": "eclate:L'air-0.1",
+    "grille": "eclate:grille-0.1",
+    "membrane": "eclate:membrane-0.1",
+    "electrode": "eclate:électrode-0.1",
+    "derriere": "eclate:Derrière-0.1",
+    "puce": "eclate:puce-0.1",
+    "buzzer": "eclate:buzzer-0.1",
+    "pile": "eclate:pile-0.1",
+    "torepos": "repos-0.14",
+    "brule": "repos:brûle-0.1",
+    "courant": "repos:courant-0.1",
+    "proportionnel": "repos:proportionnel-0.1",
+    "additionne": "repos:l'additionne-0.1",
+    "minute1": "repos:minute-0.1",
+    "minute2": "repos:minute#2-0.1",
+    "sang2": "repos:sang-0.1",
+    "toseuil": "seuil-0.1",
+    "passer": "seuil:passer-0.1",
     "tozero": "zero-0.12",
+    "passe": "zero:passe-0.1",
+    "monte": "zero:monte-0.1",
+    "charge": "zero:charge-0.1",
+    "toujours": "zero:toujours-0.1",
+    "dix": "reponse-0.1",
+    "vingt": "reponse:Vingt-0.1",
+    "seuil2": "reponse:seuil-0.1",
     "trigger": "reponse:hurle-0.05",
+    "yeux": "reponse:Tu-0.12",
+    "fenetre": "reponse:fenêtre-0.2",
+    "dehors": "reponse:Dehors-0.12",
+    "enfants": "reponse:enfants-0.1",
+    "respirent": "reponse:respirent-0.1",
     "toverdict": "chute-0.12",
+    "secret": "chute:secret-0.1",
+    "sent": "chute:sent-0.1",
+    "strike": "chute:gaz$+0.05",
     "verdict": "chute:compte",
+    "avant": "chute:avant-0.05",
+    "dangereuse": "chute:dangereuse-0.1",
     "tocta": "comment-0.12",
+    "plafond": "comment:plafond-0.1",
+    "fumee1": "comment:fumée-0.1",
+    "jamais": "comment:Jamais-0.1",
+    "oblig": "comment:Celui-0.1",
+    "nonoblig": "comment:Celui#2-0.1",
+    "ask": "comment:commentaire-0.1",
+    "duelA": "comment:fumée#3-0.05",
+    "duelB": "comment:CO#3-0.05",
+    "tolike": "like-0.12",
+    "soir": "like:soir-0.1",
+    "toabo": "abo-0.12",
+    "avalanche": "abo:avalanche-0.1",
+    "sac": "abo:sac-0.1",
+    "deux": "abo:deux-0.1",
     "toloop": "boucle-0.12",
     "rewind": "boucle:jour"
   },
@@ -210,6 +283,10 @@
           1
         ],
         [
+          "dehors",
+          0.5
+        ],
+        [
           "toverdict",
           0.45
         ],
@@ -224,10 +301,39 @@
       ]
     },
     {
-      "type": "hit",
+      "type": "sample",
+      "file": "028-chaudiere-b.wav",
+      "loop": true,
+      "from": 0,
+      "to": "ouvre-0.1",
+      "fade": 0.3,
+      "gain": 0
+    },
+    {
+      "type": "sample",
+      "file": "028-chaudiere-b.wav",
+      "loop": true,
+      "from": "tozero",
+      "to": "reponse:hurle",
+      "fade": 0.6,
+      "gain": 0
+    },
+    {
+      "type": "sample",
+      "file": "028-dehors-a.wav",
+      "loop": true,
+      "from": "reponse:fenêtre$",
+      "to": "chute",
+      "fade": 0.5,
+      "gain": 2
+    },
+    {
+      "type": "sample",
+      "file": "028-flamme-a.wav",
       "at": 0.02,
-      "gain": -13,
-      "pitch": 0.9
+      "offset": 1.3,
+      "gain": -10,
+      "bus": "main"
     },
     {
       "type": "impact",
@@ -238,13 +344,82 @@
     {
       "type": "swish",
       "at": 0.14,
-      "dur": 0.3,
+      "dur": 0.18,
       "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "accroche:empoisonne$+0.06",
+      "gain": -13
+    },
+    {
+      "type": "hit",
+      "at": "accroche$+0.12",
+      "gain": -15,
+      "pitch": 0.8
+    },
+    {
+      "type": "click",
+      "at": "promesse:heure$+0.08",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "hit",
+      "at": "promesse$+0.08",
+      "gain": -14,
+      "pitch": 0.85
+    },
+    {
+      "type": "swish",
+      "at": "toscene-0.05",
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "scene:chaudière$+0.05",
+      "gain": -18,
+      "pitch": 0.9
+    },
+    {
+      "type": "swish",
+      "at": "scene:odeur$+0.24",
+      "dur": 0.36,
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "scene:sang$+0.05",
+      "gain": -17,
+      "pitch": 0.6
+    },
+    {
+      "type": "hit",
+      "at": "scene:l'oxygène$+0.08",
+      "gain": -14
+    },
+    {
+      "type": "hit",
+      "at": "scene:tête$+0.06",
+      "gain": -17,
+      "pitch": 0.6
+    },
+    {
+      "type": "swish",
+      "at": "scene:rendors$+0.2",
+      "dur": 0.3,
+      "gain": -18
+    },
+    {
+      "type": "tick",
+      "at": "scene$+0.04",
+      "gain": -17
     },
     {
       "type": "suck",
       "to": "ouvre-0.04",
-      "dur": 0.6,
+      "dur": 0.55,
       "gain": -17
     },
     {
@@ -255,9 +430,102 @@
     },
     {
       "type": "impact",
-      "at": "explode",
+      "at": "ouvre$+0.05",
       "gain": -16,
       "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.06",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.3",
+      "gain": -18,
+      "pitch": 0.95
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.55",
+      "gain": -19,
+      "pitch": 1.2
+    },
+    {
+      "type": "sample",
+      "file": "028-clic-a.wav",
+      "at": "eclate:grille$+0.06",
+      "offset": 0.22,
+      "gain": -16
+    },
+    {
+      "type": "sample",
+      "file": "028-clic-a.wav",
+      "at": "eclate:membrane$+0.08",
+      "offset": 0.22,
+      "gain": -16
+    },
+    {
+      "type": "sample",
+      "file": "028-clic-a.wav",
+      "at": "eclate:électrode$+0.1",
+      "offset": 0.22,
+      "gain": -16
+    },
+    {
+      "type": "sample",
+      "file": "028-clic-a.wav",
+      "at": "eclate:puce$+0.06",
+      "offset": 0.22,
+      "gain": -16
+    },
+    {
+      "type": "sample",
+      "file": "028-clic-a.wav",
+      "at": "eclate:buzzer$+0.06",
+      "offset": 0.22,
+      "gain": -16
+    },
+    {
+      "type": "sample",
+      "file": "028-clic-a.wav",
+      "at": "eclate:pile$+0.08",
+      "offset": 0.22,
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "repos:brûle$+0.06",
+      "gain": -16,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "repos:gaz$+0.06",
+      "gain": -17
+    },
+    {
+      "type": "tick",
+      "at": "repos:minute$+0.02",
+      "gain": -18
+    },
+    {
+      "type": "tick",
+      "at": "repos:minute#2$+0.06",
+      "gain": -18
+    },
+    {
+      "type": "hit",
+      "at": "repos$+0.08",
+      "gain": -15,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "seuil:Abonne-toi$+0.06",
+      "gain": -17,
+      "pitch": 1.15
     },
     {
       "type": "impact",
@@ -266,17 +534,131 @@
       "size": 1.2
     },
     {
+      "type": "swish",
+      "at": "zero:passe$+0.18",
+      "dur": 0.3,
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "zero:encore$+0.06",
+      "gain": -14
+    },
+    {
+      "type": "hit",
+      "at": "zero:charge$+0.05",
+      "gain": -17,
+      "pitch": 0.6
+    },
+    {
+      "type": "tick",
+      "at": "reponse:minutes$+0.06",
+      "gain": -16
+    },
+    {
+      "type": "tick",
+      "at": "reponse:Vingt$+0.06",
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "reponse:seuil$+0.06",
+      "gain": -13
+    },
+    {
       "type": "impact",
-      "at": "trigger",
+      "at": "reponse:hurle$+0.1",
       "gain": -10,
       "size": 1.4
     },
     {
+      "type": "sample",
+      "file": "028-alarme-b.wav",
+      "at": "reponse:hurle$+0.02",
+      "to": "reponse:Dehors",
+      "offset": 2.35,
+      "gain": -11,
+      "fade": 0.25
+    },
+    {
+      "type": "sample",
+      "file": "028-fenetre-b.wav",
+      "at": "reponse:fenêtre$+0.02",
+      "offset": 0.95,
+      "gain": -12
+    },
+    {
+      "type": "swish",
+      "at": "reponse:Dehors$+0.14",
+      "dur": 0.24,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "reponse:enfants$",
+      "to": "chute-0.2",
+      "depth": -6
+    },
+    {
+      "type": "hit",
+      "at": "strike",
+      "gain": -13
+    },
+    {
       "type": "blip",
-      "at": "verdict",
+      "at": "chute:dose$+0.06",
       "gain": -15,
       "pitch": 0.7,
       "heavy": true
+    },
+    {
+      "type": "click",
+      "at": "comment:plafond$+0.06",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "comment:gaz$+0.06",
+      "gain": -15,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "comment:obligatoire$+0.06",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "comment:non$+0.06",
+      "gain": -15
+    },
+    {
+      "type": "click",
+      "at": "comment:fumée#3$+0.05",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "comment$+0.06",
+      "gain": -16,
+      "pitch": 1.15
+    },
+    {
+      "type": "click",
+      "at": "like:Like$+0.08",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "abo:dossier$+0.06",
+      "gain": -15
+    },
+    {
+      "type": "swish",
+      "at": "abo:avalanche$+0.14",
+      "dur": 0.22,
+      "gain": -17
     },
     {
       "type": "impact",
@@ -286,8 +668,8 @@
     },
     {
       "type": "rewind",
-      "at": "rewind",
-      "dur": 1,
+      "at": "boucle$+0.02",
+      "dur": 0.65,
       "gain": -21
     }
   ]
