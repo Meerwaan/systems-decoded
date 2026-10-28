@@ -120,6 +120,26 @@
       "instagram": "2026-10-21T17:45",
       "youtube": "2026-10-21T17:49"
     },
+    "026-soyouz-ms10": {
+      "tiktok": "2026-10-22T17:55",
+      "instagram": "2026-10-22T18:00",
+      "youtube": "2026-10-22T18:05"
+    },
+    "027-voie-de-detresse": {
+      "instagram": "2026-10-23T19:04",
+      "tiktok": "2026-10-23T19:07",
+      "youtube": "2026-10-23T19:10"
+    },
+    "028-detecteur-co": {
+      "tiktok": "2026-10-26T16:43",
+      "instagram": "2026-10-26T16:50",
+      "youtube": "2026-10-26T19:14"
+    },
+    "029-airbag-avalanche": {
+      "tiktok": "2026-10-28T18:25",
+      "instagram": "2026-10-28T18:29",
+      "youtube": "2026-10-29T16:08"
+    },
     "HS01-pare-brise": {
       "tiktok": "2026-10-16T17:37",
       "youtube": "2026-10-19T20:36",
@@ -130,11 +150,24 @@
       "instagram": "2026-10-20T18:13",
       "tiktok": "2026-10-20T21:28"
     },
+    "HS03-evacuation-avion": {
+      "tiktok": "2026-10-23T21:30",
+      "instagram": "2026-10-23T21:31",
+      "youtube": "2026-10-23T21:35"
+    },
+    "HS04-porte-avions": {
+      "tiktok": "2026-10-27T18:53",
+      "instagram": "2026-10-27T18:57",
+      "youtube": "2026-10-28T18:17"
+    },
     "L01-pare-brise": {
       "youtube": "2026-10-19T20:36"
     },
     "L02-poste-haute-tension": {
       "youtube": "2026-10-20T22:05"
+    },
+    "L03-evacuation-avion": {
+      "youtube": "2026-10-23T20:54"
     }
   }
 }

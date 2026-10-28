@@ -2433,6 +2433,41 @@
           "nom": "decors",
           "debut": "2026-10-21T10:04:10.249Z",
           "fin": "2026-10-21T15:17:37.733Z"
+        },
+        {
+          "nom": "habillage",
+          "debut": "2026-10-22T01:35:26.824Z",
+          "fin": "2026-10-22T01:45:49.337Z"
+        },
+        {
+          "nom": "image0",
+          "debut": "2026-10-22T01:45:49.337Z",
+          "fin": "2026-10-22T01:46:39.604Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-22T01:46:39.604Z",
+          "fin": "2026-10-22T02:23:24.125Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-10-22T02:23:24.125Z",
+          "fin": "2026-10-22T02:24:00.988Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-22T02:24:00.988Z",
+          "fin": "2026-10-22T13:39:52.196Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-22T13:39:52.196Z",
+          "fin": "2026-10-22T13:44:02.267Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-22T13:44:02.267Z",
+          "fin": "2026-10-22T13:50:07.701Z"
         }
       ],
       "agents": [
@@ -2489,6 +2524,51 @@
           "minutes": 1.4,
           "outils": 7,
           "images": 0
+        },
+        {
+          "nom": "habillage",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 325638,
+          "minutes": 10,
+          "outils": 34,
+          "images": 24
+        },
+        {
+          "nom": "acte2",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 326633,
+          "minutes": 12,
+          "outils": 43,
+          "images": 26
+        },
+        {
+          "nom": "acte1",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 346557,
+          "minutes": 15,
+          "outils": 40,
+          "images": 26
+        },
+        {
+          "nom": "fin",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 314326,
+          "minutes": 10,
+          "outils": 36,
+          "images": 26
+        },
+        {
+          "nom": "acte3",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 365073,
+          "minutes": 24,
+          "outils": 75,
+          "images": 26
         }
       ],
       "jauges": []
@@ -2509,6 +2589,51 @@
           "nom": "voix",
           "debut": "2026-10-21T05:33:11.925Z",
           "fin": "2026-10-21T15:17:38.403Z"
+        },
+        {
+          "nom": "architecte",
+          "debut": "2026-10-22T01:35:29.313Z",
+          "fin": "2026-10-22T01:58:30.337Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-10-22T01:58:30.337Z",
+          "fin": "2026-10-22T02:22:00.009Z"
+        },
+        {
+          "nom": "premiere-image",
+          "debut": "2026-10-22T02:22:00.009Z",
+          "fin": "2026-10-22T06:36:21.281Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-22T06:36:21.281Z",
+          "fin": "2026-10-22T07:00:07.249Z"
+        },
+        {
+          "nom": "028",
+          "debut": "2026-10-22T07:00:07.249Z",
+          "fin": "2026-10-22T07:00:07.940Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-10-22T07:00:07.940Z",
+          "fin": "2026-10-22T07:11:45.931Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-22T07:11:45.931Z",
+          "fin": "2026-10-22T07:38:33.415Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-22T07:38:33.415Z",
+          "fin": "2026-10-22T07:40:55.287Z"
+        },
+        {
+          "nom": "couverture",
+          "debut": "2026-10-22T07:40:55.287Z",
+          "fin": "2026-10-22T07:43:44.968Z"
         }
       ],
       "agents": [
@@ -2529,9 +2654,88 @@
           "minutes": 1.6,
           "outils": 8,
           "images": 0
+        },
+        {
+          "nom": "acte1",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 360140,
+          "minutes": 23,
+          "outils": 75,
+          "images": 26
+        },
+        {
+          "nom": "architecte",
+          "genre": "architecte",
+          "modele": "opus",
+          "jetons": 417800,
+          "minutes": 22,
+          "outils": 59,
+          "images": 12
+        },
+        {
+          "nom": "model",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 353396,
+          "minutes": 17,
+          "outils": 36,
+          "images": 30
+        },
+        {
+          "nom": "foyer",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 407459,
+          "minutes": 23,
+          "outils": 44,
+          "images": 30
+        },
+        {
+          "nom": "acte2",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 312125,
+          "minutes": 12,
+          "outils": 42,
+          "images": 26
+        },
+        {
+          "nom": "acte3",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 323687,
+          "minutes": 11,
+          "outils": 46,
+          "images": 26
+        },
+        {
+          "nom": "fin",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 312182,
+          "minutes": 12,
+          "outils": 39,
+          "images": 26
+        },
+        {
+          "nom": "reprise-acte1",
+          "genre": "reprise",
+          "modele": "opus",
+          "jetons": 267367,
+          "minutes": 21,
+          "outils": 38,
+          "images": 12
         }
       ],
-      "jauges": []
+      "jauges": [
+        {
+          "t": "2026-10-22T07:00:06.574Z",
+          "quoi": "reprise actes",
+          "session": 0,
+          "hebdo": 86
+        }
+      ]
     },
     "029": {
       "etapes": [
@@ -2549,6 +2753,46 @@
           "nom": "voix",
           "debut": "2026-10-21T05:33:13.977Z",
           "fin": "2026-10-21T15:17:39.085Z"
+        },
+        {
+          "nom": "architecte",
+          "debut": "2026-10-22T01:35:26.084Z",
+          "fin": "2026-10-22T02:00:07.191Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-10-22T02:00:07.191Z",
+          "fin": "2026-10-22T06:37:58.504Z"
+        },
+        {
+          "nom": "habillage",
+          "debut": "2026-10-22T06:37:58.504Z",
+          "fin": "2026-10-22T06:46:36.063Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-22T06:46:36.063Z",
+          "fin": "2026-10-22T07:13:45.230Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-10-22T07:13:45.230Z",
+          "fin": "2026-10-22T07:15:26.224Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-22T07:15:26.224Z",
+          "fin": "2026-10-22T07:26:42.183Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-22T07:26:42.183Z",
+          "fin": "2026-10-22T07:31:02.885Z"
+        },
+        {
+          "nom": "phone",
+          "debut": "2026-10-22T07:31:02.885Z",
+          "fin": "2026-10-22T07:33:25.878Z"
         }
       ],
       "agents": [
@@ -2569,9 +2813,115 @@
           "minutes": 1.8,
           "outils": 9,
           "images": 0
+        },
+        {
+          "nom": "architecte",
+          "genre": "architecte",
+          "modele": "opus",
+          "jetons": 413780,
+          "minutes": 24,
+          "outils": 59,
+          "images": 12
+        },
+        {
+          "nom": "model",
+          "genre": "systeme",
+          "modele": "opus",
+          "jetons": 364937,
+          "minutes": 19,
+          "outils": 31,
+          "images": 30
+        },
+        {
+          "nom": "pente",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 414519,
+          "minutes": 27,
+          "outils": 39,
+          "images": 30
+        },
+        {
+          "nom": "habillage",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 298464,
+          "minutes": 10,
+          "outils": 29,
+          "images": 32
+        },
+        {
+          "nom": "pente-reprise",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 455271,
+          "minutes": 7,
+          "outils": 21,
+          "images": 16
+        },
+        {
+          "nom": "acte2",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 298439,
+          "minutes": 10,
+          "outils": 37,
+          "images": 44
+        },
+        {
+          "nom": "acte1",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 305390,
+          "minutes": 10,
+          "outils": 33,
+          "images": 26
+        },
+        {
+          "nom": "acte3",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 330000,
+          "minutes": 12,
+          "outils": 30,
+          "images": 26
+        },
+        {
+          "nom": "fin",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 300000,
+          "minutes": 12,
+          "outils": 30,
+          "images": 20
         }
       ],
-      "jauges": []
+      "jauges": [
+        {
+          "t": "2026-10-22T02:00:13.660Z",
+          "quoi": "après l'architecte, avant les décors",
+          "session": 42,
+          "hebdo": 78
+        },
+        {
+          "t": "2026-10-22T02:28:57.607Z",
+          "quoi": "décors finis ; fenêtre pleine, en file jusqu'à la remise à zéro",
+          "session": 99,
+          "hebdo": 85
+        },
+        {
+          "t": "2026-10-22T06:54:19.784Z",
+          "quoi": "avant l'acte 1",
+          "session": 24,
+          "hebdo": 89
+        },
+        {
+          "t": "2026-10-22T07:33:25.190Z",
+          "quoi": "film rendu",
+          "session": 46,
+          "hebdo": 92
+        }
+      ]
     },
     "030": {
       "etapes": [
@@ -2589,6 +2939,36 @@
           "nom": "voix",
           "debut": "2026-10-21T05:33:15.996Z",
           "fin": "2026-10-21T15:17:39.754Z"
+        },
+        {
+          "nom": "architecte",
+          "debut": "2026-10-22T01:35:26.475Z",
+          "fin": "2026-10-22T02:00:10.158Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-10-22T02:00:10.158Z",
+          "fin": "2026-10-22T06:38:20.019Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-22T06:38:20.019Z",
+          "fin": "2026-10-22T07:05:35.949Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-10-22T07:05:35.949Z",
+          "fin": "2026-10-22T07:06:10.461Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-22T07:06:10.461Z",
+          "fin": "2026-10-22T07:09:24.277Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-22T07:09:24.277Z",
+          "fin": "2026-10-22T07:14:42.102Z"
         }
       ],
       "agents": [
@@ -2609,9 +2989,641 @@
           "minutes": 1.9,
           "outils": 8,
           "images": 0
+        },
+        {
+          "nom": "architecte",
+          "genre": "architecte",
+          "modele": "opus",
+          "jetons": 421404,
+          "minutes": 23,
+          "outils": 53,
+          "images": 16
+        },
+        {
+          "nom": "buanderie",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 415952,
+          "minutes": 24,
+          "outils": 39,
+          "images": 30
+        },
+        {
+          "nom": "model",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 438646,
+          "minutes": 30,
+          "outils": 41,
+          "images": 30
+        },
+        {
+          "nom": "acte2",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 314420,
+          "minutes": 10,
+          "outils": 42,
+          "images": 26
+        },
+        {
+          "nom": "acte1",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 319985,
+          "minutes": 15,
+          "outils": 50,
+          "images": 26
+        },
+        {
+          "nom": "acte3",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 321371,
+          "minutes": 11,
+          "outils": 41,
+          "images": 26
+        },
+        {
+          "nom": "fin",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 344480,
+          "minutes": 11,
+          "outils": 46,
+          "images": 26
         }
       ],
+      "jauges": [
+        {
+          "t": "2026-10-22T01:35:27.203Z",
+          "quoi": "début 3D",
+          "session": 5,
+          "hebdo": 73
+        },
+        {
+          "t": "2026-10-22T02:00:10.871Z",
+          "quoi": "avant décors",
+          "session": 42,
+          "hebdo": 78
+        },
+        {
+          "t": "2026-10-22T06:38:20.687Z",
+          "quoi": "reprise 8h37",
+          "session": 0,
+          "hebdo": 86
+        }
+      ]
+    },
+    "L04": {
+      "etapes": [
+        {
+          "nom": "voix",
+          "debut": "2026-10-22T01:35:24.584Z",
+          "fin": "2026-10-22T01:43:22.913Z"
+        },
+        {
+          "nom": "architecte",
+          "debut": "2026-10-22T01:43:22.913Z",
+          "fin": "2026-10-22T02:27:15.935Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-10-23T09:07:31.979Z",
+          "fin": "2026-10-23T09:42:20.542Z"
+        },
+        {
+          "nom": "integration",
+          "debut": "2026-10-23T09:42:20.542Z",
+          "fin": "2026-10-23T10:17:57.257Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-23T10:17:57.257Z",
+          "fin": "2026-10-23T11:18:46.322Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-23T11:18:46.322Z",
+          "fin": "2026-10-23T12:03:27.499Z"
+        },
+        {
+          "nom": "reprises",
+          "debut": "2026-10-23T12:03:27.499Z",
+          "fin": "2026-10-23T12:35:30.731Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-23T12:35:30.731Z",
+          "fin": "2026-10-23T12:55:22.450Z"
+        },
+        {
+          "nom": "miniatures",
+          "debut": "2026-10-23T12:55:22.450Z",
+          "fin": "2026-10-23T12:58:07.526Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "architecte",
+          "genre": "architecte",
+          "modele": "opus",
+          "jetons": 570242,
+          "minutes": 42,
+          "outils": 87,
+          "images": 6
+        },
+        {
+          "nom": "bord",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 425964,
+          "minutes": 25,
+          "outils": 45,
+          "images": 9
+        },
+        {
+          "nom": "navire",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 466162,
+          "minutes": 33,
+          "outils": 71,
+          "images": 30
+        },
+        {
+          "nom": "model",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 444812,
+          "minutes": 34,
+          "outils": 45,
+          "images": 30
+        },
+        {
+          "nom": "integration",
+          "genre": "architecte",
+          "modele": "opus",
+          "jetons": 650907,
+          "minutes": 9,
+          "outils": 56,
+          "images": 16
+        },
+        {
+          "nom": "habillage",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 431782,
+          "minutes": 25,
+          "outils": 80,
+          "images": 10
+        },
+        {
+          "nom": "c2",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 419958,
+          "minutes": 24,
+          "outils": 54,
+          "images": 60
+        },
+        {
+          "nom": "c1",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 419024,
+          "minutes": 25,
+          "outils": 56,
+          "images": 30
+        },
+        {
+          "nom": "c3",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 420000,
+          "minutes": 30,
+          "outils": 60,
+          "images": 30
+        },
+        {
+          "nom": "c4",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 420000,
+          "minutes": 28,
+          "outils": 50,
+          "images": 27
+        },
+        {
+          "nom": "c5",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 421770,
+          "minutes": 27,
+          "outils": 54,
+          "images": 30
+        },
+        {
+          "nom": "c6",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 420000,
+          "minutes": 30,
+          "outils": 55,
+          "images": 17
+        },
+        {
+          "nom": "reprises-x9",
+          "genre": "reprise",
+          "modele": "opus",
+          "jetons": 4300000,
+          "minutes": 45,
+          "outils": 106,
+          "images": 60
+        }
+      ],
+      "jauges": [
+        {
+          "t": "2026-10-22T01:44:27.682Z",
+          "quoi": "voix faite, architecte lancé",
+          "session": 6,
+          "hebdo": 73
+        },
+        {
+          "t": "2026-10-22T02:27:15.510Z",
+          "quoi": "architecte fini, mise en file",
+          "session": 94,
+          "hebdo": 85
+        },
+        {
+          "t": "2026-10-23T12:58:23.719Z",
+          "quoi": "film rendu",
+          "session": 23,
+          "hebdo": 14
+        }
+      ]
+    },
+    "L03": {
+      "etapes": [
+        {
+          "nom": "architecte",
+          "debut": "2026-10-22T01:35:25.045Z",
+          "fin": "2026-10-22T02:07:27.191Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-10-22T02:07:27.191Z",
+          "fin": "2026-10-22T14:05:01.956Z"
+        },
+        {
+          "nom": "integration",
+          "debut": "2026-10-22T14:05:01.956Z",
+          "fin": "2026-10-22T14:33:30.664Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-23T00:53:02.387Z",
+          "fin": "2026-10-23T01:04:55.491Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-10-23T01:04:55.491Z",
+          "fin": "2026-10-23T01:11:10.367Z"
+        },
+        {
+          "nom": "reprises",
+          "debut": "2026-10-23T01:11:10.367Z",
+          "fin": "2026-10-23T01:15:14.436Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-23T01:15:14.436Z",
+          "fin": "2026-10-23T07:39:41.783Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-23T07:39:41.783Z",
+          "fin": "2026-10-23T07:54:10.099Z"
+        },
+        {
+          "nom": "couverture",
+          "debut": "2026-10-23T07:54:10.099Z",
+          "fin": "2026-10-23T07:55:58.255Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "architecte",
+          "genre": "architecte",
+          "modele": "opus",
+          "jetons": 499189,
+          "minutes": 31,
+          "outils": 48,
+          "images": 1
+        },
+        {
+          "nom": "avion",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 449481,
+          "minutes": 4,
+          "outils": 15,
+          "images": 43
+        },
+        {
+          "nom": "model",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 439333,
+          "minutes": 5,
+          "outils": 18,
+          "images": 30
+        },
+        {
+          "nom": "cabine",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 499458,
+          "minutes": 10,
+          "outils": 24,
+          "images": 59
+        },
+        {
+          "nom": "architecte-integration",
+          "genre": "integration",
+          "modele": "opus",
+          "jetons": 62155,
+          "minutes": 7,
+          "outils": 19,
+          "images": 8
+        },
+        {
+          "nom": "c2",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 341489,
+          "minutes": 11,
+          "outils": 28,
+          "images": 30
+        },
+        {
+          "nom": "c1",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 353173,
+          "minutes": 13,
+          "outils": 55,
+          "images": 26
+        },
+        {
+          "nom": "habillage",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 390075,
+          "minutes": 20,
+          "outils": 45,
+          "images": 24
+        },
+        {
+          "nom": "c4",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 348687,
+          "minutes": 11,
+          "outils": 40,
+          "images": 30
+        },
+        {
+          "nom": "c3",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 386063,
+          "minutes": 16,
+          "outils": 56,
+          "images": 64
+        },
+        {
+          "nom": "c5",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 387482,
+          "minutes": 18,
+          "outils": 55,
+          "images": 30
+        },
+        {
+          "nom": "c6",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 349526,
+          "minutes": 12,
+          "outils": 35,
+          "images": 30
+        }
+      ],
+      "jauges": [
+        {
+          "t": "2026-10-22T02:07:33.665Z",
+          "quoi": "après l'architecte",
+          "session": 56,
+          "hebdo": 80
+        },
+        {
+          "t": "2026-10-22T14:05:02.650Z",
+          "quoi": "décors finis",
+          "session": 12,
+          "hebdo": 94
+        },
+        {
+          "t": "2026-10-22T14:24:21.895Z",
+          "quoi": "c2 fini, file d'attente",
+          "session": 23,
+          "hebdo": 95
+        },
+        {
+          "t": "2026-10-23T01:26:25.762Z",
+          "quoi": "brouillon + qa, file d'attente",
+          "session": 29,
+          "hebdo": 100
+        },
+        {
+          "t": "2026-10-23T07:56:18.905Z",
+          "quoi": "L03 rendu final",
+          "session": 20,
+          "hebdo": 3
+        }
+      ]
+    },
+    "HS03": {
+      "etapes": [
+        {
+          "nom": "script",
+          "debut": "2026-10-23T18:57:20.687Z",
+          "fin": "2026-10-23T19:00:19.246Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-10-23T19:00:19.246Z",
+          "fin": "2026-10-23T19:01:54.214Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-23T19:01:54.214Z",
+          "fin": "2026-10-23T19:08:14.889Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-10-23T19:08:14.889Z",
+          "fin": "2026-10-23T19:11:51.535Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-23T19:11:51.535Z",
+          "fin": "2026-10-23T19:21:01.952Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-23T19:21:01.952Z",
+          "fin": "2026-10-23T19:29:04.853Z"
+        },
+        {
+          "nom": "textes",
+          "debut": "2026-10-23T19:29:04.853Z",
+          "fin": "2026-10-23T19:29:40.443Z"
+        }
+      ],
+      "agents": [],
       "jauges": []
+    },
+    "HS04": {
+      "etapes": [
+        {
+          "nom": "script",
+          "debut": "2026-10-23T18:58:00.923Z",
+          "fin": "2026-10-23T19:01:15.400Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-10-23T19:02:30.318Z",
+          "fin": "2026-10-23T19:13:39.640Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-23T19:13:39.640Z",
+          "fin": "2026-10-23T19:29:48.283Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-23T19:29:48.283Z",
+          "fin": "2026-10-23T19:33:15.902Z"
+        },
+        {
+          "nom": "textes",
+          "debut": "2026-10-23T19:33:15.902Z",
+          "fin": "2026-10-23T19:34:42.148Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-10-27T14:29:25.847Z",
+          "fin": "2026-10-27T14:30:36.693Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-10-27T14:30:36.693Z",
+          "fin": "2026-10-27T14:38:10.018Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-10-27T14:38:10.018Z",
+          "fin": "2026-10-27T14:38:26.338Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-10-27T17:12:20.828Z",
+          "fin": "2026-10-27T17:13:25.161Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-27T17:13:25.161Z",
+          "fin": "2026-10-27T17:26:40.955Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-27T17:26:40.955Z",
+          "fin": "2026-10-27T17:35:55.358Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-27T17:35:55.358Z",
+          "fin": "2026-10-27T17:41:10.869Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "diagnostic",
+          "genre": "autre",
+          "jetons": 166511
+        },
+        {
+          "nom": "promo",
+          "genre": "autre",
+          "jetons": 220347
+        },
+        {
+          "nom": "recette-promo",
+          "genre": "autre",
+          "jetons": 0
+        },
+        {
+          "nom": "recette-promo-jetons",
+          "genre": "autre",
+          "jetons": 200686
+        },
+        {
+          "nom": "acte2",
+          "genre": "autre",
+          "jetons": 148995
+        },
+        {
+          "nom": "acte1",
+          "genre": "autre",
+          "jetons": 170253
+        },
+        {
+          "nom": "fin",
+          "genre": "autre",
+          "jetons": 175102
+        },
+        {
+          "nom": "acte3",
+          "genre": "autre",
+          "jetons": 202696
+        },
+        {
+          "nom": "retouche-tir",
+          "genre": "autre",
+          "jetons": 152284
+        },
+        {
+          "nom": "retouche-fin",
+          "genre": "autre",
+          "jetons": 151793
+        }
+      ],
+      "jauges": [
+        {
+          "t": "2026-10-23T19:01:14.712Z",
+          "quoi": "script écrit, arrêt avant la voix",
+          "session": 8,
+          "hebdo": 15
+        },
+        {
+          "t": "2026-10-23T19:34:41.462Z",
+          "quoi": "HS04 livré",
+          "session": 17,
+          "hebdo": 16
+        }
+      ]
     }
   }
 }
