@@ -1,20 +1,21 @@
 # La recette des agents (chaîne courte)
 
-Ce que reçoit tout agent qui modélise un décor ou un système, ou qui monte un acte. Celui qui orchestre y ajoute, dans sa consigne : le fichier dont l'agent est propriétaire, l'API à rendre, la liste fermée des images à réussir.
+Ce que reçoit tout agent qui modélise un décor ou un système, ou qui monte un acte. Depuis le 27/10, chaque rôle est un **type d'agent** défini une fois dans `.claude/agents/` (`architecte`, `decor`, `decorateur`, `acte`, `chapitre`, `retoucheur`, `faits`, `scenariste`, `contre-verif`, `chef-de-production` ; le `scenariste` ne modélise rien : sa recette est `docs/recette-script.md`, sa chaîne `docs/salle-d-ecriture.md`) qui renvoie ici : la consigne de celui qui orchestre ne dit plus que le dossier, le fichier et deux ou trois lignes propres au dossier — l'API à rendre et la liste fermée des images à réussir sont dans `docs/<ep>-decors.md` et `docs/<ep>-actes.md`, écrits par l'architecte. La chaîne entière : `docs/chaine-optimisee.md`.
 
 ## Le cadre
 
 - **Un fichier par agent.** Tu n'écris que dans ton fichier (et ton journal). Si quelque chose doit changer ailleurs — `plan.js`, `world.js`, le kit — tu l'écris dans ton journal sous « À changer ailleurs », avec la ligne exacte : celui qui orchestre l'applique.
 - **Pas de sous-agent, pas d'audit, pas de relecteur.** Tu te relis sur tes planches.
-- **45 images lues au plus** (une planche de 8 vignettes compte pour 8). Regarde peu, mais regarde bien : chaque planche répond à une question posée avant de la tirer.
+- **30 images lues au plus** (une planche de 8 vignettes compte pour 8 ; actes 26, décorateur 24, architecte 25, retoucheur 12 — le budget de chaque type est dans sa définition). Regarde peu, mais regarde bien : chaque planche répond à une question posée avant de la tirer.
 - **Un journal sur le disque**, `docs/journal/<épisode>-<fichier>.md`, complété au fur et à mesure (ce qui est fait, ce qui a raté et pourquoi, les poses qui cadrent bien) : une coupure ne doit rien perdre.
 - Tout se dit en français dans le journal et le message final ; le code et ses commentaires sont en anglais, comme le reste du dépôt.
 
 ## À lire avant d'écrire (et rien d'autre)
 
-- `CLAUDE.md` : « Notre patte » et, dans « L'image », la liste « Pour que ça ne fasse jamais amateur » et « Net et fluide » — chaque règle vient d'une image ratée.
+- `docs/memoire/regles-image.md` : « Pour que ça ne fasse jamais amateur » et « Net et fluide » — chaque règle vient d'une image ratée. (« Notre patte » est dans `CLAUDE.md`, déjà dans ton contexte : ne le relis pas.)
 - `kit/lib/build3d.js` (matières `solid` / `glow` / `glass` + `asShell`, arêtes, `box` / `cyl` / `plate` / `lathe` chanfreinés, `makePart` / `addMesh` / `setPartOpacity` / `explode`, `fatLine`, `anchor`), `kit/lib/atmo.js`, et `kit/lib/figure.js` s'il y a un personnage.
 - Le `plan.js` et le `world.js` de l'épisode : **le contrat**. `FIRST` est la liste fermée des nombres de l'état ; `apply()` montre comment ton fichier est appelé.
+- `docs/catalogue.md` : ce qui existe déjà (décors, systèmes, habillages) — ce qu'on réutilise ne se modélise pas.
 - Un fichier voisin du même genre, pour l'idiome : un système → `episodes/007-siege-ejectable/src/model.js` ; un décor aux rayons X → `episodes/006-defibrillateur/src/hall.js` ou `004-differentiel/src/room.js` ; un fond de ciel, des traînées → `episodes/007-siege-ejectable/src/jet.js` (lignes 340–520).
 
 ## Les règles qui ne se discutent pas
@@ -25,6 +26,16 @@ Ce que reçoit tout agent qui modélise un décor ou un système, ou qui monte u
 - On distingue tout, tout de suite : si la vignette (405 px de large) ne se lit pas, c'est raté. Pas de trait sous 1,8 px ; rien de fin qui défile vite ; ce qui émet se dose (au-dessus de 3, ça bave) ; une lumière a un endroit (un cœur brillant, une longue traîne), jamais un voile.
 - Dans un shader : borner avant `pow`, `sqrt`, une division. Un pixel impossible devient une dalle noire d'une image.
 - Chaque pièce qui peut s'effacer a ses propres matières.
+
+## Économie de contexte (27/10)
+
+Ce que coûte un agent, c'est **son contexte relu à chaque appel** : tout ce que tu lis ou écris reste dans ton contexte jusqu'à la fin et se repaie à chaque appel suivant. Le chiffre de jetons qu'affiche la notification de fin est la taille de ce contexte à la fin (≈ 300 à 600 k pour un décor ou un acte) ; la consommation réelle de la fenêtre de 5 h suit à peu près « appels × contexte moyen ». D'où :
+
+- **Lis des têtes, pas des fichiers** : d'un fichier du kit ou d'un décor voisin, `grep -n "^export"` et le commentaire de tête, puis `Read` avec `offset` / `limit` sur la seule fonction utile. D'un plan (`docs/<ep>-actes.md`, `docs/<ep>-decors.md`), le haut commun et **ta section** (`grep -n "^## "`, puis `Read` ciblé) — au L04, le plan des chapitres faisait 98 Ko, ≈ 28 k jetons pour chacun des six agents.
+- **N'écris pas deux fois le même gros fichier** : une à trois `Write`, puis des `Edit`. Ne relis pas un fichier après l'avoir modifié (l'outil le garde à jour).
+- **Peu d'appels, chacun utile** : construire et regarder dans la même commande ; une planche de 8 répond à plusieurs questions ; pas de `check` après chaque retouche, un à la fin. Budget visé dans la définition de chaque type (décor 45 appels, acte 40, retoucheur 20).
+- **Une image coûte peu, mais reste** : une planche est UN fichier (≈ 1,6 k jetons quelle que soit sa taille : au-delà de ≈ 1 568 px de large elle est réduite avant lecture). Une planche de 8 vignettes à 270–405 px se lit ; une planche de 28 sur 4 600 px arrive à ≈ 110 px par vignette — on n'y voit plus ce qu'on cherche.
+- **Ton dossier temporaire** : celui de ta consigne, sinon `.cache/planches/<ep>/<ton fichier>/` (ignoré par git, invisible pour Merwan). Jamais `renders/` (sans `--out`, `look` écrit dans `renders/`).
 
 ## Regarder
 

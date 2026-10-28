@@ -6,7 +6,9 @@
 
 Sur Instagram, la promo est poussée à 31 000 abonnés qui connaissent le compte. Sur TikTok et YouTube Shorts, elle est montrée à des inconnus et jugée **comme n'importe quel court** : complétion, satisfaction. Une minute de questions sans réponse qui finit par « va voir ailleurs », c'est un court qui ne donne rien : on le balaie.
 
-Donc : **une vraie récompense au milieu, la frustration à la fin seulement, une boucle qui relance.** La grande réponse (la C de l'accroche, le test, la toile d'araignée) reste au long. Un morceau secondaire, lui, se paie dans la promo : c'est la preuve que le long tient ses promesses.
+Donc : **une vraie récompense au milieu, l'événement joué en entier, la frustration à la fin seulement, une boucle qui relance.** La grande réponse (la C de l'accroche, le pourquoi du test, la chute) reste au long. Un morceau secondaire, lui, se paie dans la promo : c'est la preuve que le long tient ses promesses.
+
+**Mise en accord le 27/10** avec `docs/recette-promo.md` (« Ce que le diagnostic du 27/10 a changé », d'après `docs/scale/promo-4-diagnostic.md`) : les trois courts qui ont percé (015, 009, 010) jouent leur événement du début à la fin, les promos le coupaient au noir juste avant. Le test se joue désormais en entier ; le gag « Pas ici. », le compteur de fils et le noir sur le test sortent de la grille. C'est une hypothèse, faute de courbes de promo : elle se juge sur HS05.
 
 ## Ce que les deux promos en ligne font (rendus mesurés, `npm run qa`)
 
@@ -24,26 +26,28 @@ Donc : **une vraie récompense au milieu, la frustration à la fin seulement, un
 
 Les deux promos ont **la première demi-seconde la plus immobile du compte**, placent la phrase sur « notre nouveau grand format » exactement dans la deuxième fuite des courbes (fin de l'accroche → 25 s), ne paient rien, ouvrent leurs sept fils sans qu'on les voie ni les entende (un chiffre de 34 px), et finissent sur du noir puis une demande de partir.
 
-## La grille (≈ 60–65 s)
+## La grille (≈ 62–65 s), celle de la forme de `docs/recette-promo.md`
 
 | Seconde | Ce qui se passe | Image | Son (`episode.json` → `sfx`) |
 | --- | --- | --- | --- |
 | 0 → 0,5 | La première image du long, **déjà en mouvement** | `shot(0, d, pose, glide(3, 0.5))` si le sujet reste dans le cadre ; sinon une image où quelque chose bouge (le monde, pas la caméra) | `hit` à 0,02 · `swish` à 0,1 (avant le premier mot) |
-| 0 → 9 | **A · B · C** : l'accroche du long (la miniature l'a promise), l'enjeu, la grande question (elle reste au long) | une image par phrase, `D.punch` sur le mot qui frappe | dans les souffles : `clack` / `hit` après le mot de la menace, `braam` après la fin de la phrase A |
-| 9 → 25 | **Le morceau payé** : un fil ouvert ET fermé, 10 à 15 s, pris dans le long, qui n'est pas la grande question. Le spectateur repart avec quelque chose | la démonstration complète, sur ses images | `threads` (le fil s'ouvre), puis un `hit` sur la réponse, dans le souffle |
-| 25 → 45 | **Les fils** : trois à cinq questions, une par image, une toutes les 4 à 6 s, de la plus belle à la plus inquiétante | `D.threads()` : le compteur bondit à chaque fil | `threads` : un ping qui monte d'un cran à chaque fil |
-| 45 → 50 | **Le test, coupé avant le paiement** — la seule vraie coupure du film | `D.cliff(D.breath("…$"), { stamp: "Réponse · sur YouTube" })` : deux volets noirs qui se ferment, une ligne, 0,6 s de noir qui parle | `cliff` au même instant : l'habillage ralentit comme une bande qui s'arrête, se tait, un seul coup sonne dans le silence |
-| 50 → 53 | **« Alors… on l'ouvre. »** → **« Pas ici. »** (le gag signature : jamais retiré) | l'éclaté commence, coupé par `D.cliff` (le tampon reste) | `hush` sous « Alors… », `cliff` sur la coupe |
-| 53 → 57 | **Le rendez-vous** : une phrase, 3 s au plus | `filmCall` ; le compteur devient « 7 réponses · sur YouTube » | `braam` dans le souffle avant la phrase |
-| 57 → fin | **La boucle** : la queue de la phrase retombe sur les premiers mots de l'accroche | dernière image = première (`qa` : écart ≤ 2) | `impact` sur la coupe, `rewind` |
+| 0 → 10 | **A · B · C** : l'accroche du long (la miniature l'a promise), un danger immédiat à la 2ᵉ personne ; la C est **un enjeu ou un paradoxe sur le mécanisme**, jamais une anecdote ni une étymologie (elle reste au long) | une image par phrase, `D.punch` sur le mot qui frappe ; aucun mot inconnu du grand public à l'écran | dans les souffles : `clack` / `hit` après le mot de la menace, `braam` après la fin de la phrase A |
+| 10 → 22 | **La scène** : le danger là où est le spectateur, **un enjeu et un chiffre qui fait peur par phrase**, aucune annonce (ni du long ni de ce qui « va arriver ») | une image par phrase, le danger visible ; le décompte s'affiche et reste jusqu'au test si l'image le permet sans refaire la 3D (comme le chrono des courts) | le `drone` monte ; un son par geste fort, dans les souffles |
+| ≈ 22 | **« Alors… on l'ouvre. »**, `[calm]` — elle ouvre pour de vrai | l'éclaté du long commence sur le mot | `hush` sous « Alors… » |
+| 23 → 42 | **Le morceau payé** : un fil ouvert ET fermé, pris dans le long, qui n'est pas la grande question ; un chemin, pas une liste. Le spectateur repart avec quelque chose | la démonstration complète, sur ses images ; on suit la pièce qui agit | un `hit` sur la réponse, dans le souffle |
+| 42 → 50 | **Le test, joué en entier (6 à 8 s)** : la pièce agit du début à la fin, l'image montre ce qui arrive ; **le pourquoi reste au long** | un plan qui suit l'événement jusqu'au bout, ou des coupes qui raccordent sur la pièce ; climax du film ; **aucun noir, aucun `D.cliff`** | le son du geste (`impact`, `boom`…) dans le souffle qui suit ; un `hold` ou un `[short pause]` sur le beat lui laisse sa place |
+| 50 → 56 | **Le commentaire** : la C revient, question fermée à deux camps, réponse dans le long | retour sur l'objet de la C | `braam` dans le souffle qui suit, juste avant le rendez-vous |
+| 56 → 59 | **Le rendez-vous** : une phrase, **≈ 3 s** | `filmTitle` (le cartouche sans cadre) | — |
+| 59 → fin | **La boucle**, sans pause après le rendez-vous : la queue de la phrase retombe sur les premiers mots de l'accroche | dernière image = première (`qa` : écart ≤ 2) | `impact` sur la coupe, `rewind` |
 
 Règles qui vont avec :
 
-- **Entre 9 et 25 s, le film ne parle pas de lui-même.** La phrase de lancement (« Jusqu'ici, on ouvrait… », « Notre nouveau grand format… ») sort de la fuite : elle se fond dans le rendez-vous, ou elle disparaît (l'en-tête dit déjà « HORS-SÉRIE · FILM · 9 MIN 10 »). En tout, le film parle de lui-même moins de 6 s.
-- **Le noir dure une respiration** (0,6 s par coupure, 1,5 s en tout) et il dit quelque chose (le tampon) : un écran noir vide est un pouce qui balaie.
-- **Chaque fil finit sur un souffle d'au moins 0,25 s** (`hold` sur le beat, ou `[short pause]`) : c'est là que le compteur bondit et que le fil sonne. La voix turbo de HS02 ne laissait que 0,06 à 0,15 s entre ses phrases.
-- **Un seul appel**, à la fin, en une phrase ; aucun son sur un mot (`qa` les liste).
-- La C de l'accroche, le test et la réponse au gag restent au long : la promo ne paie qu'**un** morceau secondaire, noté `"paye": true` dans son beat.
+- **Entre 10 et 25 s, le film ne parle pas de lui-même.** La phrase de lancement (« Jusqu'ici, on ouvrait… », « Notre nouveau grand format… ») sort de la fuite : elle se fond dans le rendez-vous, ou elle disparaît (l'en-tête dit déjà « HORS-SÉRIE · FILM · 9 MIN 10 »). En tout, le film parle de lui-même moins de 4 s (le rendez-vous, ≈ 3 s).
+- **Le test ne se coupe plus au noir** (HS03 : « un moteur *tourne* encore… », HS04 : « La pression monte… *monte*… », puis le commentaire). L'hypothèse du 27/10 : c'est le moment que 015, 009 et 010 jouent en entier, et celui qui les fait tenir.
+- **Un noir dure une respiration** (0,5 s au plus), seulement comme raccord, jamais sur le test : un écran noir vide est un pouce qui balaie.
+- **Deux fils, pas sept** : la C (ouverte dans l'accroche, payée dans le long) et le morceau (ouvert et payé ici). Chacun finit sur un souffle d'au moins 0,25 s (`hold` sur le beat, ou `[short pause]`) ; la voix turbo de HS02 ne laissait que 0,06 à 0,15 s entre ses phrases.
+- **Un seul appel**, à la fin, en une phrase de ≈ 3 s ; aucun son sur un mot (`qa` les liste).
+- La C de l'accroche et le pourquoi du test restent au long : la promo paie **un** morceau secondaire, noté `"paye": true` dans son beat, et joue l'événement du test.
 
 ## Les dispositifs (tous en option : un film qui ne les appelle pas est identique, à l'octet)
 
@@ -61,8 +65,8 @@ Règles qui vont avec :
 
 | Dispositif | Une ligne dans un acte | Ce qu'il fait |
 | --- | --- | --- |
-| Le compteur qui bondit | `D.threads()` | à chaque `filN`, le chiffre du compteur passe à N, grossit 2,6 fois, brille en signal, tient 0,14 s et revient ; un « +1 » s'en échappe vers le haut. Chaque instant tombant sur un mot glisse au souffle qui suit (le même que le son). `D.threads(["beat:mot", …], { key: "fils" })` pour une liste explicite ; `{ set: false }` si les actes posent déjà le nombre |
-| La réponse coupée au noir | `D.cliff(D.breath("test$"), { stamp: "Réponse · sur YouTube" })` | deux volets noirs se ferment en 0,12 s (haut et bas, jusqu'à une ligne), la ligne brille et meurt, 0,6 s de noir avec le tampon en mono veille. Au-dessus de l'image et de tout noir de la page, sous l'en-tête et les sous-titres (le mot dit reste à l'écran) |
+| Le compteur qui bondit | `D.threads()` — hors de la grille depuis le 27/10 (deux fils seulement ; à 34 px il n'a jamais été lu, `promo-3`) ; s'il sert, son chiffre fait 40 px au moins | à chaque `filN`, le chiffre du compteur passe à N, grossit 2,6 fois, brille en signal, tient 0,14 s et revient ; un « +1 » s'en échappe vers le haut. Chaque instant tombant sur un mot glisse au souffle qui suit (le même que le son). `D.threads(["beat:mot", …], { key: "fils" })` pour une liste explicite ; `{ set: false }` si les actes posent déjà le nombre |
+| La réponse coupée au noir | `D.cliff(D.breath("test$"), { stamp: "Réponse · sur YouTube" })` — **depuis le 27/10, jamais sur le test**, qui se joue en entier ; il reste au kit pour un raccord | deux volets noirs se ferment en 0,12 s (haut et bas, jusqu'à une ligne), la ligne brille et meurt, 0,6 s de noir avec le tampon en mono veille. Au-dessus de l'image et de tout noir de la page, sous l'en-tête et les sous-titres (le mot dit reste à l'écran) |
 | Le souffle d'un instant | `D.breath("beat:mot")` | l'instant, déplacé au souffle qui suit s'il tombe sur un mot |
 
 ### Au son (`scripts/sfx.mjs`)
@@ -75,32 +79,30 @@ Règles qui vont avec :
 
 Les trois se posent d'eux-mêmes dans le souffle qui suit leur instant (jamais sur un mot) ; `hit`, `swish`, `click`, `hush`, `suck` (la grille des courts, `docs/recette-actes.md`) et `ambience`, `buzz`, `boom` (celle des longs) servent tels quels.
 
-La grille de départ d'une promo (à régler sur l'image) :
+La grille de départ d'une promo (à régler sur l'image ; mise en accord le 27/10 : plus de `cliff` sur le test, plus de « Pas ici », plus de `threads` d'office) :
 
 ```json
 "sfx": [
-  { "type": "drone", "gain": -24, "curve": [[0, 0.8], ["fil5", 1], ["ouvre", 0.2], ["youtube", 0.5], ["rewind", 0.8]] },
+  { "type": "drone", "gain": -24, "curve": [[0, 0.8], ["scene", 1], ["ouvre", 0.2], ["test", 1], ["youtube", 0.5], ["rewind", 0.8]] },
   { "type": "hit", "at": 0.02, "gain": -13 },
   { "type": "swish", "at": 0.1, "dur": 0.28, "gain": -15 },
   { "type": "braam", "at": "accroche$", "gain": -17, "dur": 1.9 },
-  { "type": "threads", "gain": -15 },
-  { "type": "cliff", "at": "test$", "dur": 0.6, "tape": 0.2, "gain": -12 },
   { "type": "hush", "from": "ouvre", "to": "explode-0.02", "depth": -14 },
-  { "type": "cliff", "at": "black", "dur": 0.5, "tape": 0.16, "gain": -15 },
-  { "type": "braam", "at": "pasici$", "gain": -15, "dur": 2.2 },
+  { "type": "impact", "at": "test$", "gain": -14, "size": 0.9 },
+  { "type": "braam", "at": "comment$", "gain": -15, "dur": 2.2 },
   { "type": "impact", "at": "toloop", "gain": -16, "size": 0.7 },
   { "type": "rewind", "at": "rewind", "dur": 1, "gain": -21 }
 ]
 ```
 
-Plus le lieu du long (`ambience` : `hum`, `factory`, `wind`, `room`) et un son par geste fort de l'image, dans les souffles. Le dernier fil peut être la coupure elle-même (le `cliff` sonne, le compteur bondit dans le noir) : on ne met pas de ping dans un silence.
+Plus le lieu du long (`ambience` : `hum`, `factory`, `wind`, `room`) et un son par geste fort de l'image, dans les souffles — pendant le test surtout, où l'événement se joue : c'est là que le son porte le climax.
 
 ### La mesure (`npm run qa -- HSnn`)
 
 Après la section « rythme » des courts, une section **promo** : les secondes où le film parle de lui-même (et lesquelles tombent dans 10–25 s), les fils (repères `filN`, ou lus sur le compteur de l'en-tête dans l'image), les morceaux payés, le noir (en tout, dans les 15 dernières secondes, le plus long), l'instant de l'appel au long et ce qui reste après, et les cinq dernières secondes (mouvement, attaques d'un téléphone, écart entre la dernière et la première image).
 
-Ce qu'une promo vise, à resserrer avec les premières courbes : mouvement de la première demi-seconde ≥ 3 ; aucune plage lente avant 25 s ; ≥ 8 attaques de téléphone de 0 à 25 s ; aucun son sur un mot ; rien de « méta » entre 9 et 25 s, moins de 6 s en tout ; un morceau payé avant 30 s ; noir ≤ 1,5 s en tout, aucun plus long que 0,8 s ; appel au long dit en 3 s au plus ; écart de boucle ≤ 2.
+Ce qu'une promo vise, à resserrer avec les premières courbes : mouvement de la première demi-seconde ≥ 3 ; aucune plage lente avant 25 s ; ≥ 8 attaques de téléphone de 0 à 25 s ; aucun son sur un mot ; rien de « méta » entre 10 et 25 s, moins de 4 s en tout ; le morceau payé avant 42 s ; le test joué sans plage lente ni noir, 6 à 8 s ; aucun noir plus long que 0,5 s ; appel au long dit en 3 s au plus ; écart de boucle ≤ 2.
 
 ## Ce qui reste à apprendre
 
-Rien de ceci n'a encore été mesuré sur une courbe de promo : les seuils viennent des courbes des courts (015, 012) et de la mesure des deux promos. À relever sur HS03 : la tenue à 3 s, la courbe à l'instant du morceau payé, à chaque fil, au `cliff`, au « Pas ici » et à l'appel ; la part qui finit ; et, dans YouTube Studio, les vues du long venues de la promo pour 1 000 vues de promo (`docs/recette-promo.md`).
+Rien de ceci n'a encore été mesuré sur une courbe de promo : les seuils viennent des courbes des courts (015, 012), de la mesure des promos et du diagnostic du 27/10. À relever pour HS01 à HS04 : la liste de `docs/memoire/audience.md` (« À relever pour HS01-HS04 »). Sur HS05 : la tenue à 3 s, la courbe dans la scène (10 → 22 s), à l'instant du morceau payé, **pendant le test joué en entier** (contre HS04, coupé au même endroit) et à l'appel ; la part qui finit ; et, dans YouTube Studio, les vues du long venues de la promo pour 1 000 vues de promo (`docs/recette-promo.md`).

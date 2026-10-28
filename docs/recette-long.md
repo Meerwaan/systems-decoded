@@ -118,7 +118,7 @@ Les blocs des courts qui désignent les boutons de TikTok (`followCall`, `likeCa
 | 4. Choisir la première image (planche de six) | celui qui orchestre | 2 min |
 | 5. Chapitres, en parallèle, un fichier par groupe de chapitres (≈ 60 à 110 s de film chacun) | 7 agents | 11 à 19 min · 280 à 380 k chacun · 2,21 M |
 | 6. Relecture du film entier : deux planches de 28 images (une toutes les 9,6 s) | celui qui orchestre | 7 min |
-| 7. Reprises des plans faibles, par l'agent qui les a montés (`SendMessage` : il garde son contexte) | 5 agents | 3 à 5 min · 13 à 23 k chacun |
+| 7. Reprises des plans faibles, par l'agent qui les a montés (`SendMessage` : il garde son contexte) — depuis le 27/10 : un `retoucheur` neuf par fichier, en une vague après le `qa` du brouillon (voir plus bas) | 5 agents | 3 à 5 min · 13 à 23 k chacun (chiffre du travail ajouté : au L04, 0,46 M par reprise) |
 | 8. Brouillon (8 min 42 de calcul), `qa`, reprises des images parasites | celui qui orchestre + 4 agents | 16 min · 63 k |
 | 9. Rendu final, `qa`, miniature, `srt` | celui qui orchestre | 17 min |
 
@@ -131,7 +131,7 @@ Les blocs des courts qui désignent les boutons de TikTok (`followCall`, `likeCa
 - **Une plaque blanche sur le ruban** : le verre plat comme un miroir renvoie le panneau froid du studio (`stage.js · studioEnvironment`) quand on le regarde en rasant vers +x/−z (az ≈ −30 à −70). Sur le verre chaud : az ≥ −15 ou ≈ −86, el hors de 22–32 — ou baisser le poids de ce panneau dans le shader du ruban (`verre.js`).
 - **Les images parasites du brouillon** (72, en six endroits) avaient quatre causes, toutes déjà écrites dans CLAUDE.md pour les courts : deux tweens du même nombre qui se chevauchent à une coupe (la pluie de grains remise à 0 par la coupe suivante) ; un motif rayé (rouleaux, planches, conduits) traversé vite ; un plan de durée négative qui chevauche le suivant ; la caméra qui quitte un voile (une hotte de verre) en plein plan. **À mettre dans la consigne de chaque chapitre** : aucun `shot` de durée ≤ 0, aucun nombre dont deux tweens se chevauchent, rouleaux et rayures longés lentement ou coupés.
 - **Le premier plan choisi tôt** : la planche de six candidates tirée par l'intégration, choisie avant les chapitres, a fait que la fin a bouclé juste du premier coup. À garder.
-- **Les reprises par `SendMessage` coûtent 13 à 23 k** au lieu de 300 k pour un agent neuf : c'est la bonne façon de corriger.
+- **Les reprises par `SendMessage` coûtent 13 à 23 k** au lieu de 300 k pour un agent neuf : c'est la bonne façon de corriger. — **Démenti par les mesures suivantes (27/10)** : au L03 (une vingtaine de reprises) et au L04 (neuf reprises, 4,3 M), chaque reprise a coûté 0,35 à 0,46 M, parce qu'un agent repris relit tout son contexte (≈ 0,4 M) à chaque appel ; les 13 à 23 k du L01 ne comptaient que le travail ajouté. Depuis : les retouches d'après brouillon passent à un agent neuf du type `retoucheur` (le fichier, le journal de l'agent d'origine, la liste fermée des défauts), en une seule vague après le `qa` ; `SendMessage` sert à reprendre un agent coupé par la limite, ou pour une question d'une ligne. Détail et chiffres : `docs/chaine-optimisee.md`.
 
 ## Pour le L02 : ce qui doit coûter moins, sans rien céder
 

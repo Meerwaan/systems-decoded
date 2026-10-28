@@ -1,13 +1,13 @@
 # La recette d'un acte (chaîne courte)
 
-Ce que reçoit tout agent qui monte un acte (`acte1.js`, `acte2.js`, `acte3.js`, `fin.js`). Elle complète `docs/recette-agents.md`, dont le cadre s'applique en entier : un fichier par agent, pas de sous-agent, un journal tenu au fur et à mesure, planches et `essais.json` dans le dossier temporaire de la consigne — jamais dans le dépôt, JAMAIS dans `renders/`.
+Ce que reçoit tout agent qui monte un acte (`acte1.js`, `acte2.js`, `acte3.js`, `fin.js`) — le type `acte` (`.claude/agents/acte.md`) ; un plan à corriger après le brouillon passe au type `retoucheur`. Un long a son type `chapitre`. Elle complète `docs/recette-agents.md`, dont le cadre s'applique en entier : un fichier par agent, pas de sous-agent, un journal tenu au fur et à mesure, planches et `essais.json` dans le dossier temporaire de la consigne — jamais dans le dépôt, JAMAIS dans `renders/`.
 
 ## À lire, dans cet ordre, et rien d'autre
 
 1. `docs/recette-agents.md`.
 2. `docs/<ep>-actes.md` EN ENTIER (le haut vaut pour tous les actes, puis ton tableau), puis `docs/<ep>-actes-maj.md` s'il existe : ce qui a changé depuis que le plan est écrit — **ses lignes priment**.
 3. `episodes/<dossier>/src/world.js` (le contrat : `FIRST`, `POSE0`, `VIEW`, `BENCHED`, `STAGED`) et `main.js` (ce que lit l'en-tête).
-4. `kit/lib/direct.js`, `kit/lib/blocks.js`.
+4. `kit/lib/direct.js`, `kit/lib/blocks.js` : leur API (`grep -n "^export\|^  const [a-zA-Z]* = ("` : les méthodes de `createDirector`, commentées juste au-dessus), pas tout le code.
 5. Les journaux des décors et de l'habillage, `docs/journal/<ep>-*.md` (l'habillage est déjà posé quand tu montes : ne cadre pas un plan pour le cacher, signale-le s'il gêne) : ce que fait chaque nombre, **les poses qui cadrent** (pars d'elles : elles ont été vues, celles de `VIEW` ont souvent été réglées sur des bouchons), ce qui n'est pas au niveau.
 6. La forme d'un acte : le même fichier dans `episodes/017-irm/src/`. Pour `fin.js` : `kit/template/src/fin.js` aussi — l'ordre de la fin à partir du 018.
 7. `episodes/<dossier>/index.html` pour les étiquettes qui existent ; `npm run script -- <ep>` pour la table des repères.
