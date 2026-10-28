@@ -24,6 +24,7 @@ const writeJson = (file, data) => {
 
 /** Called by sd.mjs when a command ends. Never throws: a metric must not break a render. */
 export function logCommand(entry) {
+  if (process.env.SD_NO_METRICS) return; // a measurement of the tools themselves stays out of the production log
   try {
     fs.mkdirSync(DIR, { recursive: true });
     fs.appendFileSync(FILES.log, JSON.stringify(entry) + "\n");

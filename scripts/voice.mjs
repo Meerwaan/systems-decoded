@@ -407,16 +407,11 @@ export function readPicks(dir) {
 }
 
 /**
- * Measure, comp, write audio/vo.json and audio/voix.wav — and record what is missing, if a budget allows it.
- *   takes    whole takes the current script must have (a new script asks for 3)
- *   retake   phrases to record again on their own, `count` times each (default 3)
- *   alone    retakes without the phrase before and the phrase after: an act played in its own request
- *   budget   credits this run may spend. Without it nothing is recorded: the cost is announced instead.
- *   solo     use this one recording everywhere it can be used
- *   pick     { phrase: recording } forced for this run, on top of audio/picks.json
+ * What a run of `voice` would record, without recording, measuring or writing anything: the plan, and the texts of
+ * its requests. Shared with `npm run salle` (scripts/salle.mjs), so the cost it announces is the one `voice` announces.
+ *   fresh    as if nothing were on the disk: what a first full take of this script costs
  */
-export async function voice(dir, { takes, retake = [], count = RETAKES, alone = false, budget = 0, seed, solo, pick = {}, quiet = false } = {}) {
-  const say = quiet ? () => {} : (line = "") => console.log(line);
+export function planVoice(dir, { takes, retake = [], count = RETAKES, alone = false, seed, fresh = false } = {}) {
   const ep = loadEpisode(dir);
   const hash = scriptHash(ep);
   const base = seed ?? ep.voice.seed ?? 21;
@@ -425,7 +420,7 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, alone = 
   for (const id of retake) if (!(id in index)) throw new Error(`--retake: phrase inconnue "${id}" (phrases: ${ep.beats.map((b) => b.id).join(", ")})`);
 
   // 1. what is on disk, and what is missing
-  let recs = pool(dir, ep);
+  const recs = fresh ? [] : pool(dir, ep);
   const covered = (id) => recs.some((r) => r.good.has(id));
   const wholeHere = recs.filter((r) => r.folder === hash).map((r) => r.meta.seed);
   const plan = [];
@@ -481,37 +476,72 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, alone = 
     }
   }
   for (const p of plan) p.vo ??= Object.fromEntries(p.beats.map((b) => [b.id, directions(b)[0]]));
+  // One request = one text sent to the model. A take recorded act by act is several: each act is kept on
+  // disk as soon as it is paid for (parts/), so a run that stops halfway never pays for the same act twice.
+  const requests = plan.map((p) =>
+    (p.parts ?? [{ beats: p.beats, stability: p.stability }]).map((part, n) => {
+      const text = part.beats.map((b) => p.vo[b.id]).join("\n\n");
+      const stability = part.stability ?? ep.voice.stability;
+      const cache = p.parts ? path.join(root, p.folder, "parts", `${p.base}.${n + 1}-${part.act}`) : null;
+      const stamp = hashOf(JSON.stringify({ text, stability, seed: p.seed }));
+      return { ...part, text, stability, cache, stamp, paid: !fresh && cache != null && readJson(`${cache}.json`)?.stamp === stamp && fs.existsSync(`${cache}.mp3`) };
+    }),
+  );
+  return { ep, hash, base, root, index, recs, plan, parts, byAct, cuts, requests };
+}
+
+/**
+ * The cost of a plan, as `voice` announces it: the script's own check on each request first (free), then today's rate
+ * asked of ElevenLabs (`creditRate`: GET /v1/models, read-only, never billed). Nothing is recorded here.
+ */
+export async function estimateVoice({ ep, plan, parts, byAct, cuts, requests }) {
+  // the script's own check, run on each request's text before anything is paid for: a word displayed one way and
+  // directed another ("I" on screen, "un" in the voice) is caught here, for free — not after a paid request.
+  for (const q of requests.flat()) {
+    if (q.paid) continue;
+    const chars = [...q.text];
+    try {
+      alignTokens(ep, { characters: chars, character_start_times_seconds: chars.map((_, i) => i), character_end_times_seconds: chars.map((_, i) => i + 1) }, q.beats);
+    } catch (err) {
+      throw new Error(`Rien n'a été payé : ${err.message}`);
+    }
+  }
+  const rate = await creditRate(ep.voice.model); // today's rate, asked of ElevenLabs
+  const { estimate: one } = spendGuard(0, rate);
+  const todo = requests.flat().filter((q) => !q.paid);
+  const estimate = todo.reduce((n, q) => n + one(q.text.length), 0);
+  const chars = todo.reduce((n, q) => n + q.text.length, 0);
+  const what = !plan.length
+    ? "rien"
+    : plan[0].target
+      ? `${plan.length} reprise${plan.length > 1 ? "s" : ""} (${[...new Set(plan.flatMap((p) => p.target))].join(", ")})`
+      : `${plan.length} prise${plan.length > 1 ? "s" : ""} complète${plan.length > 1 ? "s" : ""}${byAct ? `, ${cuts ? "partie par partie" : "acte par acte"} (${parts.length} requêtes chacune)` : ""}`;
+  return { rate, estimate, chars, what, requests: todo.length };
+}
+
+/**
+ * Measure, comp, write audio/vo.json and audio/voix.wav — and record what is missing, if a budget allows it.
+ *   takes    whole takes the current script must have (a new script asks for 3)
+ *   retake   phrases to record again on their own, `count` times each (default 3)
+ *   alone    retakes without the phrase before and the phrase after: an act played in its own request
+ *   budget   credits this run may spend. Without it nothing is recorded: the cost is announced instead.
+ *   solo     use this one recording everywhere it can be used
+ *   pick     { phrase: recording } forced for this run, on top of audio/picks.json
+ */
+export async function voice(dir, { takes, retake = [], count = RETAKES, alone = false, budget = 0, seed, solo, pick = {}, quiet = false } = {}) {
+  const say = quiet ? () => {} : (line = "") => console.log(line);
+  const planned = planVoice(dir, { takes, retake, count, alone, seed });
+  const { ep, hash, base, root, index, plan, parts, byAct, cuts, requests } = planned;
+  let { recs } = planned;
+  const covered = (id) => recs.some((r) => r.good.has(id));
 
   say(`\nVoix: ${ep.voice.name ?? ep.voice.voiceId} · ${ep.voice.model} · script ${hash} · ${recs.length} enregistrement${recs.length > 1 ? "s" : ""} sur le disque`);
 
   // 2. record — only inside the budget given on the command line
   let spent = 0;
   if (plan.length) {
-    // One request = one text sent to the model. A take recorded act by act is several: each act is kept on
-    // disk as soon as it is paid for (parts/), so a run that stops halfway never pays for the same act twice.
-    const requests = plan.map((p) =>
-      (p.parts ?? [{ beats: p.beats, stability: p.stability }]).map((part, n) => {
-        const text = part.beats.map((b) => p.vo[b.id]).join("\n\n");
-        const stability = part.stability ?? ep.voice.stability;
-        const cache = p.parts ? path.join(root, p.folder, "parts", `${p.base}.${n + 1}-${part.act}`) : null;
-        const stamp = hashOf(JSON.stringify({ text, stability, seed: p.seed }));
-        return { ...part, text, stability, cache, stamp, paid: cache != null && readJson(`${cache}.json`)?.stamp === stamp && fs.existsSync(`${cache}.mp3`) };
-      }),
-    );
-    // the script's own check, run on each request's text before anything is paid for: a word displayed one way and
-    // directed another ("I" on screen, "un" in the voice) is caught here, for free — not after a paid request.
-    for (const q of requests.flat()) {
-      if (q.paid) continue;
-      const chars = [...q.text];
-      try {
-        alignTokens(ep, { characters: chars, character_start_times_seconds: chars.map((_, i) => i), character_end_times_seconds: chars.map((_, i) => i + 1) }, q.beats);
-      } catch (err) {
-        throw new Error(`Rien n'a été payé : ${err.message}`);
-      }
-    }
-    const guard = spendGuard(budget, await creditRate(ep.voice.model)); // today's rate, asked of ElevenLabs
-    const estimate = requests.flat().reduce((n, q) => n + (q.paid ? 0 : guard.estimate(q.text.length)), 0);
-    const what = plan[0].target ? `${plan.length} reprise${plan.length > 1 ? "s" : ""} (${[...new Set(plan.flatMap((p) => p.target))].join(", ")})` : `${plan.length} prise${plan.length > 1 ? "s" : ""} complète${plan.length > 1 ? "s" : ""}${byAct ? `, ${cuts ? "partie par partie" : "acte par acte"} (${parts.length} requêtes chacune)` : ""}`;
+    const { rate, estimate, what } = await estimateVoice(planned);
+    const guard = spendGuard(budget, rate);
     if (budget < estimate) {
       say(`\n  À enregistrer : ${what} ≈ ${estimate} crédits ElevenLabs.`);
       say(`  Rien n'a été enregistré. Avec l'accord de Merwan : ajoute --budget ${Math.ceil(estimate / 50) * 50}  (solde : npm run credits)`);

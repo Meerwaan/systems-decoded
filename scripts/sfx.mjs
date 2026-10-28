@@ -1,4 +1,5 @@
-// Sound design, synthesized: no samples, no licences, same result every run.
+// Sound design, synthesized: no licences, same result every run. Since 2026-10-23 a list may also play recorded
+// sounds ("sample") from the sound bank, kit/sons/ — files made once and kept, so the result stays the same.
 // The episode lists its sounds in episode.json ("sfx"), placed on the same cues as the picture.
 // The continuous layers (drone, heartbeat) step back a little while the narrator speaks and come
 // forward in the silences ("duck", in dB): the voice stays in front without the bed going thin.
@@ -45,6 +46,57 @@ const BODY = 0.55; // impact: level of the 240 Hz body against the sub
 const CRACK = 0.6; // impact: level of the 2 kHz crack
 const VALVE = 0.3; // heartbeat with a body: level of the valve click (620 + 930 Hz)
 const SOURCE = hashOf(fs.readFileSync(fileURLToPath(import.meta.url), "utf8")); // a change to the synths re-renders every bed
+
+/* THE SOUND BANK (2026-10-23): recorded sounds, kept as WAV under kit/sons/ — read once, at 44.1 kHz stereo. */
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const bankPath = (file) => path.resolve(ROOT, file.includes("/") ? file : path.join("kit", "sons", file));
+const sampleCache = new Map();
+function sampleStamp(file) {
+  const p = bankPath(file);
+  if (!fs.existsSync(p)) throw new Error(`sfx: son introuvable ${p}`);
+  const st = fs.statSync(p);
+  return [file, st.size, Math.round(st.mtimeMs)];
+}
+/** A PCM WAV (16-bit or 32-bit float, mono or stereo, any rate) → { L, R } Float32 at SR. */
+function loadSample(file) {
+  const p = bankPath(file);
+  if (sampleCache.has(p)) return sampleCache.get(p);
+  const b = fs.readFileSync(p);
+  if (b.toString("ascii", 0, 4) !== "RIFF" || b.toString("ascii", 8, 12) !== "WAVE") throw new Error(`sfx: ${file} n'est pas un WAV`);
+  let fmt = null;
+  let data = null;
+  for (let o = 12; o + 8 <= b.length; ) {
+    const id = b.toString("ascii", o, o + 4);
+    const size = b.readUInt32LE(o + 4);
+    if (id === "fmt ") fmt = { tag: b.readUInt16LE(o + 8), ch: b.readUInt16LE(o + 10), rate: b.readUInt32LE(o + 12), bits: b.readUInt16LE(o + 22) };
+    if (id === "data") data = [o + 8, Math.min(size, b.length - o - 8)];
+    o += 8 + size + (size & 1);
+  }
+  if (!fmt || !data) throw new Error(`sfx: ${file} — WAV incomplet`);
+  const float = fmt.tag === 3 || (fmt.tag === 0xfffe && fmt.bits === 32);
+  if (!(float && fmt.bits === 32) && fmt.bits !== 16) throw new Error(`sfx: ${file} — format non lu (${fmt.bits} bits)`);
+  const step = (fmt.bits / 8) * fmt.ch;
+  const n = Math.floor(data[1] / step);
+  const read = (i, c) => {
+    const o = data[0] + i * step + c * (fmt.bits / 8);
+    return float ? b.readFloatLE(o) : b.readInt16LE(o) / 32768;
+  };
+  const m = Math.floor((n * SR) / fmt.rate);
+  const L = new Float32Array(m);
+  const R = new Float32Array(m);
+  for (let j = 0; j < m; j++) {
+    const x = (j * fmt.rate) / SR;
+    const i = Math.min(n - 1, Math.floor(x));
+    const f = x - i;
+    const i2 = Math.min(n - 1, i + 1);
+    const l = read(i, 0) * (1 - f) + read(i2, 0) * f;
+    L[j] = l;
+    R[j] = fmt.ch > 1 ? read(i, 1) * (1 - f) + read(i2, 1) * f : l;
+  }
+  const out = { L, R };
+  sampleCache.set(p, out);
+  return out;
+}
 
 function rng(seed) {
   let a = seed >>> 0;
@@ -117,7 +169,9 @@ export function sfx(dir, { ep = loadEpisode(dir), sched = schedule(ep), force = 
   const list = ep.sfx ?? [];
   const duck = ep.duck ?? -4.5;
   const duckFx = ep.duckFx ?? -7;
-  const stamp = hashOf(JSON.stringify([SOURCE, list, duck, duckFx, sched.duration, sched.cues, sched.beats.map((b) => b.words.map((w) => [w.s, w.e]))]));
+  // a recorded sound changed on disk re-renders the bed (only when the list has one: the other beds keep their stamp)
+  const samples = list.filter((x) => x.type === "sample").map((x) => sampleStamp(x.file));
+  const stamp = hashOf(JSON.stringify([SOURCE, list, duck, duckFx, sched.duration, sched.cues, sched.beats.map((b) => b.words.map((w) => [w.s, w.e])), ...(samples.length ? [samples] : [])]));
   if (!list.length) return false;
   if (!force && fs.existsSync(out)) {
     try {
@@ -1120,6 +1174,71 @@ export function sfx(dir, { ep = loadEpisode(dir), sched = schedule(ep), force = 
     // THE ROOM: declares the reverb (see SPACE above) — `mix` (the tail's level), `size` (0.7 a room … 0.9 a hall),
     // `damp` (a darker tail), `all: false` to keep it to the boom, the sting and the swell.
     space() {},
+    // A RECORDED SOUND (2026-10-23): a WAV from the sound bank (kit/sons/, made once with ElevenLabs and kept, so the
+    // bed stays the same at every run). One shot at `at` (its whole length, or `dur`), or a loop from `from` to `to`
+    // (`loop: true`, crossfaded on itself, faded in and out over `fade` s, optional `curve` like the drone).
+    // `bus`: "fx" (steps back under a phrase, the default for a shot), "under" (under the voice, the default for a
+    // loop) or "main" (never ducked). `offset`: start that many seconds into the file (a generated sound often opens
+    // on a silence).
+    sample({ file, at: ref, from, to, dur, loop = false, gain = -18, pan = 0, fade, curve, bus, offset = 0 }) {
+      const whole = loadSample(file);
+      const skip = Math.min(whole.L.length - 1, Math.max(0, Math.round(offset * SR)));
+      const src = skip ? { L: whole.L.subarray(skip), R: whole.R.subarray(skip) } : whole;
+      const g = db(gain);
+      const gl = Math.cos(((pan + 1) * Math.PI) / 4) * 1.414;
+      const gr = Math.sin(((pan + 1) * Math.PI) / 4) * 1.414;
+      const target = { fx, under, main }[bus ?? (loop ? "under" : "fx")];
+      if (!target) throw new Error(`sfx: sample "${file}" — bus inconnu "${bus}"`);
+      const M = src.L.length;
+      if (!loop) {
+        const t0 = at(ref);
+        const len = Math.max(0, Math.min(to != null ? at(to) - t0 : dur ?? M / SR, M / SR));
+        if (!len) return;
+        const fi = 0.004;
+        const fo = Math.min(fade ?? 0.03, len / 2);
+        writeLR(t0, len, (t, i, out) => {
+          const k = Math.round(t * SR);
+          const env = Math.min(1, t / fi, (len - t) / fo);
+          out[0] = src.L[k] * g * gl * env;
+          out[1] = src.R[k] * g * gr * env;
+        }, target);
+        return;
+      }
+      // the loop: its last `xf` samples blended into its first, then played modulo (M − xf)
+      const xf = Math.min(Math.round(0.4 * SR), Math.floor(M / 4));
+      const P = M - xf;
+      const LL = src.L.slice(0, P);
+      const RR = src.R.slice(0, P);
+      for (let i = 0; i < xf; i++) {
+        const u = i / xf;
+        const a = Math.sin((u * Math.PI) / 2);
+        const b = Math.cos((u * Math.PI) / 2);
+        LL[i] = src.L[i] * a + src.L[P + i] * b;
+        RR[i] = src.R[i] * a + src.R[P + i] * b;
+      }
+      const t0 = at(from ?? 0);
+      const t1 = to != null ? at(to) : total;
+      const len = Math.max(0, t1 - t0);
+      const fd = Math.min(fade ?? 0.6, len / 2);
+      const pts = curve ? curve.map(([r, level]) => [at(r), level]).sort((a, b) => a[0] - b[0]) : null;
+      const levelAt = (t) => {
+        if (!pts) return 1;
+        if (t <= pts[0][0]) return pts[0][1];
+        for (let k = 1; k < pts.length; k++) {
+          if (t < pts[k][0]) {
+            const u = (t - pts[k - 1][0]) / (pts[k][0] - pts[k - 1][0]);
+            return pts[k - 1][1] + (pts[k][1] - pts[k - 1][1]) * (u * u * (3 - 2 * u));
+          }
+        }
+        return pts.at(-1)[1];
+      };
+      writeLR(t0, len, (t, i, out) => {
+        const k = Math.round(t * SR) % P;
+        const env = smoothstep(Math.min(1, t / fd, (len - t) / fd)) * levelAt(t0 + t);
+        out[0] = LL[k] * g * gl * env;
+        out[1] = RR[k] * g * gr * env;
+      }, target);
+    },
   };
   const smoothstep = (u) => u * u * (3 - 2 * u);
   const hushes = [];

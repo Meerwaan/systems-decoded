@@ -11,6 +11,7 @@ import { extractAudio, loudness, tool } from "./lib/ffmpeg.mjs";
 import { printFlicker } from "./flicker.mjs";
 import { resolveMoment } from "../kit/lib/ref.mjs";
 import { breathAfter, threadCues } from "./sfx.mjs";
+import { verbose } from "./lib/log.mjs";
 
 /* ───────────── THE RHYTHM OF THE OPENING (2026-10-21) ─────────────
    The TikTok curves of 015 (the best film of the account) and 012 lose people in two places: the first second, and
@@ -467,7 +468,8 @@ export async function qa(dir, file) {
     `\n  ${path.basename(mp4)} · audio ${render.duration.toFixed(2)} s (attendu ${sched.duration}) · crête ${(20 * Math.log10(peak)).toFixed(1)} dBFS` +
       (loud ? ` · ${loud.i} LUFS · crête vraie ${loud.tp} dBTP · dynamique ${loud.lra} LU` : ""),
   );
-  console.log("\n  clip   attendu   décalage   corrélation");
+  // the table of slices: printed whole when one of them is off (or with --verbose), one line when all are in place
+  const table = ["\n  clip   attendu   décalage   corrélation"];
   let worst = 0;
   let weakest = 1;
   sched.clips.forEach((clip, i) => {
@@ -488,11 +490,12 @@ export async function qa(dir, file) {
     }
     worst = Math.max(worst, Math.abs(best.lag * HOP));
     weakest = Math.min(weakest, best.c);
-    console.log(`  vo-${String(i).padEnd(3)} ${clip.at.toFixed(2).padStart(7)}s  ${(best.lag * HOP * 1000).toFixed(0).padStart(6)} ms   ${best.c.toFixed(3)}   prise ${clip.seed}`);
+    table.push(`  vo-${String(i).padEnd(3)} ${clip.at.toFixed(2).padStart(7)}s  ${(best.lag * HOP * 1000).toFixed(0).padStart(6)} ms   ${best.c.toFixed(3)}   prise ${clip.seed}`);
   });
   const ok = worst <= 0.05 && weakest > 0.5;
+  if (!ok || verbose()) console.log(table.join("\n"));
   console.log(
-    `\n  ${ok ? `✓ voix calée (écart max ${(worst * 1000).toFixed(0)} ms)` : worst > 0.05 ? `✗ voix décalée de ${(worst * 1000).toFixed(0)} ms au pire — à vérifier` : "✗ une tranche de voix est méconnaissable dans le rendu — à vérifier"}\n`,
+    `\n  ${ok ? `✓ voix calée (${sched.clips.length} tranches · écart max ${(worst * 1000).toFixed(0)} ms · corrélation min ${weakest.toFixed(3)})` : worst > 0.05 ? `✗ voix décalée de ${(worst * 1000).toFixed(0)} ms au pire — à vérifier` : "✗ une tranche de voix est méconnaissable dans le rendu — à vérifier"}\n`,
   );
   // the picture: no stray frame, no shimmer
   const smooth = printFlicker(mp4);

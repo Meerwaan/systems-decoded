@@ -1,7 +1,8 @@
 // Writing checks for a script, read by `npm run script`: a short (001…) against docs/recette-script.md,
 // a long (L01…) against docs/recette-long.md (« L'écriture d'un long »), a hors-série (HS01…, the promo of a long)
 // against docs/recette-promo.md. Warnings only: nothing is blocked, nothing is written.
-import { plainText } from "./episode.mjs";
+import fs from "node:fs";
+import { plainText, core, directions } from "./episode.mjs";
 
 const words = (s) => s.split(/\s+/).filter((w) => /[\p{L}\p{N}]/u.test(w));
 const norm = (s) => s.normalize("NFD").replace(/\p{M}/gu, "").replace(/[’`]/g, "'").toLowerCase();
@@ -16,7 +17,7 @@ const WEAK = /(tu le tentes|tu y vas|tu as déjà|a déjà|il a quel âge|tu le 
 export function ecriture(ep, sched) {
   if (/^L\d{2}$/.test(String(ep.id))) return ecritureLong(ep, sched);
   if (/^HS\d{2}$/.test(String(ep.id))) return ecritureHorsSerie(ep, sched);
-  if (!/^\d{3}$/.test(String(ep.id))) return null;
+  if (!/^(\d{3}|X\d{2})$/.test(String(ep.id))) return null; // X30… : a trial script of the writers' room, read as a short
   const out = [];
   const warn = (msg) => out.push(msg);
   const ids = ep.beats.map((b) => b.id);
@@ -26,12 +27,9 @@ export function ecriture(ep, sched) {
   const spoken = (b) => (b.vo ?? plain(b)).replace(TAG, " ");
 
   // 1. the word budget: the film, the hook (A·B·C), the scene (the costliest ten seconds of the curve)
-  const total = ep.beats.reduce((n, b) => n + words(plain(b)).length, 0);
+  const { total, hook, hookWords } = mesures(ep);
   if (total > 265) warn(`${total} mots affichés : au-delà de 265 le film passe ≈ 95 s — couper la scène et le commentaire d'abord`);
   if (total < 240) warn(`${total} mots affichés : sous 240, vérifier que le film tient ses ≈ 85 s (60 s au moins)`);
-  const sceneAt = ids.indexOf("scene");
-  const hook = ep.beats.slice(0, sceneAt > 0 ? sceneAt : Math.min(2, ep.beats.length));
-  const hookWords = hook.reduce((n, b) => n + words(plain(b)).length, 0);
   if (hookWords < 26 || hookWords > 32) warn(`accroche (${hook.map((b) => b.id).join(" + ")}) : ${hookWords} mots — 26 à 32, finis avant 10 s`);
   const hookEnd = sched.beats.find((b) => b.id === hook.at(-1)?.id)?.end;
   if (!sched.estimated && hookEnd > 10.5) warn(`l'accroche finit à ${hookEnd.toFixed(1)} s : A·B·C avant 10 s`);
@@ -147,6 +145,93 @@ export function ecriture(ep, sched) {
   }
   if ((post.hashtags ?? []).length > 5) warn(`légende : ${post.hashtags.length} hashtags — cinq au plus`);
   if (post.pinned && post.pinned.length > 150) warn(`épinglé : ${post.pinned.length} caractères — 150 au plus`);
+
+  // 10. what an agent can leave behind (salle d'écriture, 27/10): mechanical, read in the JSON, never a matter of taste
+  for (const m of mecanique(ep, sched)) warn(m);
+  return out;
+}
+
+/** The word counts of a short: the film, the hook (the phrases before "scene"), the scene. Shared with `npm run salle`. */
+export function mesures(ep) {
+  const count = (b) => words(plainText(b.tokens)).length;
+  const ids = ep.beats.map((b) => b.id);
+  const sceneAt = ids.indexOf("scene");
+  const hook = ep.beats.slice(0, sceneAt > 0 ? sceneAt : Math.min(2, ep.beats.length));
+  const scene = ep.beats.find((b) => b.id === "scene");
+  return {
+    total: ep.beats.reduce((n, b) => n + count(b), 0),
+    hook,
+    hookWords: hook.reduce((n, b) => n + count(b), 0),
+    sceneWords: scene ? count(scene) : null,
+  };
+}
+
+const TEMPLATE = new URL("../../kit/template/episode.json", import.meta.url);
+const PLACEHOLDER = /__[A-Z]+__|#sujet\d|Le mot-choc tombe avant|Le mot que les gens cherchent|Les deux réponses à recopier/;
+/** A vo said word by word: directions and pauses out, then the comparable form of each word (kit/lib/ref.mjs). */
+const saidWords = (vo) => vo.replace(/\[[^\]]*\]/g, " ").split(/\s+/).map(core).filter(Boolean);
+
+/**
+ * Checks a script written by an agent needs and a human rarely misses — each one read mechanically in episode.json.
+ * Tried on 026 to 030 (published): none of them rings there.
+ */
+function mecanique(ep, sched) {
+  const out = [];
+  // the template's own words, left in place (kit/template/episode.json)
+  let tpl = null;
+  try {
+    tpl = JSON.parse(fs.readFileSync(TEMPLATE, "utf8"));
+  } catch {}
+  const left = new Set();
+  const look = (where, s) => {
+    if (typeof s === "string" && PLACEHOLDER.test(s)) left.add(where);
+  };
+  look("title", ep.title);
+  for (const [k, v] of Object.entries(ep.post ?? {})) look(`post.${k}`, typeof v === "string" ? v : JSON.stringify(v));
+  look("cover", JSON.stringify(ep.cover ?? ""));
+  for (const b of ep.beats) {
+    look(b.id, b.text);
+    look(b.id, b.vo);
+    const same = tpl?.beats?.find((t) => t.id === b.id);
+    if (same && same.text === b.text && !/on l['’]ouvre/i.test(same.text)) left.add(b.id); // the signature is the template's on purpose
+  }
+  if (left.size) out.push(`texte du modèle resté en place (${[...left].join(", ")}) — kit/template/episode.json`);
+
+  // text and vo: the same words in the same order (the voice check only asks that every shown word be found, in order)
+  for (const b of ep.beats) {
+    const shown = b.tokens.flatMap((t) => t.s.split(/\s+/)).map(core).filter(Boolean); // [150|cent cinquante]: two words said
+    directions(b).forEach((vo, n) => {
+      const said = saidWords(vo);
+      const i = shown.findIndex((w, k) => w !== said[k]);
+      const at = i >= 0 ? i : shown.length < said.length ? shown.length : -1;
+      if (at < 0) return;
+      const field = n ? `voAlt[${n - 1}]` : "vo";
+      out.push(`${b.id} : ${field} ≠ text au ${at + 1}ᵉ mot (« ${said[at] ?? "—"} » dit, « ${shown[at] ?? "—"} » affiché) — mêmes mots, même ordre`);
+    });
+  }
+
+  // the facts are noted, the searched word is declared, the YouTube title fits
+  if (!Array.isArray(ep.sources) || !ep.sources.length) out.push("sources : vide — chaque fait du script y est noté (et ce que l'image reconstitue)");
+  if (ep.post && !ep.post.keyword) out.push("post.keyword : absent — le mot que les gens cherchent, qui ouvre la légende");
+  const yt = ep.post?.youtube?.title ?? ep.post?.title;
+  if (typeof yt === "string" && yt.length > 100) out.push(`titre YouTube : ${yt.length} caractères — 100 au plus`);
+
+  // a cue "beat:mot" whose start catches several different words: the first is taken, maybe not the one meant
+  for (const [name, ref] of Object.entries(ep.cues ?? {})) {
+    if (typeof ref !== "string") continue;
+    // read as kit/lib/ref.mjs reads it: the offset, then "$", then "#n", then "beat:mot"
+    const rest = ref.trim().replace(/[+-]\d*\.?\d+$/, "").replace(/\$$/, "");
+    const colon = rest.indexOf(":");
+    if (colon < 0 || /#\d+$/.test(rest)) continue;
+    const m = [rest, rest.slice(0, colon), rest.slice(colon + 1)];
+    const sb = sched.beats.find((b) => b.id === m[1]);
+    if (!sb) continue;
+    const key = core(m[2]);
+    const matches = (form) => !!form && (form.startsWith(key) || form.split(/[\s'-]+/).some((part) => part.startsWith(key)));
+    const hits = sb.words.filter((w) => matches(w.k) || matches(w.ks));
+    const forms = [...new Set(hits.map((w) => w.k))];
+    if (forms.length > 1 && forms[0] !== key) out.push(`repère "${name}" (${ref}) : « ${m[2]} » attrape ${forms.map((f) => `« ${f} »`).join(", ")} — le premier est pris ; écrire le mot entier ou #n`);
+  }
   return out;
 }
 

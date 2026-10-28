@@ -2,6 +2,7 @@
 // after every cue, the first frame and the last. Under each, the time and what is being said.
 // It is how an episode is reviewed before a render: rhythm, framing, legibility, the loop.
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { ROOT } from "./lib/env.mjs";
@@ -17,7 +18,8 @@ export const ZONES = [[0, 0, 53, 1920], [1027, 0, 53, 1920], [53, 0, 974, 205], 
   .map(([x, y, w, h]) => `<i style="left:${x / 4}px;top:${y / 4}px;width:${w / 4}px;height:${h / 4}px"></i>`)
   .join("");
 
-export async function review(dir, { cols = 8, only, every, zones = true } = {}) {
+/** `out`: the sheet elsewhere than renders/ — and its frames in a temporary folder, removed after (a working sheet). */
+export async function review(dir, { cols = 8, only, every, zones = true, out: outFile } = {}) {
   const { ep, sched } = await build(dir, { quiet: true });
   const F = frameOf(dir);
   if (F.long) zones = false;
@@ -44,7 +46,7 @@ export async function review(dir, { cols = 8, only, every, zones = true } = {}) 
   } else if (only) moments = moments.filter((m) => m.t >= only[0] && m.t <= only[1]);
   moments.forEach((m) => (m.t = Math.round(m.t * 1000) / 1000));
 
-  const shots = path.join(dir, "snapshots", "planche");
+  const shots = outFile ? fs.mkdtempSync(path.join(os.tmpdir(), "sd-planche-")) : path.join(dir, "snapshots", "planche");
   fs.rmSync(shots, { recursive: true, force: true });
   fs.mkdirSync(shots, { recursive: true });
   const status = hyperframes("snapshot", dir, ["--describe", "false", "--no-end", "--at", moments.map((m) => m.t).join(","), "-o", shots], { quiet: true });
@@ -72,7 +74,7 @@ export async function review(dir, { cols = 8, only, every, zones = true } = {}) 
   const sheet = path.join(shots, "planche.html");
   fs.writeFileSync(sheet, html);
 
-  const out = path.join(ROOT, "renders", `${path.basename(dir)}-planche.jpg`);
+  const out = outFile ?? path.join(ROOT, "renders", `${path.basename(dir)}-planche.jpg`);
   fs.mkdirSync(path.dirname(out), { recursive: true });
   const browser = await launchChrome(["--allow-file-access-from-files"]);
   try {
@@ -82,6 +84,7 @@ export async function review(dir, { cols = 8, only, every, zones = true } = {}) 
     await page.screenshot({ path: out, fullPage: true, type: "jpeg", quality: 86 });
   } finally {
     await browser.close();
+    if (outFile) fs.rmSync(shots, { recursive: true, force: true });
   }
   console.log(`\n  planche-contact: ${moments.length} images → ${out}\n`);
   return { out, moments, shots };

@@ -360,6 +360,30 @@ const POSTS = {
       hashtags: ["#shorts", "#electricien", "#hautetension", "#consignation", "#electricite"],
     },
   },
+  "HS03-evacuation-avion": {
+    instagram: {
+      caption: "Évacuation d'un avion en feu : cinq portes sur huit restent fermées. Il en reste trois, pour 379 personnes, et la fumée descend du plafond.\n\nDans chaque porte dort un toboggan plié. Sa bouteille de gaz ne suffit pas à le gonfler : il avale l'air du dehors. Et ce soir-là, presque personne ne prend son sac.\n\nLe film complet, près de neuf minutes, t'attend sur notre chaîne YouTube : le lien est en bio.\n\nEt toi : ton sac… tu le laisses, ou tu le prends ?",
+      hashtags: ["#evacuation", "#avion", "#aviation", "#securite", "#lesaviezvous"],
+    },
+    youtube: {
+      keyword: "évacuation avion",
+      title: "Évacuation avion : 3 portes pour 379 personnes… et toi, ton sac, tu le prends ?",
+      description: "Évacuation d'un avion en feu : cinq portes sur huit fermées, trois toboggans, 379 personnes. Le toboggan se gonfle en avalant l'air ; le reste de la nuit est dans le film complet (8 min 54), lié juste sous ce Short.\n\nTon sac : tu le laisses, ou tu le prends ?",
+      hashtags: ["#shorts", "#evacuation", "#avion", "#aviation", "#securite"],
+    },
+  },
+  "HS04-porte-avions": {
+    instagram: {
+      caption: "Porte-avions Charles de Gaulle : tes moteurs sont à fond, et ton Rafale ne bouge pas. Une seule pièce le retient, faite pour casser. Quand elle cède : 240 km/h en 75 mètres.\n\nSous le pont, deux cylindres, deux pistons, un croc accroché à ton avion. Et la vapeur qui les pousse vient d'un endroit que tu n'imagines pas.\n\nLe film complet, dix minutes, du lancement au retour de nuit, t'attend sur notre chaîne YouTube : le lien est en bio.\n\nEt ce soir, de nuit, trois câbles t'attendent. Lequel t'attrape : Athéna, le premier… ou Andromède, le dernier avant la mer ?",
+      hashtags: ["#porteavions","#charlesdegaulle","#rafale","#marinenationale","#lesaviezvous"],
+    },
+    youtube: {
+      keyword: "porte-avions Charles de Gaulle",
+      title: "Porte-avions Charles de Gaulle : moteurs à fond… et ton Rafale ne bouge pas",
+      description: "Porte-avions Charles de Gaulle : moteurs à fond, ton Rafale ne bouge pas. Une seule pièce le retient, faite pour casser ; quand elle cède, 240 km/h en 75 mètres. Le film complet (10 min 28), du lancement au retour de nuit, est lié juste sous ce Short.\n\nCe soir, de nuit : Athéna, le premier câble… ou Andromède, le dernier avant la mer ?",
+      hashtags: ["#shorts","#porteavions","#charlesdegaulle","#rafale","#marinenationale"],
+    },
+  },
 };
 
 const problems = [];

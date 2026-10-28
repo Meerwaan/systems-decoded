@@ -33,13 +33,17 @@ const drawnBy = (page) =>
     return gl ? String(info ? gl.getParameter(info.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER)) : "";
   });
 
-/** `shots`: [{ at, pose?, state?, kit?, label? }] · `width`: px of one frame on the sheet · `bare`: the 3D alone, no text over it · `cpu`: draw in software, like the render. */
-export async function look(dir, { shots, cols = 4, width = 405, zones = true, bare = false, cpu = false, out } = {}) {
+/** `shots`: [{ at, pose?, state?, kit?, label? }] · `width`: px of one frame on the sheet · `bare`: the 3D alone, no text over it · `cpu`: draw in software, like the render.
+ *  The sheet is an image an agent reads: what it costs is its pixel count, up to ≈ 1.15 Mpx (≈ 1 530 tokens), above which it
+ *  is shrunk before being read. A frame 270 px wide is the size the films are judged at (CLAUDE.md) and what a sheet of
+ *  eight frames comes down to anyway: the default. No empty columns: two frames make a sheet two frames wide. --width 405 for detail. */
+export async function look(dir, { shots, cols = 4, width = 270, zones = true, bare = false, cpu = false, out } = {}) {
   const { sched } = await build(dir, { quiet: true });
   const F = frameOf(dir);
   if (F.long) zones = false; // TikTok's zones mean nothing on a 16:9 frame
-  if (F.long && width === 405) width = 640;
+  if (F.long && width === 270) width = 480; // a 16:9 frame: 480 × 270
   if (F.long && cols === 4) cols = 3;
+  cols = Math.max(1, Math.min(cols, shots.length));
   const list = shots.map((s) => ({ ...s, t: Math.min(sched.duration - 0.01, Math.max(0, resolveMoment(sched.beats, sched.cues, s.at))) }));
   // its own folder: two looks at once (two episodes, or two people at work on the kit) never share their frames
   const folder = fs.mkdtempSync(path.join(os.tmpdir(), "sd-look-"));
@@ -123,7 +127,7 @@ export async function look(dir, { shots, cols = 4, width = 405, zones = true, ba
     const htmlFile = path.join(folder, "essais.html");
     fs.writeFileSync(htmlFile, html);
     const board = await browser.newPage();
-    await board.setViewport({ width: cols * (width + 12) + 32, height: 900, deviceScaleFactor: 1 });
+    await board.setViewport({ width: cols * (width + 12) + 32, height: 64, deviceScaleFactor: 1 }); // fullPage: the sheet is as tall as its rows, never padded to the window
     await board.goto(pathToFileURL(htmlFile).href, { waitUntil: "load" });
     await board.screenshot({ path: sheet, fullPage: true, type: "jpeg", quality: 90 });
   } finally {

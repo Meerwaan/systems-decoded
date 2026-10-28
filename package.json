@@ -9,8 +9,10 @@
     "voice": "node scripts/sd.mjs voice",
     "sfx": "node scripts/sd.mjs sfx",
     "script": "node scripts/sd.mjs script",
+    "salle": "node scripts/sd.mjs salle",
     "snap": "node scripts/sd.mjs snap",
     "check": "node scripts/sd.mjs check",
+    "lint": "node scripts/sd.mjs lint",
     "preview": "node scripts/sd.mjs preview",
     "render": "node scripts/sd.mjs render",
     "qa": "node scripts/sd.mjs qa",
@@ -25,7 +27,8 @@
     "chrono": "node scripts/sd.mjs chrono",
     "metrics": "node scripts/sd.mjs metrics",
     "social": "node scripts/sd.mjs social",
-    "srt": "node scripts/sd.mjs srt"
+    "srt": "node scripts/sd.mjs srt",
+    "catalogue": "node scripts/catalogue.mjs"
   },
   "repository": {
     "type": "git",

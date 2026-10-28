@@ -3,6 +3,7 @@
 // type and the three colours; no platform logo. It keeps Instagram's zones clear (its header down to y ≈ 250, its reply
 // bar under y ≈ 1640) and leaves a marked slot (y 1410–1538) for the countdown sticker, which reminds whoever taps it.
 //   node scripts/annonce.mjs <HSnn> --heure "18 h 15" [--out <dossier>]   → renders/<HSnn>-story-annonce.png
+//   node scripts/annonce.mjs <HSnn> --lien [--out <dossier>]              → renders/<HSnn>-story-lien.png (the long is out: link sticker)
 // The words come from the long's episode.json (post.youtube, thumb) and must be its own: no spoiler, no "série".
 import fs from "node:fs";
 import os from "node:os";
@@ -25,6 +26,13 @@ const ANNONCES = {
     title: ["Coupée,", "et <s>mortelle</s>"],
     sub: "400 000 volts. La ligne est coupée.<br>Le détecteur dit : rien. Et pourtant…",
   },
+  // --lien: the story posted once the long is out, with the link sticker (not a countdown)
+  HS04: {
+    at: 0.04,
+    kicker: "Le film complet · 10 min 28",
+    title: ["Il ne bouge", "<s>pas</s>"],
+    sub: "Moteurs à fond, ton Rafale reste cloué au pont.<br>Puis zéro à 240 km/h, en 75 mètres.",
+  },
 };
 
 const fonts = (dir) =>
@@ -41,7 +49,7 @@ const EYE = `<svg viewBox="150 250 780 580" xmlns="http://www.w3.org/2000/svg">
     <circle cx="540" cy="540" r="94" fill="#5cffb0" />
   </g></svg>`;
 
-const story = ({ frame, a, heure }) => `<!doctype html><meta charset="utf-8"><style>
+const story = ({ frame, a, heure, lien }) => `<!doctype html><meta charset="utf-8"><style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root { --bg: #070a0c; --ink: #e9e4d8; --dim: rgba(233, 228, 216, 0.68); --faint: rgba(233, 228, 216, 0.24); --veille: #5cffb0; --signal: #ff5b2e; --display: "Barlow Condensed", sans-serif; --mono: "JetBrains Mono", monospace; }
   body { background: var(--bg); color: var(--ink); overflow: hidden; }
@@ -70,16 +78,23 @@ const story = ({ frame, a, heure }) => `<!doctype html><meta charset="utf-8"><st
   .slot i:nth-child(1) { left: 0; top: 0; border-left-width: 4px; border-top-width: 4px; } .slot i:nth-child(2) { right: 0; top: 0; border-right-width: 4px; border-top-width: 4px; }
   .slot i:nth-child(3) { left: 0; bottom: 0; border-left-width: 4px; border-bottom-width: 4px; } .slot i:nth-child(4) { right: 0; bottom: 0; border-right-width: 4px; border-bottom-width: 4px; }
   .handle { position: absolute; left: 0; right: 0; top: 1604px; text-align: center; font: 700 28px/1 var(--mono); letter-spacing: 0.1em; color: var(--dim); text-shadow: 0 0 20px rgba(7, 10, 12, 1); }
+  .live { background: var(--veille); box-shadow: 0 0 18px var(--veille); }
+  .go { position: absolute; left: 0; right: 0; top: 1300px; text-align: center; font: 800 76px/1 var(--display); text-transform: uppercase; color: var(--veille); text-shadow: 0 0 40px rgba(7, 10, 12, 1), 0 0 12px rgba(7, 10, 12, 1); }
+  .chev { position: absolute; left: 50%; top: 1398px; width: 0; height: 0; }
+  .chev i { position: absolute; left: -17px; width: 34px; height: 34px; border-right: 5px solid var(--veille); border-bottom: 5px solid var(--veille); transform: rotate(45deg); }
+  .chev i:nth-child(1) { top: -30px; opacity: 0.35; } .chev i:nth-child(2) { top: -14px; opacity: 0.65; } .chev i:nth-child(3) { top: 2px; }
 </style><div class="page">
   <img class="bg" src="${frame}"><div class="shade"></div>
-  <div class="hud mono"><span><i class="dot"></i>Ce soir · ${heure}</span><em><span class="eye">${EYE}</span>Système Décodé</em></div>
+  <div class="hud mono">${lien ? `<span><i class="dot live"></i>En ligne · maintenant</span>` : `<span><i class="dot"></i>Ce soir · ${heure}</span>`}<em><span class="eye">${EYE}</span>Système Décodé</em></div>
   <div class="rule"></div>
   <div class="kicker mono">${a.kicker}</div>
   <h1>${a.title.join("<br>")}</h1>
   <p class="sub">${a.sub}</p>
-  <div class="when"><div class="h">${heure}</div><div class="where mono">Sur notre chaîne YouTube</div></div>
+  ${lien
+    ? `<div class="go">Le lien est juste là</div><div class="chev"><i></i><i></i><i></i></div>`
+    : `<div class="when"><div class="h">${heure}</div><div class="where mono">Sur notre chaîne YouTube</div></div>`}
   <div class="slot"><i></i><i></i><i></i><i></i></div>
-  <div class="handle mono">Le film complet · lien en bio</div>
+  <div class="handle mono">${lien ? "Système Décodé · sur YouTube" : "Le film complet · lien en bio"}</div>
 </div>`;
 
 const args = process.argv.slice(2);
@@ -88,6 +103,7 @@ const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const a = ANNONCES[id];
 if (!a) throw new Error(`annonce : ${id ?? "?"} inconnu (${Object.keys(ANNONCES).join(", ")})`);
 const heure = opt("--heure", "18 h 15");
+const lien = args.includes("--lien");
 const out = path.resolve(opt("--out", path.join(ROOT, "renders")));
 const dir = resolveEpisode(id);
 await build(dir, { quiet: true });
@@ -112,13 +128,13 @@ try {
   await page.screenshot({ path: shot, type: "png", clip: { x: 0, y: 0, width: 1080, height: 1920 } });
   await page.close();
   const html = path.join(folder, "story.html");
-  fs.writeFileSync(html, `<style>${fonts(dir)}</style>` + story({ frame: pathToFileURL(shot).href, a, heure }));
+  fs.writeFileSync(html, `<style>${fonts(dir)}</style>` + story({ frame: pathToFileURL(shot).href, a, heure, lien }));
   const sheet = await browser.newPage();
   await sheet.setViewport({ width: 1080, height: 1920, deviceScaleFactor: 1 });
   await sheet.goto(pathToFileURL(html).href, { waitUntil: "load" });
   await sheet.evaluate(() => document.fonts.ready);
   fs.mkdirSync(out, { recursive: true });
-  const target = path.join(out, `${path.basename(dir)}-story-annonce.png`);
+  const target = path.join(out, `${path.basename(dir)}-story-${lien ? "lien" : "annonce"}.png`);
   await sheet.screenshot({ path: target, type: "png" });
   console.log(`  → ${target}`);
 } finally {
