@@ -33,6 +33,7 @@ import { BRAND } from "@kit/brand.js";
 import { rng } from "@kit/rng.js";
 import { glass, asShell, glow, setGlow, lineMat, anchor } from "@kit/build3d.js";
 import { SLOPE, ROAD, CURVE, MOUNTAIN, HOME, PANEL, ACCESS, BED, BERM, RAIL } from "./plan.js";
+import { dressCol } from "./habillage.js"; // the life of the place: the forest, the top of the col (decorator)
 
 const DEG = Math.PI / 180;
 const INK = new THREE.Color(BRAND.ink);
@@ -1002,6 +1003,8 @@ export function buildCol() {
   homeHalo.put(0, win.position.x, win.position.y, win.position.z + 30, 900);
   group.add(homeHalo.points);
 
+  const dress = dressCol({ yRoad, mountainAt });
+  group.add(dress.group);
   /* ── anchors ── */
   const bendPhi = 34 * DEG;
   A.bend = anchor(group, CX + (R + HALF) * Math.cos(bendPhi), yRoad(CZ - (R + HALF) * Math.sin(bendPhi)) + 60, CZ - (R + HALF) * Math.sin(bendPhi));
@@ -1054,6 +1057,7 @@ export function buildCol() {
       setGlow(winMat, 1.7 * home);
       homeHalo.uniforms.uAmount.value = 0.9 * home;
       homeHalo.uniforms.uScale.value = px;
+      dress.update(P, time, px);
     },
   };
 }

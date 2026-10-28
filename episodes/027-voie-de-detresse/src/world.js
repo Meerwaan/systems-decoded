@@ -104,8 +104,9 @@ export const frame = (cam, aim, rest = {}) => {
 // the glass truck rushing down, the road filing to its vanishing point; through the glass, far down, the bend's chevrons
 // and the ravine; on the right, small and veille, the lane. The planche of four candidates (docs/027-actes.md) chooses
 // it, and it is pasted here before the acts are staged. Sharp (dof 0).
-const LENS0 = { fov: 44, shift: 120, side: 0, roll: 0, drift: 0, dof: 0 };
-export const POSE0 = frame(road(-200, 55, 2350), road(-40, 150, 500), LENS0);
+const LENS0 = { fov: 46, shift: 110, side: 0, roll: 0, drift: 0, dof: 0 };
+// CHOSEN 22/10 on the planche of candidates: « a2 », square behind the trailer at 42 cm, the drums and the stop lights.
+export const POSE0 = frame(road(0, 42, 2250), road(0, 160, 600), LENS0);
 
 export const FIRST = {
   set: SET.SCENE,
