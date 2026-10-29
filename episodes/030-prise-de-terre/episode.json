@@ -18,18 +18,19 @@
   "cover": {
     "at": "eclate$",
     "title": [
-      "Prise de terre"
+      "Prise",
+      "de terre"
     ],
     "cam": {
       "tx": 0,
-      "ty": 8,
+      "ty": 37,
       "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
-      "shift": -430,
-      "side": 0,
+      "d": 300,
+      "az": -30,
+      "el": 28,
       "fov": 28,
+      "shift": -470,
+      "side": 0,
       "roll": 0
     }
   },
@@ -183,7 +184,125 @@
     "verdict": "chute:chemin",
     "tocta": "comment-0.12",
     "toloop": "boucle-0.12",
-    "rewind": "boucle:jour"
+    "rewind": "boucle:jour",
+    "rien": "accroche:rien",
+    "saute": "accroche:sauté",
+    "topromesse": "promesse-0.1",
+    "diff": "promesse:différentiel",
+    "marche": "promesse:marche",
+    "attend": "promesse:attend",
+    "courant": "promesse:courant",
+    "partoi": "promesse:toi",
+    "souvent": "promesse:Souvent",
+    "prises": "promesse:prises",
+    "toscene": "scene-0.15",
+    "phase": "scene:phase",
+    "touche": "scene:touche",
+    "carcasse": "scene:carcasse",
+    "metal": "scene:métal",
+    "volts": "scene:volts",
+    "pieds": "scene:Pieds",
+    "mouille": "scene:mouillé",
+    "main": "scene:main",
+    "tend": "scene:tend",
+    "capot": "scene:capot",
+    "alors": "ouvre:Alors",
+    "carc2": "eclate:carcasse",
+    "vj": "eclate:vert-jaune",
+    "conducteur": "eclate:conducteur",
+    "protection": "eclate:protection",
+    "broche": "eclate:broche",
+    "prise": "eclate:prise",
+    "tableau": "eclate:tableau",
+    "puis": "eclate:puis",
+    "terre": "eclate:terre",
+    "maison": "eclate:maison",
+    "torepos": "repos-0.15",
+    "fondations": "repos:fondations",
+    "cuivre": "repos:cuivre",
+    "pdt": "repos:prise",
+    "rien2": "repos:rien",
+    "bien": "repos:bien",
+    "mais": "repos:Mais",
+    "ici": "repos:ici",
+    "fil": "repos:fil",
+    "nulle": "repos:nulle",
+    "part": "repos:part",
+    "rejoue1": "seuil:rejoue",
+    "scene2": "seuil:scène",
+    "avecce": "seuil:avec",
+    "zmain": "zero:main",
+    "ztouche": "zero:touche",
+    "zcapot": "zero:capot",
+    "zcourant": "zero:courant",
+    "zpar": "zero:toi",
+    "zsol": "zero:sol",
+    "todiff": "reponse-0.12",
+    "coupe1": "reponse:coupe",
+    "apres": "reponse:Après",
+    "avecfil": "reponse:fil",
+    "file": "reponse:file",
+    "rterre": "reponse:terre",
+    "rtableau": "reponse:tableau",
+    "voit": "reponse:voit",
+    "coupe2": "reponse:coupe#2",
+    "avant": "reponse:avant",
+    "rmain": "reponse:main",
+    "secret": "chute:secret",
+    "protege": "chute:protège",
+    "pas": "chute:pas",
+    "seule": "chute:seule",
+    "elle": "chute:Elle",
+    "chemin": "chute:chemin",
+    "ctableau": "chute:tableau",
+    "ccoupe": "chute:coupe",
+    "cavant": "chute:avant",
+    "prises2": "comment:prises",
+    "sansb": "comment:Sans",
+    "avecb": "comment:Avec",
+    "toujours": "comment:toujours",
+    "anciens": "comment:anciens",
+    "defect": "comment:défectueuse",
+    "anomalie": "comment:l'anomalie",
+    "commentaire": "comment:commentaire",
+    "cheztoi": "comment:chez",
+    "duelA": "comment:broche#3",
+    "duelB": "comment:sans#2",
+    "tolike": "like-0.15",
+    "likeEnd": "like$",
+    "toabo": "abo-0.15",
+    "prochain": "abo:Prochain",
+    "classe": "abo:classé",
+    "autre": "abo:autre",
+    "aboEnd": "abo$",
+    "comme": "boucle:Comme",
+    "s_saute": "accroche$+0.08",
+    "s_partoi": "promesse:toi+0.2",
+    "s_prises": "promesse$+0.1",
+    "s_carcasse": "scene:carcasse+0.52",
+    "s_volts": "scene:volts+0.28",
+    "s_mouille": "scene:mouillé+0.42",
+    "s_capot": "scene$+0.06",
+    "s_c1": "eclate:carcasse+0.42",
+    "s_c2": "eclate:vert-jaune+0.5",
+    "s_c3": "eclate:protection+0.52",
+    "s_c4": "eclate:tableau+0.36",
+    "s_c5": "eclate$+0.08",
+    "s_pdt": "repos:terre+0.36",
+    "s_nulle": "repos$+0.08",
+    "s_zcapot": "zero:capot+0.24",
+    "s_zsol": "zero$+0.08",
+    "s_coupe1": "reponse:coupe+0.36",
+    "s_apres": "reponse:toi+0.2",
+    "s_rterre": "reponse:terre+0.28",
+    "s_coupe2": "reponse:coupe#2+0.36",
+    "s_seule": "chute:seule+0.3",
+    "s_chemin": "chute:courant+0.34",
+    "s_chute": "chute$+0.08",
+    "s_toujours": "comment:toujours+0.37",
+    "s_duelA": "comment:broche#3+0.26",
+    "s_duelB": "comment$+0.08",
+    "s_like": "like$+0.06"
   },
   "bedVolume": 0.8,
   "sfx": [
@@ -253,28 +372,9 @@
     },
     {
       "type": "impact",
-      "at": "explode",
-      "gain": -16,
-      "size": 0.8
-    },
-    {
-      "type": "impact",
       "at": "tozero",
       "gain": -12,
       "size": 1.2
-    },
-    {
-      "type": "impact",
-      "at": "trigger",
-      "gain": -10,
-      "size": 1.4
-    },
-    {
-      "type": "blip",
-      "at": "verdict",
-      "gain": -15,
-      "pitch": 0.7,
-      "heavy": true
     },
     {
       "type": "impact",
@@ -283,9 +383,153 @@
       "size": 0.7
     },
     {
+      "type": "hit",
+      "at": "s_saute",
+      "gain": -15,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "s_partoi",
+      "gain": -19,
+      "pitch": 0.8
+    },
+    {
+      "type": "hit",
+      "at": "s_prises",
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "s_carcasse",
+      "gain": -20,
+      "size": 0.5,
+      "crack": 0.9
+    },
+    {
+      "type": "impact",
+      "at": "s_volts",
+      "gain": -14,
+      "size": 1,
+      "crack": 1
+    },
+    {
+      "type": "swish",
+      "at": "s_mouille+0.15",
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "s_c1",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "s_c2",
+      "gain": -17,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "s_c3",
+      "gain": -16,
+      "pitch": 0.95
+    },
+    {
+      "type": "click",
+      "at": "s_c4",
+      "gain": -17,
+      "pitch": 0.8
+    },
+    {
+      "type": "click",
+      "at": "s_c5",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "s_pdt",
+      "gain": -18,
+      "pitch": 0.8
+    },
+    {
+      "type": "hit",
+      "at": "s_nulle",
+      "gain": -14,
+      "pitch": 0.85
+    },
+    {
+      "type": "impact",
+      "at": "s_zcapot",
+      "gain": -12,
+      "size": 1.2,
+      "crack": 1
+    },
+    {
+      "type": "hit",
+      "at": "s_zsol",
+      "gain": -15
+    },
+    {
+      "type": "click",
+      "at": "s_coupe1",
+      "gain": -14,
+      "pitch": 1.1
+    },
+    {
       "type": "rewind",
-      "at": "rewind",
-      "dur": 1,
+      "at": "s_apres",
+      "dur": 0.35,
+      "gain": -20
+    },
+    {
+      "type": "swish",
+      "at": "s_rterre+0.15",
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "s_coupe2",
+      "gain": -13,
+      "pitch": 1.1
+    },
+    {
+      "type": "hit",
+      "at": "s_coupe2+0.03",
+      "gain": -14
+    },
+    {
+      "type": "hit",
+      "at": "s_seule",
+      "gain": -14,
+      "pitch": 0.9
+    },
+    {
+      "type": "blip",
+      "at": "s_chemin",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "click",
+      "at": "s_duelA",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "s_duelB",
+      "gain": -17,
+      "pitch": 0.85
+    },
+    {
+      "type": "rewind",
+      "at": "toloop",
+      "dur": 0.45,
       "gain": -21
     }
   ]
