@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · HS03 · Évacuation d'un avion</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (en-tête, cartes d'accroche, sous-titres, #film, #duel, D.cliff) sont stylés dans
+         kit/brand.css. Ici : ce qui n'existe que dans ce hors-série. */
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="62.8" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Hors-série 03</span></div>
+        <div class="hud__title" id="hud-title">Évacuation d'un avion</div>
+        <div class="hud__clock" id="hud-clock">FILM · 00:00</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Fils ouverts</span><b id="hud-count-v">0</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 La porte</span><span>03 Rendez-vous</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- la question du commentaire en deux réponses (duelCall, fin.js) : les deux restent allumées, le film ne répond pas -->
+      <div id="duel">
+        <div class="kicker">Ton sac ?</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">Je le laisse</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Je le prends</span></div>
+        <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
+      </div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <!-- hors-série (filmTitle) : le L03, vers lequel la promo envoie — le mot YouTube, jamais son logo, jamais son titre exact -->
+      <section id="film">
+        <div class="panel__h"><span>Film complet</span><span id="film-length">8 min 54</span></div>
+        <div id="film-title">90 secondes pour sortir</div>
+        <div id="film-bar"><i></i></div>
+        <div id="film-where"><span>Sur YouTube</span><span>Lien en bio</span></div>
+      </section>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

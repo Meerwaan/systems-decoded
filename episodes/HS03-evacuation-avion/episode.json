@@ -1,0 +1,324 @@
+{
+  "id": "HS03",
+  "serie": "hors-serie",
+  "slug": "evacuation-avion",
+  "title": "Évacuation d'un avion",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": 1.3,
+    "title": [
+      "Évacuation",
+      "d'un avion"
+    ],
+    "tone": "signal",
+    "tagStyle": "solid",
+    "tagSize": 50,
+    "foot": "Film complet · 8 min 54",
+    "cam": {
+      "tx": -2600,
+      "ty": 330,
+      "tz": 400,
+      "d": 1700,
+      "az": -68,
+      "el": -4,
+      "fov": 36,
+      "shift": -420,
+      "side": 0,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "évacuation",
+    "caption": "Évacuation d'un avion en feu : cinq portes sur huit fermées, trois toboggans, 379 personnes, et une fumée qui descend du plafond. Le toboggan, lui, se gonfle en avalant l'air. Le film complet est sur notre chaîne YouTube, lien en bio. Et toi : ton sac… tu le laisses, ou tu le prends ?",
+    "hashtags": [
+      "#evacuation",
+      "#avion",
+      "#aviation",
+      "#securite",
+      "#apprendresurtiktok"
+    ],
+    "pinned": "Le film complet (9 min) : lien en bio, ou cherche « Système Décodé évacuation » sur YouTube. Ton sac : tu le laisses, ou tu le prends ?",
+    "lien": "Le L03 sort d'abord sur YouTube, public ; HS03 dans l'heure qui suit, entre 19 h et 22 h. Shorts : YouTube Studio, « Vidéo associée » → le L03, au moment de publier le Short. Instagram : lien du L03 en bio + une story avec l'autocollant de lien le jour même (npm run social -- --only stories), gardée « À la une ». TikTok : lien du L03 en bio, posé avant la promo. Facebook : le lien du L03 en premier commentaire. Puis, depuis un téléphone : le lien du Short s'affiche, le lien en bio ouvre le long.",
+    "instagram": {
+      "caption": "Évacuation d'un avion en feu : cinq portes sur huit restent fermées. Il en reste trois, pour 379 personnes, et la fumée descend du plafond.\n\nDans chaque porte dort un toboggan plié. Sa bouteille de gaz ne suffit pas à le gonfler : il avale l'air du dehors. Et ce soir-là, presque personne ne prend son sac.\n\nLe film complet, près de neuf minutes, t'attend sur notre chaîne YouTube : le lien est en bio.\n\nEt toi : ton sac… tu le laisses, ou tu le prends ?",
+      "hashtags": [
+        "#evacuation",
+        "#avion",
+        "#aviation",
+        "#securite",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "keyword": "évacuation avion",
+      "title": "Évacuation avion : 3 portes pour 379 personnes… et toi, ton sac, tu le prends ?",
+      "description": "Évacuation d'un avion en feu : cinq portes sur huit fermées, trois toboggans, 379 personnes. Le toboggan se gonfle en avalant l'air ; le reste de la nuit est dans le film complet (8 min 54), lié juste sous ce Short.\n\nTon sac : tu le laisses, ou tu le prends ?",
+      "hashtags": [
+        "#shorts",
+        "#evacuation",
+        "#avion",
+        "#aviation",
+        "#securite"
+      ]
+    }
+  },
+  "sources": [
+    "Hors-série 03 : la promo du L03 (l'évacuation d'un avion de ligne, le troisième format long). Aucun fait neuf : chaque phrase est payée par un beat de episodes/L03-evacuation-avion/episode.json, dont les sources font foi.",
+    "accroche ← L03 accroche (ton avion brûle), scene (sur huit portes, cinq restent fermées), t5.",
+    "promesse ← L03 defi (il t'en reste trois, 379 personnes), t3, t8.",
+    "curiosite ← L03 curiosite (presque personne n'a pris son sac ; tu l'aurais pris ?), t7, du, derriere, conseil — non payée ici, voulu : la réponse est dans le long.",
+    "scene ← L03 accroche (la fumée descend du plafond, les haut-parleurs se taisent), t4, t5 (devant, deux portes s'ouvrent), paquet (ce qui dort, plié, dans chaque porte).",
+    "ouvre ← L03 ouvre.",
+    "eclate ← L03 eclate (le toboggan plié, la bouteille de gaz comprimé, les bouches), bouteille (ce n'est pas elle qui le gonfle, pas toute seule).",
+    "jet ← L03 jet (le gaz file dans ces bouches, le jet crée un vide, un clapet s'ouvre), aspire (l'air du dehors s'engouffre).",
+    "aspire ← L03 aspire (ton toboggan se gonfle en avalant l'air autour de lui), plein. Le morceau payé de la promo.",
+    "fuite ← L03 fuite (un doigt, un débris qui en rouvre un, et le toboggan peut se dégonfler).",
+    "regle ← L03 promesse (pour avoir le droit de voler, on peut le vider en 90 secondes, par la moitié de ses portes), regle67, noir.",
+    "test ← L03 noir (à Tokyo, tu n'en auras même pas autant), t5, t6 (à l'arrière, une seule porte ; à droite, un moteur tourne encore). Coupé au noir : la suite (t7, t8) est dans le long.",
+    "comment ← L03 comment (ton sac, tu le laisses ? ou tu le prends ?) — la réponse (du, dubai, denver, safo, conseil) est dans le long.",
+    "youtube ← le L03 entier (8 min 54, « près de neuf minutes »).",
+    "boucle ← retombe sur l'accroche (« Ton avion brûle »)."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ton avion *brûle*. Cinq portes sur huit restent fermées.",
+      "vo": "[tense] Ton avion brûle. Cinq portes sur huit restent fermées."
+    },
+    {
+      "id": "promesse",
+      "text": "Il en reste trois… pour [379|trois cent soixante-dix-neuf] personnes.",
+      "vo": "Il en reste trois... pour trois cent soixante-dix-neuf personnes."
+    },
+    {
+      "id": "curiosite",
+      "fil": "sac",
+      "hold": 0.3,
+      "text": "Presque personne ne prend son *sac*. Et toi… tu le prends ?",
+      "vo": "[conversational, curious] Presque personne ne prend son sac. Et toi... tu le prends ?"
+    },
+    {
+      "id": "scene",
+      "text": "Les haut-parleurs se taisent. La fumée descend du plafond. Devant, une porte s'ouvre… et dans cette porte, plié serré, dort ce qui va te sortir de là.",
+      "vo": "[tense] Les haut-parleurs se taisent. La fumée descend du plafond. Devant, une porte s'ouvre... et dans cette porte, plié serré, dort ce qui va te sortir de là."
+    },
+    {
+      "id": "ouvre",
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ]
+    },
+    {
+      "id": "eclate",
+      "fil": "air",
+      "hold": 0.3,
+      "text": "Un toboggan, et sa bouteille de gaz. Mais ce n'est pas elle qui le gonfle. Pas toute seule.",
+      "vo": "[curious] Un toboggan, et sa bouteille de gaz. Mais ce n'est pas elle qui le gonfle. Pas toute seule."
+    },
+    {
+      "id": "jet",
+      "text": "Son gaz file dans ces bouches. Ce jet crée un vide… un clapet s'ouvre, et l'air du dehors s'engouffre.",
+      "vo": "[conversational, curious] Son gaz file dans ces bouches. Ce jet crée un vide... un clapet s'ouvre, et l'air du dehors s'engouffre."
+    },
+    {
+      "id": "aspire",
+      "paie": "air",
+      "paye": true,
+      "text": "Ton toboggan se gonfle… en +avalant l'air+.",
+      "vo": "[amused] Ton toboggan se gonfle... en avalant l'air."
+    },
+    {
+      "id": "fuite",
+      "text": "Mais qu'un débris rouvre un clapet… et il peut se *dégonfler*.",
+      "vo": "Mais qu'un débris rouvre un clapet... et il peut se dégonfler."
+    },
+    {
+      "id": "regle",
+      "text": "Pour avoir le droit de voler, ton avion a dû le prouver : on le vide en [90|quatre-vingt-dix] secondes. Par la moitié de ses portes.",
+      "vo": "[curious] Pour avoir le droit de voler, ton avion a dû le prouver : on le vide en quatre-vingt-dix secondes. Par la moitié de ses portes."
+    },
+    {
+      "id": "test",
+      "hold": 0.5,
+      "text": "Ce soir, il n'en reste même pas la moitié. À l'arrière, une seule porte. Et à droite, un moteur *tourne* encore…",
+      "vo": "[tense] Ce soir, il n'en reste même pas la moitié. À l'arrière, une seule porte. Et à droite, un moteur tourne encore..."
+    },
+    {
+      "id": "comment",
+      "text": "Alors sois honnête, et dis-le en +commentaire+ : ton sac… tu le laisses ? Ou tu le prends ?",
+      "vo": "[conversational, curious] Alors sois honnête, et dis-le en commentaire : ton sac... tu le laisses ? Ou tu le prends ?"
+    },
+    {
+      "id": "youtube",
+      "text": "Le film complet de cette évacuation, près de neuf minutes, t'attend sur notre chaîne YouTube : le lien est en bio.",
+      "vo": "[warm, conversational] Le film complet de cette évacuation, près de neuf minutes, t'attend sur notre chaîne YouTube : le lien est en bio."
+    },
+    {
+      "id": "boucle",
+      "text": "Parce qu'un soir, peut-être…",
+      "vo": "[calm] Parce qu'un soir, peut-être,"
+    }
+  ],
+  "cues": {
+    "choc": "accroche:brûle",
+    "fil1": "curiosite$",
+    "fil2": "eclate$",
+    "fil3": "test$",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "paid": "aspire:avalant",
+    "noir": "test$",
+    "verdict": "youtube:chaîne",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:soir"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "fil3",
+          1
+        ],
+        [
+          "ouvre",
+          0.2
+        ],
+        [
+          "youtube",
+          0.5
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13
+    },
+    {
+      "type": "swish",
+      "at": 0.1,
+      "dur": 0.28,
+      "gain": -15
+    },
+    {
+      "type": "braam",
+      "at": "accroche$",
+      "gain": -17,
+      "dur": 1.9
+    },
+    {
+      "type": "threads",
+      "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "promesse-0.22",
+      "gain": -14
+    },
+    {
+      "type": "swish",
+      "at": "curiosite-0.3",
+      "dur": 0.26,
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "scene-0.35",
+      "gain": -15,
+      "pitch": 0.85
+    },
+    {
+      "type": "swish",
+      "at": "ouvre-0.3",
+      "dur": 0.24,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate-0.3",
+      "gain": -15
+    },
+    {
+      "type": "swish",
+      "at": "jet-0.4",
+      "dur": 0.26,
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "regle-0.22",
+      "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "test-0.25",
+      "gain": -13
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "cliff",
+      "at": "noir",
+      "dur": 0.5,
+      "tape": 0.2,
+      "gain": -12
+    },
+    {
+      "type": "braam",
+      "at": "comment$",
+      "gain": -15,
+      "dur": 2.2
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ],
+  "acts": [
+    "01 Menace",
+    "02 La porte",
+    "03 Rendez-vous"
+  ]
+}
