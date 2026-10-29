@@ -16,21 +16,26 @@
     "seed": 21
   },
   "cover": {
-    "at": "eclate$",
+    "at": "repos:secondes$",
     "title": [
-      "Airbag d'avalanche"
+      "Airbag",
+      "d'avalanche"
     ],
     "cam": {
       "tx": 0,
-      "ty": 8,
-      "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
-      "shift": -430,
+      "ty": 70,
+      "tz": -5,
+      "d": 420,
+      "az": -30,
+      "el": 22,
+      "fov": 30,
+      "shift": -470,
       "side": 0,
-      "fov": 28,
       "roll": 0
+    },
+    "state": {
+      "bag": 1,
+      "litBag": 1
     }
   },
   "post": {
@@ -74,7 +79,10 @@
     "Le mécanisme : poignée sur la bretelle (50 à 150 N), cartouche percée, venturi qui aspire l'air ambiant, ballons de 150 L au moins, gonflés en 5 s au plus (EN 16716 via Edelrid, norme non lue ; Mammut) [S].",
     "« Tu triples de volume » : calcul — un corps adulte ≈ 70 L, plus 150 L de ballons —, ordre de grandeur.",
     "Mortalité de 22 % à 11 % avec un sac gonflé ; un sac sur cinq ne se gonfle pas, et 60 % de ces échecs viennent de l'utilisateur (poignée non tirée) : Haegeli et al., Resuscitation 2014 [P, résumé].",
-    "Annonce du 030 — le conducteur de protection vert-jaune et la prise de terre : docs/faits/030-prise-de-terre.md."
+    "Annonce du 030 — le conducteur de protection vert-jaune et la prise de terre : docs/faits/030-prise-de-terre.md.",
+    "L'image reconstitue : la pente (son angle), l'épaisseur de la plaque (≈ 40 cm, cas du Montana), la taille des blocs, la profondeur de l'écoulement et celle de l'ensevelissement sont illustratives — aucune n'est affichée. La coupe dans l'avalanche montre le tri des grains tel que le décrit le principe admis (ségrégation inverse), pas une mesure ; la cassure court à l'allure du film, aucune vitesse n'est dite.",
+    "L'en-tête : le chrono est le temps de l'histoire (une scène) ; pendant « une dizaine de minutes », il file vers dix minutes, un ordre de grandeur (CMAJ 2011, JAMA Netw Open 2024). Le compteur « Ballon » monte jusqu'à 150 L, le minimum de la norme EN 16716 (via Edelrid) — certains ballons font plus.",
+    "Le sac est dessiné sans marque : une poignée sur la bretelle gauche (le côté dépend du modèle), un câble, une cartouche de gaz, un venturi qui aspire l'air ambiant (sacs à cartouche : Mammut, brevets) et UN ballon autour de la tête (la plupart des sacs). Les tailles des pièces sont illustratives ; la part d'air aspiré (≈ deux tiers, ordre de grandeur) n'est pas chiffrée à l'écran."
   ],
   "beats": [
     {
@@ -177,13 +185,102 @@
   ],
   "cues": {
     "choc": "accroche:casse",
+    "glisse": "accroche:pente",
+    "toi0": "accroche:toi",
+    "sauver": "promesse:sauver",
+    "ballon0": "promesse:ballon",
+    "sorti": "promesse:sorti",
+    "secondes0": "promesse:secondes",
+    "sauf": "promesse:sauf",
+    "main0": "promesse:main",
+    "tirepas": "promesse:tire",
+    "emporte": "scene:t'emporte",
+    "roule": "scene:roule",
+    "avale": "scene:t'avale",
+    "toburied": "scene:enseveli-0.12",
+    "enseveli": "scene:enseveli",
+    "dizaine": "scene:dizaine",
+    "minutes": "scene:minutes",
+    "toback": "scene:sur-0.12",
+    "bretelle": "scene:bretelle",
+    "poignee": "scene:poignée",
+    "tire": "scene:tire",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "epoignee": "eclate:poignée",
+    "etire": "eclate:tire",
+    "cable": "eclate:câble",
+    "perce": "eclate:perce",
+    "cartouche": "eclate:cartouche",
+    "gaz2": "eclate:gaz#2",
+    "venturi": "eclate:venturi",
+    "aspire": "eclate:aspire",
+    "autour": "eclate:autour",
+    "derriere": "eclate:derrière",
+    "plie": "eclate:plié",
+    "seul": "repos:seul",
+    "raspire": "repos:aspire",
+    "rtoi": "repos:toi",
+    "cent": "repos:cent",
+    "litres": "repos:litres",
+    "rquelques": "repos:quelques",
+    "rsecondes": "repos:secondes",
+    "encore": "repos:encore",
+    "rmain": "repos:main",
+    "rtire": "repos:tire",
+    "toseuil": "seuil-0.12",
+    "sballon": "seuil:ballon",
+    "regarde": "seuil:regarde-le",
+    "sortir": "seuil:sortir",
     "tozero": "zero-0.12",
+    "coule": "zero:coule",
+    "gros": "zero:gros",
+    "remontent": "zero:remontent",
+    "petits": "zero:petits",
+    "enfoncent": "zero:s'enfoncent",
+    "ettoi": "zero:toi",
+    "trop": "zero:trop",
+    "petit": "zero:petit#2",
     "trigger": "reponse:tires-0.05",
+    "tires": "reponse:tires",
+    "gaz3": "reponse:gaz",
+    "partg": "reponse:part",
+    "souvre": "reponse:s'ouvre",
+    "rq": "reponse:quelques",
+    "volume": "reponse:volume",
+    "triple": "reponse:triple",
+    "passe": "reponse:passe",
+    "sous": "reponse:sous",
+    "remontes": "reponse:remontes",
+    "surface": "reponse:surface",
     "toverdict": "chute-0.12",
+    "secret": "chute:secret",
+    "strike": "chute:pas",
+    "flotter": "chute:flotter",
     "verdict": "chute:rend",
+    "grosc": "chute:gros",
+    "avalanche": "chute:avalanche",
+    "remonte": "chute:remonte",
     "tocta": "comment-0.12",
+    "main3": "comment:main",
+    "etudiees": "comment:étudiées",
+    "cinq": "comment:cinq",
+    "gonfle": "comment:gonfle",
+    "personne": "comment:personne",
+    "tirec": "comment:tiré",
+    "commentaire": "comment:commentaire",
+    "horspiste": "comment:hors-piste",
+    "avec": "comment:avec",
+    "airbag": "comment:airbag",
+    "sans": "comment:sans",
+    "tolike": "like-0.12",
+    "hiver": "like:hiver",
+    "toabo": "abo-0.12",
+    "prochain": "abo:prochain",
+    "fil": "abo:fil",
+    "maison": "abo:maison",
+    "inutile": "abo:inutile",
+    "defaut": "abo:défaut",
     "toloop": "boucle-0.12",
     "rewind": "boucle:jour"
   },
@@ -210,6 +307,10 @@
           1
         ],
         [
+          "surface",
+          0.5
+        ],
+        [
           "toverdict",
           0.45
         ],
@@ -224,6 +325,66 @@
       ]
     },
     {
+      "type": "ambience",
+      "preset": "wind",
+      "from": 0,
+      "to": "tobench",
+      "gain": -33,
+      "curve": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "type": "ambience",
+      "preset": "wind",
+      "from": "tozero",
+      "to": "toverdict",
+      "gain": -33,
+      "curve": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "type": "ambience",
+      "preset": "wind",
+      "from": "tolike",
+      "to": "boucle$",
+      "gain": -35,
+      "curve": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "type": "hiss",
+      "from": "accroche:casse$+0.04",
+      "to": "toburied",
+      "gain": -30,
+      "tone": 0.55
+    },
+    {
+      "type": "hiss",
+      "from": "toback",
+      "to": "scene$",
+      "gain": -31,
+      "tone": 0.55
+    },
+    {
+      "type": "hiss",
+      "from": "tozero",
+      "to": "surface",
+      "gain": -30,
+      "tone": 0.55
+    },
+    {
       "type": "hit",
       "at": 0.02,
       "gain": -13,
@@ -233,7 +394,8 @@
       "type": "impact",
       "at": 0.03,
       "gain": -14,
-      "size": 1.2
+      "size": 1.2,
+      "crack": 1
     },
     {
       "type": "swish",
@@ -242,9 +404,69 @@
       "gain": -15
     },
     {
+      "type": "hit",
+      "at": "accroche:casse$+0.05",
+      "gain": -12
+    },
+    {
+      "type": "impact",
+      "at": "accroche:casse$+0.06",
+      "gain": -14,
+      "size": 1.1,
+      "crack": 1
+    },
+    {
+      "type": "swish",
+      "at": "accroche$+0.07",
+      "dur": 0.24,
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "promesse:sauver$+0.04",
+      "gain": -18,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "promesse:ballon$+0.04",
+      "gain": -16,
+      "pitch": 1.25
+    },
+    {
+      "type": "hit",
+      "at": "promesse$+0.06",
+      "gain": -14,
+      "pitch": 0.85
+    },
+    {
+      "type": "impact",
+      "at": "scene:t'avale$+0.02",
+      "gain": -15,
+      "size": 1.2
+    },
+    {
+      "type": "hush",
+      "from": "toburied",
+      "to": "scene:minutes$",
+      "depth": -10
+    },
+    {
+      "type": "click",
+      "at": "scene:minutes$+0.02",
+      "gain": -17,
+      "pitch": 0.8
+    },
+    {
+      "type": "click",
+      "at": "scene:poignée$+0.02",
+      "gain": -17,
+      "pitch": 1.3
+    },
+    {
       "type": "suck",
       "to": "ouvre-0.04",
-      "dur": 0.6,
+      "dur": 0.42,
       "gain": -17
     },
     {
@@ -255,28 +477,187 @@
     },
     {
       "type": "impact",
-      "at": "explode",
+      "at": "ouvre$+0.04",
       "gain": -16,
       "size": 0.8
     },
     {
+      "type": "click",
+      "at": "ouvre$+0.3",
+      "gain": -18,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.55",
+      "gain": -19,
+      "pitch": 0.95
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.8",
+      "gain": -19,
+      "pitch": 1.2
+    },
+    {
+      "type": "click",
+      "at": "eclate:câble$+0.02",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "eclate:perce$+0.02",
+      "gain": -16,
+      "pitch": 1.4
+    },
+    {
+      "type": "click",
+      "at": "eclate:gaz$+0.02",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "eclate:venturi$+0.02",
+      "gain": -16,
+      "pitch": 1.05
+    },
+    {
+      "type": "click",
+      "at": "eclate:autour$+0.02",
+      "gain": -17,
+      "pitch": 0.85
+    },
+    {
+      "type": "hit",
+      "at": "eclate$+0.05",
+      "gain": -15,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "repos:toi$+0.02",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "repos$+0.02",
+      "gain": -18,
+      "pitch": 1.2
+    },
+    {
       "type": "impact",
-      "at": "tozero",
+      "at": "seuil$-0.02",
       "gain": -12,
       "size": 1.2
     },
     {
+      "type": "swish",
+      "at": "zero:coule$+0.02",
+      "dur": 0.09,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "zero:remontent$+0.02",
+      "gain": -16,
+      "pitch": 1.25
+    },
+    {
+      "type": "hit",
+      "at": "zero$+0.04",
+      "gain": -13,
+      "pitch": 0.85
+    },
+    {
       "type": "impact",
-      "at": "trigger",
+      "at": "trigger-0.04",
       "gain": -10,
       "size": 1.4
     },
     {
+      "type": "click",
+      "at": "reponse:tires$+0.02",
+      "gain": -15,
+      "pitch": 1.3
+    },
+    {
+      "type": "swish",
+      "at": "reponse:part$+0.02",
+      "dur": 0.09,
+      "gain": -15
+    },
+    {
+      "type": "boom",
+      "at": "reponse:s'ouvre$+0.02",
+      "gain": -14,
+      "size": 0.8,
+      "crack": 0.7
+    },
+    {
+      "type": "click",
+      "at": "reponse:toi$+0.02",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
       "type": "blip",
-      "at": "verdict",
+      "at": "reponse$+0.04",
+      "gain": -16,
+      "pitch": 1
+    },
+    {
+      "type": "hit",
+      "at": "chute:flotter$-0.01",
+      "gain": -14
+    },
+    {
+      "type": "blip",
+      "at": "chute:gros$-0.01",
       "gain": -15,
       "pitch": 0.7,
       "heavy": true
+    },
+    {
+      "type": "swish",
+      "at": "chute$+0.07",
+      "dur": 0.24,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "comment:main$+0.05",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "comment:tiré$+0.02",
+      "gain": -17,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "comment:airbag$+0.02",
+      "gain": -16,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "comment$+0.05",
+      "gain": -16,
+      "pitch": 0.8
+    },
+    {
+      "type": "click",
+      "at": "like:like$+0.04",
+      "gain": -18,
+      "pitch": 1.2
+    },
+    {
+      "type": "click",
+      "at": "abo:dossier$+0.03",
+      "gain": -17
     },
     {
       "type": "impact",
@@ -286,8 +667,8 @@
     },
     {
       "type": "rewind",
-      "at": "rewind",
-      "dur": 1,
+      "at": "boucle$+0.03",
+      "dur": 0.55,
       "gain": -21
     }
   ]
