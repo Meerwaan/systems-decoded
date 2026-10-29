@@ -1,0 +1,384 @@
+{
+  "id": "HS04",
+  "serie": "hors-serie",
+  "slug": "porte-avions",
+  "title": "Porte-avions",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": 1.6,
+    "title": [
+      "Porte-avions"
+    ],
+    "tone": "signal",
+    "tagStyle": "solid",
+    "tagSize": 50,
+    "foot": "Film complet · 10 min 28",
+    "cam": {
+      "tx": -200,
+      "ty": 170,
+      "tz": -5100,
+      "d": 1500,
+      "az": 0,
+      "el": 9,
+      "fov": 44,
+      "shift": -330,
+      "side": 0,
+      "roll": 0,
+      "dof": 0
+    }
+  },
+  "post": {
+    "keyword": "porte-avions Charles de Gaulle",
+    "caption": "Porte-avions Charles de Gaulle, la catapulte à vapeur : moteurs à fond, et ton Rafale ne bouge pas. Une seule pièce le retient, et elle est faite pour casser. Le film complet, dix minutes, du lancement au retour de nuit, t'attend sur notre chaîne YouTube : lien en bio. Et ce marin en gilet jaune qu'on appelle « chien » : pour ses gestes… ou pour un cri ?",
+    "hashtags": [
+      "#porteavions",
+      "#charlesdegaulle",
+      "#rafale",
+      "#marinenationale",
+      "#apprendresurtiktok"
+    ],
+    "pinned": "Le film complet (10 min) : lien en bio, ou cherche « Système Décodé porte-avions » sur YouTube. Chien jaune : ses gestes… ou un cri ?",
+    "lien": "Le L04 d'abord, en ligne et public ; HS04 dans l'heure qui suit, entre 19 h et 22 h. Shorts : YouTube Studio → Contenu → le Short → « Vidéo associée » → le L04, au moment de publier. Instagram : lien du L04 en bio + une story à autocollant de lien le jour même (npm run social -- --only stories), gardée « À la une ». TikTok : lien du L04 en bio, posé avant la promo. Facebook : le lien du L04 en premier commentaire. Puis, depuis le téléphone : le lien du Short s'affiche, le lien en bio ouvre le L04.",
+    "instagram": {
+      "caption": "Porte-avions Charles de Gaulle : tes moteurs sont à fond, et ton Rafale ne bouge pas. Une seule pièce le retient. Quand elle casse : 240 km/h en 75 mètres.\n\nSous le pont, deux cylindres, deux pistons, un croc accroché à ton avion. Et la vapeur qui les pousse vient d'un endroit que tu n'imagines pas.\n\nLe film complet, dix minutes, du lancement au retour de nuit, t'attend sur notre chaîne YouTube : le lien est en bio.\n\nEt ce marin qu'on appelle le chien jaune : « chien » pour ses gestes… ou pour un cri ?",
+      "hashtags": [
+        "#porteavions",
+        "#charlesdegaulle",
+        "#rafale",
+        "#marinenationale",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "keyword": "porte-avions Charles de Gaulle",
+      "title": "Porte-avions Charles de Gaulle : moteurs à fond… et ton Rafale ne bouge pas",
+      "description": "Porte-avions Charles de Gaulle : une seule pièce retient ton Rafale, moteurs à fond. Quand elle casse, 240 km/h en 75 mètres. Le film complet (10 min 28), du lancement au retour de nuit, est lié juste sous ce Short.\n\nLe chien jaune : « chien » pour ses gestes… ou pour un cri ?",
+      "hashtags": [
+        "#shorts",
+        "#porteavions",
+        "#charlesdegaulle",
+        "#rafale",
+        "#marinenationale"
+      ]
+    }
+  },
+  "sources": [
+    "Hors-série 04 : la promo du L04 (le pont d'envol du Charles de Gaulle). Aucun fait neuf : chaque phrase est payée par un beat de episodes/L04-porte-avions/episode.json, dont les sources font foi. Le 015 a déjà montré l'appontage en court : la promo promet la catapulte.",
+    "accroche ← L04 accroche (mot pour mot), plein, tremble.",
+    "promesse ← L04 promesse (une seule pièce, faite pour casser ; de zéro à 240 km/h en 75 m), casse, vol.",
+    "curiosite ← L04 curiosite (le marin en gilet jaune, « le chien jaune », pourquoi « chien » ?), chef — la C du long, NON payée ici : la réponse (du, aboie) reste au long.",
+    "scene ← L04 tremble (tes moteurs hurlent, tout ton avion tremble), curiosite (pas un mot : que des gestes), gestes, dessous (ce qui va la briser se cache sous tes roues).",
+    "ouvre ← L04 ouvre ; l'éclaté du long (eclate) commence sur le mot.",
+    "eclate ← L04 eclate (sous le pont, 75 m, deux cylindres, un piston dans chacun, un même chariot, le croc accroché à ton avion), paire (le Charles de Gaulle).",
+    "vapeur ← L04 ballon (un grand ballon de vapeur, tenue à 30 bars ; « tout à l'heure, tu sauras d'où elle vient »), souffle.",
+    "reacteurs ← L04 nucleaire (deux réacteurs nucléaires pour pousser le navire), vapeur2 (la chaufferie nucléaire qui fait avancer le bateau vient de te lancer) — le morceau payé de la promo.",
+    "tient ← L04 plein (ton avion tire, la catapulte tire… et la pièce tient).",
+    "test ← L04 pare (« Paré pont. » « Paré partout. » « Paré feu. »), souffle (la vanne s'ouvre, la vapeur se jette dans les cylindres, la pression monte… monte…) — coupé au noir avant casse : l'issue est au long.",
+    "comment ← L04 curiosite, du, aboie (le surnom vient d'un cri : « wave off », crié vite, fort, comme un aboiement) — la réponse n'est pas dite ; « ses gestes » est le camp que la scène rend plausible (gestes, curiosite).",
+    "youtube ← le L04 (628,8 s, 10 min 28 : « dix minutes »), du lancement (c2) au retour de nuit (c6).",
+    "boucle ← L04 boucle (mot pour mot) : retombe sur « Tes moteurs sont à fond. » (accroche)."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Tes moteurs sont à *fond*. Ton Rafale ne bouge *pas*.",
+      "vo": "[tense] Tes moteurs sont à fond. Ton Rafale ne bouge pas."
+    },
+    {
+      "id": "promesse",
+      "text": "Une pièce le retient. Quand elle *casse* : [240|deux cent quarante] à l'heure, en [75|soixante-quinze] mètres.",
+      "vo": "Une pièce le retient. Quand elle casse : deux cent quarante à l'heure, en soixante-quinze mètres."
+    },
+    {
+      "id": "curiosite",
+      "fil": "chien",
+      "hold": 0.3,
+      "text": "Devant toi, le +chien jaune+ : pourquoi « chien » ?",
+      "vo": "[curious] Devant toi, le chien jaune : pourquoi « chien » ?"
+    },
+    {
+      "id": "scene",
+      "hold": 0.2,
+      "text": "Tes moteurs hurlent. Tout ton avion tremble. Ton chien jaune ne dit pas un mot : que des gestes. Et ce qui va briser ta pièce… se cache sous tes *roues*.",
+      "vo": "[tense] Tes moteurs hurlent. Tout ton avion tremble. Ton chien jaune ne dit pas un mot : que des gestes. Et ce qui va briser ta pièce... se cache sous tes roues."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ]
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Sous le pont du porte-avions Charles de Gaulle, sur [75|soixante-quinze] mètres : deux longs cylindres. Dans chacun, un piston. Les deux tirent un même chariot… et son +croc+ tient ton avion.",
+      "vo": "[conversational, curious] Sous le pont du porte-avions Charles de Gaulle, sur soixante-quinze mètres : deux longs cylindres. Dans chacun, un piston. Les deux tirent un même chariot... et son croc tient ton avion."
+    },
+    {
+      "id": "vapeur",
+      "fil": "vapeur",
+      "hold": 0.3,
+      "text": "Pour les pousser : de la +vapeur+, à [30|trente] bars. Et d'où vient-elle ?",
+      "vo": "[curious] Pour les pousser : de la vapeur, à trente bars. Et d'où vient-elle ?"
+    },
+    {
+      "id": "reacteurs",
+      "paie": "vapeur",
+      "paye": true,
+      "hold": 0.2,
+      "text": "Des deux +réacteurs nucléaires+ du navire. Ce qui le fait avancer… va te *lancer*.",
+      "vo": "[warm, conversational] Des deux réacteurs nucléaires du navire. Ce qui le fait avancer... va te lancer."
+    },
+    {
+      "id": "tient",
+      "text": "Ton avion tire. La catapulte tire. Et la pièce… *tient*.",
+      "vo": "[tense] Ton avion tire. La catapulte tire. Et la pièce... tient."
+    },
+    {
+      "id": "test",
+      "hold": 0.6,
+      "text": "« Paré pont. » « Paré partout. » « Paré feu. » La vanne s'ouvre. La vapeur se jette dans les cylindres. La pression monte… *monte*…",
+      "vo": "Paré pont. Paré partout. Paré feu. La vanne s'ouvre. La vapeur se jette dans les cylindres. La pression monte... monte..."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et ton chien jaune : pourquoi « chien » ? Pour ses gestes… ou pour un *cri* ? Dis-le en +commentaire+.",
+      "vo": "[conversational, curious] Et ton chien jaune : pourquoi « chien » ? Pour ses gestes... ou pour un cri ? Dis-le en commentaire."
+    },
+    {
+      "id": "youtube",
+      "text": "Le film complet, dix minutes, du lancement au retour de nuit : sur notre +chaîne+ YouTube. Le lien est en bio.",
+      "vo": "[warm, conversational] Le film complet, dix minutes, du lancement au retour de nuit : sur notre chaîne YouTube. Le lien est en bio."
+    },
+    {
+      "id": "boucle",
+      "text": "Et demain matin, sur cette catapulte…",
+      "vo": "[calm] Et demain matin, sur cette catapulte,"
+    }
+  ],
+  "cues": {
+    "choc": "accroche:fond",
+    "fil1": "curiosite$",
+    "fil2": "vapeur$",
+    "fil3": "test$",
+    "noir": "test$",
+    "explode": "ouvre:on",
+    "verdict": "youtube:chaîne",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:demain"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "fil2",
+          1
+        ],
+        [
+          "ouvre",
+          0.25
+        ],
+        [
+          "youtube",
+          0.5
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13
+    },
+    {
+      "type": "swish",
+      "at": 0.1,
+      "dur": 0.28,
+      "gain": -15
+    },
+    {
+      "type": "braam",
+      "at": "accroche$",
+      "gain": -17,
+      "dur": 1.9
+    },
+    {
+      "type": "hit",
+      "at": 1.42,
+      "gain": -14
+    },
+    {
+      "type": "swish",
+      "at": 2.84,
+      "dur": 0.3,
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": 4.05,
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": 5.05,
+      "gain": -14
+    },
+    {
+      "type": "swish",
+      "at": 5.12,
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "swish",
+      "at": 7.45,
+      "dur": 0.3,
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": 10.6,
+      "gain": -14
+    },
+    {
+      "type": "swish",
+      "at": 11.8,
+      "dur": 0.3,
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": 13.2,
+      "gain": -16
+    },
+    {
+      "type": "swish",
+      "at": 13.28,
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": 15,
+      "gain": -17
+    },
+    {
+      "type": "swish",
+      "at": 15.92,
+      "dur": 0.3,
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": 17.62,
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": 20.72,
+      "gain": -14
+    },
+    {
+      "type": "click",
+      "at": 23.4,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": 24.76,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": 25.94,
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": 27.62,
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": 29.36,
+      "gain": -16
+    },
+    {
+      "type": "swish",
+      "at": 31.1,
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "threads",
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "cliff",
+      "at": "test$",
+      "dur": 0.6,
+      "tape": 0.2,
+      "gain": -12
+    },
+    {
+      "type": "braam",
+      "at": "comment$",
+      "gain": -15,
+      "dur": 2.2
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ],
+  "acts": [
+    "01 Menace",
+    "02 La catapulte",
+    "03 Rendez-vous"
+  ]
+}

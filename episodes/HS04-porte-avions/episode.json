@@ -1,0 +1,386 @@
+{
+  "id": "HS04",
+  "serie": "hors-serie",
+  "slug": "porte-avions",
+  "title": "Porte-avions",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": 1.6,
+    "title": [
+      "Porte-avions"
+    ],
+    "tone": "signal",
+    "tagStyle": "solid",
+    "tagSize": 50,
+    "foot": "Film complet · 10 min 28",
+    "cam": {
+      "tx": -200,
+      "ty": 170,
+      "tz": -5100,
+      "d": 1500,
+      "az": 0,
+      "el": 9,
+      "fov": 44,
+      "shift": -330,
+      "side": 0,
+      "roll": 0,
+      "dof": 0
+    }
+  },
+  "post": {
+    "keyword": "porte-avions Charles de Gaulle",
+    "caption": "Porte-avions Charles de Gaulle : 0 à 240 km/h en 75 mètres. Et ce soir, de nuit, quel câble t'attrape : Athéna… ou Andromède ?",
+    "hashtags": [
+      "#porteavions",
+      "#charlesdegaulle",
+      "#rafale",
+      "#marinenationale",
+      "#apprendresurtiktok"
+    ],
+    "pinned": "Le film complet (10 min) : lien en bio, ou cherche « Système Décodé porte-avions » sur YouTube. Ce soir : Athéna… ou Andromède ?",
+    "lien": "Le L04 d'abord : en ligne et public à 18 h. Puis les liens : TikTok, lien du L04 en bio ; Instagram, lien du L04 en bio + une story à autocollant de lien (npm run social -- --only stories), gardée « À la une ». Puis HS04, APRÈS le L04, entre 19 h et 19 h 30, sur les quatre plateformes ; aucun autre dossier ce jour-là. Shorts : YouTube Studio → Contenu → le Short → « Vidéo associée » → le L04, au moment de publier. Facebook : le lien du L04 en premier commentaire. Enfin, depuis le téléphone : le lien du Short s'affiche, le lien en bio ouvre le L04.",
+    "instagram": {
+      "caption": "Porte-avions Charles de Gaulle : tes moteurs sont à fond, et ton Rafale ne bouge pas. Une seule pièce le retient, faite pour casser. Quand elle cède : 240 km/h en 75 mètres.\n\nSous le pont, deux cylindres, deux pistons, un croc accroché à ton avion. Et la vapeur qui les pousse vient d'un endroit que tu n'imagines pas.\n\nLe film complet, dix minutes, du lancement au retour de nuit, t'attend sur notre chaîne YouTube : le lien est en bio.\n\nEt ce soir, de nuit, trois câbles t'attendent. Lequel t'attrape : Athéna, le premier… ou Andromède, le dernier avant la mer ?",
+      "hashtags": [
+        "#porteavions",
+        "#charlesdegaulle",
+        "#rafale",
+        "#marinenationale",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "keyword": "porte-avions Charles de Gaulle",
+      "title": "Porte-avions Charles de Gaulle : moteurs à fond… et ton Rafale ne bouge pas",
+      "description": "Porte-avions Charles de Gaulle : moteurs à fond, ton Rafale ne bouge pas. Une seule pièce le retient, faite pour casser ; quand elle cède, 240 km/h en 75 mètres. Le film complet (10 min 28), du lancement au retour de nuit, est lié juste sous ce Short.\n\nCe soir, de nuit : Athéna, le premier câble… ou Andromède, le dernier avant la mer ?",
+      "hashtags": [
+        "#shorts",
+        "#porteavions",
+        "#charlesdegaulle",
+        "#rafale",
+        "#marinenationale"
+      ]
+    }
+  },
+  "sources": [
+    "Hors-série 04, v2 (27/10) : la promo du L04 (le pont d'envol du Charles de Gaulle). Aucun fait neuf : chaque phrase est payée par un beat de episodes/L04-porte-avions/episode.json, dont les sources font foi. La C est le retour de nuit du long (son fil « nuit », ouvert par defi, payé par arret) ; elle n'est jamais payée ici. Écart assumé à recette-promo.md (« le test coupé au noir avant l'impact ») : le tir est joué en entier (diagnostic docs/scale/promo-4-diagnostic.md § 1 et 3) ; le long garde le pourquoi de la pièce (toi, reglage), qui ouvre la vanne (vanne, chef, cabine), le chien jaune, et toute la nuit.",
+    "accroche ← L04 accroche (mot pour mot, sans « Et »), plein, tremble.",
+    "promesse ← L04 promesse (« tu passes de zéro à deux cent quarante kilomètres-heure… en soixante-quinze mètres »), vol.",
+    "curiosite ← L04 defi (« ce soir, il faudra revenir… de nuit »), r2nuit, brins (« sur ton pont, trois câbles t'attendent ») — la C du long, NON payée ici : la réponse (attrape : Andromède ; arret : sauvé de justesse) reste au long.",
+    "scene ← L04 tremble (tes moteurs hurlent, tout ton avion tremble… retenu par une seule pièce), promesse (« une seule pièce de métal le retient », « faite pour casser »), retenue (elle te relie au pont), dessous (« sous tes roues »), arrache (« le chariot t'arrache »).",
+    "ouvre ← L04 ouvre ; l'éclaté du long (eclate) commence sur le mot.",
+    "eclate ← L04 eclate (sous le pont, 75 m, deux cylindres, un piston dans chacun, un même chariot, le croc accroché à ton avion), paire (le Charles de Gaulle).",
+    "vapeur ← L04 ballon (vapeur tenue à 30 bars ; « tu sauras d'où elle vient »), souffle.",
+    "reacteurs ← L04 nucleaire (deux réacteurs nucléaires pour pousser le navire), vapeur2 (la chaufferie nucléaire qui fait avancer le bateau vient de te lancer) — le morceau payé de la promo.",
+    "tient ← L04 plein (ton avion tire, la catapulte tire… et la pièce tient).",
+    "test ← L04 pare (« Paré pont. » « Paré partout. » « Paré feu. »), souffle (la vanne s'ouvre, la vapeur se jette dans les cylindres).",
+    "tir ← L04 casse (et la pièce casse), arrache (le chariot t'arrache vers l'avant), secondes (deux secondes environ… et le pont s'arrête sous toi), vol (tu voles) — payé ici (fil « piece »), écart assumé ; le pourquoi reste au long (toi, reglage).",
+    "comment ← L04 brins (Athéna, le premier), andromede (le troisième, le dernier avant la mer : Andromède), attrape — la réponse n'est pas dite.",
+    "youtube ← le L04 (628,8 s, 10 min 28 : « dix minutes »).",
+    "boucle ← L04 boucle (mot pour mot) : retombe sur « Tes moteurs sont à fond. » (accroche)."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Tes moteurs sont à *fond*. Ton Rafale ne bouge *pas*.",
+      "vo": "[tense] Tes moteurs sont à fond. Ton Rafale ne bouge pas."
+    },
+    {
+      "id": "promesse",
+      "text": "Zéro à [240|deux cent quarante] kilomètres-heure, en [75|soixante-quinze] mètres.",
+      "vo": "Zéro à deux cent quarante kilomètres-heure, en soixante-quinze mètres."
+    },
+    {
+      "id": "curiosite",
+      "fil": "nuit",
+      "hold": 0.3,
+      "text": "Ce soir, tu reviens. De *nuit*. Trois câbles : lequel va t'+attraper+ ?",
+      "vo": "[curious] Ce soir, tu reviens. De nuit. Trois câbles : lequel va t'attraper ?"
+    },
+    {
+      "id": "scene",
+      "fil": "piece",
+      "hold": 0.25,
+      "text": "Tes moteurs hurlent. Tout ton avion tremble, retenu au pont par une seule pièce. Elle est faite pour *casser*. Et sous tes roues… ce qui va t'+arracher+.",
+      "vo": "[tense] Tes moteurs hurlent. Tout ton avion tremble, retenu au pont par une seule pièce. Elle est faite pour casser. Et sous tes roues... ce qui va t'arracher."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Sous le pont du porte-avions Charles de Gaulle, sur [75|soixante-quinze] mètres : deux longs cylindres. Dans chacun, un piston. Les deux tirent un même chariot… et son +croc+ tient ton avion.",
+      "vo": "[conversational, curious] Sous le pont du porte-avions Charles de Gaulle, sur soixante-quinze mètres : deux longs cylindres. Dans chacun, un piston. Les deux tirent un même chariot... et son croc tient ton avion."
+    },
+    {
+      "id": "vapeur",
+      "fil": "vapeur",
+      "hold": 0.3,
+      "text": "Pour les pousser : de la +vapeur+, à [30|trente] bars. Et d'où vient-elle ?",
+      "vo": "[curious] Pour les pousser : de la vapeur, à trente bars. Et d'où vient-elle ?"
+    },
+    {
+      "id": "reacteurs",
+      "paie": "vapeur",
+      "paye": true,
+      "hold": 0.2,
+      "text": "Des deux +réacteurs nucléaires+ du navire. Ce qui le fait avancer… va te *lancer*.",
+      "vo": "[amused] Des deux réacteurs nucléaires du navire. Ce qui le fait avancer... va te lancer."
+    },
+    {
+      "id": "tient",
+      "text": "Ton avion tire. La catapulte tire. Et la pièce… *tient*.",
+      "vo": "[tense] Ton avion tire. La catapulte tire. Et la pièce... tient."
+    },
+    {
+      "id": "test",
+      "text": "« Paré pont. » « Paré partout. » « Paré feu. » La vanne s'ouvre. La vapeur se jette dans les cylindres.",
+      "vo": "Paré pont. Paré partout. Paré feu. La vanne s'ouvre. La vapeur se jette dans les cylindres."
+    },
+    {
+      "id": "tir",
+      "paie": "piece",
+      "paye": true,
+      "hold": 0.5,
+      "text": "Et la pièce *casse*. Le chariot t'arrache vers l'avant. Deux secondes environ… le pont s'arrête sous toi. Tu +voles+.",
+      "vo": "[tense] Et la pièce casse. Le chariot t'arrache vers l'avant. Deux secondes environ... le pont s'arrête sous toi. Tu voles."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Ce soir, de nuit, lequel t'attrape : Athéna, le premier… ou Andromède, le dernier avant la *mer* ? Dis-le en +commentaire+.",
+      "vo": "[conversational, curious] Ce soir, de nuit, lequel t'attrape : Athéna, le premier... ou Andromède, le dernier avant la mer ? Dis-le en commentaire."
+    },
+    {
+      "id": "youtube",
+      "text": "Le film complet, dix minutes : notre +chaîne+ YouTube. Le lien est en bio.",
+      "vo": "[warm, conversational] Le film complet, dix minutes : notre chaîne YouTube. Le lien est en bio."
+    },
+    {
+      "id": "boucle",
+      "text": "Et demain matin, sur cette catapulte…",
+      "vo": "[calm] Et demain matin, sur cette catapulte,"
+    }
+  ],
+  "cues": {
+    "choc": "accroche:fond",
+    "fil1": "curiosite$",
+    "fil2": "scene$",
+    "fil3": "vapeur$",
+    "paid": "reacteurs:nucléaires",
+    "noir": "tir$",
+    "explode": "ouvre:on",
+    "verdict": "youtube:chaîne",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:demain"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "fil2",
+          1
+        ],
+        [
+          "ouvre",
+          0.25
+        ],
+        [
+          "youtube",
+          0.5
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13
+    },
+    {
+      "type": "swish",
+      "at": 0.1,
+      "dur": 0.28,
+      "gain": -15
+    },
+    {
+      "type": "braam",
+      "at": "accroche$",
+      "gain": -17,
+      "dur": 1.9
+    },
+    {
+      "type": "hit",
+      "at": "accroche:fond$+0.05",
+      "gain": -14
+    },
+    {
+      "type": "swish",
+      "at": "promesse-0.2",
+      "dur": 0.3,
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "promesse:240$+0.03",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "promesse:kilomètres$+0.04",
+      "gain": -14
+    },
+    {
+      "type": "hit",
+      "at": "curiosite$+0.06",
+      "gain": -14
+    },
+    {
+      "type": "swish",
+      "at": "scene-0.12",
+      "dur": 0.26,
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "scene:tremble$+0.03",
+      "gain": -16
+    },
+    {
+      "type": "swish",
+      "at": "scene:tremble$+0.06",
+      "dur": 0.2,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "scene:pièce$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "scene:roues$+0.03",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "ouvre$+0.04",
+      "gain": -14
+    },
+    {
+      "type": "click",
+      "at": "eclate:gaulle$+0.03",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:mètres$+0.03",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:cylindres$+0.03",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "eclate:piston$+0.03",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "eclate:chariot$+0.03",
+      "gain": -16
+    },
+    {
+      "type": "swish",
+      "at": "vapeur-0.4",
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "threads",
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "drop",
+      "at": "tir:casse",
+      "pre": 0.55
+    },
+    {
+      "type": "boom",
+      "at": "tir:casse$+0.04",
+      "gain": -14
+    },
+    {
+      "type": "cliff",
+      "at": "tir$",
+      "dur": 0.6,
+      "tape": 0.2,
+      "gain": -12
+    },
+    {
+      "type": "braam",
+      "at": "comment$",
+      "gain": -15,
+      "dur": 2.2
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ],
+  "acts": [
+    "01 Menace",
+    "02 La catapulte",
+    "03 Rendez-vous"
+  ]
+}

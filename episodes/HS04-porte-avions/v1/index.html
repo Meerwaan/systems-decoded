@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · HS04 · Porte-avions</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
+         kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+
+      /* le noir des coupes sèches (aucun ici pour l'instant : D.cliff porte le sien). Opacité 0 ou 1. */
+      #black { background: #000; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="66.133" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="black" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Hors-série 04</span></div>
+        <div class="hud__title" id="hud-title">Porte-avions</div>
+        <div class="hud__clock" id="hud-clock">FILM · 00:00</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Fils ouverts</span><b id="hud-count-v">0</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 La catapulte</span><span>03 Rendez-vous</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- le commentaire (fin.js) : chevrons sur le bouton -->
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <!-- hors-série (filmCall) : le long vers lequel la promo envoie — le mot YouTube, jamais son logo -->
+      <section id="film">
+        <div class="panel__h"><span>Film complet</span><span id="film-length">10 min 28</span></div>
+        <div id="film-title">Porte-avions</div>
+        <div id="film-bar"><i></i></div>
+        <div id="film-where"><span>Sur YouTube</span><span>Lien en bio</span></div>
+      </section>
+
+      <!-- la question du commentaire posée en DEUX réponses (duelCall, fin.js) : chacune s'allume quand la voix la dit, le film ne
+           répond jamais à la place du spectateur — prendre parti fait commenter. Une question fermée à deux issues seulement. -->
+      <div id="duel">
+        <div class="kicker">Pourquoi « chien » ?</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">Ses gestes</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Un cri</span></div>
+        <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
+      </div>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
