@@ -46,7 +46,22 @@
       ],
       "pinned": "Si tu as servi sur le Charles de Gaulle : ton poste ? Sinon, réponds juste « chien jaune » ou « pilote ».",
       "thumbnail": "16:9, fond noir, trois miniatures, trois promesses, chacune payée avant 30 s. (1) IL NE BOUGE / PAS (dernier mot en signal) : le Rafale M plein, éclairé, de trois quarts avant, au tiers droit, ses deux tuyères allumées, la barre de retenue tendue sous son train, le pont qui file en diagonale jusqu'à la mer ; cartouche « PLEINE POUSSÉE · RAFALE M » — payée par l'accroche (« ne bouge pas », ≈ 0:03). (2) FAITE POUR / CASSER (signal) : la barre de retenue en gros plan, pleine et éclairée, sa pièce calibrée qui se rompt dans un éclat, la vapeur qui jaillit de la fente de la catapulte ; cartouche « CATAPULTE À VAPEUR » — payée par la promesse (« faite pour casser », ≈ 0:07). (3) REVENIR / DE NUIT (veille) : la crosse du Rafale qui attrape le troisième câble, de nuit, la boule du miroir allumée au bord de la piste, la mer noire au bout du pont ; cartouche « APPONTAGE · 3 CÂBLES » — payée par le défi (« de nuit », ≈ 0:20). Rien dans le quart bas droit (la durée de YouTube), jamais de personnage de verre, aucun logo.",
-      "endScreen": "Les 15 dernières secondes (like → rendez-vous → boucle) laissent la moitié droite de l'image libre pour l'écran de fin."
+      "endScreen": "Les 15 dernières secondes (like → rendez-vous → boucle) laissent la moitié droite de l'image libre pour l'écran de fin.",
+      "description": "Porte-avions Charles de Gaulle : sa catapulte lance ton Rafale de 0 à 240 km/h en 75 mètres, retenu jusqu'au dernier instant par une pièce faite pour casser. Et le soir, il faut revenir t'y poser… de nuit, sur trois câbles.\n\nChapitres\n00:00 Moteurs à fond, et tu ne bouges pas\n00:29 Comment marche la catapulte\n01:14 Sans radio : les gestes du pont d'envol\n02:22 Le catapultage, seconde par seconde\n03:24 Le réacteur nucléaire qui lance les avions\n04:22 Des centaines de tonnes sous le pont\n05:20 Le feu sur le pont : le Forrestal, 1967\n06:21 De nuit : le miroir d'appontage\n07:31 L'officier d'appontage\n08:03 Les trois brins d'arrêt\n08:57 Andromède, la dernière chance\n09:53 Pourquoi « chien jaune » ?\n\nSources : Marine nationale et ministère des Armées (fiche « Porte-avions », Bulletin de la Marine n° 80, Bulletin de la Marine n° 237 « Entre ciel et mer : histoire et technique de l'appontage », kit pédagogique « Le grand Charles ») · Musée national de la Marine (fiche « chien jaune ») · Le Journal de l'Aviation · Naval Technology · ENS Paris-Saclay (sujet de concours 2022, la stabilisation) · US Navy : Naval Safety Command et Naval History and Heritage Command (USS Forrestal, 1967).\n\nSystème Décodé : on ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite.\n\nEt toi, sur ce pont : chien jaune… ou pilote ?",
+      "chapters": [
+        "00:00 Moteurs à fond, et tu ne bouges pas",
+        "00:29 Comment marche la catapulte",
+        "01:14 Sans radio : les gestes du pont d'envol",
+        "02:22 Le catapultage, seconde par seconde",
+        "03:24 Le réacteur nucléaire qui lance les avions",
+        "04:22 Des centaines de tonnes sous le pont",
+        "05:20 Le feu sur le pont : le Forrestal, 1967",
+        "06:21 De nuit : le miroir d'appontage",
+        "07:31 L'officier d'appontage",
+        "08:03 Les trois brins d'arrêt",
+        "08:57 Andromède, la dernière chance",
+        "09:53 Pourquoi « chien jaune » ?"
+      ]
     }
   },
   "thumb": {
@@ -58,8 +73,18 @@
     "tone": "signal",
     "tag": "Pleine poussée · Rafale M",
     "cam": {
-      "side": -420,
-      "drift": 0
+      "shift": 0,
+      "roll": 0,
+      "drift": 0,
+      "dof": 0,
+      "tx": -200,
+      "ty": 190,
+      "tz": -5100,
+      "d": 1250,
+      "az": -12,
+      "el": 7,
+      "fov": 40,
+      "side": -430
     },
     "grade": {
       "contrast": 1.32,
@@ -75,29 +100,27 @@
     "tone": "signal",
     "tag": "Catapulte à vapeur",
     "cam": {
-      "side": -420,
-      "drift": 0
+      "shift": 0,
+      "roll": 0,
+      "drift": 0,
+      "dof": 0,
+      "tx": 0,
+      "ty": 20,
+      "tz": 0,
+      "d": 120,
+      "az": -24,
+      "el": 10,
+      "fov": 28,
+      "side": -380
     },
     "grade": {
       "contrast": 1.32,
       "saturation": 1.15
-    }
-  },
-  "thumb3": {
-    "at": "attrape:andromède",
-    "title": [
-      "REVENIR",
-      "DE NUIT"
-    ],
-    "tone": "veille",
-    "tag": "Appontage · 3 câbles",
-    "cam": {
-      "side": -420,
-      "drift": 0
     },
-    "grade": {
-      "contrast": 1.32,
-      "saturation": 1.15
+    "state": {
+      "set": 1,
+      "item": 0,
+      "strain": 1
     }
   },
   "sources": [
@@ -774,7 +797,97 @@
     "verdict": "chute:rattrapé",
     "tocta": "comment-0.12",
     "toloop": "boucle-0.12",
-    "rewind": "boucle:demain"
+    "rewind": "boucle:demain",
+    "slack": "tension:disparaît",
+    "strain": "plein:tient",
+    "shake": "tremble:tremble",
+    "valveopen": "souffle:s'ouvre",
+    "pressure": "souffle:pression",
+    "shipline": "trait:trait",
+    "speedup": "fabrique:fabrique",
+    "knots": "vitesse:27",
+    "hull": "nucleaire:260",
+    "unique": "unique:seul",
+    "steamfrom": "vapeur2:chaufferie",
+    "launchedby": "vapeur2:lancer",
+    "emals": "aimants:électromagnétiques",
+    "lean": "penche:penche",
+    "hangar": "hangar:hangar",
+    "lean2": "ascenseur:pencher",
+    "massesall": "masses:masses",
+    "computer": "ordinateur:ordinateur",
+    "halfdeg": "ailerons:demi",
+    "subscribe": "seuil:abonne",
+    "fuelholds": "r2soutes:soutes",
+    "engines": "r2soutes:moteurs",
+    "y1967": "r2date:1967",
+    "forrestal": "r2date:forrestal",
+    "surge": "r2roquette:surtension",
+    "dead": "r2bilan:morts",
+    "firemen": "r2cdg:marins",
+    "detect": "r2cdg:détecteurs",
+    "curtain": "r2cdg:cloison",
+    "dusk": "r2nuit:nuit",
+    "cleared": "tombee:dégagé",
+    "cat2": "simultane:catapultes",
+    "angled": "biais:biais",
+    "windaxis": "biais:vent",
+    "hud": "viseur:viseur",
+    "black": "viseur:noir",
+    "panel": "miroir:panneau",
+    "high": "boule:haut",
+    "low": "boule:bas",
+    "meatball": "meatball:meatball",
+    "paddles": "raquettes:raquettes",
+    "visibility": "visibilite:visibilité",
+    "slope": "quinze:pente",
+    "aoa": "quinze:angle",
+    "axis": "quinze:axe",
+    "watch": "regarde:regarde",
+    "cancel": "regarde:annuler",
+    "lsoradio": "radio:radio",
+    "laser": "laser:laser",
+    "goaround": "pouvoir:remets",
+    "tanker": "planb:ravitailleur",
+    "ashore": "planb:terre",
+    "y1911": "ely:1911",
+    "ropes": "ely:cordes",
+    "sand": "ely:sacs",
+    "bearn": "teste:béarn",
+    "five": "cinq:cinq",
+    "athena": "brins:athéna",
+    "aphrodite": "brins:aphrodite",
+    "lastwire": "andromede:dernier",
+    "wear": "usure:125",
+    "brakeset": "usure:frein",
+    "fullgas": "bolter:plein",
+    "bolter": "bolter:repars",
+    "handful": "approche:poignée",
+    "sinks": "approche:descend",
+    "toolow": "waveoff:trop",
+    "over": "tour:repasses",
+    "centred": "deuxieme:centre",
+    "t15": "compte:quinze",
+    "t10": "compte:dix",
+    "t5": "compte:cinq",
+    "full": "toucher:plein",
+    "miss1": "manque:manquée",
+    "miss2": "manque:manquée#2",
+    "deckrush": "bout:fonce",
+    "blacksea": "bout:noire",
+    "runout": "arret:déroule",
+    "brakes": "arret:avale",
+    "saved": "arret:sauvé",
+    "struck": "chute:juste",
+    "launched": "chute:lancé",
+    "vest": "du:gilet",
+    "heard": "du:entendu",
+    "bark": "aboie:aboiement",
+    "vote1": "comment:chien",
+    "vote2": "comment:pilote",
+    "share": "like:envoie",
+    "likeword": "like:like",
+    "meet": "abo:retrouve"
   },
   "bedVolume": 0.8,
   "sfx": [
@@ -941,6 +1054,68 @@
       "at": "rewind",
       "dur": 1,
       "gain": -21
+    },
+    {
+      "type": "click",
+      "at": "eclate:cylindres+0.5",
+      "gain": -19,
+      "pitch": 1
+    },
+    {
+      "type": "click",
+      "at": "eclate:piston+0.4",
+      "gain": -19,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "eclate:chariot+0.5",
+      "gain": -19,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "eclate:croc+0.3",
+      "gain": -19,
+      "pitch": 1.2
+    },
+    {
+      "type": "click",
+      "at": "fente:fente+0.4",
+      "gain": -20,
+      "pitch": 1
+    },
+    {
+      "type": "swish",
+      "at": "bravo:pour-0.6",
+      "gain": -20
+    },
+    {
+      "type": "hit",
+      "at": "retenue:début+0.3",
+      "gain": -18
+    },
+    {
+      "type": "boom",
+      "at": "penche:penche+0.3",
+      "gain": -17,
+      "size": 0.6
+    },
+    {
+      "type": "click",
+      "at": "masses$+0.05",
+      "gain": -19
+    },
+    {
+      "type": "hit",
+      "at": "toucher:pont+0.3",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": 569.8,
+      "gain": -20,
+      "pitch": 1.1
     }
   ],
   "retires": {
@@ -999,6 +1174,33 @@
         "r1line": "r1aube:ligne",
         "r1heads": "r1ligne:tête"
       }
+    }
+  },
+  "thumb3": {
+    "at": "eclate$+0.3",
+    "title": [
+      "SOUS TES",
+      "ROUES"
+    ],
+    "tone": "veille",
+    "tag": "Catapulte · sous le pont",
+    "cam": {
+      "shift": 0,
+      "roll": 0,
+      "drift": 0,
+      "dof": 0,
+      "fov": 28,
+      "tx": -500,
+      "ty": -150,
+      "tz": -5300,
+      "d": 2000,
+      "az": -40,
+      "el": 22,
+      "side": -420
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
     }
   }
 }
