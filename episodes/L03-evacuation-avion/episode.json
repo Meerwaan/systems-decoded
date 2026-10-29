@@ -45,11 +45,25 @@
       ],
       "pinned": "Sois honnête : ton sac, tu le laisses ou tu le prends ? Réponds juste « laissé » ou « pris ». La FAA, elle, a déjà répondu en 2025.",
       "thumbnail": "16:9, fond noir, trois miniatures, trois promesses, chacune payée avant 30 s. (1) 90 / SECONDES (veille) : le toboggan plein, éclairé, qui jaillit de la porte en diagonale sur les deux tiers du cadre, l'A350 aux rayons X derrière, la lueur du feu en bas à gauche ; cartouche « DANS LE NOIR · ½ DES PORTES » — payée par la promesse (≈ 0:10). (2) LA FUMÉE / DESCEND (signal) : la cabine de nuit, la nappe orange qui descend du plafond jusqu'aux appuie-tête, une rangée de sièges pleins au premier plan, la ligne de lumière au sol ; cartouche « ÉVACUATION · A350 » — payée par l'accroche (≈ 0:02). (3) TON SAC, / TU LE PRENDS ? (dernière ligne en signal) : un sac plein, éclairé, posé dans l'allée sur la ligne de lumière, la porte ouverte et son toboggan au bout ; cartouche « ÉVACUATION » — payée par la question de l'accroche (≈ 0:20). Rien dans le quart bas droit (la durée de YouTube), jamais de personnage de verre.",
-      "endScreen": "Les 15 dernières secondes (like → rendez-vous → boucle) laissent la moitié droite de l'image libre pour l'écran de fin."
+      "endScreen": "Les 15 dernières secondes (like → rendez-vous → boucle) laissent la moitié droite de l'image libre pour l'écran de fin.",
+      "description": "Évacuation avion : pour avoir le droit de voler, ton avion a dû prouver qu'on le vide en 90 secondes, dans le noir, par la moitié de ses portes. Le 2 janvier 2024, à Tokyo, il lui en restait trois sur huit, pour 379 personnes.\n\nChapitres\n00:00 Ton avion brûle\n00:30 On l'ouvre\n00:49 Comment se gonfle le toboggan\n01:46 D'où viennent les 90 secondes\n02:41 853 personnes dans le noir\n03:33 Manchester, 1985 : la fumée\n04:32 Le balisage lumineux au sol\n05:15 Ton siège : 16 g\n06:01 Tokyo, 2 janvier 2024\n07:15 Pourquoi pas 90 secondes ?\n07:54 Ton sac, tu le prends ?\n\nSources : FAA, 14 CFR 25.803 et son annexe J · Federal Register, 18 juillet 1995 · FAA, amendement 25-58 (1984) et SAFO 25003 (2025) · EASA, certification de l'A380 (2006) · Japan Airlines et Airbus (vol JL516) · AAIB, accident de Manchester (1985) · GCAA, accident d'Emirates 521 (2016).\n\nSystème Décodé : on ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite.\n\nSois honnête : ton sac, tu le laisses ou tu le prends ?",
+      "chapters": [
+        "00:00 Ton avion brûle",
+        "00:30 On l'ouvre",
+        "00:49 Comment se gonfle le toboggan",
+        "01:46 D'où viennent les 90 secondes",
+        "02:41 853 personnes dans le noir",
+        "03:33 Manchester, 1985 : la fumée",
+        "04:32 Le balisage lumineux au sol",
+        "05:15 Ton siège : 16 g",
+        "06:01 Tokyo, 2 janvier 2024",
+        "07:15 Pourquoi pas 90 secondes ?",
+        "07:54 Ton sac, tu le prends ?"
+      ]
     }
   },
   "thumb": {
-    "at": "plein:debout",
+    "at": 0.9,
     "title": [
       "90",
       "SECONDES"
@@ -57,13 +71,27 @@
     "tone": "veille",
     "tag": "Dans le noir · ½ des portes",
     "cam": {
-      "side": -420,
-      "drift": 0
+      "tx": -2700,
+      "ty": 420,
+      "tz": 300,
+      "d": 1700,
+      "az": -55,
+      "el": -10,
+      "fov": 36,
+      "shift": 0,
+      "roll": -5,
+      "drift": 0,
+      "side": -460
     },
     "grade": {
-      "contrast": 1.32,
-      "saturation": 1.15
-    }
+      "contrast": 1.4,
+      "saturation": 1.18
+    },
+    "state": {
+      "doorA": 1,
+      "fire": 1
+    },
+    "tagStyle": "solid"
   },
   "thumb2": {
     "at": "accroche:descend",
@@ -74,13 +102,36 @@
     "tone": "signal",
     "tag": "Évacuation · A350",
     "cam": {
-      "side": -420,
+      "tx": 500,
+      "ty": 150,
+      "tz": 115,
+      "d": 525,
+      "az": 86,
+      "el": -9,
+      "fov": 36,
+      "shift": 0,
+      "side": -300,
+      "roll": 0,
       "drift": 0
     },
     "grade": {
-      "contrast": 1.32,
-      "saturation": 1.15
-    }
+      "contrast": 1.4,
+      "saturation": 1.18,
+      "gel": "#ff5b2e",
+      "gelAmount": 0.2
+    },
+    "state": {
+      "set": 1,
+      "layout": 0,
+      "smoke": 0.75,
+      "emerg": 1,
+      "signs": 1,
+      "pax": 1,
+      "floor": 1,
+      "fire": 0.7,
+      "pa": 1
+    },
+    "tagStyle": "solid"
   },
   "thumb3": {
     "at": "curiosite:sac",
@@ -91,13 +142,35 @@
     "tone": "signal",
     "tag": "Évacuation",
     "cam": {
+      "tx": 742,
+      "ty": 52,
+      "tz": 92,
+      "d": 110.00000000000001,
+      "az": -95,
+      "el": -4,
+      "fov": 30,
+      "shift": 0,
       "side": -420,
+      "roll": -5,
       "drift": 0
     },
     "grade": {
-      "contrast": 1.32,
-      "saturation": 1.15
-    }
+      "contrast": 1.4,
+      "saturation": 1.18
+    },
+    "state": {
+      "set": 1,
+      "layout": 0,
+      "you": 2,
+      "bag": 1,
+      "smoke": 0.9,
+      "emerg": 1,
+      "pax": 1,
+      "floor": 1,
+      "fire": 0.6
+    },
+    "tagStyle": "solid",
+    "size": 300
   },
   "sources": [
     "Faits : docs/faits/L03-evacuation-avion.md (recherche du 21/10, niveaux A/B/C). Vérifié en plus pour ce script (Wikipedia, « 2024 Haneda Airport runway collision », lue le 21/10, B) : « Smoke filled the A350's cabin quickly after the accident » et l'avion « destroyed in the post-crash fire ». Contre-vérification : docs/faits/L03-contre-verification.md (six phrases corrigées : debit, rate1991, top, p2b, p3, dubai ; « l'équipage a gardé fermées les portes côté feu » est ce qui est sourcé, pas un choix porte par porte ; réserve à lever avant l'image : les trois instants de Manchester dans le PDF de l'AAIB).",
@@ -775,6 +848,12 @@
       "at": "rewind",
       "dur": 1,
       "gain": -21
+    },
+    {
+      "type": "hush",
+      "from": "chute",
+      "to": "verdict",
+      "depth": -10
     }
   ]
 }

@@ -1,16 +1,16 @@
 // DOSSIER L03 — Évacuation d'un avion (format long, 16:9). The film, assembled:
 //   plan.js      the numbers every set reads (no import: the sets are built at the same time against it)
-//   world.js     the sets, the state (FIRST), the camera (POSE0, VIEW), the steps of the line (STEPS), apply()
-//   chapters.js  the chapter files in order — each one only writes st / shot / cut / tl calls on times read
-//                off the script (D.at), and starts with a cut to a complete state: they do not depend on each other
-// The page carries no captions: chapter cards, keywords and the header (step, temperature of the glass);
-// the words go in the .srt (npm run srt).
+//   world.js     the sets, the state (FIRST), the camera (POSE0, VIEW), the steps (STEPS), the seams (HAND), apply()
+//   chapters.js  the chapter files in order — each one only writes st / now / shot / cut / match / tl calls on times
+//                read off the script (D.at), and starts with its half of a seam: they do not depend on each other
+// The page carries no captions: chapter cards, keywords and the header (the step, the chrono); the words go in the
+// .srt (npm run srt).
 import "@kit/landscape.js"; // first: the 16:9 frame, before anything reads BRAND.W / BRAND.H
 import { createStage } from "@kit/stage.js";
 import { createDirector } from "@kit/direct.js";
 import { createCallouts } from "@kit/overlay.js";
 import { lineHud } from "@kit/long.js";
-import { buildWorld, FIRST, POSE0, SIZE, FAR, STEPS, CARD, KEYWORDS_SKIP, LOOK } from "./world.js";
+import { buildWorld, FIRST, POSE0, SIZE, FAR, STEPS, CARD, KEYWORDS_SKIP, LOOK, CHRONO_HUD } from "./world.js";
 import CHAPTERS from "./chapters.js";
 
 const $ = (id) => document.getElementById(id);
@@ -27,8 +27,8 @@ function build() {
   const ctx = { D, world, co };
   for (const chapter of CHAPTERS) chapter(ctx);
 
-  // the header: the step of the line on screen, and the temperature of the glass (none off the line)
-  lineHud(stage, { steps: STEPS, step: () => Math.round(D.W.step), temp: () => (D.W.tempOn > 0.5 ? D.W.temp : null) });
+  // the header: the step on screen (ÉTAPE 02 / 05 · La règle des 90 s), and the chrono (none off its stories)
+  lineHud(stage, { steps: STEPS, step: () => Math.round(D.W.step), temp: () => (D.W.chronoOn > 0.5 ? D.W.chrono : null), ...CHRONO_HUD });
 
   // a chapter that shows something better than a keyword says so: D.quiet(from, to)
   D.commit({ long: { chapters: CARD, keywords: { skip: KEYWORDS_SKIP } } });
