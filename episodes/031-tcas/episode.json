@@ -1,0 +1,432 @@
+{
+  "id": "031",
+  "serie": "dossier",
+  "slug": "tcas",
+  "title": "Anti-collision",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Anti-",
+      "collision"
+    ],
+    "cam": {
+      "tx": -16.1,
+      "ty": 4,
+      "tz": -13.5,
+      "d": 640,
+      "az": -40,
+      "el": 22,
+      "fov": 30,
+      "shift": -470,
+      "side": 0,
+      "roll": 0
+    },
+    "state": {
+      "explode": 1,
+      "litAnt": 1,
+      "litCpu": 1,
+      "litPeer": 1,
+      "litXpdr": 1,
+      "litScreen": 1,
+      "ping": 1,
+      "beam": 1,
+      "tau": 60,
+      "level": 3,
+      "ra": 1,
+      "mood": 0
+    }
+  },
+  "post": {
+    "caption": "TCAS, l'anticollision des avions de ligne : deux voix dans ton cockpit, deux ordres contraires, trente-cinq secondes. Et en face, l'autre avion entend l'inverse. Cinq secondes pour obéir : tu obéis… ou tu hésites ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#aviation",
+      "#avion",
+      "#pilote"
+    ],
+    "pinned": "Réponds juste : « j'obéis » ou « j'hésite ». Le pilote a cinq secondes pour suivre la machine, même si le contrôleur dit l'inverse.",
+    "keyword": "TCAS",
+    "instagram": {
+      "caption": "Un avion fonce droit sur toi. Ta machine dit : monte. Le contrôleur : descends.\n\nDossier 031 : le TCAS, l'anticollision des avions de ligne. Une antenne qui interroge l'autre avion chaque seconde, son transpondeur qui répond, un calculateur qui compte le temps qui reste… et deux machines qui se parlent avant de te donner un ordre.\n\nCinq secondes pour obéir : tu obéis… ou tu hésites ?",
+      "hashtags": [
+        "#aviation",
+        "#avion",
+        "#pilote",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ta machine dit « monte », le contrôleur dit « descends » : le TCAS, l'anticollision des avions",
+      "description": "Dossier 031 — le TCAS (ACAS II) ouvert : l'antenne qui interroge l'autre avion chaque seconde, le transpondeur qui répond, le calculateur qui mesure le temps avant le point le plus proche, et les deux machines qui se mettent d'accord : l'une dit monte, l'autre descends.\n\nPilotes : qu'est-ce qu'on a simplifié ? Et toi, cinq secondes pour obéir : tu obéis… ou tu hésites ?",
+      "hashtags": [
+        "#shorts",
+        "#aviation",
+        "#avion",
+        "#pilote",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits, niveaux de source et « à ne pas dire » : docs/faits/031-tcas.md (recherche du 2026-10-30).",
+    "La scène (accroche → réponse) est un scénario à la 2ᵉ personne, reconstitué sur la logique du TCAS II ; seul le passage « En 2002… » est un cas réel. Les feux dans le pare-brise et le geste au manche sont reconstitués par l'image.",
+    "Le contrôleur demande de descendre pendant que le TCAS dit de monter, et l'autre avion reçoit « descend » à la même seconde (21:34:56 UTC) : ordres toujours complémentaires — BFU, rapport AX001-1-2/02, §1.1 et annexe TCAS [P].",
+    "Annonces vocales « traffic, traffic », « climb, climb », « descend, descend », « clear of conflict » (traduites en français par la voix) — BFU, annexe TCAS [P].",
+    "En croisière (20 000 – 42 000 ft) : alerte de trafic à 48 s du point le plus proche, ordre (RA) à 35 s — FAA, « Introduction to TCAS II Version 7.1 », tableau 2 ; BFU [P].",
+    "Le symbole de l'intrus devient un carré rouge plein au RA (cercle ambre au TA) ; arc vert du variomètre = vitesse verticale à tenir — FAA [P].",
+    "Réagir dans les 5 s, pour atteindre 1 500 ft/min — FAA ; BFU §3.2.3b [P].",
+    "Antenne supérieure qui interroge (1 030 MHz) l'autre avion environ une fois par seconde en phase d'alerte ; son transpondeur Mode S répond (1 090 MHz) ; le calculateur TCAS recalcule chaque seconde le temps avant le point de plus grande proximité (tau) — FAA ; BFU annexe [P].",
+    "Coordination : chaque TCAS envoie à l'autre son intention (« je monte ») par la liaison Mode S et l'autre choisit le sens opposé, avant de donner l'ordre — FAA p. 34 [P].",
+    "Überlingen, nuit du 1ᵉʳ juillet 2002 : le Boeing a suivi son TCAS, le Tupolev a suivi le contrôleur ; collision à 21:35:32 UTC — BFU, synthèse et §1.1 [P]. Aucune compagnie nommée, aucune personne mise en cause, aucun impact montré.",
+    "« Depuis, c'est la règle » : le pilote suit le RA même s'il contredit l'instruction du contrôleur (EU-OPS 1.398 ; OACI Doc 4444 chap. 15, cités par SKYbrary) [S] ; recommandations BFU 07/2004 et 08/2004 [P]. Date exacte du changement de procédure non relue : la voix ne la dit pas.",
+    "Prochain dossier (032) : Victoria Hall, Sunderland, 16 juin 1883, 183 enfants morts derrière une porte qui s'ouvrait vers l'intérieur et verrouillée — Université de Sunderland ; Wikipédia « Victoria Hall disaster » [S].",
+    "Les deux avions sont deux fois le même A330 de verre (le décor du dossier 023), sans livrée ni compagnie : l'image reconstitue une rencontre de face au même niveau. Maquette à l'échelle du sujet : la distance entre les deux avions, la montée et la descente sont dessinées en mètres qui ne valent rien (à 35 s du point le plus proche, deux avions de ligne sont à une quinzaine de kilomètres) ; aucune longueur ni hauteur n'est affichée, l'en-tête ne donne que des secondes.",
+    "L'en-tête : le grand chiffre est le temps avant le point le plus proche que mesure le TCAS (48 s alerte, 35 s ordre — FAA, BFU [P]) ; le second, « Pour obéir », les 5 s dont dispose le pilote après l'ordre (FAA ; BFU §3.2.3b [P]). Le film les déroule plus vite que le temps réel à l'acte 3 ; à l'acte 2, la jauge du calculateur fait une démonstration hors de l'histoire.",
+    "Les symboles de l'afficheur sont dessinés dans les trois couleurs du compte : le cercle de l'alerte (ambre en vrai) est tracé en signal comme le carré de l'ordre ; c'est la forme qui change. Les ondes (anneaux d'interrogation, impulsion de coordination, onde du contrôleur) sont une image d'un phénomène invisible. La pièce de 2002 est un profil d'altitude schématique (deux avions en descente qui convergent, coupé avant le contact), sans échelle chiffrée."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Un avion fonce droit sur *toi*. Ta machine dit : +monte+. Le contrôleur : *descends*.",
+      "vo": "[tense] Un avion fonce droit sur toi. Ta machine dit : monte. Le contrôleur : descends.",
+      "voAlt": [
+        "[firm, matter-of-fact] Un avion fonce droit sur toi. Ta machine dit : monte. Le contrôleur : descends."
+      ],
+      "voir": "Nuit noire, contre-plongée sous le nez de ton A330 (rayons X) : les feux de l'autre avion de ligne foncent sur la caméra et grossissent dès l'image 1 ; dans ton cockpit, petit mais lisible, l'écran TCAS (carré rouge) et l'arc vert du variomètre vers le haut ; sur « descends », une onde signal monte du sol."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "En face, sa machine lui dit : *descends*. Une seule réponse te garde en vie. Toi, tu obéis à +qui+ ?",
+      "vo": "[firm, matter-of-fact] En face, sa machine lui dit : descends. Une seule réponse te garde en vie. [short pause] Toi, tu obéis à qui ?",
+      "voir": "Plan large de profil : les deux avions face à face au même niveau ; dans l'autre cockpit, son arc vert bascule vers le bas ; sur « qui », deux ordres côte à côte au-dessus de toi : MONTE (veille, ta machine) et DESCENDS (signal, le sol)."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Même altitude, nuit noire. Ses feux grossissent dans ton pare-brise. Il te reste [35|trente-cinq] secondes… dont cinq pour obéir. Sur ton écran, il vire au carré *rouge*.",
+      "vo": "[tense] Même altitude, nuit noire. Ses feux grossissent dans ton pare-brise. Il te reste trente-cinq secondes... dont cinq pour obéir. Sur ton écran, il vire au carré rouge.",
+      "voir": "Par-dessus l'épaule du pilote : les feux grossissent dans le pare-brise ; le chrono 35 s démarre au HUD, un second compte de 5 s s'ouvre ; on plonge sur l'écran TCAS : le losange de l'intrus devient un carré rouge plein — c'est lui qu'on va ouvrir."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "On recule depuis l'écran TCAS jusqu'au fuselage de ton avion aux rayons X ; sur « on », l'éclaté s'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Sur ton fuselage, une +antenne+ interroge l'autre avion, chaque seconde. Son transpondeur répond. Et au cœur, le calculateur mesure… le *temps* avant le point le plus proche.",
+      "vo": "[conversational, curious] Sur ton fuselage, une antenne interroge l'autre avion, chaque seconde. Son transpondeur répond. Et au cœur, le calculateur mesure... le temps avant le point le plus proche.",
+      "voAlt": [
+        "[curious] Sur ton fuselage, une antenne interroge l'autre avion, chaque seconde. Son transpondeur répond. Et au cœur, le calculateur mesure... le temps avant le point le plus proche."
+      ],
+      "voir": "Éclaté de trois quarts, on suit l'onde : l'antenne du dessus émet un anneau vers l'autre avion (une fois par seconde), le transpondeur d'en face le renvoie, l'anneau revient au calculateur TCAS, plein sur son halo, où une jauge de temps se vide."
+    },
+    {
+      "id": "repos",
+      "text": "Au-dessus de [48|quarante-huit] secondes, il se tait. À [48|quarante-huit] : +traffic+, traffic. À [35|trente-cinq], il ordonne. Mais avant de te dire monte… il écoute l'*autre* machine.",
+      "vo": "[warm, conversational] Au-dessus de quarante-huit secondes, il se tait. À quarante-huit : traffic, traffic. À trente-cinq, il ordonne. Mais avant de te dire monte... il écoute l'autre machine.",
+      "voAlt": [
+        "[curious] Au-dessus de quarante-huit secondes, il se tait. À quarante-huit : traffic, traffic. À trente-cinq, il ordonne. Mais avant de te dire monte... il écoute l'autre machine."
+      ],
+      "voir": "Gros plan de l'écran TCAS et du haut-parleur : losange calme et silence ; à 48 le symbole devient cercle ambre et le haut-parleur vibre ; à 35 carré rouge ; dernier temps : la caméra glisse vers l'antenne, tournée vers l'autre avion, qui attend sa réponse."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ces [35|trente-cinq] secondes, on les joue en *entier*.",
+      "vo": "[tense] Abonne-toi : ces trente-cinq secondes, on les joue en entier.",
+      "voir": "La caméra déjà en route : elle quitte l'antenne et remonte vers les feux de l'autre avion dans la nuit ; chevrons #rail-seuil."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "*[35|Trente-cinq]*. Ta machine envoie à l'autre : je +monte+. La sienne lit… et prend l'autre sens.",
+      "vo": "[firm, matter-of-fact] Trente-cinq. Ta machine envoie à l'autre : je monte. La sienne lit... et prend l'autre sens.",
+      "voir": "Chrono 35 au HUD ; plan large de profil des deux avions : une impulsion veille part de ton antenne vers l'autre (« je monte »), son calculateur s'allume, renvoie sa réponse, et son arc vert bascule vers le bas."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Toi : +monte+. Lui : *descends*. Tu tires sur le manche. [1500|Quinze cents] pieds par minute. Ton aiguille entre dans l'arc vert. Ses feux passent… sous toi. La voix : conflit +terminé+.",
+      "vo": "[tense] Toi : monte. Lui : descends. Tu tires sur le manche. Quinze cents pieds par minute. Ton aiguille entre dans l'arc vert. Ses feux passent... sous toi. La voix : conflit terminé.",
+      "voir": "Climax en grand, plan large de profil : ton avion cabre et monte, l'autre pique et descend, l'écart vertical s'ouvre ; insert variomètre : l'aiguille entre dans l'arc vert à 1 500 ft/min ; vu du cockpit, ses feux glissent sous le pare-brise ; l'écran : le carré rouge redevient losange."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Le secret : tu n'as *pas* choisi de monter. Deux machines se sont mises +d'accord+… avant de te le dire.",
+      "vo": "[firm, matter-of-fact] Le secret : tu n'as pas choisi de monter. Deux machines se sont mises d'accord... avant de te le dire.",
+      "voir": "On recule : les deux calculateurs, un dans chaque avion, pleins, reliés par la ligne de coordination veille qui pulse ; les pilotes, silhouettes aux rayons X, au bout de la chaîne ; le nom du compte s'allume."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Toi, tu obéis à qui ? À la +machine+. En [2002|deux mille deux], un seul des deux avions a suivi la sienne. Ils se sont percutés. Depuis, la règle est claire. En +commentaire+ : cinq secondes… tu obéis, ou tu *hésites* ?",
+      "vo": "[conversational, curious] Toi, tu obéis à qui ? [short pause] À la machine. En deux mille deux, un seul des deux avions a suivi la sienne. Ils se sont percutés. Depuis, la règle est claire. [short pause] En commentaire : cinq secondes... tu obéis, ou tu hésites ?",
+      "voAlt": [
+        "[curious] Toi, tu obéis à qui ? [short pause] À la machine. En deux mille deux, un seul des deux avions a suivi la sienne. Ils se sont percutés. Depuis, la règle est claire. [short pause] En commentaire : cinq secondes... tu obéis, ou tu hésites ?"
+      ],
+      "voir": "Retour aux deux avions ; sur « 2002 », pièce du dossier : carte nocturne du lac de Constance, deux traces qui descendent toutes les deux et convergent, coupées en fondu avant le contact (aucun impact) ; « c'est la règle » : l'ordre vert du TCAS au-dessus du message du sol ; duel obéis / hésites."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour quelqu'un qui a peur en avion. Deux machines veillent sur *lui*.",
+      "vo": "[warm, conversational] Like : [short pause] pour quelqu'un qui a peur en avion. Deux machines veillent sur lui.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour quelqu'un qui a peur en avion. Deux machines veillent sur lui."
+      ],
+      "voir": "Cabine aux rayons X, un passager endormi près du hublot ; au-dessus du fuselage, l'antenne échange ses anneaux avec un avion lointain."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : la barre anti-panique. En [1883|dix-huit cent quatre-vingt-trois], une porte bloquée a coûté la vie à [183|cent quatre-vingt-trois] *enfants*.",
+      "vo": "[serious] Prochain dossier : la barre anti-panique. En dix-huit cent quatre-vingt-trois, une porte bloquée a coûté la vie à cent quatre-vingt-trois enfants.",
+      "voir": "Panneau du prochain dossier : une porte de secours fermée et sa barre horizontale, en contre-plongée, aux rayons X ; personne à l'écran."
+    },
+    {
+      "id": "boucle",
+      "text": "Mais ce soir, là-haut…",
+      "vo": "[calm] Mais ce soir, là-haut,",
+      "voir": "On remonte dans la nuit vers les feux de l'autre avion qui grossissent : la dernière image rejoint la première."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:toi",
+    "hkMonte": "accroche:monte",
+    "hkAtc": "accroche:descends",
+    "prDescends": "promesse:descends",
+    "prQui": "promesse:qui",
+    "scFeux": "scene:feux",
+    "sc35": "scene:35",
+    "scCinq": "scene:cinq#2",
+    "scEcran": "scene:écran",
+    "scRouge": "scene:rouge",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "eAntenne": "eclate:antenne",
+    "eSeconde": "eclate:chaque",
+    "eTransp": "eclate:transpondeur",
+    "eCoeur": "eclate:cœur",
+    "eTemps": "eclate:temps",
+    "rTait": "repos:tait",
+    "rTA": "repos:traffic",
+    "rRA": "repos:35",
+    "rMais": "repos:mais",
+    "rEcoute": "repos:écoute",
+    "toseuil": "seuil-0.12",
+    "tozero": "zero-0.12",
+    "zMonte": "zero:monte",
+    "zSienne": "zero:sienne",
+    "zSens": "zero:prend",
+    "rpLui": "reponse:lui",
+    "trigger": "reponse:tires-0.05",
+    "rpPieds": "reponse:pieds",
+    "rpAiguille": "reponse:aiguille",
+    "rpVert": "reponse:vert",
+    "rpFeux": "reponse:feux",
+    "rpSous": "reponse:sous",
+    "rpConflit": "reponse:conflit",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "chMachines": "chute:machines",
+    "tocta": "comment-0.12",
+    "cmMachine": "comment:machine",
+    "cm2002": "comment:2002",
+    "cmPercutes": "comment:percutés",
+    "cmRegle": "comment:règle",
+    "cmCommentaire": "comment:commentaire",
+    "duelA": "comment:hésites-0.84",
+    "duelB": "comment:hésites",
+    "lkPeur": "like:peur",
+    "lkVeillent": "like:veillent",
+    "abProchain": "abo:prochain",
+    "ab1883": "abo:1883",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:soir"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "ouvre:on-0.12",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "reponse:tires-0.48",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "chute:tu-0.28",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "blip",
+      "at": "scene:rouge+0.3",
+      "gain": -18,
+      "pitch": 1.15
+    },
+    {
+      "type": "blip",
+      "at": "repos:traffic-0.5",
+      "gain": -18,
+      "pitch": 1
+    },
+    {
+      "type": "blip",
+      "at": "zero:monte-0.38",
+      "gain": -19,
+      "pitch": 1.3
+    },
+    {
+      "type": "hit",
+      "at": "promesse$+0.06",
+      "gain": -15,
+      "pitch": 1
+    },
+    {
+      "type": "click",
+      "at": "scene:noire+0.36",
+      "gain": -18
+    },
+    {
+      "type": "swish",
+      "at": "scene:il-0.24",
+      "dur": 0.25,
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "scene:obéir+0.44",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "eclate:fuselage+0.54",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:seconde+0.44",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "eclate:répond+0.36",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:cœur+0.26",
+      "gain": -16
+    },
+    {
+      "type": "rewind",
+      "at": "boucle:soir+0.34",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

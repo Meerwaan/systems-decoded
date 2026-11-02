@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · 031 · Anti-collision</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
+         kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+
+      /* rien de ceci n'est à l'écran tant qu'un acte ne l'a pas fait entrer */
+      .chip--live, #retitle, #net, #next, #orders, #piece, .rail { opacity: 0; }
+
+      /* le second compteur de l'en-tête (main.js fixe sa couleur) */
+      #hud-count { color: var(--ink); }
+
+      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
+      #chip-toi, #chip-1500 { color: var(--ink); }
+      #chip-1030, #chip-1090, #chip-coeur, #chip-monte { color: var(--veille); }
+      /* #chip-lui, #chip-descends : signal (par défaut) */
+
+      /* les deux ordres, côte à côte dans la zone haute (acte1, repris au commentaire) : la machine en veille, le sol en signal */
+      #orders { position: absolute; left: var(--safe-l, 72px); top: 470px; display: flex; gap: 22px; }
+      #orders .order { padding: 18px 24px 20px; border: 2px solid currentColor; background: rgba(7, 10, 12, 0.78); min-width: 300px; }
+      #orders .order span { display: block; font: 600 26px/1 "JetBrains Mono", monospace; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.8; }
+      #orders .order b { display: block; margin-top: 12px; font: 600 76px/0.9 "Barlow Condensed", sans-serif; text-transform: uppercase; letter-spacing: 0.02em; }
+      #order-tcas { color: var(--veille); }
+      #order-atc { color: var(--signal); }
+
+      /* PIÈCE N° 1 — 2002 (fin.js) : le profil des deux descentes, coupé avant le contact */
+      #piece { left: var(--safe-l, 72px); top: 446px; width: 700px; }
+      #piece svg { display: block; width: 100%; height: 250px; margin-top: 10px; }
+      #piece .trace { fill: none; stroke-width: 6; stroke-linecap: round; }
+      #piece-a { stroke: var(--veille); }
+      #piece-b { stroke: var(--signal); }
+      #piece .legend { display: flex; justify-content: space-between; margin-top: 10px; font: 600 24px/1.2 "JetBrains Mono", monospace; letter-spacing: 0.1em; text-transform: uppercase; }
+      #piece .legend .a { color: var(--veille); }
+      #piece .legend .b { color: var(--signal); }
+
+      /* la chute, puis les appels à l'action */
+      #retitle-main { font-size: 104px; }
+      #retitle-slot { height: 104px; }
+      #retitle-strike { top: 50px; }
+      #next-fact span { font-size: 36px; line-height: 1.2; letter-spacing: 0.06em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="93.5" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 031</span></div>
+        <div class="hud__title" id="hud-title">Anti-collision</div>
+        <div class="hud__clock" id="hud-clock">35,0 s</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Pour obéir</span><b id="hud-count-v">—</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- 01 · MENACE (acte1.js) -->
+      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <div id="chip-lui" class="chip chip--live"><b>Lui</b></div>
+      <!-- les deux ordres (accroche, promesse ; repris au commentaire) : jamais en même temps qu'un autre panneau -->
+      <div id="orders">
+        <div class="order" id="order-tcas"><span>Ta machine</span><b>Monte</b></div>
+        <div class="order" id="order-atc"><span>Le contrôleur</span><b>Descends</b></div>
+      </div>
+
+      <!-- 02 · AUTOPSIE (acte2.js) -->
+      <div id="chip-1030" class="chip chip--live"><span>Interroge</span><b>1 030 MHz</b></div>
+      <div id="chip-1090" class="chip chip--live"><span>Répond</span><b>1 090 MHz</b></div>
+      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>Calculateur</b></div>
+
+      <!-- le seuil (fin d'acte2.js) : la demande d'abonnement dite à la porte de l'acte 3 — des chevrons, jamais un panneau -->
+      <div id="rail-seuil" class="rail"><i></i><i></i><i></i></div>
+
+      <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
+      <div id="chip-monte" class="chip chip--live"><span>Toi</span><b>Monte</b></div>
+      <div id="chip-descends" class="chip chip--live"><span>Lui</span><b>Descends</b></div>
+      <div id="chip-1500" class="chip chip--live"><span>Vitesse verticale</span><b>1 500 ft/min</b></div>
+
+      <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Qui a choisi de monter</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">Toi<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Deux machines</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- ce que le film doit (fin.js) : PIÈCE N° 1, le profil des deux descentes de 2002, coupé avant le contact ; aucune compagnie -->
+      <section id="piece" class="panel">
+        <div class="panel__h"><span>Pièce n° 1 · 1er juillet 2002</span><span>Profil</span></div>
+        <svg viewBox="0 0 700 250" aria-hidden="true">
+          <path id="piece-a" class="trace" d="M 20 34 L 250 34 C 350 34 430 98 560 158" />
+          <path id="piece-b" class="trace" d="M 20 54 L 210 54 C 310 54 410 112 560 170" />
+        </svg>
+        <div class="legend"><span class="a">Suit sa machine</span><span class="b">Suit le contrôleur</span></div>
+      </section>
+
+      <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 passager</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 032</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
+        <div id="next-fact"><span>1883 · Une porte bloquée.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <!-- la question du commentaire posée en DEUX réponses (duelCall, fin.js) : chacune s'allume quand la voix la dit, le film ne
+           répond jamais à la place du spectateur. Les deux réponses en encre (toneA, toneB null) : aucune n'est la « bonne » à l'écran. -->
+      <div id="duel">
+        <div class="kicker">Cinq secondes</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">J'obéis</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">J'hésite</span></div>
+        <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
+      </div>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
