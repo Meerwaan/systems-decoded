@@ -1,0 +1,592 @@
+{
+  "id": "034",
+  "serie": "dossier",
+  "slug": "boite-noire",
+  "title": "Boîte noire",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Boîte",
+      "noire"
+    ],
+    "cam": {
+      "tx": -6,
+      "ty": 22,
+      "tz": 4,
+      "d": 205,
+      "az": -40,
+      "el": 28,
+      "shift": -170,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    },
+    "state": {
+      "xray": 0,
+      "litBeacon": 1,
+      "litPile": 1
+    }
+  },
+  "post": {
+    "keyword": "Boîte noire",
+    "caption": "Boîte noire, l'enregistreur de vol : elle coule au fond de l'Atlantique, sa balise ne tient que trente jours… et on va la chercher presque deux ans. Et dans ton avion, elle n'écoute peut-être que deux heures. Ton prochain avion : d'avant 2021… ou d'après ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#boitenoire",
+      "#avion",
+      "#aviation"
+    ],
+    "pinned": "Réponds juste : « d'avant » ou « d'après ». Gros avion sorti avant 2021 : deux heures de voix exigées. Après : vingt-cinq.",
+    "instagram": {
+      "caption": "Une boîte noire coule. On va la chercher presque deux ans.\n\nDossier 034 : la boîte noire. Sa balise, réveillée par l'eau, n'appelle que trente jours, et ne porte qu’à quelques kilomètres. Au fond de l'Atlantique, par 3 900 mètres, il ne reste qu'une chose pour tenir.\n\nTon prochain avion : d'avant 2021… ou d'après ?",
+      "hashtags": [
+        "#boitenoire",
+        "#avion",
+        "#aviation",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Une boîte noire coule… et on va la chercher presque deux ans : la boîte noire",
+      "description": "Dossier 034 — la boîte noire ouverte : la balise qui s'allume au contact de l'eau, le boîtier et son électronique, et au milieu, le module mémoire blindé. Le Rio-Paris de 2009 : une épave par 3 900 mètres, retrouvée en avril 2011.\n\nPilotes, mécanos : qu'est-ce qu'on a simplifié ? Et ton prochain avion : d'avant 2021… ou d'après ?",
+      "hashtags": [
+        "#shorts",
+        "#boitenoire",
+        "#avion",
+        "#aviation",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits, niveaux de source et « à ne pas dire » : docs/faits/034-boite-noire.md (recherche du 2026-10-30).",
+    "La boîte qui coule est celle du vol Air France AF447 Rio-Paris (A330, nuit du 31 mai au 1er juin 2009) ; pas de victime à l'image, pas de transcription. Les recherches acoustiques de juin-juillet 2009 n'ont rien détecté ; épave découverte le 2 avril 2011 par 3 900 m ; enregistreur de paramètres trouvé le 1er mai, remonté le 2 mai 2011 (≈ 23 mois : « presque deux ans ») ; lecture au BEA à partir du 13 mai 2011 — BEA, chronologie AF447 et rapport du groupe de travail « Récupération de données de vol » [P].",
+    "Balise de localisation sous-marine : déclenchée par l'eau, 37,5 kHz, 30 jours (norme de l'époque ; 90 jours sur les avions récents) — NTSB [P], BEA [P] ; un appel par seconde — fearoflanding.com [S] ; portée de détection ≈ 1 NM (≈ 1,85 km : « à peine deux kilomètres ») — BEA [P] ; sa propre pile — Etep [S].",
+    "Seul le module mémoire (CSMU) est blindé, le boîtier et l'électronique ne le sont pas ; sur AF447, le FDR a été retrouvé sous forme de module mémoire protégé — Etep, brevet Honeywell, presse via recherche [S].",
+    "Module mémoire ≈ 2 kg (109 × 109 × 86 mm) — Etep Sentinel CSMU [S] ; « brique » : sa taille.",
+    "Couches : acier durci, isolant, absorbeur de chaleur autour de la mémoire — brevet Honeywell US 8 723 057 [S] ; les couches exactes d'un enregistreur d'A330 ne sont pas sourcées : l'image reconstitue.",
+    "Épreuves : feu à 1 100 °C (durée volontairement non dite : 30 min NTSB, 60 min ED-112A) ; pression équivalente à 20 000 ft ≈ 6 000 m d'eau — NTSB [P], Etep [S].",
+    "Enregistreur de voix : 2 h sur les unités numériques (AF447 en 2009 : 2 h) — NTSB [P] ; 25 h exigées par l'OACI et l'EASA pour les avions de plus de 27 t dont le premier certificat de navigabilité date du 1er janvier 2021 ou après — texte réglementaire cité par recherche [S], confirmé par la règle finale FAA du 2 février 2026 [P].",
+    "Orange vif avec bandes réfléchissantes — Etep [S], règlements nationaux via recherche [S] ; la raison officielle de la couleur n'est pas dite.",
+    "La scène reconstitue : la descente de la boîte, l'ordre « eau → balise » et la pression sur la coque sont montrés, aucune source ne les décrit pas à pas pour AF447 ; « personne ne l'a entendue » = échec des recherches acoustiques [P], sans dire pourquoi ; la position de l'enregistreur dans la queue de l'A330 n'est pas dite (NTSB : « généralement la queue »).",
+    "Prochain dossier : barrières de passage à niveau « cassables » (barrière de sortie) — SNCF Réseau / Prévention routière, dépliant PN voiture 2021 [P] ; Assemblée nationale, question écrite n° 3172 [P].",
+    "L'image reconstitue (034, architecte) : la queue de verre qui coule près de la boîte et le champ de débris au fond (aucune source ne place l'enregistreur près de la queue ni ne décrit la chute) ; la boîte dans la queue de l'A330 du 023 (NTSB : « généralement la queue », jamais dit) ; la mise en place des pièces (module en haut, au milieu ; balise sur sa face avant), les tailles, la forme cylindrique du module (presse : « module cylindrique ») et ses couches ; le chiffre de l'en-tête « J−30 » suit la voix (30 jours) et le compteur de mois reprend « un mois, un an, presque deux ans » (≈ 23 mois, BEA) ; la portée dessinée à l'échelle vraie, 1 NM (BEA) ; la lumière qui descend sur l'épave en avril 2011 et le module qui remonte seul (sur AF447, le module de l'enregistreur de paramètres a été trouvé séparé de son châssis — BEA) ; la cause de la séparation n'est ni dite ni montrée."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Une boîte noire *coule*. Tu vas la chercher presque [2|deux] +ans+.",
+      "vo": "[tense] Une boîte noire coule. Tu vas la chercher presque deux ans.",
+      "voAlt": [
+        "[firm, matter-of-fact] Une boîte noire coule. Tu vas la chercher presque deux ans."
+      ],
+      "voir": "Première image, sous l'eau, de nuit, en contre-plongée : l'enregistreur orange (plein, sur son halo, 40 % de la largeur) coule vers la caméra en tournant lentement, un anneau d'onde part de sa balise ; derrière lui, la surface et la queue de verre de l'A330 qui s'enfonce dans le noir. À « deux ans », le fond noir monte vers lui."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Au fond de l'Atlantique, sa balise ne tient que [30|trente] *jours*. Et dans ton avion… elle n'écoute peut-être que [2|deux] +heures+.",
+      "vo": "[firm, matter-of-fact] Au fond de l'Atlantique, sa balise ne tient que trente jours. [short pause] Et dans ton avion... elle n'écoute peut-être que deux heures.",
+      "voir": "Gros plan sur la balise au nez de l'enregistreur : un anneau d'onde par seconde ; le compte à rebours J-30 s'allume dans l'en-tête. À « ton avion », raccord sur un A330 de verre de nuit, intact, au-dessus de l'Atlantique : à travers sa queue, la même boîte orange, et une piste de voix qui ne garde que « 2 h »."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Elle descend dans le noir : [3 900|trois mille neuf cents] mètres. L'eau réveille sa balise : un appel par seconde. Il porte à quelques kilomètres, au mieux. Trouve-la… avant qu'elle se *taise*.",
+      "vo": "[tense] Elle descend dans le noir : trois mille neuf cents mètres. L'eau réveille sa balise : un appel par seconde. Il porte à quelques kilomètres, au mieux. Trouve-la... avant qu'elle se taise.",
+      "voir": "On descend avec la boîte : jauge de profondeur à gauche qui défile jusqu'à 3 900 m ; l'eau touche la balise, elle s'allume en veille et pulse chaque seconde ; ses anneaux s'arrêtent sur une sphère d'environ 2 km, minuscule dans le noir de l'océan ; à « taise », J-30 passe en signal ; la boîte se pose sur le fond, de trois quarts, sur son halo."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "La boîte posée au fond, de trois quarts ; la caméra s'approche ; sur « on », elle s'ouvre en éclaté."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Devant, sa +balise+, avec sa propre pile. Puis le boîtier et son électronique : rien n'est blindé. Et au milieu… un bloc de quelques kilos : la *mémoire*.",
+      "vo": "[conversational, curious] Devant, sa balise, avec sa propre pile. Puis le boîtier et son électronique : rien n'est blindé. Et au milieu... un bloc de quelques kilos : la mémoire.",
+      "voAlt": [
+        "[curious] Devant, sa balise, avec sa propre pile. Puis le boîtier et son électronique : rien n'est blindé. Et au milieu... un bloc de quelques kilos : la mémoire."
+      ],
+      "voir": "L'éclaté suit un chemin de l'avant vers le cœur : la balise cylindrique se détache à l'avant (sa pile visible) ; le boîtier et les cartes électroniques s'écartent en traits de verre, vides ; au centre reste le bloc orange de la mémoire, plein, seul sur son halo — gros plan au mot « mémoire »."
+    },
+    {
+      "id": "repos",
+      "text": "Autour d'elle : de l'acier, un isolant, un absorbeur de chaleur. Testée à [1 100|onze cents] degrés… et à [6 000|six mille] mètres d'eau. Mais sa balise compte déjà les *jours*.",
+      "vo": "[warm, conversational] Autour d'elle : de l'acier, un isolant, un absorbeur de chaleur. Testée à onze cents degrés... et à six mille mètres d'eau. Mais sa balise compte déjà les jours.",
+      "voAlt": [
+        "[curious] Autour d'elle : de l'acier, un isolant, un absorbeur de chaleur. Testée à onze cents degrés... et à six mille mètres d'eau. Mais sa balise compte déjà les jours."
+      ],
+      "voir": "Le bloc mémoire en coupe, de trois quarts : trois couches s'écartent autour de la puce — coque d'acier, isolant, absorbeur de chaleur ; une flamme lèche la coque et meurt sur l'isolant ; des flèches de pression serrent le bloc, qui ne bouge pas ; à « jours », retour sur la balise qui pulse, J-30 qui descend."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : ces [2|deux] ans au fond, on les *traverse*.",
+      "vo": "[tense] Abonne-toi : ces deux ans au fond, on les traverse.",
+      "voir": "La caméra plonge déjà, collée à la boîte, vers le fond noir ; chevrons #rail-seuil ; pas d'arrêt."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "*Zéro*. Les [30|trente] jours sont passés. Personne ne l'a entendue. Elle attend, dans le noir, sous [3 900|trois mille neuf cents] mètres d'eau.",
+      "vo": "[firm, matter-of-fact] Zéro. Les trente jours sont passés. Personne ne l'a entendue. Elle attend, dans le noir, sous trois mille neuf cents mètres d'eau.",
+      "voir": "Le chrono tombe de J-1 à zéro ; les anneaux de la balise montent vers la surface et rien ne revient ; plan large, la boîte immobile et seule sur le fond, 3 900 m d'eau au-dessus d'elle (jauge)."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "L'eau pèse. L'acier *tient*. Un mois. Un an. Presque [2|deux] ans. Avril [2011|deux mille onze] : on retrouve l'épave du Rio-Paris. En mai, sa mémoire remonte. Et on la +lit+.",
+      "vo": "[tense] L'eau pèse. L'acier tient. Un mois. Un an. Presque deux ans. Avril deux mille onze : on retrouve l'épave du Rio-Paris. En mai, sa mémoire remonte. Et on la lit.",
+      "voir": "Climax, le mécanisme en grand : la colonne d'eau écrase le bloc (flèches énormes), la coque d'acier fléchit et tient, elle s'allume en veille sur « tient » ; un compteur de mois défile dans l'en-tête (1, 12, 23) ; une lumière descend d'en haut sur les formes de verre de l'épave ; le bloc orange remonte dans le faisceau jusqu'à la surface ; à « lit », la puce s'allume et ses données montent en traits verts."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : ce n'est *pas* sa balise qui la sauve. C'est un bloc de quelques kilos… qui sait +attendre+.",
+      "vo": "[firm, matter-of-fact] Voilà son secret : ce n'est pas sa balise qui la sauve. C'est un bloc de quelques kilos... qui sait attendre.",
+      "voir": "Plan large : la balise et le boîtier en morceaux restent sur le fond, éteints ; seul le bloc orange de deux kilos dans le faisceau ; à « attendre », le nom du compte s'allume en vert."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et ton avion ? En Europe, sur un gros avion sorti avant [2021|deux mille vingt et un], elle ne doit garder que [2|deux] heures de voix. Après : [25|vingt-cinq]. En +commentaire+ : ton prochain avion… d'avant, ou *d'après* ?",
+      "vo": "[conversational, curious] Et ton avion ? [short pause] En Europe, sur un gros avion sorti avant deux mille vingt et un, elle ne doit garder que deux heures de voix. Après : vingt-cinq. [short pause] En commentaire : ton prochain avion... d'avant, ou d'après ?",
+      "voAlt": [
+        "[curious] Et ton avion ? [short pause] En Europe, sur un gros avion sorti avant deux mille vingt et un, elle ne doit garder que deux heures de voix. Après : vingt-cinq. [short pause] En commentaire : ton prochain avion... d'avant, ou d'après ?"
+      ],
+      "voir": "Retour au-dessus de l'eau : un A330 de verre en vol de nuit (« ton avion ») ; la caméra traverse la queue jusqu'à la boîte orange ; deux compteurs côte à côte, « 2 h » (avant 2021) et « 25 h » (après) ; chevrons vers les commentaires."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour quelqu'un qui la croit encore *noire*. Elle est orange vif.",
+      "vo": "[warm, conversational] Like : [short pause] pour quelqu'un qui la croit encore noire. Elle est orange vif.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour quelqu'un qui la croit encore noire. Elle est orange vif."
+      ],
+      "voir": "Gros plan sur la boîte : sa peinture orange vif et ses bandes réfléchissantes qui accrochent la lumière ; chevrons vers le like."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : la barrière du passage à niveau. Elle est faite pour *casser*.",
+      "vo": "[serious] Prochain dossier : la barrière du passage à niveau. Elle est faite pour casser.",
+      "voir": "Panneau du prochain dossier : une barrière de passage à niveau rouge et blanche, de nuit ; « S'abonner pour l'ouvrir » et ses chevrons."
+    },
+    {
+      "id": "boucle",
+      "text": "Pendant ce temps, quelque part…",
+      "vo": "[calm] Pendant ce temps, quelque part,",
+      "voir": "Retour sous l'eau, en contre-plongée : la boîte orange recommence à couler vers la caméra — la dernière image est la première."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:coule",
+    "ans": "accroche:ans",
+    "atlantique": "promesse:l'Atlantique",
+    "jours": "promesse:jours",
+    "toplane": "promesse:dans-0.21",
+    "tonavion": "promesse:ton",
+    "ecoute": "promesse:n'écoute",
+    "heures": "promesse:heures",
+    "toscene": "scene-0.12",
+    "noir": "scene:noir",
+    "metres": "scene:mètres",
+    "wake": "scene:réveille",
+    "appel": "scene:appel",
+    "seconde": "scene:seconde",
+    "porte": "scene:porte",
+    "kilometres": "scene:kilomètres",
+    "mieux": "scene:mieux",
+    "trouve": "scene:Trouve",
+    "avant": "scene:avant",
+    "taise": "scene:taise",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "devant": "eclate:Devant",
+    "balise": "eclate:balise",
+    "pile": "eclate:pile",
+    "boitier": "eclate:boîtier",
+    "electronique": "eclate:électronique",
+    "blinde": "eclate:blindé",
+    "milieu": "eclate:milieu",
+    "bloc": "eclate:bloc",
+    "kilos": "eclate:kilos",
+    "memoire": "eclate:mémoire",
+    "torepos": "repos-0.12",
+    "acier": "repos:l'acier",
+    "isolant": "repos:isolant",
+    "absorbeur": "repos:absorbeur",
+    "testee": "repos:Testée",
+    "degres": "repos:degrés",
+    "sixmille": "repos:6 000",
+    "deau": "repos:d'eau",
+    "mais": "repos:Mais",
+    "comptejours": "repos:jours",
+    "toseuil": "seuil-0.12",
+    "traverse": "seuil:traverse",
+    "tozero": "zero-0.12",
+    "passes": "zero:passés",
+    "personne": "zero:Personne",
+    "entendue": "zero:entendue",
+    "attend": "zero:attend",
+    "sous": "zero:sous",
+    "pese": "reponse:pèse",
+    "trigger": "reponse:tient-0.05",
+    "tient": "reponse:tient",
+    "mois": "reponse:mois",
+    "unan": "reponse:an",
+    "presque": "reponse:Presque",
+    "deuxans": "reponse:ans",
+    "avril": "reponse:Avril",
+    "epave": "reponse:l'épave",
+    "mai": "reponse:mai",
+    "remonte": "reponse:remonte",
+    "onla": "reponse:Et",
+    "lit": "reponse:lit",
+    "toverdict": "chute-0.12",
+    "secret": "chute:secret",
+    "verdict": "chute:pas",
+    "sauve": "chute:sauve",
+    "bloc2": "chute:bloc",
+    "attendre": "chute:attendre",
+    "tocta": "comment-0.12",
+    "europe": "comment:Europe",
+    "sorti": "comment:sorti",
+    "deuxh": "comment:heures",
+    "apres": "comment:Après",
+    "vingtcinq": "comment:25",
+    "commentaire": "comment:commentaire",
+    "prochain": "comment:prochain",
+    "davant": "comment:d'avant",
+    "dapres": "comment:d'après",
+    "tolike": "like-0.12",
+    "noire": "like:noire",
+    "orange": "like:orange",
+    "toabo": "abo-0.12",
+    "dossier": "abo:dossier",
+    "barriere": "abo:barrière",
+    "casser": "abo:casser",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:quelque",
+    "avion1": "promesse:avion",
+    "chaleur": "repos:chaleur",
+    "abonne": "seuil:Abonne-toi",
+    "zeroword": "zero:Zéro",
+    "likeword": "like:Like",
+    "temps": "boucle:temps"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "choc+0.4",
+      "gain": -14,
+      "pitch": 0.8
+    },
+    {
+      "type": "swish",
+      "at": "accroche$+0.16",
+      "dur": 0.3,
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "jours+0.36",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "swish",
+      "at": "avion1+0.5",
+      "dur": 0.32,
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "promesse$+0.08",
+      "gain": -15,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "noir+0.28",
+      "gain": -17,
+      "pitch": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "scene$+0.08",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.12",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "explode-0.1",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.06",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.34",
+      "gain": -18,
+      "pitch": 0.95
+    },
+    {
+      "type": "click",
+      "at": "balise+0.36",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "pile+0.16",
+      "gain": -17,
+      "pitch": 0.95
+    },
+    {
+      "type": "click",
+      "at": "electronique+0.6",
+      "gain": -17,
+      "pitch": 0.85
+    },
+    {
+      "type": "hit",
+      "at": "blinde+0.36",
+      "gain": -15,
+      "pitch": 0.8
+    },
+    {
+      "type": "blip",
+      "at": "eclate$+0.1",
+      "gain": -16,
+      "pitch": 1
+    },
+    {
+      "type": "click",
+      "at": "chaleur+0.36",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "degres+0.36",
+      "gain": -16,
+      "pitch": 1.1
+    },
+    {
+      "type": "impact",
+      "at": "deau+0.15",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "click",
+      "at": "comptejours+0.16",
+      "gain": -17,
+      "pitch": 0.8
+    },
+    {
+      "type": "swish",
+      "at": "abonne+0.56",
+      "dur": 0.4,
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "hit",
+      "at": "zeroword+0.3",
+      "gain": -14,
+      "pitch": 0.7
+    },
+    {
+      "type": "hush",
+      "from": "personne",
+      "to": "attend-0.05",
+      "depth": -8
+    },
+    {
+      "type": "impact",
+      "at": "pese+0.4",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "impact",
+      "at": "tient+0.25",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "click",
+      "at": "mois+0.2",
+      "gain": -17,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "unan+0.2",
+      "gain": -17,
+      "pitch": 1
+    },
+    {
+      "type": "click",
+      "at": "deuxans+0.12",
+      "gain": -16,
+      "pitch": 1.15
+    },
+    {
+      "type": "swish",
+      "at": "remonte+0.5",
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "blip",
+      "at": "lit+0.16",
+      "gain": -15,
+      "pitch": 1.2
+    },
+    {
+      "type": "blip",
+      "at": "sauve+0.32",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "swish",
+      "at": "chute$+0.2",
+      "dur": 0.4,
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "deuxh+0.52",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "vingtcinq+0.46",
+      "gain": -16,
+      "pitch": 1.15
+    },
+    {
+      "type": "click",
+      "at": "likeword+0.36",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "hit",
+      "at": "dossier+0.42",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "temps+0.18",
+      "dur": 0.38,
+      "gain": -21
+    }
+  ]
+}
