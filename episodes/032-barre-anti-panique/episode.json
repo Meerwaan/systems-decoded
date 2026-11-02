@@ -1,0 +1,558 @@
+{
+  "id": "032",
+  "serie": "dossier",
+  "slug": "barre-anti-panique",
+  "title": "Barre anti-panique",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "explode+1.25",
+    "title": [
+      "Barre",
+      "anti-panique"
+    ],
+    "cam": {
+      "tx": -32,
+      "ty": 38,
+      "tz": 16,
+      "d": 240,
+      "az": -40,
+      "el": 30,
+      "fov": 30,
+      "shift": -470,
+      "side": 0,
+      "roll": 0
+    },
+    "state": {
+      "explode": 1,
+      "litGache": 1,
+      "litBar": 1,
+      "litPene": 1
+    }
+  },
+  "post": {
+    "keyword": "Barre anti-panique",
+    "caption": "Barre anti-panique, la barre des portes de secours : elle doit lâcher même quand toute une salle pousse dessus. En 1883, une porte sans elle a coûté la vie à 183 enfants. Ta porte de secours, au boulot ou au lycée : barre… ou poignée ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#securite",
+      "#histoire",
+      "#lesaviezvous"
+    ],
+    "pinned": "Réponds juste : « barre » ou « poignée ». Regarde la porte de secours de ton boulot ou de ton lycée, demain.",
+    "instagram": {
+      "caption": "La foule t'écrase contre une porte fermée. Et c'est elle qui te sauve.\n\nDossier 032 : la barre anti-panique. Une barre-levier, un boîtier, un pêne planté dans la gâche. Elle doit lâcher même quand toute une salle pousse dessus. En 1883, à Sunderland, une porte sans elle a coûté la vie à 183 enfants.\n\nTa porte de secours, au boulot ou au lycée : barre… ou poignée ?",
+      "hashtags": [
+        "#securite",
+        "#histoire",
+        "#portedesecours",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "La foule t'écrase contre une porte fermée… et c'est elle qui te sauve : la barre anti-panique",
+      "description": "Dossier 032 — la barre anti-panique ouverte : la barre-levier, le boîtier, le pêne, la gâche, le ressort. Pourquoi elle doit lâcher même sous la poussée d'une foule, et ce qui s'est passé à Sunderland en 1883.\n\nTa porte de secours, au boulot ou au lycée : barre… ou poignée ?",
+      "hashtags": [
+        "#shorts",
+        "#securite",
+        "#histoire",
+        "#commentcamarche",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Scène d'aujourd'hui (salle, foule, hanche sur la barre) : scénario ; l'image la reconstitue",
+    "Reconstitution de 1883 (escalier, porte, cohue) : l'image reconstitue, sans enfant identifiable",
+    "Victoria Hall, Sunderland, 16 juin 1883 : 183 enfants morts, écrasés — Wikipédia (Victoria Hall disaster), Univ. Sunderland, Newcastle Castle [S]",
+    "En bas de l'escalier, une porte verrouillée au pêne, un enfant à la fois — Univ. Sunderland, Wikipédia [S]",
+    "Cette porte s'ouvrait vers l'intérieur, contre la foule — Univ. Sunderland, Wikipédia [S]",
+    "Barre anti-panique (EN 1125) : on pousse n'importe où, elle déverrouille sans effort et sans connaître le fonctionnement — doc Allegion [S]",
+    "La barre couvre de 60 % à 100 % de la largeur de la porte — Allegion, EN 1125 [P]",
+    "Pièces : barre-levier, boîtier de commande, pêne, gâche du cadre, ressort de rappel — Wikipédia (Crash bar), fiche La Croisée DS 8250 [S]",
+    "Foule simulée par 1 000 N sur la porte, pêne coincé par la charge ; la barre doit encore déverrouiller (220 N au plus) — doc Allegion/Briton, norme EN 1125 non lue [S]",
+    "France, ERP : au-delà de 50 personnes, portes dans le sens de la sortie, par simple poussée (CO 45, arrêté du 25 juin 1980) — extrait cité par un fabricant, Légifrance non ouvert [S]",
+    "Annonce 033 : en vol, la pression plaque la porte d'avion contre son cadre avec plusieurs tonnes — calcul ≈ 9 t, Air Journal, blogs [O]",
+    "En-tête : le chrono « T+ » est illustratif (la voix ne donne aucune durée) ; « 16 juin 1883 » : date du drame — Wikipédia, Univ. Sunderland [S]",
+    "Barre, boîtier d'extrémité, pêne, gâche, ressort : dessin générique d'une barre à un point (type A), proportions illustratives — l'image reconstitue",
+    "Porte d'avion de l'annonce : la cabine du L03 (A350 de verre), porte 1L vue de l'intérieur — l'image reconstitue, aucune pression ni tonnage affichés"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "La foule t'écrase contre une porte *fermée*. Et c'est cette porte qui te +sauve+.",
+      "vo": "[tense] La foule t'écrase contre une porte fermée. Et c'est cette porte qui te sauve.",
+      "voAlt": [
+        "[firm, matter-of-fact] La foule t'écrase contre une porte fermée. Et c'est cette porte qui te sauve."
+      ],
+      "voir": "Contre-plongée au ras du sol, côté salle : une porte de secours fermée sur 40 % de la largeur, à gauche ; derrière, la foule aux rayons X déferle et plaque une silhouette contre le battant ; la barre pleine, sur son halo, déjà sous la hanche. La foule avance dès l'image 1."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Une barre doit la libérer… même avec la foule appuyée *dessus*. Sauf si elle s'ouvre vers +toi+.",
+      "vo": "[firm, matter-of-fact] Une barre doit la libérer... même avec la foule appuyée dessus. [short pause] Sauf si elle s'ouvre vers toi.",
+      "voir": "Trois quarts sur la barre : la poussée de la foule fait trembler le battant, flèches de charge signal ; sur « vers toi », la porte vire en fantôme et dessine son arc d'ouverture côté salle, vers la caméra."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Derrière toi, toute la salle pousse. Ta poitrine est collée au métal. Tes bras sont bloqués. Il te reste ta hanche… contre une +barre+.",
+      "vo": "[tense] Derrière toi, toute la salle pousse. Ta poitrine est collée au métal. Tes bras sont bloqués. Il te reste ta hanche... contre une barre.",
+      "voir": "Même instant, la caméra glisse le long de la silhouette : la masse de la foule qui pousse (chrono lancé), la poitrine contre la tôle, les bras pris dans la cohue, puis la hanche posée sur la barre — dernière image : la barre, plein cadre."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "La foule s'efface, la porte et sa barre restent seules sur le halo ; l'éclaté s'ouvre sur « on »."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Sous ta hanche, la barre court sur plus de la moitié de la porte : c'est un +levier+. Au bout, un boîtier. Dedans, le pêne… planté dans la *gâche* du cadre.",
+      "vo": "[conversational, curious] Sous ta hanche, la barre court sur plus de la moitié de la porte : c'est un levier. Au bout, un boîtier. Dedans, le pêne... planté dans la gâche du cadre.",
+      "voAlt": [
+        "[curious] Sous ta hanche, la barre court sur plus de la moitié de la porte : c'est un levier. Au bout, un boîtier. Dedans, le pêne... planté dans la gâche du cadre."
+      ],
+      "voir": "Éclaté le long du chemin : la caméra suit la barre (levier, pivot visible) jusqu'au boîtier qui s'écarte, le pêne qui en sort, puis la gâche fixée au cadre où il entre ; pièces nommées."
+    },
+    {
+      "id": "repos",
+      "text": "Au repos, un ressort repousse la barre. Le pêne reste sorti : la porte tient. Mais là, toute la foule pèse dessus. Et le pêne se *coince* dans la gâche.",
+      "vo": "[warm, conversational] Au repos, un ressort repousse la barre. Le pêne reste sorti : la porte tient. Mais là, toute la foule pèse dessus. Et le pêne se coince dans la gâche.",
+      "voAlt": [
+        "[curious] Au repos, un ressort repousse la barre. Le pêne reste sorti : la porte tient. Mais là, toute la foule pèse dessus. Et le pêne se coince dans la gâche."
+      ],
+      "voir": "Le ressort se détend et remonte la barre, le pêne sort et entre dans la gâche ; puis les flèches de charge (signal) arrivent sur le battant, la porte se plaque, le pêne serré contre la gâche vire au rouge."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : cette porte *fermée*, on la pousse.",
+      "vo": "[tense] Abonne-toi : cette porte fermée, on la pousse.",
+      "voir": "La caméra déjà en route : recul depuis la gâche vers la porte fermée et la foule derrière, chevrons #rail-seuil."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "[1883|Dix-huit cent quatre-vingt-trois], Sunderland. En bas d'un escalier, une porte. Sans barre. Un *verrou* : un enfant à la fois. [183|Cent quatre-vingt-trois] enfants meurent.",
+      "vo": "[firm, matter-of-fact] Dix-huit cent quatre-vingt-trois, Sunderland. En bas d'un escalier, une porte. Sans barre. Un verrou : un enfant à la fois. Cent quatre-vingt-trois enfants meurent.",
+      "voir": "Reconstitution aux rayons X, vue du haut d'un escalier étroit : la cohue de silhouettes sans visage dévale vers une porte en bas ; le verrou plein la bloque, un seul passage entrebâillé ; la masse se tasse sur les marches. Panneau : 183."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "On rejoue, avec la barre. Ta hanche appuie. Le levier s'enfonce. Le pêne sort de la gâche… malgré la foule. La porte bascule *dehors*. Et la salle +respire+.",
+      "vo": "[tense] On rejoue, avec la barre. Ta hanche appuie. Le levier s'enfonce. Le pêne sort de la gâche... malgré la foule. La porte bascule dehors. Et la salle respire.",
+      "voir": "Retour à la porte d'aujourd'hui, en grand : la hanche enfonce la barre, le levier bascule dans le boîtier, le pêne rentre et quitte la gâche malgré les flèches de charge, le battant pivote vers l'extérieur, la foule s'écoule dans la lumière, le chrono s'arrête."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà le secret : une barre anti-panique ne te demande pas ton *calme*. Elle est faite pour la +panique+ : tu pousses, n'importe où.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : une barre anti-panique ne te demande pas ton calme. Elle est faite pour la panique : tu pousses, n'importe où.",
+      "voir": "La barre seule sur son halo : des mains et une hanche fantômes frappent à des endroits différents de sa longueur, à chaque coup le pêne rentre ; le nom du compte s'allume."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et si elle s'ouvre vers toi ? À Sunderland, elle s'ouvrait vers l'intérieur. Contre la foule. En France, au-delà de [50|cinquante] personnes : vers la *sortie*. En +commentaire+ : celle de ton boulot, ton lycée… barre, ou poignée ?",
+      "vo": "[conversational, curious] Et si elle s'ouvre vers toi ? [short pause] À Sunderland, elle s'ouvrait vers l'intérieur. Contre la foule. En France, au-delà de cinquante personnes : vers la sortie. [short pause] En commentaire : celle de ton boulot, ton lycée... barre, ou poignée ?",
+      "voAlt": [
+        "[curious] Et si elle s'ouvre vers toi ? [short pause] À Sunderland, elle s'ouvrait vers l'intérieur. Contre la foule. En France, au-delà de cinquante personnes : vers la sortie. [short pause] En commentaire : celle de ton boulot, ton lycée... barre, ou poignée ?"
+      ],
+      "voir": "Retour à la porte de 1883 vue de dessus : son arc d'ouverture côté escalier, la foule la plaque dans son cadre ; raccord sur la porte d'aujourd'hui qui s'ouvre vers la sortie ; puis deux plaques côte à côte, barre / poignée."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour quelqu'un qui ouvre une salle au *public*.",
+      "vo": "[warm, conversational] Like : [short pause] pour quelqu'un qui ouvre une salle au public.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour quelqu'un qui ouvre une salle au public."
+      ],
+      "voir": "La porte de secours d'aujourd'hui, fermée, barre au repos sous le pictogramme de sortie allumé ; chevrons vers le like."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : la porte d'avion. En plein vol, personne ne peut l'*ouvrir*.",
+      "vo": "[serious] Prochain dossier : la porte d'avion. En plein vol, personne ne peut l'ouvrir.",
+      "voir": "Raccord porte sur porte : une porte d'avion vue de la cabine, la poignée qu'une main tire et qui ne bouge pas ; panneau « S'abonner pour l'ouvrir »."
+    },
+    {
+      "id": "boucle",
+      "text": "Pas comme la tienne, le jour où…",
+      "vo": "[calm] Pas comme la tienne, le jour où,",
+      "voir": "Retour vers la première image : contre-plongée, la porte de secours fermée, la foule qui déferle — identique à l'image 1."
+    }
+  ],
+  "cues": {
+    "foule0": "accroche:foule",
+    "choc": "accroche:fermée",
+    "sauve": "accroche:sauve",
+    "libere": "promesse:libérer",
+    "appuyee": "promesse:appuyée",
+    "dessus1": "promesse:dessus",
+    "sauf": "promesse:sauf",
+    "verstoi": "promesse:vers",
+    "toscene": "scene-0.12",
+    "salle1": "scene:salle",
+    "pousse1": "scene:pousse",
+    "poitrine": "scene:poitrine",
+    "metal": "scene:métal",
+    "bras": "scene:bras",
+    "bloques": "scene:bloqués",
+    "hanche1": "scene:hanche",
+    "barre1": "scene:barre",
+    "alors": "ouvre:alors",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "sous": "eclate:sous",
+    "barre2": "eclate:barre",
+    "moitie": "eclate:moitié",
+    "porte2": "eclate:porte",
+    "levier": "eclate:levier",
+    "bout": "eclate:bout",
+    "boitier": "eclate:boîtier",
+    "dedans": "eclate:dedans",
+    "pene1": "eclate:pêne",
+    "plante": "eclate:planté",
+    "gache1": "eclate:gâche",
+    "cadre": "eclate:cadre",
+    "torepos": "repos-0.12",
+    "ressort": "repos:ressort",
+    "repousse": "repos:repousse",
+    "pene2": "repos:pêne",
+    "sorti": "repos:sorti",
+    "tient": "repos:tient",
+    "mais": "repos:mais",
+    "foule2": "repos:foule",
+    "pese": "repos:pèse",
+    "coince": "repos:coince",
+    "gache2": "repos:gâche",
+    "toseuil": "seuil-0.12",
+    "abonne": "seuil:abonne",
+    "pousse2": "seuil:pousse",
+    "tozero": "zero-0.12",
+    "sunderland": "zero:sunderland",
+    "escalier": "zero:escalier",
+    "porte3": "zero:porte",
+    "sans": "zero:sans",
+    "verrou": "zero:verrou",
+    "enfant": "zero:enfant",
+    "n183": "zero:183",
+    "meurent": "zero:meurent",
+    "torejoue": "reponse-0.12",
+    "rejoue": "reponse:rejoue",
+    "hanche2": "reponse:hanche",
+    "appuie": "reponse:appuie",
+    "levier2": "reponse:levier",
+    "enfonce": "reponse:s'enfonce",
+    "trigger": "reponse:sort-0.05",
+    "malgre": "reponse:malgré",
+    "bascule": "reponse:bascule",
+    "dehors": "reponse:dehors",
+    "respire": "reponse:respire",
+    "toverdict": "chute-0.12",
+    "secret": "chute:secret",
+    "calme": "chute:calme",
+    "verdict": "chute:panique#2",
+    "pousses": "chute:pousses",
+    "nimporte": "chute:n'importe",
+    "tocta": "comment-0.12",
+    "verstoi2": "comment:vers",
+    "sunder2": "comment:sunderland",
+    "interieur": "comment:l'intérieur",
+    "contre": "comment:contre",
+    "france": "comment:france",
+    "n50": "comment:50",
+    "sortie": "comment:sortie",
+    "commentaire": "comment:commentaire",
+    "boulot": "comment:boulot",
+    "duelA": "comment:barre",
+    "duelB": "comment:poignée",
+    "public": "like:public",
+    "toabo": "abo-0.12",
+    "dossier": "abo:dossier",
+    "avion": "abo:d'avion",
+    "vol": "abo:vol",
+    "personne": "abo:personne",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:jour",
+    "pene3": "reponse:pêne-0.3"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "respire",
+          0.5
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "choc+0.36",
+      "gain": -14,
+      "pitch": 0.85
+    },
+    {
+      "type": "blip",
+      "at": "promesse-0.48",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "impact",
+      "at": "sauf-0.52",
+      "gain": -15,
+      "size": 1
+    },
+    {
+      "type": "swish",
+      "at": "toscene-0.4",
+      "dur": 0.4,
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "poitrine-0.48",
+      "gain": -16,
+      "size": 0.9
+    },
+    {
+      "type": "click",
+      "at": "bras-0.4",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "barre1+0.3",
+      "gain": -15,
+      "pitch": 1
+    },
+    {
+      "type": "suck",
+      "to": "alors-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "alors",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "sous-0.85",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "bout-0.48",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "dedans-0.42",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "plante-0.32",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "torepos-0.5",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "pene2-0.32",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "mais-0.46",
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "coince-1",
+      "gain": -15,
+      "size": 1
+    },
+    {
+      "type": "hit",
+      "at": "toseuil-0.25",
+      "gain": -15,
+      "pitch": 0.8
+    },
+    {
+      "type": "swish",
+      "at": "abonne+0.6",
+      "dur": 0.28,
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "click",
+      "at": "sans-0.2",
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "verrou+0.3",
+      "gain": -14,
+      "size": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "n183-0.14",
+      "gain": -16,
+      "pitch": 0.7
+    },
+    {
+      "type": "hit",
+      "at": "torejoue",
+      "gain": -14,
+      "pitch": 0.9
+    },
+    {
+      "type": "swish",
+      "at": "hanche2-0.38",
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "levier2-0.3",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "pene3",
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "malgre-0.22",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "impact",
+      "at": "dehors+0.36",
+      "gain": -12,
+      "size": 1.3
+    },
+    {
+      "type": "blip",
+      "at": "verdict+0.28",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "click",
+      "at": "sortie+0.3",
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "toabo",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "vol+0.28",
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

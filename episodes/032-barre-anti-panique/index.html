@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · 032 · Barre anti-panique</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
+         kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+
+      /* rien de ceci n'est à l'écran tant qu'un acte ne l'a pas fait entrer */
+      .chip--live, #retitle, #net, #next, #duel, .rail { opacity: 0; }
+
+      /* le second compteur de l'en-tête : l'état de la porte (main.js fixe sa couleur et son texte) */
+      #hud-count { color: var(--signal); }
+
+      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
+      #chip-1883 { color: var(--ink); }
+      #chip-libre, #chip-50 { color: var(--veille); }
+
+      /* la chute, puis les trois appels à l'action */
+      #retitle-main { font-size: 104px; }
+      #retitle-slot { height: 104px; }
+      #retitle-strike { top: 50px; }
+      #next-fact span { font-size: 36px; line-height: 1.2; letter-spacing: 0.06em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="88.8" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 032</span></div>
+        <div class="hud__title" id="hud-title">Barre anti-panique</div>
+        <!-- le chrono de l'histoire (illustratif, main.js) ; en 1883 : la date -->
+        <div class="hud__clock" id="hud-clock">T+0,0 s</div>
+        <!-- l'état de la porte, lu dans la scène (main.js) : Fermée · Libre · Ouverte · Verrou -->
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Porte</span><b id="hud-count-v">Fermée</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- 01 · MENACE (acte1.js) : l'en-tête porte tout (le chrono, la porte fermée) ; aucune étiquette -->
+
+      <!-- 02 · AUTOPSIE (acte2.js) : les pièces se nomment avec co.add, sans chiffre (« Barre-levier », « Pivot »,
+           « Boîtier », « Pêne », « Gâche », « Ressort de rappel ») ; une seule étiquette à la fois -->
+      <!-- « se coince » : la foule plaque le pêne contre la gâche (contre-vérification : jamais « bloqué pour toujours ») -->
+      <div id="chip-coince" class="chip chip--live"><span>Sous la foule</span><b>Le pêne coince</b></div>
+
+      <!-- le seuil (fin d'acte2.js) : la demande d'abonnement dite à la porte de l'acte 3 — des chevrons, jamais un panneau -->
+      <div id="rail-seuil" class="rail"><i></i><i></i><i></i></div>
+
+      <!-- 03 · RÉPONSE (acte3.js) : une seule étiquette à la fois dans la zone haute -->
+      <!-- Victoria Hall, 16 juin 1883 : Wikipédia, Univ. Sunderland (sources) ; aucun total d'enfants présents -->
+      <div id="chip-1883" class="chip chip--live"><span>Sunderland · 1883</span><b>Victoria Hall</b></div>
+      <div id="chip-183" class="chip chip--live"><span>Écrasés dans l'escalier</span><b>183 enfants</b></div>
+      <div id="chip-libre" class="chip chip--live"><span>Malgré la foule</span><b>Le pêne sort</b></div>
+
+      <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Elle est faite pour</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">Le calme<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">La panique</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- ce que le film doit encore (fin.js) : 1883 s'ouvrait vers l'intérieur ; la règle française (CO 45, arrêté du
+           25 juin 1980 : plus de cinquante personnes, sens de la sortie — la loi n'impose PAS la barre : ne jamais l'écrire) -->
+      <div id="chip-50" class="chip chip--live"><span>Au-delà de 50 personnes</span><b>Vers la sortie</b></div>
+      <!-- la question du commentaire en deux réponses (duelCall) : chacune s'allume quand la voix la dit, le film ne répond pas -->
+      <div id="duel">
+        <div class="kicker">Ta porte de secours, au boulot, au lycée</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">Barre</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Poignée</span></div>
+        <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
+      </div>
+
+      <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 personne</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <!-- le prochain dossier, en tout dernier : un seul fait, celui que dit la voix ; aucun chiffre, ni pression ni
+           tonnes (c'est la chute du 033) — « en plein vol » vaut à l'altitude de croisière (contre-vérification) -->
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 033</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <div id="next-fact"><span>La porte d'avion. En plein vol, personne ne peut l'ouvrir.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
