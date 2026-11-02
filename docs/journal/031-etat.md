@@ -1,0 +1,11 @@
+# 031 — TCAS : état du dossier (tenu par celui qui orchestre)
+
+- 30/10 · faits (sonnet) → `docs/faits/031-tcas.md` ; script (scénariste) ; B de l'accroche réécrit par le chef (« Une seule réponse te garde en vie ») ; contre-vérif : 3 remplacements appliqués (« dont cinq », « la règle est claire », « porte bloquée ») + annonce « la barre anti-panique » + boucle « Mais ce soir, là-haut, ».
+- Voix : une prise, turbo, 415 crédits facturés (devis 944), 93,0 s. Verdict de l'outil : MÊME TON PARTOUT (laissé à l'oreille de Merwan, comme 021-030) ; « comment » : question qui tombe.
+- Architecte, décors `tcas.js` et `cockpit.js` faits ; « À changer ailleurs » appliqués (VIEW établi, RIG, shoulder, stick, W sans allocation). Décorateur sauté (ciel/nuages du 023 déjà habillés ; jauge partagée).
+- Première image : candidate B (derrière ta dérive) → POSE0, gap 250, cores 1.
+- Actes : acte1 et acte2 montés ; `#orders` positionné dans index.html ; acte2 coupe avec crew 0 puis le rend (raccord). Relecture r1/r2 : l'éclaté de 23,5 s petit (à retoucher si temps).
+- EN FILE : acte3 + fin, à la remise à zéro (20 h 04 locale, réveil programmé). Puis relecture, check, brouillon, qa, retouches, rendu, qa, cover, posts.
+- 30/10 soir (après la remise à zéro) · acte3 (240 k) et fin (263 k) montés ; boucle : horloge du ciel décalée sur la coupe `toloop` (world.js) → anneau et feu en phase avec l'image 0. Brouillon 1 : 2 images parasites (19,50 · 22,03), plage lente 14-19, swish sur « pare-brise ». Retoucheurs acte1 (159 k) et acte2 (156 k) ; swish → `scene:il-0.24`. Brouillon 2 et rendu : `qa` vert (voix calée 0 ms, −14,05 LUFS, aucune parasite, aucune plage lente, aucun son sur un mot).
+- Livré : `renders/031-tcas.mp4` (93,5 s), `-iphone.mp4` (29 Mio), `-couverture.png` (éclaté entier, l'anneau entre les deux antennes), posts écrits. Non publié.
+- Reste faible : première demi-seconde mesurée à 1,7 (l'autre avion loin ; l'image 0 est figée par la boucle) ; éclaté de 23,5 large (≈ 77 % de la largeur) mais petites pièces ; coordination 48,0-48,7 (la tête file dans l'axe) ; cabine du like chargée ; calculateur flou au bord du PANEL 33,4-40. Voix : MÊME TON PARTOUT + « comment » question qui tombe → à l'oreille de Merwan. Décorateur sauté.
