@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · 033 · Porte d'avion</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
+         kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+
+      /* le second compteur de l'en-tête (.hud__count est signal par défaut) */
+      #hud-count { color: var(--ink); }
+      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
+      #chip-toi { color: var(--ink); }
+      #chip-coree { color: var(--signal); }
+      #chip-butees { color: var(--veille); }
+      #chip-hypothese { color: var(--signal); }
+      #chip-charge { color: var(--veille); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="86.133" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 033</span></div>
+        <div class="hud__title" id="hud-title">Porte d'avion</div>
+        <div class="hud__clock" id="hud-clock">11 300 m</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Sur la porte</span><b id="hud-count-v">≈ 8 t</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- 01 · MENACE (acte1.js) -->
+      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <!-- « en Corée, un passager en a ouvert une » : l'image est une reconstitution, l'étiquette le dit -->
+      <div id="chip-coree" class="chip chip--live"><span>Reconstitution</span><b>Corée · mai 2023</b></div>
+
+      <!-- 02 · AUTOPSIE (acte2.js) -->
+      <div id="chip-butees" class="chip chip--live"><span>Le cœur</span><b>Les butées</b></div>
+
+      <!-- le seuil (fin d'acte2.js) : la demande d'abonnement dite à la porte de l'acte 3 — des chevrons, jamais un panneau -->
+      <div id="rail-seuil" class="rail"><i></i><i></i><i></i></div>
+
+      <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
+      <!-- « mettons que tous les verrous lâchent » : une hypothèse (contre-vérification), l'image reconstitue -->
+      <div id="chip-hypothese" class="chip chip--live"><span>Hypothèse</span><b>Verrous lâchés</b></div>
+      <!-- « Les butées encaissent. La poignée, presque rien. » -->
+      <div id="chip-charge" class="chip chip--live"><span>La charge</span><b>Sur les butées</b></div>
+
+      <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Là-haut, ce qui ferme ta porte</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">Un verrou<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">L'air</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 personne</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 034</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
+        <div id="next-fact"><span>Presque deux ans au fond de l'Atlantique.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+
+      <!-- la question du commentaire posée en DEUX réponses (duelCall, fin.js) : chacune s'allume quand la voix la dit, le film ne
+           répond jamais à la place du spectateur — prendre parti fait commenter. Une question fermée à deux issues seulement. -->
+      <div id="duel">
+        <div class="kicker">La place près de la porte ?</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">Je la prends</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Jamais</span></div>
+        <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
+      </div>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

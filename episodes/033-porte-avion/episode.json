@@ -1,0 +1,494 @@
+{
+  "id": "033",
+  "serie": "dossier",
+  "slug": "porte-avion",
+  "title": "Porte d'avion",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Porte",
+      "d'avion"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 100,
+      "tz": 30,
+      "d": 700,
+      "az": -38,
+      "el": 28,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    },
+    "state": {
+      "explode": 1,
+      "stops": 1
+    }
+  },
+  "post": {
+    "keyword": "Porte d'avion",
+    "caption": "Porte d'avion, la porte de cabine en vol : ton voisin la force à plus de dix kilomètres du sol, et elle ne bouge pas. En croisière, personne ne peut l'ouvrir. Pourtant, en Corée, un passager en a ouvert une. Toi, la place près de la porte : tu la prends… ou jamais ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#avion",
+      "#aviation",
+      "#securite"
+    ],
+    "pinned": "Réponds juste : « je la prends » ou « jamais ». En croisière, elle ne s'ouvre pas : c'est à l'atterrissage que tout se joue.",
+    "instagram": {
+      "caption": "Ton voisin force la porte, en plein vol. Elle ne bouge pas.\n\nDossier 033 : la porte d'avion. Une poignée, des crochets de verrouillage… et autour, des butées. En croisière, personne ne peut l'ouvrir, même en le voulant. Pourtant, en Corée, un passager en a ouvert une.\n\nEt toi, la place près de la porte : tu la prends… ou jamais ?",
+      "hashtags": [
+        "#avion",
+        "#aviation",
+        "#securite",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ton voisin force la porte de l'avion en plein vol… et elle ne bouge pas",
+      "description": "Dossier 033 — la porte d'avion ouverte : poignée, crochets de verrouillage, cadre, butées. Pourquoi, en croisière, personne ne peut l'ouvrir… et pourquoi un passager en a ouvert une en Corée, à l'approche.\n\nEt toi, la place près de la porte : tu la prends… ou jamais ?",
+      "hashtags": [
+        "#shorts",
+        "#avion",
+        "#aviation",
+        "#securite",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits, niveaux de source et « à ne pas dire » : docs/faits/033-porte-avion.md (recherche du 2026-10-30).",
+    "La scène est un scénario : des passagers ont tenté d'ouvrir une porte en croisière, maîtrisés, porte restée fermée (articles de presse relevés en recherche, aucune compagnie nommée) [S].",
+    "Une porte de cabine pressurisée est de type bouchon : plus grande que son ouverture, elle s'appuie de l'intérieur sur des butées (stop fittings sur stop pads) — Wikipedia « Plug door », brevets, NTSB AIR-25-04 [S/P].",
+    "Poignée intérieure et crochets de verrouillage sur arbre : extraits de formation A318/A330 [S].",
+    "Altitude cabine ≤ 8 000 ft en fonctionnement normal : 14 CFR 25.841, NTSB [P] ; cabine ≈ 75 kPa contre ≈ 21 kPa dehors au FL370 (≈ 11,3 km, d'où « plus de dix kilomètres »), soit « trois fois plus » d'air dedans : calcul maison [O].",
+    "Environ huit tonnes sur la porte en croisière : ≈ 55 kPa × ≈ 1,5 m² (porte A320 ≈ 1,85 × 0,81 m, [S/O]) ≈ 82 kN ≈ 8,4 tonnes-force : calcul maison [O], dit « environ ».",
+    "Les butées encaissent, les verrous et la poignée presque rien en croisière ; plus l'avion monte, plus la porte est fermée ; à l'atterrissage le différentiel tombe vers zéro (soupape de sortie, principe général) : dossier de faits § 6 et § 11 [S/O].",
+    "Asiana OZ8124, A321, Jeju → Daegu, 26 mai 2023 : un passager actionne le levier d'une sortie juste avant l'atterrissage, la porte s'ouvre à environ 200 m ; constat intermédiaire du ministère coréen (MOLIT) : la porte peut s'ouvrir quand la différence de pression est faible — Asiana, UPI, Asiae, Wikipedia [S] ; rapport final ARAIB non lu.",
+    "Annonce du 034 : la boîte noire d'AF447 a attendu deux ans au fond de l'Atlantique — BEA : épave trouvée le 2 avril 2011 par 3 900 m, enregistreurs remontés les 2 et 3 mai 2011, ≈ 23 mois après l'accident du 1er juin 2009 [P] (fait fourni par la session du 034).",
+    "L'image reconstitue : le retrait des crochets (« mettons que tous les verrous lâchent » est une hypothèse), le mouvement de la porte qui quitte ses butées et s'ouvre ; la cinématique exacte de la porte A320 n'est pas sourcée et la voix ne la décrit pas.",
+    "L'image reconstitue aussi : l'avion de verre (l'A330 du 023) et sa cabine (celle du L03), sans compagnie ni type affirmé ; les flèches d'air, en nombre proportionnel à la pression de chaque côté (atmosphère type, cabine à 8 000 ft en croisière, FL370 ≈ 11 300 m) ; « Sur la porte » dans l'en-tête est ce même calcul (≈ 8 t en croisière) [O].",
+    "Butées : douze à l'image (six par bord, comme les stop fittings du 737-9, NTSB AIR-25-04) ; le nombre réel sur une porte A320/A330 n'est pas sourcé et n'est ni dit ni écrit."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ton voisin force la *porte*, en plein vol. Elle ne bouge +pas+.",
+      "vo": "[tense] Ton voisin force la porte, en plein vol. Elle ne bouge pas.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ton voisin force la porte, en plein vol. Elle ne bouge pas."
+      ],
+      "voir": "Cabine aux rayons X (L03), contre-plongée au ras du plancher contre la porte 1L : la main d'un passager agrippe la poignée et tire, le corps penché en arrière dès l'image 1 ; derrière la coque de verre, la nuit et les nuages très loin dessous ; la porte, pleine et éclairée sur son halo, ne bouge pas d'un millimètre."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "En croisière, personne ne peut l'ouvrir. Même en le voulant. Alors pourquoi, en Corée, un passager en a *ouvert* une ?",
+      "vo": "[firm, matter-of-fact] En croisière, personne ne peut l'ouvrir. Même en le voulant. [short pause] Alors pourquoi, en Corée, un passager en a ouvert une ?",
+      "voir": "Recul par la coque : l'A330 de nuit en vol (023), de trois quarts bas, la porte 1L allumée en veille sur son flanc ; sur « Corée », raccord sur la même porte qui s'entrouvre en signal sur un avion bas, feux de piste au loin (reconstitution), et on reste sur la question."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Il y met tout son poids. Dehors, plus de dix kilomètres d'*altitude*. Toi, tu es juste à côté. Tu l'arrêtes… ou tu fais confiance à cette +porte+ ?",
+      "vo": "[tense] Il y met tout son poids. Dehors, plus de dix kilomètres d'altitude. Toi, tu es juste à côté. Tu l'arrêtes... ou tu fais confiance à cette porte ?",
+      "voir": "Même seconde : le voisin arc-bouté sur la poignée ; la caméra plonge à travers le plancher de verre, dix kilomètres de nuit jusqu'aux lumières du sol (chrono à l'écran) ; remontée sur ton siège juste à côté, puis gros plan sur le bord de la porte, ce que « on l'ouvre » va ouvrir."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "La porte sort de son cadre et passe sur le banc, sur son halo ; elle s'éclate sur « on »."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Côté cabine : une poignée, des crochets de verrouillage. Mais la porte est plus grande que son *cadre*. Elle s'appuie, de l'intérieur… sur des +butées+.",
+      "vo": "[conversational, curious] Côté cabine : une poignée, des crochets de verrouillage. Mais la porte est plus grande que son cadre. Elle s'appuie, de l'intérieur... sur des butées.",
+      "voAlt": [
+        "[curious] Côté cabine : une poignée, des crochets de verrouillage. Mais la porte est plus grande que son cadre. Elle s'appuie, de l'intérieur... sur des butées."
+      ],
+      "voir": "Vue éclatée de trois quarts, on suit la pièce qui agit : la poignée intérieure, puis les crochets sur leur arbre ; le panneau de porte se pose sur le cadre du fuselage et le déborde (contour du cadre en ink, débord en veille) ; on isole le cœur : les butées de la porte appuyées sur celles du cadre, allumées en veille."
+    },
+    {
+      "id": "repos",
+      "text": "Au sol, l'air pousse pareil des deux côtés. L'avion monte : dehors, l'air s'amincit. Dedans, on en garde trois fois plus. Et ton voisin force *toujours*.",
+      "vo": "[warm, conversational] Au sol, l'air pousse pareil des deux côtés. L'avion monte : dehors, l'air s'amincit. Dedans, on en garde trois fois plus. [short pause] Et ton voisin force toujours.",
+      "voAlt": [
+        "[curious] Au sol, l'air pousse pareil des deux côtés. L'avion monte : dehors, l'air s'amincit. Dedans, on en garde trois fois plus. [short pause] Et ton voisin force toujours."
+      ],
+      "voir": "La porte refermée, vue en coupe : au sol, autant de flèches d'air de chaque côté ; l'avion grimpe (altimètre dans l'en-tête), les flèches du dehors se raréfient et pâlissent, celles du dedans restent serrées, trois fois plus nombreuses ; dernier plan, retour sur la main du voisin qui tire."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : on rejoue la scène… et on regarde la *porte*.",
+      "vo": "[tense] Abonne-toi : on rejoue la scène... et on regarde la porte.",
+      "voir": "Sans arrêt : la caméra file déjà dans l'allée vers la porte 1L et le voisin, chevrons #rail-seuil."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Ton voisin force la poignée. Et mettons que tous les verrous *lâchent*. Plus rien ne retient la porte.",
+      "vo": "[firm, matter-of-fact] Ton voisin force la poignée. Et mettons que tous les verrous lâchent. Plus rien ne retient la porte.",
+      "voir": "Chrono repris : gros plan sur la poignée forcée ; dans la porte aux rayons X, les crochets se retirent un à un en signal (hypothèse, reconstitution) ; la porte est libre dans son cadre, la nuit derrière."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Elle ne bouge pas. L'air de ta cabine pousse vers la nuit. Il la plaque sur ses butées : environ huit *tonnes*. Les butées encaissent. La poignée, presque +rien+.",
+      "vo": "[tense] Elle ne bouge pas. L'air de ta cabine pousse vers la nuit. Il la plaque sur ses butées : environ huit tonnes. Les butées encaissent. La poignée, presque rien.",
+      "voir": "Le climax en grand : un mur de flèches d'air jaillit de toute la cabine et frappe la porte, qui s'écrase vers l'extérieur sur ses butées ; les butées s'allument en veille et vibrent sous la charge, « ≈ 8 t » dans l'en-tête ; recul : la main du voisin, minuscule flèche contre le mur d'air, la porte ne bouge pas."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : là-haut, ce n'est *pas* un verrou qui ferme ta porte. C'est +l'air+. Plus tu montes… plus elle est fermée.",
+      "vo": "[firm, matter-of-fact] Voilà son secret : là-haut, ce n'est pas un verrou qui ferme ta porte. C'est l'air. Plus tu montes... plus elle est fermée.",
+      "voir": "L'A330 vu de l'extérieur, porte 1L de trois quarts : l'avion grimpe, les flèches d'air dedans épaississent et la porte s'enfonce un peu plus sur ses butées ; le nom du compte s'allume en vert."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et la Corée ? L'avion se posait. À environ [200|deux cents] mètres, presque plus rien ne plaquait la porte : le levier a suffi. En +commentaire+ : la place près de la porte… tu la prends, ou *jamais* ?",
+      "vo": "[conversational, curious] Et la Corée ? [short pause] L'avion se posait. À environ deux cents mètres, presque plus rien ne plaquait la porte : le levier a suffi. [short pause] En commentaire : la place près de la porte... tu la prends, ou jamais ?",
+      "voAlt": [
+        "[curious] Et la Corée ? [short pause] L'avion se posait. À environ deux cents mètres, presque plus rien ne plaquait la porte : le levier a suffi. [short pause] En commentaire : la place près de la porte... tu la prends, ou jamais ?"
+      ],
+      "voir": "L'avion en approche de nuit, piste en vue, altimètre qui descend vers deux cents mètres ; les flèches d'air de la cabine s'éteignent une à une ; un passager assis tend la main vers le levier, la porte quitte ses butées et s'ouvre en signal (reconstitution) ; puis le siège près de la porte, et les deux réponses."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour quelqu'un qui n'ose pas s'asseoir près de cette *porte*.",
+      "vo": "[warm, conversational] Like : [short pause] pour quelqu'un qui n'ose pas s'asseoir près de cette porte.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour quelqu'un qui n'ose pas s'asseoir près de cette porte."
+      ],
+      "voir": "En croisière à nouveau, la porte 1L plaquée sur ses butées, flèches denses ; une main sur l'accoudoir du siège voisin se desserre."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : la boîte noire. Elle a attendu presque deux ans au fond de l'*Atlantique*.",
+      "vo": "[serious] Prochain dossier : la boîte noire. Elle a attendu presque deux ans au fond de l'Atlantique.",
+      "voir": "Panneau du dossier 034 : sous la queue de l'A330 aux rayons X, l'enregistreur se détache, plein, et descend dans le noir jusqu'au fond de l'océan, où il se pose sur son halo."
+    },
+    {
+      "id": "boucle",
+      "text": "Deux ans… depuis le jour où…",
+      "vo": "[calm] Deux ans... depuis le jour où,",
+      "voir": "Remontée du fond vers la cabine : la caméra redescend au ras du plancher jusqu'à la première image, la main du voisin sur la poignée."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:porte",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:plaque-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:jour",
+    "toseuil": "seuil-0.12",
+    "coree": "promesse:Corée",
+    "ouvert": "promesse:ouvert",
+    "poids": "scene:poids",
+    "dehors": "scene:Dehors",
+    "dix": "scene:dix",
+    "toi": "scene:Toi",
+    "confiance": "scene:confiance",
+    "scenePorte": "scene:porte",
+    "poignee": "eclate:poignée",
+    "crochets": "eclate:crochets",
+    "cadre": "eclate:cadre",
+    "appuie": "eclate:s'appuie",
+    "interieur": "eclate:l'intérieur",
+    "butees": "eclate:butées",
+    "sol": "repos:sol",
+    "monte": "repos:monte",
+    "amincit": "repos:s'amincit",
+    "dedans": "repos:Dedans",
+    "trois": "repos:trois",
+    "encore": "repos:Et",
+    "rejoue": "seuil:rejoue",
+    "regarde": "seuil:regarde",
+    "forcePoignee": "zero:poignée",
+    "verrous": "zero:verrous",
+    "lachent": "zero:lâchent",
+    "retient": "zero:retient",
+    "bouge": "reponse:bouge",
+    "airCabine": "reponse:l'air",
+    "nuit": "reponse:nuit",
+    "slam": "reponse:Il-0.18",
+    "tonnes": "reponse:tonnes",
+    "encaissent": "reponse:encaissent",
+    "poigneeRien": "reponse:poignée",
+    "presque": "reponse:presque",
+    "secret": "chute:secret",
+    "verrou": "chute:verrou",
+    "cestAir": "chute:l'air",
+    "montes": "chute:montes",
+    "fermee": "chute:fermée",
+    "posait": "comment:posait",
+    "metres": "comment:mètres",
+    "levier": "comment:levier",
+    "suffi": "comment:suffi",
+    "commentaire": "comment:commentaire",
+    "place": "comment:place",
+    "prends": "comment:prends",
+    "jamais": "comment:jamais",
+    "prochain": "abo:Prochain",
+    "noire": "abo:noire",
+    "attendu": "abo:attendu",
+    "fond": "abo:fond"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "accroche:en-0.18",
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "accroche$+0.06",
+      "gain": -17,
+      "size": 0.6
+    },
+    {
+      "type": "hit",
+      "at": "promesse:un-0.2",
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "scene-0.35",
+      "gain": -16,
+      "size": 0.9
+    },
+    {
+      "type": "swish",
+      "at": "scene:Dehors-0.4",
+      "dur": 0.3,
+      "gain": -16
+    },
+    {
+      "type": "swish",
+      "at": "scene:Toi-0.2",
+      "dur": 0.28,
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "scene:ou-0.36",
+      "gain": -17
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "ouvre:on-0.06",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "ouvre:on-0.2",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "eclate:poignée+0.42",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "eclate:verrouillage+0.52",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "eclate:cadre+0.28",
+      "gain": -16
+    },
+    {
+      "type": "blip",
+      "at": "eclate$+0.06",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "swish",
+      "at": "repos:monte+0.48",
+      "dur": 0.36,
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "repos:plus+0.28",
+      "gain": -16
+    },
+    {
+      "type": "swish",
+      "at": "seuil-0.38",
+      "dur": 0.3,
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "click",
+      "at": "zero:Plus-0.3",
+      "gain": -15
+    },
+    {
+      "type": "click",
+      "at": "zero:Plus-0.22",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "zero:Plus-0.14",
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "slam",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "hit",
+      "at": "reponse:Les-0.3",
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "toverdict",
+      "gain": -15,
+      "size": 1
+    },
+    {
+      "type": "blip",
+      "at": "chute:C'est-0.28",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "swish",
+      "at": "comment-0.5",
+      "dur": 0.3,
+      "gain": -18
+    },
+    {
+      "type": "impact",
+      "at": "comment:suffi+0.36",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "click",
+      "at": "like:pour-0.4",
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "abo:noire+0.38",
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "boucle$+0.02",
+      "dur": 0.6,
+      "gain": -21
+    }
+  ]
+}
