@@ -997,6 +997,25 @@
     },
     "kit/lib/timing.js": {
       "cat": "ignore"
+    },
+    "episodes/035-passage-a-niveau/src/model.js": {
+      "cat": "systemes",
+      "nom": "Le signal de passage à niveau G2",
+      "quoi": "Mât, croix R24 double face et ses feux rouges, sonnerie, coffret, demi-barrière blanc et rouge rétroréfléchissante qui cède ; buildSignal() → état down give flash ring shine explode sweep litLamp litBell litBar litBoom bench, quatre instances aux géométries partagées.",
+      "forces": "vue éclatée lisible, feux R24 nets.",
+      "defauts": "ne jamais filmer le geste de la barrière de côté (az ≈ 90)."
+    },
+    "episodes/035-passage-a-niveau/src/passage.js": {
+      "cat": "route",
+      "nom": "Le passage à niveau et ses voies",
+      "quoi": "Enveloppe de la route du 025, du TGV du 021 et de la voiture du 011 : deux voies sur 1,2 km (rails qui s'allument devant un train), platelage, caténaire, panneau A7, téléphone du PN et sa pancarte, gens de verre qui sortent, règle des 800 m.",
+      "forces": "rails lisibles au loin ; phares du TGV jamais sous 46 px.",
+      "defauts": "l'insert « un autre train » ne montre que deux points de phares.",
+      "reutilise": [
+        "025/route",
+        "021 TGV",
+        "011/car"
+      ]
     }
   },
   "effetsCopies": [

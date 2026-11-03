@@ -3624,6 +3624,1177 @@
           "hebdo": 16
         }
       ]
+    },
+    "032": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-10-30T14:10:03.783Z",
+          "fin": "2026-10-30T14:14:10.330Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-10-30T14:14:10.330Z",
+          "fin": "2026-10-30T14:24:04.200Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-10-30T14:24:04.200Z",
+          "fin": "2026-10-30T16:25:36.793Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-10-30T16:25:36.793Z",
+          "fin": "2026-10-30T17:09:32.947Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-10-30T17:09:32.947Z",
+          "fin": "2026-10-30T19:04:12.676Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-30T19:04:12.676Z",
+          "fin": "2026-10-30T19:22:55.685Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-10-30T19:22:55.685Z",
+          "fin": "2026-10-30T19:23:37.425Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-30T19:23:37.425Z",
+          "fin": "2026-10-30T19:26:40.516Z"
+        },
+        {
+          "nom": "passe",
+          "debut": "2026-10-30T19:26:40.516Z",
+          "fin": "2026-10-30T19:44:45.976Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-30T19:44:45.976Z",
+          "fin": "2026-10-30T19:52:05.390Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "autre",
+          "jetons": 166392
+        },
+        {
+          "nom": "scenariste",
+          "genre": "autre",
+          "jetons": 180322
+        },
+        {
+          "nom": "contre-verif",
+          "genre": "autre"
+        },
+        {
+          "nom": "voix",
+          "genre": "autre"
+        },
+        {
+          "nom": "architecte",
+          "genre": "autre",
+          "jetons": 353295
+        },
+        {
+          "nom": "decor-model",
+          "genre": "autre",
+          "jetons": 285075
+        },
+        {
+          "nom": "decor-salle",
+          "genre": "autre",
+          "jetons": 289452
+        },
+        {
+          "nom": "decorateur",
+          "genre": "autre",
+          "jetons": 221259
+        },
+        {
+          "nom": "acte1",
+          "genre": "autre",
+          "jetons": 217220
+        },
+        {
+          "nom": "acte2",
+          "genre": "autre",
+          "jetons": 226283
+        },
+        {
+          "nom": "acte3",
+          "genre": "autre",
+          "jetons": 234243
+        },
+        {
+          "nom": "fin",
+          "genre": "autre",
+          "jetons": 229228
+        },
+        {
+          "nom": "retoucheur-acte1",
+          "genre": "autre",
+          "jetons": 143226
+        },
+        {
+          "nom": "retoucheur-acte2",
+          "genre": "autre",
+          "jetons": 155975
+        }
+      ],
+      "jauges": [
+        {
+          "t": "2026-10-30T19:04:13.354Z",
+          "quoi": "",
+          "session": 0,
+          "hebdo": 12
+        },
+        {
+          "t": "2026-10-30T19:52:06.073Z",
+          "quoi": "",
+          "session": 45,
+          "hebdo": 17
+        },
+        {
+          "t": "2026-10-30T19:52:12.630Z",
+          "quoi": "",
+          "session": 39,
+          "hebdo": 17
+        }
+      ]
+    },
+    "033": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-10-30T14:10:06.977Z",
+          "fin": "2026-10-30T14:15:17.186Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-10-30T14:15:17.186Z",
+          "fin": "2026-10-30T14:24:58.902Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-10-30T14:24:58.902Z",
+          "fin": "2026-10-30T16:25:43.355Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-10-30T16:25:43.355Z",
+          "fin": "2026-10-30T17:12:37.162Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-30T17:12:37.162Z",
+          "fin": "2026-10-30T19:04:21.770Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-30T19:04:21.770Z",
+          "fin": "2026-10-30T19:15:01.325Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-10-30T19:15:01.325Z",
+          "fin": "2026-10-30T19:16:57.348Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-30T19:16:57.348Z",
+          "fin": "2026-10-30T19:52:16.718Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-30T19:52:16.718Z",
+          "fin": "2026-10-30T19:57:09.158Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "faits",
+          "modele": "sonnet",
+          "jetons": 168622,
+          "minutes": 4.6,
+          "outils": 39
+        },
+        {
+          "nom": "scenariste",
+          "genre": "scenariste",
+          "modele": "opus",
+          "jetons": 177844,
+          "minutes": 6.1,
+          "outils": 13
+        },
+        {
+          "nom": "contre-verif",
+          "genre": "contre-verif",
+          "modele": "sonnet",
+          "minutes": 2.7,
+          "jetons": 143592,
+          "outils": 12
+        },
+        {
+          "nom": "architecte",
+          "genre": "architecte",
+          "modele": "opus",
+          "jetons": 329994,
+          "minutes": 22.8,
+          "outils": 56,
+          "images": 16
+        },
+        {
+          "nom": "decor-vol",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 265323,
+          "minutes": 15.9,
+          "outils": 49,
+          "images": 32
+        },
+        {
+          "nom": "decor-model",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 295273,
+          "minutes": 22,
+          "outils": 31,
+          "images": 32
+        },
+        {
+          "nom": "acte2",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 216640,
+          "minutes": 9.4,
+          "outils": 38,
+          "images": 26
+        },
+        {
+          "nom": "acte1",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 227506,
+          "minutes": 10.9,
+          "outils": 32,
+          "images": 38
+        },
+        {
+          "nom": "acte3",
+          "genre": "acte",
+          "modele": "opus",
+          "images": 26,
+          "jetons": 229242,
+          "minutes": 9.7,
+          "outils": 36
+        },
+        {
+          "nom": "fin",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 230457,
+          "minutes": 10.1,
+          "outils": 33,
+          "images": 26
+        },
+        {
+          "nom": "retouche-acte2",
+          "genre": "retouche",
+          "modele": "opus",
+          "jetons": 165609,
+          "minutes": 6.3,
+          "outils": 26,
+          "images": 36
+        },
+        {
+          "nom": "retouche-acte1",
+          "genre": "retouche",
+          "modele": "opus",
+          "jetons": 174281,
+          "minutes": 8.2,
+          "outils": 29,
+          "images": 4
+        },
+        {
+          "nom": "retouche-acte3",
+          "genre": "retouche",
+          "modele": "opus",
+          "jetons": 167695,
+          "minutes": 8.9,
+          "outils": 36,
+          "images": 7
+        },
+        {
+          "nom": "retouche-fin",
+          "genre": "retouche",
+          "modele": "opus",
+          "jetons": 173196,
+          "minutes": 11.1,
+          "outils": 31,
+          "images": 7
+        }
+      ],
+      "jauges": [
+        {
+          "t": "2026-10-30T16:49:07.072Z",
+          "quoi": "",
+          "session": 41,
+          "hebdo": 6
+        },
+        {
+          "t": "2026-10-30T17:13:31.081Z",
+          "quoi": "",
+          "session": 68,
+          "hebdo": 10
+        },
+        {
+          "t": "2026-10-30T17:23:13.868Z",
+          "quoi": "",
+          "session": 79,
+          "hebdo": 11
+        },
+        {
+          "t": "2026-10-30T19:04:21.079Z",
+          "quoi": "",
+          "session": 0,
+          "hebdo": 12
+        },
+        {
+          "t": "2026-10-30T19:57:08.481Z",
+          "quoi": "",
+          "session": 30,
+          "hebdo": 16
+        }
+      ]
+    },
+    "031": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-10-30T14:10:09.658Z",
+          "fin": "2026-10-30T14:18:33.828Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-10-30T14:18:33.828Z",
+          "fin": "2026-10-30T16:25:02.147Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-10-30T16:25:02.147Z",
+          "fin": "2026-10-30T16:25:44.413Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-10-30T16:25:44.413Z",
+          "fin": "2026-10-30T17:15:50.199Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-30T17:15:50.199Z",
+          "fin": "2026-10-30T19:04:20.688Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-30T19:04:20.688Z",
+          "fin": "2026-10-30T19:17:31.427Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-10-30T19:17:31.427Z",
+          "fin": "2026-10-30T19:19:03.121Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-30T19:19:03.121Z",
+          "fin": "2026-10-30T19:23:16.769Z"
+        },
+        {
+          "nom": "passe",
+          "debut": "2026-10-30T19:23:16.769Z",
+          "fin": "2026-10-30T19:33:05.102Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-30T19:33:05.102Z",
+          "fin": "2026-10-30T19:45:19.175Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "autre",
+          "jetons": 200000
+        },
+        {
+          "nom": "scenariste",
+          "genre": "autre",
+          "jetons": 182000
+        },
+        {
+          "nom": "contre-verif",
+          "genre": "autre",
+          "jetons": 133000
+        },
+        {
+          "nom": "architecte",
+          "genre": "autre",
+          "jetons": 450000
+        },
+        {
+          "nom": "decor-cockpit",
+          "genre": "autre",
+          "jetons": 300000
+        },
+        {
+          "nom": "decor-tcas",
+          "genre": "autre",
+          "jetons": 350000
+        },
+        {
+          "nom": "acte1",
+          "genre": "autre",
+          "jetons": 350000
+        },
+        {
+          "nom": "acte2",
+          "genre": "autre",
+          "jetons": 240000
+        },
+        {
+          "nom": "acte3",
+          "genre": "autre",
+          "jetons": 240108
+        },
+        {
+          "nom": "fin",
+          "genre": "autre",
+          "jetons": 263168
+        },
+        {
+          "nom": "retouche-acte2",
+          "genre": "autre",
+          "jetons": 156116
+        },
+        {
+          "nom": "retouche-acte1",
+          "genre": "autre",
+          "jetons": 158662
+        }
+      ],
+      "jauges": [
+        {
+          "t": "2026-10-30T19:04:21.374Z",
+          "quoi": "",
+          "session": 0,
+          "hebdo": 12
+        },
+        {
+          "t": "2026-10-30T19:45:37.807Z",
+          "quoi": "",
+          "session": 38,
+          "hebdo": 17
+        }
+      ]
+    },
+    "034": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-10-30T14:10:16.395Z",
+          "fin": "2026-10-30T14:19:14.268Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-10-30T14:19:14.268Z",
+          "fin": "2026-10-30T14:33:17.480Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-10-30T14:33:17.480Z",
+          "fin": "2026-10-30T16:25:43.846Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-10-30T16:25:43.846Z",
+          "fin": "2026-10-30T16:26:07.059Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-10-30T16:26:07.059Z",
+          "fin": "2026-10-30T17:17:09.088Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-30T17:17:09.088Z",
+          "fin": "2026-10-30T19:04:31.378Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-10-30T19:04:31.378Z",
+          "fin": "2026-10-30T19:12:55.951Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-10-30T19:12:55.951Z",
+          "fin": "2026-10-30T19:14:14.733Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-10-30T19:14:14.733Z",
+          "fin": "2026-10-30T19:18:58.256Z"
+        },
+        {
+          "nom": "passe",
+          "debut": "2026-10-30T19:18:58.256Z",
+          "fin": "2026-10-30T19:36:05.251Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-10-30T19:36:05.251Z",
+          "fin": "2026-10-30T19:47:11.466Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "autre",
+          "jetons": 200000
+        },
+        {
+          "nom": "scenariste",
+          "genre": "autre",
+          "jetons": 300000
+        },
+        {
+          "nom": "contre-verif",
+          "genre": "autre",
+          "jetons": 164000
+        },
+        {
+          "nom": "architecte",
+          "genre": "architecte",
+          "modele": "opus",
+          "jetons": 365264,
+          "minutes": 26,
+          "outils": 73,
+          "images": 20
+        },
+        {
+          "nom": "decor-model",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 306505,
+          "minutes": 24,
+          "outils": 38,
+          "images": 40
+        },
+        {
+          "nom": "decor-fond",
+          "genre": "decor",
+          "modele": "opus",
+          "jetons": 270761,
+          "minutes": 16,
+          "outils": 32,
+          "images": 40
+        },
+        {
+          "nom": "acte1",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 239714,
+          "minutes": 10,
+          "outils": 28,
+          "images": 26
+        },
+        {
+          "nom": "acte2",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 216748,
+          "minutes": 8,
+          "outils": 28,
+          "images": 26
+        },
+        {
+          "nom": "chef-de-production",
+          "genre": "autre",
+          "jetons": 160000
+        },
+        {
+          "nom": "acte3",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 226262,
+          "minutes": 8,
+          "outils": 35,
+          "images": 32
+        },
+        {
+          "nom": "fin",
+          "genre": "acte",
+          "modele": "opus",
+          "jetons": 218078,
+          "minutes": 8,
+          "outils": 30,
+          "images": 26
+        },
+        {
+          "nom": "retouche-a",
+          "genre": "retoucheur",
+          "modele": "opus",
+          "jetons": 203099,
+          "minutes": 14,
+          "outils": 34,
+          "images": 12
+        },
+        {
+          "nom": "retouche-b",
+          "genre": "retoucheur",
+          "modele": "opus",
+          "jetons": 179934,
+          "minutes": 9,
+          "outils": 30,
+          "images": 12
+        }
+      ],
+      "jauges": [
+        {
+          "t": "2026-10-30T16:26:13.537Z",
+          "quoi": "",
+          "session": 23,
+          "hebdo": 4
+        },
+        {
+          "t": "2026-10-30T17:18:02.103Z",
+          "quoi": "",
+          "session": 74,
+          "hebdo": 10
+        },
+        {
+          "t": "2026-10-30T17:29:08.162Z",
+          "quoi": "",
+          "session": 83,
+          "hebdo": 12
+        },
+        {
+          "t": "2026-10-30T19:04:30.706Z",
+          "quoi": "",
+          "session": 0,
+          "hebdo": 12
+        },
+        {
+          "t": "2026-10-30T19:47:08.949Z",
+          "quoi": "",
+          "session": 38,
+          "hebdo": 17
+        }
+      ]
+    },
+    "035": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-10-30T14:10:25.419Z",
+          "fin": "2026-10-30T14:16:53.787Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-10-30T14:16:53.787Z",
+          "fin": "2026-11-03T05:02:31.197Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-11-03T05:02:31.197Z",
+          "fin": "2026-11-03T05:02:52.779Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-11-03T05:02:52.779Z",
+          "fin": "2026-11-03T05:49:40.399Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-11-03T05:49:40.399Z",
+          "fin": "2026-11-03T06:05:23.077Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-11-03T06:05:23.077Z",
+          "fin": "2026-11-03T06:07:38.322Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-11-03T06:07:38.322Z",
+          "fin": "2026-11-03T06:14:19.912Z"
+        },
+        {
+          "nom": "passe",
+          "debut": "2026-11-03T06:14:19.912Z",
+          "fin": "2026-11-03T06:25:42.859Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-11-03T06:25:42.859Z",
+          "fin": "2026-11-03T06:31:27.277Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "faits",
+          "modele": "sonnet"
+        },
+        {
+          "nom": "scenariste",
+          "genre": "scenariste",
+          "modele": "opus",
+          "jetons": 182200,
+          "minutes": 7,
+          "outils": 16
+        },
+        {
+          "nom": "contre-verif",
+          "genre": "contre-verif",
+          "modele": "sonnet",
+          "jetons": 137448,
+          "minutes": 2,
+          "outils": 8
+        },
+        {
+          "nom": "architecte",
+          "genre": "architecte",
+          "modele": "session",
+          "jetons": 345192,
+          "minutes": 25,
+          "outils": 56,
+          "images": 12
+        },
+        {
+          "nom": "decor-model",
+          "genre": "decor",
+          "modele": "session",
+          "jetons": 260752,
+          "minutes": 19,
+          "outils": 48,
+          "images": 54
+        },
+        {
+          "nom": "decor-passage",
+          "genre": "decor",
+          "modele": "session",
+          "jetons": 285708,
+          "minutes": 17,
+          "outils": 48,
+          "images": 30
+        },
+        {
+          "nom": "acte1",
+          "genre": "acte",
+          "modele": "session",
+          "jetons": 252598,
+          "minutes": 12,
+          "outils": 35,
+          "images": 32
+        },
+        {
+          "nom": "acte2",
+          "genre": "acte",
+          "modele": "session",
+          "jetons": 232507,
+          "minutes": 9,
+          "outils": 30,
+          "images": 36
+        },
+        {
+          "nom": "acte3",
+          "genre": "acte",
+          "modele": "session",
+          "jetons": 259750,
+          "minutes": 15,
+          "outils": 33,
+          "images": 26
+        },
+        {
+          "nom": "fin",
+          "genre": "acte",
+          "modele": "session",
+          "jetons": 262364,
+          "minutes": 14,
+          "outils": 43,
+          "images": 38
+        },
+        {
+          "nom": "retouche-acte1",
+          "genre": "retoucheur",
+          "modele": "session",
+          "jetons": 157824,
+          "minutes": 5,
+          "outils": 17,
+          "images": 13
+        },
+        {
+          "nom": "retouche-acte2",
+          "genre": "retoucheur",
+          "modele": "session",
+          "jetons": 182317,
+          "minutes": 9,
+          "outils": 25,
+          "images": 7
+        },
+        {
+          "nom": "retouche-acte3",
+          "genre": "retoucheur",
+          "modele": "session",
+          "jetons": 190411,
+          "minutes": 10,
+          "outils": 36,
+          "images": 6
+        }
+      ],
+      "jauges": [
+        {
+          "t": "2026-11-03T05:02:53.503Z",
+          "quoi": "",
+          "session": 3,
+          "hebdo": 27
+        },
+        {
+          "t": "2026-11-03T06:14:19.218Z",
+          "quoi": "",
+          "session": 26,
+          "hebdo": 30
+        },
+        {
+          "t": "2026-11-03T06:31:26.571Z",
+          "quoi": "",
+          "session": 32,
+          "hebdo": 31
+        }
+      ]
+    },
+    "L05": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-11-02T18:01:50.034Z",
+          "fin": "2026-11-02T18:10:35.168Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-11-02T18:10:35.168Z",
+          "fin": "2026-11-02T18:22:12.136Z"
+        },
+        {
+          "nom": "contre-verif",
+          "debut": "2026-11-02T18:22:12.136Z",
+          "fin": "2026-11-02T20:41:03.077Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-11-02T20:41:03.077Z",
+          "fin": "2026-11-02T20:46:56.328Z"
+        },
+        {
+          "nom": "decors",
+          "debut": "2026-11-02T20:46:56.328Z",
+          "fin": "2026-11-02T21:56:58.961Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-11-02T21:56:58.961Z",
+          "fin": "2026-11-02T22:28:27.067Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-11-02T22:28:27.067Z",
+          "fin": "2026-11-02T22:31:23.253Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-11-02T22:31:23.253Z",
+          "fin": "2026-11-02T22:45:29.431Z"
+        },
+        {
+          "nom": "passe",
+          "debut": "2026-11-02T22:45:29.431Z",
+          "fin": "2026-11-02T23:25:13.199Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-11-02T23:25:13.199Z",
+          "fin": "2026-11-02T23:47:51.440Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "autre",
+          "jetons": 230429
+        },
+        {
+          "nom": "contre-verif",
+          "genre": "autre",
+          "jetons": 225800
+        },
+        {
+          "nom": "architecte",
+          "genre": "architecte",
+          "modele": "session",
+          "jetons": 436305,
+          "minutes": 33,
+          "outils": 49,
+          "images": 16
+        },
+        {
+          "nom": "decor-avion",
+          "genre": "decor",
+          "modele": "session",
+          "jetons": 334747,
+          "minutes": 20,
+          "outils": 39,
+          "images": 30
+        },
+        {
+          "nom": "decor-systemes",
+          "genre": "decor",
+          "modele": "session",
+          "jetons": 334646,
+          "minutes": 24,
+          "outils": 49,
+          "images": 30
+        },
+        {
+          "nom": "decor-hudson",
+          "genre": "decor",
+          "modele": "session",
+          "jetons": 328773,
+          "minutes": 24,
+          "outils": 43,
+          "images": 48
+        },
+        {
+          "nom": "decor-carte",
+          "genre": "decor",
+          "modele": "session",
+          "jetons": 311423,
+          "minutes": 21,
+          "outils": 45,
+          "images": 32
+        },
+        {
+          "nom": "decorateur",
+          "genre": "decorateur",
+          "modele": "session",
+          "jetons": 245601,
+          "minutes": 9,
+          "outils": 36,
+          "images": 24
+        },
+        {
+          "nom": "chapitre-c1",
+          "genre": "chapitre",
+          "modele": "session",
+          "jetons": 288168,
+          "minutes": 12,
+          "outils": 39,
+          "images": 40
+        },
+        {
+          "nom": "chapitre-c2",
+          "genre": "chapitre",
+          "modele": "session",
+          "jetons": 277895,
+          "minutes": 12,
+          "outils": 38,
+          "images": 40
+        },
+        {
+          "nom": "chapitre-c3",
+          "genre": "chapitre",
+          "modele": "session",
+          "jetons": 269344,
+          "minutes": 11,
+          "outils": 38,
+          "images": 36
+        },
+        {
+          "nom": "chapitre-c4",
+          "genre": "chapitre",
+          "modele": "session",
+          "jetons": 307482,
+          "minutes": 18,
+          "outils": 88,
+          "images": 30
+        },
+        {
+          "nom": "chapitre-c5",
+          "genre": "chapitre",
+          "modele": "session",
+          "jetons": 303657,
+          "minutes": 14,
+          "outils": 54,
+          "images": 30
+        },
+        {
+          "nom": "chapitre-c6",
+          "genre": "chapitre",
+          "modele": "session",
+          "jetons": 281489,
+          "minutes": 15,
+          "outils": 70,
+          "images": 40
+        },
+        {
+          "nom": "retouche-c1",
+          "genre": "retoucheur",
+          "modele": "session",
+          "jetons": 168131,
+          "minutes": 6,
+          "outils": 29,
+          "images": 9
+        },
+        {
+          "nom": "retouche-c3",
+          "genre": "retoucheur",
+          "modele": "session",
+          "jetons": 181093,
+          "minutes": 8,
+          "outils": 37,
+          "images": 12
+        },
+        {
+          "nom": "retouche-c4",
+          "genre": "retoucheur",
+          "modele": "session",
+          "jetons": 170092,
+          "minutes": 6,
+          "outils": 20,
+          "images": 4
+        },
+        {
+          "nom": "retouche-c6",
+          "genre": "retoucheur",
+          "modele": "session",
+          "jetons": 174243,
+          "minutes": 7,
+          "outils": 28,
+          "images": 6
+        },
+        {
+          "nom": "retouche-c2",
+          "genre": "retoucheur",
+          "modele": "session",
+          "jetons": 151578,
+          "minutes": 6,
+          "outils": 24,
+          "images": 12
+        },
+        {
+          "nom": "retouche-c5",
+          "genre": "retoucheur",
+          "modele": "session",
+          "jetons": 163305,
+          "minutes": 5,
+          "outils": 24,
+          "images": 3
+        },
+        {
+          "nom": "chef-de-production",
+          "genre": "chef-de-production",
+          "modele": "opus",
+          "jetons": 260839,
+          "minutes": 146,
+          "outils": 87
+        }
+      ],
+      "jauges": [
+        {
+          "t": "2026-11-02T20:46:57.044Z",
+          "quoi": "",
+          "session": 8,
+          "hebdo": 19
+        },
+        {
+          "t": "2026-11-02T22:45:30.126Z",
+          "quoi": "",
+          "session": 2,
+          "hebdo": 25
+        },
+        {
+          "t": "2026-11-02T23:12:52.148Z",
+          "quoi": "",
+          "session": 12,
+          "hebdo": 26
+        }
+      ]
+    },
+    "HS05": {
+      "etapes": [
+        {
+          "nom": "script",
+          "debut": "2026-11-03T04:58:15.863Z",
+          "fin": "2026-11-03T05:07:16.684Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-11-03T05:07:16.684Z",
+          "fin": "2026-11-03T05:07:30.435Z"
+        },
+        {
+          "nom": "voix",
+          "debut": "2026-11-03T05:07:58.614Z",
+          "fin": "2026-11-03T05:08:35.921Z"
+        },
+        {
+          "nom": "actes",
+          "debut": "2026-11-03T14:00:59.427Z",
+          "fin": "2026-11-03T14:14:59.165Z"
+        },
+        {
+          "nom": "relecture",
+          "debut": "2026-11-03T14:14:59.165Z",
+          "fin": "2026-11-03T14:15:30.479Z"
+        },
+        {
+          "nom": "brouillon",
+          "debut": "2026-11-03T14:15:30.479Z",
+          "fin": "2026-11-03T14:25:59.297Z"
+        },
+        {
+          "nom": "rendu",
+          "debut": "2026-11-03T14:25:59.297Z",
+          "fin": "2026-11-03T14:30:40.181Z"
+        },
+        {
+          "nom": "textes",
+          "debut": "2026-11-03T14:30:40.181Z",
+          "fin": "2026-11-03T14:31:09.080Z"
+        }
+      ],
+      "agents": [],
+      "jauges": [
+        {
+          "t": "2026-11-03T04:58:15.100Z",
+          "quoi": "",
+          "session": null,
+          "hebdo": null
+        },
+        {
+          "t": "2026-11-03T05:07:31.150Z",
+          "quoi": "",
+          "session": null,
+          "hebdo": null
+        }
+      ]
     }
   }
 }

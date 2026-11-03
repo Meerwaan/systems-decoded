@@ -1,6 +1,6 @@
 # Catalogue des décors
 
-Généré par `npm run catalogue` le 2026-10-27 à partir du code et de `docs/catalogue-notes.json` — **ne pas éditer à la main** (les notes se corrigent dans le JSON). Vignettes : `docs/catalogue/`.
+Généré par `npm run catalogue` le 2026-11-03 à partir du code et de `docs/catalogue-notes.json` — **ne pas éditer à la main** (les notes se corrigent dans le JSON). Vignettes : `docs/catalogue/`.
 
 **À lire avant de modéliser quoi que ce soit.** Un décor neuf coûte 400 à 580 k jetons et 20 à 57 min ; un décor importé, presque rien (018 : la cuisine entière en 57 lignes d'assemblage ; 019 : la voiture du 011 telle quelle ; 024 : le mur du 016 ; 028 : la chambre du 022 ; L01 : la voiture du 011 et la rue du 014).
 
@@ -120,7 +120,7 @@ Vignettes : `docs/catalogue/planche-lieux.jpg`
 Vignettes : `docs/catalogue/planche-transports.jpg`
 
 - **La voiture aux rayons X et le mur** `011/car.js` — Berline de verre (une peau lissée par sections, vitres, roues, sièges, volant), le mur et la route qui viennent à elle (`crush` replie l'avant), les airbags, celui qui ouvre ta portière.
-  entrée buildCar() · état `shell wall you crush debris bags rescuer reach live` · lit ./plan · 1268 l. · **repris par 019, L01**
+  entrée buildCar() · état `shell wall you crush debris bags rescuer reach live` · lit ./plan · 1268 l. · **repris par 019, 035, L01**
   + LE véhicule du compte : repère fixe de la voiture (les poses restent vraies pendant le choc) ; même `CAR` que 014 ; déjà importé par 019 et L01.
   − rien de plein dedans par défaut : ce qui compte s'ajoute à côté (011/pack, 019/cabine).
   ◎ VIEW : fuse whole exploded barPart pistonPart chargePart section macro …(+15)
@@ -132,7 +132,7 @@ Vignettes : `docs/catalogue/planche-transports.jpg`
   ◎ VIEW : hook wheel pedal hands chase top lockedFront sideWide …(+10)
   `import { buildStreet } from "../../014-abs/src/street.js";`
 - **La route de campagne de nuit** `025/route.js` — Copie élargie de 014/street : deux voies, bas-côtés et fossés, lisière, sanglier et élan, la voiture à quatre roues de verre, moteur et transmissions, flèches cap / trajectoire, la fusée du 026 au loin.
-  entrée buildRoute() · état `shell gap lane yaw aim steer kmh rolled rain boar moose mooseAt you slide …(+7)` · lit ./plan, ./habillage · 1844 l. · **repris par copie de 014/street**
+  entrée buildRoute() · état `shell gap lane yaw aim steer kmh rolled rain boar moose mooseAt you slide …(+7)` · lit ./plan, ./habillage · 1844 l. · **repris par copie de 014/street, 035**
   + la plus complète des routes ; habillage (balises, panneau, fermes).
   − les bêtes dans les phares tirent vers le gris plein ; de dessus le coin de roue n'est qu'une tache.
   ◎ VIEW : hook chase top wide front rear verge tip …(+13)
@@ -171,7 +171,7 @@ Vignettes : `docs/catalogue/planche-transports.jpg`
   ◎ VIEW : hook rear wheel under map drum pedal hands …(+18)
   `import { buildTruck } from "../../027-voie-de-detresse/src/camion.js";`
 - **Le TGV Duplex et sa ligne** `021/train.js` — TGV Duplex de verre à l'échelle (2 motrices, 8 remorques), cabine vide éclairée, chaîne de traction, frein et bogies, voie et caténaire qui défilent (`run`).
-  entrée buildTrain() · état `run kmh shell cab pax you phone traction brake radio display mood` · lit ./plan · 1275 l.
+  entrée buildTrain() · état `run kmh shell cab pax you phone traction brake radio display mood` · lit ./plan · 1275 l. · **repris par 035**
   + le seul train ; cabine de conduite réutilisable.
   − passagers en « sucettes » ; la rame de loin est un damier ; ATTENTION az 0 regarde le flanc +z, az −90 l'avant.
   ◎ VIEW : hook cab seatBack system pedal bellCab dialCab side …(+14)
@@ -180,12 +180,18 @@ Vignettes : `docs/catalogue/planche-transports.jpg`
   entrée buildRoad() · 382 l.
   − ancien moteur, remplacée par 011/car.
   `import { buildRoad } from "../../002-airbag/src/road.js";`
+- **Le passage à niveau et ses voies** `035/passage.js` — Enveloppe de la route du 025, du TGV du 021 et de la voiture du 011 : deux voies sur 1,2 km (rails qui s'allument devant un train), platelage, caténaire, panneau A7, téléphone du PN et sa pancarte, gens de verre qui sortent, règle des 800 m.
+  entrée buildPassage() · état `shell gap kmh rolled wet you car alive people train beam other ruler file …(+1)` · lit ./plan, 025/route, 021/train, 021/plan, 011/car · 680 l. · **repris par 025/route, 021 TGV, 011/car**
+  + rails lisibles au loin ; phares du TGV jamais sous 46 px.
+  − l'insert « un autre train » ne montre que deux points de phares.
+  ◎ VIEW : hook hood plunge under cab behind over system …(+11)
+  `import { buildPassage } from "../../035-passage-a-niveau/src/passage.js";`
 
 ## Aviation et espace
 Vignettes : `docs/catalogue/planche-transports.jpg`
 
 - **L'avion de ligne (A330) en vol** `023/avion.js` — A330-200 de verre de nuit au-dessus de l'Atlantique : moteurs, carburant et fuite, trois circuits hydrauliques, gouvernes, passagers, toi ; la mer, l'île et sa piste ; plané, atterrissage.
-  entrée buildAvion() · état `ground threshold ahead pitch bank dawn wind shell engines fuel leak lines press flow …(+11)` · lit ./plan, ./habillage · 1408 l.
+  entrée buildAvion() · état `ground threshold ahead pitch bank dawn wind shell engines fuel leak lines press flow …(+11)` · lit ./plan, ./habillage · 1408 l. · **repris par 031, 033, 034**
   + le gros-porteur en vol ; `mount` pour pendre un système sous le ventre.
   − de trois quarts avant il redevient un tube si `el` monte ; caisson de soute qui dépasse en `VIEW.bay`.
   ◎ VIEW : hook plane wide engine you bay gear circuits …(+9)
@@ -200,12 +206,12 @@ Vignettes : `docs/catalogue/planche-transports.jpg`
   ◎ VIEW : hook hook1 hook2 hook3 hook4 hook5 hook6 aisle …(+61)
   `import { buildAvion } from "../../L03-evacuation-avion/src/avion.js";`
 - **La cabine d'avion** `L03/cabine.js` · *en chantier* — Cabine de nuit aux rayons X, rangées et passagers de verre, éclairage de secours, balisage au sol, fumée, équipage, porte 1L et son levier.
-  entrée buildCabine() · état `layout lights emerg smoke fire breach pax floor glow signs crowd you bag bins …(+12)` · lit ./plan · 1856 l.
+  entrée buildCabine() · état `layout lights emerg smoke fire breach pax floor glow signs crowd you bag bins …(+12)` · lit ./plan · 1856 l. · **repris par 032, 033**
   − dossier pas encore rendu ; ne pas longer l'allée à plus de 40 cm/s ; têtes des voisins = sphères de près.
   ◎ VIEW : hook hook1 hook2 hook3 hook4 hook5 hook6 aisle …(+61)
   `import { buildCabine } from "../../L03-evacuation-avion/src/cabine.js";`
 - **Habillage piste et cabine** `L03/habillage.js` · *en chantier* — La vie de la piste et de la cabine (L03).
-  entrée dressPiste(), dressCabine() · lit ./plan · 737 l.
+  entrée dressPiste(), dressCabine() · lit ./plan · 737 l. · **repris par 032, 033**
   `import { dressPiste, dressCabine } from "../../L03-evacuation-avion/src/habillage.js";`
 - **Le Rafale biplace et son ciel** `007/jet.js` — Rafale B de verre, cockpit et rails, verrière en deux moitiés qui se découpe, piste, sol, nuages, traînées d'air ; l'avion reste à l'origine, le sol tombe (`alt`).
   entrée buildJet() · 945 l.
@@ -316,7 +322,7 @@ Vignettes : `docs/catalogue/planche-lieux.jpg (L01, L02)`
 ## Personnages
 
 - **« Toi » : le personnage de verre** `kit/lib/figure.js` — Un corps de verre d'1,76 m posé comme une marionnette (`reach`, `leg`, `lean`, `hold`) ; mains `ball`, `flat` (moufle) ou `real` (phalanges).
-  entrée makeFigure({ … }) · lit ./brand, ./build3d, ./atmo · 353 l. · utilisé par 29 dossiers
+  entrée makeFigure({ … }) · lit ./brand, ./build3d, ./atmo · 353 l. · utilisé par 34 dossiers
   + utilisé dans presque tous les dossiers ; on le couche, l'agenouille, le fait courir en bougeant son groupe (006/hall).
   − mannequin articulé de près : jamais en gros plan, les mains jamais seules ; de près il passe en verre de la tête aux mains.
   `import { makeFigure } from "@kit/figure.js";`
@@ -417,31 +423,33 @@ Vignettes : `docs/catalogue/planche-lieux.jpg (L01, L02)`
   `import { buildModel } from "../../L03-evacuation-avion/src/model.js";`
 - **Catapultes, brins, miroir** `L04/model.js` · *en chantier* — Deux catapultes à vapeur, barre de retenue, vanne, cabine, déflecteur, trois brins et leur frein, miroir d'appontage ; catapulte électromagnétique. (1518 l.)
   `import { buildModel } from "../../L04-porte-avions/src/model.js";`
+- **Le signal de passage à niveau G2** `035/model.js` — Mât, croix R24 double face et ses feux rouges, sonnerie, coffret, demi-barrière blanc et rouge rétroréfléchissante qui cède ; buildSignal() → état down give flash ring shine explode sweep litLamp litBell litBar litBoom bench, quatre instances aux géométries partagées. (432 l. ; vue éclatée lisible, feux R24 nets.)
+  `import { buildSignal } from "../../035-passage-a-niveau/src/model.js";`
 - **Détecteur de CO et le sang** `028/model.js` · *en chantier* — Le détecteur électrochimique (grille, membrane, électrode, puce, buzzer, pile) ; `buildBlood` : la maquette du sang où le CO prend la place de l'oxygène. (691 l.)
   `import { buildModel, buildBlood } from "../../028-detecteur-co/src/model.js";`
 
 ## Le kit (`kit/lib/`) : briques communes
 
 - **Atmosphère** `kit/lib/atmo.js` — Sol en grille qui s'efface (`makeSurface`, `lift` pour espacer), ombre de contact, flaque de lumière (`makePool`), poussières (`makeMotes`, en traînées quand elles filent).
-  entrée makeSurface({ radius = 260, cell = 5, fade = 46, lift = 1 } = {}), makeContact({ amount = 0.5 } = {}), makePool({ radius = 17, color = BRAND.veille } = {}), makeMotes({ … }) · lit ./brand, ./rng · 217 l. · utilisé par 15 dossiers
+  entrée makeSurface({ radius = 260, cell = 5, fade = 46, lift = 1 } = {}), makeContact({ amount = 0.5 } = {}), makePool({ radius = 17, color = BRAND.veille } = {}), makeMotes({ … }) · lit ./brand, ./rng · 217 l. · utilisé par 17 dossiers
   `import { makeSurface, makeContact, makePool, makeMotes } from "@kit/atmo.js";`
 - **Blocs des films** `kit/lib/blocks.js` — L'établi (`makeBench`), l'ambiance (`setMood`), le raccord décor → établi (`benchCut`), le titre barré, les appels à l'action, le prochain dossier, le cartouche d'un long.
-  entrée makeBench(size = 10) · lit ./brand, ./atmo, ./overlay, ./direct · 236 l. · utilisé par 31 dossiers
+  entrée makeBench(size = 10) · lit ./brand, ./atmo, ./overlay, ./direct · 236 l. · utilisé par 38 dossiers
   `import { makeBench, setMood, benchCut } from "@kit/blocks.js";`
 - **Modelage** `kit/lib/build3d.js` — Matières maison (`solid`, `glow`, `glass`, `asShell`, `lineMat`, `fatLine`), formes chanfreinées (`box`, `cyl`, `plate`, `lathe`), pièces qui s'éclatent (`makePart`, `addMesh`, `explode`, `setPartOpacity`).
-  entrée makePart(name, { lift = 0, delay = 0, span = 0.6 } = {}) · lit ./brand · 417 l. · utilisé par 34 dossiers
+  entrée makePart(name, { lift = 0, delay = 0, span = 0.6 } = {}) · lit ./brand · 417 l. · utilisé par 41 dossiers
 - **Le réalisateur** `kit/lib/direct.js` — `createDirector` : état `S`, `st`, `shot`, `cut`, `chip`, `panel`, `ride`, `loop`, `commit`.
-  lit ./timing, ./overlay, ./long · 339 l. · utilisé par 31 dossiers
+  lit ./timing, ./overlay, ./long · 339 l. · utilisé par 38 dossiers
   `import { createDirector } from "@kit/direct.js";`
 - **Le plateau** `kit/lib/stage.js` — Studio : boîtes à lumière, ombres douces, obturateur, bloom, étalonnage ; options `dof`, `air`, `finish`.
-  lit ./brand, ./build3d, ./finish · 546 l. · utilisé par 38 dossiers
+  lit ./brand, ./build3d, ./finish · 546 l. · utilisé par 45 dossiers
   `import { createStage } from "@kit/stage.js";`
 - **Matière des pièces** `kit/lib/finish.js` — Grain d'usinage et traces de main procéduraux (`finishScene`), via `createStage({ finish })`.
   80 l.
 - **Calque 2D** `kit/lib/overlay.js` — Sous-titres mot à mot, cartes d'accroche, callouts, en-tête, chevrons.
-  entrée buildCaptions({ … }), buildHook(container, EP, tl, { beats, maxChars = 19, loopAt } = {}) · lit ./brand · 481 l. · utilisé par 38 dossiers
+  entrée buildCaptions({ … }), buildHook(container, EP, tl, { beats, maxChars = 19, loopAt } = {}) · lit ./brand · 481 l. · utilisé par 45 dossiers
 - **Format long** `kit/lib/long.js` — Cartes de chapitre, mots-clés, en-tête étape / température.
-  entrée buildChapters(container, EP, tl, { lead = 0.9, hold = 2.6, skip = [], kicker = (), buildKeywords(container, EP, tl, { hold = 2.6, skip = [], quiet = [] } = {}) · 171 l. · utilisé par 4 dossiers
+  entrée buildChapters(container, EP, tl, { lead = 0.9, hold = 2.6, skip = [], kicker = (), buildKeywords(container, EP, tl, { hold = 2.6, skip = [], quiet = [] } = {}) · 171 l. · utilisé par 5 dossiers
 - **Cadre 16:9** `kit/lib/landscape.js` — À importer en premier dans le main.js d'un long.
   lit ./brand · 10 l.
 - **Le décorateur (`makeDresser`)** `kit/lib/details.js` — Petites choses d'un lieu habité, en verre et traits : rail et ustensiles, bocaux, bouteilles, planche, bouilloire, prise, torchon, horloge, fenêtre et ville, chariot, perfusion, bras, lueur, lavis, lamelles, poussières, lumières de la ville la nuit (`nightLights`).
@@ -454,9 +462,9 @@ Vignettes : `docs/catalogue/planche-lieux.jpg (L01, L02)`
 Ces fonctions ne s'importent pas (elles ne sont pas exportées) : on recopie **la version indiquée en premier** (la plus récente du plus gros groupe), ou mieux, on la fait monter dans le kit (voir « Recommandations »). Détecté automatiquement (trois épisodes ou plus) ; les crochets groupent les copies identiques à plus de 75 %.
 
 - `makeEmbers` (9 ép.) — braises qui tombent de ce qui chauffe, périodiques : [004/room 003/shaft] [010/shop 008/house] [L03/avion 013/rail] [007/model] [027/camion] [L04/bord]
+- `skin` (9 ép.) — peau lissée par sections (fuselages, coques) : [L05/avion L04/bord L03/avion 034/fond 026/launcher 023/avion 021/train 015/rafale 007/jet]
 - `makeSparks` (7 ép.) — étincelles lentes de ce qui frotte : [015/rafale 013/f1] [003/model] [011/pack] [013/model] [013/rail] [016/wall] [026/launcher] [L02/ligne]
 - `makeSprites` (7 ép.) — lumières ponctuelles à longue traîne (phares, feux) : [025/route 019/cabine 014/street 013/f1 011/car 008/house] [027/camion]
-- `skin` (7 ép.) — peau lissée par sections (fuselages, coques) : [L04/bord L03/avion 026/launcher 023/avion 021/train 015/rafale 007/jet]
 - `headGeometry` (6 ép.) — la tête de verre sculptée (front, nez, menton, oreilles) : [022/chambre 017/suite 016/wall 012/hob 009/kitchen] [028/foyer]
 - `makeBall` (6 ép.) — une boule de lumière (cœur blanc + teinte), le point qui « a un endroit » : [L04/model 022/model 020/model 018/model 017/model 015/model]
 - `makeRibbon` (6 ép.) — ruban posé sur des points (ceinture, sangle, câble plat) : [025/route 014/street 011/car] [019/cabine] [029/pente] [L04/bord]
@@ -475,6 +483,79 @@ Ces fonctions ne s'importent pas (elles ne sont pas exportées) : on recopie **l
 - `episodes/L04-porte-avions/src/bord.js` ≈ `episodes/015-brin-arret/src/rafale.js` (71 % de lignes communes)
 - `episodes/014-abs/src/street.js` ≈ `episodes/011-fusible-pyro/src/car.js` (48 % de lignes communes)
 - `episodes/025-esp/src/route.js` ≈ `episodes/011-fusible-pyro/src/car.js` (45 % de lignes communes)
+
+## À décrire (fichiers sans note)
+
+Ajouter une entrée dans `docs/catalogue-notes.json` → `entries` (au moins `cat`, `nom`, `quoi`), puis `npm run catalogue`.
+
+- **cockpit** `031/cockpit.js` — *(à décrire)*
+  entrée buildCockpit({ other = false } = {}), buildOndes() · état `shell crew pull cores lights` · lit ./plan · 551 l.
+  ◎ VIEW : hook shoulder nd stick hisNd vsi fuselage profile …(+11)
+  `import { buildCockpit, buildOndes } from "../../031-tcas/src/cockpit.js";`
+- **tcas** `031/tcas.js` — *(à décrire)*
+  entrée buildScreens({ side = 1 } = {}), buildAntenna(), buildTcas() · état `explode tau level ra vs talk ping beam litAnt litXpdr litCpu litPeer litScreen mood` · lit ./plan · 908 l.
+  ◎ VIEW : hook shoulder nd stick hisNd vsi fuselage profile …(+11)
+  `import { buildScreens, buildAntenna, buildTcas } from "../../031-tcas/src/tcas.js";`
+- **avion** `032/avion.js` — *(à décrire)*
+  entrée buildAvion() · état `layout lights smoke cut` · lit L03/cabine, L03/habillage · 43 l.
+  ◎ VIEW : hook outside crowd under bar door chest hip …(+13)
+  `import { buildAvion } from "../../032-barre-anti-panique/src/avion.js";`
+- **habillage** `032/habillage.js` — *(à décrire)*
+  entrée dressSalle() · lit ./plan · 118 l.
+  ◎ VIEW : hook outside crowd under bar door chest hip …(+13)
+  `import { dressSalle } from "../../032-barre-anti-panique/src/habillage.js";`
+- **model** `032/model.js` — *(à décrire)*
+  entrée buildSystem() · lit ./plan · 628 l.
+  ◎ VIEW : hook outside crowd under bar door chest hip …(+13)
+  `import { buildSystem } from "../../032-barre-anti-panique/src/model.js";`
+- **salle** `032/salle.js` — *(à décrire)*
+  entrée buildSalle() · lit ./habillage, ./plan · 922 l.
+  ◎ VIEW : hook outside crowd under bar door chest hip …(+13)
+  `import { buildSalle } from "../../032-barre-anti-panique/src/salle.js";`
+- **model** `033/model.js` — *(à décrire)*
+  entrée buildModel() · état `explode named section handle hooks stops open air pin pout load wall tug mood` · lit ./plan · 592 l.
+  ◎ VIEW : hook doorIn handle floor deep you edge aisle …(+12)
+  `import { buildModel } from "../../033-porte-avion/src/model.js";`
+- **vol** `033/vol.js` — *(à décrire)*
+  entrée buildVol({ handle } = {}) · état `alt ahead pitch bank wind shell runway made gear cabin lights emerg pax voisin …(+6)` · lit ./plan, 023/avion, 023/plan, L03/cabine, L03/habillage · 424 l.
+  ◎ VIEW : hook doorIn handle floor deep you edge aisle …(+12)
+  `import { buildVol } from "../../033-porte-avion/src/vol.js";`
+- **fond** `034/fond.js` — *(à décrire)*
+  entrée buildFond() · lit ./plan, 023/plan · 864 l.
+  ◎ VIEW : hook beacon sink range ocean floor alone crushed …(+13)
+  `import { buildFond } from "../../034-boite-noire/src/fond.js";`
+- **model** `034/model.js` — *(à décrire)*
+  entrée buildSystem() · lit ./plan · 863 l.
+  ◎ VIEW : hook beacon sink range ocean floor alone crushed …(+13)
+  `import { buildSystem } from "../../034-boite-noire/src/model.js";`
+- **model** `HS05/model.js` — *(à décrire)*
+  entrée buildModel() · 39 l.
+  ◎ VIEW : system exploded whole
+  `import { buildModel } from "../../HS05-hudson/src/model.js";`
+- **avion** `L05/avion.js` — *(à décrire)*
+  entrée makeRaft(), buildAvion() · lit ./plan · 1710 l.
+  ◎ VIEW : hook1 hook2 hook3 hook4 hook5 hook6 wide profile …(+44)
+  `import { makeRaft, buildAvion } from "../../L05-hudson/src/avion.js";`
+- **carte** `L05/carte.js` — *(à décrire)*
+  entrée buildCarte() · lit ./plan · 1182 l.
+  ◎ VIEW : hook1 hook2 hook3 hook4 hook5 hook6 wide profile …(+44)
+  `import { buildCarte } from "../../L05-hudson/src/carte.js";`
+- **habillage** `L05/habillage.js` — *(à décrire)*
+  entrée dressHudson({ list = [], boats = [] } = {}) · lit ./plan · 203 l.
+  ◎ VIEW : hook1 hook2 hook3 hook4 hook5 hook6 wide profile …(+44)
+  `import { dressHudson } from "../../L05-hudson/src/habillage.js";`
+- **hudson** `L05/hudson.js` — *(à décrire)*
+  entrée makeFerry(), buildHudson() · lit ./plan, ./habillage · 1075 l.
+  ◎ VIEW : hook1 hook2 hook3 hook4 hook5 hook6 wide profile …(+44)
+  `import { makeFerry, buildHudson } from "../../L05-hudson/src/hudson.js";`
+- **pieces** `L05/pieces.js` — *(à décrire)*
+  65 l.
+  ◎ VIEW : hook1 hook2 hook3 hook4 hook5 hook6 wide profile …(+44)
+  `import "../../L05-hudson/src/pieces.js";`
+- **systemes** `L05/systemes.js` — *(à décrire)*
+  entrée buildSystemes() · lit ./plan · 1388 l.
+  ◎ VIEW : hook1 hook2 hook3 hook4 hook5 hook6 wide profile …(+44)
+  `import { buildSystemes } from "../../L05-hudson/src/systemes.js";`
 
 ## Recommandations
 
