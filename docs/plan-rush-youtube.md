@@ -48,7 +48,7 @@ Au 29/10, **un seul court prêt** : le 030 (prise de terre). Le 029 (airbag d'av
 
 Ce que Merwan veut : des faits réels, ce qui s'est passé, pourquoi le plan de sécurité n'a pas suffi ou a dû changer en direct — éducatif, et qui ne fait pas peur.
 
-**La structure d'une affaire (12–15 min)**, qui est notre ADN appliqué à un vrai jour :
+**La recette complète, et ce que les outils vérifient : `docs/recette-long-affaire.md`** (`npm run new -- L05 hudson "Hudson" --affaire`). En bref, **la structure d'une affaire (12–14 min)**, qui est notre ADN appliqué à un vrai jour :
 
 1. **L'accroche, à l'instant critique** : la 3D au moment où tout bascule, le chrono qui tourne (méthode A · B · C, la promesse du titre dite avant 30 s).
 2. **Le plan prévu** : le système ou la procédure tels qu'ils ont été conçus. « Alors… on l'ouvre. »
@@ -87,6 +87,7 @@ En décodage (samedi, une semaine sur deux) : les sujets de `docs/memoire/sujets
 
 ## Les compilations
 
+- **Prêt le 29/10** : la recette `docs/recette-compil.md` et l'outil `npm run compil`. **La première, C01 « Ta voiture »** (les six systèmes dans l'ordre d'un accident : ESP, ABS, prétensionneur, airbag, fusible de batterie, Halo ; 9 min 43), attend sa voix (≈ 800 crédits annoncés, ≈ 350 facturés).
 - Une par semaine, par thème : **« Ta voiture »** (002 airbag, 011 fusible, 013 Halo, 014 ABS, 019 prétensionneur, 025 ESP), **« Ta maison »** (001, 004, 009, 012, 016, 018, 028, 030), **« Dans le ciel »** (007, 015, 023, 026, 029)…
 - **Elles doivent apporter du neuf** pour ne pas être vues comme du réutilisé : une voix neuve en ouverture et entre chaque dossier (le lien entre eux, ce qu'ils ont en commun), un format 16:9 propre (le court au centre, le dossier et ses chiffres de chaque côté), des chapitres.
 - Coût : quelques centaines de crédits voix, pas de décor, pas d'acte. Un outil à écrire une fois (`npm run compil`).
