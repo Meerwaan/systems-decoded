@@ -1,0 +1,19 @@
+# L05 — état du chef de production
+
+Consigne : de l'architecte au brouillon + qa + vague de retouches. PAS de rendu final (Merwan n'a pas écouté la voix en cabine). Rendre la main avec la question.
+
+## Journal
+- 02/11 ~20h45 : départ. Jauge 5 h 8 %, hebdo 19 %. chrono → decors. Lancement de l'architecte.
+- 22h20 : architecte rendu (ae239dc27bd2a720c, 436 k, 33 min). 4 décors : avion.js systemes.js hudson.js carte.js ; 6 chapitres c1-instant c2-plan-decollage c3-rupture-apu c4-choix-eau c5-secours-enquete c6-geste-fin. Poses VIEW/POSE0/HAND/thumbs provisoires. Pièces (images) non téléchargées : accord de Merwan requis. Jauge 14 %/20 %. Vague décors ×4 lancée.
+- 22h50 : 4 décors rendus (avion ad2d898c941406840 335k ; systemes a545d1968017e8476 335k ; hudson ace63806400ef80e5 329k ; carte a1eab1c99b9b8d59a 311k). VIEW recalée (34 poses, ajoutées hook7 limitSide splash thumb thumb3 descent mapPlan ; profile = avion, limite = limitSide ; water = hudson). check OK (13 ⚠ cartes de chapitre qui se chevauchent, à corriger). Miniatures episode.json pas recalées (hors périmètre : cover). Jauge 30 %/22 %. Décorateur lancé.
+- 23h10 : décorateur rendu (af5ff2fffd0248852, 246k). Image 0 choisie : hook4 (nacelle de verre, cœur en feu, Bronx dessous) → POSE0, FIRST.lock 1, REST lock 0. docs/L05-actes-maj.md écrit. Prochaine étape : chapitres c1-c3 puis c4-c6 (deux vagues de trois).
+- 23h35 : vague 1 chapitres rendue (c1 a43a26c36d64d6b2d 288k ; c2 a1065a9947473c088 278k ; c3 aad7a7116c7280585 269k). 6 sfx ajoutés (c1, c2). Vague 2 (c4 c5 c6) lancée.
+- 00h00 : vague 2 rendue (c4 a97b6a7576b923cc1 307k ; c5 a4433a261ad23ffcc 304k ; c6 a62b7a34aff148a48 281k). Appliqué : CLOCK toloop (boucle 15:27:11), pieces.js FILES_IN=false (cadres sans image), 4 sfx. Relecture en cours.
+- 00h20 : relecture faite (5 planches .cache/planches/L05/relecture-*.jpg). Halo du banc ÷2 (world.js apply). Défauts notés : verre du copilote devant la caméra 340/374 (c4) ; carte de sécurité illisible 635 (c6) ; fin 665-680 moitié droite pas libre (c6) ; classeur fermé petit 590/624 (c6) ; avion à flot petit 431/442 (c4/c5) ; stick 56 sombre (c1). Brouillon lancé.
+- 23h45 : brouillon rendu (renders/L05-hudson-draft.mp4, à jeter) + qa : voix calée (0 ms), −14,04 LUFS, AUCUNE image parasite. Sons sur un mot corrigés par moi (boom+drop → lesImpacts−0,3 et coupe c2 l. 138 idem ; retirés hit@echec$, swish@refonte$, swish@toverdict). Fenêtre remise à zéro (2 %, hebdo 25 %).
+- Retouches : vague A = c1, c3, c4, c6 (retoucheur ×4) ; vague B = c2, c5. Cartes de chapitre sur des mots (A320 0,8 s ; « Alors, qu'est-ce qui les a sauvés ? » 0,7 s) : automatique, laissé.
+- 00h05 : vague A rendue (retouche c1 a6c2d2303e46fa16b 168k ; c3 ab1d4fb9b130c730f 181k ; c4 a24eceb10b7fd6caa 170k ; c6 ae92957bf2360a3c1 174k), tous défauts corrigés sur planche. sfx rewind → toloop. Vague B (c2, c5) lancée.
+- 00h15 : vague B rendue (c2 a7a8c778f20ac7991 152k ; c5 a5f5ef181587b2ca7 163k). Second brouillon de contrôle lancé.
+- 00h45 : second brouillon + qa : voix calée 0 ms, −14,04 LUFS, AUCUNE image parasite, aucun son sur un mot, aucun plan > 12 s, une vue toutes les 4,3 s, heurt max 17 (319,3 s). Restent 3 plages immobiles ≥ 4 s (8:31–8:36,5 c5 ; 10:19–10:25,5 et 10:58–11:02,5 c6) et l'écran de fin moitié droite lum 34 / gauche 47 : un cran en dessous, acceptables.
+- ARRÊT VOULU (consigne) : pas de rendu final. Attend Merwan : écoute de la voix en cabine (/voix.html?ep=L05) ; accord pour télécharger les 5 pièces (Wikimedia ×3 DP/CC BY 2.0, couverture + fig. 1 du PDF NTSB) dans episodes/L05-hudson/pieces/, puis pieces.js FILES_IN = true.
+- RESTE après son oui : (pièces) → render → qa → cover --alt 2 --alt 3 (recaler thumb/thumb2/thumb3 : VIEW.thumb, hook4, VIEW.thumb3 + lock 1) → srt → phone → posts.mjs. Agents du dossier : ≈ 4,73 M. Jauge 12 % / hebdo 26 %.
