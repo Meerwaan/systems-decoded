@@ -1,0 +1,325 @@
+{
+  "id": "HS05",
+  "serie": "hors-serie",
+  "slug": "hudson",
+  "title": "Hudson",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": 1.6,
+    "title": [
+      "Avion de l'Hudson"
+    ],
+    "cam": {
+      "tx": -380,
+      "ty": -235,
+      "tz": 585,
+      "d": 420,
+      "az": 28,
+      "el": 14,
+      "fov": 40,
+      "shift": -430,
+      "side": 0,
+      "roll": 0
+    },
+    "tone": "signal",
+    "tagStyle": "solid",
+    "tagSize": 50,
+    "foot": "Film complet · 11 min 20"
+  },
+  "post": {
+    "keyword": "avion de l'Hudson",
+    "caption": "Avion de l'Hudson : deux moteurs qui avalent des oies, à 860 m au-dessus de New York. Demi-tour vers l'aéroport… ou fleuve ?",
+    "hashtags": [
+      "#avionhudson",
+      "#sully",
+      "#aviation",
+      "#amerrissage",
+      "#apprendresurtiktok"
+    ],
+    "pinned": "Le film complet (11 min) : lien en bio, ou cherche « Système Décodé Hudson » sur YouTube. Le demi-tour, il passait… ou pas ?",
+    "lien": "Le L05 d'abord : en ligne et public à 18 h. Puis les liens : TikTok, lien du L05 en bio ; Instagram, lien du L05 en bio + une story à autocollant de lien (npm run social -- --only stories), gardée « À la une ». Puis HS05, APRÈS le L05, vers 19 h 30 (entre 19 h et 22 h), sur les quatre plateformes ; aucun autre dossier ce soir-là. Shorts : YouTube Studio → Contenu → le Short → « Vidéo associée » → le L05, au moment de publier. Facebook : le lien du L05 en premier commentaire. Enfin, depuis le téléphone : le lien du Short s'affiche, le lien en bio ouvre le L05.",
+    "instagram": {
+      "caption": "Avion de l'Hudson, le vol US Airways 1549 : tes deux moteurs viennent d'avaler des oies, à 860 mètres au-dessus de New York. Ta check-list, elle, est écrite pour plus de 6 000.\n\nDans chacun des deux moteurs, une oie d'environ 3,6 kilos. Et le gros oiseau de ses essais de certification pesait la moitié.\n\nLe film complet, onze minutes, reconstitué seconde par seconde, t'attend sur notre chaîne YouTube : le lien est en bio.\n\nL'aéroport était juste derrière. Le demi-tour, il passait… oui ou non ?",
+      "hashtags": [
+        "#avionhudson",
+        "#sully",
+        "#aviation",
+        "#amerrissage",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "keyword": "avion de l'Hudson",
+      "title": "Avion de l'Hudson : tes deux moteurs viennent d'avaler des oies… demi-tour ou fleuve ?",
+      "description": "Avion de l'Hudson, vol US Airways 1549 : deux moteurs qui avalent des oies à 860 mètres au-dessus de New York, une check-list écrite pour plus de 6 000, et l'aéroport derrière toi. Le film complet (11 min 20), reconstitué seconde par seconde d'après le rapport d'enquête, est lié juste sous ce Short.\n\nLe demi-tour vers l'aéroport : il passait… oui ou non ?",
+      "hashtags": [
+        "#shorts",
+        "#avionhudson",
+        "#sully",
+        "#aviation",
+        "#amerrissage"
+      ]
+    }
+  },
+  "sources": [
+    "Hors-série 05 (03/11) : la promo du L05 (l'avion de l'Hudson, US Airways 1549, 15 janvier 2009). Aucun fait neuf : chaque phrase est payée par un beat de episodes/L05-hudson/episode.json, dont les sources (NTSB AAR-10/03, FAA 2023) font foi. La C est la question du titre du long (« Demi-tour ou fleuve ? », son fil « rentrer », ouvert par lga/pourquoi, payé par echec et conclusion) ; elle n'est jamais payée ici. Le morceau payé est le fil « oie » (coeur → certif). L'amerrissage est joué en entier (recette du 27/10) ; le long garde le pourquoi : la simulation de Toulouse, ce qui les a sauvés (APU, loi normale, radeaux, ferries), la coque qui tient, la chute.",
+    "accroche ← L05 accroche (« Tes deux moteurs viennent d'avaler des oies », sans l'heure), poids, impact.",
+    "promesse ← L05 promesse (« Tu es à 860 mètres… ta check-list a été écrite pour une panne à plus de 6 000 mètres »), paradoxe, rupture/altitude.",
+    "curiosite ← L05 defi (« Et l'aéroport… est derrière toi »), comment (« demi-tour… ou fleuve ? »), lga, pourquoi — la C du titre (fil rentrer), NON payée ici : la réponse (toulouse, sim, huit, savaient, ajout, echec, conclusion) reste au long.",
+    "scene ← L05 recul (« Le gauche retombe à 35 %. Le droit, à 15 % »), defi et bilan (155 personnes à bord), promesse (au-dessus de New York), dessous (« ce qui vient d'y entrer »).",
+    "ouvre ← L05 ouvre ; l'éclaté du moteur du long (eclate) s'ouvre sur le mot.",
+    "eclate ← L05 eclate (« une grande soufflante aspire l'air… la brûle »), coeur (« le cœur du moteur, là où l'air devient du feu »).",
+    "coeur ← L05 coeur (« dans chacun des deux cœurs… une oie est entrée »), poids (« environ 3,6 kg chacune ») ; la question ouvre ce que paie certif.",
+    "certif ← L05 certif (« Le gros oiseau de leurs essais de certification pesait 1,8 kg. La moitié. ») — le morceau payé. Le long garde la suite du fil (essais, regle 2023).",
+    "relance ← L05 vitesse (« pour rallumer un moteur, elle demande 300 nœuds. L'avion n'en atteindra jamais plus de 214 »), relight.",
+    "hudson ← L05 hudson (« Le commandant dit au contrôleur : on va être dans l'Hudson »), unable.",
+    "test ← L05 trente (« Trente mètres »), tire (« Il tire sur le manche »), quinzem (« Quinze mètres. Il tire plus fort »), toucher (« 230 km/h. L'avion frappe le fleuve… et il flotte »). Le pourquoi (butee : l'ordinateur retient le nez ; pression, coque : 4 fois la certification) reste au long.",
+    "comment ← L05 comment (« demi-tour… ou fleuve ? »), lga (piste 13 de LaGuardia), pourquoi (« L'aéroport est à quelques kilomètres ») — question à deux camps ; la réponse (sim, huit, echec, conclusion) est dans le long.",
+    "youtube ← le rendu du L05 (680,2 s de voix ≈ 11 min 20).",
+    "boucle ← L05 accroche (« Tes deux moteurs… ») ; aucun fait nouveau."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Tes deux moteurs viennent d'avaler des *oies*.",
+      "vo": "[tense] Tes deux moteurs viennent d'avaler des oies."
+    },
+    {
+      "id": "promesse",
+      "text": "Tu es à [860|huit cent soixante] mètres. Ta check-list est écrite pour plus de *[6 000|six mille]*.",
+      "vo": "Tu es à huit cent soixante mètres. Ta check-list est écrite pour plus de six mille."
+    },
+    {
+      "id": "curiosite",
+      "fil": "rentrer",
+      "hold": 0.3,
+      "text": "L'aéroport est derrière toi : demi-tour… ou *fleuve* ?",
+      "vo": "[curious] L'aéroport est derrière toi : demi-tour... ou fleuve ?"
+    },
+    {
+      "id": "scene",
+      "hold": 0.2,
+      "text": "Ton moteur gauche retombe à [35|trente-cinq] pour cent. Le droit, à [15|quinze]. [155|Cent cinquante-cinq] personnes à bord, New York sous toi. Et ce qui vient d'entrer… est dans tes *moteurs*.",
+      "vo": "[tense] Ton moteur gauche retombe à trente-cinq pour cent. Le droit, à quinze. Cent cinquante-cinq personnes à bord, New York sous toi. Et ce qui vient d'entrer... est dans tes moteurs."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Sous l'aile, une grande soufflante aspire l'air. Au centre, le +cœur+ : là où l'air devient du *feu*.",
+      "vo": "[conversational, curious] Sous l'aile, une grande soufflante aspire l'air. Au centre, le cœur : là où l'air devient du feu."
+    },
+    {
+      "id": "coeur",
+      "fil": "oie",
+      "hold": 0.3,
+      "text": "Dans chacun des deux cœurs, une oie d'environ [3,6 kilos|trois kilos six] est entrée. Et ce moteur, on l'avait testé contre quoi ?",
+      "vo": "[curious] Dans chacun des deux cœurs, une oie d'environ trois kilos six est entrée. Et ce moteur, on l'avait testé contre quoi ?"
+    },
+    {
+      "id": "certif",
+      "paie": "oie",
+      "paye": true,
+      "hold": 0.25,
+      "text": "Le gros oiseau de ses essais de certification pesait [1,8 kilo|un kilo huit]. La *moitié*.",
+      "vo": "[amused] Le gros oiseau de ses essais de certification pesait un kilo huit. La moitié."
+    },
+    {
+      "id": "relance",
+      "text": "Pour le rallumer, ta check-list demande [300|trois cents] nœuds. Ton avion n'en atteindra jamais plus de [214|deux cent quatorze].",
+      "vo": "[conversational, curious] Pour le rallumer, ta check-list demande trois cents nœuds. Ton avion n'en atteindra jamais plus de deux cent quatorze."
+    },
+    {
+      "id": "hudson",
+      "text": "Le commandant, lui, a choisi. Il dit au contrôleur : « On va être dans l'+Hudson+. »",
+      "vo": "[warm, conversational] Le commandant, lui, a choisi. Il dit au contrôleur : on va être dans l'Hudson."
+    },
+    {
+      "id": "test",
+      "hold": 0.4,
+      "text": "Trente mètres. Il tire sur le manche. Quinze mètres : il tire plus fort. [230|Deux cent trente] kilomètres-heure… l'avion frappe le fleuve. Et il *flotte*.",
+      "vo": "[tense] Trente mètres. Il tire sur le manche. Quinze mètres : il tire plus fort. Deux cent trente kilomètres-heure... l'avion frappe le fleuve. Et il flotte."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Mais l'avion de l'Hudson pouvait-il faire demi-tour vers l'aéroport, juste derrière lui ? Oui… ou non ? Dis-le en +commentaire+.",
+      "vo": "[conversational, curious] Mais l'avion de l'Hudson pouvait-il faire demi-tour vers l'aéroport, juste derrière lui ? Oui... ou non ? Dis-le en commentaire."
+    },
+    {
+      "id": "youtube",
+      "text": "Le film entier, onze minutes : notre +chaîne+ YouTube, lien en bio.",
+      "vo": "[warm, conversational] Le film entier, onze minutes : notre chaîne YouTube, lien en bio."
+    },
+    {
+      "id": "boucle",
+      "text": "Et là-haut, tes deux moteurs…",
+      "vo": "[calm] Et là-haut, tes deux moteurs,"
+    }
+  ],
+  "cues": {
+    "choc": "accroche:oies",
+    "fil1": "curiosite$",
+    "fil2": "coeur$",
+    "paid": "certif:moitié",
+    "explode": "ouvre:on",
+    "test": "test",
+    "splash": "test:fleuve",
+    "verdict": "youtube:chaîne",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:deux"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "scene",
+          1
+        ],
+        [
+          "ouvre",
+          0.25
+        ],
+        [
+          "test",
+          0.9
+        ],
+        [
+          "youtube",
+          0.5
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13
+    },
+    {
+      "type": "swish",
+      "at": 0.1,
+      "dur": 0.28,
+      "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "accroche:oies$+0.05",
+      "gain": -14
+    },
+    {
+      "type": "braam",
+      "at": "accroche$",
+      "gain": -17,
+      "dur": 1.9
+    },
+    {
+      "type": "swish",
+      "at": "promesse-0.2",
+      "dur": 0.3,
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "curiosite$+0.06",
+      "gain": -14
+    },
+    {
+      "type": "swish",
+      "at": "scene-0.12",
+      "dur": 0.26,
+      "gain": -16
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "hit",
+      "at": "ouvre$+0.04",
+      "gain": -14
+    },
+    {
+      "type": "swish",
+      "at": "coeur-0.3",
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "certif$+0.05",
+      "gain": -14
+    },
+    {
+      "type": "swish",
+      "at": "test-0.12",
+      "dur": 0.26,
+      "gain": -16
+    },
+    {
+      "type": "boom",
+      "at": "splash+0.45",
+      "gain": -14
+    },
+    {
+      "type": "braam",
+      "at": "comment$",
+      "gain": -15,
+      "dur": 2.2
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ],
+  "acts": [
+    "01 Menace",
+    "02 L'Hudson",
+    "03 Rendez-vous"
+  ]
+}
