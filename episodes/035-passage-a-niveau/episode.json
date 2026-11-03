@@ -1,0 +1,478 @@
+{
+  "id": "035",
+  "serie": "dossier",
+  "slug": "passage-a-niveau",
+  "title": "Passage à niveau",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "r24+0.4",
+    "title": [
+      "Passage",
+      "à niveau"
+    ],
+    "cam": {
+      "tx": -110,
+      "ty": 175,
+      "tz": 0,
+      "d": 1400,
+      "az": -35,
+      "el": 30,
+      "fov": 32,
+      "shift": -520,
+      "side": 0,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Passage à niveau",
+    "caption": "Passage à niveau, la barrière automatique : les feux clignotent, la file ne bouge plus, et tu es enfermé entre deux barrières, sur les rails. Celle devant ton capot est faite pour casser. Le passage à niveau près de chez toi : un téléphone… ou une pancarte ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#passageaniveau",
+      "#securiteroutiere",
+      "#train"
+    ],
+    "pinned": "Réponds juste : « téléphone » ou « pancarte ». L'un ou l'autre doit y être, des deux côtés des voies.",
+    "instagram": {
+      "caption": "Ta voiture est sur les rails. Et cette barrière est faite pour casser.\n\nDossier 035 : le passage à niveau. Un feu rouge qui s'allume au moins vingt secondes avant le train, une sonnerie, des demi-barrières blanc et rouge… et une lisse conçue pour céder. Pourquoi, et quoi faire, dans l'ordre, si tu es piégé entre elles.\n\nLe passage à niveau près de chez toi : un téléphone… ou une pancarte ?",
+      "hashtags": [
+        "#passageaniveau",
+        "#securiteroutiere",
+        "#train",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ta voiture est sur les rails… et cette barrière est faite pour casser : le passage à niveau",
+      "description": "Dossier 035 — le passage à niveau ouvert : le feu rouge R24, la sonnerie, les demi-barrières d'entrée puis de sortie, la lisse blanc et rouge conçue pour céder. Et ce qu'il faut faire, dans l'ordre, si ta voiture est piégée entre les barrières.\n\nLe passage à niveau près de chez toi : un téléphone… ou une pancarte ?",
+      "hashtags": [
+        "#shorts",
+        "#passageaniveau",
+        "#securiteroutiere",
+        "#train",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits, niveaux de source et « à ne pas dire » : docs/faits/035-passage-a-niveau.md (recherche du 2026-10-30).",
+    "La scène est un scénario (aucun cas réel, aucune victime) : la file se bloque devant, la voiture est sur les voies quand les feux s'allument — dépliant SNCF Réseau, sept. 2020 (« veillez à ce que la route en face ne soit pas encombrée ») [P].",
+    "Passage à quatre demi-barrières : celles de sortie s'abaissent quand celles d'entrée sont basses — arrêté du 18 mars 1991 consolidé (29 mai 2019), art. 10 [P].",
+    "Feux rouges clignotants allumés vingt secondes au moins avant le train ; sonnerie dès l'allumage ; demi-barrières quelques secondes après — arrêté du 18 mars 1991, art. 10 [P].",
+    "Signal à droite de la route : feu rouge clignotant R24, sonnerie, demi-barrière ; demi-barrière peinte en blanc et rouge rétroréfléchissants en totalité — guide EPSF INF-GUID-021 v2 (nov. 2023) [P]. La demi-barrière fait partie du signal G2 : « c'est un signal ».",
+    "La barrière est « conçue pour ne pas résister à ce type de choc » (un véhicule) — Sécurité routière, brochure juin 2026 ; « barrières cassables » — SNCF Réseau [P]. Où et comment elle cède n'est écrit nulle part : l'image reconstitue la rupture, la voix n'en dit rien ; le mécanisme du mât n'est pas documenté, l'image le reconstitue aussi.",
+    "Un train peut passer très peu de secondes après la fin de l'abaissement des barrières — dépliant SNCF Réseau 2020 [P].",
+    "À 90 km/h, un train met 800 m à s'arrêter — SNCF Réseau 2020 et Sécurité routière 2026 [P].",
+    "Un train peut en cacher un autre : un feu qui clignote encore après un train, c'est l'arrêt — Sécurité routière 2026, dépliant SNCF Réseau 2020, inscription des G2 sur lignes à voies multiples [P].",
+    "Piégé, dans l'ordre : dégager la voiture en enfonçant la barrière si c'est possible ; sinon faire sortir tout le monde ; puis alerter avec le téléphone du passage ou le numéro de la pancarte — Sécurité routière 2026, dépliant SNCF Réseau 2020 [P].",
+    "Un téléphone ou une pancarte à numéro d'alerte, des deux côtés des voies, au plus tard au 1er janvier 2020 — arrêté du 18 mars 1991 modifié par l'arrêté du 19 avril 2017, art. 12 [P].",
+    "Les victimes sont surtout des habitués, des riverains (raison du like) — Sécurité routière 2026 [P].",
+    "L'image reconstitue (architecte, 2026-11-03) : un passage à quatre demi-barrières sur deux voies, à l'échelle vraie (entraxe 4,2 m, lisses de 4 m à 6,5 m de l'axe) ; feux R24 double face sur les quatre mâts ; le TGV Duplex (021) sur une ligne classique, à une vitesse illustrative jamais affichée ; le téléphone et la pancarte côte à côte pour le film (en réalité l'un ou l'autre, des deux côtés des voies).",
+    "En-tête : « Feux +N s » compte les secondes de l'histoire depuis l'allumage des feux — illustratif, l'arrêté ne donne que « vingt secondes au moins » et « quelques secondes » ; le train passe vers T ≈ 22 s. « Barrières N/4 » compte les demi-barrières baissées."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ta voiture est sur les *rails*. Et cette barrière est faite pour +casser+.",
+      "vo": "[tense] Ta voiture est sur les rails. Et cette barrière est faite pour casser.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ta voiture est sur les rails. Et cette barrière est faite pour casser."
+      ],
+      "voir": "Nuit, route de campagne (025) : vue au ras du rail, de trois quarts avant, ta voiture (011) arrêtée en travers des voies ; le feu R24 clignote rouge et la lisse blanc et rouge descend déjà devant le capot ; derrière, au fond, le phare du TGV (021) grossit. Sur « casser », la lisse finit sa course, plein cadre."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Ce n'est pas un défaut : c'est ta +sortie+. Sauf si ta voiture ne *roule* plus.",
+      "vo": "[firm, matter-of-fact] Ce n'est pas un défaut : c'est ta sortie. [short pause] Sauf si ta voiture ne roule plus.",
+      "voir": "La caméra glisse le long de la lisse posée jusqu'au pare-chocs, à quelques centimètres ; sur « ne roule plus », le tableau de bord aux rayons X clignote et s'éteint d'un coup."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Les feux *clignotent*. La sonnerie tinte. Devant, la file ne bouge plus. Dans ton dos, la barrière descend. Puis devant ton capot… la deuxième. Tu es *enfermé*.",
+      "vo": "[tense] Les feux clignotent. La sonnerie tinte. Devant, la file ne bouge plus. Dans ton dos, la barrière descend. Puis devant ton capot... la deuxième. Tu es enfermé.",
+      "voir": "Même instant, plongée sur le passage à quatre demi-barrières : les R24 clignotent des deux côtés, la sonnerie du mât vibre ; devant, les feux stop de la file immobile ; la barrière d'entrée descend dans le dos de la voiture, puis celle de sortie devant le capot ; on finit serré sur la voiture enfermée entre les deux lisses, le phare du train au fond."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "La caméra quitte la voiture et se pose sur le mât et la lisse devant le capot ; sur « on », le signal s'éclate."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "À droite de la route, un mât : un feu rouge, une sonnerie. La demi-barrière, blanc et rouge : elle brille dans tes phares. Et sa lisse… est conçue pour +céder+.",
+      "vo": "[conversational, curious] À droite de la route, un mât : un feu rouge, une sonnerie. La demi-barrière, blanc et rouge : elle brille dans tes phares. Et sa lisse... est conçue pour céder.",
+      "voAlt": [
+        "[curious] À droite de la route, un mât : un feu rouge, une sonnerie. La demi-barrière, blanc et rouge : elle brille dans tes phares. Et sa lisse... est conçue pour céder."
+      ],
+      "voir": "Éclaté du signal (G2) qui suit le chemin de haut en bas, de trois quarts : le feu R24, la sonnerie, la demi-barrière ; deux phares la balaient et la lisse s'allume en blanc et rouge (rétroréflexion) ; puis la lisse seule, en grand, sur son halo vert. Sans montrer où elle casse."
+    },
+    {
+      "id": "repos",
+      "text": "Un train approche : le feu s'allume, au moins [20|vingt] secondes avant lui. Les barrières d'entrée descendent, puis celles de sortie. Et le train peut passer juste *après*.",
+      "vo": "[warm, conversational] Un train approche : le feu s'allume, au moins vingt secondes avant lui. Les barrières d'entrée descendent, puis celles de sortie. Et le train peut passer juste après.",
+      "voAlt": [
+        "[curious] Un train approche : le feu s'allume, au moins vingt secondes avant lui. Les barrières d'entrée descendent, puis celles de sortie. Et le train peut passer juste après."
+      ],
+      "voir": "Le passage vu d'en haut, en maquette, le chrono part de vingt : les R24 s'allument, les deux barrières d'entrée descendent, puis les deux de sortie ; sur « juste après », le TGV entre dans le cadre à peine la dernière lisse posée."
+    },
+    {
+      "id": "seuil",
+      "text": "+Abonne-toi+ : cette barrière, tu vas la voir *céder*.",
+      "vo": "[tense] Abonne-toi : cette barrière, tu vas la voir céder.",
+      "voir": "Sans arrêt : la caméra rase déjà le rail vers le phare du train ; chevrons #rail-seuil."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Le phare du train *grossit*. Même à [90|quatre-vingt-dix] kilomètres-heure, il lui faut [800|huit cents] mètres pour s'arrêter. Ta voiture, elle, roule +encore+.",
+      "vo": "[firm, matter-of-fact] Le phare du train grossit. Même à quatre-vingt-dix kilomètres-heure, il lui faut huit cents mètres pour s'arrêter. Ta voiture, elle, roule encore.",
+      "voir": "Au ras du rail, le phare du TGV grossit dans la nuit ; une règle se déroule le long de la voie jusqu'à 800 m (panneau 90 km/h → 800 m) ; retour sur la voiture aux rayons X, moteur qui tourne, phares allumés face à la lisse."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Tu avances. Ton capot pousse la lisse. Elle +cède+. Tes roues quittent les rails. Et derrière toi… le train passe. Le feu clignote encore : un train peut en cacher un *autre*.",
+      "vo": "[tense] Tu avances. Ton capot pousse la lisse. Elle cède. Tes roues quittent les rails. Et derrière toi... le train passe. Le feu clignote encore : un train peut en cacher un autre.",
+      "voir": "Le climax en grand, vue basse de trois quarts : la voiture avance, le capot pousse la lisse qui cède et s'efface du cadre (rupture reconstituée, aucun point de rupture montré) ; les roues passent le dernier rail ; derrière, le TGV traverse plein cadre ; le R24 clignote encore et un second phare surgit sur l'autre voie."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà le secret : cette barrière n'est *pas* un mur. Elle est faite pour casser. Toi, non.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : cette barrière n'est pas un mur. Elle est faite pour casser. Toi, non.",
+      "voir": "La caméra recule de la voiture arrêtée hors des voies jusqu'au signal qui clignote, la lisse absente ; le nom du compte s'allume ; sur « Toi, non », la voiture seule, petite face aux rails."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et si ta voiture ne roule plus ? Tout le monde *sort*. Puis on alerte : le téléphone du passage, ou le numéro de la pancarte. En +commentaire+ : près de chez toi… téléphone, ou pancarte ?",
+      "vo": "[conversational, curious] Et si ta voiture ne roule plus ? [short pause] Tout le monde sort. Puis on alerte : le téléphone du passage, ou le numéro de la pancarte. [short pause] En commentaire : près de chez toi... téléphone, ou pancarte ?",
+      "voAlt": [
+        "[curious] Et si ta voiture ne roule plus ? [short pause] Tout le monde sort. Puis on alerte : le téléphone du passage, ou le numéro de la pancarte. [short pause] En commentaire : près de chez toi... téléphone, ou pancarte ?"
+      ],
+      "voir": "Retour à l'instant de la scène, voiture tableau de bord éteint : portières ouvertes, silhouettes aux rayons X qui sortent et s'éloignent des voies (personne n'est touché) ; la caméra file vers le bord du passage : le téléphone d'alerte, puis la pancarte à numéro, côte à côte."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour quelqu'un qui en passe un tous les *jours*.",
+      "vo": "[warm, conversational] Like : [short pause] pour quelqu'un qui en passe un tous les jours.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour quelqu'un qui en passe un tous les jours."
+      ],
+      "voir": "Le même passage, barrières levées, une voiture le traverse comme chaque matin ; chevrons vers le bouton like."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "Prochain dossier : classé. Un système que tu croises sans le voir… et qui attend son *heure*.",
+      "vo": "[serious] Prochain dossier : classé. Un système que tu croises sans le voir... et qui attend son heure.",
+      "voir": "Panneau « Prochain dossier : classé », un système sous scellés dans le noir ; chevrons « S'abonner pour l'ouvrir »."
+    },
+    {
+      "id": "boucle",
+      "text": "Comme cette barrière, le jour où…",
+      "vo": "[calm] Comme cette barrière, le jour où,",
+      "voir": "Retour au ras du rail sur la lisse qui descend devant le capot, le R24 qui clignote : la dernière image rejoint la première."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:rails",
+    "casser": "accroche:casser",
+    "sortie": "promesse:sortie",
+    "roule": "promesse:roule",
+    "feux": "scene:feux",
+    "sonnerie": "scene:sonnerie",
+    "file": "scene:file",
+    "dos": "scene:dos",
+    "capot": "scene:capot",
+    "deuxieme": "scene:deuxième",
+    "enferme": "scene:enfermé",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "droite": "eclate:droite",
+    "mat": "eclate:mât",
+    "r24": "eclate:feu",
+    "bell": "eclate:sonnerie",
+    "demi": "eclate:demi-barrière",
+    "blanc": "eclate:blanc",
+    "brille": "eclate:brille",
+    "lisse": "eclate:lisse",
+    "ceder": "eclate:céder",
+    "approche": "repos:approche",
+    "vingt": "repos:20",
+    "entree": "repos:barrières",
+    "sortieB": "repos:sortie",
+    "apres": "repos:après",
+    "toseuil": "seuil-0.12",
+    "tozero": "zero-0.12",
+    "phare": "zero:phare",
+    "grossit": "zero:grossit",
+    "kmh90": "zero:90",
+    "m800": "zero:800",
+    "encore": "zero:encore",
+    "avances": "reponse:avances",
+    "pousse": "reponse:pousse",
+    "trigger": "reponse:cède-0.05",
+    "roues": "reponse:roues",
+    "quittent": "reponse:quittent",
+    "derriere": "reponse:derrière",
+    "passe": "reponse:passe",
+    "clignote": "reponse:clignote",
+    "autre": "reponse:autre",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "mur": "chute:mur",
+    "toi": "chute:Toi",
+    "tocta": "comment-0.12",
+    "sort": "comment:sort",
+    "alerte": "comment:alerte",
+    "tel": "comment:téléphone",
+    "pancarte": "comment:pancarte",
+    "commentaire": "comment:commentaire",
+    "duelA": "comment:téléphone#2",
+    "duelB": "comment:pancarte#2",
+    "jours": "like:jours",
+    "classe": "abo:classé",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:jour"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "swish",
+      "at": 0.03,
+      "dur": 0.2,
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "accroche:rails$+0.04",
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "accroche:casser$+0.04",
+      "gain": -15,
+      "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "promesse:sortie$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "blip",
+      "at": "promesse:plus$+0.04",
+      "gain": -16,
+      "pitch": 0.6,
+      "heavy": true
+    },
+    {
+      "type": "hit",
+      "at": "scene-0.3",
+      "gain": -14
+    },
+    {
+      "type": "click",
+      "at": "scene:plus$+0.03",
+      "gain": -18
+    },
+    {
+      "type": "impact",
+      "at": "scene:descend$+0.03",
+      "gain": -17,
+      "size": 0.6
+    },
+    {
+      "type": "hit",
+      "at": "scene:enfermé$+0.04",
+      "gain": -14
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.04",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.3",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "eclate:mât$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:rouge$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "blip",
+      "at": "eclate:sonnerie$+0.04",
+      "gain": -19,
+      "pitch": 1.5
+    },
+    {
+      "type": "click",
+      "at": "eclate:rouge#2$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "eclate:céder$+0.05",
+      "gain": -15
+    },
+    {
+      "type": "click",
+      "at": "repos:lui$+0.04",
+      "gain": -18
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "hit",
+      "at": "zero:grossit-0.15",
+      "gain": -15
+    },
+    {
+      "type": "click",
+      "at": "zero:s'arrêter$+0.04",
+      "gain": -18
+    },
+    {
+      "type": "hit",
+      "at": "zero:encore$+0.04",
+      "gain": -14
+    },
+    {
+      "type": "impact",
+      "at": "reponse:cède$+0.03",
+      "gain": -10,
+      "size": 1.4,
+      "crack": 1
+    },
+    {
+      "type": "hit",
+      "at": "reponse:autre$+0.04",
+      "gain": -14
+    },
+    {
+      "type": "blip",
+      "at": "chute:Toi$+0.04",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "click",
+      "at": "comment:pancarte$+0.04",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "comment:pancarte#2$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "like:Like$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "abo:classé$+0.04",
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "boucle$+0.04",
+      "dur": 0.7,
+      "gain": -21
+    }
+  ]
+}
