@@ -1,0 +1,140 @@
+{
+  "id": "C01",
+  "slug": "ta-voiture",
+  "title": "Ta voiture",
+  "format": "compil",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "compil": {
+    "lines": ["Ta voiture"],
+    "kicker": "6 systèmes, dans l'ordre d'un accident",
+    "chapIntro": "Six systèmes, dans l'ordre d'un accident",
+    "chapFin": "Lequel tu ne connaissais pas ?"
+  },
+  "dossiers": [
+    { "ep": "025", "label": "L'ESP", "lines": ["L'ESP"], "moment": "Avant le choc", "chap": "Avant le choc : l'ESP" },
+    { "ep": "014", "label": "L'ABS", "lines": ["L'ABS"], "moment": "Avant le choc", "chap": "Tu freines à fond : l'ABS" },
+    { "ep": "019", "label": "Prétensionneur", "lines": ["Le", "prétensionneur"], "moment": "Le choc", "chap": "Le choc : le prétensionneur" },
+    { "ep": "002", "label": "Airbag", "lines": ["L'airbag"], "moment": "Le choc", "chap": "Ta tête et le volant : l'airbag" },
+    { "ep": "011", "label": "Fusible pyro", "lines": ["Le fusible", "explosif"], "moment": "Après le choc", "chap": "Après le choc : le fusible de la batterie" },
+    { "ep": "013", "label": "Le Halo", "lines": ["Le Halo"], "moment": "En Formule 1", "chap": "Là où ça va le plus vite : le Halo" }
+  ],
+  "post": {
+    "youtube": {
+      "title": "6 systèmes se relaient quand tu as un accident : ta voiture, décodée",
+      "keyword": "système de sécurité voiture",
+      "descriptionTemplate": "Un accident ne se joue pas en une fois : six systèmes se passent le relais, avant, pendant et après le choc. On les ouvre dans l'ordre.\n\nChapitres\n__CHAPITRES__\n\nLes six dossiers et leurs sources : les descriptions des dossiers 002, 011, 013, 014, 019 et 025.\n\nReconstitutions 3D Système Décodé.",
+      "hashtags": ["#voiture", "#securiteroutiere"]
+    }
+  },
+  "sources": ["Les faits de chaque dossier sont ceux de son épisode (docs/faits/002, 011, 013, 014, 019, 025) ; les ponts n'ajoutent aucun chiffre."],
+  "beats": [
+    {
+      "id": "intro1",
+      "chap": "Ouverture",
+      "text": "Tu roules. Et dans une seconde, tu vas perdre le contrôle de ta voiture.",
+      "vo": "[tense] Tu roules. Et dans une seconde, tu vas perdre le contrôle de ta voiture."
+    },
+    {
+      "id": "intro2",
+      "text": "Entre cet instant et le moment où tu sors de l'habitacle, six systèmes vont se passer le relais. Aucun ne te demandera ton avis.",
+      "vo": "[conversational, curious] Entre cet instant et le moment où tu sors de l'habitacle, six systèmes vont se passer le relais. Aucun ne te demandera ton avis."
+    },
+    {
+      "id": "intro3",
+      "hold": 0.4,
+      "text": "On les ouvre dans l'ordre où ils entrent en scène. Et le dernier… ne vient même pas d'une voiture de route.",
+      "vo": "[curious] On les ouvre dans l'ordre où ils entrent en scène. Et le dernier... ne vient même pas d'une voiture de route."
+    },
+    {
+      "id": "pont-025",
+      "chap": "ESP",
+      "hold": 0.4,
+      "text": "Premier dossier. La voiture commence à glisser, et toi, tu n'as encore rien senti. Lui, si.",
+      "vo": "[warm, conversational] Premier dossier. La voiture commence à glisser, et toi, tu n'as encore rien senti. Lui, si."
+    },
+    {
+      "id": "pont-014",
+      "chap": "ABS",
+      "hold": 0.4,
+      "text": "La trajectoire est rattrapée. Mais l'obstacle est toujours devant toi. Alors tu écrases la pédale de frein…",
+      "vo": "[curious] La trajectoire est rattrapée. Mais l'obstacle est toujours devant toi. Alors tu écrases la pédale de frein..."
+    },
+    {
+      "id": "pont-019",
+      "chap": "Prétensionneur",
+      "hold": 0.4,
+      "text": "Les roues n'ont pas bloqué, tu as pu braquer. Mais le choc arrive quand même. Et dans ses tout premiers instants… ta ceinture bouge.",
+      "vo": "[conversational, curious] Les roues n'ont pas bloqué, tu as pu braquer. Mais le choc arrive quand même. Et dans ses tout premiers instants... ta ceinture bouge."
+    },
+    {
+      "id": "pont-002",
+      "chap": "Airbag",
+      "hold": 0.4,
+      "text": "Ta ceinture t'a plaqué contre le siège. Il reste ta tête… et le volant, juste devant.",
+      "vo": "[warm, conversational] Ta ceinture t'a plaqué contre le siège. Il reste ta tête... et le volant, juste devant."
+    },
+    {
+      "id": "pont-011",
+      "chap": "Fusible",
+      "hold": 0.4,
+      "text": "Le choc est passé. Tu es vivant. Mais si ta voiture est électrique, il reste un danger que tu ne vois pas : sous tes pieds.",
+      "vo": "[curious] Le choc est passé. Tu es vivant. Mais si ta voiture est électrique, il reste un danger que tu ne vois pas : sous tes pieds."
+    },
+    {
+      "id": "pont-013",
+      "chap": "Halo",
+      "hold": 0.4,
+      "text": "Cinq systèmes, dans ta voiture. Le sixième, on est allé le chercher là où les voitures vont le plus vite.",
+      "vo": "[conversational, curious] Cinq systèmes, dans ta voiture. Le sixième, on est allé le chercher là où les voitures vont le plus vite."
+    },
+    {
+      "id": "fin1",
+      "chap": "Fin",
+      "text": "Six systèmes. Aucun n'a été pensé pour le jour où tout va bien. Tous l'ont été pour celui où ça tourne mal.",
+      "vo": "[warm, conversational] Six systèmes. Aucun n'a été pensé pour le jour où tout va bien. Tous l'ont été pour celui où ça tourne mal."
+    },
+    {
+      "id": "fin2",
+      "hold": 0.3,
+      "text": "Dis-moi en commentaire : lequel tu ne savais pas que ta voiture avait ? L'ESP… ou le prétensionneur ?",
+      "vo": "[curious] Dis-moi en commentaire : lequel tu ne savais pas que ta voiture avait ? [short pause] L'ESP... ou le prétensionneur ?"
+    },
+    {
+      "id": "fin3",
+      "text": "Et envoie-la à quelqu'un qui vient d'avoir son permis : il roule avec les six. Un petit like, si tu as appris quelque chose.",
+      "vo": "[warm] Et envoie-la à quelqu'un qui vient d'avoir son permis : il roule avec les six. Un petit like, si tu as appris quelque chose."
+    },
+    {
+      "id": "fin4",
+      "text": "On se retrouve très vite, pour un autre dossier qui veille sur toi.",
+      "vo": "[warm] On se retrouve très vite, pour un autre dossier qui veille sur toi."
+    }
+  ],
+  "cues": {},
+  "bedVolume": 0.7,
+  "sfx": [
+    {
+      "type": "music",
+      "width": 0.7,
+      "sections": "chapters",
+      "drop": 0.5,
+      "gain": -21,
+      "curve": [
+        [0, 0.9, 0.5],
+        ["fin1-0.5", 0.8, 0.3]
+      ]
+    },
+    { "type": "drone", "gain": -27, "curve": [[0, 0.8]] }
+  ]
+}
