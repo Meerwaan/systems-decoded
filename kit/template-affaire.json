@@ -1,0 +1,251 @@
+{
+  "//": "Squelette d'une affaire réelle (docs/recette-long-affaire.md). `npm run new -- L05 hudson \"Hudson\" --affaire` part de kit/template-long et remplace ces clés-ci dans son episode.json.",
+  "genre": "affaire",
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "parts": ["ouvre", "normal", "rupture", "impro", "reponse", "enquete", "depuis", "du"]
+  },
+  "post": {
+    "youtube": {
+      "title": "Le paradoxe ou le chiffre fou de ce jour-là : le nom de l'affaire que les gens tapent",
+      "titleAlts": [
+        "La même promesse dite autrement, avec le nom de l'affaire",
+        "Le plan prévu contre ce qu'ils ont fait : le nom de l'affaire"
+      ],
+      "titleNote": "Putaclic mais fidèle : le fait le plus fou, puis « : » et le nom que les gens cherchent (autocomplétion de YouTube, vérifiée) ; chaque mot vrai, sourcé au rapport ; 60 à 90 caractères.",
+      "keyword": "le nom de l'affaire",
+      "descriptionTemplate": "L'accroche en une phrase, puis le nom de l'affaire : ces deux premières lignes sont celles que montre la recherche.\n\nChapitres\n__CHAPITRES__\n\nPièces du dossier et sources : le rapport officiel (lien), puis chaque pièce montrée, avec sa licence.\n\nLa 3D est une reconstitution d'après le rapport d'enquête. Abonne-toi : on se retrouve très vite, pour un autre jour où un plan a été mis à l'épreuve.\n\nLa question du commentaire ?",
+      "hashtags": ["#histoirevraie", "#securite"],
+      "pinned": "La question du commentaire, et sa réponse en une phrase.",
+      "endScreen": "Les 15 dernières secondes laissent la moitié droite de l'image libre pour l'écran de fin."
+    }
+  },
+  "thumb": {
+    "at": "impro+1",
+    "title": ["DEUX MOTS", "ÉNORMES"],
+    "tone": "signal",
+    "tag": "L'heure · le chiffre",
+    "cam": { "side": -420, "drift": 0 },
+    "grade": { "contrast": 1.32, "saturation": 1.15 }
+  },
+  "thumb2": {
+    "at": "rupture+1",
+    "title": ["LE PLAN", "N'AVAIT RIEN"],
+    "tone": "signal",
+    "tag": "Le plan prévu",
+    "cam": { "side": -420, "drift": 0 },
+    "grade": { "contrast": 1.32, "saturation": 1.15 }
+  },
+  "thumb3": {
+    "at": "ouvre+1",
+    "title": ["CE QUI", "LES A SAUVÉS"],
+    "tone": "veille",
+    "tag": "Le système",
+    "cam": { "side": -420, "drift": 0 },
+    "grade": { "contrast": 1.32, "saturation": 1.15 }
+  },
+  "sources": [],
+  "beats": [
+    {
+      "id": "accroche",
+      "chap": "L'instant : le nom de l'affaire, pas « Introduction »",
+      "fil": "tient",
+      "text": "15 h 27. Tes deux *moteurs* viennent de s'éteindre. L'heure réelle, à toi, au présent : la scène du titre.",
+      "vo": "[tense] Quinze heures vingt-sept. Tes deux moteurs viennent de s'éteindre. L'heure réelle, à toi, au présent : la scène du titre."
+    },
+    {
+      "id": "promesse",
+      "text": "Le fait du titre, dit avant trente secondes, sourcé au rapport : un fait qu'on a du mal à *croire*.",
+      "vo": "[conversational, curious] Le fait du titre, dit avant trente secondes, sourcé au rapport : un fait qu'on a du mal à croire."
+    },
+    {
+      "id": "curiosite",
+      "fil": "du",
+      "hold": 0.3,
+      "text": "Et une question à toi, dont la réponse n'arrive qu'à la *fin*… pas avant.",
+      "vo": "[serious] Et une question à toi, dont la réponse n'arrive qu'à la fin... pas avant."
+    },
+    {
+      "id": "defi",
+      "fil": "tient",
+      "hold": 1.2,
+      "text": "Pas de sommaire : un compte à rebours. Il reste… *quelques* secondes.",
+      "vo": "[curious] Pas de sommaire : un compte à rebours. Il reste... quelques secondes."
+    },
+    {
+      "id": "ouvre",
+      "chap": "On l'ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": ["[calm] Alors... [short pause] on l'ouvre."]
+    },
+    {
+      "id": "prevu",
+      "text": "Le plan prévu, couche par couche : ce que la check-list, la machine ou la règle devait faire ce jour-là. Et au bout… +le cœur+.",
+      "vo": "[conversational, curious] Le plan prévu, couche par couche : ce que la check-list, la machine ou la règle devait faire ce jour-là. Et au bout... le cœur."
+    },
+    {
+      "id": "faille",
+      "hold": 1.2,
+      "text": "Un plan parfait… pour un autre jour. Lequel ? On remonte un peu *plus tôt*.",
+      "vo": "[serious] Un plan parfait... pour un autre jour. Lequel ? On remonte un peu plus tôt."
+    },
+    {
+      "id": "normal",
+      "chap": "Plus tôt ce jour-là",
+      "fil": "detail",
+      "text": "Tout est normal. Une idée par phrase, l'heure réelle qui avance, et un détail qui *comptera*.",
+      "vo": "[warm, conversational] Tout est normal. Une idée par phrase, l'heure réelle qui avance, et un détail qui comptera."
+    },
+    {
+      "id": "relance1",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Ce détail, personne ne le remarque. Pourquoi… va-t-il tout *changer* ?",
+      "vo": "[curious] Ce détail, personne ne le remarque. Pourquoi... va-t-il tout changer ?"
+    },
+    {
+      "id": "rupture",
+      "chap": "La rupture : ce que le plan ne prévoyait pas",
+      "text": "L'instant de l'accroche, revu au ralenti : pourquoi le plan ne prévoyait *pas* ça.",
+      "vo": "[serious] L'instant de l'accroche, revu au ralenti : pourquoi le plan ne prévoyait pas ça."
+    },
+    {
+      "id": "paradoxe",
+      "text": "Un paradoxe du plan prévu, dit avec le sourire : il était fait pour un cas plus *grave*… pas pour celui-là.",
+      "vo": "[amused] Un paradoxe du plan prévu, dit avec le sourire : il était fait pour un cas plus grave... pas pour celui-là."
+    },
+    {
+      "id": "seuil",
+      "fil": "tient",
+      "hold": 1.2,
+      "text": "Et à partir de là, il leur reste ce qu'il reste à l'écran. Si tu veux voir ce qu'ils ont fait… +abonne-toi+, on y entre.",
+      "vo": "[conversational, curious] Et à partir de là, il leur reste ce qu'il reste à l'écran. Si tu veux voir ce qu'ils ont fait... abonne-toi, on y entre."
+    },
+    {
+      "id": "impro",
+      "chap": "L'improvisation, seconde par seconde",
+      "text": "15 h 28. Des phrases de trois à huit mots. L'heure revient. Aucune *précaution*.",
+      "vo": "[curious] Quinze heures vingt-huit. Des phrases de trois à huit mots. L'heure revient. Aucune précaution."
+    },
+    {
+      "id": "relance2",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Et là… une décision que *personne* n'avait prise avant eux ?",
+      "vo": "[curious] Et là... une décision que personne n'avait prise avant eux ?"
+    },
+    {
+      "id": "reponse",
+      "chap": "Le dénouement",
+      "paie": "tient",
+      "hold": 0.3,
+      "text": "Ça tient. Le bilan, dit une fois, *sobrement*.",
+      "vo": "[conversational, curious] Ça tient. Le bilan, dit une fois, sobrement."
+    },
+    {
+      "id": "enquete",
+      "chap": "L'enquête : ce que dit le rapport",
+      "paie": "detail",
+      "text": "Le rapport, montré comme pièce du dossier : ce qu'il a trouvé, et le détail du début, enfin *expliqué*.",
+      "vo": "[warm, conversational] Le rapport, montré comme pièce du dossier : ce qu'il a trouvé, et le détail du début, enfin expliqué."
+    },
+    {
+      "id": "relance3",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Mais une question restait : et si ça arrivait *demain* ?",
+      "vo": "[curious] Mais une question restait : et si ça arrivait demain ?"
+    },
+    {
+      "id": "depuis",
+      "chap": "Ce qui te protège depuis",
+      "text": "Ce qui te protège aujourd'hui grâce à ce jour-là : le système, la règle, la machine. Le décodage du film, et sa part d'+espoir+.",
+      "vo": "[warm, conversational] Ce qui te protège aujourd'hui grâce à ce jour-là : le système, la règle, la machine. Le décodage du film, et sa part d'espoir."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "L'idée reçue, retournée : ce jour-là, ce n'est pas la *chance* qui les a +sauvés+.",
+      "vo": "[warm, conversational] L'idée reçue, retournée : ce jour-là, ce n'est pas la chance qui les a sauvés."
+    },
+    {
+      "id": "du",
+      "chap": "Le fil du début, payé",
+      "paie": "du",
+      "text": "Et la question du début ? Sa réponse, maintenant, en deux phrases : ce que le film te *devait*.",
+      "vo": "[serious] Et la question du début ? Sa réponse, maintenant, en deux phrases : ce que le film te devait."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et toi, à leur place, dis-moi en +commentaire+ : ceci… ou cela ?",
+      "vo": "[curious] Et toi, à leur place, dis-moi en commentaire : [short pause] ceci... ou cela ?"
+    },
+    {
+      "id": "like",
+      "text": "Envoie-la à quelqu'un qui en a besoin, avec sa raison. Si tu as appris quelque chose, un petit +like+.",
+      "vo": "[warm] Envoie-la à quelqu'un qui en a besoin, avec sa raison. Si tu as appris quelque chose, un petit like."
+    },
+    {
+      "id": "abo",
+      "text": "On se retrouve très vite, pour un autre jour où un plan a été mis à l'épreuve.",
+      "vo": "[warm] On se retrouve très vite, pour un autre jour où un plan a été mis à l'épreuve."
+    },
+    {
+      "id": "boucle",
+      "text": "Un plan qui attend, lui aussi, le jour où tes deux moteurs…",
+      "vo": "[calm] Un plan qui attend, lui aussi, le jour où tes deux moteurs,"
+    }
+  ],
+  "cues": {
+    "titre": "promesse:fait",
+    "miniature": "accroche:moteurs",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:jour"
+  },
+  "sfx": [
+    { "type": "space", "mix": 0.22, "size": 0.84, "damp": 0.35 },
+    {
+      "type": "music",
+      "width": 0.7,
+      "sections": "chapters",
+      "skip": ["ouvre"],
+      "drop": 0.5,
+      "gain": -21,
+      "phone": 0.25,
+      "curve": [
+        [0, 0.9, 0.5],
+        ["ouvre-0.4", 0.55, 0],
+        ["normal-1", 0.8, 0.4],
+        ["rupture-1", 1, 0.6],
+        ["impro-1", 1, 0.85],
+        ["reponse", 0.7, 0.2],
+        ["depuis-1", 0.85, 0.4],
+        ["chute", 0.7, 0],
+        ["boucle", 0.8, 0.5]
+      ]
+    },
+    { "type": "drone", "gain": -27, "curve": [[0, 0.8], ["rewind", 0.8]] },
+    { "type": "ambience", "preset": "room", "from": 0, "gain": -36 },
+    { "type": "chapters", "style": "film", "skip": ["ouvre"] },
+    { "type": "boom", "at": 0.03, "gain": -13, "size": 1.2 },
+    { "type": "suck", "to": "ouvre-0.04", "dur": 0.3, "gain": -18 },
+    { "type": "hush", "from": "ouvre", "to": "explode-0.02", "depth": -14 },
+    { "type": "boom", "at": "ouvre$+0.05", "gain": -15, "size": 0.7 },
+    { "type": "click", "at": "ouvre$+0.22", "gain": -18 },
+    { "type": "click", "at": "ouvre$+0.38", "gain": -19, "pitch": 0.85 },
+    { "type": "click", "at": "ouvre$+0.54", "gain": -20, "pitch": 1.15 },
+    { "type": "impact", "at": "toloop", "gain": -16, "size": 0.7 },
+    { "type": "rewind", "at": "rewind", "dur": 1, "gain": -21 }
+  ]
+}

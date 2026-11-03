@@ -28,6 +28,7 @@
     "metrics": "node scripts/sd.mjs metrics",
     "social": "node scripts/sd.mjs social",
     "srt": "node scripts/sd.mjs srt",
+    "compil": "node scripts/sd.mjs compil",
     "catalogue": "node scripts/catalogue.mjs"
   },
   "repository": {
