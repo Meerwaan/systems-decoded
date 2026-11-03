@@ -105,7 +105,7 @@ On ne reprend pas le trait de @souslecapot_ (dessin blanc sur bleu nuit, vues en
 ## Du thème à la vidéo
 
 ```
-npm run new     -- 003 ascenseur "Ascenseur"   crée episodes/003-ascenseur depuis kit/template (Lnn : kit/template-long ; HSnn : kit/series.json)
+npm run new     -- 003 ascenseur "Ascenseur"   crée episodes/003-ascenseur depuis kit/template (Lnn : kit/template-long ; HSnn : kit/series.json ; une affaire réelle : `-- L05 hudson "Hudson" --affaire`)
 npm run script  -- 003                         script, minutage, repères (et vérification de l'écriture)
 npm run salle   -- 031 032 033                 un lot de scripts : accroche, mots, ✗/⚠, devis voix de chacun et total (ne dépense rien)
 npm run credits                                solde ElevenLabs (appel gratuit)
@@ -122,6 +122,7 @@ npm run render  -- 003 [--draft]               MP4 dans renders/, audio à -14 L
 npm run qa      -- 003 [--file renders/003-ascenseur-draft.mp4]   le MP4 rendu (ou le brouillon) : voix calée, niveau, aucune image parasite, fluidité, rythme
 npm run cover   -- 003                         couverture de grille (long : --alt 2, --alt 3 ; essais : --thumbs essais.json --out … --gpu)
 npm run srt     -- L01                         sous-titres et chapitres horodatés d'un long
+npm run compil  -- C01 [--draft]               compilation YouTube 16:9 : nos courts rendus + une voix neuve (docs/recette-compil.md)
 npm run phone   -- 003                         copie du film sous 30 Mio (renders/<ep>-iphone.mp4), pour l'envoyer au téléphone par la conversation
 npm run social  [-- --out <dossier>] [--only facebook|stories|youtube]   stories, bannière YouTube, post Facebook (scripts/social.mjs)
 npm run chrono  -- 012 <étape> | stop | agent <nom> --jetons N … | jauge --session N --hebdo N   chronomètre de la fabrication
@@ -192,6 +193,8 @@ Des longs de 9 à 14 minutes, 16:9, numérotés `L01`, `L02`… — « un vrai r
 - **La voix du long** : turbo, un narrateur qui raconte ; une requête par chapitre (`voice.parts` ; 10 000 caractères au plus par requête) ; `[conversational, curious]`, `[warm, conversational]`, `[curious]` en rotation, `[amused]` sur quatre paradoxes au plus, `[calm]` pour « on l'ouvre » ; jamais `[firm, matter-of-fact]`, `[thoughtful]`, `[urgent]`, `[dramatic]`, `[ominous]`, `[low, grave voice]`, ni `[tense]` hors de l'accroche, ni `[serious]` au test.
 - **Les recettes, à lire avant tout long** : `docs/recette-long.md`, `docs/recette-long-image.md`, `docs/recette-long-retention.md`. Version longue : `docs/memoire/long-reference.md` ; L01 à L04 : `docs/memoire/dossiers-longs.md`.
 
+**Depuis le rush du 29/10 (`docs/plan-rush-youtube.md`), deux formes de plus sur YouTube** : **l'affaire réelle** (un long de 12 à 14 min sur un vrai jour où un plan de sécurité a été mis à l'épreuve, reconstitué en 3D à l'heure réelle, qui finit sur ce qui te protège depuis ; jamais d'extraits d'autres chaînes : le réel entre comme pièce du dossier — `docs/recette-long-affaire.md`) et **la compilation** (`Cnn` : nos courts rendus, une voix neuve qui les relie en une histoire — `docs/recette-compil.md`). Et toujours un court par jour.
+
 **Les promos des longs** sont des courts hors-série (`HSnn`), faits par l'agent `promo` (`.claude/agents/promo.md`, `docs/recette-promo*.md`) : ne pas spoiler le long, frustrer, garder la boucle et « on l'ouvre » ; le long et ses liens d'abord, la promo ensuite.
 
 ## Index : où trouver le reste
@@ -208,6 +211,8 @@ Des longs de 9 à 14 minutes, 16:9, numérotés `L01`, `L02`… — « un vrai r
 | livrer, envoyer au téléphone, le bureau | `docs/memoire/publication.md` |
 | les chiffres d'audience et ce qu'ils disent | `docs/memoire/audience.md`, `metrics/audience.json` |
 | un long ou une promo | `docs/recette-long*.md`, `docs/recette-promo*.md`, `docs/memoire/long-reference.md`, `docs/memoire/dossiers-longs.md` |
+| une affaire réelle (un long sur un vrai jour) | `docs/recette-long-affaire.md` |
+| une compilation (nos courts + une voix neuve) | `docs/recette-compil.md` |
 | l'état et les leçons d'un dossier court | `docs/memoire/dossiers-001-017.md`, `docs/memoire/dossiers-018-030.md` ; les nuits : `docs/journal/` |
 | proposer la suite (sujets faits, écartés, demandés) | `docs/memoire/sujets.md` |
 | le rush YouTube (4 000 h avant le 31/01/2027 : rythme, affaires réelles, compilations, stock de courts) | `docs/plan-rush-youtube.md` |
