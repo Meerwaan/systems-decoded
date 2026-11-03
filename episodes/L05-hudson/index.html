@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Système Décodé · L05 · Hudson</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <link rel="stylesheet" href="gen/long.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* The recurring devices of the long format are styled in kit/long.css (header, chapter cards, keywords,
+         facts). The chapters create their facts and chips from script (kit/lib/long.js: fact, chipEl): this page
+         does not change from one chapter to the next, so several hands can stage chapters at the same time. */
+      /* L05, an affaire: the header's second counter (the time left before the river), left of the date */
+      .long .hud__count { position: absolute; right: 760px; top: 0; text-align: right; opacity: 0; }
+      .long .hud__count-l { font: 500 16px/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-dim); }
+      .long .hud__count-v { margin-top: 8px; font: 700 46px/1 var(--mono); letter-spacing: -0.02em; color: var(--signal); }
+      /* the pièces du dossier (src/pieces.js): a real document, framed, numbered, its source under it */
+      #pieces { position: absolute; inset: 0; pointer-events: none; }
+      .piece { position: absolute; right: 96px; width: 620px; padding: 18px 20px 20px; background: rgba(7, 10, 12, 0.86); border: 1px solid rgba(233, 228, 216, 0.28); opacity: 0; }
+      .piece--left { right: auto; left: 96px; }
+      .piece__n { font: 500 17px/1 var(--mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-dim); }
+      .piece__img { margin-top: 14px; height: 400px; background: #0b0e10 center / contain no-repeat; }
+      .piece__t { margin-top: 14px; font: 700 30px/1.1 var(--display); text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink); }
+      .piece__s { margin-top: 8px; font: 500 15px/1.3 var(--mono); letter-spacing: 0.06em; color: var(--ink-dim); }
+    </style>
+  </head>
+  <body class="long">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="680.7" data-width="1920" data-height="1080">
+      <canvas id="stage" width="1920" height="1080"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1920 1080"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier L05 · Affaire réelle</span></div>
+        <div class="hud__title" id="hud-title">Vol 1549 · L'Hudson</div>
+        <div class="hud__step"><div class="hud__step-n" id="hud-step-n">15 janv. 2009</div><div class="hud__step-t" id="hud-step-t">New York · vol 1549</div></div>
+        <div class="hud__count" id="hud-count"><div class="hud__count-l">Avant l'eau</div><div class="hud__count-v" id="hud-count-v">3:32</div></div>
+        <div class="hud__temp"><div class="hud__temp-l">Heure de New York</div><div class="hud__temp-v" id="hud-temp-v">15:27:11</div></div>
+        <div class="hud__rule"></div>
+        <div class="hud__line" id="hud-line"></div>
+        <em class="hud__brand">Système Décodé</em>
+      </header>
+
+      <!-- the chapters' chips and facts are created here by script -->
+      <div id="chips" class="layer"></div>
+      <div id="facts" class="layer"></div>
+      <!-- the pièces du dossier (src/pieces.js · showPiece) -->
+      <div id="pieces"></div>
+
+      <!-- the chute (kit/lib/blocks.js · retitle) -->
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Ce qui les a sauvés</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">Un miracle<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Une liste de pièces</span>
+          </span>
+        </div>
+      </div>
+
+      <div id="callouts" class="layer"></div>
+      <div id="keywords"></div>
+      <div id="chapters"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

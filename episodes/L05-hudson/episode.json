@@ -1,0 +1,1344 @@
+{
+  "id": "L05",
+  "slug": "hudson",
+  "title": "Hudson",
+  "format": "long",
+  "genre": "affaire",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "parts": [
+      "plan",
+      "normal",
+      "birds",
+      "impro",
+      "lga",
+      "descente",
+      "toucher",
+      "sim",
+      "tiers",
+      "depuis",
+      "du"
+    ]
+  },
+  "post": {
+    "youtube": {
+      "title": "Demi-tour ou fleuve ? Comment Sully a posé son avion sur l'Hudson",
+      "titleAlts": [
+        "À 860 m, une check-list faite pour 6 000 m : Sully et l'avion de l'Hudson",
+        "Miracle de l'Hudson : ce qui a vraiment sauvé les 155 personnes à bord"
+      ],
+      "titleNote": "Relevé de l'autocomplétion YouTube (fr, 03/11/2026) : les requêtes vivantes sont « avion hudson » (river, 2009, reportage, crash), « amerrissage hudson » (vidéo, documentaire), « vol 1549 us airways », « sully avion » ; « miracle de l'hudson » n'en a presque aucune. Les titres vont par paires avec les miniatures, chacun complète la sienne sans la répéter : A avec « IL RESTE 3 MIN 32 » (le chrono → le choix, la question du film) ; B avec « 2 OIES, 2 MOTEURS » (la cause → le paradoxe du rapport : check-list conçue pour une double panne au-dessus de 20 000 ft, impact à 859 m) ; C avec « PAS UN MIRACLE » (le mot que les gens tapent → la miniature le contredit ; 150 passagers et 5 membres d'équipage). Sully : surnom de Chesley Sullenberger, nommé dans le film.",
+      "keyword": "avion de l'Hudson",
+      "descriptionTemplate": "L'avion de l'Hudson, 15 janvier 2009 : le vol US Airways 1549 perd la poussée de ses deux moteurs dans un vol d'oies, à 860 m au-dessus de New York. Le commandant Chesley « Sully » Sullenberger a 3 min 32 pour le poser sur le fleuve.\n\nUn documentaire en 3D qui reconstitue l'amerrissage seconde par seconde, d'après le rapport officiel du NTSB : ce qu'il y a dans un Airbus A320, pourquoi la check-list de double panne moteur était écrite pour 6 000 m, le geste qui n'était pas dans l'ordre, ce que le simulateur a dit d'un demi-tour vers LaGuardia, et l'épreuve que les moteurs doivent passer depuis 2023 face aux oiseaux.\n\nChapitres\n__CHAPITRES__\n\nPièces du dossier et sources\n· NTSB, Aircraft Accident Report AAR-10/03 (2010), domaine public : https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1003.pdf\n· FAA, règle « Engine Bird Ingestion », Federal Register, 4 avril 2023 : https://www.govinfo.gov/content/pkg/FR-2023-04-04/html/2023-06413.htm\n· Photos : U.S. Coast Guard (USCG Press, Flickr), licence CC BY 2.0 ; USACE New York District et NTSB, domaine public — via Wikimedia Commons.\n· Associated Press, 2016, sur le suivi des recommandations.\n\nLa 3D est une reconstitution d'après le rapport d'enquête ; le commandant Sullenberger et le copilote Jeffrey Skiles sont représentés en silhouette. Aucune image du film Sully ni d'aucune chaîne.\n\nEt toi : moteurs presque éteints à 860 m, l'aéroport derrière toi… demi-tour ou fleuve ?\n\nSystème Décodé ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite, pour un autre jour où un plan a été mis à l'épreuve.",
+      "hashtags": [
+        "#hudson",
+        "#aviation",
+        "#sully",
+        "#documentaire",
+        "#histoirevraie"
+      ],
+      "pinned": "Demi-tour ou fleuve ? Le simulateur a répondu : avec 35 secondes pour comprendre et décider, le retour à LaGuardia échoue.",
+      "endScreen": "Les 15 dernières secondes laissent la moitié droite de l'image libre pour l'écran de fin.",
+      "description": "L'avion de l'Hudson, 15 janvier 2009 : le vol US Airways 1549 perd la poussée de ses deux moteurs dans un vol d'oies, à 860 m au-dessus de New York. Le commandant Chesley « Sully » Sullenberger a 3 min 32 pour le poser sur le fleuve.\n\nUn documentaire en 3D qui reconstitue l'amerrissage seconde par seconde, d'après le rapport officiel du NTSB : ce qu'il y a dans un Airbus A320, pourquoi la check-list de double panne moteur était écrite pour 6 000 m, le geste qui n'était pas dans l'ordre, ce que le simulateur a dit d'un demi-tour vers LaGuardia, et l'épreuve que les moteurs doivent passer depuis 2023 face aux oiseaux.\n\nChapitres\n00:00 15 h 27 : des oies dans les deux moteurs\n00:26 Ce qu'il y a dans un A320\n01:27 La check-list « deux moteurs »\n02:23 15 h 24 : le décollage de LaGuardia\n03:07 La check-list faite pour un autre ciel\n04:07 Les vingt premières secondes : l'APU\n04:51 LaGuardia, Teterboro… ou l'Hudson ?\n06:07 Les 75 dernières secondes\n06:44 15 h 30 min 43 s : l'amerrissage\n07:57 Pouvait-il rentrer à LaGuardia ?\n08:46 Le geste qui n'était pas dans l'ordre\n09:51 Ce qui te protège depuis\n10:43 Alors, qu'est-ce qui les a sauvés ?\n\nPièces du dossier et sources\n· NTSB, Aircraft Accident Report AAR-10/03 (2010), domaine public : https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1003.pdf\n· FAA, règle « Engine Bird Ingestion », Federal Register, 4 avril 2023 : https://www.govinfo.gov/content/pkg/FR-2023-04-04/html/2023-06413.htm\n· Photos : U.S. Coast Guard (USCG Press, Flickr), licence CC BY 2.0 ; USACE New York District et NTSB, domaine public — via Wikimedia Commons.\n· Associated Press, 2016, sur le suivi des recommandations.\n\nLa 3D est une reconstitution d'après le rapport d'enquête ; le commandant Sullenberger et le copilote Jeffrey Skiles sont représentés en silhouette. Aucune image du film Sully ni d'aucune chaîne.\n\nEt toi : moteurs presque éteints à 860 m, l'aéroport derrière toi… demi-tour ou fleuve ?\n\nSystème Décodé ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite, pour un autre jour où un plan a été mis à l'épreuve.",
+      "chapters": [
+        "00:00 15 h 27 : des oies dans les deux moteurs",
+        "00:26 Ce qu'il y a dans un A320",
+        "01:27 La check-list « deux moteurs »",
+        "02:23 15 h 24 : le décollage de LaGuardia",
+        "03:07 La check-list faite pour un autre ciel",
+        "04:07 Les vingt premières secondes : l'APU",
+        "04:51 LaGuardia, Teterboro… ou l'Hudson ?",
+        "06:07 Les 75 dernières secondes",
+        "06:44 15 h 30 min 43 s : l'amerrissage",
+        "07:57 Pouvait-il rentrer à LaGuardia ?",
+        "08:46 Le geste qui n'était pas dans l'ordre",
+        "09:51 Ce qui te protège depuis",
+        "10:43 Alors, qu'est-ce qui les a sauvés ?"
+      ],
+      "tags": [
+        "amerrissage hudson",
+        "avion hudson",
+        "avion hudson 2009",
+        "miracle de l'hudson",
+        "miracle sur l'hudson",
+        "vol 1549",
+        "us airways 1549",
+        "sully",
+        "sullenberger",
+        "sully avion",
+        "hudson river",
+        "crash avion hudson",
+        "amerrissage hudson documentaire",
+        "airbus a320",
+        "oiseaux moteur avion",
+        "double panne moteur",
+        "rapport ntsb",
+        "documentaire aviation",
+        "reconstitution 3d",
+        "histoire vraie avion"
+      ]
+    }
+  },
+  "thumb": {
+    "at": "impact+3",
+    "title": [
+      "IL RESTE",
+      "3 MIN 32"
+    ],
+    "tone": "signal",
+    "tag": "15:27:11 · 860 M",
+    "cam": {
+      "fov": 34,
+      "shift": 0,
+      "side": 0,
+      "roll": 0,
+      "drift": 0,
+      "dof": 0,
+      "tx": -500,
+      "ty": 60,
+      "tz": 120,
+      "d": 3000,
+      "az": -40,
+      "el": -8
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  },
+  "thumb2": {
+    "at": "miniature2",
+    "title": [
+      "2 OIES,",
+      "2 MOTEURS"
+    ],
+    "tone": "signal",
+    "tag": "US AIRWAYS 1549",
+    "cam": {
+      "fov": 40,
+      "shift": 0,
+      "side": 0,
+      "roll": 0,
+      "drift": 0,
+      "dof": 0,
+      "tx": -380,
+      "ty": -235,
+      "tz": 585,
+      "d": 420,
+      "az": 28,
+      "el": 14
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    },
+    "state": {
+      "lock": 1,
+      "goose": 1,
+      "burn": 1
+    }
+  },
+  "thumb3": {
+    "at": "radeaux:radeaux",
+    "title": [
+      "PAS UN",
+      "MIRACLE"
+    ],
+    "tone": "veille",
+    "tag": "RAPPORT NTSB",
+    "cam": {
+      "fov": 36,
+      "shift": 0,
+      "side": 450,
+      "roll": 0,
+      "drift": 0,
+      "dof": 0,
+      "tx": -1310,
+      "ty": -110,
+      "tz": 420,
+      "d": 1400,
+      "az": -40,
+      "el": 14
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    },
+    "state": {
+      "lock": 1,
+      "rafts": 1
+    }
+  },
+  "sources": [
+    "Faits : docs/faits/L05-hudson.md (recherche du 02/11/2026, niveaux P/S/O, 36 requêtes). Source maîtresse lue en entier : NTSB, Aircraft Accident Report NTSB/AAR-10/03, « Loss of Thrust in Both Engines After Encountering a Flock of Birds and Subsequent Ditching on the Hudson River, US Airways Flight 1549 », adopté le 4 mai 2010 — https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1003.pdf (P, domaine public).",
+    "Chronologie (heures EST du rapport, p. 1-5, 41-48) : décollage autorisé 15:24:54 piste 4 ; check-list après décollage 15:27:07 ; « birds » 15:27:10.4 ; impacts 15:27:11 à 2 818 ft au-dessus du sol (859 m) ; ignition 15:27:19 ; APU ≈ 15:27:21 ; « my aircraft » 15:27:23 ; point haut ≈ 3 060 ft (933 m) à 15:27:30 ; mayday 15:27:33 (le mot n'est pas transmis, autre trafic, note 7) ; « relight 300 knots, we don't have that » ≈ 15:28:00 ; LGA piste 13 refusée 15:28:05 (« we may end up in the Hudson ») ; moteur gauche « coming back up a little bit » 15:28:25 ; piste 31 refusée 15:28:31 ; TCAS « traffic » (hélicoptère) 15:28:36 ; Teterboro évoqué 15:28:46 ; « brace for impact » 15:29:11 ; Teterboro piste 1 refusée 15:29:21 ; « we're gonna be in the Hudson » 15:29:28 ; « no relight », volets 15:29:44 ; GPWS « terrain, pull up » dès 15:30:24 ; ≈ 100 ft 15:30:36 ; mini-manche en butée 15:30:41 ; contact 15:30:43 à 125 nœuds (231 km/h) ; issues d'aile gauche 15:30:58 ; toboggan-radeau 1R 15:31:16 ; premier navire 15:34:40. Durée impact → eau : 3 min 32 s (212 s, calcul). « 208 secondes » ne correspond à aucun repère : non utilisé.",
+    "Le plan prévu (p. 52-56, 87-88, conclusions 12-14) : check-list QRH « Engine Dual Failure », 3 parties sur 3 pages, conçue pour une double panne au-dessus de 20 000 ft (6 096 m, « sept fois plus bas » = 6 096 / 859) ; vitesse de rallumage 300 nœuds, vitesse maxi atteinte 214 nœuds (p. 2 note 8) ; ≈ un tiers fait ; partie 3 (amerrissage) jamais atteinte ; la check-list d'amerrissage séparée supposait au moins un moteur en marche ; la plus applicable ; Airbus n'avait pas envisagé de check-list basse altitude ; l'APU démarré par le commandant de mémoire, avant la check-list, a gardé la loi normale ; « ce geste n'aurait pas été fait si l'équipage avait simplement suivi l'ordre de la check-list ». 30 à 40 s de tentatives de rallumage (conclusion 7).",
+    "L'A320 (p. 12-13, 20, 47) : loi normale, l'avion ne peut pas décrocher ; un IDG ne fournit du courant que si N2 ≥ ≈ 54 % ; certification d'amerrissage sur plus de 200 essais de maquettes en bassin ; bouton « ditching » qui ferme les vannes sous la ligne de flottaison (note 101 ; le rapport ne dit pas s'il a été pressé : la voix ne le dit pas) ; sous 100 ft, ordres à cabrer atténués. Table 2 : vitesse verticale 12,5 ft/s contre 1 ft/s certifié ; pression externe moyenne 15,1 psi contre 3,5. Basse vitesse en finale, alerte de vitesse inhibée par le GPWS ; charge de travail et manque de formation de l'industrie (conclusions 16-17).",
+    "Les oiseaux et les moteurs (conclusion 6, p. 21-22) : bernaches du Canada identifiées par le Smithsonian, ≈ 8 lb (3,6 kg), au moins deux par moteur, une dans chaque cœur ; N1 82 → 35 % (gauche) et 15 % (droit) ; gros oiseau de certification de 4 lb (1,8 kg), hors cœur. Règle FAA « Engine Bird Ingestion », Amendment 33-36, Federal Register 2023-06413 (4 avril 2023, effective le 5 juin 2023) : nouvel essai 33.76(e) d'un oiseau visé dans le cœur ; cite le vol 1549 et A-10-64/65 (P).",
+    "Le vol et les secours (p. 1, 41-42, 2.9) : 150 passagers, 5 membres d'équipage ; −7 °C dehors, eau à 5,2 °C ; avion équipé pour un vol long au-dessus de l'eau (toboggans-radeaux avant) alors que la route ne l'exigeait pas ; premier trajet ensemble des deux pilotes (p. 1 note 3) ; copilote aux commandes au décollage ; ferries de New York Waterway premiers, sept en dix minutes, bateau des pompiers à 8 min, garde-côtes à 17 min, tous secourus en ≈ 20 min ; 5 blessés graves, aucun mort. Simulations (p. 49-50) : Toulouse, 14-16 avril 2009, 15 passes retenues, 8 réussies avec virage immédiat, 1 passe avec 35 s de retard (demandée par le NTSB) : échec ; conclusion 15 : l'amerrissage donnait la plus forte probabilité de survie.",
+    "Ce qui n'a pas changé (S) : Associated Press, 19/09/2016 (Insurance Journal, https://insurancejournal.com/news/national/2016/09/19/426808.htm) : 6 recommandations appliquées sur 35, 14 « closed-unacceptable », check-list basse altitude et gilets sur tous les vols non imposés. Le film Sully (2016) : enquêteurs (Benzon, Brenner) et Robert Sumwalt contestent l'image d'un NTSB hostile (S, Flight Safety Australia 2016) ; aucune image ni réplique du film.",
+    "Pièces du dossier (licences vérifiées par l'agent faits) : rapport AAR-10/03 et ses figures 1, 3, 4, 5 (domaine public ; pas la figure 2, sans crédit) ; « Flight 1549 engine recovered » (USACE, Commons, domaine public) ; « USAir 1549 bird feather » (NTSB, Commons, domaine public) ; extrait radio TRACON FAA (Commons, domaine public, la radio, jamais le cockpit). Photos USCG et USACE Hayward en CC BY 2.0, crédit obligatoire.",
+    "Contre-vérification du 02/11/2026 : docs/faits/L05-contre-verification.md (douze phrases corrigées : certifie — maquettes d'A300 B2 et de Mercure, p. 21 ; pression — le rapport donne 1 ft/s en table et 3,5 ft/s dans le texte, la voix dit seulement « presque quatre mètres par seconde » pour l'avion ; coque — endommagée à l'arrière, la voix dit « ne se disloque pas » ; apu — la source de secours est la RAT, l'APU prend le relais des moteurs ; memoire — « de mémoire » ne vaut que pour l'allumage ; page — le bouton n'est pas placé sur la page ; virage — le rapport donne Manhattan ; consigne — passes vers LGA 22, LGA 13 et Teterboro 19 ; seul ; mauvaise — Airbus n'avait pas prévu de check-list basse altitude ; place ; reste — « heeded »).",
+    "Ce que l'image reconstitue (architecte, 02/11/2026) : l'A320, son moteur CFM56, l'APU, le cockpit et New York sont des reconstitutions 3D, formes et positions arrondies ; la trajectoire est simplifiée d'après la figure 1 du rapport ; la maquette de New York (1 : 2 000) et le bassin d'essais sont des maquettes, aucune distance ni hauteur n'y est écrite ; le bouton « amerrissage » est montré éteint et jamais enfoncé (le rapport ne dit pas s'il a été pressé) ; aucun moteur n'est montré arrêté (35 % et 15 %) ; les pilotes et les passagers sont des silhouettes de verre ; l'heure de l'en-tête est celle que dit la voix, d'après la chronologie du rapport ; les pièces du dossier sont des documents du domaine public (NTSB, USACE) ou sous licence CC BY 2.0 (U.S. Coast Guard), crédités à l'écran."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "chap": "15 h 27 : des oies dans les deux moteurs",
+      "text": "[15 h 27|Quinze heures vingt-sept]. Tes deux moteurs viennent d'avaler des *oies*.",
+      "vo": "[tense] Quinze heures vingt-sept. Tes deux moteurs viennent d'avaler des oies.",
+      "voAlt": [
+        "[tense] Quinze heures vingt-sept. [short pause] Tes deux moteurs viennent d'avaler des oies."
+      ]
+    },
+    {
+      "id": "promesse",
+      "fil": "checklist",
+      "text": "Tu es à [860|huit cent soixante] mètres au-dessus de New York. Et ta check-list a été écrite pour une panne à plus de [6 000|six mille] *mètres*.",
+      "vo": "[conversational, curious] Tu es à huit cent soixante mètres au-dessus de New York. Et ta check-list a été écrite pour une panne à plus de six mille mètres."
+    },
+    {
+      "id": "defi",
+      "fil": "tient",
+      "text": "Il te reste [3 min 32|trois minutes et trente-deux secondes]. [155|Cent cinquante-cinq] personnes à bord. Et l'aéroport… est *derrière* toi.",
+      "vo": "[serious] Il te reste trois minutes et trente-deux secondes. Cent cinquante-cinq personnes à bord. Et l'aéroport... est derrière toi."
+    },
+    {
+      "id": "curiosite",
+      "fil": "du",
+      "hold": 0.3,
+      "text": "Tu connais la fin : tout le monde s'en sort. On a appelé ça un *miracle*. Mais si ce n'en était pas un… qu'est-ce qui les a vraiment sauvés ?",
+      "vo": "[curious] Tu connais la fin : tout le monde s'en sort. On a appelé ça un miracle. Mais si ce n'en était pas un... qu'est-ce qui les a vraiment sauvés ?"
+    },
+    {
+      "id": "dessous",
+      "hold": 0.3,
+      "text": "Pour le savoir, il faut regarder ce que cet avion a dans le ventre. Et ce qui vient d'y *entrer*…",
+      "vo": "[warm, conversational] Pour le savoir, il faut regarder ce que cet avion a dans le ventre. Et ce qui vient d'y entrer..."
+    },
+    {
+      "id": "ouvre",
+      "chap": "Ce qu'il y a dans un A320",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ]
+    },
+    {
+      "id": "eclate",
+      "text": "Un Airbus [A320|A trois cent vingt]. Sous chaque aile, un moteur : une grande soufflante aspire l'air, en comprime une partie, la brûle… et rejette tout vers l'arrière.",
+      "vo": "[curious] Un Airbus A trois cent vingt. Sous chaque aile, un moteur : une grande soufflante aspire l'air, en comprime une partie, la brûle... et rejette tout vers l'arrière."
+    },
+    {
+      "id": "coeur",
+      "fil": "oie",
+      "text": "Au centre, le +cœur+ du moteur, là où l'air devient du feu. Ce jour-là, dans chacun des deux cœurs… une oie est entrée.",
+      "vo": "[conversational, curious] Au centre, le cœur du moteur, là où l'air devient du feu. Ce jour-là, dans chacun des deux cœurs... une oie est entrée."
+    },
+    {
+      "id": "courant",
+      "text": "Ces moteurs ne font pas que pousser. Chacun fait tourner une génératrice : c'est elle qui fabrique l'électricité de l'avion. Mais si le moteur ralentit trop… elle se *tait*.",
+      "vo": "[warm, conversational] Ces moteurs ne font pas que pousser. Chacun fait tourner une génératrice : c'est elle qui fabrique l'électricité de l'avion. Mais si le moteur ralentit trop... elle se tait."
+    },
+    {
+      "id": "manche",
+      "text": "Et cet avion-là vole à l'électricité. Ici, le manche ne tire aucun câble : il envoie des ordres à des ordinateurs. Et ces ordinateurs suivent une règle, la +loi normale+. Avec elle, l'avion ne peut pas décrocher.",
+      "vo": "[curious] Et cet avion-là vole à l'électricité. Ici, le manche ne tire aucun câble : il envoie des ordres à des ordinateurs. Et ces ordinateurs suivent une règle, la loi normale. Avec elle, l'avion ne peut pas décrocher."
+    },
+    {
+      "id": "alpha",
+      "text": "Tu tires trop fort sur le manche ? L'ordinateur ne lèvera pas le nez au-delà de la limite. C'est une protection. Retiens-la : elle aura son mot à dire.",
+      "vo": "[conversational, curious] Tu tires trop fort sur le manche ? L'ordinateur ne lèvera pas le nez au-delà de la limite. C'est une protection. Retiens-la : elle aura son mot à dire."
+    },
+    {
+      "id": "apu",
+      "fil": "apu",
+      "text": "Mais sans le courant des moteurs, plus de loi normale. Alors dans la queue, une troisième petite turbine prend le relais : l'[APU|A-P-U].",
+      "vo": "[conversational, curious] Mais sans le courant des moteurs, plus de loi normale. Alors dans la queue, une troisième petite turbine prend le relais : l'A-P-U."
+    },
+    {
+      "id": "secours",
+      "hold": 0.8,
+      "text": "Elle sert surtout au sol. En vol, presque personne n'y pense. Jusqu'au jour où les moteurs ne donnent plus de *courant*… et ce jour-là, qui y pensera ?",
+      "vo": "[warm, conversational] Elle sert surtout au sol. En vol, presque personne n'y pense. Jusqu'au jour où les moteurs ne donnent plus de courant... et ce jour-là, qui y pensera ?"
+    },
+    {
+      "id": "plan",
+      "chap": "La check-list « deux moteurs »",
+      "text": "Et pour le jour où les deux moteurs lâchent, il y a un plan. Une check-list : « perte de poussée sur les deux moteurs ».",
+      "vo": "[curious] Et pour le jour où les deux moteurs lâchent, il y a un plan. Une check-list : perte de poussée sur les deux moteurs."
+    },
+    {
+      "id": "pages",
+      "fil": "checklist",
+      "text": "Trois parties, sur trois pages. D'abord, rallumer les moteurs. Ensuite, planer. Et à la fin seulement… se poser, sur terre ou sur l'eau.",
+      "vo": "[conversational, curious] Trois parties, sur trois pages. D'abord, rallumer les moteurs. Ensuite, planer. Et à la fin seulement... se poser, sur terre ou sur l'eau."
+    },
+    {
+      "id": "certifie",
+      "text": "Même l'eau est prévue. L'[A320|A trois cent vingt] est certifié pour amerrir, d'après plus de [200|deux cents] essais en bassin sur des maquettes d'avions voisins.",
+      "vo": "[warm, conversational] Même l'eau est prévue. L'A trois cent vingt est certifié pour amerrir, d'après plus de deux cents essais en bassin sur des maquettes d'avions voisins."
+    },
+    {
+      "id": "certifie2",
+      "fil": "tient",
+      "text": "Mais certifié pour toucher l'eau comment ? À quelle vitesse ? Retiens la question : au moment du choc, elle comptera.",
+      "vo": "[conversational, curious] Mais certifié pour toucher l'eau comment ? À quelle vitesse ? Retiens la question : au moment du choc, elle comptera."
+    },
+    {
+      "id": "bouton",
+      "text": "Il y a même un bouton dans le cockpit : « amerrissage ». Il ferme les ouvertures sous la ligne de flottaison… pour que l'avion flotte plus longtemps.",
+      "vo": "[curious] Il y a même un bouton dans le cockpit : amerrissage. Il ferme les ouvertures sous la ligne de flottaison... pour que l'avion flotte plus longtemps."
+    },
+    {
+      "id": "refonte",
+      "text": "En deux mille cinq, la check-list a même été refondue : l'amerrissage y est rangé tout au bout, dans la troisième partie.",
+      "vo": "[warm, conversational] En deux mille cinq, la check-list a même été refondue : l'amerrissage y est rangé tout au bout, dans la troisième partie."
+    },
+    {
+      "id": "paradoxe",
+      "text": "Un plan complet, donc. Pensé pour une panne à plus de six mille mètres… là où un avion peut planer de longues minutes.",
+      "vo": "[amused] Un plan complet, donc. Pensé pour une panne à plus de six mille mètres... là où un avion peut planer de longues minutes."
+    },
+    {
+      "id": "faille",
+      "text": "Ce jeudi-là, l'avion vole sept fois plus bas. Et pour lire trois pages… il n'aura pas le *temps*.",
+      "vo": "[serious] Ce jeudi-là, l'avion vole sept fois plus bas. Et pour lire trois pages... il n'aura pas le temps."
+    },
+    {
+      "id": "avant",
+      "fil": "detail",
+      "hold": 1,
+      "text": "Mais avant les oies, il y a un détail. Un détail que personne ne remarque… et qui va compter.",
+      "vo": "[conversational, curious] Mais avant les oies, il y a un détail. Un détail que personne ne remarque... et qui va compter."
+    },
+    {
+      "id": "normal",
+      "chap": "15 h 24 : le décollage de LaGuardia",
+      "text": "Jeudi [15 janvier 2009|quinze janvier deux mille neuf]. Aéroport de LaGuardia, à New York. Dehors, il fait moins sept degrés.",
+      "vo": "[warm, conversational] Jeudi quinze janvier deux mille neuf. Aéroport de LaGuardia, à New York. Dehors, il fait moins sept degrés."
+    },
+    {
+      "id": "vol",
+      "text": "Vol US Airways [1549|quinze quarante-neuf], pour Charlotte. [150|Cent cinquante] passagers, cinq membres d'équipage.",
+      "vo": "[curious] Vol US Airways quinze quarante-neuf, pour Charlotte. Cent cinquante passagers, cinq membres d'équipage."
+    },
+    {
+      "id": "cockpit",
+      "text": "Aux commandes, le commandant Chesley Sullenberger et le copilote Jeffrey Skiles. C'est leur première rotation ensemble. Pour ce décollage, c'est le copilote qui pilote.",
+      "vo": "[conversational, curious] Aux commandes, le commandant Chesley Sullenberger et le copilote Jeffrey Skiles. C'est leur première rotation ensemble. Pour ce décollage, c'est le copilote qui pilote."
+    },
+    {
+      "id": "detail",
+      "fil": "detail",
+      "text": "Et à l'avant, sur les portes, il y a des toboggans qui se transforment en +radeaux+.",
+      "vo": "[warm, conversational] Et à l'avant, sur les portes, il y a des toboggans qui se transforment en radeaux."
+    },
+    {
+      "id": "detail2",
+      "text": "Sur un vol de New York à Charlotte, au-dessus de la terre, personne ne les exige. Cet avion les a quand même.",
+      "vo": "[curious] Sur un vol de New York à Charlotte, au-dessus de la terre, personne ne les exige. Cet avion les a quand même."
+    },
+    {
+      "id": "decolle",
+      "text": "[15 h 24 min 54 s|Quinze heures vingt-quatre, cinquante-quatre secondes] : décollage autorisé, piste quatre.",
+      "vo": "[conversational, curious] Quinze heures vingt-quatre, cinquante-quatre secondes : décollage autorisé, piste quatre."
+    },
+    {
+      "id": "monte",
+      "text": "[15 h 27 min 07 s|Quinze heures vingt-sept, sept secondes] : la check-list d'après décollage est terminée. Tout est normal.",
+      "vo": "[warm, conversational] Quinze heures vingt-sept, sept secondes : la check-list d'après décollage est terminée. Tout est normal."
+    },
+    {
+      "id": "unmot",
+      "midroll": true,
+      "hold": 1.4,
+      "text": "Trois secondes plus tard, le commandant dit un seul *mot*.",
+      "vo": "[serious] Trois secondes plus tard, le commandant dit un seul mot."
+    },
+    {
+      "id": "birds",
+      "chap": "La check-list faite pour un autre ciel",
+      "text": "« Birds. » Des oiseaux. Une volée de bernaches du Canada, droit devant.",
+      "vo": "[curious] Birds. Des oiseaux. Une volée de bernaches du Canada, droit devant."
+    },
+    {
+      "id": "impact",
+      "text": "[15 h 27 min 11 s|Quinze heures vingt-sept, onze secondes]. Les impacts. À [860|huit cent soixante] mètres du sol.",
+      "vo": "[serious] Quinze heures vingt-sept, onze secondes. Les impacts. À huit cent soixante mètres du sol."
+    },
+    {
+      "id": "poids",
+      "fil": "oie",
+      "text": "Ces bernaches pèsent environ [3,6 kg|trois kilos six] chacune. Au moins deux entrent dans chaque moteur.",
+      "vo": "[conversational, curious] Ces bernaches pèsent environ trois kilos six chacune. Au moins deux entrent dans chaque moteur."
+    },
+    {
+      "id": "certif",
+      "text": "Le gros oiseau de leurs essais de certification pesait [1,8 kg|un kilo huit]. La *moitié*.",
+      "vo": "[warm, conversational] Le gros oiseau de leurs essais de certification pesait un kilo huit. La moitié."
+    },
+    {
+      "id": "recul",
+      "text": "Les deux moteurs perdent presque toute leur poussée. Le gauche retombe à [35 %|trente-cinq pour cent]. Le droit, à [15 %|quinze].",
+      "vo": "[curious] Les deux moteurs perdent presque toute leur poussée. Le gauche retombe à trente-cinq pour cent. Le droit, à quinze."
+    },
+    {
+      "id": "rupture",
+      "fil": "checklist",
+      "text": "Le plan prévu, c'est la check-list. Et elle suppose trois choses que cet avion n'a pas.",
+      "vo": "[serious] Le plan prévu, c'est la check-list. Et elle suppose trois choses que cet avion n'a pas."
+    },
+    {
+      "id": "altitude",
+      "text": "De l'altitude, d'abord : il en a sept fois moins que prévu.",
+      "vo": "[conversational, curious] De l'altitude, d'abord : il en a sept fois moins que prévu."
+    },
+    {
+      "id": "vitesse",
+      "text": "De la vitesse, ensuite : pour rallumer un moteur, elle demande [300|trois cents] nœuds. L'avion n'en atteindra jamais plus de [214|deux cent quatorze].",
+      "vo": "[curious] De la vitesse, ensuite : pour rallumer un moteur, elle demande trois cents nœuds. L'avion n'en atteindra jamais plus de deux cent quatorze."
+    },
+    {
+      "id": "temps",
+      "text": "Et surtout, du temps. Trois pages à lire… quand il te reste trois minutes et demie.",
+      "vo": "[warm, conversational] Et surtout, du temps. Trois pages à lire... quand il te reste trois minutes et demie."
+    },
+    {
+      "id": "autre",
+      "text": "Et la check-list d'amerrissage, celle qui existe à part ? Elle suppose qu'au moins un moteur tourne encore.",
+      "vo": "[warm, conversational] Et la check-list d'amerrissage, celle qui existe à part ? Elle suppose qu'au moins un moteur tourne encore."
+    },
+    {
+      "id": "autreciel",
+      "text": "Le plan n'est pas mauvais. Il est juste écrit pour un autre *ciel*.",
+      "vo": "[amused] Le plan n'est pas mauvais. Il est juste écrit pour un autre ciel."
+    },
+    {
+      "id": "seuil",
+      "fil": [
+        "tient",
+        "du"
+      ],
+      "hold": 1.2,
+      "text": "Alors il va falloir faire autrement. Ces trois minutes trente-deux, on va les vivre seconde par seconde. Si tu veux voir comment ils s'en sortent… +abonne-toi+, on y entre.",
+      "vo": "[conversational, curious] Alors il va falloir faire autrement. Ces trois minutes trente-deux, on va les vivre seconde par seconde. Si tu veux voir comment ils s'en sortent... abonne-toi, on y entre."
+    },
+    {
+      "id": "impro",
+      "chap": "Les vingt premières secondes : l'APU",
+      "text": "[15 h 27 min 19 s|Quinze heures vingt-sept, dix-neuf secondes]. Allumage.",
+      "vo": "[curious] Quinze heures vingt-sept, dix-neuf secondes. Allumage."
+    },
+    {
+      "id": "lance",
+      "fil": [
+        "apu",
+        "du"
+      ],
+      "text": "Deux secondes plus tard, le commandant lance l'[APU|A-P-U].",
+      "vo": "[conversational, curious] Deux secondes plus tard, le commandant lance l'A-P-U."
+    },
+    {
+      "id": "memoire",
+      "text": "Il le fait avant même d'appeler la check-list. Là-dedans, l'[APU|A-P-U] ne vient que bien plus *loin*.",
+      "vo": "[warm, conversational] Il le fait avant même d'appeler la check-list. Là-dedans, l'A-P-U ne vient que bien plus loin."
+    },
+    {
+      "id": "prend",
+      "text": "[15 h 27 min 23 s|Quinze heures vingt-sept, vingt-trois secondes]. Il prend les commandes. Le copilote, lui, prend la check-list.",
+      "vo": "[curious] Quinze heures vingt-sept, vingt-trois secondes. Il prend les commandes. Le copilote, lui, prend la check-list."
+    },
+    {
+      "id": "haut",
+      "text": "L'avion atteint son point le plus haut : un peu plus de [900|neuf cents] mètres. À partir de maintenant… il ne fera que *descendre*.",
+      "vo": "[conversational, curious] L'avion atteint son point le plus haut : un peu plus de neuf cents mètres. À partir de maintenant... il ne fera que descendre."
+    },
+    {
+      "id": "mayday",
+      "text": "Appel de détresse au contrôle. Le mot « mayday »… ne passe même pas : quelqu'un d'autre parle sur la fréquence.",
+      "vo": "[warm, conversational] Appel de détresse au contrôle. Le mot mayday... ne passe même pas : quelqu'un d'autre parle sur la fréquence."
+    },
+    {
+      "id": "cap",
+      "text": "Le contrôleur, lui, répond tout de suite : virez à gauche. Il prépare déjà leur retour.",
+      "vo": "[curious] Le contrôleur, lui, répond tout de suite : virez à gauche. Il prépare déjà leur retour."
+    },
+    {
+      "id": "relight",
+      "text": "Le copilote lit : vitesse de rallumage, trois cents nœuds. Et il ajoute : on ne les a pas.",
+      "vo": "[curious] Le copilote lit : vitesse de rallumage, trois cents nœuds. Et il ajoute : on ne les a pas."
+    },
+    {
+      "id": "derriere",
+      "midroll": true,
+      "hold": 1.4,
+      "text": "Au sol, le contrôleur a déjà une solution. Une piste. Derrière eux… à *LaGuardia*.",
+      "vo": "[conversational, curious] Au sol, le contrôleur a déjà une solution. Une piste. Derrière eux... à LaGuardia."
+    },
+    {
+      "id": "lga",
+      "chap": "LaGuardia, Teterboro… ou l'Hudson ?",
+      "fil": "rentrer",
+      "text": "[15 h 28 min 05 s|Quinze heures vingt-huit, cinq secondes]. Le contrôleur propose la piste treize de LaGuardia.",
+      "vo": "[warm, conversational] Quinze heures vingt-huit, cinq secondes. Le contrôleur propose la piste treize de LaGuardia."
+    },
+    {
+      "id": "unable",
+      "text": "Réponse du commandant : on ne peut pas. On risque de finir dans l'*Hudson*.",
+      "vo": "[curious] Réponse du commandant : on ne peut pas. On risque de finir dans l'Hudson."
+    },
+    {
+      "id": "pourquoi",
+      "fil": "rentrer",
+      "text": "L'aéroport est à quelques kilomètres. Pourquoi refuser ? Garde cette question : des enquêteurs, plus tard, vont la tester.",
+      "vo": "[conversational, curious] L'aéroport est à quelques kilomètres. Pourquoi refuser ? Garde cette question : des enquêteurs, plus tard, vont la tester."
+    },
+    {
+      "id": "virage",
+      "text": "Faire demi-tour, c'est virer, et traverser Manhattan. Et un avion qui vire sans moteurs descend plus vite.",
+      "vo": "[warm, conversational] Faire demi-tour, c'est virer, et traverser Manhattan. Et un avion qui vire sans moteurs descend plus vite."
+    },
+    {
+      "id": "gauche",
+      "fil": "oie",
+      "text": "[15 h 28 min 25 s|Quinze heures vingt-huit, vingt-cinq secondes]. Le moteur gauche remonte. Un peu. Pas *assez*. Ce qu'il a avalé, on le saura plus tard.",
+      "vo": "[curious] Quinze heures vingt-huit, vingt-cinq secondes. Le moteur gauche remonte. Un peu. Pas assez. Ce qu'il a avalé, on le saura plus tard."
+    },
+    {
+      "id": "lga31",
+      "text": "Six secondes plus tard, une autre piste de LaGuardia : la trente et un. Même réponse.",
+      "vo": "[warm, conversational] Six secondes plus tard, une autre piste de LaGuardia : la trente et un. Même réponse."
+    },
+    {
+      "id": "tcas",
+      "text": "Et une autre alarme s'ajoute : trafic. Un hélicoptère, dans les parages.",
+      "vo": "[conversational, curious] Et une autre alarme s'ajoute : trafic. Un hélicoptère, dans les parages."
+    },
+    {
+      "id": "teterboro",
+      "text": "Alors le commandant regarde de l'autre côté du fleuve. Il y a un petit aéroport, dans le New Jersey : Teterboro.",
+      "vo": "[curious] Alors le commandant regarde de l'autre côté du fleuve. Il y a un petit aéroport, dans le New Jersey : Teterboro."
+    },
+    {
+      "id": "masters",
+      "text": "Pendant ce temps, le copilote déroule la check-list. Pas de rallumage après trente secondes : elle lui fait couper les moteurs… pour les relancer.",
+      "vo": "[conversational, curious] Pendant ce temps, le copilote déroule la check-list. Pas de rallumage après trente secondes : elle lui fait couper les moteurs... pour les relancer."
+    },
+    {
+      "id": "brace",
+      "text": "[15 h 29 min 11 s|Quinze heures vingt-neuf, onze secondes]. Dans la cabine, le commandant annonce : préparez-vous à l'impact.",
+      "vo": "[serious] Quinze heures vingt-neuf, onze secondes. Dans la cabine, le commandant annonce : préparez-vous à l'impact."
+    },
+    {
+      "id": "teter2",
+      "text": "Dix secondes plus tard, le contrôleur lui donne Teterboro, piste un. Réponse : on ne peut pas.",
+      "vo": "[warm, conversational] Dix secondes plus tard, le contrôleur lui donne Teterboro, piste un. Réponse : on ne peut pas."
+    },
+    {
+      "id": "hudson",
+      "text": "[15 h 29 min 28 s|Quinze heures vingt-neuf, vingt-huit secondes]. Le commandant dit au contrôleur : on va être dans l'Hudson.",
+      "vo": "[curious] Quinze heures vingt-neuf, vingt-huit secondes. Le commandant dit au contrôleur : on va être dans l'Hudson."
+    },
+    {
+      "id": "fleuve",
+      "fil": "tient",
+      "hold": 0.3,
+      "text": "Un fleuve, en plein mois de janvier. Une eau à cinq degrés. Et une coque qui va devoir *tenir*.",
+      "vo": "[serious] Un fleuve, en plein mois de janvier. Une eau à cinq degrés. Et une coque qui va devoir tenir."
+    },
+    {
+      "id": "avant2",
+      "fil": "detail",
+      "hold": 1,
+      "text": "À l'avant, les radeaux que personne n'exigeait attendent toujours. Serviront-ils… ou pas ?",
+      "vo": "[curious] À l'avant, les radeaux que personne n'exigeait attendent toujours. Serviront-ils... ou pas ?"
+    },
+    {
+      "id": "descente",
+      "chap": "Les 75 dernières secondes",
+      "text": "[1 min 15|Une minute et quinze secondes]. C'est ce qui reste.",
+      "vo": "[conversational, curious] Une minute et quinze secondes. C'est ce qui reste."
+    },
+    {
+      "id": "page",
+      "fil": "checklist",
+      "text": "La check-list en est toujours à sa première partie. La page de l'eau… ne sera jamais atteinte.",
+      "vo": "[warm, conversational] La check-list en est toujours à sa première partie. La page de l'eau... ne sera jamais atteinte."
+    },
+    {
+      "id": "volets",
+      "text": "[15 h 29 min 44 s|Quinze heures vingt-neuf, quarante-quatre secondes]. Pas de rallumage. Le commandant demande les volets.",
+      "vo": "[curious] Quinze heures vingt-neuf, quarante-quatre secondes. Pas de rallumage. Le commandant demande les volets."
+    },
+    {
+      "id": "glisse",
+      "text": "Les volets sortent. L'avion ralentit. Il plonge vers le fleuve.",
+      "vo": "[conversational, curious] Les volets sortent. L'avion ralentit. Il plonge vers le fleuve."
+    },
+    {
+      "id": "alarme",
+      "text": "[15 h 30 min 24 s|Quinze heures trente, vingt-quatre secondes]. Une alarme retentit dans le cockpit : terrain, remontez. Elle ne s'arrêtera plus.",
+      "vo": "[curious] Quinze heures trente, vingt-quatre secondes. Une alarme retentit dans le cockpit : terrain, remontez. Elle ne s'arrêtera plus."
+    },
+    {
+      "id": "trente",
+      "text": "Trente mètres. [15 h 30 min 36 s|Quinze heures trente, trente-six secondes].",
+      "vo": "[conversational, curious] Trente mètres. Quinze heures trente, trente-six secondes."
+    },
+    {
+      "id": "tire",
+      "text": "Il tire sur le manche. Doucement.",
+      "vo": "[curious] Il tire sur le manche. Doucement."
+    },
+    {
+      "id": "quinzem",
+      "text": "Quinze mètres. Il tire plus fort.",
+      "vo": "[conversational, curious] Quinze mètres. Il tire plus fort."
+    },
+    {
+      "id": "butee",
+      "fil": "apu",
+      "text": "Le manche est en *butée*. L'ordinateur, lui, retient encore un peu le nez.",
+      "vo": "[curious] Le manche est en butée. L'ordinateur, lui, retient encore un peu le nez."
+    },
+    {
+      "id": "contact",
+      "text": "[15 h 30 min 43 s|Quinze heures trente, quarante-trois secondes].",
+      "vo": "[conversational, curious] Quinze heures trente, quarante-trois secondes."
+    },
+    {
+      "id": "eau",
+      "midroll": true,
+      "hold": 1.6,
+      "text": "Et l'*eau*…",
+      "vo": "[curious] Et l'eau..."
+    },
+    {
+      "id": "toucher",
+      "chap": "15 h 30 min 43 s : l'amerrissage",
+      "paie": "tient",
+      "text": "[230 km/h|Deux cent trente kilomètres-heure]. L'avion frappe le fleuve… et il *flotte*.",
+      "vo": "[warm, conversational] Deux cent trente kilomètres-heure. L'avion frappe le fleuve... et il flotte."
+    },
+    {
+      "id": "pression",
+      "text": "Le rapport fera les comptes. La certification supposait un avion qui touche l'eau presque à plat, en descendant à peine. Lui descend de presque quatre mètres par seconde.",
+      "vo": "[curious] Le rapport fera les comptes. La certification supposait un avion qui touche l'eau presque à plat, en descendant à peine. Lui descend de presque quatre mètres par seconde."
+    },
+    {
+      "id": "coque",
+      "text": "Et la pression sur la coque, au choc, dépasse quatre fois celle de la certification. Pourtant… elle ne se *disloque* pas.",
+      "vo": "[conversational, curious] Et la pression sur la coque, au choc, dépasse quatre fois celle de la certification. Pourtant... elle ne se disloque pas."
+    },
+    {
+      "id": "aile",
+      "text": "Quinze secondes après, les issues au-dessus de l'aile gauche s'ouvrent. Les premiers passagers sortent… debout sur l'aile.",
+      "vo": "[conversational, curious] Quinze secondes après, les issues au-dessus de l'aile gauche s'ouvrent. Les premiers passagers sortent... debout sur l'aile."
+    },
+    {
+      "id": "courant3",
+      "text": "Le fleuve, lui, emporte doucement l'avion vers le sud.",
+      "vo": "[warm, conversational] Le fleuve, lui, emporte doucement l'avion vers le sud."
+    },
+    {
+      "id": "radeaux",
+      "paie": "detail",
+      "text": "À l'avant, les portes s'ouvrent. Les toboggans se gonflent… et deviennent des +radeaux+. Ceux que personne n'exigeait sur ce vol.",
+      "vo": "[warm, conversational] À l'avant, les portes s'ouvrent. Les toboggans se gonflent... et deviennent des radeaux. Ceux que personne n'exigeait sur ce vol."
+    },
+    {
+      "id": "froid",
+      "text": "Dehors, moins sept degrés. L'eau, à cinq. Maintenant, la menace, c'est le *froid*.",
+      "vo": "[curious] Dehors, moins sept degrés. L'eau, à cinq. Maintenant, la menace, c'est le froid."
+    },
+    {
+      "id": "ferry",
+      "text": "[15 h 34 min 40 s|Quinze heures trente-quatre, quarante secondes] : un premier bateau arrive. Un ferry de New York.",
+      "vo": "[conversational, curious] Quinze heures trente-quatre, quarante secondes : un premier bateau arrive. Un ferry de New York."
+    },
+    {
+      "id": "renforts",
+      "text": "En dix minutes, sept ferries sont là. Le bateau des pompiers arrive au bout de huit minutes. Les garde-côtes, de dix-sept.",
+      "vo": "[warm, conversational] En dix minutes, sept ferries sont là. Le bateau des pompiers arrive au bout de huit minutes. Les garde-côtes, de dix-sept."
+    },
+    {
+      "id": "recupere",
+      "text": "En une vingtaine de minutes, tout le monde est récupéré.",
+      "vo": "[curious] En une vingtaine de minutes, tout le monde est récupéré."
+    },
+    {
+      "id": "bilan",
+      "text": "[155|Cent cinquante-cinq] personnes à bord. Cinq blessés graves. Aucun mort.",
+      "vo": "[serious] Cent cinquante-cinq personnes à bord. Cinq blessés graves. Aucun mort."
+    },
+    {
+      "id": "repeche",
+      "fil": "oie",
+      "text": "Les jours suivants, on sort les moteurs du fleuve. Et ce qu'il y a dedans… finira par changer une règle.",
+      "vo": "[conversational, curious] Les jours suivants, on sort les moteurs du fleuve. Et ce qu'il y a dedans... finira par changer une règle."
+    },
+    {
+      "id": "toulouse",
+      "fil": [
+        "rentrer",
+        "du"
+      ],
+      "hold": 1,
+      "text": "On parlera de miracle. Mais trois mois plus tard, en France, des enquêteurs remettent cet avion en vol, dans un simulateur. Pour une seule *question*.",
+      "vo": "[curious] On parlera de miracle. Mais trois mois plus tard, en France, des enquêteurs remettent cet avion en vol, dans un simulateur. Pour une seule question."
+    },
+    {
+      "id": "sim",
+      "chap": "Pouvait-il rentrer à LaGuardia ?",
+      "text": "Avril [2009|deux mille neuf], chez Airbus, à Toulouse. Des pilotes rejouent la même panne, au même endroit, à la même seconde.",
+      "vo": "[conversational, curious] Avril deux mille neuf, chez Airbus, à Toulouse. Des pilotes rejouent la même panne, au même endroit, à la même seconde."
+    },
+    {
+      "id": "consigne",
+      "text": "Consigne : faire demi-tour tout de suite, vers un aéroport.",
+      "vo": "[warm, conversational] Consigne : faire demi-tour tout de suite, vers un aéroport."
+    },
+    {
+      "id": "huit",
+      "text": "Sur quinze essais retenus, huit réussissent.",
+      "vo": "[curious] Sur quinze essais retenus, huit réussissent."
+    },
+    {
+      "id": "savaient",
+      "text": "Huit sur quinze. Mais ces pilotes savaient ce qui allait arriver. Ils n'avaient rien à *comprendre*.",
+      "vo": "[conversational, curious] Huit sur quinze. Mais ces pilotes savaient ce qui allait arriver. Ils n'avaient rien à comprendre."
+    },
+    {
+      "id": "ajout",
+      "text": "Les enquêteurs ont aussi prévu un autre essai : trente-cinq secondes de retard. Le temps de voir, de comprendre, de décider.",
+      "vo": "[warm, conversational] Les enquêteurs ont aussi prévu un autre essai : trente-cinq secondes de retard. Le temps de voir, de comprendre, de décider."
+    },
+    {
+      "id": "echec",
+      "paie": "rentrer",
+      "text": "Avec trente-cinq secondes de retard… l'essai échoue.",
+      "vo": "[curious] Avec trente-cinq secondes de retard... l'essai échoue."
+    },
+    {
+      "id": "seul",
+      "text": "Un seul essai de ce genre a été fait, vers la piste treize. Mais c'est le seul qui compte le temps de comprendre.",
+      "vo": "[warm, conversational] Un seul essai de ce genre a été fait, vers la piste treize. Mais c'est le seul qui compte le temps de comprendre."
+    },
+    {
+      "id": "film",
+      "text": "Si tu as vu le film Sully, tu as vu des enquêteurs qui cherchent un coupable. Dans le rapport, ce sont eux qui ont ajouté ces trente-cinq secondes.",
+      "vo": "[conversational, curious] Si tu as vu le film Sully, tu as vu des enquêteurs qui cherchent un coupable. Dans le rapport, ce sont eux qui ont ajouté ces trente-cinq secondes."
+    },
+    {
+      "id": "conclusion",
+      "text": "Leur conclusion : se poser sur l'Hudson donnait les meilleures chances de survie.",
+      "vo": "[warm, conversational] Leur conclusion : se poser sur l'Hudson donnait les meilleures chances de survie."
+    },
+    {
+      "id": "gene",
+      "fil": "checklist",
+      "midroll": true,
+      "hold": 1.4,
+      "text": "Restait une question plus gênante. Pourquoi la check-list… ne les a-t-elle pas menés jusqu'au *bout* ?",
+      "vo": "[curious] Restait une question plus gênante. Pourquoi la check-list... ne les a-t-elle pas menés jusqu'au bout ?"
+    },
+    {
+      "id": "tiers",
+      "chap": "Le geste qui n'était pas dans l'ordre",
+      "text": "Les enquêteurs refont le compte. En trois minutes et demie, l'équipage a parcouru environ un *tiers* de la check-list.",
+      "vo": "[conversational, curious] Les enquêteurs refont le compte. En trois minutes et demie, l'équipage a parcouru environ un tiers de la check-list."
+    },
+    {
+      "id": "rallumages",
+      "text": "Les tentatives de rallumage ont pris trente à quarante secondes. Le rapport le note : si l'avion avait pu dire « ces moteurs ne repartiront pas », ces secondes-là auraient servi ailleurs.",
+      "vo": "[warm, conversational] Les tentatives de rallumage ont pris trente à quarante secondes. Le rapport le note : si l'avion avait pu dire ces moteurs ne repartiront pas, ces secondes-là auraient servi ailleurs."
+    },
+    {
+      "id": "gpws",
+      "text": "Et même la partie de l'eau avait un trou : rien n'y disait de faire taire l'alarme du sol.",
+      "vo": "[curious] Et même la partie de l'eau avait un trou : rien n'y disait de faire taire l'alarme du sol."
+    },
+    {
+      "id": "mauvaise",
+      "paie": "checklist",
+      "text": "Était-ce la mauvaise check-list ? Non : c'était celle qui collait le mieux. Airbus n'en avait prévu aucune pour une panne aussi *basse*.",
+      "vo": "[curious] Était-ce la mauvaise check-list ? Non : c'était celle qui collait le mieux. Airbus n'en avait prévu aucune pour une panne aussi basse."
+    },
+    {
+      "id": "geste",
+      "text": "Mais il y a un geste que la check-list repoussait à plus tard. Le commandant l'a fait tout de suite : l'[APU|A-P-U].",
+      "vo": "[conversational, curious] Mais il y a un geste que la check-list repoussait à plus tard. Le commandant l'a fait tout de suite : l'A-P-U."
+    },
+    {
+      "id": "courant2",
+      "paie": "apu",
+      "text": "Grâce à lui, l'électricité a tenu. Les ordinateurs sont restés en loi normale. Jusqu'au fleuve, l'avion ne pouvait pas +décrocher+.",
+      "vo": "[warm, conversational] Grâce à lui, l'électricité a tenu. Les ordinateurs sont restés en loi normale. Jusqu'au fleuve, l'avion ne pouvait pas décrocher."
+    },
+    {
+      "id": "noir",
+      "text": "Le rapport l'écrit noir sur blanc : en suivant simplement l'ordre de la check-list, ce geste n'aurait pas été fait.",
+      "vo": "[curious] Le rapport l'écrit noir sur blanc : en suivant simplement l'ordre de la check-list, ce geste n'aurait pas été fait."
+    },
+    {
+      "id": "lent",
+      "text": "Le rapport note aussi que, sur les derniers mètres, l'avion volait trop lentement. Et que l'alarme de vitesse était masquée par celle du sol.",
+      "vo": "[conversational, curious] Le rapport note aussi que, sur les derniers mètres, l'avion volait trop lentement. Et que l'alarme de vitesse était masquée par celle du sol."
+    },
+    {
+      "id": "charge",
+      "text": "Il ne cherche pas de coupable. Il parle de charge de travail… et d'un entraînement que personne ne donnait encore.",
+      "vo": "[warm, conversational] Il ne cherche pas de coupable. Il parle de charge de travail... et d'un entraînement que personne ne donnait encore."
+    },
+    {
+      "id": "place",
+      "text": "Pas un coup de chance. Un geste fait au bon moment… à la mauvaise place.",
+      "vo": "[curious] Pas un coup de chance. Un geste fait au bon moment... à la mauvaise place."
+    },
+    {
+      "id": "change",
+      "hold": 1,
+      "text": "Alors, après un rapport pareil… qu'est-ce qui a changé ? Moins que tu ne *crois*.",
+      "vo": "[warm, conversational] Alors, après un rapport pareil... qu'est-ce qui a changé ? Moins que tu ne crois."
+    },
+    {
+      "id": "depuis",
+      "chap": "Ce qui te protège depuis",
+      "fil": "oie",
+      "text": "Ces moteurs, ouverts : dedans, des plumes. Le Smithsonian identifie l'espèce : des bernaches du Canada.",
+      "vo": "[curious] Ces moteurs, ouverts : dedans, des plumes. Le Smithsonian identifie l'espèce : des bernaches du Canada."
+    },
+    {
+      "id": "essais",
+      "text": "Dans les essais de l'époque, le gros oiseau n'était pas lancé dans le cœur du moteur.",
+      "vo": "[conversational, curious] Dans les essais de l'époque, le gros oiseau n'était pas lancé dans le cœur du moteur."
+    },
+    {
+      "id": "regle",
+      "paie": "oie",
+      "text": "Depuis juin [2023|deux mille vingt-trois], aux États-Unis, un nouveau moteur doit passer un essai de plus : un oiseau tiré exprès dans son +cœur+.",
+      "vo": "[warm, conversational] Depuis juin deux mille vingt-trois, aux États-Unis, un nouveau moteur doit passer un essai de plus : un oiseau tiré exprès dans son cœur."
+    },
+    {
+      "id": "nouveaux",
+      "text": "Seulement pour les nouveaux moteurs. Ceux qui volent déjà ont été certifiés avec les anciens essais.",
+      "vo": "[conversational, curious] Seulement pour les nouveaux moteurs. Ceux qui volent déjà ont été certifiés avec les anciens essais."
+    },
+    {
+      "id": "cite",
+      "text": "La règle cite le vol quinze quarante-neuf. Quatorze ans après.",
+      "vo": "[curious] La règle cite le vol quinze quarante-neuf. Quatorze ans après."
+    },
+    {
+      "id": "reste",
+      "text": "Le reste ? En [2016|deux mille seize], l'agence Associated Press fait les comptes. Trente-cinq recommandations. Six suivies.",
+      "vo": "[conversational, curious] Le reste ? En deux mille seize, l'agence Associated Press fait les comptes. Trente-cinq recommandations. Six suivies."
+    },
+    {
+      "id": "rejet",
+      "text": "La check-list pour une panne à basse altitude n'avait pas été rendue obligatoire. Les gilets de sauvetage sur tous les vols non plus.",
+      "vo": "[warm, conversational] La check-list pour une panne à basse altitude n'avait pas été rendue obligatoire. Les gilets de sauvetage sur tous les vols non plus."
+    },
+    {
+      "id": "toi",
+      "text": "Alors ce qui te protège tient surtout à des choses que tu ne vois pas. Et à une que tu vois : la carte de sécurité, dans la poche du siège devant toi.",
+      "vo": "[curious] Alors ce qui te protège tient surtout à des choses que tu ne vois pas. Et à une que tu vois : la carte de sécurité, dans la poche du siège devant toi."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "On a appelé ça un miracle. Mais ce miracle-là… a une +liste de pièces+.",
+      "vo": "[warm, conversational] On a appelé ça un miracle. Mais ce miracle-là... a une liste de pièces."
+    },
+    {
+      "id": "du",
+      "chap": "Alors, qu'est-ce qui les a sauvés ?",
+      "paie": "du",
+      "text": "Alors, qu'est-ce qui les a vraiment sauvés ?",
+      "vo": "[conversational, curious] Alors, qu'est-ce qui les a vraiment sauvés ?"
+    },
+    {
+      "id": "liste",
+      "text": "Un geste fait avant son tour. Un avion qui ne pouvait pas décrocher. Des radeaux que personne n'exigeait. Des ferries à quatre minutes.",
+      "vo": "[curious] Un geste fait avant son tour. Un avion qui ne pouvait pas décrocher. Des radeaux que personne n'exigeait. Des ferries à quatre minutes."
+    },
+    {
+      "id": "equipage",
+      "hold": 0.3,
+      "text": "Et un équipage qui a choisi le fleuve… pendant qu'il était encore temps.",
+      "vo": "[warm, conversational] Et un équipage qui a choisi le fleuve... pendant qu'il était encore temps."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et toi ? Moteurs presque éteints, à huit cent soixante mètres, l'aéroport derrière toi. Dis-moi en +commentaire+ : demi-tour… ou fleuve ?",
+      "vo": "[curious] Et toi ? Moteurs presque éteints, à huit cent soixante mètres, l'aéroport derrière toi. Dis-moi en commentaire : [short pause] demi-tour... ou fleuve ?"
+    },
+    {
+      "id": "like",
+      "text": "Envoie cette vidéo à quelqu'un qui a peur en avion : même ce jour-là, il restait un plan. Et si tu as appris quelque chose… un petit +like+.",
+      "vo": "[warm] Envoie cette vidéo à quelqu'un qui a peur en avion : même ce jour-là, il restait un plan. Et si tu as appris quelque chose... un petit like."
+    },
+    {
+      "id": "abo",
+      "text": "On se retrouve très vite, pour un autre jour où un plan a été mis à l'épreuve.",
+      "vo": "[warm] On se retrouve très vite, pour un autre jour où un plan a été mis à l'épreuve."
+    },
+    {
+      "id": "boucle",
+      "text": "Parce qu'un jour, quelque part, il sera de nouveau…",
+      "vo": "[calm] Parce qu'un jour, quelque part, il sera de nouveau,"
+    }
+  ],
+  "cues": {
+    "titre": "promesse:six",
+    "miniature": "defi:trois",
+    "miniature2": "accroche:oies",
+    "miniature3": "curiosite:miracle",
+    "explode": "ouvre:on",
+    "subscribe": "seuil:abonne",
+    "strike": "impact:impacts",
+    "water": "eau:eau",
+    "float": "toucher:flotte",
+    "rafts": "radeaux:radeaux",
+    "fail": "echec:échoue",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:liste",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:jour",
+    "check": "promesse:check",
+    "reste": "defi:reste",
+    "personnes": "defi:personnes",
+    "aeroport": "defi:aéroport",
+    "derriereW": "defi:derrière",
+    "monde": "curiosite:monde",
+    "sauves": "curiosite:sauvés",
+    "ventre": "dessous:ventre",
+    "entrer": "dessous:entrer",
+    "a320": "eclate:Airbus",
+    "soufflante": "eclate:soufflante",
+    "aspire": "eclate:aspire",
+    "comprime": "eclate:comprime",
+    "brule": "eclate:brûle",
+    "rejette": "eclate:rejette",
+    "centre": "coeur:centre",
+    "oie": "coeur:oie",
+    "generatrice": "courant:génératrice",
+    "tait": "courant:tait",
+    "ici": "manche:Ici",
+    "ordis": "manche:ordinateurs",
+    "loi": "manche:normale",
+    "decroche": "manche:décrocher",
+    "tires": "alpha:tires",
+    "limite": "alpha:limite",
+    "protection": "alpha:protection",
+    "queue": "apu:queue",
+    "apuName": "apu:APU",
+    "sol": "secours:sol",
+    "pensera": "secours:pensera",
+    "checklist": "plan:check",
+    "rallumer": "pages:rallumer",
+    "planer": "pages:planer",
+    "poser": "pages:poser",
+    "bassin": "certifie:bassin",
+    "maquettes": "certifie:maquettes",
+    "vitesseQ": "certifie2:vitesse",
+    "choc": "certifie2:choc",
+    "ditch": "bouton:amerrissage",
+    "ouvertures": "bouton:ouvertures",
+    "flotte": "bouton:flotte",
+    "toutAuBout": "refonte:bout",
+    "sixMille": "paradoxe:six",
+    "longues": "paradoxe:longues",
+    "septFois": "faille:sept",
+    "pasLeTemps": "faille:temps",
+    "remarque": "avant:remarque",
+    "moins7": "normal:moins",
+    "charlotteW": "vol:Charlotte",
+    "passagers": "vol:passagers",
+    "commandant": "cockpit:commandant",
+    "copilote": "cockpit:copilote",
+    "pilote": "cockpit:pilote",
+    "toboggans": "detail:toboggans",
+    "exige": "detail2:exige",
+    "quandMeme": "detail2:quand",
+    "piste4": "decolle:piste",
+    "toutNormal": "monte:normal",
+    "unSeul": "unmot:seul",
+    "oiseaux": "birds:oiseaux",
+    "devant": "birds:devant",
+    "metres860": "impact:mètres",
+    "pesent": "poids:pèsent",
+    "chaque": "poids:chaque",
+    "moitie": "certif:moitié",
+    "pctG": "recul:gauche",
+    "pctD": "recul:droit",
+    "troisChoses": "rupture:trois",
+    "altW": "altitude:sept",
+    "noeuds": "vitesse:nœuds",
+    "jamaisPlus": "vitesse:jamais",
+    "troisPages": "temps:pages",
+    "demie": "temps:demie",
+    "tourne": "autre:tourne",
+    "ciel": "autreciel:ciel",
+    "secondeW": "seuil:seconde",
+    "entre": "seuil:entre",
+    "allumage": "impro:Allumage",
+    "apuOn": "lance:APU",
+    "loin": "memoire:loin",
+    "commandes": "prend:commandes",
+    "clPrise": "prend:check",
+    "pointHaut": "haut:point",
+    "descendre": "haut:descendre",
+    "passe": "mayday:passe",
+    "virez": "cap:gauche",
+    "retour": "cap:retour",
+    "ajoute": "relight:ajoute",
+    "laguardia": "derriere:LaGuardia",
+    "treize": "lga:treize",
+    "peutPas": "unable:peut",
+    "hudson1": "unable:Hudson",
+    "tester": "pourquoi:tester",
+    "manhattan": "virage:Manhattan",
+    "vite": "virage:vite",
+    "remonte": "gauche:remonte",
+    "avale": "gauche:avalé",
+    "trenteEtUn": "lga31:trente",
+    "trafic": "tcas:trafic",
+    "helico": "tcas:hélicoptère",
+    "tete": "teterboro:Teterboro",
+    "couper": "masters:couper",
+    "relancer": "masters:relancer",
+    "impactW": "brace:impact",
+    "pisteUn": "teter2:piste",
+    "hudsonW": "hudson:Hudson",
+    "degres": "fleuve:degrés",
+    "coqueW": "fleuve:coque",
+    "radeauxA": "avant2:radeaux",
+    "ouPas": "avant2:pas",
+    "resteW": "descente:reste",
+    "jamaisW": "page:jamais",
+    "voletsW": "volets:volets",
+    "plonge": "glisse:plonge",
+    "terrain": "alarme:terrain",
+    "tireW": "tire:Doucement",
+    "fort": "quinzem:fort",
+    "buteeW": "butee:butée",
+    "nez": "butee:nez",
+    "frappe": "toucher:frappe",
+    "aPlat": "pression:plat",
+    "quatreMS": "pression:quatre",
+    "disloque": "coque:disloque",
+    "issues": "aile:issues",
+    "debout": "aile:debout",
+    "sud": "courant3:sud",
+    "gonflent": "radeaux:gonflent",
+    "menace": "froid:menace",
+    "bateau": "ferry:bateau",
+    "septFerries": "renforts:sept",
+    "pompiers": "renforts:pompiers",
+    "gardes": "renforts:garde",
+    "recupW": "recupere:récupéré",
+    "blesses": "bilan:blessés",
+    "aucun": "bilan:Aucun",
+    "moteursOut": "repeche:moteurs",
+    "regle1": "repeche:règle",
+    "simulateur": "toulouse:simulateur",
+    "question": "toulouse:question",
+    "toulouseW": "sim:Toulouse",
+    "demiTour": "consigne:demi",
+    "reussissent": "huit:réussissent",
+    "savaientW": "savaient:savaient",
+    "retard": "ajout:retard",
+    "decider": "ajout:décider",
+    "treize2": "seul:treize",
+    "sully": "film:Sully",
+    "ajouteW": "film:ajouté",
+    "survie": "conclusion:survie",
+    "jusquAuBout": "gene:bout",
+    "tiersW": "tiers:tiers",
+    "quarante": "rallumages:quarante",
+    "repartiront": "rallumages:repartiront",
+    "trou": "gpws:trou",
+    "collait": "mauvaise:collait",
+    "basse": "mauvaise:basse",
+    "apuGeste": "geste:APU",
+    "tenu": "courant2:tenu",
+    "normale2": "courant2:normale",
+    "decrocher2": "courant2:décrocher",
+    "blanc": "noir:blanc",
+    "fait": "noir:fait",
+    "lentement": "lent:lentement",
+    "masquee": "lent:masquée",
+    "coupable": "charge:coupable",
+    "entrainement": "charge:entraînement",
+    "chance": "place:chance",
+    "mauvaisePlace": "place:mauvaise",
+    "moinsQue": "change:Moins",
+    "plumes": "depuis:plumes",
+    "bernaches": "depuis:bernaches",
+    "coeur2": "essais:cœur",
+    "juin": "regle:juin",
+    "tire2": "regle:tiré",
+    "anciens": "nouveaux:anciens",
+    "quatorze": "cite:Quatorze",
+    "suivies": "reste:suivies",
+    "gilets": "rejet:gilets",
+    "carte": "toi:carte",
+    "gesteL": "liste:geste",
+    "decrocherL": "liste:décrocher",
+    "radeauxL": "liste:radeaux",
+    "ferriesL": "liste:ferries",
+    "fleuveE": "equipage:fleuve",
+    "demiTourC": "comment:demi",
+    "fleuveC": "comment:fleuve",
+    "likeW": "like:like",
+    "epreuve": "abo:épreuve",
+    "frequence": "mayday:fréquence",
+    "lesImpacts": "impact:Les"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "space",
+      "mix": 0.22,
+      "size": 0.84,
+      "damp": 0.35
+    },
+    {
+      "type": "music",
+      "width": 0.7,
+      "sections": "chapters",
+      "skip": [
+        "ouvre"
+      ],
+      "drop": 0.5,
+      "gain": -21,
+      "phone": 0.25,
+      "curve": [
+        [
+          0,
+          0.9,
+          0.5
+        ],
+        [
+          "ouvre-0.4",
+          0.55,
+          0
+        ],
+        [
+          "plan-1",
+          0.7,
+          0.3
+        ],
+        [
+          "normal-1",
+          0.75,
+          0.3
+        ],
+        [
+          "birds-1",
+          1,
+          0.6
+        ],
+        [
+          "impro-1",
+          1,
+          0.75
+        ],
+        [
+          "descente-1",
+          1,
+          0.9
+        ],
+        [
+          "toucher",
+          0.7,
+          0.3
+        ],
+        [
+          "sim-1",
+          0.75,
+          0.4
+        ],
+        [
+          "depuis-1",
+          0.8,
+          0.4
+        ],
+        [
+          "chute",
+          0.7,
+          0
+        ],
+        [
+          "boucle",
+          0.8,
+          0.5
+        ]
+      ]
+    },
+    {
+      "type": "drone",
+      "gain": -27,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "ambience",
+      "preset": "wind",
+      "from": 0,
+      "gain": -36
+    },
+    {
+      "type": "chapters",
+      "style": "film",
+      "skip": [
+        "ouvre"
+      ]
+    },
+    {
+      "type": "boom",
+      "at": 0.03,
+      "gain": -13,
+      "size": 1.2
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.3,
+      "gain": -18
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "boom",
+      "at": "ouvre$+0.05",
+      "gain": -15,
+      "size": 0.7
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.22",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.38",
+      "gain": -19,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.54",
+      "gain": -20,
+      "pitch": 1.15
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "toloop",
+      "dur": 1,
+      "gain": -21
+    },
+    {
+      "type": "drop",
+      "at": "lesImpacts-0.3",
+      "pre": 0.55
+    },
+    {
+      "type": "boom",
+      "at": "lesImpacts-0.3",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "click",
+      "at": "lance$+0.08",
+      "gain": -19
+    },
+    {
+      "type": "drop",
+      "at": "eau",
+      "pre": 0.6
+    },
+    {
+      "type": "drop",
+      "at": "echec$",
+      "pre": 0.5
+    },
+    {
+      "type": "hit",
+      "at": "chute$+0.08",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "bouton$+0.12"
+    },
+    {
+      "type": "swish",
+      "at": "promesse-0.14",
+      "gain": -24
+    },
+    {
+      "type": "swish",
+      "at": "defi-0.14",
+      "gain": -24
+    },
+    {
+      "type": "hit",
+      "at": "accroche$+0.03",
+      "gain": -20
+    },
+    {
+      "type": "hit",
+      "at": "apu$+0.05",
+      "gain": -20
+    },
+    {
+      "type": "hit",
+      "at": "regle$+0.05",
+      "gain": -18
+    },
+    {
+      "type": "hit",
+      "at": "toucher:fleuve$+0.05",
+      "gain": -16
+    },
+    {
+      "type": "swish",
+      "at": "fleuve-0.25"
+    }
+  ]
+}
