@@ -105,6 +105,7 @@ async function checkPrint(dir, extra, name) {
 
 const HELP = `
   npm run new     -- <numéro> <slug> "<Titre>"   crée episodes/<numéro>-<slug> depuis le kit (L02… : un long, depuis kit/template-long)
+                     [--affaire]                    …une affaire réelle (L05…) : le squelette de kit/template-affaire.json (docs/recette-long-affaire.md) — le drapeau en dernier
   npm run build   -- <ep>                        données de timing + bundle + pistes audio
   npm run voice   -- <ep>                        séance de doublage : mesure les prises du disque, monte la meilleure par phrase
                      [--takes 3] [--retake phrase,…] [--count 3]   ce qu'il faudrait enregistrer : le coût est annoncé, rien n'est dépensé
@@ -125,7 +126,8 @@ const HELP = `
   npm run preview -- <ep>                        studio HyperFrames (lecture en direct)
   npm run render  -- <ep> [--draft] [--out f.mp4]   MP4 final dans renders/ (--out : ailleurs, pour un essai)
   npm run qa      -- <ep> [--file x.mp4]         contrôle le MP4 rendu : voix calée, niveau, images parasites, fluidité
-  npm run srt     -- <ep>                        format long : sous-titres (renders/<ep>.srt) et chapitres horodatés de la description YouTube
+  npm run compil  -- C01 [--draft] [--out f.mp4]   compilation YouTube 16:9 : nos courts rendus + une voix neuve (docs/recette-compil.md)
+  npm run srt     -- <ep>                      format long : sous-titres (renders/<ep>.srt) et chapitres horodatés de la description YouTube
   npm run cover   -- <ep> [--alt 2|3]   (un long : renders/<ep>-miniature[-2|-3].png, depuis thumb, thumb2, thumb3)
   npm run cover   -- <ep>                        couverture de grille (PNG 1080×1920 dans renders/)
   npm run phone   -- <ep>                        copie du film sous 30 Mio (renders/<ep>-iphone.mp4) : ce que l'app Claude peut envoyer au téléphone hors du Wi-Fi
@@ -142,7 +144,12 @@ try {
   switch (cmd) {
     case "new": {
       const { newEpisode } = await import("./new.mjs");
-      newEpisode(args[0], args[1], args.slice(2).join(" "));
+      newEpisode(args[0], args[1], args.slice(2).join(" "), { affaire: !!flags.affaire });
+      break;
+    }
+    case "compil": {
+      const { compil } = await import("./compil.mjs");
+      await compil(resolveEpisode(args[0]), { draft: !!flags.draft, out: typeof flags.out === "string" ? flags.out : null });
       break;
     }
     case "build": {

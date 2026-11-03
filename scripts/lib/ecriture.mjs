@@ -597,9 +597,17 @@ function ecritureLong(ep, sched) {
   const total = ep.beats.reduce((n, b) => n + words(plain(b)).length, 0);
   const duration = real(sched.duration);
 
-  // 1. the budget: above 8 minutes (mid-rolls), never padded towards 12
-  if (total < 1550) warn(`${total} mots : sous ≈ 1 550 le film risque de passer sous 8 min, et YouTube n'y met plus de coupure pub — ajouter ce qui relance, jamais du remplissage`);
-  if (total > 1950) warn(`${total} mots : au-delà de ≈ 1 950 le film passe 10 min 30 — couper ce qui ne relance pas (digressions, chiffres en rafale)`);
+  // an affaire réelle (docs/recette-long-affaire.md) runs 12 to 14 minutes: a real day has more to tell
+  const affaire = ep.genre === "affaire";
+
+  // 1. the budget: above 8 minutes (mid-rolls), never padded towards 12 (an affaire: 12 to 14, never padded towards 15)
+  if (affaire) {
+    if (total < 2200) warn(`${total} mots : une affaire fait 2 200 à 2 700 mots (≈ 12 à 14 min) — ajouter ce qui relance (l'heure réelle, un fil d'enquête), jamais du remplissage`);
+    if (total > 2700) warn(`${total} mots : au-delà de ≈ 2 700 l'affaire passe 14 min 30 — couper ce qui ne relance pas`);
+  } else {
+    if (total < 1550) warn(`${total} mots : sous ≈ 1 550 le film risque de passer sous 8 min, et YouTube n'y met plus de coupure pub — ajouter ce qui relance, jamais du remplissage`);
+    if (total > 1950) warn(`${total} mots : au-delà de ≈ 1 950 le film passe 10 min 30 — couper ce qui ne relance pas (digressions, chiffres en rafale)`);
+  }
   if (!sched.estimated && duration < 8 * 60 + 10) warn(`${clock(duration)} : sous 8 min 10, pas de coupure pub au milieu (il faut 8 min)`);
 
   // 2. the first 30 seconds keep the promise of the title and of the thumbnail
@@ -633,6 +641,14 @@ function ecritureLong(ep, sched) {
   // 4. the chapters: each one ends on a relaunch, none is a "what to remember" (the signal to leave)
   const chapters = chaptersOfLong(ep, sched);
   if (chapters.length < 6) warn(`${chapters.length} chapitres — 8 à 13 (L01 : 13, L02 : 11) : une carte toutes les 30 à 90 s`);
+  if (affaire) {
+    // the film ends on what protects you today: the reason it does not frighten (Merwan, 29/10)
+    const depuis = ids.indexOf("depuis");
+    if (depuis < 0) warn(`pas de beat "depuis" : une affaire finit sur ce qui te protège aujourd'hui grâce à ce jour-là (le chapitre avant la fin)`);
+    else if (ids.indexOf("chute") >= 0 && depuis > ids.indexOf("chute")) warn(`"depuis" après la chute : ce qui te protège aujourd'hui vient avant elle`);
+    if (!(ep.sources ?? []).some((s) => /rapport|report|bea|ntsb|enqu[eê]te|commission/i.test(typeof s === "string" ? s : JSON.stringify(s))))
+      warn(`aucune source ne cite le rapport officiel : la chronologie d'une affaire vient de lui (sources)`);
+  }
   chapters.forEach((c, n) => {
     if (n === 0 && !ep.beats[0].chap) warn(`le premier beat n'a pas de "chap" : YouTube veut un chapitre à 00:00`);
     if (n > 0 && real(c.start - chapters[n - 1].start) < 10) warn(`« ${c.title} » : moins de 10 s après le chapitre d'avant (YouTube les ignore tous)`);
@@ -656,7 +672,10 @@ function ecritureLong(ep, sched) {
     }
     if (!relance(r.beat, { strict: true })) warn(`coupure pub après ${r.id} (${clock(t)}) : « ${lastSentence(plain(r.beat))} » ferme tout — la pub tombe après une question, une menace ou « … »`);
   });
-  if (rolls.length > 4) warn(`${rolls.length} coupures pub — trois ou quatre pour 8 à 11 min`);
+  if (affaire) {
+    if (duration >= 11 * 60 && rolls.length < 4) warn(`${rolls.length} coupures pub — quatre ou cinq pour une affaire de 12 à 14 min`);
+    if (rolls.length > 5) warn(`${rolls.length} coupures pub — cinq au plus`);
+  } else if (rolls.length > 4) warn(`${rolls.length} coupures pub — trois ou quatre pour 8 à 11 min`);
 
   // 6. the threads: declared, paid one at a time, open at every mid-roll, the promise of the start paid at the end
   const threads = threadsOf(ep, sched);

@@ -33,6 +33,13 @@ const ANNONCES = {
     title: ["Il ne bouge", "<s>pas</s>"],
     sub: "Moteurs à fond, ton Rafale reste cloué au pont.<br>Puis zéro à 240 km/h, en 75 mètres.",
   },
+  // the long's thumbnail (« IL RESTE 3 MIN 32 ») and its hook; the choice and its why stay in the film
+  HS05: {
+    at: 0.04,
+    kicker: "Nouveau grand format · 11 min 20",
+    title: ["Il reste", "<s>3 min 32</s>"],
+    sub: "Tes deux moteurs viennent d'avaler des oies,<br>à 860 mètres au-dessus de New York.<br>Demi-tour… ou fleuve ?",
+  },
 };
 
 const fonts = (dir) =>

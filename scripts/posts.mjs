@@ -384,6 +384,85 @@ const POSTS = {
       hashtags: ["#shorts","#porteavions","#charlesdegaulle","#rafale","#marinenationale"],
     },
   },
+  "HS05-hudson": {
+    "instagram": {
+      "caption": "Avion de l'Hudson, le vol US Airways 1549 : tes deux moteurs viennent d'avaler des oies, à 860 mètres au-dessus de New York. Ta check-list, elle, est écrite pour plus de 6 000.\n\nDans chacun des deux moteurs, une oie d'environ 3,6 kilos. Et le gros oiseau de ses essais de certification pesait la moitié.\n\nLe film complet, onze minutes, reconstitué seconde par seconde, t'attend sur notre chaîne YouTube : le lien est en bio.\n\nL'aéroport était juste derrière. Le demi-tour, il passait… oui ou non ?",
+      "hashtags": [
+        "#avionhudson",
+        "#sully",
+        "#aviation",
+        "#amerrissage",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "keyword": "avion de l'Hudson",
+      "title": "Avion de l'Hudson : tes deux moteurs viennent d'avaler des oies… demi-tour ou fleuve ?",
+      "description": "Avion de l'Hudson, vol US Airways 1549 : deux moteurs qui avalent des oies à 860 mètres au-dessus de New York, une check-list écrite pour plus de 6 000, et l'aéroport derrière toi. Le film complet (11 min 20), reconstitué seconde par seconde d'après le rapport d'enquête, est lié juste sous ce Short.\n\nLe demi-tour vers l'aéroport : il passait… oui ou non ?",
+      "hashtags": [
+        "#shorts",
+        "#avionhudson",
+        "#sully",
+        "#aviation",
+        "#amerrissage"
+      ]
+    }
+  },
+  "032-barre-anti-panique": {
+    instagram: {
+      caption: "La foule t'écrase contre une porte fermée. Et c'est elle qui te sauve.\n\nDossier 032 : la barre anti-panique. Une barre-levier, un boîtier, un pêne planté dans la gâche. Elle doit lâcher même quand toute une salle pousse dessus. En 1883, à Sunderland, une porte sans elle a coûté la vie à 183 enfants.\n\nTa porte de secours, au boulot ou au lycée : barre… ou poignée ?",
+      hashtags: ["#securite", "#histoire", "#portedesecours", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "La foule t'écrase contre une porte fermée… et c'est elle qui te sauve : la barre anti-panique",
+      description: "Dossier 032 — la barre anti-panique ouverte : la barre-levier, le boîtier, le pêne, la gâche, le ressort. Pourquoi elle doit lâcher même sous la poussée d'une foule, et ce qui s'est passé à Sunderland en 1883.\n\nTa porte de secours, au boulot ou au lycée : barre… ou poignée ?",
+      hashtags: ["#shorts", "#securite", "#histoire", "#commentcamarche", "#science"],
+    },
+  },
+  "033-porte-avion": {
+    instagram: {
+      caption: "Ton voisin force la porte, en plein vol. Elle ne bouge pas.\n\nDossier 033 : la porte d'avion. Une poignée, des crochets de verrouillage… et autour, des butées. En croisière, personne ne peut l'ouvrir, même en le voulant. Pourtant, en Corée, un passager en a ouvert une.\n\nEt toi, la place près de la porte : tu la prends… ou jamais ?",
+      hashtags: ["#avion", "#aviation", "#securite", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ton voisin force la porte de l'avion en plein vol… et elle ne bouge pas",
+      description: "Dossier 033 — la porte d'avion ouverte : poignée, crochets de verrouillage, cadre, butées. Pourquoi, en croisière, personne ne peut l'ouvrir… et pourquoi un passager en a ouvert une en Corée, à l'approche.\n\nEt toi, la place près de la porte : tu la prends… ou jamais ?",
+      hashtags: ["#shorts", "#avion", "#aviation", "#securite", "#science"],
+    },
+  },
+  "035-passage-a-niveau": {
+    instagram: {
+      caption: "Ta voiture est sur les rails. Et cette barrière est faite pour casser.\n\nDossier 035 : le passage à niveau. Un feu rouge qui s'allume au moins vingt secondes avant le train, une sonnerie, des demi-barrières blanc et rouge… et une lisse conçue pour céder. Pourquoi, et quoi faire, dans l'ordre, si tu es piégé entre elles.\n\nLe passage à niveau près de chez toi : un téléphone… ou une pancarte ?",
+      hashtags: ["#passageaniveau", "#securiteroutiere", "#train", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ta voiture est sur les rails… et cette barrière est faite pour casser : le passage à niveau",
+      description: "Dossier 035 — le passage à niveau ouvert : le feu rouge R24, la sonnerie, les demi-barrières d'entrée puis de sortie, la lisse blanc et rouge conçue pour céder. Et ce qu'il faut faire, dans l'ordre, si ta voiture est piégée entre les barrières.\n\nLe passage à niveau près de chez toi : un téléphone… ou une pancarte ?",
+      hashtags: ["#shorts", "#passageaniveau", "#securiteroutiere", "#train", "#science"],
+    },
+  },
+  "031-tcas": {
+    instagram: {
+      caption: "Un avion fonce droit sur toi. Ta machine dit : monte. Le contrôleur : descends.\n\nDossier 031 : le TCAS, l'anticollision des avions de ligne. Une antenne qui interroge l'autre avion chaque seconde, son transpondeur qui répond, un calculateur qui compte le temps qui reste… et deux machines qui se parlent avant de te donner un ordre.\n\nCinq secondes pour obéir : tu obéis… ou tu hésites ?",
+      hashtags: ["#aviation", "#avion", "#pilote", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ta machine dit « monte », le contrôleur dit « descends » : le TCAS, l'anticollision des avions",
+      description: "Dossier 031 — le TCAS (ACAS II) ouvert : l'antenne qui interroge l'autre avion chaque seconde, le transpondeur qui répond, le calculateur qui mesure le temps avant le point le plus proche, et les deux machines qui se mettent d'accord : l'une dit monte, l'autre descends.\n\nPilotes : qu'est-ce qu'on a simplifié ? Et toi, cinq secondes pour obéir : tu obéis… ou tu hésites ?",
+      hashtags: ["#shorts", "#aviation", "#avion", "#pilote", "#science"],
+    },
+  },
+  "034-boite-noire": {
+    instagram: {
+      caption: "Une boîte noire coule. On va la chercher presque deux ans.\n\nDossier 034 : la boîte noire. Sa balise, réveillée par l'eau, n'appelle que trente jours, et ne porte qu’à quelques kilomètres. Au fond de l'Atlantique, par 3 900 mètres, il ne reste qu'une chose pour tenir.\n\nTon prochain avion : d'avant 2021… ou d'après ?",
+      hashtags: ["#boitenoire", "#avion", "#aviation", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Une boîte noire coule… et on va la chercher presque deux ans : la boîte noire",
+      description: "Dossier 034 — la boîte noire ouverte : la balise qui s'allume au contact de l'eau, le boîtier et son électronique, et au milieu, le module mémoire blindé. Le Rio-Paris de 2009 : une épave par 3 900 mètres, retrouvée en avril 2011.\n\nPilotes, mécanos : qu'est-ce qu'on a simplifié ? Et ton prochain avion : d'avant 2021… ou d'après ?",
+      hashtags: ["#shorts", "#boitenoire", "#avion", "#aviation", "#science"],
+    },
+  },
 };
 
 const problems = [];
