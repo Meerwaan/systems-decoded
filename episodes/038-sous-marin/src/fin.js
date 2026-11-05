@@ -16,7 +16,7 @@ import { SET, VIEW, STAGED, FIRST, POSE0, DEPTH, MBT } from "./world.js";
 const TANKA_X = (MBT.aft.x0 + MBT.aft.x1) / 2;
 
 export default function fin({ D }) {
-  const { tl, st, shot, cut, panel, chip, punch } = D;
+  const { tl, st, shot, cut, path, panel, chip, punch } = D;
   const t = D.times({
     toverdict: "toverdict", chute: "chute", pas: "verdict", avant: "avant", fuyait: "fuyait", remonte: "remonte",
     arriere: "arriere", tocta: "tocta", ssn: "sanfrancisco", carte: "carte2", montagne: "montagne3", autres: "autres", danger: "danger",
@@ -34,20 +34,25 @@ export default function fin({ D }) {
   // el −8 (was −14): the hull runs flatter, its top stays under the header (the bubbles still rise into it)
   const under = { tx: -4000, ty: 0, tz: 0, d: 7000, az: 50, el: -8, fov: 34, shift: 0, side: 0, roll: 0, drift: 0.3, dof: 0 };
   cut(t.toverdict, SET.SCENE, under, { ...floating, fx: MBT.fwd.x0, fy: 0, fz: 300, fs: 4000 });
-  shot(t.toverdict, t.fuyait + 0.4 - t.toverdict, { ...under, d: 6000, az: 46 }, "sine.inOut");
+  // PLAN-SÉQUENCE (2026-11-05): under the bow, then ONE travelling shot along the hull to the aft tanks on « grâce à
+  // l'arrière » (it used to be a cut) — the eye goes from what leaked to what saved, without a jump
+  const aft = { tx: TANKA_X - 200, ty: 0, tz: 150, d: 4400, az: 50, el: -6, fov: 32, shift: 80, side: 0, roll: 0, drift: 0.3, dof: 0 };
+  const toAft = t.fuyait + 0.42;
+  path([
+    [t.toverdict, under],
+    [t.fuyait, { tx: -3700, d: 6000, az: 44 }],
+    [t.arriere, aft],
+    [t.tocta, { d: 4100, az: 44 }],
+  ], { from: "go", to: "go" });
   punch(t.pas, 0.06);
   // « L'avant fuyait » : the sheaves of bubbles swell on the word
   st(t.avant - 0.1, t.fuyait + 0.3 - t.avant, { leak: 0.9 }, "sine.inOut");
   // « …grâce à l'arrière » : cut in the breath to the aft tanks (the same pair of shots as act 3: torn → aft), from
   // below, green and alone — the glass and the crew fade around them while the camera closes in
-  const aft = { tx: TANKA_X - 200, ty: 0, tz: 150, d: 4400, az: 50, el: -6, fov: 32, shift: 80, side: 0, roll: 0, drift: 0.3, dof: 0 };
-  const toAft = t.fuyait + 0.42;
-  cut(toAft, SET.SCENE, { ...aft, d: 5800, az: 56 }, { ...floating, leak: 0.9, fx: TANKA_X, fy: 0, fz: 280, fs: 3500 });
-  shot(toAft, t.arriere - toAft, aft, "sine.inOut", 5800);
+  st(t.fuyait, t.arriere - t.fuyait, { fx: TANKA_X, fy: 0, fz: 280, fs: 3500 }, "sine.inOut"); // the light travels with it
   st(toAft, t.arriere - toAft, { hull: 0.45, inner: 0.35, crew: 0 }, "sine.inOut");
   st(t.remonte, t.arriere + 0.2 - t.remonte, { litTank: 1 }, "sine.inOut");
   punch(t.arriere, 0.06);
-  shot(t.arriere, t.tocta - t.arriere, { ...aft, d: 4200, az: 48 }, "sine.inOut");
   retitle(tl, { showAt: t.chute + 0.1, strikeAt: t.pas, swapAt: t.arriere - 0.05, hideAt: t.tocta - 0.42 });
   D.verdict(t.pas);
 
@@ -57,23 +62,30 @@ export default function fin({ D }) {
   // and the low sky above it, the rest under the dark water. el stays tiny so that the pull-in keeps the eye's height.
   const float = { ...VIEW.float, ty: 480, d: 25000, el: 0.3, side: 120, drift: 0.3, dof: 0 };
   cut(t.tocta, SET.SCENE, float, { ...floating, leak: 0, fx: -1000, fy: 0, fz: 0, fs: 12000 });
-  shot(t.tocta, t.carte - 0.4 - t.tocta, { ...float, d: 22500, az: 63 }, "sine.inOut");
+  path([[t.tocta, float], [t.carte - 0.4, { d: 21000, az: 58 }]]); // gliding past the boat, never held
   chip("chip-ssn", null, 96, 470, t.ssn - 0.05, t.carte - 0.62);
 
   // « Et ta carte ? » : the ocean from far, empty as the chart — « …cette montagne » : it rises out of the dark
   cut(t.carte - 0.4, SET.SCENE, VIEW.mountain, { ...floating, gap: 3, rock: 1, mount: 0, leak: 0, fx: -1000, fy: 0, fz: 0, fs: 12000 });
   st(t.montagne - 0.35, 0.7, { mount: 1 }, "sine.out");
-  shot(t.carte - 0.4, t.like - 0.2 - (t.carte - 0.4), { ...VIEW.mountain, d: 1250000, el: 9 }, "sine.inOut", VIEW.mountain.d);
+  // PLAN-SÉQUENCE to the end: ONE orbit round the seamount that climbs while the questions, the like and the next file
+  // come (it used to be three slow pull-backs, 72 → 91 s read as a still picture: the end of the film was frozen)
+  path([
+    [t.carte - 0.4, VIEW.mountain],
+    [t.montagne, { az: 40, d: 1150000, el: 7 }],
+    [t.commentaire, { az: 60, d: 1250000, el: 11 }],
+    [t.like - 0.2, { az: 76, d: 1400000, el: 16, ty: -150000 }],
+    [t.abo, { az: 92, d: 1650000, el: 23, ty: -120000 }],
+    [t.toloop, { az: 122, d: 1850000, el: 28, ty: -100000 }],
+  ], { from: "go", to: "go" });
   panel("#cartes", t.autres - 0.1, t.danger + 0.2); // gone before the duel comes
   duelCall(tl, { from: t.commentaire - 0.3, word: t.commentaire, aAt: t.duelA, bAt: t.duelB, to: t.like - 0.3 });
 
   /* LIKE — high over the ocean: far more ocean than mountain */
-  shot(t.like - 0.2, t.abo - t.like + 0.2, { ...VIEW.mountain, ty: -120000, d: 1700000, el: 24 }, "sine.inOut", 1250000);
   likeCall(tl, { from: t.like, to: t.likeEnd + 0.12, count: 5, label: (n) => `${n} personnes` });
 
   /* PROCHAIN DOSSIER — classified, and last: the sea darkens, nothing of the boat comes back */
   st(t.abo, t.prochain + 0.8 - t.abo, { sea: 0.3 }, "sine.inOut");
-  shot(t.abo, t.toloop - t.abo, { ...VIEW.mountain, ty: -100000, d: 1850000, el: 28 }, "sine.inOut", 1700000);
   nextFile(tl, { showAt: t.prochain - 0.15, factAt: t.prochain + 0.7, hideAt: t.toloop - 0.38, railFrom: t.abo + 0.1, railTo: t.aboEnd + 0.15 });
 
   /* REBOUCLAGE — back under the hull, the bow rushing at the rock. The gap closes at act 1's own speed (120 m over

@@ -35,10 +35,6 @@ const PRESS_IN = { ...VIEW.press, d: 12000, az: 46 };
 const CMD_OUT = { ...VIEW.cmd, d: 720 };
 // the bank of bottles through the glass, from above (the decor's pose)
 const BOTTLES = { ...VIEW.bottles };
-// the shock: closer and lower than the shot before (a frank change of scale), the whole folded bow left of centre
-// against the wall's lines — and a slow push. (az 40 from the decor's journal and az 10 tried: the bow on the edge.)
-const IMPACT = { ...P, tx: -5500, ty: 0, tz: 0, d: 3000, az: 20, el: -14, fov: 40, shift: 60 };
-const IMPACT_IN = { ...IMPACT, d: 2700 };
 // the control room, and a little closer while the crew is thrown
 const CREW = { ...VIEW.crew, tx: -3050, d: 950 };
 const CREW_IN = { ...CREW, d: 880 };
@@ -57,7 +53,7 @@ const L_CMD = { fx: CMD.at[0], fy: CMD.at[1], fz: CMD.at[2], fs: 150 };
 const L_SYS = { fx: SYSTEM.centre[0], fy: SYSTEM.centre[1], fz: SYSTEM.centre[2], fs: 2500 };
 
 export default function acte1({ D, world }) {
-  const { tl, st, shot, cut, chip, panel, punch } = D;
+  const { tl, st, shot, cut, path, jolt, chip, panel, punch } = D;
   const t = D.times({
     choc: "choc", carte: "carte1", remonter: "remonter", air: "air1", contre: "promesse:Contre", mille7: "mille7",
     tonnes: "tonnes", et: "promesse:Et", montagne2: "montagne2", ignore: "ignore", crash: "crash", canette: "canette",
@@ -82,20 +78,29 @@ export default function acte1({ D, world }) {
 
   /* ── « Contre 7 000 tonnes. » — the whole boat, the weight ── */
   cut(t.contre - 0.1, null, MASS_IN, { ...L_BOAT, litBank: 0 }); // a cut, not a 0.9 s pull-back (qa: heurté 5.9)
-  shot(t.contre - 0.1, t.et - 0.1 - (t.contre - 0.1), VIEW.mass, "sine.out");
+  // PLAN-SÉQUENCE (2026-11-05): the pull on the whole boat runs straight on into the travel to the bow — no stop on
+  // « Et » — and keeps closing in until the cut of the shock
+  // …and on through the shock itself, no cut (Merwan, 06/11: « le moment du choc… on voit le cut ») — see below
+  path([
+    [t.contre - 0.1, MASS_IN], [t.et - 0.1, VIEW.mass], [t.ignore + 0.3, NEAR],
+    [t.crash, { d: 4700, az: 19, el: -6 }],
+    [t.canette, { d: 3500, az: 23, el: -10, shift: 10 }],
+    [t.des - 0.1, { d: 3050, az: 29, el: -12, shift: 30 }],
+  ]);
   st(t.mille7 - 0.05, 0.5, { weight: 1 }, "power2.out");
   chip("chip-tonnes", null, 96, 470, t.tonnes - 0.05, t.et - 0.2);
 
   /* ── « Et cette montagne… pourquoi ta carte l'ignore ? » — to the bow, the wall a few metres off ── */
-  shot(t.et - 0.1, t.ignore - t.et + 0.3, NEAR, "sine.inOut", VIEW.mass.d);
   st(t.et - 0.1, 0.6, { weight: 0 }, "sine.inOut");
   st(t.et - 0.1, 1.2, L_BOW, "sine.inOut");
   panel("#carte", t.montagne2 - 0.1, t.crash - 0.35);
   punch(t.ignore, 0.06);
 
-  /* ── CUT 1 « Le choc écrase ta proue comme une canette. » ── */
-  cut(t.crash, null, IMPACT, { ...L_BOW });
-  shot(t.crash, t.des - 0.1 - t.crash, IMPACT_IN, "sine.out");
+  /* ── « Le choc écrase ta proue comme une canette. » — THE CONTACT SEEN, IN THE SAME SHOT ──
+     (06/11: it was a cut to a closer, lower angle on the frame of the contact — the eye saw the cut, never the contact.
+     Now the camera that was closing in on the bow keeps closing in: the bow meets the wall in the frame, the camera
+     takes the knock, and the bow folds up on « canette » while the camera sinks under it.) */
+  jolt(t.crash, 0.9, 0.55);
   st(t.crash, 0.22, { crush: 0.35 }, "power3.out"); // the contact
   st(t.crash, 0.45, { speed: 0 }, "power2.out");
   st(t.canette - 0.42, 0.42, { crush: 1 }, "power2.in"); // the bow folds up ON « canette »
@@ -103,7 +108,7 @@ export default function acte1({ D, world }) {
 
   /* ── CUT 2 « Des marins sont projetés. » — the same jolt, from inside ── */
   cut(t.des - 0.1, null, CREW, { ...L_ROOM, hull: 0.4, inner: 0.5 }); // the glass in front of the room thinned: the crew reads
-  shot(t.des - 0.1, t.metres - 0.8 - (t.des - 0.1), CREW_IN, "sine.inOut");
+  path([[t.des - 0.1, CREW], [t.metres - 0.66, { ...CREW_IN, az: CREW.az + 10 }]]);
   st(t.projetes - 0.1, 0.3, { jolt: 1 }, "power3.out");
 
   /* ── « À 160 mètres : 17 fois la pression de surface. » — the whole boat squeezed ── */
@@ -117,7 +122,7 @@ export default function acte1({ D, world }) {
   /* ── « Il reste un geste… la chasse d'urgence. » — dive onto the command ── */
   const dive = t.geste - 0.6; // in the breath before « Il reste » (qa: heurté 17.6 on the 1 s dive)
   cut(dive, null, CMD_OUT, { ...L_CMD, press: 0 });
-  shot(dive, t.chasse - dive, VIEW.cmd, "sine.out");
+  path([[dive, CMD_OUT], [t.chasse, VIEW.cmd], [t.urgence + 0.54, { ...VIEW.cmd, d: 470, az: VIEW.cmd.az + 8 }]]);
   st(t.geste, 0.4, { litCmd: 1 }, "power2.out");
   chip("chip-chasse", null, 96, 470, t.chasse, t.alors - 0.15);
   punch(t.urgence, 0.06);

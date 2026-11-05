@@ -46,7 +46,7 @@ const L_AFT = { fx: TANKA[0], fy: TANKA[1], fz: TANKA[2], fs: 1200 };
 const L_TORN = { fx: MBT.fwd.x0 + 150, fy: -200, fz: 260, fs: 1400 };
 
 export default function acte2b({ D }) {
-  const { st, shot, cut, chip, punch } = D;
+  const { st, cut, path, chip, punch } = D;
   const t = D.times({
     toprincipe: "toprincipe", archimede: "archimede", pese: "pese", deplace: "deplace", un: "principe:Un",
     cube: "cube", air: "air3", mille: "mille1", kilos: "kilos",
@@ -60,25 +60,29 @@ export default function acte2b({ D }) {
     ...STAGED, depth: 160, gap: 0, speed: 0, rush: 0, pitch: 0, rock: 0, crush: 0, jolt: 0, mood: 0, heart: 0.6,
     cmd: 0, valves: 0, bank: 1, flowF: 0, flowA: 0, airF: 0, airA: 0, leak: 0, ...L_TANK,
   });
-  shot(t.toprincipe, t.archimede - 0.15 - t.toprincipe, { ...TANK, d: 4500, az: 30 }, "sine.inOut");
+  // PLAN-SÉQUENCE (2026-11-05): from the tank out to the whole boat and on round it, without a stop, to the cut into
+  // the cube (it used to be a push, a stop, a pull-back, a stop)
+  const back = t.archimede - 0.15;
+  const dive = t.un - 0.12; // retouche: the dive (×12 in 0,75 s, heurté at 34,8) is a cut, a few frames before « Un »
+  path([
+    [t.toprincipe, TANK],
+    [back, { d: 4500, az: 36 }],
+    [t.pese - 0.1, WHOLE_B],
+    [dive, { d: 17500, az: 76, el: 22 }],
+  ]);
 
   /* ───────────── « Archimède : ton bateau pèse autant que l'eau qu'il déplace. » — the whole boat, two equal arrows ───────────── */
-  const back = t.archimede - 0.15;
   const backDur = t.pese - 0.1 - back;
-  shot(back, backDur, WHOLE_B, "sine.inOut", 4500);
   st(back, backDur * 0.6, { heart: 0 }, "sine.inOut");
   st(back, backDur, L_WHOLE_B, "sine.inOut");
   chip("chip-archimede", null, 96, 470, t.archimede, t.un - 0.5);
   st(t.pese, 0.55, { weight: 0.8 }, "power2.out");
   st(t.deplace, 0.55, { lift: 0.8 }, "power2.out");
-  // the frame holds and drifts a little toward the boat while the second arrow comes
-  const dive = t.un - 0.12; // retouche: the dive (×12 in 0,75 s, heurté at 34,8) is now a cut, a few frames before « Un »
-  shot(t.pese - 0.1, dive - (t.pese - 0.1), { ...WHOLE_B, d: 18500, az: 66 }, "sine.inOut");
 
   /* ───────────── « Un mètre cube d'eau remplacé par de l'air… » — cut into the tank, onto the cubic metre ───────────── */
   cut(dive, null, { ...CUBE_P, d: 1650 }, { heart: 1, weight: 0, lift: 0, cube: 0.15, ...L_CUBE }); // the cube's lines already drawn
   st(t.cube, t.air - t.cube, { cube: 0.5 }, "sine.inOut");
-  shot(dive, t.mille - dive, { ...CUBE_P, d: 1350 }, "sine.inOut");
+  path([[dive, { ...CUBE_P, d: 1650 }], [t.mille, { d: 1350, az: CUBE_P.az + 8 }], [t.repos - 0.12, { d: 1250, az: CUBE_P.az + 13 }]]);
 
   /* ───────────── « …c'est 1 000 kilos en moins. » — the water block drops out ───────────── */
   st(t.mille, t.repos - 0.25 - t.mille, { cube: 1 }, "sine.in");
@@ -94,18 +98,17 @@ export default function acte2b({ D }) {
   // retouche: the pull-back (heurté at 41,1) leaves earlier, as « bouteilles » ends, and travels a little less far
   const wide = t.mer - 0.75;
   const close = t.geste - 0.12; // retouche: the approach (×11 in 1,3 s, heurté at 42,7) is now a cut before « geste »
-  shot(rest, wide - rest, { ...REST, d: 10000, az: 51 }, "sine.inOut");
+  path([[rest, REST], [wide, { d: 9800, az: 56 }], [close, { ...WHOLE_S, d: 24000 }]]); // out to the whole boat, no stop
   st(t.attend, 0.5, { litBank: 1 }, "sine.out");
 
   /* ───────────── « La mer remplit les ballasts. » — pull back to the whole boat: the four tanks glow ───────────── */
-  shot(wide, close - wide, { ...WHOLE_S, d: 24000 }, "sine.inOut", 10000);
   st(wide, close - wide, L_WHOLE_S, "sine.inOut");
   st(t.mer, 0.5, { litBank: 0.3, litTank: 1 }, "sine.out");
 
   /* ───────────── « Un geste lâche tout. » — cut to the command, which glows ───────────── */
   // the glass in front of it thinned (as in act 1's crew shot) and a first glow: it reads before « lâche » lights it
   cut(close, null, { ...CMD_P, d: 2700 }, { litTank: 0, litBank: 0, litCmd: 0.35, hull: 0.35, inner: 0.4, rock: 0, ...L_CMD }); // chef: no boulder inside the control-room shot
-  shot(close, t.mais - 0.2 - close, CMD_P, "sine.inOut");
+  path([[close, { ...CMD_P, d: 2700 }], [t.mais - 0.2, { ...CMD_P, az: CMD_P.az + 8 }]]);
   st(t.lache, 0.4, { litCmd: 1 }, "sine.out");
 
   /* ───────────── « Mais l'air ne chasse l'eau… » — the aft tank, closed, intact; the picture turns signal ───────────── */
@@ -115,7 +118,7 @@ export default function acte2b({ D }) {
     cmd: 0, valves: 0, bank: 1, flowF: 0, flowA: 0, airF: 0, airA: 0, leak: 0, litTank: 0.6, ...L_AFT,
   });
   st(t.mais, 0.3, { mood: 1 }, "sine.inOut");
-  shot(aft, t.reservoir - 0.15 - aft, { ...AFT, d: 5000, az: 37 }, "sine.inOut");
+  path([[aft, AFT], [t.reservoir - 0.15, { d: 4900, az: 33 }]]);
   chip("chip-intact", null, 96, 470, t.chasse, t.tozero - 0.25);
 
   /* ───────────── « …que d'un réservoir intact. » — the forward tanks, torn ───────────── */
@@ -124,6 +127,6 @@ export default function acte2b({ D }) {
     ...STAGED, depth: 160, gap: 0, speed: 0, rush: 0, pitch: 0, crush: 1, jolt: 0, mood: 1,
     cmd: 0, valves: 0, bank: 1, flowF: 0, flowA: 0, airF: 0, airA: 0, leak: 0, ...L_TORN,
   });
-  shot(torn, t.tozero - torn, { ...TORN, d: 4600 }, "sine.inOut");
+  path([[torn, TORN], [t.tozero, { d: 4500, az: 37 }]]);
   punch(t.intact, 0.06);
 }

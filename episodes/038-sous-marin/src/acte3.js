@@ -1,5 +1,5 @@
 // 03 · RÉPONSE — the blow (tozero → toverdict). « Le chef de quart lâche la chasse. » to « …un qui ne reviendra pas. »
-// In cuts, one shot per breath; every cut is laid a few frames before its sentence (on the sound the script already
+// In moves that never stop (plan-séquence, 2026-11-05) and a few cuts on the breath; every cut is laid a few frames before its sentence (on the sound the script already
 // lays there), its pose is complete and so is its state (built on DEEP / HIGH from STAGED): nothing is inherited.
 //
 // What the picture says, and in what order (the voice's, no other):
@@ -33,19 +33,15 @@ const BLOW1 = { ...VIEW.cmd, d: 560, az: 62 }; // a touch back: the handle, thro
 // the whole boat, three-quarter from aft, the rock behind the bow
 // (three-quarter from aft: the bow and its rock beyond, away on the left; the aft tanks nearest)
 const CLIMB = { ...PZ, tx: -500, ty: 0, tz: 0, d: 27000, az: 66, el: 6, shift: 60 };
-const CLIMB1 = { ...CLIMB, d: 23500 };
 // the torn forward tanks, the aft tank
 // (the crushed bow from port, a little below: the tears, and the column of bubbles rising out of them)
 const TORN0 = { ...PZ, tx: -4400, ty: 0, tz: 300, d: 6500, az: 20, el: -4, shift: -80 };
-const TORN1 = { ...TORN0, d: 6000 };
 // (the aft port tank from forward, its window: the fins beyond it)
 const AFT0 = { ...PZ, tx: 3250, ty: 0, tz: 300, d: 6500, az: -30, el: 10, shift: 60 };
-const AFT1 = { ...AFT0, d: 6000 };
 // the surface, then floating
 // (« La surface »: the lens AT the waterline, level — the water plane is one clean line, not a field of swell strokes;
 // it rises a hair under the camera as the boat comes up, and the sail breaks through it, the hull just under it)
 const SURF = { ...VIEW.surface, ty: 440, el: 0, shift: 160 };
-const SURF1 = { ...SURF, d: 15200 };
 const FLOAT = { ...VIEW.float };
 
 /* ── the light: what it stands around, how wide ── */
@@ -64,7 +60,7 @@ const BLOWN = { cmd: 1, valves: 1, bank: 0.4, flowF: 1, flowA: 1 };
 const span = (from, to) => Math.max(0.05, to - from);
 
 export default function acte3({ D }) {
-  const { tl, st, shot, cut, chip, punch } = D;
+  const { tl, st, cut, path, chip, punch } = D;
   const t = D.times({
     zero: "zero", tozero: "tozero", chef: "chef", lache: "lacheZ", chasse: "chasse2",
     air: "zero:l'air", fonce: "fonce", devant: "devant1", derriere: "derriere1",
@@ -85,7 +81,17 @@ export default function acte3({ D }) {
   // the station, the same instant as the scene: the hood comes up while « Le chef de quart » is said, the handle drops
   // on « lâche », the two valves turn their quarter just after — the fronts leave on « chasse »
   cut(t.tozero, SET.SCENE, BLOW0, { ...DEEP, hull: 0.5, inner: 0.45, litCmd: 0, ...L_CMD });
-  shot(t.tozero, span(t.tozero, t.lache + 0.1), BLOW1, "sine.out");
+  // PLAN-SÉQUENCE (2026-11-05): from the hand on the command, ONE move that never stops — the orbit while the hood
+  // lifts, out through the glass with the air to the whole boat, an orbit while the green comes in, and a dive onto the
+  // torn bow on « Devant » (it used to be a held wide shot and a cut). It slides on aft along the tears.
+  path([
+    [t.tozero, BLOW0],
+    [t.lache + 0.1, BLOW1],
+    [t.devant - 0.15, CLIMB],
+    [t.derriere + 0.25, { d: 24500, az: 58, el: 7 }],
+    [t.eventres, TORN0],
+    [toAft, { tx: TORN0.tx + 450, d: 5900, az: 30 }],
+  ], { from: "go", to: "go" }); // "go": past 45° before the hood lifts (at 18–40° it mirrors the key: a white frame at 46,6)
   st(t.chef + 0.2, span(t.chef + 0.2, t.lache), { cmd: 0.45 }, "sine.inOut"); // once the orbit is mostly done
   st(t.lache, 0.26, { cmd: 1 }, "power2.out");
   st(t.lache + 0.2, 0.3, { valves: 1 }, "power2.out");
@@ -97,7 +103,6 @@ export default function acte3({ D }) {
   st(t.chasse, span(t.chasse, t.devant), { flowF: 1 }, "sine.inOut");
   st(t.chasse, span(t.chasse, t.derriere), { flowA: 1 }, "sine.inOut");
   st(t.air, span(t.air, t.derriere), { bank: 0.4 }, "sine.inOut");
-  shot(t.lache + 0.1, span(t.lache + 0.1, t.devant - 0.15), CLIMB, "sine.inOut", BLOW1.d);
   st(t.lache + 0.1, span(t.lache, t.devant), { ...L_WIDE }, "sine.in");
   // the camera goes out through the two glass shells (≈ 47,8): they are gone while it crosses (at grazing they veil the
   // whole frame white), and come back once it is outside
@@ -106,15 +111,15 @@ export default function acte3({ D }) {
 
   /* ───────────── « Devant… et *derrière*. » ───────────── */
   // the whole boat: green comes into the forward tanks on « Devant », into the aft ones on « derrière »
-  shot(t.devant - 0.15, span(t.devant, toTorn), CLIMB1, "sine.inOut");
   st(t.devant, 0.4, { airF: 0.15 }, "power2.out");
   st(t.derriere, 0.4, { airA: 0.12 }, "power2.out");
   punch(t.derriere, 0.06);
 
   /* ───────────── « Devant, les ballasts sont éventrés. » ───────────── */
   // the torn forward tanks, close: their signal lips; the green that comes in does not stay
-  cut(toTorn, SET.SCENE, TORN0, { ...DEEP, ...BLOWN, airF: 0.08, airA: 0.12, ...L_TORN });
-  shot(toTorn, span(toTorn, toAft), TORN1, "sine.inOut");
+  // (no cut any more: the dive brings the light with it)
+  st(t.derriere + 0.25, span(t.derriere + 0.25, t.eventres), { ...L_TORN }, "sine.inOut");
+  st(toTorn, 0.5, { airF: 0.08 }, "sine.inOut");
   st(t.eventres, 0.5, { airF: 0.1, leak: 0.15 }, "power2.out");
   chip("chip-eventres", null, 96, 470, t.eventres, toAft - 0.2);
 
@@ -126,15 +131,17 @@ export default function acte3({ D }) {
 
   /* ───────────── « Derrière, ils se remplissent d'air. » ───────────── */
   // the aft tank, closed, whole: the green grows, the water goes down
+  // a cut on the contrast « Devant / Derrière », MATCHED ON THE MOVE: the torn bow slid right, the aft tank goes on
+  // sliding right at the same pace — the eye reads one travelling shot along the boat
   cut(toAft, SET.SCENE, AFT0, { ...DEEP, ...BLOWN, airF: 0.04, airA: 0.12, leak: 1, ...L_AFT });
-  shot(toAft, span(toAft, toClimb), AFT1, "sine.inOut");
+  path([[toAft, AFT0], [toClimb, { tx: AFT0.tx + 600, d: 5700, az: -20 }]]);
   chip("chip-arriere", null, 96, 470, t.derriere2, toClimb - 0.2);
   st(t.ils, span(t.ils, toClimb), { airA: 0.85 }, "sine.inOut");
 
   /* ───────────── « Lentement, le bateau +monte+. » ───────────── */
   // the whole boat lifts off the rock: the rock sinks away, the snow falls past it, the surface comes down from the top
   cut(toClimb, SET.SCENE, CLIMB, { ...DEEP, ...BLOWN, airF: 0.04, airA: 0.85, leak: 1, ...L_WIDE });
-  shot(toClimb, span(toClimb, toSurf), CLIMB1, "sine.inOut");
+  path([[toClimb, CLIMB], [toSurf, { d: 22000, az: 55, el: 10 }]]); // the boat climbs, the camera rises round it
   st(toClimb, 0.6, { airA: 1 }, "sine.out");
   st(t.lentement, span(t.lentement, toSurf), { depth: 40 }, "sine.in");
   st(t.lentement, span(t.lentement, toSurf), { gap: 3, pitch: 6, rush: 1 }, "sine.inOut");
@@ -152,6 +159,6 @@ export default function acte3({ D }) {
 
   /* ───────────── « 98 blessés, dont un qui ne reviendra pas. » ───────────── */
   // the boat still under the low sky; one very slow pull-back from the surface to the float, nothing else
-  shot(toSurf, span(toSurf, t.blesses), SURF1, "sine.inOut");
-  shot(t.blesses, span(t.blesses, t.toverdict), FLOAT, "sine.inOut");
+  // one slow move that never stops: along the waterline, then up to the float (no drama: slow, but never frozen)
+  path([[toSurf, SURF], [t.blesses, { d: 15000, az: 66 }], [t.toverdict, { ...FLOAT, az: 72 }]]);
 }
