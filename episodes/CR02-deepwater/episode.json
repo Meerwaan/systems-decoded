@@ -16,10 +16,12 @@
     "seed": 21
   },
   "cover": {
-    "at": "eclate$",
+    "at": "defaut$",
     "title": [
-      "Deepwater Horizon"
+      "Deepwater Horizon",
+      "21:49"
     ],
+    "lastTone": "#ffb23e",
     "cam": {
       "tx": 0,
       "ty": 8,
@@ -27,168 +29,347 @@
       "d": 120,
       "az": -40,
       "el": 14,
+      "fov": 28,
       "shift": -430,
       "side": 0,
-      "fov": 28,
       "roll": 0
     }
   },
   "post": {
-    "caption": "Le mot que les gens cherchent, et son synonyme courant : (« ESP, le contrôle de trajectoire : »). Puis l'accroche prolongée, sans la répéter ni dire la chute. Puis la question du commentaire : ceci… ou cela ?",
+    "keyword": "Deepwater Horizon",
+    "caption": "Deepwater Horizon, 20 avril 2010, 21 h 40 : la boue jaillit du derrick. Au fond de la mer, la dernière sécurité va se fermer… sans sceller le puits. Le compte à rebours, minute par minute. Toi : 1 400 d'un côté, zéro de l'autre… tu valides, ou tu arrêtes tout ?",
     "hashtags": [
-      "#apprendresurtiktok",
-      "#commentcamarche",
-      "#sujet1",
-      "#sujet2",
-      "#communaute"
+      "#deepwaterhorizon",
+      "#petrole",
+      "#plateformepetroliere",
+      "#comptearebours",
+      "#apprendresurtiktok"
     ],
-    "pinned": "Les deux réponses à recopier, 150 caractères au plus : « Réponds juste : ceci ou cela. »"
+    "pinned": "Selon l'enquête du CSB, les deux boîtiers de commande du BOP n'auraient même pas passé les essais d'usine. Toi : tu valides, ou tu arrêtes tout ?",
+    "instagram": {
+      "caption": "Deepwater Horizon, 20 avril 2010, 21 h 40 : la boue jaillit jusqu'en haut du derrick. Neuf minutes plus tard, tout explose.\n\nCompte à rebours 02 : la soirée du golfe du Mexique, minute par minute. Le test de pression jugé réussi, le puits qui coule sans que personne le voie, les mâchoires du BOP qui se ferment trop tard — et la dernière sécurité qui se ferme… sans sceller le puits. Tout est vrai, reconstitué en maquette.\n\nToi : 1 400 d'un côté, zéro de l'autre… tu valides, ou tu arrêtes tout ?",
+      "hashtags": [
+        "#deepwaterhorizon",
+        "#petrole",
+        "#histoire",
+        "#ingenierie",
+        "#comptearebours"
+      ]
+    },
+    "youtube": {
+      "title": "Deepwater Horizon, 21 h 49 : la dernière sécurité se ferme… et le puits coule quand même",
+      "description": "Compte à rebours 02 — la soirée du 20 avril 2010 sur Deepwater Horizon, reconstituée minute par minute d'après l'enquête du CSB : le test de pression jugé réussi à 19 h 55, le puits qui coule dès 21 h 08, la boue dans le derrick à 21 h 40, les mâchoires du BOP, l'explosion de 21 h 49 — puis le bouton d'urgence, le dernier recours automatique, et pourquoi ses lames n'ont pas scellé le puits. Et ce qui a changé depuis sur les BOP sous-marins.\n\nToi : 1 400 d'un côté, zéro de l'autre… tu valides, ou tu arrêtes tout ?",
+      "hashtags": [
+        "#shorts",
+        "#deepwaterhorizon",
+        "#petrole",
+        "#histoire",
+        "#science"
+      ]
+    }
   },
-  "sources": [],
+  "sources": [
+    "Heures de la soirée (19 h 55 test jugé réussi, 21 h 08 pompes arrêtées et ≈ 9 barils/min, 21 h 31 pression anormale et ≈ 22 barils/min, ≈ 21 h 40 boue sur le plancher et dans le derrick, ≈ 21 h 43 annulaire qui ne scelle pas, 21 h 47 VBR qui scelle, 21 h 49 explosion, 21 h 56 EDS sans effet, avant 21 h 58 AMF) — CSB, rapport Engineering Services sur le BOP (06/02/2014) [P] ; heures RECONSTITUÉES par la simulation ES calée sur les données du puits, ± 1 min selon BP / Transocean ; débits 9 et 22 barils/min = simulation [O]",
+    "« Il te reste neuf minutes » : de ≈ 21 h 40 (boue sur le plancher) à 21 h 49 (explosion) — CSB ES [P], durée tirée d'heures reconstituées",
+    "Le puits plein de boue lourde ; rien ne remonte tant que la colonne pèse plus que la pression du réservoir ; boue remplacée par de l'eau de mer pour abandonner temporairement le puits cimenté ; pression au fond passée sous celle du réservoir — CSB ES [P] ; « le gaz qui pousse d'en bas » simplifie « la pression du réservoir »",
+    "Le BOP, dernière barrière posée sur la tête du puits : joints (annulaires), mâchoires (VBR), lames cisaillantes (BSR) qui coupent le tube et ferment le puits — CSB ES §3 ; CSB Vol. 2 §2 [P]",
+    "Venue de gaz habituellement sous 10 barils/min (« usually below 10 BPM ») — CSB ES p. 21 [P]",
+    "Test négatif : 1 400 psi sur le tube, 0 sur la ligne ; jugé réussi à 19 h 55 ; les deux lectures auraient dû concorder — CSB ES [P] ; « un test : deux cadrans qui doivent dire pareil » simplifie le principe du test négatif",
+    "Personne ne voit l'arrivée de fluide à 21 h 08 (« personne n'agit », gain de ≈ 60 barils en 16 min, non dit) — CSB ES [P]",
+    "Gaz et pétrole déjà au-dessus du BOP, dans la colonne montante, quand le VBR scelle — CSB ES [P]",
+    "Bouton d'urgence (EDS) pressé à 21 h 56 sur la passerelle, sans effet ; il doit fermer la BSR puis détacher la colonne montante — CSB ES [P]",
+    "Dernier recours automatique (AMF / « deadman ») : se déclenche seul si le BOP perd hydraulique et communication avec la plateforme ; a vraisemblablement fermé la BSR avant 21 h 58, partiellement — CSB Vol. 2 §3.2.2 ; CSB ES [P] ; « sans doute » = « vraisemblablement »",
+    "Tube plié par la différence de pression intérieur / extérieur (« effective compression »), hors de l'axe ; une partie hors des lames, pincée et percée, non coupée — CSB Vol. 2 §3.2.2-3.2.3, fig. 3-4 ; CSB ES p. 24-25 [P] ; l'image du tuyau d'arrosage est la vulgarisation du dossier de faits ; le DNV (2011) plaçait le pliage plus tard [S : OGJ]",
+    "Boîtier bleu : batterie de 27 V vidée avant le 20 avril (câblage défectueux) ; boîtier jaune : électrovanne Y103 mal câblée, fonctionnelle seulement parce qu'une batterie de 9 V était à plat (deux défauts qui s'annulent) — CSB Vol. 2 §3.2, fig. 3-2 [P] ; hypothèse du CSB formulée comme « vraisemblable » ; « une pile » = la batterie de 9 V",
+    "Onze morts — CSB, page Macondo [P] ; aucun nombre de blessés dit (16 ou 17 selon les sources)",
+    "Plateforme coulée le 22 avril 2010 au matin, après ≈ 36 h de feu — Garde côtière, via Wikipedia [S]",
+    "Fuite du 20/04 au 15/07/2010 (« près de trois mois », 86 ou 87 jours selon le comptage) ; 4,9 millions de barils ± 10 % — DOI / FRTG, communiqué du 11/03/2011 [P]",
+    "Depuis : Well Control Rule du BSEE, Federal Register 29/04/2016 (en vigueur le 28/07/2016) : deux jeux de lames cisaillantes (délai de 5 ans), centrage du tube (7 ans), vérification du cisaillement par un tiers indépendant — Federal Register, lu par résumé [P] ; la révision de 2019 garde la double lame et le tiers indépendant — fiche BSEE 2019 [P] ; « doit avoir » : obligation posée en 2016, avec délais de mise en conformité",
+    "Épinglé TikTok : les deux boîtiers de commande n'auraient pas passé les essais d'acceptation en usine du fabricant — CSB Vol. 2, constat 6 [P]",
+    "Image : la plateforme, le derrick, la boue, le pupitre, les cadrans, les boîtiers et le BOP sont des maquettes reconstituées ; la forme du jet de boue, des flammes et du pliage est reconstituée ; personne n'est montré ni nommé ; aucune scène du film de 2016. En-tête : l'heure réelle par étape (simulation ES) ; t9 affiche « 21:58 » comme borne (« avant 21 h 58 ») ; T− compte jusqu'à 21:49",
+    "Annonce : aucun sujet nommé — le rapport final du JTSB sur Haneda (JAL 516) n'est pas trouvé publié au 05/11/2026 (rapports d'étape du 25/12/2024 et du 25/12/2025 seulement)"
+  ],
   "beats": [
     {
       "id": "accroche",
-      "text": "Ta main *glisse*. Le mot-choc tombe avant trois secondes.",
-      "vo": "[tense] Ta main glisse. Le mot-choc tombe avant trois secondes.",
-      "voAlt": [
-        "[firm, matter-of-fact] Ta main glisse. Le mot-choc tombe avant trois secondes."
-      ]
+      "text": "[21 h 40|Vingt et une heures quarante]. Ton derrick *crache* de la boue.",
+      "vo": "[tense] Vingt et une heures quarante. Ton derrick crache de la boue.",
+      "voir": "Contre-plongée depuis le plancher de forage : une colonne de boue sort du trou et monte déjà dans la tour (le derrick), vue d'en bas ; l'horloge ambre géante à 21:40 ; le BOP, petit, en incrustation au fond, déjà là."
     },
     {
       "id": "promesse",
-      "hold": 0.3,
-      "text": "Un fait qu'on a du mal à croire : pas un +soulagement+. Et la question… qu'on ne paie qu'à la *fin*.",
-      "vo": "[firm, matter-of-fact] Un fait qu'on a du mal à croire : pas un soulagement. [short pause] Et la question... qu'on ne paie qu'à la fin."
-    },
-    {
-      "id": "scene",
-      "hold": 0.3,
-      "text": "Même seconde, même lieu. Une image par phrase, l'enjeu monte. Ta tâche, avant qu'il soit *trop* tard.",
-      "vo": "[tense] Même seconde, même lieu. Une image par phrase, l'enjeu monte. Ta tâche, avant qu'il soit trop tard."
-    },
-    {
-      "id": "ouvre",
-      "hold": 0.4,
-      "text": "Alors… on l'ouvre.",
-      "vo": "[calm] Alors... on l'ouvre.",
-      "voAlt": [
-        "[calm] Alors... [short pause] on l'ouvre."
-      ]
-    },
-    {
-      "id": "eclate",
-      "hold": 0.2,
-      "text": "On suit la pièce qui agit, d'un bout à l'autre. Et au bout… +le cœur+.",
-      "vo": "[conversational, curious] On suit la pièce qui agit, d'un bout à l'autre. Et au bout... le cœur.",
-      "voAlt": [
-        "[curious] On suit la pièce qui agit, d'un bout à l'autre. Et au bout... le cœur."
-      ]
+      "text": "C'est *Deepwater Horizon*. Il te reste neuf minutes. Au fond, la sécurité va se fermer… sans *sceller* le puits. Pourquoi ?",
+      "vo": "[conversational, curious] C'est Deepwater Horizon. Il te reste neuf minutes. Au fond, la sécurité va se fermer... sans sceller le puits. Pourquoi ?",
+      "voir": "On plonge le long du tube jusqu'au fond : le BOP en maquette sur la tête du puits, ses mâchoires qui se referment au ralenti, et le flux rouge qui passe quand même ; T− 9:00 sous l'horloge."
     },
     {
       "id": "principe",
-      "text": "Pourquoi ça marche ? La loi physique, en mots simples. Et un +chiffre+ qu'on retient.",
-      "vo": "[curious] Pourquoi ça marche ? [short pause] La loi physique, en mots simples. Et un chiffre qu'on retient."
+      "text": "D'abord, comment ça marche. Un puits, c'est un long tube plein de boue lourde. Tant que son poids bat la pression du gaz d'en bas… rien ne +remonte+.",
+      "vo": "[conversational, curious] D'abord, comment ça marche. Un puits, c'est un long tube plein de boue lourde. Tant que son poids bat la pression du gaz d'en bas... rien ne remonte.",
+      "voir": "Coupe verticale du puits en maquette : la colonne de boue (verte, stable) appuie vers le bas, des flèches de gaz poussent du fond et restent bloquées ; une balance des deux poussées penche du côté boue."
     },
     {
-      "id": "repos",
-      "text": "Comment il attend, sans bruit. Et sa dernière phrase *retend*.",
-      "vo": "[warm, conversational] Comment il attend, sans bruit. Et sa dernière phrase retend.",
-      "voAlt": [
-        "[curious] Comment il attend, sans bruit. Et sa dernière phrase retend."
-      ]
+      "id": "bop",
+      "text": "Sinon, reste une dernière barrière, au fond : le *BOP*. Des mâchoires qui serrent le tube… et des lames qui le coupent pour fermer le puits.",
+      "vo": "[firm, matter-of-fact] Sinon, reste une dernière barrière, au fond : le BOP. Des mâchoires qui serrent le tube... et des lames qui le coupent pour fermer le puits.",
+      "voir": "Le BOP plein, de trois quarts, sur son halo : les étages s'allument tour à tour en vert — joint en caoutchouc, mâchoires qui serrent le tube, puis les deux lames qui coupent et ferment."
     },
     {
-      "id": "zero",
-      "hold": 0.2,
-      "text": "*Zéro*. Le danger arrive. Des points. Pas de virgules.",
-      "vo": "[firm, matter-of-fact] Zéro. Le danger arrive. Des points. Pas de virgules."
+      "id": "piege",
+      "text": "Mais d'habitude, on referme des venues de l'ordre de +dix+ barils par minute. Retiens bien ce chiffre.",
+      "vo": "[conversational, curious] Mais d'habitude, on referme des venues de l'ordre de dix barils par minute. Retiens bien ce chiffre.",
+      "voir": "Un compteur de débit sur le tube, aiguille dans la zone verte sous « 10 barils/min » ; le chiffre 10 reste en marque sur le cadran."
     },
     {
-      "id": "reponse",
+      "id": "t1",
+      "text": "Plus tôt, [19 h 55|dix-neuf heures cinquante-cinq]. Pour mettre le puits en veille, on remplace sa boue lourde par de l'eau de mer. Avant, un test : deux cadrans qui doivent dire *pareil*.",
+      "vo": "[conversational, curious] Plus tôt, dix-neuf heures cinquante-cinq. Pour mettre le puits en veille, on remplace sa boue lourde par de l'eau de mer. Avant, un test : deux cadrans qui doivent dire pareil.",
+      "voir": "L'horloge recule et saute à 19:55 ; dans la coupe du puits, la boue est remplacée d'en haut par de l'eau de mer plus claire ; puis deux manomètres côte à côte sur le pupitre, aiguilles au repos."
+    },
+    {
+      "id": "lecture",
+      "text": "Le premier affiche [1 400|mille quatre cents] psi. Et l'autre ? *Zéro*. Le test est pourtant jugé réussi. Il ne l'était pas.",
+      "vo": "[tense] Le premier affiche mille quatre cents psi. Et l'autre ? Zéro. Le test est pourtant jugé réussi. Il ne l'était pas.",
+      "voir": "Gros plan sur les deux cadrans : l'aiguille du premier monte à 1 400, celle du second reste à 0 ; le second cerclé en rouge ; un tampon vert « réussi » vire au rouge."
+    },
+    {
+      "id": "t2",
+      "text": "[21 h 08|Vingt et une heures huit]. Sans sa boue lourde, le puits coule *déjà* : le gaz entre par le fond. Personne ne réagit.",
+      "vo": "[conversational, curious] Vingt et une heures huit. Sans sa boue lourde, le puits coule déjà : le gaz entre par le fond. Personne ne réagit.",
+      "voir": "Coupe du puits : l'eau de mer ne pèse plus assez, la balance du principe bascule, le fluide rouge entre par le fond et grimpe lentement dans le tube ; en surface, le plancher calme."
+    },
+    {
+      "id": "t3",
+      "text": "[21 h 31|Vingt et une heures trente et une]. Pression anormale : on coupe les pompes. En bas, ça entre à environ [22|vingt-deux] barils par minute. Souviens-toi : d'habitude, de l'ordre de *dix*.",
+      "vo": "[firm, matter-of-fact] Vingt et une heures trente et une. Pression anormale : on coupe les pompes. En bas, ça entre à environ vingt-deux barils par minute. Souviens-toi : d'habitude, de l'ordre de dix.",
+      "voir": "Le compteur de débit du piège revient : l'aiguille dépasse la marque 10 et file à 22, zone rouge ; dans la coupe, le flux rouge accélère vers le haut."
+    },
+    {
+      "id": "t4",
+      "text": "[21 h 40|Vingt et une heures quarante]. On y est. La boue *déborde* sur le plancher… et jaillit jusqu'en haut du derrick.",
+      "vo": "[tense] Vingt et une heures quarante. On y est. La boue déborde sur le plancher... et jaillit jusqu'en haut du derrick.",
+      "voir": "Retour au plan de la première image, plus large : la boue passe la table de rotation, inonde le plancher et monte jusqu'au sommet de la tour."
+    },
+    {
+      "id": "t5",
+      "text": "[21 h 43|Vingt et une heures quarante-trois]. Au fond, on ferme le BOP : son joint en caoutchouc… ne scelle *pas*.",
+      "vo": "[firm, matter-of-fact] Vingt et une heures quarante-trois. Au fond, on ferme le BOP : son joint en caoutchouc... ne scelle pas.",
+      "voir": "On suit le flux vers le bas jusqu'au BOP : l'étage du joint en caoutchouc se gonfle autour du tube, le rouge fuit encore autour ; cercle rouge sur le joint."
+    },
+    {
+      "id": "t6",
+      "text": "[21 h 47|Vingt et une heures quarante-sept]. Une mâchoire se ferme sur le tube. Cette fois, ça *tient*. Sauf que le gaz est déjà au-dessus… et il monte vers toi.",
+      "vo": "[tense] Vingt et une heures quarante-sept. Une mâchoire se ferme sur le tube. Cette fois, ça tient. Sauf que le gaz est déjà au-dessus... et il monte vers toi.",
+      "voir": "Les mâchoires du bas claquent sur le tube et passent au vert : plus rien ne passe dessous ; mais au-dessus du BOP, une poche rouge déjà dans la colonne montante file vers la surface, la caméra la suit."
+    },
+    {
+      "id": "t7",
       "hold": 0.3,
-      "text": "Le système agit. Mot par mot. Et pour la première fois… il +réagit+.",
-      "vo": "[tense] Le système agit. Mot par mot. Et pour la première fois... il réagit."
+      "text": "[21 h 49|Vingt et une heures quarante-neuf]. Tout *explose*.",
+      "vo": "[firm, matter-of-fact] Vingt et une heures quarante-neuf. Tout explose.",
+      "voir": "La poche de gaz arrive au plancher : la plateforme en maquette s'embrase, flash rouge, la tour dans le feu, vue large depuis la mer."
     },
     {
-      "id": "chute",
-      "hold": 0.4,
-      "text": "Voilà son secret : ce n'est *pas* ce que tu croyais. C'est +l'inverse+.",
-      "vo": "[firm, matter-of-fact] Voilà son secret : ce n'est pas ce que tu croyais. C'est l'inverse."
+      "id": "t8",
+      "text": "[21 h 56|Vingt et une heures cinquante-six]. On presse le bouton d'urgence, celui qui ferme les lames. Rien ne se *passe*.",
+      "vo": "[tense] Vingt et une heures cinquante-six. On presse le bouton d'urgence, celui qui ferme les lames. Rien ne se passe.",
+      "voir": "Un bouton d'urgence sur un pupitre, enfoncé par le seul mouvement du bouton (aucune main) ; on suit le signal le long du câble jusqu'au BOP : les lames restent ouvertes."
+    },
+    {
+      "id": "t9",
+      "text": "Reste un dernier recours : un système qui agit seul quand le BOP perd la surface. Avant [21 h 58|vingt et une heures cinquante-huit], il ferme probablement les *lames*.",
+      "vo": "[conversational, curious] Reste un dernier recours : un système qui agit seul quand le BOP perd la surface. Avant vingt et une heures cinquante-huit, il ferme probablement les lames.",
+      "voir": "Le câble vers la surface se coupe (lien qui s'éteint) ; dans le BOP, les deux boîtiers de commande jaune et bleu s'allument, et les lames se referment lentement sur le tube."
+    },
+    {
+      "id": "defaut",
+      "text": "Et le puits coule toujours. Tu sais pourquoi ? Le tube s'était *plié* : tordu en partie par la pression dedans, comme un tuyau d'arrosage. Hors du centre, les lames l'ont percé… sans le *couper* net.",
+      "vo": "[conversational, curious] Et le puits coule toujours. Tu sais pourquoi ? Le tube s'était plié : tordu en partie par la pression dedans, comme un tuyau d'arrosage. Hors du centre, les lames l'ont percé... sans le couper net.",
+      "voir": "LE CLIMAX, en grand : coupe du BOP agrandie, le tube se cambre sous la pression et sort de l'axe ; les deux lames se ferment, une moitié du tube reste hors des lames, pincée et percée ; le tube plié en rouge, cerclé ; le flux rouge continue."
+    },
+    {
+      "id": "pire",
+      "text": "Et le pire ? Ce dernier recours n'a probablement marché que par *hasard*. Dans un boîtier, la batterie était vide. Dans l'autre, une vanne mal câblée… qui ne marchait que grâce à une pile à plat.",
+      "vo": "[firm, matter-of-fact] Et le pire ? Ce dernier recours n'a probablement marché que par hasard. Dans un boîtier, la batterie était vide. Dans l'autre, une vanne mal câblée... qui ne marchait que grâce à une pile à plat.",
+      "voir": "Les deux boîtiers de commande ouverts côte à côte : dans le bleu, une jauge de batterie à zéro ; dans le jaune, la vanne et ses deux bobines aux flèches opposées, une pile de 9 volts éteinte qui en annule une ; chaque pièce passe au rouge."
+    },
+    {
+      "id": "issue",
+      "hold": 0.3,
+      "text": "Onze morts. La plateforme coule deux jours plus tard. Et le puits fuit pendant près de trois mois : environ [4,9|quatre virgule neuf] millions de barils.",
+      "vo": "[calm] Onze morts. La plateforme coule deux jours plus tard. Et le puits fuit pendant près de trois mois : environ quatre virgule neuf millions de barils.",
+      "voir": "La plateforme en maquette s'enfonce dans la mer ; au fond, le BOP immobile avec son panache rouge qui s'étale ; l'horloge défile des jours (22 avril… 15 juillet)."
+    },
+    {
+      "id": "depuis",
+      "text": "Depuis [2016|deux mille seize], aux États-Unis, un BOP doit avoir +deux+ jeux de lames, un moyen de garder le tube au +centre+, et un cisaillement vérifié par un expert indépendant.",
+      "vo": "[warm, conversational] Depuis deux mille seize, aux États-Unis, un BOP doit avoir deux jeux de lames, un moyen de garder le tube au centre, et un cisaillement vérifié par un expert indépendant.",
+      "voir": "La lumière blanchit, grille et halo passent au vert : le BOP corrigé, un second jeu de lames s'ajoute, une bague recentre le tube droit dans l'axe, les lames se ferment et coupent net, en vert."
     },
     {
       "id": "comment",
       "hold": 0.3,
-      "text": "Et la question du début ? Sa réponse, en une phrase. En +commentaire+ : toi, tu savais lire ça… ou *pas* ?",
-      "vo": "[conversational, curious] Et la question du début ? [short pause] Sa réponse, en une phrase. [short pause] En commentaire : toi, tu savais lire ça... ou pas ?",
-      "voAlt": [
-        "[curious] Et la question du début ? [short pause] Sa réponse, en une phrase. [short pause] En commentaire : toi, tu savais lire ça... ou pas ?"
-      ]
-    },
-    {
-      "id": "like",
-      "text": "+Like+ : une raison tirée de l'histoire, pour quelqu'un d'autre.",
-      "vo": "[warm, conversational] Like : [short pause] une raison tirée de l'histoire, pour quelqu'un d'autre.",
-      "voAlt": [
-        "[firm, matter-of-fact] Like : [short pause] une raison tirée de l'histoire, pour quelqu'un d'autre."
-      ]
+      "text": "Pourquoi les lames n'ont pas scellé le puits ? Un tube plié. Mais tout avait commencé par deux cadrans. Toi, en +commentaire+ : [1 400|mille quatre cents] d'un côté, zéro de l'autre… tu valides, ou tu arrêtes tout ?",
+      "vo": "[conversational, curious] Pourquoi les lames n'ont pas scellé le puits ? Un tube plié. Mais tout avait commencé par deux cadrans. [short pause] Toi, en commentaire : mille quatre cents d'un côté, zéro de l'autre... tu valides, ou tu arrêtes tout ?",
+      "voir": "Le tube plié dans les lames, puis raccord sur les deux cadrans de 19:55 (1 400 / 0) ; deux camps en duel sous les cadrans : « je valide » / « j'arrête tout »."
     },
     {
       "id": "abo",
-      "hold": 0.2,
-      "text": "+Abonne-toi+ : prochain dossier, un seul fait, et il *menace*.",
-      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, un seul fait, et il menace."
+      "text": "+Abonne-toi+ : chaque compte à rebours, un vrai accident… et la sécurité qui a *lâché*.",
+      "vo": "[warm, conversational] Abonne-toi : [short pause] chaque compte à rebours, un vrai accident... et la sécurité qui a lâché.",
+      "voir": "Panneau « S'abonner » et chevrons vers la colonne de boutons ; derrière, l'horloge ambre qui tourne à rebours vers 21:40."
     },
     {
       "id": "boucle",
-      "text": "Ici, tout commence toujours par…",
-      "vo": "[calm] Ici, tout commence toujours par,"
+      "text": "Comme ce soir-là, à…",
+      "vo": "[calm] Comme ce soir-là, à,",
+      "voir": "La caméra remonte du BOP au plancher et retrouve exactement la première image : la boue dans le derrick, horloge sur 21:40."
     }
   ],
   "cues": {
-    "choc": "accroche:glisse",
-    "tobench": "ouvre:on-0.14",
-    "explode": "ouvre:on",
-    "tozero": "zero-0.12",
-    "trigger": "reponse:réagit-0.05",
-    "toverdict": "chute-0.12",
-    "verdict": "chute:pas",
-    "tocta": "comment-0.12",
+    "choc": "accroche:crache",
+    "deepwater": "promesse:Deepwater",
+    "neuf": "promesse:neuf",
+    "fermer": "promesse:fermer",
+    "sceller": "promesse:sceller",
+    "toprincipe": "principe-0.12",
+    "tube1": "principe:tube",
+    "boue1": "principe:boue",
+    "pese": "principe:poids",
+    "gaz1": "principe:gaz",
+    "remonte": "principe:remonte",
+    "tobop": "bop-0.12",
+    "barriere": "bop:barrière",
+    "bop": "bop:BOP",
+    "machoires1": "bop:mâchoires",
+    "lames1": "bop:lames",
+    "ferme1": "bop:fermer",
+    "topiege": "piege-0.12",
+    "dix1": "piege:dix",
+    "retiens": "piege:Retiens",
+    "tot1": "t1-0.12",
+    "eau1": "t1:l'eau",
+    "test1": "t1:test",
+    "cadrans1": "t1:cadrans",
+    "pareil": "t1:pareil",
+    "tolecture": "lecture-0.12",
+    "mille": "lecture:mille",
+    "zero": "lecture:Zéro",
+    "reussi": "lecture:réussi",
+    "tot2": "t2-0.12",
+    "deja1": "t2:déjà",
+    "neufb": "t2:gaz",
+    "personne": "t2:Personne",
+    "tot3": "t3-0.12",
+    "pompes": "t3:pompes",
+    "vingtdeux": "t3:vingt-deux",
+    "souviens": "t3:Souviens",
+    "dix2": "t3:dix",
+    "tot4": "t4-0.12",
+    "deborde": "t4:déborde",
+    "jaillit": "t4:jaillit",
+    "tot5": "t5-0.12",
+    "joint": "t5:joint",
+    "scelle": "t5:scelle",
+    "tot6": "t6-0.12",
+    "machoires2": "t6:mâchoire",
+    "tient": "t6:tient",
+    "dessus": "t6:au-dessus",
+    "toi1": "t6:toi",
+    "tot7": "t7-0.12",
+    "explose": "t7:explose",
+    "tot8": "t8-0.12",
+    "bouton": "t8:bouton",
+    "passe": "t8:passe",
+    "tot9": "t9-0.12",
+    "seul": "t9:seul",
+    "surface": "t9:surface",
+    "lames2": "t9:lames",
+    "todefaut": "defaut-0.12",
+    "toujours": "defaut:toujours",
+    "plie": "defaut:plié",
+    "arrosage": "defaut:arrosage",
+    "centre": "defaut:centre",
+    "perce": "defaut:percé",
+    "couper": "defaut:couper",
+    "topire": "pire-0.12",
+    "hasard": "pire:hasard",
+    "batterie": "pire:batterie",
+    "vanne": "pire:vanne",
+    "pile": "pire:pile",
+    "toissue": "issue-0.14",
+    "morts": "issue:morts",
+    "coule": "issue:coule",
+    "barils": "issue:barils",
+    "todepuis": "depuis-0.14",
+    "deux": "depuis:deux",
+    "centre2": "depuis:centre",
+    "expert": "depuis:expert",
+    "tocta": "comment-0.14",
+    "plie2": "comment:plié",
+    "cadrans2": "comment:cadrans",
+    "commentaire": "comment:commentaire",
+    "duelA": "comment:valides",
+    "duelB": "comment:arrêtes",
+    "toabo": "abo-0.14",
+    "chaque": "abo:chaque",
+    "lache": "abo:lâché",
     "toloop": "boucle-0.12",
-    "rewind": "boucle:toujours"
+    "rewind": "boucle:soir"
   },
   "bedVolume": 0.8,
   "sfx": [
     {
       "type": "drone",
-      "gain": -24,
+      "gain": -25,
       "curve": [
         [
           0,
-          0.8
-        ],
-        [
-          "explode",
-          0.5
-        ],
-        [
-          "tozero",
           0.9
         ],
         [
-          "trigger",
+          "toprincipe",
+          0.5
+        ],
+        [
+          "tot1",
+          0.55
+        ],
+        [
+          "tot2",
+          0.7
+        ],
+        [
+          "tot4",
+          0.85
+        ],
+        [
+          "tot6",
+          0.95
+        ],
+        [
+          "tot7",
           1
         ],
         [
-          "toverdict",
-          0.45
+          "todefaut",
+          0.7
         ],
         [
-          "tocta",
+          "toissue",
           0.4
         ],
         [
+          "todepuis",
+          0.35
+        ],
+        [
+          "tocta",
+          0.3
+        ],
+        [
           "rewind",
-          0.8
+          0.9
         ]
       ]
     },
@@ -196,68 +377,133 @@
       "type": "hit",
       "at": 0.02,
       "gain": -13,
-      "pitch": 0.9
+      "pitch": 0.8
     },
     {
       "type": "impact",
       "at": 0.03,
-      "gain": -14,
-      "size": 1.2
+      "gain": -15,
+      "size": 1.1
     },
     {
-      "type": "swish",
-      "at": 0.14,
-      "dur": 0.3,
+      "type": "hit",
+      "at": "choc+0.5",
+      "gain": -15,
+      "pitch": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "sceller+0.6",
+      "gain": -15,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "dix1+0.5",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "clack",
+      "at": "t1-0.17",
+      "gain": -14
+    },
+    {
+      "type": "clack",
+      "at": "t2-0.17",
+      "gain": -14
+    },
+    {
+      "type": "clack",
+      "at": "t3-0.17",
+      "gain": -14
+    },
+    {
+      "type": "clack",
+      "at": "t4-0.17",
+      "gain": -13
+    },
+    {
+      "type": "clack",
+      "at": "t5-0.17",
+      "gain": -13
+    },
+    {
+      "type": "clack",
+      "at": "t6-0.17",
+      "gain": -13
+    },
+    {
+      "type": "clack",
+      "at": "t7-0.17",
+      "gain": -12
+    },
+    {
+      "type": "clack",
+      "at": "t8-0.17",
+      "gain": -12
+    },
+    {
+      "type": "clack",
+      "at": "t9-0.17",
+      "gain": -12
+    },
+    {
+      "type": "hit",
+      "at": "zero+0.45",
+      "gain": -14,
+      "pitch": 0.8
+    },
+    {
+      "type": "hit",
+      "at": "dix2+0.5",
       "gain": -15
     },
     {
-      "type": "suck",
-      "to": "ouvre-0.04",
-      "dur": 0.6,
-      "gain": -17
-    },
-    {
-      "type": "hush",
-      "from": "ouvre",
-      "to": "explode-0.02",
-      "depth": -14
-    },
-    {
       "type": "impact",
-      "at": "explode",
-      "gain": -16,
+      "at": "tient-0.5",
+      "gain": -14,
       "size": 0.8
     },
     {
-      "type": "impact",
-      "at": "tozero",
-      "gain": -12,
-      "size": 1.2
+      "type": "boom",
+      "at": "explose+0.55",
+      "gain": -11,
+      "size": 1.3
     },
     {
-      "type": "impact",
-      "at": "trigger",
-      "gain": -10,
-      "size": 1.4
+      "type": "hush",
+      "from": "todefaut",
+      "to": "plie",
+      "depth": -8
     },
     {
-      "type": "blip",
-      "at": "verdict",
-      "gain": -15,
-      "pitch": 0.7,
-      "heavy": true
+      "type": "hit",
+      "at": "couper+0.6",
+      "gain": -14,
+      "pitch": 0.85
     },
     {
-      "type": "impact",
-      "at": "toloop",
-      "gain": -16,
-      "size": 0.7
+      "type": "hush",
+      "from": "toissue",
+      "to": "coule",
+      "depth": -8
+    },
+    {
+      "type": "sting",
+      "at": "todepuis",
+      "gain": -21
+    },
+    {
+      "type": "swish",
+      "at": "toabo",
+      "dur": 0.35,
+      "gain": -19
     },
     {
       "type": "rewind",
       "at": "rewind",
-      "dur": 1,
-      "gain": -21
+      "gain": -20
     }
   ]
 }
