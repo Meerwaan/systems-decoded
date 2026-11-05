@@ -6,61 +6,82 @@
     <meta name="theme-color" content="#070a0c" />
     <meta name="color-scheme" content="dark" />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="apple-mobile-web-app-title" content="Publication" />
-    <title>Publication</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Bureau" />
+    <title>Bureau · Système Décodé</title>
     <link rel="icon" href="/brand/avatar.png" />
     <link rel="apple-touch-icon" href="/brand/avatar.png" />
     <link rel="preload" href="/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/jetbrains-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/app.css" />
-    <script src="/app.js" defer></script>
+    <link rel="stylesheet" href="/bureau.css" />
+    <script src="/bureau.js" defer></script>
   </head>
-  <body>
-    <!-- data-view: what a phone shows, the list or one sheet. A wide screen shows both. -->
-    <div class="desk" id="desk" data-view="list">
-      <aside class="index" id="index" aria-label="Les dossiers">
-        <header>
-          <div class="bar">
-            <p class="tag" id="link"><i class="dot"></i><span>Publication</span></p>
-            <div class="bar__acts">
-              <a class="textbtn" id="to-profil" href="#profil">Profil</a>
-              <button class="textbtn" id="refresh" type="button">Actualiser</button>
-            </div>
+  <body data-tab="publier">
+    <header class="top">
+      <div class="top__in">
+        <a class="brand" href="#publier" data-tab-link="publier" aria-label="Bureau, retour à Publier">
+          <img src="/brand/avatar.png" alt="" width="28" height="28" />
+          <span class="brand__name" id="brand">Système Décodé</span>
+        </a>
+        <nav class="tabs tabs--top" aria-label="Sections">
+          <a href="#publier" data-tab-link="publier">Publier<b data-count="publier"></b></a>
+          <a href="#calendrier" data-tab-link="calendrier">Calendrier<b data-count="calendrier"></b></a>
+          <a href="#chiffres" data-tab-link="chiffres">Chiffres</a>
+          <a href="#films" data-tab-link="films">Films</a>
+        </nav>
+        <button class="sync" id="sync" type="button" title="Relire le PC maintenant">
+          <i class="sync__dot"></i><span class="sync__t" id="sync-t">…</span>
+        </button>
+      </div>
+    </header>
+
+    <p class="banner" id="banner" role="status" hidden></p>
+
+    <main id="main">
+      <section class="view" id="publier" aria-labelledby="h-publier"></section>
+      <section class="view" id="calendrier" aria-labelledby="h-calendrier"></section>
+      <section class="view" id="chiffres" aria-labelledby="h-chiffres"></section>
+      <section class="view" id="films" aria-labelledby="h-films"></section>
+    </main>
+
+    <nav class="tabs tabs--bottom" aria-label="Sections">
+      <a href="#publier" data-tab-link="publier"><i class="ico" data-ico="send"></i><span>Publier</span><b data-count="publier"></b></a>
+      <a href="#calendrier" data-tab-link="calendrier"><i class="ico" data-ico="calendar"></i><span>Calendrier</span><b data-count="calendrier"></b></a>
+      <a href="#chiffres" data-tab-link="chiffres"><i class="ico" data-ico="chart"></i><span>Chiffres</span></a>
+      <a href="#films" data-tab-link="films"><i class="ico" data-ico="grid"></i><span>Films</span></a>
+    </nav>
+
+    <!-- la fiche d'un film, ouverte depuis n'importe quel onglet sans le quitter -->
+    <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+      <div class="sheet__panel" id="sheet-panel">
+        <div class="sheet__grab" id="sheet-grab" aria-hidden="true"><i></i></div>
+        <header class="sheet__head">
+          <div class="sheet__titles">
+            <p class="kicker" id="sheet-kicker"></p>
+            <h2 class="sheet__title" id="sheet-title"></h2>
           </div>
-          <h1 class="index__title" id="brand">&nbsp;</h1>
+          <button class="iconbtn" type="button" data-close-sheet aria-label="Fermer la fiche"></button>
         </header>
-        <div class="segs segs--filters" id="filters" role="group" aria-label="Quels dossiers"></div>
-        <p class="notice" id="notice" hidden>
-          Ce que tu coches reste sur cet appareil : le bureau du PC date d'avant cette page. Ferme sa fenêtre et relance
-          <code>publier.cmd</code> : les cases seront alors gardées sur le PC, les mêmes sur l'ordinateur et l'iPhone.
-        </p>
-        <p class="notice" id="notice-long" hidden>
-          Le bureau du PC ne connaît pas encore les vidéos longues : ferme sa fenêtre et relance
-          <code>publier.cmd</code> pour ouvrir la fiche YouTube du long (miniatures, titres, sous-titres).
-        </p>
-        <ol class="rows" id="rows">
-          <li class="state">Lecture des dossiers…</li>
-        </ol>
-        <footer class="foot">
-          <p>La page relit le disque du PC toute seule : un nouveau rendu, une case cochée ailleurs arrivent en quelques secondes.</p>
-        </footer>
-      </aside>
+        <div class="sheet__body" id="sheet-body"></div>
+      </div>
+    </dialog>
 
-      <main class="sheet" id="sheet"></main>
-    </div>
-
-    <dialog class="viewer" id="viewer" aria-label="En entier">
+    <dialog class="viewer" id="viewer" aria-label="Lecture">
       <div class="viewer__bar">
-        <p class="tag"><i class="dot"></i><span id="viewer-tag">Couverture</span></p>
-        <button class="btn viewer__close" type="button" data-close>Fermer</button>
+        <span id="viewer-tag"></span>
+        <button class="iconbtn" type="button" data-close aria-label="Fermer"></button>
       </div>
       <div class="viewer__stage" id="viewer-stage"></div>
       <p class="viewer__hint" id="viewer-hint"></p>
     </dialog>
 
-    <p class="flash" id="flash" role="presentation" hidden></p>
-    <p class="sr" id="live" role="status" aria-live="polite"></p>
-    <noscript><p class="state state--alert">Cette page a besoin de JavaScript pour lire les dossiers.</p></noscript>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+      <span id="toast-t"></span>
+      <button type="button" id="toast-act" hidden></button>
+    </div>
+    <noscript><p class="banner">Cette page a besoin de JavaScript.</p></noscript>
   </body>
 </html>
