@@ -21,9 +21,13 @@
   const TAB_TITLES = { publier: "Publier", calendrier: "Calendrier", chiffres: "Chiffres", films: "Films" };
   const HOUR = 20; // l'heure fixe de sortie (docs/plan-scale-novembre.md)
   const LONG_DAYS = [2, 4, 6]; // mardi, jeudi, samedi : les longs (docs/plan-rush-youtube.md)
+  const CR_DAYS = [3, 0]; // mercredi, dimanche : les Comptes à rebours, en plus du court (règle du 05/11)
+  const CR_HOUR = 18; // deux heures avant le court : jamais deux sorties TikTok l'une sur l'autre
+  const hourOf = (d) => (/^CR[0-9]/.test(d.id) ? CR_HOUR : HOUR);
   const MEM_KEY = "sd.bureau.v2";
   const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   const WIDE = window.matchMedia("(min-width: 900px)");
+  const DESK = window.matchMedia("(min-width: 1024px)"); // l'application de bureau : barre latérale, maître-détail
 
   const $ = (s, root = document) => root.querySelector(s);
 
@@ -145,11 +149,11 @@
     if (diff > 1 && diff < 7) return DAYS_LONG[parseDay(k).getDay()];
     return dayLabel(k);
   };
-  /** Le temps qui reste avant 20 h aujourd'hui, ou null s'il est passé. */
-  function untilTonight() {
+  /** Le temps qui reste avant l'heure de sortie aujourd'hui (20 h, 18 h pour un Compte à rebours), ou null s'il est passé. */
+  function untilTonight(hour = HOUR) {
     const now = new Date();
     const at = new Date(now);
-    at.setHours(HOUR, 0, 0, 0);
+    at.setHours(hour, 0, 0, 0);
     const min = Math.round((at - now) / 60000);
     if (min <= 0) return null;
     return min < 60 ? `${min}${SP}min` : `${Math.floor(min / 60)}${SP}h${SP}${two(min % 60)}`;
@@ -245,7 +249,7 @@
       const clamped = el.classList.toggle("is-clamped");
       more.textContent = clamped ? "Tout lire" : "Replier";
     });
-    return [el, more];
+    return [h("div", { class: "fieldwrap" }, el, more)];
   }
 
   /* ---------------------------------------------------------------- l'état */
@@ -258,6 +262,7 @@
     accountsBusy: false,
     tab: "publier",
     sheet: null, // le dossier ouvert en feuille
+    pick: null, // sur le PC : le film choisi dans la file de « Publier »
     open: new Set(), // plateformes publiées qu'on a rouvertes : "dir:platform"
     filter: mem.get("filter", "all"),
     query: "",
@@ -292,13 +297,14 @@
   /* ---------------------------------------------------------------- le calendrier, calculé */
 
   // Un court par jour ; les longs (L, compilations) le mardi, le jeudi, le samedi ; une promo (HS) le
-  // jour de son long. Les Comptes à rebours sont des essais Instagram : ils n'ont de jour que si on leur en donne un.
-  const slotOf = (d) => (/^CR\d/.test(d.id) ? "free" : /^HS\d/.test(d.id) ? "promo" : d.long || /^C\d/.test(d.id) ? "long" : "short");
+  // jour de son long ; un Compte à rebours le mercredi et le dimanche à 18 h, en plus du court. Un numéro
+  // de 90 à 99 (CR90…) est un essai : il n'a de jour que si on lui en donne un.
+  const slotOf = (d) => (/^[A-Z]+9\d\b/.test(d.id) ? "essai" : /^CR\d/.test(d.id) ? "cr" : /^HS\d/.test(d.id) ? "promo" : d.long || /^C\d/.test(d.id) ? "long" : "short");
 
   function computeCalendar() {
     const t = today();
     const events = []; // { day, d, status: done|ready|wip, how: posted|fixed|proposed }
-    const taken = { short: new Set(), long: new Set() };
+    const taken = { short: new Set(), long: new Set(), cr: new Set() };
     const dayOf = new Map();
     const howOf = new Map();
     const push = (day, d, how) => {
@@ -307,7 +313,7 @@
       dayOf.set(d.dir, day);
       howOf.set(d.dir, how);
       const slot = slotOf(d);
-      if (slot === "short" || slot === "long") taken[slot].add(day);
+      if (taken[slot]) taken[slot].add(day);
     };
     const unplaced = [];
     for (const d of all()) {
@@ -322,11 +328,12 @@
     const firstFree = (slot) => {
       for (let i = 0, day = t; i < 180; i++, day = addDays(day, 1)) {
         if (slot === "long" && !LONG_DAYS.includes(parseDay(day).getDay())) continue;
+        if (slot === "cr" && !CR_DAYS.includes(parseDay(day).getDay())) continue;
         if (!taken[slot].has(day)) return day;
       }
       return null;
     };
-    for (const d of rest.filter((x) => slotOf(x) === "short" || slotOf(x) === "long")) {
+    for (const d of rest.filter((x) => taken[slotOf(x)])) {
       const day = firstFree(slotOf(d));
       if (day) push(day, d, "proposed");
       else unplaced.push(d);
@@ -337,14 +344,14 @@
       if (day && day >= t) push(day, d, "proposed");
       else unplaced.push(d);
     }
-    for (const d of rest.filter((x) => slotOf(x) === "free")) unplaced.push(d);
+    for (const d of rest.filter((x) => slotOf(x) === "essai")) unplaced.push(d);
 
     const byDay = new Map();
     for (const e of events) {
       if (!byDay.has(e.day)) byDay.set(e.day, []);
       byDay.get(e.day).push(e);
     }
-    const rank = (e) => ({ short: 0, long: 1, promo: 2, free: 3 })[slotOf(e.d)];
+    const rank = (e) => ({ cr: 0, short: 1, long: 2, promo: 3, essai: 4 })[slotOf(e.d)];
     for (const list of byDay.values()) list.sort((a, b) => rank(a) - rank(b));
     // les jours à venir sans court prêt : ce qu'il ne faut pas découvrir le soir même
     const gaps = [];
@@ -363,7 +370,7 @@
       .sort((a, b) => (firstPosted(a) || "").localeCompare(firstPosted(b) || ""));
     const next = all()
       .filter((d) => d.ready && !onlineSomewhere(d))
-      .sort((a, b) => (cal.dayOf.get(a.dir) || "9999").localeCompare(cal.dayOf.get(b.dir) || "9999") || a.id.localeCompare(b.id, "fr", { numeric: true }));
+      .sort((a, b) => (cal.dayOf.get(a.dir) || "9999").localeCompare(cal.dayOf.get(b.dir) || "9999") || hourOf(a) - hourOf(b) || a.id.localeCompare(b.id, "fr", { numeric: true }));
     return [...started, ...next];
   }
 
@@ -483,7 +490,7 @@
     try {
       await post(`/api/calendrier/${encodeURIComponent(d.dir)}`, { date });
       if (quiet) return;
-      say(date ? `${d.id} : sortie ${relDay(date)} à ${HOUR}${SP}h` : `${d.id} : date proposée par le bureau`, {
+      say(date ? `${d.id} : sortie ${relDay(date)} à ${hourOf(d)}${SP}h` : `${d.id} : date proposée par le bureau`, {
         action: "Annuler",
         run: () => setPlanned(find(d.dir), before, { quiet: true }).then(() => say("Date remise")),
       });
@@ -714,10 +721,10 @@
     return h("span", { class: "dots", "aria-label": platformsOf(d).map((p) => `${p.name} ${isOn(d, p.id) ? "publié" : "à publier"}`).join(", ") }, platformsOf(d).map((p) => h("i", { class: isOn(d, p.id) ? "is-on" : "" })));
   }
   /** Une ligne de film : la toucher ouvre sa fiche. */
-  function item(d, kicker, end) {
+  function item(d, kicker, end, { onclick = null, current = false } = {}) {
     return h(
       "button",
-      { type: "button", class: "item", onclick: () => openSheet(d.dir) },
+      { type: "button", class: `item${current ? " is-current" : ""}`, "aria-current": current ? "true" : null, onclick: onclick || (() => openSheet(d.dir)) },
       thumb(d),
       h("span", { class: "item__body" }, h("span", { class: "kicker" }, kicker), h("span", { class: "item__t", text: d.title })),
       h("span", { class: "item__end" }, end, icon("chev")),
@@ -731,7 +738,7 @@
     if (posted) return { label: relDay(posted) === dayLabel(posted) ? `Sorti le ${dayLabel(posted)}` : `Sorti ${relDay(posted)}`, editable: false };
     const day = state.cal.dayOf.get(d.dir);
     if (!day) return { label: "Choisir un jour", sub: "pas de date", editable: true };
-    return { label: `${cap(relDay(day))} · ${HOUR}${SP}h`, sub: state.cal.howOf.get(d.dir) === "fixed" ? "date fixée" : "date proposée", editable: true, day };
+    return { label: `${cap(relDay(day))} · ${hourOf(d)}${SP}h`, sub: state.cal.howOf.get(d.dir) === "fixed" ? "date fixée" : "date proposée", editable: true, day };
   }
 
   function filmView(d, { inSheet = false } = {}) {
@@ -772,13 +779,13 @@
     } else rows.push(h("div", { class: "row" }, h("span", { class: "row__ico" }, icon("calendar")), h("span", { class: "row__t", text: "Sortie" }), h("span", { class: "row__v" }, h("b", { text: w.label }))));
     if (d.booth && !onlineSomewhere(d)) rows.push(h("a", { class: "row", href: `/voix.html?ep=${encodeURIComponent(d.dir)}` }, h("span", { class: "row__ico" }, icon("mic")), h("span", { class: "row__t" }, "Cabine voix", h("small", { text: "Écouter et choisir les prises" })), h("span", { class: "row__v" }, icon("chev"))));
 
-    const side = h("div", { class: "film__side" }, card, h("div", { class: "group" }, rows));
+    const side = h("div", { class: `film__side${d.long ? " is-wide" : ""}` }, card, h("div", { class: "group" }, rows));
     const done = platformsOf(d).filter((p) => isOn(d, p.id)).length;
     const main = h(
       "div",
       { class: "film__main" },
       sh("Publier", `${done}${SP}/${SP}${platformsOf(d).length}`),
-      h("div", { class: "plats" }, platformsOf(d).map((p) => platCard(d, p))),
+      h("div", { class: `plats${platformsOf(d).length === 1 ? " is-single" : ""}` }, platformsOf(d).map((p) => platCard(d, p))),
       d.ready && !onlineSomewhere(d) ? h("div", { style: "margin-top:14px;text-align:center" }, h("button", { type: "button", class: "btn btn--quiet", onclick: () => fileAsOnline(d) }, "Déjà en ligne partout ? Le ranger sans date")) : null,
     );
     return h("div", { class: "film" }, side, main);
@@ -843,11 +850,19 @@
         head.setAttribute("aria-expanded", String(now));
       });
     } else head = h("div", { class: "plat__head" }, kids);
-    const body = h("div", { class: "plat__body" }, platWords(d, p.id));
+    const words = platWords(d, p.id);
+    const last = words[words.length - 1];
+    const tail = last && last.classList && last.classList.contains("steps") ? words.pop() : null;
+    const body = h("div", { class: "plat__body" }, words);
     body.append(
-      done
-        ? h("button", { type: "button", class: "btn btn--quiet", onclick: () => setPosted(d, p.id, false) }, `Pas encore sur ${p.name} : décocher`)
-        : h("button", { type: "button", class: "btn btn--go btn--full", "aria-disabled": d.ready ? null : "true", onclick: () => setPosted(d, p.id, true) }, icon("check"), `Publié sur ${p.name}`),
+      h(
+        "div",
+        { class: "plat__foot" },
+        tail,
+        done
+          ? h("button", { type: "button", class: "btn btn--quiet", onclick: () => setPosted(d, p.id, false) }, `Pas encore sur ${p.name} : décocher`)
+          : h("button", { type: "button", class: "btn btn--go btn--full", "aria-disabled": d.ready ? null : "true", onclick: () => setPosted(d, p.id, true) }, icon("check"), `Publié sur ${p.name}`),
+      ),
     );
     card.append(head, body);
     return card;
@@ -893,8 +908,63 @@
       if (yt.pinned) out.push(field("Commentaire à épingler", yt.pinned));
       if (yt.endScreen) out.push(h("p", { class: "hint" }, h("b", { text: "Écran de fin : " }), yt.endScreen));
       out.push(steps("Dans Studio :", ["3 miniatures en test", "Sous-titres", "Écran de fin"], yt.pinned ? " puis épingle le commentaire." : null));
-    } else out.push(h("p", { class: "hint" }, "Relie la ", h("b", { text: "vidéo associée" }), " à un long quand le sujet s'y prête."));
+    } else out.push(relatedBlock(d));
     return out;
+  }
+
+  /* ---------------------------------------------------------------- la « vidéo associée » d'un Short */
+
+  // Le seul lien cliquable d'un Short est sa « vidéo associée » (YouTube Studio). Un Short n'est relié qu'à un
+  // long qui prolonge vraiment son sujet, avec la raison, vérifiée dans le script du long (Merwan, 05/11 :
+  // « expliquer pourquoi elles sont reliées, et pas les relier pour rien »). Sans long qui le prolonge : rien.
+  // Un nouveau court se relie en ajoutant sa ligne ici, ou post.youtube.related ("L04") + postRelatedWhy.
+  const RELATED = {
+    "002": ["C01", "Le long remet l'airbag dans l'accident entier : les six systèmes qui se relaient, de l'ESP à la ceinture."],
+    "011": ["C01", "Le long reprend le fusible pyro parmi les six systèmes qui se relaient pendant un accident de voiture."],
+    "013": ["C01", "Le long finit sur le Halo, après les cinq systèmes de ta propre voiture."],
+    "014": ["C01", "Le long montre l'ABS dans l'accident entier, entre l'ESP qui te rattrape et la ceinture qui te retient."],
+    "019": ["C01", "Le long montre le prétensionneur dans l'accident entier, avec les cinq autres systèmes qui se relaient."],
+    "025": ["C01", "Le long commence par l'ESP, puis déroule la suite de l'accident : ABS, ceinture, airbag."],
+    "004": ["L02", "Même danger, en plus grand : le courant qui passe par ton corps. Le long montre les cinq gestes pour toucher une ligne à 400 000 volts et rentrer chez soi."],
+    "016": ["L02", "Le long ouvre le disjoncteur d'un poste à 400 000 volts : la même coupure, à une autre échelle."],
+    "030": ["L02", "Le long montre la terre à 400 000 volts : le maillage enterré sous le poste, et l'apprenti tué par une pince de terre défaite dans le mauvais ordre."],
+    "007": ["L04", "Le long met le Rafale sur le Charles de Gaulle : catapulté de 0 à 240 km/h en 75 mètres."],
+    "015": ["L04", "Le brin arrête le Rafale à l'appontage ; le long montre l'autre moitié : la catapulte qui le lance."],
+    "033": ["L03", "Le long montre ces portes le jour où elles servent : un avion en feu, cinq portes sur huit fermées, 379 personnes à sortir."],
+    "023": ["L05", "Le long raconte un vrai jour où les deux moteurs d'un Airbus se sont tus : la panne pour laquelle cette éolienne existe."],
+    "034": ["L05", "Le long reconstitue le vol de l'Hudson à la seconde près, d'après l'enquête qui a lu ses enregistreurs."],
+    "036": ["L06", "En 2006, pendant le blackout européen, des milliers de mégawatts d'éoliennes se sont coupés en quelques secondes : c'est le long."],
+  };
+  const onYouTube = (d) => d && isOn(d, "youtube");
+  const longById = (id) => all().find((x) => x.id === id) || null;
+
+  /** Le long qui prolonge ce Short : { long, id, why, online } ou null s'il n'y en a pas. */
+  function relatedLong(d) {
+    if (d.long) return null;
+    const yt = (d.post && d.post.youtube) || {};
+    let pair = null;
+    if (yt.related) pair = [yt.related, yt.relatedWhy || "Choisi dans le dossier."];
+    else if (/^HS\d+/.test(d.id)) pair = [`L${d.id.slice(2)}`, "C'est la promo de ce long : le Short donne l'envie, le long la réponse."];
+    else pair = RELATED[d.id] || null;
+    if (!pair) return null;
+    const long = longById(pair[0]);
+    return { long, id: pair[0], why: pair[1], online: onYouTube(long) };
+  }
+
+  function relatedBlock(d) {
+    const rel = relatedLong(d);
+    if (!rel) return h("p", { class: "hint" }, h("b", { text: "Vidéo associée : aucune." }), " Aucun long ne prolonge ce sujet : laisse vide plutôt qu'un lien sans rapport.");
+    const title = rel.long ? (rel.long.post && rel.long.post.youtube && rel.long.post.youtube.title) || rel.long.title : rel.id;
+    if (!rel.online) return h("div", { class: "related is-later" }, h("p", { class: "field__label", text: `Vidéo associée · ${rel.id} · pas encore sur YouTube` }), h("p", { class: "related__why", text: rel.why }), h("p", { class: "hint" }, `Laisse vide pour l'instant : relie-le quand ${rel.id}${rel.long ? ` « ${rel.long.title} »` : ""} sera en ligne.`));
+    const live = ytLatestFor(rel.long);
+    const id = (live && live.id) || (rel.long.views && rel.long.views.youtubeId) || null;
+    return h(
+      "div",
+      { class: "related" },
+      h("p", { class: "related__why" }, h("b", { text: "Pourquoi : " }), rel.why),
+      field(`Vidéo associée · ${rel.id}`, title, { title: true }),
+      h("p", { class: "hint" }, "Dans YouTube Studio : ", h("b", { text: "Vidéo associée" }), ", colle ce titre dans la recherche.", id ? [" ", h("a", { href: `https://www.youtube.com/watch?v=${encodeURIComponent(id)}`, target: "_blank", rel: "noopener", style: "text-decoration:underline", text: "Voir le long" })] : null),
+    );
   }
 
   /* ---------------------------------------------------------------- Publier */
@@ -902,13 +972,15 @@
   /** Le titre de l'onglet : où en est le film du jour. */
   function publierHead(d) {
     const day = state.cal.dayOf.get(d.dir);
+    if (!d.ready) return ["En fabrication", [`${d.id} : ${wipWhy(d)}`, day ? [" · prévu ", h("b", { text: relDay(day) })] : null, "."]];
+    if (fullyOnline(d)) return ["En ligne", [`${d.id} est en ligne partout.`]];
     if (onlineSomewhere(d)) return ["En cours", ["Reste ", h("b", { text: waiting(d).map((p) => p.name).join(", ") }), ` pour ${d.id}.`]];
     if (day === today()) {
-      const left = untilTonight();
-      return ["Ce soir", left ? [h("b", { text: `${HOUR}${SP}h` }), ` · dans ${left}`] : [h("b", { text: `${HOUR}${SP}h passée` }), " · à publier dès que possible"]];
+      const left = untilTonight(hourOf(d));
+      return [hourOf(d) < HOUR ? "Aujourd'hui" : "Ce soir", left ? [h("b", { text: `${hourOf(d)}${SP}h` }), ` · dans ${left}`] : [h("b", { text: `${hourOf(d)}${SP}h passée` }), " · à publier dès que possible"]];
     }
     if (day && day < today()) return ["En retard", [`Prévu ${relDay(day)}, `, h("span", { class: "warn", text: "pas encore publié" }), "."]];
-    if (day) return ["Prochain", ["Prévu ", h("b", { text: `${relDay(day)} à ${HOUR}${SP}h` }), "."]];
+    if (day) return ["Prochain", ["Prévu ", h("b", { text: `${relDay(day)} à ${hourOf(d)}${SP}h` }), "."]];
     return ["À publier", null];
   }
 
@@ -925,6 +997,7 @@
       );
       return;
     }
+    if (DESK.matches) return drawPublierDesk(root, q);
     const [title, sub] = publierHead(d);
     const others = q.slice(1);
     const aside = h(
@@ -939,11 +1012,41 @@
     root.replaceChildren(vhead(title, sub, [], "publier"), h("div", { class: "pub" }, h("div", {}, filmView(d)), aside));
   }
 
+  /** Sur le PC : la file à gauche (à publier, puis en fabrication), le film choisi en grand à droite. */
+  function drawPublierDesk(root, q) {
+    const wip = all()
+      .filter((x) => !x.ready)
+      .sort((a, b) => (state.cal.dayOf.get(a.dir) || "9999").localeCompare(state.cal.dayOf.get(b.dir) || "9999") || a.id.localeCompare(b.id, "fr", { numeric: true }));
+    const pool = [...q, ...wip];
+    const d = (state.pick && pool.find((x) => x.dir === state.pick)) || q[0];
+    const pick = (x) => () => {
+      state.pick = x.dir;
+      drawPublier();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+    const when = (x) => (state.cal.dayOf.get(x.dir) ? ` · ${relDay(state.cal.dayOf.get(x.dir))}` : "");
+    const list = h(
+      "aside",
+      { class: "pubdesk__list", "aria-label": "La file" },
+      sh("À publier", plural(q.length, "film")),
+      h("div", { class: "list" }, q.map((x) => item(x, [x.id, when(x)], dots(x), { onclick: pick(x), current: x.dir === d.dir }))),
+      wip.length ? wipFold(wip.map((x) => item(x, [x.id, when(x)], h("span", { class: "pill pill--warn", text: x.voiced ? "rendu" : "voix" }), { onclick: pick(x), current: x.dir === d.dir })), !d.ready) : null,
+    );
+    root.replaceChildren(deskHead(d), h("div", { class: "pubdesk" }, list, h("div", { class: "pubdesk__main" }, filmView(d))));
+  }
+
+  /** Sur le PC, le titre est celui de l’onglet ; l’état du film choisi passe dessous. */
+  function deskHead(d) {
+    const [title, sub] = publierHead(d);
+    return vhead("Publier", [h("b", { text: title }), sub ? [" · ", sub] : null], [], "publier");
+  }
+
   /** Le compte à rebours du titre (« dans 2 h 14 ») avance sans redessiner la fiche. */
   function tickPublierHead() {
-    const d = state.data && queue()[0];
+    const d = state.data && ((DESK.matches && state.pick && find(state.pick)) || queue()[0]);
     const old = $("#publier > .vhead");
     if (!d || !old) return;
+    if (DESK.matches) return old.replaceWith(deskHead(d));
     const [title, sub] = publierHead(d);
     old.replaceWith(vhead(title, sub, [], "publier"));
   }
@@ -953,13 +1056,18 @@
       .filter((d) => !d.ready)
       .sort((a, b) => (state.cal.dayOf.get(a.dir) || "9999").localeCompare(state.cal.dayOf.get(b.dir) || "9999") || a.id.localeCompare(b.id, "fr", { numeric: true }));
     if (!wip.length) return null;
+    return wipFold(wip.map((d) => item(d, [d.id, state.cal.dayOf.get(d.dir) ? ` · prévu ${relDay(state.cal.dayOf.get(d.dir))}` : ""], h("span", { class: "pill pill--warn", text: d.voiced ? "rendu" : "voix" }))));
+  }
+
+  /** Les films en fabrication, repliés par défaut : on ouvre quand on en a besoin. */
+  function wipFold(items, force = false) {
     const fold = h(
       "details",
-      { class: "fold", open: mem.get("wipOpen", false) ? true : null },
-      h("summary", {}, `En fabrication · ${wip.length}`, icon("down")),
-      h("div", { class: "list" }, wip.map((d) => item(d, [d.id, state.cal.dayOf.get(d.dir) ? ` · prévu ${relDay(state.cal.dayOf.get(d.dir))}` : ""], h("span", { class: "pill pill--warn", text: d.voiced ? "rendu" : "voix" })))),
+      { class: "fold", open: force || mem.get("wipOpen", false) ? true : null },
+      h("summary", {}, `En fabrication · ${items.length}`, icon("down")),
+      h("div", { class: "list" }, items),
     );
-    fold.addEventListener("toggle", () => mem.set("wipOpen", fold.open));
+    fold.addEventListener("toggle", () => force || mem.set("wipOpen", fold.open));
     return fold;
   }
 
@@ -972,7 +1080,7 @@
         ? `En ligne · ${platformsOf(d).filter((p) => isOn(d, p.id)).map((p) => p.short).join(" ")}`
         : e.status === "wip"
           ? `Pas prêt · ${wipWhy(d)}`
-          : `Prêt · ${HOUR}${SP}h${e.how === "proposed" ? " · proposé" : ""}`;
+          : `Prêt · ${hourOf(d)}${SP}h${e.how === "proposed" ? " · proposé" : ""}`;
     const k = e.status === "done" ? "k-done" : e.status === "wip" ? "k-wip" : e.how === "proposed" ? "k-prop" : "k-ready";
     const kind = kindOf(d);
     const b = h(
@@ -1171,7 +1279,7 @@
             ),
           )
         : null,
-      h("p", { class: "note" }, `La règle : un court par jour à ${HOUR}${SP}h ; les longs et les compilations le mardi, le jeudi et le samedi ; une promo le jour de son long. Une date proposée suit la file toute seule ; une date que tu fixes ne bouge plus.`),
+      h("p", { class: "note" }, `La règle : un court par jour à ${HOUR}${SP}h ; un Compte à rebours en plus le mercredi et le dimanche à ${CR_HOUR}${SP}h ; les longs et les compilations le mardi, le jeudi et le samedi ; une promo le jour de son long. Jamais plus de deux sorties TikTok le même jour. Une date proposée suit la file toute seule ; une date que tu fixes ne bouge plus.`),
     );
   }
 
@@ -1343,7 +1451,7 @@
                   return { title: v.title, tag: d ? d.id : null, n: v.views, img: `https://i.ytimg.com/vi/${encodeURIComponent(v.id)}/mqdefault.jpg`, meta: `${ago(v.published)}${Number.isFinite(v.likes) ? ` · ${fmt(v.likes)} j'aime` : ""}`, href: `https://www.youtube.com/watch?v=${encodeURIComponent(v.id)}` };
                 }),
               )
-            : h("p", { class: "hint", style: "padding:0 4px" }, state.accountsFailed ? "La chaîne ne répond pas pour l'instant." : "Lecture de la chaîne…"),
+            : h("p", { class: "hint", style: "padding:0 4px" }, state.accountsFailed ? "La chaîne ne répond pas pour l'instant." : state.accounts ? "Le flux des vidéos YouTube n'a rien renvoyé cette fois. Réessaie avec ↻ dans quelques minutes." : "Lecture de la chaîne…"),
         ),
         h(
           "section",
@@ -1602,6 +1710,8 @@
     if (state.tab === "chiffres") loadAccounts();
     else setTimeout(() => loadAccounts(), 1200);
   });
+
+  DESK.addEventListener("change", () => state.data && drawPublier());
 
   // la page relit le disque du PC toute seule tant qu'elle est à l'écran
   setInterval(() => document.visibilityState === "visible" && load(), 8000);
