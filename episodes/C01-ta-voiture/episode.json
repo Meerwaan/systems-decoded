@@ -31,11 +31,67 @@
   ],
   "post": {
     "youtube": {
-      "title": "6 systèmes se relaient quand tu as un accident : ta voiture, décodée",
-      "keyword": "système de sécurité voiture",
-      "descriptionTemplate": "Un accident ne se joue pas en une fois : six systèmes se passent le relais, avant, pendant et après le choc. On les ouvre dans l'ordre.\n\nChapitres\n__CHAPITRES__\n\nLes six dossiers et leurs sources : les descriptions des dossiers 002, 011, 013, 014, 019 et 025.\n\nReconstitutions 3D Système Décodé.",
-      "hashtags": ["#voiture", "#securiteroutiere"]
+      "title": "Sans te demander ton avis, 6 systèmes te sauvent pendant un accident de voiture",
+      "titleAlts": [
+        "Ta ceinture cache une charge explosive : les 6 systèmes qui te sauvent en accident",
+        "ABS, ESP, airbag, ceinture : ce que fait ta voiture pendant un accident"
+      ],
+      "titleNote": "Compilation (heures de visionnage), 05/11/2026. Autocomplétion YouTube relevée le jour même : « accident de voiture », « accident voiture electrique », « airbag voiture qui explose », « fonctionnement airbag voiture », « abs voiture c'est quoi », « esp voiture c'est quoi », « pretensionneur ceinture », « crash test voiture », « halo f1 grosjean » ; « système de sécurité voiture » n'a aucune suggestion (l'ancien mot cherché). Titre : l'accroche d'abord (l'ouverture du film : « Aucun ne te demandera ton avis »), le mot cherché à la fin. Miniature unique « IL T'EXPLOSE AU VISAGE » (l'accroche du 002, l'airbag à 300 km/h) : le titre ne la répète pas. Variante 1 : la charge du prétensionneur (019) ; variante 2 : la requête telle qu'on la tape.",
+      "keyword": "accident de voiture",
+      "descriptionTemplate": "Accident de voiture : entre la seconde où ta voiture décroche et celle où tu sors de l'habitacle, six systèmes se passent le relais. Aucun ne te demande ton avis.\n\nOn les ouvre en 3D, dans l'ordre où ils entrent en scène : l'ESP qui freine une seule roue pour te rattraper, l'ABS qui fait trembler ta pédale de frein, le prétensionneur et la charge explosive cachée dans ta ceinture de sécurité, l'airbag qui sort du volant à 300 km/h, le fusible pyrotechnique qui coupe la batterie d'une voiture électrique… et le Halo de Formule 1, qui a sauvé Romain Grosjean à Bahreïn.\n\nChapitres\n__CHAPITRES__\n\nSources (le détail est sous chaque dossier) : Bosch (ESP, ABS, airbag) · Commission européenne, règlement (CE) n° 661/2009 (ESP obligatoire) · NHTSA, rapport DOT HS 811 835 (prétensionneur) · Autoliv et NTSB SR-20/01 (fusible pyrotechnique, véhicules électriques) · FIA, enquête sur l'accident de Romain Grosjean, Bahreïn 2020 (Halo).\n\nReconstitutions 3D Système Décodé : les six dossiers 025, 014, 019, 002, 011 et 013, reliés en une seule histoire.\n\nEt toi : lequel tu ne savais pas que ta voiture avait ? L'ESP… ou le prétensionneur ?\n\nSystème Décodé ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite, pour un autre dossier qui veille sur toi.",
+      "description": "Accident de voiture : entre la seconde où ta voiture décroche et celle où tu sors de l'habitacle, six systèmes se passent le relais. Aucun ne te demande ton avis.\n\nOn les ouvre en 3D, dans l'ordre où ils entrent en scène : l'ESP qui freine une seule roue pour te rattraper, l'ABS qui fait trembler ta pédale de frein, le prétensionneur et la charge explosive cachée dans ta ceinture de sécurité, l'airbag qui sort du volant à 300 km/h, le fusible pyrotechnique qui coupe la batterie d'une voiture électrique… et le Halo de Formule 1, qui a sauvé Romain Grosjean à Bahreïn.\n\nChapitres\n00:00 Six systèmes, dans l'ordre d'un accident\n00:15 Avant le choc : l'ESP\n01:43 Tu freines à fond : l'ABS\n03:03 Le choc : le prétensionneur\n04:38 Ta tête et le volant : l'airbag\n06:04 Après le choc : le fusible de la batterie\n07:26 Là où ça va le plus vite : le Halo\n08:50 Lequel tu ne connaissais pas ?\n\nSources (le détail est sous chaque dossier) : Bosch (ESP, ABS, airbag) · Commission européenne, règlement (CE) n° 661/2009 (ESP obligatoire) · NHTSA, rapport DOT HS 811 835 (prétensionneur) · Autoliv et NTSB SR-20/01 (fusible pyrotechnique, véhicules électriques) · FIA, enquête sur l'accident de Romain Grosjean, Bahreïn 2020 (Halo).\n\nReconstitutions 3D Système Décodé : les six dossiers 025, 014, 019, 002, 011 et 013, reliés en une seule histoire.\n\nEt toi : lequel tu ne savais pas que ta voiture avait ? L'ESP… ou le prétensionneur ?\n\nSystème Décodé ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite, pour un autre dossier qui veille sur toi.",
+      "chapters": [
+        "00:00 Six systèmes, dans l'ordre d'un accident",
+        "00:15 Avant le choc : l'ESP",
+        "01:43 Tu freines à fond : l'ABS",
+        "03:03 Le choc : le prétensionneur",
+        "04:38 Ta tête et le volant : l'airbag",
+        "06:04 Après le choc : le fusible de la batterie",
+        "07:26 Là où ça va le plus vite : le Halo",
+        "08:50 Lequel tu ne connaissais pas ?"
+      ],
+      "hashtags": [
+        "#voiture",
+        "#airbag",
+        "#securiteroutiere",
+        "#automobile",
+        "#permisdeconduire"
+      ],
+      "tags": [
+        "accident de voiture",
+        "accident voiture",
+        "accident voiture electrique",
+        "airbag voiture",
+        "airbag voiture qui explose",
+        "fonctionnement airbag voiture",
+        "comment marche un airbag",
+        "abs voiture",
+        "abs voiture c'est quoi",
+        "fonctionnement abs voiture",
+        "esp voiture",
+        "esp voiture c'est quoi",
+        "pretensionneur ceinture",
+        "ceinture de securite",
+        "crash test voiture",
+        "batterie voiture electrique",
+        "halo f1",
+        "halo f1 grosjean",
+        "securite routiere",
+        "comment fonctionne une voiture",
+        "reconstitution 3d"
+      ],
+      "pinned": "Le premier ABS électronique de série est sorti en 1978, chez Bosch. Et toi, lequel tu ne connaissais pas : l'ESP ou le prétensionneur ?",
+      "endScreen": "Les dernières secondes (fin1 → fin4) laissent la moitié droite de l'image libre pour l'écran de fin : y mettre un long (L05 ou L06) et le bouton d'abonnement."
     }
+  },
+  "thumb": {
+    "title": [
+      "IL T'EXPLOSE",
+      "AU VISAGE"
+    ],
+    "tag": "6 systèmes · 1 accident",
+    "tone": "signal",
+    "note": "Composée hors de cover.mjs (une compilation n'a pas de 3D à elle) : image propre du 002 au repère « plein » (le sac sort du volant), les mots à gauche dans la mise en page des longs. renders/C01-ta-voiture-miniature.png."
   },
   "sources": ["Les faits de chaque dossier sont ceux de son épisode (docs/faits/002, 011, 013, 014, 019, 025) ; les ponts n'ajoutent aucun chiffre."],
   "beats": [
