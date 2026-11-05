@@ -507,6 +507,83 @@ const POSTS = {
       hashtags: ["#shorts", "#tchernobyl", "#nucleaire", "#histoire", "#science"],
     },
   },
+  "039-cendrier-reacteur": {
+    instagram: {
+      caption: "Ton réacteur nucléaire fond. L'acier lâche. Et on le laisse couler.\n\nDossier 039 : le récupérateur de corium de l'EPR. Une fosse en béton sacrificiel, une porte fusible, un canal… et une chambre de 170 m², vide. Pourquoi un cœur fondu étalé ne perce plus le sol. Une reconstitution : ce système n'a jamais servi en conditions réelles.\n\nLe réacteur près de chez toi : chambre d'étalement… ou pas ?",
+      hashtags: ["#nucleaire", "#reacteur", "#energie", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ton réacteur nucléaire fond… et on le laisse couler : le récupérateur de corium",
+      description: "Dossier 039 — le récupérateur de corium (« core catcher ») de l'EPR ouvert : la fosse en béton sacrificiel sous la cuve, la porte fusible, le canal, la chambre d'étalement de 170 m² et la piscine du bâtiment réacteur. Pourquoi un cœur fondu étalé devient mince et ne perce plus le sol. Une reconstitution : ce système n'a jamais servi en conditions réelles.\n\nIngénieurs et techniciens du nucléaire : qu'est-ce qu'on a simplifié ? Et toi : le réacteur près de chez toi, chambre d'étalement… ou pas ?",
+      hashtags: ["#shorts", "#nucleaire", "#reacteur", "#energie", "#science"],
+    },
+  },
+  "040-abri-anti-feu": {
+    instagram: {
+      caption: "Le feu te passe dessus. Et tu es sous une feuille d'alu.\n\nDossier 040 : l'abri anti-feu des pompiers forestiers. Une feuille d'aluminium sur de la silice, une lame d'air, de la fibre de verre, une seconde feuille… et comment un métal qui fond bien avant les flammes te garde en vie dessous. Le 29 août 1985, sur une crête de l'Idaho, 73 pompiers encerclés s'y sont couchés.\n\nPour ne pas griller : pieds vers le feu… ou tête vers le feu ?",
+      hashtags: ["#pompier", "#feudeforet", "#incendie", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Le feu te passe dessus… et tu es sous une feuille d'alu : l'abri anti-feu des pompiers",
+      description: "Dossier 040 — l'abri anti-feu individuel (« fire shelter ») des pompiers forestiers ouvert : la feuille d'aluminium collée sur la silice, la lame d'air, la fibre de verre et la seconde feuille tournée vers toi. Pourquoi le feu te chauffe surtout par rayonnement, et ce que deux kilos plié sur un sac en font. Et le 29 août 1985, dans l'Idaho (Butte Fire) : 73 pompiers encerclés sur une crête, une heure et demie sous leurs abris. Une reconstitution.\n\nPompiers forestiers : qu'est-ce qu'on a simplifié ? Et toi : pieds vers le feu… ou tête vers le feu ?",
+      hashtags: ["#shorts", "#pompier", "#feudeforet", "#incendie", "#science"],
+    },
+  },
+  "041-bouclier-iss": {
+    instagram: {
+      caption: "Un débris fonce sur ta tête. Dix kilomètres par seconde. Ta station le laisse frapper.\n\nDossier 041 : le bouclier anti-débris de l'ISS. Une tôle d'aluminium d'un ou deux millimètres, dix centimètres de vide, un matelas de céramique et de kevlar… et pourquoi une tôle fine devant du vide arrête ce qu'une plaque épaisse laisserait passer. Et le 15 novembre 2021, quand plus de 1 500 morceaux sont arrivés.\n\nLe plus dangereux là-haut : le gros… ou le petit ?",
+      hashtags: ["#espace", "#iss", "#astronaute", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Un débris fonce sur ta tête à 10 km/s… et ta station le laisse frapper : le bouclier de l'ISS",
+      description: "Dossier 041 — le bouclier anti-débris de la Station spatiale internationale ouvert (le bouclier de Whipple « rembourré », imaginé par l'astronome Fred Whipple dans les années 1940) : une tôle d'aluminium d'un ou deux millimètres, une dizaine de centimètres de vide, un matelas de céramique (Nextel) et de kevlar, puis la coque, presque cinq millimètres. Pourquoi, à dix kilomètres par seconde, le débris ne perce pas la tôle fine : il s'y brise en un nuage qui s'étale avant d'arriver. Ce qu'il arrête, environ un centimètre… et ce qu'il n'arrête pas : le 15 novembre 2021.\n\nIngénieurs, passionnés d'espace : qu'est-ce qu'on a simplifié ? Et toi : le plus dangereux là-haut, le gros… ou le petit ?",
+      hashtags: ["#shorts", "#espace", "#iss", "#astronaute", "#science"],
+    },
+  },
+  "042-toit-du-char": {
+    instagram: {
+      caption: "Tes obus brûlent. Le toit de ton char saute. Exprès.\n\nDossier 042 : le compartiment à obus à l'arrière de la tourelle. Un panneau de toit fait pour lâcher le premier, deux portes blindées coulissantes, et une came en forme d'œuf qui les verrouille. Pourquoi un feu de poudre sort toujours là où ça résiste le moins.\n\nÀ cette porte : un homme… ou une machine ?",
+      hashtags: ["#char", "#ingenierie", "#physique", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Tes obus brûlent… et le toit de ton char saute exprès",
+      description: "Dossier 042 — le compartiment à obus d'un char, ouvert : le caisson à l'arrière de la tourelle, le panneau de toit qui doit lâcher le premier, les deux portes blindées coulissantes et la came qui les verrouille quand le toit s'envole (brevet de 1993). Pourquoi un feu de poudre sort là où ça résiste le moins. Scénario type, reconstitué en 3D.\n\nTankistes : qu'est-ce qu'on a simplifié ? Et toi : à cette porte, un homme… ou une machine ?",
+      hashtags: ["#shorts", "#char", "#ingenierie", "#physique", "#science"],
+    },
+  },
+  "044-gilet-pare-balles": {
+    instagram: {
+      caption: "Tu prends une balle. Tu crois à une pierre.\n\nDossier 044 : le gilet pare-balles souple. Une housse, des dizaines de couches de fils croisés, souvent du Kevlar… et pourquoi un tissu qui étale l'énergie sur des centaines de fils attrape une balle d'arme de poing. La nuit du 1er juillet 2023, à Nîmes, un policier a découvert une balle logée dans son gilet.\n\nUn gilet pare-balles arrête aussi un couteau : vrai… ou faux ?",
+      hashtags: ["#giletpareballes", "#police", "#kevlar", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Tu prends une balle… et tu crois à une pierre : le gilet pare-balles souple",
+      description: "Dossier 044 — le gilet pare-balles souple ouvert : la housse, les dizaines de couches de fibres (aramide type Kevlar, ou polyéthylène), les fils croisés et les coutures. Pourquoi un tissu arrête une balle d'arme de poing : il ne bloque pas en un point, il étale l'énergie sur des centaines de fils, et la balle s'écrase en champignon. Le revers : le tissu se creuse vers toi — la norme américaine NIJ tolère 44 mm de creux dans l'argile d'essai. Et contre un fusil, il faut une plaque dure. Le cas réel : Nîmes, nuit du 30 juin au 1er juillet 2023. Une reconstitution.\n\nPoliciers, gendarmes, secouristes : qu'est-ce qu'on a simplifié ? Et toi : un gilet pare-balles arrête aussi un couteau, vrai… ou faux ?",
+      hashtags: ["#shorts", "#giletpareballes", "#police", "#kevlar", "#science"],
+    },
+  },
+  "043-faisceau-cern": {
+    instagram: {
+      caption: "Ton faisceau porte l'énergie d'un train lancé. Un grain de poussière va le jeter dehors.\n\nDossier 043 : la sortie de secours du LHC, au CERN. 3 600 capteurs, 15 aimants qui s'allument dans un trou de trois microsecondes, 700 mètres de ligne, un bloc de graphite de six tonnes… et pourquoi un faisceau qui percerait n'importe quel matériau finit par y dessiner un « e ». Une reconstitution.\n\nCouper pour un grain : trop prudent… ou juste assez ?",
+      hashtags: ["#cern", "#physique", "#science", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ton faisceau porte l'énergie d'un train lancé… et un grain de poussière va le jeter dehors",
+      description: "Dossier 043 — la sortie de secours du LHC ouverte : les 3 600 capteurs de pertes, les quinze aimants d'extraction qui s'allument dans un trou de trois microsecondes, les dix aimants de dilution, la ligne de 700 mètres et le bloc de graphite de six tonnes refroidi à l'air. Pourquoi un faisceau qui percerait n'importe quel matériau en un point est étalé en un « e » d'un mètre vingt. Et les « UFO » : ces grains de poussière qui tombent dans le faisceau et font jeter la machine. Une reconstitution.\n\nPhysiciens des accélérateurs : qu'est-ce qu'on a simplifié ? Et toi : couper pour un grain, trop prudent… ou juste assez ?",
+      hashtags: ["#shorts", "#cern", "#physique", "#science", "#lhc"],
+    },
+  },
+  "045-autodestruction-fusee": {
+    instagram: {
+      caption: "Ta fusée bascule et se déchire. Puis elle se détruit toute seule… comme prévu.\n\nDossier 045 : le système de destruction des fusées, et la sauvegarde du CNES à Kourou. Une antenne, un verrou de sécurité, un détonateur, un cordeau… et une charge pliée en V qui tranche deux centimètres d'acier. Le 4 juin 1996, Ariane 5 l'a déclenchée à son premier vol.\n\nUne fusée qui dévie : un humain décide… ou la machine ?",
+      hashtags: ["#fusee", "#ariane5", "#espace", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ta fusée se déchire… puis se détruit toute seule, comme prévu : l'autodestruction d'Ariane 5",
+      description: "Dossier 045 — le système de destruction d'une fusée ouvert : l'antenne et son récepteur, le verrou de sécurité-armement, le détonateur, le cordeau détonant et la charge linéaire, pliée en V et doublée de cuivre, dont le jet de métal tranche jusqu'à 22 mm d'acier. Et le 4 juin 1996, à Kourou : le vol 501 d'Ariane 5, son guidage qui s'arrête 36,7 secondes après l'allumage, ses boosters qui s'arrachent… et la destruction qui se déclenche automatiquement, comme prévu, sous l'œil de la sauvegarde du CNES. Une reconstitution : la chaîne pyrotechnique montrée est celle, générique, des systèmes décrits par la NASA et Pyroalliance.\n\nIngénieurs, passionnés d'espace : qu'est-ce qu'on a simplifié ? Et toi : une fusée qui dévie, un humain décide… ou la machine ?",
+      hashtags: ["#shorts", "#fusee", "#ariane5", "#espace", "#science"],
+    },
+  },
 };
 
 const problems = [];

@@ -147,6 +147,8 @@ export function ecriture(ep, sched) {
   }
   if ((post.hashtags ?? []).length > 5) warn(`légende : ${post.hashtags.length} hashtags — cinq au plus`);
   if (post.pinned && post.pinned.length > 150) warn(`épinglé : ${post.pinned.length} caractères — 150 au plus`);
+  if (post.pinned && /r[ée]ponds juste/i.test(post.pinned)) warn("épinglé : plus de « Réponds juste » — un fait que le film ne dit pas, puis la question (recette § 9)");
+  if (post.pinned && !/\?\s*$/.test(post.pinned)) warn("épinglé : il finit par la question à deux camps");
 
   // 10. what an agent can leave behind (salle d'écriture, 27/10): mechanical, read in the JSON, never a matter of taste
   for (const m of mecanique(ep, sched)) warn(m);

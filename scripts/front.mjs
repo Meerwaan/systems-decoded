@@ -5,8 +5,11 @@
 // It also opens the listening booth of an episode (front/voix.html): every phrase in every
 // recording, and the ear's choice of a recording, handed to voice.mjs, which re-comps from what
 // is already on the disk.
-// Two addresses write, and nothing else does: that booth, and what is online — a tick per
-// platform, kept in metrics/publication.json so that the PC and the phone tell the same story.
+// Three addresses write, and nothing else does: that booth, what is online — a tick per
+// platform, kept in metrics/publication.json so that the PC and the phone tell the same story —
+// and the release calendar (metrics/calendrier.json), a planned day per dossier.
+// It also reads the three accounts' public pages (/api/comptes) and keeps their followers day by
+// day in metrics/comptes.json: the only thing it writes without being asked.
 import { spawn } from "node:child_process";
 import fs from "node:fs";
 import http from "node:http";
@@ -290,7 +293,8 @@ function keepPublication(dir, asked) {
 }
 
 /** Is this dossier a long (16:9)? Read off its page, the way cover.mjs reads it. */
-const isLong = (dir) => frameOf(path.join(EPISODES, dir)).long;
+// (a compilation, C01…, is a 16:9 YouTube film assembled by compil.mjs: it has no page to read)
+const isLong = (dir) => /^C\d/.test(dir) || frameOf(path.join(EPISODES, dir)).long;
 /** Where a dossier goes up: the three platforms for a short, YouTube alone for a long. */
 const platformsOf = (dir) => (isLong(dir) ? LONG_PLATFORMS : PLATFORMS);
 
@@ -345,13 +349,235 @@ function dossiers() {
 }
 
 /** Everything the desk's page draws, read from the disk at this instant. */
-const desk = () => ({ profile: profile(), dossiers: dossiers() });
+const desk = () => ({ profile: profile(), dossiers: withViews(dossiers()), accounts: true });
 
 function profile() {
   const p = readJson(path.join(BRAND, "profil.json")) ?? {};
   // `bio` is TikTok's (80 characters); `bios` the other platforms' — Instagram (150), YouTube (the channel's description)
   const bios = p.bios && typeof p.bios === "object" ? p.bios : {};
-  return { name: String(p.name ?? ""), handle: String(p.handle ?? ""), bio: String(p.bio ?? ""), instagram: String(bios.instagram ?? ""), youtube: String(bios.youtube ?? "") };
+  return {
+    name: String(p.name ?? ""),
+    handle: String(p.handle ?? ""),
+    bio: String(p.bio ?? ""),
+    instagram: String(bios.instagram ?? ""),
+    youtube: String(bios.youtube ?? ""),
+    accounts: accountsOf(p),
+  };
+}
+
+/** The three accounts as brand/profil.json → "comptes" names them: { platform: { handle, url } }. */
+function accountsOf(p = readJson(path.join(BRAND, "profil.json")) ?? {}) {
+  const out = {};
+  for (const platform of PLATFORMS) {
+    const a = own(p.comptes, platform);
+    if (isMap(a) && typeof a.url === "string" && /^https:\/\//.test(a.url)) out[platform] = { handle: String(a.handle ?? ""), url: a.url };
+  }
+  return out;
+}
+
+/* ---------------------------------------------------------------- the release calendar */
+
+// The day each dossier is planned to go out, when Merwan fixed one on the desk: metrics/calendrier.json,
+// { dossiers: { "<dossier>": "YYYY-MM-DD" } }. A dossier with no date gets one proposed by the page
+// (a short a day at 20 h, the longs on Tuesday, Thursday and Saturday): nothing is written for a proposal.
+const CALENDAR = path.join(ROOT, "metrics", "calendrier.json");
+
+function planned() {
+  const kept = readJson(CALENDAR)?.dossiers;
+  return isMap(kept) ? kept : {};
+}
+
+function keepPlanned(dir, date) {
+  const all = { ...planned() };
+  if (date === null) delete all[dir];
+  else all[dir] = date;
+  const next = {
+    "//": "Le jour de sortie prévu de chaque dossier, fixé sur le bureau (onglet Calendrier). Sans ligne ici, le bureau propose un jour (un court par jour à 20 h, les longs mardi, jeudi et samedi) sans rien écrire.",
+    dossiers: Object.fromEntries(Object.entries(all).sort(([a], [b]) => a.localeCompare(b, "fr", { numeric: true }))),
+  };
+  const draft = `${CALENDAR}.${process.pid}.tmp`;
+  fs.mkdirSync(path.dirname(CALENDAR), { recursive: true });
+  fs.writeFileSync(draft, `${JSON.stringify(next, null, 2)}\n`);
+  fs.renameSync(draft, CALENDAR);
+}
+
+/** POST /api/calendrier/<dossier>: { date: "YYYY-MM-DD" | null } — then answer with the desk as it now stands. */
+async function calendarPost(req, res, dir) {
+  const asked = await postedJson(req, dir, "Origine refusée : seule la page du bureau peut changer le calendrier");
+  const date = isMap(asked) ? asked.date : undefined;
+  if (date !== null && !(typeof date === "string" && /^\d{4}-\d\d-\d\d$/.test(date) && !Number.isNaN(Date.parse(date)))) {
+    throw refuse(400, 'Corps attendu : { date: "AAAA-MM-JJ" } ou { date: null }');
+  }
+  try {
+    keepPlanned(dir, date);
+  } catch (err) {
+    console.error(`  ✗ calendrier ${dir}: ${err.stack ?? err.message}`);
+    throw refuse(500, "Le PC n'a pas pu écrire metrics/calendrier.json");
+  }
+  note(`calendrier : ${dir} → ${date ?? "date retirée"} (${who(req)})`);
+  return json(req, res, desk());
+}
+
+/* ---------------------------------------------------------------- the views of each film */
+
+const VIEWS = path.join(ROOT, "metrics", "vues-par-film.json");
+
+/**
+ * What each film did, platform by platform, from the last relevé that names it: metrics/vues-par-film.json
+ * (relevé by relevé), then audience.json (the first films, written by hand). A number is always given with
+ * its date: a count of three weeks ago is not today's.
+ */
+function withViews(list) {
+  const audience = readJson(AUDIENCE)?.episodes ?? {};
+  const releves = isMap(readJson(VIEWS)?.releves) ? readJson(VIEWS).releves : {};
+  const dates = Object.keys(releves).sort(); // oldest first: a newer relevé overwrites
+  const plan = planned();
+  const pick = (block, date) =>
+    isMap(block) && Number.isFinite(block.vues) ? { vues: block.vues, likes: Number.isFinite(block.likes) ? block.likes : null, date: String(block.releve ?? date ?? "").slice(0, 10) } : null;
+  return list.map((d) => {
+    const a = own(audience, d.id);
+    const views = { tiktok: pick(a, null), instagram: pick(own(a, "instagram"), null), youtube: pick(own(a, "youtube"), null) };
+    if (isMap(own(a, "youtube")) && typeof a.youtube.id === "string") views.youtubeId = a.youtube.id;
+    for (const date of dates) {
+      for (const platform of PLATFORMS) {
+        const got = pick(own(own(releves[date], platform), d.id), date);
+        if (got) views[platform] = got;
+      }
+    }
+    const day = own(plan, d.dir);
+    return { ...d, views, planned: typeof day === "string" ? day : null };
+  });
+}
+
+/* ---------------------------------------------------------------- the accounts, live */
+
+// What the three public profile pages say (followers, likes, videos), read by the PC — the phone could
+// not (another site) — at most every quarter of an hour, and kept day by day in metrics/comptes.json so
+// that the page can say how much each account grew. The per-film views are not on these pages without
+// signing in: they come from the relevés (above). YouTube's official feed gives the views of its last 15 videos.
+const COMPTES = path.join(ROOT, "metrics", "comptes.json");
+const FRESH_MS = 15 * 60 * 1000;
+const UA = "SystemeDecode-bureau/1.0 (usage personnel)";
+let accountsCache = null; // { at, data }
+let accountsBusy = null;
+
+async function page(url) {
+  const res = await fetch(url, { headers: { "User-Agent": UA, "Accept-Language": "fr-FR,fr;q=0.9" }, redirect: "follow", signal: AbortSignal.timeout(15000) });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.text();
+}
+
+/** "41K", "1,15 k", "2,3 M", "2 375" → { n, approx }. */
+function count(text) {
+  const m = /([\d][\d\s  .,]*)\s*([kKmM])?/.exec(String(text ?? ""));
+  if (!m) return null;
+  const raw = m[1].replace(/[\s  ]/g, "");
+  if (m[2]) {
+    const n = Number(raw.replace(",", "."));
+    return Number.isFinite(n) ? { n: Math.round(n * (/m/i.test(m[2]) ? 1e6 : 1e3)), approx: true } : null;
+  }
+  const n = Number(raw.replace(/[.,]/g, ""));
+  return Number.isFinite(n) ? { n, approx: false } : null;
+}
+
+const entities = (s) => s.replace(/&#x([0-9a-f]+);/gi, (_, x) => String.fromCodePoint(parseInt(x, 16))).replace(/&#(\d+);/g, (_, x) => String.fromCodePoint(Number(x))).replace(/&amp;/g, "&").replace(/&quot;/g, '"');
+
+async function tiktokAccount(url) {
+  const html = await page(url);
+  const m = /<script id="__UNIVERSAL_DATA_FOR_REHYDRATION__"[^>]*>([\s\S]*?)<\/script>/.exec(html);
+  const info = m ? JSON.parse(m[1])?.__DEFAULT_SCOPE__?.["webapp.user-detail"]?.userInfo : null;
+  const s = info?.stats;
+  if (!s || !Number.isFinite(s.followerCount)) throw new Error("page sans chiffres");
+  return { followers: s.followerCount, approx: false, likes: s.heartCount ?? s.heart ?? null, videos: s.videoCount ?? null, name: info.user?.nickname ?? "" };
+}
+
+async function instagramAccount(url) {
+  const html = await page(url);
+  const meta = /<meta[^>]+(?:property="og:description"|name="description")[^>]+content="([^"]+)"/.exec(html)?.[1];
+  if (!meta) throw new Error("page sans chiffres");
+  const text = entities(meta);
+  const followers = count(/([\d\s.,  ]+\s*[kKmM]?)\s*(?:followers|abonnés)/i.exec(text)?.[1]);
+  const posts = count(/([\d\s.,  ]+\s*[kKmM]?)\s*(?:publications|posts)/i.exec(text)?.[1]);
+  if (!followers) throw new Error("page sans chiffres");
+  return { followers: followers.n, approx: followers.approx, videos: posts?.n ?? null };
+}
+
+async function youtubeAccount(url) {
+  const html = await page(url);
+  const channel = /"externalId":"(UC[\w-]{22})"/.exec(html)?.[1] ?? null;
+  const subs = count(/"content":"([^"]*?)\s*(?:abonnés|subscribers)"/.exec(html)?.[1]);
+  const videos = count(/"content":"([^"]*?)\s*(?:vidéos|videos)"/.exec(html)?.[1]);
+  if (!subs) throw new Error("page sans chiffres");
+  let latest = [];
+  if (channel) {
+    try {
+      const xml = await page(`https://www.youtube.com/feeds/videos.xml?channel_id=${channel}`);
+      latest = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(([, e]) => ({
+        id: /<yt:videoId>([^<]+)</.exec(e)?.[1] ?? "",
+        title: entities(/<title>([^<]*)<\/title>/.exec(e)?.[1] ?? ""),
+        published: /<published>([^<]+)</.exec(e)?.[1] ?? "",
+        views: Number(/<media:statistics views="(\d+)"/.exec(e)?.[1] ?? NaN),
+        likes: Number(/<media:starRating count="(\d+)"/.exec(e)?.[1] ?? NaN),
+      })).filter((v) => v.id);
+    } catch {
+      // the feed is a bonus: the account's figures stand without it
+    }
+  }
+  return { followers: subs.n, approx: subs.approx, videos: videos?.n ?? null, latest };
+}
+
+const READERS = { tiktok: tiktokAccount, instagram: instagramAccount, youtube: youtubeAccount };
+
+/** Today's figures written in metrics/comptes.json (the last read of the day wins). Returns the whole history. */
+function keepAccounts(accounts) {
+  const file = readJson(COMPTES);
+  const releves = isMap(file?.releves) ? file.releves : {};
+  const today = stamp().slice(0, 10);
+  const day = { ...(isMap(releves[today]) ? releves[today] : {}) };
+  for (const [platform, a] of Object.entries(accounts)) {
+    if (a.error) continue;
+    day[platform] = Object.fromEntries(Object.entries({ abonnes: a.followers, approx: a.approx || undefined, likes: a.likes ?? undefined, videos: a.videos ?? undefined }).filter(([, v]) => v !== undefined));
+  }
+  if (Object.keys(day).length === 0) return releves;
+  const next = {
+    "//": "Les abonnés de chaque compte, jour par jour : lus sur les pages publiques par le bureau (npm run front, au plus tous les quarts d'heure). approx = le chiffre arrondi que la page affiche (« 41 K »). Les premières lignes sont recopiées des relevés.",
+    releves: Object.fromEntries(Object.entries({ ...releves, [today]: day }).sort(([a], [b]) => a.localeCompare(b))),
+  };
+  try {
+    const draft = `${COMPTES}.${process.pid}.tmp`;
+    fs.writeFileSync(draft, `${JSON.stringify(next, null, 2)}\n`);
+    fs.renameSync(draft, COMPTES);
+  } catch (err) {
+    console.error(`  ✗ comptes : ${err.message}`);
+  }
+  return next.releves;
+}
+
+/** The three accounts, read again when the last read is older than a quarter of an hour (or `force`, at most once a minute). */
+async function liveAccounts(force = false) {
+  const age = accountsCache ? Date.now() - accountsCache.at : Infinity;
+  if (accountsCache && age < (force ? 60 * 1000 : FRESH_MS)) return accountsCache.data;
+  if (!accountsBusy) {
+    accountsBusy = (async () => {
+      const where = accountsOf();
+      const accounts = {};
+      await Promise.all(
+        Object.entries(where).map(async ([platform, a]) => {
+          try {
+            accounts[platform] = { ...a, ...(await READERS[platform](a.url)) };
+          } catch (err) {
+            // a page that did not answer: the last figures known are shown, with their date
+            accounts[platform] = { ...a, error: err.name === "TimeoutError" ? "pas de réponse" : err.message };
+          }
+        }),
+      );
+      const history = keepAccounts(accounts);
+      const data = { at: Date.now(), accounts, history };
+      accountsCache = { at: data.at, data };
+      return data;
+    })().finally(() => (accountsBusy = null));
+  }
+  return accountsBusy;
 }
 
 /* ---------------------------------------------------------------- the listening booth: what was recorded */
@@ -759,7 +985,7 @@ function route(req, res) {
   // The desk reads. Two addresses take a POST: the booth of a dossier, for the ear's choices, and
   // its publication, for a tick when it goes online.
   const booth = pathname !== null && /^\/api\/voix\/[^/]+$/.test(pathname);
-  const ticks = pathname !== null && /^\/api\/publication\/[^/]+$/.test(pathname);
+  const ticks = pathname !== null && /^\/api\/(publication|calendrier)\/[^/]+$/.test(pathname);
   if (ticks ? req.method !== "POST" : req.method !== "GET" && req.method !== "HEAD" && !(booth && req.method === "POST")) {
     return text(res, 405, "Méthode refusée", { Allow: ticks ? "POST" : booth ? "GET, HEAD, POST" : "GET, HEAD" });
   }
@@ -773,13 +999,17 @@ function route(req, res) {
     return sendFile(req, res, path.join(FRONT, "index.html"));
   }
   if (pathname === "/api/dossiers") return json(req, res, desk());
+  if (pathname === "/api/comptes") {
+    const force = new URLSearchParams(q === -1 ? "" : raw.slice(q + 1)).get("force") === "1";
+    return liveAccounts(force).then((data) => json(req, res, data));
+  }
   if (pathname === "/brand/avatar.png") return sendFile(req, res, path.join(BRAND, "avatar.png"), { download });
 
   const parts = pathname.slice(1).split("/");
   // The booth: "/api/voix/<dossier>" and "/voix-audio/<dossier>/…". The dossier is a real folder of
   // episodes/ or nothing — like every name here, looked up in the listing, never joined to a path as it came.
   const dossier = (name) => (episodeDirs().includes(name) ? name : null);
-  if (ticks) return publicationPost(req, res, dossier(parts[2]));
+  if (ticks) return (parts[1] === "calendrier" ? calendarPost : publicationPost)(req, res, dossier(parts[2]));
   if (parts[0] === "vignette" && parts.length === 2) {
     return vignette(dossier(parts[1]) ?? "").then((file) => (file ? sendFile(req, res, file) : text(res, 404, "Introuvable")));
   }

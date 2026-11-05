@@ -13,7 +13,7 @@ L'ambition, dans les mots de Merwan : pas un compte qui suit la tendance, **le m
 | | |
 | --- | --- |
 | Nom affiché | **Système Décodé** |
-| @ | `@systeme.decode` — replis : `@systemedecode`, `@systeme_decode` (le compte TikTok des exports est **@hors.ligne_mw**) |
+| Comptes | TikTok et Instagram **@systemesdecodes**, YouTube **@SystèmesDécodé** (adresses : `brand/profil.json` → `comptes`) |
 | Bio | Ils veillent pendant que tu dors.⏎On les décode, un système à la fois. |
 | Instagram, YouTube Shorts, Facebook | Bios : `brand/profil.json`. Textes de chaque dossier (`post.instagram`, `post.youtube`, `title` ≤ 100 caractères) écrits par `node scripts/posts.mjs`, où un nouveau dossier s'ajoute. **Cinq hashtags au plus sur chaque plateforme** ; jamais la chute, le mot que les gens cherchent, la question du commentaire à la fin. |
 | Photo de profil | `brand/avatar.png` (source `brand/avatar.svg`, export `npm run brand`) |
@@ -55,7 +55,7 @@ Elle tient en trois temps, dans les 8 à 9 premières secondes — la **méthode
 9. **Le like**, puis **l'abonnement avec le prochain dossier, en tout dernier**.
 10. **Rebouclage** : dernière phrase inachevée — la queue de l'annonce du prochain dossier —, dernière image = première image.
 
-Relance la tension toutes les 8–12 s (un fait, une question, un changement de plan). Aucune phrase ne doit pouvoir être coupée sans que l'histoire y perde. Recette d'écriture complète : `docs/recette-script.md` (à lire avant d'écrire un script ; `npm run script` la vérifie). **La promesse ne rassure pas** ; **la question du commentaire est fermée, à deux camps** ; la légende TikTok ouvre sur le mot cherché (`post.keyword`). Les films qui ont percé sont sortis entre 19 h et 23 h.
+Relance la tension toutes les 8–12 s (un fait, une question, un changement de plan). Aucune phrase ne doit pouvoir être coupée sans que l'histoire y perde. Recette d'écriture complète : `docs/recette-script.md` (à lire avant d'écrire un script ; `npm run script` la vérifie). **La promesse ne rassure pas** ; **la question du commentaire est fermée, à deux camps** ; **l'épinglé TikTok donne un fait vrai que le film ne dit pas, puis la question** (plus jamais « Réponds juste : … ») ; la légende TikTok ouvre sur le mot cherché (`post.keyword`). Les films qui ont percé sont sortis entre 19 h et 23 h.
 
 ### L'animation raconte aussi
 
@@ -129,7 +129,7 @@ npm run phone   -- 003                         copie du film sous 30 Mio (render
 npm run social  [-- --out <dossier>] [--only facebook|stories|youtube]   stories, bannière YouTube, post Facebook (scripts/social.mjs)
 npm run chrono  -- 012 <étape> | stop | agent <nom> --jetons N … | jauge --session N --hebdo N   chronomètre de la fabrication
 npm run metrics [-- 012]                       ce que coûte un dossier et ce qu'il rapporte
-npm run front                                  bureau de publication + cabine d'écoute (même Wi-Fi ; `publier.cmd` le garde ouvert)
+npm run front                                  le bureau : Publier · Calendrier · Chiffres (comptes en direct) · Films, + cabine d'écoute (même Wi-Fi ; `publier.cmd` le garde ouvert)
 ```
 
 **Ordre de travail** : faits → script (`scenariste`) → contre-vérification (les seules phrases du script) → **un seul message à Merwan : l'accroche et le budget voix, oui ou non** → **voix** (elle fixe le minutage) → architecte (`plan.js` sans import, `world.js`, page, repères, `docs/<ep>-decors.md`, `docs/<ep>-actes.md`) → décors en parallèle → **habillage** (`docs/recette-decorateur.md`) → première image sur planche de quatre → quatre actes en parallèle → relecture sur planches `look` de 8 instants au plus (au-delà, chaque vignette est lue trop petite pour juger) → `check` → `render --draft` + `qa --file` (les images parasites se corrigent sur le brouillon) → retouches (`retoucheur`) → `render` → `qa` → `cover` → `node scripts/posts.mjs`. Préparer des sujets = lui donner la liste à valider ; ni agents ni films sans voix avant son oui. **Plusieurs courts à la fois** : `docs/salle-d-ecriture.md` (faits × N, `scenariste` × N, contre-vérif × N, puis `npm run salle -- 031 032 …` : un seul message à Merwan pour tout le lot).
