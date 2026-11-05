@@ -121,6 +121,7 @@ Avant la voix, pour chaque phrase :
 
 - **Première ligne : le mot que les gens cherchent**, avec son synonyme courant (« ESP, le contrôle de trajectoire : », « Soyouz : »), puis l'accroche prolongée sans la répéter et sans la chute.
 - Elle finit par la question du commentaire. Cinq hashtags au plus, sans accents (`#fusee`), dont `#apprendresurtiktok` et `#commentcamarche`.
+- **La vidéo associée du Short** (`post.youtube.related` : "L04", et `post.youtube.relatedWhy` : une phrase) : seulement si un long prolonge vraiment le sujet — la raison se vérifie dans le script du long, et dit ce que le spectateur y trouvera de plus. Sinon, rien : jamais un lien « pour rien » (Merwan, 05/11). Le bureau l'affiche sur la carte YouTube ; les courts déjà faits sont dans `front/bureau.js` → `RELATED`.
 - **L'épinglé** (150 caractères au plus) : **un fait vrai du dossier que le film ne dit pas** (dans `sources`), puis la question à deux camps, tutoyée. C'est la récompense de celui qui ouvre les commentaires, et ce qui lance le débat. Jamais « Réponds juste : … » (Merwan, 05/11 : sec, « il faut changer »), jamais la réponse du film, jamais un fait que la voix a déjà dit. 038 : « Son commandant a été relevé après l'enquête. Le sous-marin, lui, navigue depuis avec la proue d'un autre. Toi : la carte, ou ceux qui la lisent ? »
 
 ## Ce que vérifie `npm run script`

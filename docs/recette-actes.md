@@ -29,6 +29,27 @@ Ce que reçoit tout agent qui monte un acte (`acte1.js`, `acte2.js`, `acte3.js`,
 - Acte 3 : en coupes. La voix y est hachée, par souffles courts : un plan par souffle, lisible en une demi-seconde ; deux pièces nommées à moins d'une seconde d'écart tiennent dans UN cadre. Le relâchement tombe sur la phrase où le système a gagné : `mood` passe à 0 là, pas avant.
 - Fin : chute → ce qui est dû et le commentaire → like → prochain dossier → boucle. Plus rien du sujet ne revient après l'annonce ; « Abonne-toi : prochain dossier… » est la seule demande d'abonnement du film, le panneau la montre. Rien d'un plan ne déborde sur le suivant : un titre a fini de sortir avant la coupe. **La dernière image est la première** : tire les deux côte à côte ; `D.commit` prévient dans la console si un nombre n'est pas revenu — `look` ne l'affiche pas, relis `D.first`.
 - Mouvements longs en `sine.inOut` ; une plongée ou un long recul par rapport (`shot(at, durée, pose, ease, fromD)`) ; un quart de tour en une seconde est une coupe ; ce que la caméra frôle est invisible, pas seulement éteint.
+
+## Le plan-séquence — PILOTE sur le 038, pas encore la règle (05/11)
+
+**Merwan, 05/11 : « on fait un pilote et on compare les deux, puis on voit si on fait pour tous les prochains ; on prend le 38. »** Le 038 seul est monté ainsi ; les autres dossiers gardent la recette ci-dessus tant que les chiffres du 038 (rétention, % qui finissent, comparés au 036 et au 037) n'ont pas tranché. Ce qui suit est la méthode du pilote, à appliquer à tous si elle gagne.
+
+Merwan, 05/11 : « que les événements s'enchaînent, la caméra glisse comme un plan-séquence… que le mec ne puisse pas lâcher le regard ». Son intuition : c'est ce qui bloque sur TikTok.
+
+Mesuré sur le 015, le 037 et le 038 : l'image est quasi immobile (< 4 °/s) **36 % du film**, jusqu'à 20 s de plages figées (toute la fin du 038). Deux causes, toutes deux dans l'écriture de la caméra :
+
+1. **Des `shot` en `sine.inOut` mis bout à bout** : chacun freine jusqu'à l'arrêt sur sa pose avant que le suivant ne reparte. À l'œil : une suite de plans fixes.
+2. **« Coupe + poussée de 10 % »** (`cut` puis `shot` vers la même pose, `d` × 0,9) : à 270 px, un plan fixe. Beaucoup sont nés de retouches qui changeaient un mouvement rapide en coupe parce que `qa` le classait « heurté ».
+
+La règle :
+
+- **`D.path([[instant, pose], …], { from, to })`** (`kit/lib/direct.js`) : un seul mouvement qui passe par chaque pose à son instant **sans s'y arrêter** — il la traverse en vitesse et repart vers la suivante. Une clé par idée de la phrase, de 1 à 3 s d'écart ; la première pose complète, les suivantes ne disent que ce qui change. Par défaut il part et arrive lancé (`"go"`) : après une coupe le mouvement court déjà, et il entre lancé dans la coupe suivante. `"rest"` seulement pour se poser (rare). Rien d'autre ne pilote la caméra pendant un `path` (`punch`, `jolt` et `drift` s'y ajoutent).
+- **Chaque clé change d'angle, pas seulement de distance** : 6 à 15° d'`az` ou d'`el` de l'une à l'autre. Tourner autour du sujet donne de la profondeur (la parallaxe) ; s'approcher droit devant, à l'écran, c'est une image qui grossit.
+- **Une coupe n'est pas un arrêt.** Les plans de part et d'autre bougent ; quand deux lieux se répondent (« Devant… / Derrière… »), les deux mouvements vont **dans le même sens à l'écran et à la même allure** : l'œil lit un seul travelling (038, 54,3 s). Quand c'est possible, pas de coupe du tout : la caméra va d'un sujet au suivant en le suivant (038 : de la commande à toute la coque puis jusqu'à la proue déchirée, 46 → 54 s, d'un seul tenant ; la chute glisse le long de la coque de la fuite jusqu'aux ballasts arrière).
+- **Le moment fort se voit en entier, sans coupe dessus.** Couper pile sur le contact (un choc, une explosion, un déclenchement) cache l'instant que tout le film annonce : l'œil voit la coupe, pas le choc (Merwan, 06/11, sur le 038 : « on voit le cut… c'est sur ce genre de détail qu'on fait la diff »). La caméra qui approchait continue d'approcher, le contact arrive dans le cadre, la caméra encaisse (`jolt`, 0,9) et le geste qui suit (la proue qui se plie) se fait dans le même plan.
+- **Les plans calmes bougent aussi** : la fin (commentaire, like, prochain dossier) est une orbite lente et continue autour du sujet, pas trois reculs (038 : de 72 à 91 s, une orbite de 90° autour du mont sous-marin).
+- **« Heurté » dans `qa` n'est pas un verdict** : la mesure monte avec tout mouvement rapide sur un fond détaillé. Un trajet voulu n'est pas à changer en coupe pour la faire baisser ; seul compte ce que montre l'image (un saut, un flou qui déchire, un reflet qui éblouit). Le 038 réécrit : même pire valeur qu'avant (17,7 contre 17,3).
+- **Un trajet change les angles et l'instant où on les voit** : refaire la planche `look` autour de chaque clé — le reflet d'une pièce brillante peut tomber pile sur l'objectif (038, 46,6 s : le capot de la commande ; corrigé en faisant partir le trajet lancé).
 - Un chiffre que la voix ne dit pas n'entre ni dans l'en-tête ni dans une étiquette, sauf s'il est sourcé et que le plan le nomme. Les étiquettes sont en capitales : aucune unité à symbole.
 - Toi, de près, es un mannequin de verre : jamais en très gros plan, jamais la main seule. Personne n'est blessé à l'image.
 

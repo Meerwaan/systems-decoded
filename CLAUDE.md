@@ -61,6 +61,7 @@ Relance la tension toutes les 8–12 s (un fait, une question, un changement de 
 
 - **Chaque phrase a sa démonstration** : ce qu'elle dit se passe à l'écran pendant qu'elle le dit. Une image qui illustre « à peu près » est à refaire.
 - **Les plans s'enchaînent** : un plan naît du précédent — on suit la pièce qui bouge, on recule depuis le détail, on raccorde sur une même forme. Pas de plans déconnectés.
+- **Pilote en cours : la caméra en plan-séquence** (05/11, sur le 038 seul) : elle glisse d'un sujet au suivant sans freiner sur chaque pose (`D.path`) ; image quasi fixe 3 % au lieu de 36 % (`npm run camera`). Les autres dossiers ne changent pas avant que Merwan ait comparé les chiffres du 038 à ceux du 036 et du 037. `docs/recette-actes.md` → « Le plan-séquence ».
 - **On distingue tout, tout de suite** : un sujet par plan, grand, clair sur fond sombre. Si une capture réduite à 270 px de large ne se lit pas, le plan est raté.
 - **Moins d'habillage, plus de mécanisme** : un panneau n'entre que s'il apporte un chiffre que l'image ne peut pas montrer.
 
@@ -121,6 +122,7 @@ npm run snap    -- 003 --at 1,8,20             images en pleine résolution
 npm run check   -- 003                         lint + audits HyperFrames, doit passer
 npm run preview -- 003                         lecture en direct dans le studio
 npm run render  -- 003 [--draft]               MP4 dans renders/, audio à -14 LUFS
+npm run camera  -- 003                         la caméra sans rendu : part du film où l'image est quasi fixe, plages fixes, coupes (pilote 038)
 npm run qa      -- 003 [--file renders/003-ascenseur-draft.mp4]   le MP4 rendu (ou le brouillon) : voix calée, niveau, aucune image parasite, fluidité, rythme
 npm run cover   -- 003                         couverture de grille (long : --alt 2, --alt 3 ; essais : --thumbs essais.json --out … --gpu)
 npm run srt     -- L01                         sous-titres et chapitres horodatés d'un long
