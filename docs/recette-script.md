@@ -71,7 +71,7 @@ Merwan, sur le 035 (passage à niveau) : « la vidéo est très bien, mais on pa
 
 - **Fermée, à deux camps, une réponse d'un mot** : une lecture à faire chez soi dont l'une des deux réponses fait peur (« tu lis 30 mA… ou rien ? », « d'avant… ou d'après ? »), ou un camp à choisir (« pour ou contre ? », « tu remontes… ou plus jamais ? »).
 - **Jamais** « tu le tentes ? », « tu y vas ? », « il a déjà… ? », « tu as déjà… ? », « tu le savais ? » ; jamais une question à laquelle le film répond.
-- Elle termine la légende ; l'épinglé (150 caractères au plus) donne les deux réponses à recopier (« Réponds juste : … ou … »).
+- Elle termine la légende, et l'épinglé la reprend (§ 9).
 
 ## 6. Le budget de mots
 
@@ -121,7 +121,7 @@ Avant la voix, pour chaque phrase :
 
 - **Première ligne : le mot que les gens cherchent**, avec son synonyme courant (« ESP, le contrôle de trajectoire : », « Soyouz : »), puis l'accroche prolongée sans la répéter et sans la chute.
 - Elle finit par la question du commentaire. Cinq hashtags au plus, sans accents (`#fusee`), dont `#apprendresurtiktok` et `#commentcamarche`.
-- L'épinglé : 150 caractères au plus, les deux réponses à recopier.
+- **L'épinglé** (150 caractères au plus) : **un fait vrai du dossier que le film ne dit pas** (dans `sources`), puis la question à deux camps, tutoyée. C'est la récompense de celui qui ouvre les commentaires, et ce qui lance le débat. Jamais « Réponds juste : … » (Merwan, 05/11 : sec, « il faut changer »), jamais la réponse du film, jamais un fait que la voix a déjà dit. 038 : « Son commandant a été relevé après l'enquête. Le sous-marin, lui, navigue depuis avec la proue d'un autre. Toi : la carte, ou ceux qui la lisent ? »
 
 ## Ce que vérifie `npm run script`
 
