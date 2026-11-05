@@ -16,21 +16,21 @@
     "seed": 21
   },
   "cover": {
-    "at": "eclate$",
+    "at": "alu",
     "title": [
       "Abri",
       "anti-feu"
     ],
     "cam": {
       "tx": 0,
-      "ty": 8,
+      "ty": 88,
       "tz": 0,
-      "d": 120,
+      "d": 820,
       "az": -40,
-      "el": 14,
-      "shift": -430,
+      "el": 30,
+      "fov": 30,
+      "shift": -380,
       "side": 0,
-      "fov": 28,
       "roll": 0
     }
   },
@@ -88,7 +88,8 @@
     "Vent estimé à 80-110 km/h par un survivant — Jukkala & Putnam [P] (la voix dit seulement « le vent rabat les flammes »)",
     "Pieds vers le feu (réponse de la question du commentaire, que le film ne dit pas ; l'image la montre) — MTDC via résumé de recherche [S]",
     "Scène : reconstitution de la Butte Fire ; le chrono, la direction du vent et l'ordre des gestes sont un scénario, l'image reconstitue (aucune image réelle utilisée)",
-    "Annonce 041 : sur la station spatiale, un débris arrive à dix kilomètres par seconde — fait du dossier 041 (consigne de la salle d'écriture, à sourcer dans docs/faits/041-*)"
+    "Annonce 041 : sur la station spatiale, un débris arrive à dix kilomètres par seconde — fait du dossier 041 (consigne de la salle d'écriture, à sourcer dans docs/faits/041-*)",
+    "Image : reconstitution en 3D (aucune image du jour). La crête, le canyon et les flammes sont une maquette à l’échelle de l’histoire, aucune grandeur affichée ; les couches de l’abri sont dessinées épaisses pour se lire (réel : une fraction de millimètre) ; les dix traits de rayonnement illustrent « plus de 9 sur 10 » (≈ 95 %, Scientific American). Les emplacements sont répartis le long de la crête, jamais un cercle de feu fermé ; la feuille rougeoie, elle ne fond pas. En-tête : le chrono de l’histoire (−0:20 sur « vingt secondes », 0:00 sur « zéro », ≈ 1 h 30 sous l’abri, wildfiretoday) et le nombre d’abris déployés, 0 → 73 (Jukkala & Putnam 1986) — le rythme de leur ouverture est reconstitué."
   ],
   "beats": [
     {
@@ -205,13 +206,45 @@
   ],
   "cues": {
     "choc": "accroche:dessus",
+    "toscene": "scene-0.12",
+    "vingt": "scene:vingt",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "alu": "eclate:aluminium",
+    "silice": "eclate:silice",
+    "lame": "eclate:lame",
+    "fibre": "eclate:fibre",
+    "seconde": "eclate:seconde",
+    "rayon": "principe:rayonnement",
+    "neuf": "principe:neuf",
+    "freine": "principe:freine",
+    "kilos": "repos:kilos",
+    "colle": "repos:colle",
+    "rattrape": "repos:mais",
+    "degres": "repos:degrés",
     "tozero": "zero-0.12",
+    "monte": "zero:monte",
+    "ventre": "zero:ventre",
+    "bords": "zero:bords",
+    "dessus2": "reponse:dessus",
     "trigger": "reponse:renvoie-0.05",
+    "pelle": "reponse:pelle",
+    "respires": "reponse:respires",
+    "heure": "reponse:heure",
+    "abris73": "reponse:abris",
+    "brule": "reponse:brûlé",
     "toverdict": "chute-0.12",
     "verdict": "chute:pas",
+    "renvoie2": "chute:renvoie",
+    "flamme": "chute:flamme",
+    "lache": "chute:lâche",
     "tocta": "comment-0.12",
+    "idaho": "comment:idaho",
+    "tete": "comment:tête",
+    "leve": "comment:lève",
+    "chaud": "comment:chaud",
+    "pieds": "comment:pieds",
+    "outete": "comment:tête#2",
     "toloop": "boucle-0.12",
     "rewind": "boucle:crête"
   },
@@ -252,6 +285,49 @@
       ]
     },
     {
+      "type": "ambience",
+      "preset": "wind",
+      "gain": -30,
+      "curve": [
+        [
+          0,
+          1
+        ],
+        [
+          "tobench",
+          0.15
+        ],
+        [
+          "rattrape",
+          0.5
+        ],
+        [
+          "tozero",
+          1
+        ],
+        [
+          "brule",
+          0.5
+        ],
+        [
+          "toverdict",
+          0.25
+        ],
+        [
+          "tocta",
+          0.5
+        ],
+        [
+          "abo",
+          0.2
+        ],
+        [
+          "toloop",
+          1
+        ]
+      ]
+    },
+    {
       "type": "hit",
       "at": 0.02,
       "gain": -13,
@@ -264,15 +340,31 @@
       "size": 1.2
     },
     {
-      "type": "swish",
-      "at": 0.14,
-      "dur": 0.3,
+      "type": "hit",
+      "at": "accroche:dessus$+0.04",
       "gain": -15
+    },
+    {
+      "type": "swish",
+      "at": 3.32,
+      "dur": 0.4,
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "toscene",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "click",
+      "at": "scene:toi$+0.04",
+      "gain": -17
     },
     {
       "type": "suck",
       "to": "ouvre-0.04",
-      "dur": 0.6,
+      "dur": 0.45,
       "gain": -17
     },
     {
@@ -283,9 +375,51 @@
     },
     {
       "type": "impact",
-      "at": "explode",
+      "at": "ouvre$+0.06",
       "gain": -16,
       "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.34",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.56",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.78",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "eclate$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "blip",
+      "at": "principe:marche$+0.04",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "principe$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "repos:kilos$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "hiss",
+      "gain": -22,
+      "from": "repos$+0.02",
+      "to": "repos$+0.32"
     },
     {
       "type": "impact",
@@ -294,17 +428,126 @@
       "size": 1.2
     },
     {
+      "type": "hit",
+      "at": "zero:zéro$+0.04",
+      "gain": -14
+    },
+    {
       "type": "impact",
-      "at": "trigger",
+      "at": "zero:crête$+0.02",
+      "gain": -16,
+      "size": 0.9
+    },
+    {
+      "type": "click",
+      "at": "zero:terre$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "zero$+0.06",
+      "gain": -13,
+      "size": 1.3
+    },
+    {
+      "type": "impact",
+      "at": 49.03,
       "gain": -10,
       "size": 1.4
     },
     {
       "type": "blip",
-      "at": "verdict",
+      "at": "reponse:rayonnement$+0.02",
+      "gain": -16,
+      "pitch": 1
+    },
+    {
+      "type": "click",
+      "at": "reponse:côté$+0.04",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "reponse:consument$+0.04",
+      "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "reponse:demie$+0.04",
+      "gain": -15
+    },
+    {
+      "type": "click",
+      "at": "reponse:abris$+0.06",
+      "gain": -17
+    },
+    {
+      "type": "blip",
+      "at": "reponse$+0.04",
+      "gain": -16,
+      "pitch": 0.8
+    },
+    {
+      "type": "hit",
+      "at": "chute:secret$+0.03",
+      "gain": -16
+    },
+    {
+      "type": "blip",
+      "at": "chute:rayonnée$+0.02",
       "gain": -15,
       "pitch": 0.7,
       "heavy": true
+    },
+    {
+      "type": "click",
+      "at": "chute:renvoie$+0.06",
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "chute$+0.04",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "swish",
+      "at": 70.56,
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "comment:chaud$+0.03",
+      "gain": -16
+    },
+    {
+      "type": "swish",
+      "at": 74.4,
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "comment:commentaire$+0.06",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "comment:feu$+0.06",
+      "gain": -17
+    },
+    {
+      "type": "blip",
+      "at": "comment$+0.06",
+      "gain": -17,
+      "pitch": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 80.22,
+      "dur": 0.36,
+      "gain": -17
     },
     {
       "type": "impact",
@@ -314,8 +557,8 @@
     },
     {
       "type": "rewind",
-      "at": "rewind",
-      "dur": 1,
+      "at": "boucle$",
+      "dur": 0.65,
       "gain": -21
     }
   ]
