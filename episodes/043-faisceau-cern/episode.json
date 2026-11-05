@@ -1,0 +1,320 @@
+{
+  "id": "043",
+  "serie": "dossier",
+  "slug": "faisceau-cern",
+  "title": "Le faisceau du CERN",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Le faisceau",
+      "du CERN"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "CERN",
+    "caption": "CERN, le grand collisionneur LHC : dans son anneau, un faisceau de protons file presque à la vitesse de la lumière. Un grain de poussière tombe dedans… et la machine n'a qu'une sortie de secours, vers un bloc de graphite de six tonnes. Couper pour un grain : trop prudent… ou juste assez ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#cern",
+      "#physique",
+      "#science"
+    ],
+    "pinned": "Après neuf ans de service, ses plaques de graphite étaient fissurées, l'une sur 50 cm. Toi : couper pour un grain, trop prudent… ou juste assez ?",
+    "instagram": {
+      "caption": "Ton faisceau porte l'énergie d'un train lancé. Un grain de poussière va le jeter dehors.\n\nDossier 043 : la sortie de secours du LHC, au CERN. 3 600 capteurs, 15 aimants qui s'allument dans un trou de trois microsecondes, 700 mètres de ligne, un bloc de graphite de six tonnes… et pourquoi un faisceau qui percerait n'importe quel matériau finit par y dessiner un « e ». Une reconstitution.\n\nCouper pour un grain : trop prudent… ou juste assez ?",
+      "hashtags": [
+        "#cern",
+        "#physique",
+        "#science",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ton faisceau porte l'énergie d'un train lancé… et un grain de poussière va le jeter dehors",
+      "description": "Dossier 043 — la sortie de secours du LHC ouverte : les 3 600 capteurs de pertes, les quinze aimants d'extraction qui s'allument dans un trou de trois microsecondes, les dix aimants de dilution, la ligne de 700 mètres et le bloc de graphite de six tonnes refroidi à l'air. Pourquoi un faisceau qui percerait n'importe quel matériau en un point est étalé en un « e » d'un mètre vingt. Et les « UFO » : ces grains de poussière qui tombent dans le faisceau et font jeter la machine. Une reconstitution.\n\nPhysiciens des accélérateurs : qu'est-ce qu'on a simplifié ? Et toi : couper pour un grain, trop prudent… ou juste assez ?",
+      "hashtags": [
+        "#shorts",
+        "#cern",
+        "#physique",
+        "#science",
+        "#lhc"
+      ]
+    }
+  },
+  "sources": [
+    "Scène : RECONSTITUTION d'un scénario typique sourcé, pas d'un jour daté — les « UFO » (unidentified falling objects), grains de poussière micrométriques qui tombent dans le faisceau et provoquent une perte d'environ dix tours détectée par les moniteurs de pertes ; si le seuil est franchi, la demande de dump part — T. Baer et al., « UFOs in the LHC », IPAC2012 THPPP086 [P]. Le chemin exact des protons déviés est simplifié ; l'image reconstitue.",
+    "Un faisceau du LHC porte l'énergie d'un train lancé (362 MJ de conception ≈ train de 200 m à 155 km/h) ; Run 3 : plus de 400 MJ — R. Schmidt, arXiv 1608.02433 [P] ; S. Redaelli et al., HB2023 THBP49 [P]",
+    "Le système de dump (LBDS) éjecte le faisceau hors de l'anneau vers un bloc ; seul composant capable d'encaisser la perte totale du faisceau — Schmidt, arXiv 1608.02433 [P] ; arXiv 1601.05207 [P]",
+    "Bloc d'absorption TDE ≈ 6 t (6,2 t), 8,52 m, noyau de graphite — J. Maestre et al., arXiv 2110.08783 [P] ; home.cern, « Autopsy of an LHC beam dump », 08/06/2022 [S]",
+    "5 % d'un paquet nominal suffit à endommager une bobine supraconductrice à 7 TeV — Schmidt, arXiv 1608.02433 [P]",
+    "Des milliers de paquets par faisceau (Run 3 : environ 2 500 ; conception : 2 808) — Redaelli et al., HB2023 THBP49 ; Schmidt, arXiv 1608.02433 [P]",
+    "≈ 3 600 moniteurs de pertes (BLM) — Schmidt, arXiv 1601.05207 ; IPAC2012 [P]",
+    "15 aimants d'extraction (kickers MKD) par faisceau ; septa MSD qui courbent le faisceau hors de l'anneau (« poussent hors de l'anneau » simplifie kickers + septa) — arXiv 1601.05207 ; IPAC2016 THPOR052 [P]",
+    "Ligne d'extraction de 700 m — arXiv 2110.08783 ; 1601.05207 [P]",
+    "Principe : même les absorbeurs les plus robustes ne supporteraient pas le faisceau plein sur un seul point ; dix aimants de dilution (4 H + 6 V) le font tourner pour peindre une trace en « e » de 1,2 m sur la face du bloc — arXiv 2110.08783 §3.4 [P] ; Uythoven et al., arXiv 1705.09502 [P]",
+    "Trou sans particules (abort gap) de 3 µs ; les kickers s'allument dans ce trou (montée < 3 µs) — IPAC2016 THPOR052 ; arXiv 1601.05207 [P]",
+    "Un dump non synchronisé balaierait le faisceau sur l'ouverture (protégé par les absorbeurs TCDS et TCDQ) — Uythoven et al., arXiv 1705.09502 ; Bracco et al., Evian 2019 [P]",
+    "Demande de dump quand la perte franchit le seuil ; synchronisation (TSU) qui attend le trou — arXiv 1601.05207 [P] ; IPAC2012 [P]",
+    "La trace dure ≈ 89 µs (un tour) : c'est la durée de l'extraction, pas le délai depuis la détection (non chiffré, non dit) — arXiv 2110.08783 ; IPAC2016 [P]",
+    "Pic de température dans le noyau ≈ 1 416 °C (simulation Run 3 ; « vers quatorze cents degrés ») — arXiv 2110.08783 [P, simulation]",
+    "37 dumps prématurés dus aux UFO entre juillet 2010 et début 2012 (« en moins de deux ans ») ; seuils relevés depuis mi-2011 (non dit) — IPAC2012 THPPP086 [P]",
+    "Épinglé : plaques de graphite extrudé fissurées après neuf ans de service (une d'environ 50 cm) — home.cern, 08/06/2022 [P] ; arXiv 2505.04235 [P, lecture partielle]",
+    "Légende : vitesse du faisceau ≈ vitesse de la lumière [O, connu]",
+    "Annonce du 044 : un policier croit avoir pris une pierre dans les côtes ; c'était une balle — Nîmes, juillet 2023 (fait validé par la consigne, dossier 044) ; policier jamais nommé"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ton faisceau porte l'énergie d'un *train lancé*. Un grain de poussière va le jeter +dehors+.",
+      "vo": "[tense] Ton faisceau porte l'énergie d'un train lancé. Un grain de poussière va le jeter dehors.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ton faisceau porte l'énergie d'un train lancé. Un grain de poussière va le jeter dehors."
+      ],
+      "voir": "Tunnel du LHC, vue basse au ras du tube, de trois quarts avant : l'anneau aux rayons X (tube de verre, aimants en traits fins) et dedans, plein et lumineux, le train de paquets de protons qui file vers nous sur 40 % de la largeur ; un grain de poussière, point rouge signal, tombe du haut du tube juste devant le train (il bouge dès l'image 1) ; tout au fond, petit mais lisible, l'embranchement du point 6 et le bloc sur son halo vert ; sur « train lancé », le train plein cadre ; sur « dehors », un trait vert bifurque vers l'embranchement."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Pour l'avaler : un +bloc+ de [6|six] tonnes. Et des grains comme lui… combien ont déjà *gagné* ?",
+      "vo": "[firm, matter-of-fact] Pour l'avaler : un bloc de six tonnes. [short pause] Et des grains comme lui... combien ont déjà gagné ?",
+      "voir": "La caméra file le long du trait vert, dans la ligne, jusqu'au bloc : un long cylindre sombre et plein, posé sur son halo, minuscule face au train de paquets qui arrive ; « 6 t » au HUD ; sur « gagné », retour au grain qui flotte, rouge, devant le train."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Le grain fait pleuvoir des particules sur les aimants. Un vingtième d'un paquet suffit à en *abîmer* un. Ton train en compte des milliers. Seule issue… la +sortie de secours+.",
+      "vo": "[tense] Le grain fait pleuvoir des particules sur les aimants. Un vingtième d'un paquet suffit à en abîmer un. Ton train en compte des milliers. Seule issue... la sortie de secours.",
+      "voir": "Même seconde : le train touche le grain ; une gerbe de protons rouges s'écarte et frappe la paroi d'un aimant supraconducteur, dont la bobine rougit ; un seul paquet se découpe en grand, un vingtième s'en détache et frappe la bobine ; la caméra recule : le train de quelque 2 500 paquets s'étire jusqu'à l'horizon de l'anneau ; on finit sur l'embranchement du point 6, la sortie de secours, seule éclairée en vert."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "La caméra s'engouffre dans l'embranchement ; sur « on », le système de sortie s'éclate en pièces le long de sa ligne."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "[3 600|Trois mille six cents] capteurs guettent la moindre perte. [15|Quinze] aimants le poussent hors de l'anneau. [700|Sept cents] mètres de ligne. Et au bout… +le bloc+.",
+      "vo": "[conversational, curious] Trois mille six cents capteurs guettent la moindre perte. Quinze aimants le poussent hors de l'anneau. Sept cents mètres de ligne. Et au bout... le bloc.",
+      "voAlt": [
+        "[curious] Trois mille six cents capteurs guettent la moindre perte. Quinze aimants le poussent hors de l'anneau. Sept cents mètres de ligne. Et au bout... le bloc."
+      ],
+      "voir": "Éclaté qui suit le chemin du faisceau : l'anneau de trois quarts, ponctué de milliers de petits capteurs qui s'allument en vert tout autour ; on file vers le point 6 : quinze aimants pleins alignés le long du tube ; le trait du faisceau bifurque et descend la ligne, qui file loin ; on finit sur le bloc seul, en grand, de trois quarts sur son halo, coque d'acier aux rayons X et noyau de graphite plein."
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi il tient ? Sur un seul point, même le matériau le plus robuste lâcherait. Alors [10|dix] aimants le font tourner : il dessine un « e » : un trait d'un +mètre vingt+. Même énergie… étalée.",
+      "vo": "[curious] Pourquoi il tient ? [short pause] Sur un seul point, même le matériau le plus robuste lâcherait. Alors dix aimants le font tourner : il dessine un « e » : un trait d'un mètre vingt. Même énergie... étalée.",
+      "voir": "La face d'entrée du bloc en grand : un fantôme rouge, le faisceau concentré sur un point, perce une plaque de part en part ; puis dix aimants s'allument en amont et le trait vert se met à tourner : sa trace dessine un « e » sur la face, cote « 1,2 m » ; la chaleur, blanche sur le point, s'étale en orange pâle tout le long de la trace."
+    },
+    {
+      "id": "repos",
+      "text": "Dans le train, un trou : [3|trois] microsecondes sans aucun proton. Les aimants ne s'allument que là. Ailleurs… ils balaieraient ce train contre les *parois*.",
+      "vo": "[warm, conversational] Dans le train, un trou : trois microsecondes sans aucun proton. Les aimants ne s'allument que là. Ailleurs... ils balaieraient ce train contre les parois.",
+      "voAlt": [
+        "[curious] Dans le train, un trou : trois microsecondes sans aucun proton. Les aimants ne s'allument que là. Ailleurs... ils balaieraient ce train contre les parois."
+      ],
+      "voir": "Le train de paquets tourne, calme, devant les quinze aimants éteints ; la caméra trouve le trou : un vide noir entre deux paquets, « 3 µs » au HUD ; les aimants attendent en vert veille ; sur « parois », fantôme rouge : allumés en plein train, ils balaient les paquets contre la paroi du tube."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Retour au grain. La perte franchit le *seuil*. L'alerte part. Le système attend… le +trou+.",
+      "vo": "[firm, matter-of-fact] Retour au grain. La perte franchit le seuil. L'alerte part. Le système attend... le trou.",
+      "voir": "Retour au tunnel, même instant que la scène, le chrono reprend : la gerbe rouge autour du grain ; sur un capteur, une barre de perte monte et crève le trait de seuil, qui passe au rouge ; une impulsion verte file le long de l'anneau vers le point 6 ; le trou du train approche des aimants."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Le trou passe. [15|Quinze] aimants s'allument. Le train quitte l'anneau. Il peint son « e » sur le bloc. [89|Quatre-vingt-neuf] microsecondes : tout est *dedans*. Le graphite peut monter jusqu'à [1 400|quatorze cents] degrés. Il +tient+.",
+      "vo": "[tense] Le trou passe. Quinze aimants s'allument. Le train quitte l'anneau. Il peint son « e » sur le bloc. Quatre-vingt-neuf microsecondes : tout est dedans. Le graphite peut monter jusqu'à quatorze cents degrés. Il tient.",
+      "voir": "Le mécanisme en grand, d'un seul mouvement : le trou passe devant les aimants, les quinze s'allument en vert ; le train entier bifurque hors de l'anneau, plonge dans la ligne en s'élargissant, et peint son « e » sur la face du bloc ; le graphite passe du rouge au blanc ; l'anneau derrière est vide ; « 89 µs » puis « 1 400 °C » au HUD ; le bloc tient, intact sur son halo."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà le secret : ce train, on ne l'encaisse *pas* sur un point. On le jette dehors… et on l'+étale+.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : ce train, on ne l'encaisse pas sur un point. On le jette dehors... et on l'étale.",
+      "voir": "Le bloc refroidit, la trace en « e » encore orange sur sa face ; la caméra remonte la ligne vers l'anneau vide ; le nom du compte s'allume ; sur « étale », la trace en « e » seule, en grand."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et ces grains, combien ont gagné ? [37|Trente-sept] fois, en moins de deux ans. En +commentaire+ : couper pour un grain… trop prudent, ou juste *assez* ?",
+      "vo": "[conversational, curious] Et ces grains, combien ont gagné ? [short pause] Trente-sept fois, en moins de deux ans. [short pause] En commentaire : couper pour un grain... trop prudent, ou juste assez ?",
+      "voAlt": [
+        "[curious] Et ces grains, combien ont gagné ? [short pause] Trente-sept fois, en moins de deux ans. [short pause] En commentaire : couper pour un grain... trop prudent, ou juste assez ?"
+      ],
+      "voir": "Retour au grain qui flotte dans le tube vide ; à côté, des grains rouges s'alignent un par un comme un compteur jusqu'à « 37 », chacun avec son anneau qui se vide ; chevrons vers les commentaires."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour celui qui croit qu'un grain de poussière, c'est *rien*.",
+      "vo": "[warm, conversational] Like : [short pause] pour celui qui croit qu'un grain de poussière, c'est rien.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour celui qui croit qu'un grain de poussière, c'est rien."
+      ],
+      "voir": "Le grain de poussière, minuscule, posé devant le train de paquets immobile qui remplit tout le cadre ; chevrons vers le bouton like."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, un policier croit avoir pris une pierre dans les côtes. C'était une *balle*.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, un policier croit avoir pris une pierre dans les côtes. C'était une balle.",
+      "voir": "Panneau « Prochain dossier » : dans le noir, un gilet sous scellés, une pierre qui se change en balle aplatie ; chevrons « S'abonner pour l'ouvrir »."
+    },
+    {
+      "id": "boucle",
+      "text": "Une balle, ça va vite. Mais…",
+      "vo": "[calm] Une balle, ça va vite. Mais,",
+      "voir": "Retour au tunnel, vue basse au ras du tube : le train de paquets file vers nous, le grain de poussière tombe devant lui ; la dernière image rejoint la première."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:train",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:s'allument-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:mais"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

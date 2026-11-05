@@ -1,0 +1,319 @@
+{
+  "id": "042",
+  "serie": "dossier",
+  "slug": "toit-du-char",
+  "title": "Le toit du char",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Le toit",
+      "du char"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Char d'assaut",
+    "caption": "Char d'assaut, le compartiment à obus : tes obus brûlent à l'arrière de la tourelle, et le toit de ton char est fait pour céder le premier. Entre ce feu de poudre et toi, il n'y a que deux portes blindées qui coulissent. À cette porte : un homme… ou une machine ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#char",
+      "#ingenierie",
+      "#physique"
+    ],
+    "pinned": "Un brevet allemand déposé en 1976 décrivait déjà une soute derrière l'équipage, aux parois qui cèdent. Toi : à cette porte, un homme ou une machine ?",
+    "instagram": {
+      "caption": "Tes obus brûlent. Le toit de ton char saute. Exprès.\n\nDossier 042 : le compartiment à obus à l'arrière de la tourelle. Un panneau de toit fait pour lâcher le premier, deux portes blindées coulissantes, et une came en forme d'œuf qui les verrouille. Pourquoi un feu de poudre sort toujours là où ça résiste le moins.\n\nÀ cette porte : un homme… ou une machine ?",
+      "hashtags": [
+        "#char",
+        "#ingenierie",
+        "#physique",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Tes obus brûlent… et le toit de ton char saute exprès",
+      "description": "Dossier 042 — le compartiment à obus d'un char, ouvert : le caisson à l'arrière de la tourelle, le panneau de toit qui doit lâcher le premier, les deux portes blindées coulissantes et la came qui les verrouille quand le toit s'envole (brevet de 1993). Pourquoi un feu de poudre sort là où ça résiste le moins. Scénario type, reconstitué en 3D.\n\nTankistes : qu'est-ce qu'on a simplifié ? Et toi : à cette porte, un homme… ou une machine ?",
+      "hashtags": [
+        "#shorts",
+        "#char",
+        "#ingenierie",
+        "#physique",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Scène : scénario type reconstitué, aucun cas daté, aucun pays, aucun équipage réel ; le déroulé vient de l'ordre des événements déduit du brevet US 5,201,556 [P]. Aucun cas public ne prouve que ces panneaux ont sauvé un équipage : le film ne le dit pas.",
+    "Les obus rangés dans un compartiment à l'arrière de la tourelle, derrière l'équipage, avec un panneau de toit qui évacue vers le haut — brevet US 5,201,556 (« ammunition compartments in the turret bustle, with a blow-off panel on top to vent explosions upward ») [P] ; ARL, 12/07/2012 [P]",
+    "Équipage de quatre (commandant, tireur, chargeur, pilote) : « toi et trois autres » — Wikipédia M1 Abrams [S]",
+    "Feu de poudre : les panneaux évacuent la poudre qui brûle, ils n'arrêtent pas la détonation d'un explosif brisant — Wikipédia « Jack-in-the-box effect » [S]. Le film dit « la poudre flambe », jamais une détonation.",
+    "Le panneau de toit forme le dessus du compartiment et doit se rompre le premier — US 5,201,556 [P]",
+    "Deux portes blindées coulissantes (« two sliding blast doors ») entre le compartiment et la tourelle — US 5,201,556 [P]",
+    "Joints autour des portes qui retiennent flammes et gaz — US 5,201,556 [P]",
+    "La poussée bombe les portes vers l'équipage, puis elles rebondissent et le joint s'ouvre — US 5,201,556 (« bows the doors in toward the crew compartment ») [P]",
+    "Quand le panneau part, une tringle remonte et fait tourner une came ovoïde (« en forme d'œuf ») qui plaque les portes contre leur cadre — US 5,201,556, Armée américaine, inventeur Donald H. Kendall, accordé le 13/04/1993 [P]. « C'est le feu qui verrouille ta porte » : la pression chasse le panneau, le panneau tire la tringle [P, déduit].",
+    "Une explosion pousse là où la résistance est la plus faible ; le toit fait le point faible, les portes le point fort — Wikipédia « Jack-in-the-box effect » + brevets US 4,864,913 et US 5,201,556 [S]",
+    "Les six faces du caisson : géométrie d'un caisson fermé (l'image le montre), la pression d'un feu de poudre pousse sur toutes ses parois et s'échappe par la plus faible — principe des brevets [P] / Jack-in-the-box [S]",
+    "Les parois cèdent « en quelques millisecondes » d'une montée de pression — brevet US 4,864,913 (Grünewald et Sprafke) [P] ; aucun délai chiffré pour ce char : ordre de grandeur [O]",
+    "Les portes ne s'ouvrent que le temps que le chargeur saisisse un obus — dossier de faits (« Ce que la voix peut dire », n° 3) ; source citée SteelBeasts non lue [S, à confirmer à la contre-vérification]",
+    "D'autres chars confient ce geste à une machine : le Leclerc a un chargeur automatique dans l'arrière de la tourelle et un équipage de trois, sans chargeur — defense.gouv.fr [P] ; Wikipédia « Leclerc tank » [S]. Le film ne nomme aucun char.",
+    "Le feu monte en colonne au-dessus de l'équipage : gaz et flammes sortent par le haut — US 5,201,556 [P] ; la colonne elle-même, sa hauteur et sa forme : l'image reconstitue.",
+    "L'image reconstitue : la silhouette du char, la disposition intérieure (caisson, panneau, portes, tringle, came : schématiques, d'après les figures du brevet), les silhouettes d'équipage (jamais blessées, jamais un corps en gros plan), aucun pays ni insigne.",
+    "Annonce du 043 : le faisceau du CERN porte ≈ 362 MJ, l'énergie d'un train de 200 m lancé à 155 km/h, et un bloc d'arrêt l'avale — dossier 043.",
+    "Épinglé TikTok : brevet allemand US 4,864,913, déposé le 19/11/1976 (priorité 22/11/1975), accordé le 12/09/1989 : soute derrière l'équipage, porte coulissante, parois qui se rompent [P]"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Tes obus *brûlent*. Le toit de ton char saute. +Exprès+.",
+      "vo": "[tense] Tes obus brûlent. Le toit de ton char saute. Exprès.",
+      "voAlt": [
+        "[firm, matter-of-fact] Tes obus brûlent. Le toit de ton char saute. Exprès."
+      ],
+      "voir": "Nuit, vue basse au ras du sol, de trois quarts arrière par le flanc : la tourelle du char aux rayons X (coque de verre, traits fins) remplit 40 % de la largeur ; à l'arrière, le caisson à obus plein, déjà rougeoyant d'orange signal ; dès l'image 1 le panneau de toit se soulève sous une poussée de flammes ; sur « saute », il s'arrache et file vers le haut, une colonne de feu verticale derrière lui ; sur « Exprès », dans la tourelle, quatre petites silhouettes vertes, intactes, de l'autre côté d'une porte fermée."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Son point faible, on l'a mis là, pour +toi+. Sauf si la porte dans ton dos… est *ouverte*.",
+      "vo": "[firm, matter-of-fact] Son point faible, on l'a mis là, pour toi. [short pause] Sauf si la porte dans ton dos... est ouverte.",
+      "voir": "La caméra descend de la colonne de feu au toit du caisson, cerclé de vert : le seul endroit du char qui cède ; puis elle glisse vers l'avant jusqu'à la porte blindée entre le caisson et la silhouette du chargeur ; sur « ouverte », la porte coulisse de quelques centimètres, une fente orange s'y allume."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "À l'arrière de la tourelle, la poudre flambe. Toi et trois autres, devant. La pression monte. Le feu va choisir son chemin : le +toit+… ou *toi*.",
+      "vo": "[tense] À l'arrière de la tourelle, la poudre flambe. Toi et trois autres, devant. La pression monte. Le feu va choisir son chemin : le toit... ou toi.",
+      "voir": "Même seconde, chrono en millisecondes : coupe de la tourelle aux rayons X, la poudre d'un obus s'embrase dans le caisson ; on recule et les quatre silhouettes vertes (commandant, tireur, chargeur, pilote) apparaissent juste devant la cloison ; des flèches orange de pression gonflent dans tout le caisson ; sur « le toit », une flèche monte vers le panneau ; sur « toi », une autre pointe la porte et le chargeur derrière elle ; on finit serré sur le caisson, ce qu'on va ouvrir."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "Le temps se fige, les flammes suspendues ; la caméra tourne de trois quarts autour du caisson ; sur « on », il s'éclate en pièces sur son halo."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Derrière toi, un caisson d'obus. Au-dessus, un panneau fait pour lâcher. Vers toi, deux portes blindées *coulissantes*. Et reliée au panneau… une came en forme d'+œuf+.",
+      "vo": "[conversational, curious] Derrière toi, un caisson d'obus. Au-dessus, un panneau fait pour lâcher. Vers toi, deux portes blindées coulissantes. Et reliée au panneau... une came en forme d'œuf.",
+      "voAlt": [
+        "[curious] Derrière toi, un caisson d'obus. Au-dessus, un panneau fait pour lâcher. Vers toi, deux portes blindées coulissantes. Et reliée au panneau... une came en forme d'œuf."
+      ],
+      "voir": "Éclaté de trois quarts qui suit un chemin : le caisson et ses obus alignés ; on monte au panneau de toit, posé sans attache lourde ; on redescend le long de la cloison vers les deux portes blindées, qui coulissent d'un cran dans leurs glissières ; on suit la tringle qui part du panneau jusqu'à la came ovoïde, seule, en grand, sur son halo."
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi le toit ? Un feu de poudre pousse sur les [6|six] faces du caisson… et sort par celle qui résiste le *moins*. Le toit cède le +premier+.",
+      "vo": "[curious] Pourquoi le toit ? [short pause] Un feu de poudre pousse sur les six faces du caisson... et sort par celle qui résiste le moins. Le toit cède le premier.",
+      "voir": "Le caisson seul, en coupe : des flèches de pression poussent égales sur les six faces ; les parois épaisses et les portes restent noires et immobiles, le panneau de toit, mince, se bombe et s'ouvre en premier ; toutes les flèches basculent vers le haut et filent par l'ouverture ; au HUD, un chrono qui ne compte que quelques millisecondes."
+    },
+    {
+      "id": "repos",
+      "text": "Au repos, portes fermées. Leurs joints retiennent flammes et gaz. Mais sans verrou, la poussée bombe les portes vers toi. Puis elles rebondissent… et le joint *s'ouvre*.",
+      "vo": "[warm, conversational] Au repos, portes fermées. Leurs joints retiennent flammes et gaz. Mais sans verrou, la poussée bombe les portes vers toi. Puis elles rebondissent... et le joint s'ouvre.",
+      "voAlt": [
+        "[curious] Au repos, portes fermées. Leurs joints retiennent flammes et gaz. Mais sans verrou, la poussée bombe les portes vers toi. Puis elles rebondissent... et le joint s'ouvre."
+      ],
+      "voir": "Le char au calme, la tourelle aux rayons X : le caisson plein, les deux portes fermées, leur joint vert tout autour ; plan serré sur une porte : une poussée la bombe vers la silhouette du chargeur, elle revient comme un ressort ; sur « s'ouvre », une fente orange s'allume dans le joint, côté équipage."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "La poudre flambe. La pression cogne sous le toit. Et le panneau… *lâche*.",
+      "vo": "[firm, matter-of-fact] La poudre flambe. La pression cogne sous le toit. Et le panneau... lâche.",
+      "voir": "Retour au chrono de la scène, même instant : la poudre s'embrase dans le caisson, les flèches orange frappent le dessous du panneau ; sur « lâche », il s'arrache de son cadre."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Il s'envole. En partant, il tire une tringle. La came tourne. Elle plaque les portes contre leur cadre. +Verrouillées+. Le feu monte en colonne… au-dessus de vous.",
+      "vo": "[tense] Il s'envole. En partant, il tire une tringle. La came tourne. Elle plaque les portes contre leur cadre. Verrouillées. Le feu monte en colonne... au-dessus de vous.",
+      "voir": "Le mécanisme en grand, de trois quarts : le panneau file vers le ciel et tire la tringle qui remonte ; la came ovoïde pivote d'un quart de tour ; elle plaque les deux portes contre leur cadre au moment où la poussée arrive, le joint reste vert ; plan large du char entier par le flanc, vue basse : une colonne de feu jaillit droit du toit, et sous elle, dans la tourelle, les quatre silhouettes vertes, immobiles, à l'abri."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Ton char ne te sauve *pas* en résistant. Il cède au bon endroit… et c'est le feu qui verrouille ta +porte+.",
+      "vo": "[firm, matter-of-fact] Ton char ne te sauve pas en résistant. Il cède au bon endroit... et c'est le feu qui verrouille ta porte.",
+      "voir": "La colonne de feu retombe ; la caméra suit le trajet à rebours, du ciel au trou du toit, de la tringle à la came, jusqu'à la porte verrouillée ; le nom du compte s'allume ; sur « porte », la porte seule, en grand, plaquée contre son cadre."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et si ta porte est ouverte ? Elle ne s'ouvre que le temps de saisir un obus. D'autres chars confient ce geste à une machine. En +commentaire+ : un homme… ou une *machine* ?",
+      "vo": "[conversational, curious] Et si ta porte est ouverte ? [short pause] Elle ne s'ouvre que le temps de saisir un obus. D'autres chars confient ce geste à une machine. [short pause] En commentaire : un homme... ou une machine ?",
+      "voAlt": [
+        "[curious] Et si ta porte est ouverte ? [short pause] Elle ne s'ouvre que le temps de saisir un obus. D'autres chars confient ce geste à une machine. [short pause] En commentaire : un homme... ou une machine ?"
+      ],
+      "voir": "La porte coulisse ; la silhouette verte du chargeur tend le bras, saisit un obus, la porte se referme aussitôt (un compteur bref au HUD) ; à côté, une autre nuque de tourelle, sans chargeur : un bras mécanique pivote et présente un obus ; deux panneaux côte à côte, « un homme » et « une machine », chevrons vers les commentaires."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour celui qui croit que solide veut dire *sûr*.",
+      "vo": "[warm, conversational] Like : [short pause] pour celui qui croit que solide veut dire sûr.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour celui qui croit que solide veut dire sûr."
+      ],
+      "voir": "Un bloc d'acier épais, fermé de partout, se gonfle et se fend de tous côtés, à côté du caisson dont seul le toit s'ouvre proprement ; chevrons vers le bouton like."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, un faisceau qui porte l'énergie d'un train lancé… et un bloc pour l'*avaler*.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, un faisceau qui porte l'énergie d'un train lancé... et un bloc pour l'avaler.",
+      "voir": "Panneau « Prochain dossier » : un trait de lumière fin file dans un tunnel, la silhouette d'un train lancé se superpose au trait, puis un bloc massif l'attend au bout ; chevrons « S'abonner pour l'ouvrir »."
+    },
+    {
+      "id": "boucle",
+      "text": "Comme ce toit, quand…",
+      "vo": "[calm] Comme ce toit, quand,",
+      "voir": "Retour à la nuit, vue basse de trois quarts arrière par le flanc : la tourelle aux rayons X, le caisson qui rougeoie, le panneau qui commence à se soulever ; la dernière image rejoint la première."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:brûlent",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:plaque-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:toit"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "id": "045",
+  "serie": "dossier",
+  "slug": "autodestruction-fusee",
+  "title": "L'autodestruction de la fusée",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Fusée",
+      "autodétruite"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Autodestruction de fusée",
+    "caption": "Autodestruction de fusée, la sauvegarde d'Ariane 5 à Kourou : à trente-six secondes, son guidage s'arrête. Elle bascule, ses boosters s'arrachent, à quatre kilomètres au-dessus du sol. Toute fusée emporte une charge pour se détruire. Ce jour-là, quelque chose l'a déclenchée. Une fusée qui dévie : un humain décide… ou la machine ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#fusee",
+      "#ariane5",
+      "#espace"
+    ],
+    "pinned": "Sa panne ? Un nombre trop grand pour sa case, dans un code d'Ariane 4 qui ne servait plus en vol. Toi : un humain, ou la machine ?",
+    "instagram": {
+      "caption": "Ta fusée bascule et se déchire. Puis elle se détruit toute seule… comme prévu.\n\nDossier 045 : le système de destruction des fusées, et la sauvegarde du CNES à Kourou. Une antenne, un verrou de sécurité, un détonateur, un cordeau… et une charge pliée en V qui tranche deux centimètres d'acier. Le 4 juin 1996, Ariane 5 l'a déclenchée à son premier vol.\n\nUne fusée qui dévie : un humain décide… ou la machine ?",
+      "hashtags": [
+        "#fusee",
+        "#ariane5",
+        "#espace",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ta fusée se déchire… puis se détruit toute seule, comme prévu : l'autodestruction d'Ariane 5",
+      "description": "Dossier 045 — le système de destruction d'une fusée ouvert : l'antenne et son récepteur, le verrou de sécurité-armement, le détonateur, le cordeau détonant et la charge linéaire, pliée en V et doublée de cuivre, dont le jet de métal tranche jusqu'à 22 mm d'acier. Et le 4 juin 1996, à Kourou : le vol 501 d'Ariane 5, son guidage qui s'arrête 36,7 secondes après l'allumage, ses boosters qui s'arrachent… et la destruction qui se déclenche automatiquement, comme prévu, sous l'œil de la sauvegarde du CNES. Une reconstitution : la chaîne pyrotechnique montrée est celle, générique, des systèmes décrits par la NASA et Pyroalliance.\n\nIngénieurs, passionnés d'espace : qu'est-ce qu'on a simplifié ? Et toi : une fusée qui dévie, un humain décide… ou la machine ?",
+      "hashtags": [
+        "#shorts",
+        "#fusee",
+        "#ariane5",
+        "#espace",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Ariane 5, vol 501, 4 juin 1996, Kourou ; le chrono part de H0, l'allumage (09 h 33 min 59 s locale), pas du décollage — rapport de la commission d'enquête (Lions) §1.1 [P]",
+    "Le guidage (centrale inertielle SRI) s'arrête à H0+36,7 s ; tuyères des boosters puis du Vulcain braquées à fond ; incidence de plus de 20° — Lions §1.1, §2.1 [P]",
+    "Les boosters s'arrachent de l'étage principal vers H0+39 s ; la destruction se déclenche automatiquement à la désintégration, « as designed », par la rupture des liaisons boosters / étage principal — Lions §2.1, §3.1 i-j [P] ; « personne n'a eu à appuyer » = déclenchement automatique ; un ordre envoyé du sol n'est ni prouvé ni exclu (techno-science.net [S], non confirmé) : la voix ne dit pas « personne n'a rien envoyé »",
+    "Destruction à environ 4 km d'altitude et 1 km du pas de tir — Lions §1.3, §3.1 j [P]",
+    "Débris sur environ 12 km² de mangrove et de savane, à l'est du pas de tir — Lions §1.3, §3.1 k [P]",
+    "Couloir de vol : la zone où la fusée ne présente pas de danger, même détruite ; le CNES la détruit avant qu'elle en sorte — Centre spatial guyanais, « During a launch » [P] ; que les débris de 501 soient tombés dans ce couloir est déduit (mangrove et savane près du pas de tir), le rapport ne le dit pas en ces mots [O]",
+    "Toute fusée porte un système de destruction : antennes et récepteurs, sécurité-armement, détonateur, cordeau détonant, charges linéaires — NASA PT-TE-1438 [P] ; fiche Pyroalliance LSCD 04/2025 (Ariane 6, Vega-C) [P] ; la chaîne pyrotechnique propre à Ariane 5 n'a pas été trouvée à la source : l'éclaté montre la chaîne générique, l'image reconstitue",
+    "Armée avant l'allumage (navette : environ 5 min avant) — NASA PT-TE-1438 [P], dit en général",
+    "Charge linéaire : profil en V doublé de cuivre, la détonation en fait un jet de métal qui cisaille ; détonation à plus de 7 700 m/s (« plus de sept mille ») ; coupe jusqu'à 22 mm d'acier (« deux centimètres ») — fiche Pyroalliance LSCD 04/2025 [P]",
+    "Ouverte, chaque partie perd sa poussée (« propellant tanks are cut open » ; boosters à poudre fendus sur 70 % de leur longueur) — Wikipédia « Range safety » [S] ; NASA PT-TE-1438 [P]",
+    "La salle de sauvegarde du CNES à Kourou suit le vol (caméras, radars, télémesure) — CNES, « La sauvegarde vol d'Ariane 6… » 2025 [P] ; le CNES est chargé de la sauvegarde par la loi sur les opérations spatiales [S]",
+    "Humain ou machine : le CNES prépare une sauvegarde autonome embarquée (UDS, confiée à Safran Space), envisagée « à partir de 2030 » — communiqué CNES du 04/06/2026 [P]",
+    "Épinglé : la cause, la conversion d'un flottant 64 bits en entier 16 bits dans une fonction d'alignement inutile en vol, logiciel repris d'Ariane 4 — Lions §2.1 [P]",
+    "La scène est le vrai vol 501 ; « ta fusée » est un rôle donné au spectateur, la mise en scène 3D reconstitue"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ta fusée bascule et se *déchire*. Puis elle se détruit toute seule… comme +prévu+.",
+      "vo": "[tense] Ta fusée bascule et se déchire. Puis elle se détruit toute seule... comme prévu.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ta fusée bascule et se déchire. Puis elle se détruit toute seule... comme prévu."
+      ],
+      "voir": "Contre-plongée depuis la mangrove de Kourou, l'événement déjà en cours : Ariane 5 sur 40 % de la largeur, couchée en travers du ciel, ses deux boosters qui se décollent de l'étage principal et la structure qui se déchire ; le pas de tir petit en bas. Sur « comme prévu », un trait vert court le long de la coque : la charge, déjà là."
+    },
+    {
+      "id": "promesse",
+      "text": "Une fusée emporte sa propre +charge+, pour ça. Mais ce jour-là… qui l'a *déclenchée* ?",
+      "vo": "[firm, matter-of-fact] Une fusée emporte sa propre charge, pour ça. [short pause] Mais ce jour-là... qui l'a déclenchée ?",
+      "hold": 0.3,
+      "voir": "On plonge dans la coque aux rayons X : la charge linéaire s'allume en vert sur toute sa longueur, de l'étage aux boosters ; sur « qui l'a déclenchée ? », la caméra s'arrête sur son détonateur, immobile."
+    },
+    {
+      "id": "scene",
+      "text": "Quatre kilomètres au-dessus du sol. À un kilomètre du pas de tir. Ses morceaux vont pleuvoir… et ne doivent tomber que dans son +couloir+. Il reste sa *charge*.",
+      "vo": "[tense] Quatre kilomètres au-dessus du sol. À un kilomètre du pas de tir. Ses morceaux vont pleuvoir... et ne doivent tomber que dans son couloir. Il reste sa charge.",
+      "hold": 0.3,
+      "voir": "Même seconde, plan large depuis le sol : la fusée qui se déchire en haut (4 km), le pas de tir tout près (1 km) ; au sol, le couloir de vol dessiné en bande sur la mangrove ; des fragments qui menacent d'en sortir ; on resserre sur la fusée jusqu'à la charge le long de sa coque."
+    },
+    {
+      "id": "ouvre",
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "hold": 0.4,
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "Le système de destruction sorti de la coque, plein, sur son halo ; il s'éclate sur « on »."
+    },
+    {
+      "id": "eclate",
+      "text": "Sur une fusée, une antenne écoute le sol. Un verrou, la sécurité-armement. Un détonateur. Un cordeau qui file le long de la coque… et au bout, la charge +linéaire+.",
+      "vo": "[conversational, curious] Sur une fusée, une antenne écoute le sol. Un verrou, la sécurité-armement. Un détonateur. Un cordeau qui file le long de la coque... et au bout, la charge linéaire.",
+      "hold": 0.2,
+      "voAlt": [
+        "[curious] Sur une fusée, une antenne écoute le sol. Un verrou, la sécurité-armement. Un détonateur. Un cordeau qui file le long de la coque... et au bout, la charge linéaire."
+      ],
+      "voir": "On suit l'ordre d'un bout à l'autre : l'antenne et son récepteur ; le verrou de sécurité-armement qui tourne ; le détonateur ; le cordeau détonant qui court le long d'un panneau de coque ; au bout, la charge linéaire, le cœur, isolée."
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi ça tranche ? Pliée en V, doublée de cuivre, elle détone à plus de [7 000|sept mille] mètres par seconde… et lance un jet de métal qui coupe jusqu'à deux centimètres d'+acier+.",
+      "vo": "[curious] Pourquoi ça tranche ? [short pause] Pliée en V, doublée de cuivre, elle détone à plus de sept mille mètres par seconde... et lance un jet de métal qui coupe jusqu'à deux centimètres d'acier.",
+      "voir": "Coupe de la charge linéaire en gros plan : le profil en V, la doublure de cuivre ; la détonation remonte le cordon, le cuivre se referme en jet, et une plaque d'acier de deux centimètres s'ouvre net, au ralenti."
+    },
+    {
+      "id": "repos",
+      "text": "Armée avant l'allumage, elle attend. À Kourou, la sauvegarde du CNES suit chaque seconde. Sa règle : jamais hors du +couloir+. Et là… ta fusée *bascule*.",
+      "vo": "[warm, conversational] Armée avant l'allumage, elle attend. À Kourou, la sauvegarde du Cnes suit chaque seconde. Sa règle : jamais hors du couloir. Et là... ta fusée bascule.",
+      "voAlt": [
+        "[curious] Armée avant l'allumage, elle attend. À Kourou, la sauvegarde du Cnes suit chaque seconde. Sa règle : jamais hors du couloir. Et là... ta fusée bascule."
+      ],
+      "voir": "La chaîne au repos dans la fusée aux rayons X, verrou armé, une lueur verte qui veille ; on recule jusqu'à la salle de sauvegarde du CNES : un écran, la trajectoire dans la bande verte du couloir ; sur « bascule », la courbe décroche."
+    },
+    {
+      "id": "zero",
+      "text": "[36|Trente-six] secondes après l'allumage. Ses centrales inertielles *lâchent*. Les tuyères braquent à fond. Elle se met en travers : plus de [20|vingt] degrés.",
+      "vo": "[firm, matter-of-fact] Trente-six secondes après l'allumage. Ses centrales inertielles lâchent. Les tuyères braquent à fond. Elle se met en travers : plus de vingt degrés.",
+      "hold": 0.2,
+      "voir": "Le chrono H0+36 revient : dans la case à équipements, la centrale de guidage s'éteint ; les tuyères des boosters pivotent à fond d'un côté ; la fusée entière pivote, l'angle de plus de vingt degrés tracé contre sa route."
+    },
+    {
+      "id": "reponse",
+      "text": "Les boosters s'*arrachent*. Et là, la charge +détone+. La coque s'ouvre. Tout retombe près du pas de tir : de la mangrove, de la savane.",
+      "vo": "[tense] Les boosters s'arrachent. Et là, la charge détone. La coque s'ouvre. Tout retombe près du pas de tir : de la mangrove, de la savane.",
+      "hold": 0.3,
+      "voir": "Le climax en grand, la fusée plein cadre : les boosters s'arrachent de l'étage principal ; la charge détone sur toute sa longueur, les coques s'ouvrent comme une fermeture éclair, les jets s'éteignent ; plan large qui recule : les morceaux retombent dans la bande du couloir, sur la mangrove et la savane."
+    },
+    {
+      "id": "chute",
+      "text": "Voilà son secret : ce jour-là, la fusée a raté. Sa sauvegarde, *pas* du tout. Rater, pour elle, c'est laisser la fusée voler +encore+.",
+      "vo": "[firm, matter-of-fact] Voilà son secret : ce jour-là, la fusée a raté. Sa sauvegarde, pas du tout. Rater, pour elle, c'est laisser la fusée voler encore.",
+      "hold": 0.4,
+      "voir": "Retour au cadre de l'accroche, figé : le nuage de débris en haut, au sol la bande du couloir intacte ; sur « encore », une trajectoire fantôme qui continue hors du couloir, barrée en rouge ; le nom du compte s'allume."
+    },
+    {
+      "id": "comment",
+      "text": "Et qui a déclenché la charge ? Les boosters eux-mêmes : en s'arrachant, ils ont coupé leurs fils. En +commentaire+ : une fusée qui dévie… un humain décide, ou la *machine* ?",
+      "vo": "[conversational, curious] Et qui a déclenché la charge ? [short pause] Les boosters eux-mêmes : en s'arrachant, ils ont coupé leurs fils. [short pause] En commentaire : une fusée qui dévie... un humain décide, ou la machine ?",
+      "hold": 0.3,
+      "voAlt": [
+        "[curious] Et qui a déclenché la charge ? [short pause] Les boosters eux-mêmes : en s'arrachant, ils ont coupé leurs fils. [short pause] En commentaire : une fusée qui dévie... un humain décide, ou la machine ?"
+      ],
+      "voir": "Gros plan au ralenti sur la jonction booster / étage principal : les fils qui la traversent se rompent, le signal file jusqu'au détonateur ; puis, sur la question, deux cases face à face : la salle de sauvegarde et la case à équipements."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour celui qui croit qu'une fusée qui explose, c'est *raté*.",
+      "vo": "[warm, conversational] Like : [short pause] pour celui qui croit qu'une fusée qui explose, c'est raté.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour celui qui croit qu'une fusée qui explose, c'est raté."
+      ],
+      "voir": "La fusée se reconstitue, morceau par morceau, et se redresse sur le pas de tir ; les chevrons désignent la colonne de boutons."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+ : prochain dossier, À FAIRE.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, À FAIRE.",
+      "hold": 0.2,
+      "voir": "Le panneau « S'abonner pour l'ouvrir », le dossier suivant sous scellés, ses chevrons."
+    },
+    {
+      "id": "boucle",
+      "text": "Jusqu'à la seconde où…",
+      "vo": "[calm] Jusqu'à la seconde où,",
+      "voir": "On remonte vers le plan d'ouverture : la contre-plongée depuis la mangrove, la fusée qui commence à basculer."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:déchire",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:détone-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:seconde"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

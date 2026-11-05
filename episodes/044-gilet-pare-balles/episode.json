@@ -1,0 +1,318 @@
+{
+  "id": "044",
+  "serie": "dossier",
+  "slug": "gilet-pare-balles",
+  "title": "Gilet pare-balles",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Gilet",
+      "pare-balles"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Gilet pare-balles",
+    "caption": "Gilet pare-balles, le gilet souple : entre la balle et toi, pas d'acier. Des dizaines de couches de fils, et une fraction de seconde pour l'attraper. Un policier de Nîmes a cru prendre une pierre. Un gilet pare-balles arrête aussi un couteau : vrai… ou faux ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#giletpareballes",
+      "#police",
+      "#science"
+    ],
+    "pinned": "La fibre du Kevlar sort, en 1965, d'une solution trouble qu'on jetait d'habitude. Toi : un gilet pare-balles arrête un couteau, vrai ou faux ?",
+    "instagram": {
+      "caption": "Tu prends une balle. Tu crois à une pierre.\n\nDossier 044 : le gilet pare-balles souple. Une housse, des dizaines de couches de fils croisés, souvent du Kevlar… et pourquoi un tissu qui étale l'énergie sur des centaines de fils attrape une balle d'arme de poing. La nuit du 1er juillet 2023, à Nîmes, un policier a découvert une balle logée dans son gilet.\n\nUn gilet pare-balles arrête aussi un couteau : vrai… ou faux ?",
+      "hashtags": [
+        "#giletpareballes",
+        "#police",
+        "#kevlar",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Tu prends une balle… et tu crois à une pierre : le gilet pare-balles souple",
+      "description": "Dossier 044 — le gilet pare-balles souple ouvert : la housse, les dizaines de couches de fibres (aramide type Kevlar, ou polyéthylène), les fils croisés et les coutures. Pourquoi un tissu arrête une balle d'arme de poing : il ne bloque pas en un point, il étale l'énergie sur des centaines de fils, et la balle s'écrase en champignon. Le revers : le tissu se creuse vers toi — la norme américaine NIJ tolère 44 mm de creux dans l'argile d'essai. Et contre un fusil, il faut une plaque dure. Le cas réel : Nîmes, nuit du 30 juin au 1er juillet 2023. Une reconstitution.\n\nPoliciers, gendarmes, secouristes : qu'est-ce qu'on a simplifié ? Et toi : un gilet pare-balles arrête aussi un couteau, vrai… ou faux ?",
+      "hashtags": [
+        "#shorts",
+        "#giletpareballes",
+        "#police",
+        "#kevlar",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Scène : cas réel reconstitué, Nîmes (quartier Pissevin), nuit du 30 juin au 1er juillet 2023, vers 2 h 30, pendant les émeutes ; un policier de la BAC de Nîmes (non nommé) visé par un tir que personne n'entend dans le bruit — Objectif Sud/Gard (maj 02/07/2023) [S]. Le tireur, l'arme, la distance, la rue ne sont pas montrés : l'image reconstitue.",
+    "« Tu crois à une pierre » : il pensait avoir pris une pierre au niveau des côtes ; balle de 9 mm (selon le porte-parole départemental d'Alliance Police Nationale, non dit par la voix) — Sud Radio, 03/07/2023 [S].",
+    "« Tu rentres te coucher » / « elle reste plantée dans le gilet » : douleur ressentie en partant se coucher, sans mesurer ; le lendemain soir, ogive découverte logée dans le gilet, confirmée par radiographie — Objectif Sud/Gard [S].",
+    "« Des centaines de mètres par seconde » : munitions d'essai d'arme de poing de 373 à 448 m/s (NIJ Standard-0101.06) — [O] ordre de grandeur, la vitesse réelle à Nîmes est inconnue.",
+    "Gilet souple : panneaux de plusieurs couches de matériau balistique (aramide tissé type Kevlar, ou UHMWPE) dans une housse, glissés dans un porteur ; « des dizaines de couches » — [O] ordre de grandeur (le nombre varie selon fabricant et niveau ; aucun nombre type sourcé).",
+    "Fils croisés en trame et chaîne ; couches cousues (piqûres) ou laminées — Wikipédia Body armor, fabricants [S].",
+    "Le panneau a un sens : face « strike face » vers l'extérieur, face « wear face » côté corps, étiqueté — NIJ Selection and Application Guide 0101.06 [P].",
+    "Le tissu étale l'énergie sur une grande surface, à travers des centaines de fils et des dizaines de couches ; les fibres « absorb and disperse the impact energy » ; chaque couche absorbe sa part — NIJ Guide 0101.06 [P].",
+    "« À poids égal, cinq fois plus résistant que l'acier » (para-aramide, ≈ 3 000 MPa, densité 1,44) — Wikipédia Kevlar [S] ; dit seulement avec « à poids égal ».",
+    "Ordre de l'impact : fils frappés tirés dans le sens du tir et tendus, fils voisins entraînés, rupture et étirement des fils, tissu qui se creuse en cône vers le corps — JEC Composites n° 79 (2013), Porwal & Phoenix, extraits [S].",
+    "La balle se déforme en champignon, prise dans un filet de fibres (« caught in a web of strong fibers… mushroom ») — NIJ Guide 0101.06 [P].",
+    "« Ce choc, c'était le tissu, creusé contre toi » : le panneau enfoncé vers le corps cause une blessure sans perforation (contusions) — NIJ Guide 0101.06 [P] ; Nîmes : douleur [S]. Simplification : on attribue le choc ressenti à la déformation arrière du panneau.",
+    "« La norme tolère quarante-quatre millimètres de creux » : creux maximal de 44 mm dans l'argile Roma Plastilina n° 1 (aucune mesure au-delà de 50 mm) — NIJ Standard-0101.06 [P] ; seuil hérité de la 0101.01 (1978).",
+    "Question du commentaire (non répondue par le film) : la protection anti-lame relève d'une norme à part (NIJ 0115.00), un gilet balistique n'est pas automatiquement anti-lame — NIJ Guide [P/S, résumé].",
+    "Épinglé : la fibre naît en 1965 chez DuPont (Stephanie Kwolek), d'une solution de polymère trouble qu'on jetait d'habitude ; Kevlar lancé en 1971 — Invention & Technology, Wikipédia [S].",
+    "Annonce du 045 : une fusée qui porte sa propre charge pour se détruire elle-même — fait validé par l'orchestrateur, sourcé dans le dossier 045.",
+    "Image : le cône, les couches, la balle en champignon, le bloc d'argile et la règle sont une reconstitution 3D ; aucune image réelle de Nîmes."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Tu prends une *balle*. Tu crois à une pierre.",
+      "vo": "[tense] Tu prends une balle. Tu crois à une pierre.",
+      "voAlt": [
+        "[firm, matter-of-fact] Tu prends une balle. Tu crois à une pierre."
+      ],
+      "voir": "Rayons X, contre-plongée sur le flanc d'un torse (côtes en traits fins, 40 % de la largeur) : une balle déjà aplatie s'enfonce dans un panneau de couches de tissu plein, qui se creuse en cône vers les côtes dès l'image 1 ; derrière, la nuit rouge (signal) ; ni arme ni tireur."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Entre elle et toi, pas d'acier : du +tissu+. Et ce choc dans ton ventre… qui te l'a *donné* ?",
+      "vo": "[firm, matter-of-fact] Entre elle et toi, pas d'acier : du tissu. [short pause] Et ce choc dans ton ventre... qui te l'a donné ?",
+      "voir": "Recul depuis l'impact : le panneau vu en coupe, souple, des feuillets de fibres qui ondulent — aucune plaque de métal ; sur « côtes », le cône pousse et une onde (signal) passe sur la cage thoracique."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "La nuit, le bruit couvre tout : personne n'entend le tir. La balle fonce à des centaines de mètres par seconde. Devant elle, ton gilet. Combien de couches vont *tenir* ?",
+      "vo": "[tense] La nuit, le bruit couvre tout : personne n'entend le tir. La balle fonce à des centaines de mètres par seconde. Devant elle, ton gilet. [short pause] Combien de couches vont tenir ?",
+      "voir": "Même nuit, une fraction de seconde avant : rue d'émeute aux rayons X (fumée, lueurs, silhouettes floues), le policier de trois quarts dos, gilet plein ; la balle seule, au ralenti, traverse le cadre vers lui (on ne voit jamais d'où elle part) ; chrono en millisecondes ; on finit serré sur le panneau, la pointe à quelques centimètres."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "La balle se fige en l'air ; le panneau du gilet sort du torse et vient se poser sur le halo ; il s'ouvre sur « ouvre »."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Ton gilet souple : d'abord, une housse. Dedans, des dizaines de couches, cousues ensemble. Chacune : des fils croisés, serrés. Et ces fils… c'est souvent du +Kevlar+.",
+      "vo": "[conversational, curious] Ton gilet souple : d'abord, une housse. Dedans, des dizaines de couches, cousues ensemble. Chacune : des fils croisés, serrés. Et ces fils... c'est souvent du Kevlar.",
+      "voAlt": [
+        "[curious] Ton gilet souple : d'abord, une housse. Dedans, des dizaines de couches, cousues ensemble. Chacune : des fils croisés, serrés. Et ces fils... c'est souvent du Kevlar."
+      ],
+      "voir": "Éclaté sur le chemin de la balle, de la rue vers le corps : la housse s'écarte, les dizaines de feuillets se séparent comme les pages d'un livre, coutures en pointillés ; plongée sur un feuillet : trame et chaîne croisées ; au bout, un seul fil isolé (veille) : le cœur."
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi ça tient ? Chaque fil touché tire ses voisins : des centaines se tendent ensemble. À poids égal, ce fil est [5|cinq] fois plus résistant que l'+acier+.",
+      "vo": "[curious] Pourquoi ça tient ? [short pause] Chaque fil touché tire ses voisins : des centaines se tendent ensemble. À poids égal, ce fil est cinq fois plus résistant que l'acier.",
+      "voir": "Une seule couche, en grand, de trois quarts : un point d'impact au centre ; l'énergie (veille) court le long des fils croisés et s'étale en étoile sur des centaines de fils ; puis une balance : un fil de Kevlar contre une barre d'acier de même poids, chiffre ×5."
+    },
+    {
+      "id": "repos",
+      "text": "Toute la nuit, il attend. Son panneau a un sens : une face vers la rue, une face vers toi. Puis une pointe touche… la première *couche*.",
+      "vo": "[warm, conversational] Toute la nuit, il attend. Son panneau a un sens : une face vers la rue, une face vers toi. Puis une pointe touche... la première couche.",
+      "voAlt": [
+        "[curious] Toute la nuit, il attend. Son panneau a un sens : une face vers la rue, une face vers toi. Puis une pointe touche... la première couche."
+      ],
+      "voir": "Le panneau se referme et rentre dans la veste sur le torse aux rayons X, immobile ; son étiquette s'allume : une flèche face rue, une flèche face corps ; sur « pointe », la balle figée reprend sa course et touche le premier feuillet."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Les premiers fils *cassent*. Les suivants se tendent. Et tirent leurs voisins. Couche après couche.",
+      "vo": "[firm, matter-of-fact] Les premiers fils cassent. Les suivants se tendent. Et tirent leurs voisins. Couche après couche.",
+      "voir": "Gros plan en coupe, chrono repris : sous la pointe, des fils claquent (signal) ; les fils frappés se tendent dans le sens du tir et entraînent les voisins ; le pli court en anneau sur le feuillet, puis sur le suivant."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Le tissu se creuse en cône. Vers toi. Chaque couche prend sa part. La balle s'écrase… en +champignon+. Elle reste plantée dans le gilet. Toi, tu rentres te coucher.",
+      "vo": "[tense] Le tissu se creuse en cône. Vers toi. Chaque couche prend sa part. La balle s'écrase... en champignon. Elle reste plantée dans le gilet. Toi, tu rentres te coucher.",
+      "voir": "Le climax en grand : tout le panneau se creuse en cône vers les côtes, chaque feuillet se tend à son tour (veille), la balle s'aplatit en champignon et s'arrête, logée dans les couches ; puis relâchement : recul, le policier aux rayons X s'éloigne dans la rue vers chez lui, le gilet toujours sur lui."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà le secret : ton gilet n'est *pas* un mur. C'est un filet. Il attrape la balle… en se creusant +vers toi+.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : ton gilet n'est pas un mur. C'est un filet. Il attrape la balle... en se creusant vers toi.",
+      "voir": "Sur « mur », une plaque rigide en fantôme où la balle rebondirait ; elle s'efface : le panneau souple, un filet qui se creuse et pousse vers le torse ; le nom du compte s'allume en vert."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et ce choc dans ton ventre ? C'était le tissu, creusé contre toi. La norme américaine tolère [44|quarante-quatre] millimètres de creux. En +commentaire+ : un gilet pare-balles arrête aussi un couteau… vrai, ou *faux* ?",
+      "vo": "[conversational, curious] Et ce choc dans ton ventre ? [short pause] C'était le tissu, creusé contre toi. La norme américaine tolère quarante-quatre millimètres de creux. [short pause] En commentaire : un gilet pare-balles arrête aussi un couteau... vrai, ou faux ?",
+      "voAlt": [
+        "[curious] Et ce choc dans ton ventre ? [short pause] C'était le tissu, creusé contre toi. La norme américaine tolère quarante-quatre millimètres de creux. [short pause] En commentaire : un gilet pare-balles arrête aussi un couteau... vrai, ou faux ?"
+      ],
+      "voir": "Le cône pousse contre les côtes (traits signal) ; raccord : le même panneau sur un bloc d'argile d'essai, le creux se mesure à la règle graduée jusqu'au trait 44 ; sur la question, une lame en fantôme face au tissu, sans contact, sans réponse."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour quelqu'un qui l'enfile avant chaque *service*.",
+      "vo": "[warm, conversational] Like : [short pause] pour quelqu'un qui l'enfile avant chaque service.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour quelqu'un qui l'enfile avant chaque service."
+      ],
+      "voir": "Le gilet refermé, posé sur le halo, la balle champignon logée dedans ; chevrons vers la colonne de boutons."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, une fusée qui porte son propre explosif… pour se détruire *elle-même*.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, une fusée qui porte son propre explosif... pour se détruire elle-même.",
+      "voir": "Panneau du prochain dossier : une fusée aux rayons X, sa charge le long du corps en signal ; « S'abonner pour l'ouvrir » et ses chevrons."
+    },
+    {
+      "id": "boucle",
+      "text": "Et cette nuit-là…",
+      "vo": "[calm] Et cette nuit-là,",
+      "voir": "Retour dans la nuit rouge : la balle reprend sa course vers le panneau sur le flanc ; dernière image = première image."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:balle",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:champignon-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:nuit"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
