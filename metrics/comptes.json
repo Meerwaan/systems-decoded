@@ -1,0 +1,35 @@
+{
+  "//": "Les abonnés de chaque compte, jour par jour : lus sur les pages publiques par le bureau (npm run front, au plus tous les quarts d'heure). approx = le chiffre arrondi que la page affiche (« 41 K »). Les premières lignes sont recopiées des relevés.",
+  "releves": {
+    "2026-10-13": {
+      "tiktok": {
+        "abonnes": 1366,
+        "source": "audience.json → comptes (export TikTok, fin de semaine)"
+      }
+    },
+    "2026-11-03": {
+      "tiktok": {
+        "abonnes": 2400,
+        "approx": true,
+        "source": "metrics/exports/2026-11-03/releve.md"
+      }
+    },
+    "2026-11-05": {
+      "tiktok": {
+        "abonnes": 2376,
+        "likes": 28000,
+        "videos": 42
+      },
+      "instagram": {
+        "abonnes": 41000,
+        "approx": true,
+        "videos": 42
+      },
+      "youtube": {
+        "abonnes": 1150,
+        "approx": true,
+        "videos": 46
+      }
+    }
+  }
+}

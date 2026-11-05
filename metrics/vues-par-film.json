@@ -1,0 +1,208 @@
+{
+  "//": "Les vues de chaque film, relevé par relevé, plateforme par plateforme : ce que le bureau (npm run front) montre dans « Films ». Recopié des relevés de metrics/exports/<date>/releve.md. Les détails d'un film (courbe, durée moyenne) restent dans audience.json.",
+  "releves": {
+    "2026-11-03": {
+      "source": "metrics/exports/2026-11-03/releve.md (TikTok Studio, vers 21 h)",
+      "tiktok": {
+        "035": {
+          "publie": "2026-11-03",
+          "vues": 2510,
+          "likes": 63,
+          "commentaires": 1
+        },
+        "034": {
+          "publie": "2026-11-02",
+          "vues": 1564,
+          "likes": 76,
+          "commentaires": 0
+        },
+        "033": {
+          "publie": "2026-11-01",
+          "vues": 1550,
+          "likes": 56,
+          "commentaires": 1
+        },
+        "032": {
+          "publie": "2026-10-31",
+          "vues": 7003,
+          "likes": 144,
+          "commentaires": 1
+        },
+        "031": {
+          "publie": "2026-10-30",
+          "vues": 24000,
+          "likes": 1309,
+          "commentaires": 51
+        },
+        "030": {
+          "publie": "2026-10-29",
+          "vues": 4464,
+          "likes": 150,
+          "commentaires": 4
+        },
+        "029": {
+          "publie": "2026-10-28",
+          "vues": 806,
+          "likes": 40,
+          "commentaires": 8
+        },
+        "HS04": {
+          "publie": "2026-10-27",
+          "vues": 2931,
+          "likes": 164,
+          "commentaires": 0
+        },
+        "028": {
+          "publie": "2026-10-26",
+          "vues": 1668,
+          "likes": 69,
+          "commentaires": 2
+        },
+        "HS03": {
+          "publie": "2026-10-23",
+          "vues": 564,
+          "likes": 40,
+          "commentaires": 1
+        },
+        "027": {
+          "publie": "2026-10-23",
+          "vues": 20000,
+          "likes": 949,
+          "commentaires": 21
+        },
+        "026": {
+          "publie": "2026-10-22",
+          "vues": 1477,
+          "likes": 71,
+          "commentaires": 1
+        },
+        "025": {
+          "publie": "2026-10-21",
+          "vues": 6742,
+          "likes": 300,
+          "commentaires": 0
+        },
+        "024": {
+          "publie": "2026-10-20",
+          "vues": 12000,
+          "likes": 581,
+          "commentaires": 13
+        },
+        "HS02": {
+          "publie": "2026-10-20",
+          "vues": 1869,
+          "likes": 102,
+          "commentaires": 0
+        },
+        "023": {
+          "publie": "2026-10-19",
+          "vues": 4723,
+          "likes": 237,
+          "commentaires": 1
+        },
+        "022": {
+          "publie": "2026-10-18",
+          "vues": 6230,
+          "likes": 177,
+          "commentaires": 2
+        },
+        "021": {
+          "publie": "2026-10-17",
+          "vues": 34000,
+          "likes": 1786,
+          "commentaires": 29
+        },
+        "HS01": {
+          "publie": "2026-10-16",
+          "vues": 1772,
+          "likes": 109,
+          "commentaires": 2
+        },
+        "020": {
+          "publie": "2026-10-16",
+          "vues": 1676,
+          "likes": 78,
+          "commentaires": 1
+        },
+        "019": {
+          "publie": "2026-10-15",
+          "vues": 21000,
+          "likes": 1210,
+          "commentaires": 15
+        },
+        "018": {
+          "publie": "2026-10-14",
+          "vues": 18000,
+          "likes": 605,
+          "commentaires": 11
+        },
+        "017": {
+          "publie": "2026-10-13",
+          "vues": 6558,
+          "likes": 208,
+          "commentaires": 3
+        },
+        "016": {
+          "publie": "2026-10-12",
+          "vues": 15000,
+          "likes": 662,
+          "commentaires": 5
+        },
+        "015": {
+          "publie": "2026-10-11",
+          "vues": 165000,
+          "likes": 5095,
+          "commentaires": 6
+        },
+        "014": {
+          "publie": "2026-10-11",
+          "vues": 20000,
+          "likes": 717,
+          "commentaires": 1
+        },
+        "013": {
+          "publie": "2026-10-10",
+          "vues": 7006,
+          "likes": 362,
+          "commentaires": 7
+        },
+        "012": {
+          "publie": "2026-10-09",
+          "vues": 16000,
+          "likes": 481,
+          "commentaires": 9
+        },
+        "011": {
+          "publie": "2026-10-09",
+          "vues": 16000,
+          "likes": 629,
+          "commentaires": 12
+        },
+        "010": {
+          "publie": "2026-10-08",
+          "vues": 33000,
+          "likes": 1655,
+          "commentaires": 24
+        },
+        "009": {
+          "publie": "2026-10-08",
+          "vues": 50000,
+          "likes": 1484,
+          "commentaires": 15
+        },
+        "008": {
+          "publie": "2026-10-08",
+          "vues": 9550,
+          "likes": 645,
+          "commentaires": 3
+        },
+        "007": {
+          "publie": "2026-10-08",
+          "vues": 3386,
+          "likes": 118,
+          "commentaires": 5
+        }
+      }
+    }
+  }
+}

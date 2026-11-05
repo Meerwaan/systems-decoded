@@ -1,0 +1,17 @@
+{
+  "//": "Le jour de sortie prévu de chaque dossier, fixé sur le bureau (onglet Calendrier). Sans ligne ici, le bureau propose un jour (un court par jour à 20 h, les longs mardi, jeudi et samedi) sans rien écrire.",
+  "dossiers": {
+    "038-sous-marin": "2026-11-06",
+    "039-cendrier-reacteur": "2026-11-07",
+    "040-abri-anti-feu": "2026-11-08",
+    "041-bouclier-iss": "2026-11-09",
+    "042-toit-du-char": "2026-11-10",
+    "043-faisceau-cern": "2026-11-11",
+    "044-gilet-pare-balles": "2026-11-12",
+    "045-autodestruction-fusee": "2026-11-13",
+    "C01-ta-voiture": "2026-11-07",
+    "CR01-tchernobyl": "2026-11-06",
+    "CR02-deepwater": "2026-11-11",
+    "L06-blackout": "2026-11-10"
+  }
+}

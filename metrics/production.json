@@ -5732,6 +5732,230 @@
           "hebdo": 57
         }
       ]
+    },
+    "039": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-11-05T18:39:35.357Z",
+          "fin": "2026-11-05T18:45:18.899Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-11-05T18:45:18.899Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "autre",
+          "jetons": 200000
+        },
+        {
+          "nom": "scenariste",
+          "genre": "autre",
+          "jetons": 90000
+        },
+        {
+          "nom": "contre-verif",
+          "genre": "autre",
+          "jetons": 155899
+        }
+      ],
+      "jauges": [
+        {
+          "t": "2026-11-05T18:39:40.031Z",
+          "quoi": "",
+          "session": 5,
+          "hebdo": 58
+        }
+      ]
+    },
+    "040": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-11-05T18:39:36.034Z",
+          "fin": "2026-11-05T18:45:37.086Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-11-05T18:45:37.086Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "autre",
+          "jetons": 200000
+        },
+        {
+          "nom": "scenariste",
+          "genre": "autre",
+          "jetons": 90000
+        },
+        {
+          "nom": "contre-verif",
+          "genre": "autre",
+          "jetons": 151411
+        }
+      ],
+      "jauges": []
+    },
+    "041": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-11-05T18:39:36.689Z",
+          "fin": "2026-11-05T18:45:37.759Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-11-05T18:45:37.759Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "autre",
+          "jetons": 187700
+        },
+        {
+          "nom": "scenariste",
+          "genre": "autre",
+          "jetons": 90000
+        },
+        {
+          "nom": "contre-verif",
+          "genre": "autre",
+          "jetons": 147483
+        }
+      ],
+      "jauges": []
+    },
+    "042": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-11-05T18:39:37.349Z",
+          "fin": "2026-11-05T18:49:51.318Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-11-05T18:49:51.318Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "autre",
+          "jetons": 200000
+        },
+        {
+          "nom": "scenariste",
+          "genre": "autre",
+          "jetons": 187657
+        },
+        {
+          "nom": "contre-verif",
+          "genre": "autre",
+          "jetons": 140663
+        }
+      ],
+      "jauges": []
+    },
+    "043": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-11-05T18:39:38.029Z",
+          "fin": "2026-11-05T18:51:31.576Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-11-05T18:51:31.576Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "autre",
+          "jetons": 200000
+        },
+        {
+          "nom": "scenariste",
+          "genre": "autre",
+          "jetons": 190000
+        },
+        {
+          "nom": "contre-verif",
+          "genre": "autre",
+          "jetons": 153075
+        }
+      ],
+      "jauges": []
+    },
+    "044": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-11-05T18:39:38.691Z",
+          "fin": "2026-11-05T18:52:19.314Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-11-05T18:52:19.314Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "autre",
+          "jetons": 190000
+        },
+        {
+          "nom": "scenariste",
+          "genre": "autre",
+          "jetons": 185000
+        },
+        {
+          "nom": "contre-verif",
+          "genre": "autre",
+          "jetons": 149714
+        }
+      ],
+      "jauges": []
+    },
+    "045": {
+      "etapes": [
+        {
+          "nom": "faits",
+          "debut": "2026-11-05T18:39:39.363Z",
+          "fin": "2026-11-05T18:54:06.588Z"
+        },
+        {
+          "nom": "script",
+          "debut": "2026-11-05T18:54:06.588Z"
+        }
+      ],
+      "agents": [
+        {
+          "nom": "faits",
+          "genre": "autre",
+          "jetons": 190000
+        },
+        {
+          "nom": "scenariste",
+          "genre": "autre",
+          "jetons": 185000
+        },
+        {
+          "nom": "contre-verif",
+          "genre": "autre",
+          "jetons": 160942
+        }
+      ],
+      "jauges": []
     }
   }
 }
