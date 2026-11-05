@@ -16,22 +16,39 @@
     "seed": 21
   },
   "cover": {
-    "at": "eclate$",
+    "at": "chambre",
     "title": [
       "Réacteur",
       "en fusion"
     ],
     "cam": {
-      "tx": 0,
-      "ty": 8,
-      "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
-      "shift": -430,
+      "tx": 400,
+      "ty": 450,
+      "tz": 900,
+      "d": 9600,
+      "az": -38,
+      "el": 36,
+      "fov": 32,
+      "shift": -500,
       "side": 0,
-      "fov": 28,
-      "roll": 0
+      "roll": 0,
+      "dof": 0
+    },
+    "state": {
+      "explode": 1,
+      "guard": 1,
+      "litPit": 0.6,
+      "litPlug": 1,
+      "litChannel": 0.5,
+      "litChamber": 0.6,
+      "litPool": 0.9,
+      "litValves": 0.8,
+      "eaten": 0,
+      "vessel": 0.6,
+      "fx": 300,
+      "fy": 300,
+      "fz": 1000,
+      "fs": 2400
     }
   },
   "post": {
@@ -83,7 +100,10 @@
     "De l'eau trop tôt sur le corium : explosion de vapeur, d'où l'étalement à sec — Fischer [P] ; IRSN-2008/98 cité par Laponche [P/S]",
     "Question du commentaire : le parc français plus ancien n'a pas de chambre d'étalement (refroidissement par-dessus seulement), mais a reçu des modifications de stabilisation — IRSN, résumé [P] ; Laponche citant l'ASN/IRSN [P/S]",
     "L'image reconstitue la coulée, la fosse, la porte, le canal, la chambre, les vannes et la piscine : aucun schéma ni photo sous licence vérifiée",
-    "Prochain dossier : soixante-treize pompiers encerclés par le feu, aucun brûlé (Butte Fire, Idaho, 1985) — consigne du lot, docs/faits/040-abri-anti-feu.md"
+    "Prochain dossier : soixante-treize pompiers encerclés par le feu, aucun brûlé (Butte Fire, Idaho, 1985) — consigne du lot, docs/faits/040-abri-anti-feu.md",
+    "L'en-tête : avant que la porte cède, aucune durée n'est sourcée (« Cuve percée ») ; après, le chrono est illustratif dans les fourchettes de la source — étalé à T+00:30 (« en quelques dizaines de secondes »), recouvert à T+05:00 (« après plusieurs minutes ») — IRSN cité par Laponche (Global Chance, 2019)",
+    "La cuve est celle du dossier 005 (900 MWe), un peu plus petite que celle d'un EPR ; la fosse, la porte, le canal, la piscine et les vannes sont placés et dimensionnés pour l'image ; seule la surface de la chambre est vraie (170 m²)",
+    "La piscine IRWST est montrée par un seul secteur, à côté de la chambre ; dans le bâtiment réel elle entoure le bas de l'enceinte"
   ],
   "beats": [
     {
@@ -200,13 +220,64 @@
   ],
   "cues": {
     "choc": "accroche:fond",
+    "lache": "accroche:lâche",
+    "couler": "accroche:couler",
+    "salle": "promesse:salle",
+    "pompe": "promesse:pompe",
+    "ouvrir": "promesse:ouvrir",
+    "degres": "scene:degrés",
+    "perce": "scene:perce",
+    "ronge": "scene:ronge",
+    "sortie": "scene:sortie",
+    "porte": "scene:porte",
+    "fondre": "scene:fondre",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "fosse": "eclate:fosse",
+    "mange": "eclate:mangé",
+    "fusible": "eclate:fusible",
+    "canal": "eclate:canal",
+    "chambre": "eclate:chambre",
+    "sec": "eclate:sec",
+    "toprincipe": "principe-0.12",
+    "chauffe": "principe:chauffe",
+    "epais": "principe:perce-0.72",
+    "etale": "principe:Étalé",
+    "m170": "principe:cent",
+    "mincep": "principe:mince",
+    "partage": "principe:partage",
+    "torepos": "repos-0.12",
+    "dort": "repos:dort",
+    "piscine": "repos:piscine",
+    "fermees": "repos:fermées",
+    "personne": "repos:personne",
     "tozero": "zero-0.12",
+    "cede": "zero:cède",
+    "engouffre": "zero:engouffre",
+    "droit": "zero:Droit",
+    "etale2": "reponse:étale",
+    "secondes": "reponse:secondes",
+    "mer": "reponse:mer",
+    "mince": "reponse:mince",
     "trigger": "reponse:vannes-0.05",
+    "seules": "reponse:seules",
+    "minutes": "reponse:minutes",
+    "descend": "reponse:descend",
+    "recouvre": "reponse:recouvre",
     "toverdict": "chute-0.12",
     "verdict": "chute:pas",
+    "trop": "chute:Trop",
+    "vapeur": "chute:vapeur",
+    "apres": "chute:après",
     "tocta": "comment-0.12",
+    "ouverte": "comment:ouverte",
+    "detruit": "comment:détruit",
+    "commentaire": "comment:commentaire",
+    "epr2": "comment:EPR",
+    "pasq": "comment:pas",
+    "prochain": "abo:prochain",
+    "pompiers": "abo:pompiers",
+    "mort": "abo:mort",
     "toloop": "boucle-0.12",
     "rewind": "boucle:recommence"
   },
@@ -260,8 +331,35 @@
     },
     {
       "type": "swish",
-      "at": 0.14,
-      "dur": 0.3,
+      "at": 0.04,
+      "dur": 0.2,
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "choc+0.25",
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "lache+0.4",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "swish",
+      "at": "couler+0.48",
+      "dur": 0.2,
+      "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "ouvrir+0.5",
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "perce+0.25",
       "gain": -15
     },
     {
@@ -278,9 +376,39 @@
     },
     {
       "type": "impact",
-      "at": "explode",
+      "at": "explode+0.5",
       "gain": -16,
       "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "mange+0.4",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "fusible+0.45",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "canal+0.45",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "sec+0.5",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "partage+0.5",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "fermees+0.42",
+      "gain": -17
     },
     {
       "type": "impact",
@@ -290,16 +418,39 @@
     },
     {
       "type": "impact",
-      "at": "trigger",
-      "gain": -10,
+      "at": "cede+0.42",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "droit+1.07",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "hit",
+      "at": "etale2+0.52",
+      "gain": -14
+    },
+    {
+      "type": "impact",
+      "at": "seules-0.28",
+      "gain": -11,
       "size": 1.4
     },
     {
       "type": "blip",
-      "at": "verdict",
+      "at": "trop-0.3",
       "gain": -15,
       "pitch": 0.7,
       "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "vapeur+0.45",
+      "gain": -14,
+      "size": 1
     },
     {
       "type": "impact",

@@ -1,0 +1,28 @@
+# 039 · Le cendrier du réacteur — journal de l'architecte
+
+2026-11-05. Contrat du dossier 039 (récupérateur de corium de l'EPR) : plan, monde, bouchons, page, repères, sons, plans des décors et des actes. Voix enregistrée (93,4 s, 14 beats) : rien touché dans `audio/` ni dans les beats.
+
+## Fait
+- Lu : catalogue (la cuve `005/reactor.js` : API par `grep`, en-tête et `update`), recettes (agents, actes, décorateur § entrée/reçoit), règles d'image, faits 039 § 4/5/10/« montrer » et contre-vérification « Reste ouvert », le 025 (journal de l'architecte, `plan.js`, `world.js`, `main.js`, `index.html`, tête de `025-decors.md` et de `025-actes.md`), l'azimut de `kit/lib/stage.js`.
+- `src/plan.js` : origine au centre du sol de la fosse (sur le béton sacrificiel), chemin vers +z, piscine côté +x. Chambre **vraie en surface** (1000 × 1700 = 170 m²), le reste en maquette (`sources` le dit). Cuve du 005 déplacée à `VESSEL.at` (pied à 2,6 m du sol : à 3,8 m, la contre-plongée ne pouvait pas tenir la cuve et la porte dans le même cadre).
+- **Trois décors** : `model.js` (le système plein : fosse, porte, canal, chambre, piscine, vannes, et l'eau), `corium.js` (la menace : ventre, goutte, bain, flux, galette, flèches de chaleur, vapeur, contre-exemple), `batiment.js` (enveloppe du 005 + sous-sol aux rayons X + l'annonce du 040). L'eau est au système (c'est sa réponse) pour alléger `corium.js`, le plus lourd.
+- **Un seul lieu** : pas de re-parentage ; l'établi est la même place, bâtiment effacé (`bench` 1), halo à `BASEMENT.floor` ; le corium caché quand `explode` > 0,02.
+- `src/world.js` : `FIRST` fermé (37 nombres + 8 de lumière : `set shell vessel core teaser belly breach pour pit fume flow mass spread arrows cool steam blast explode eaten plug valves triggers water guard litPit litPlug litChannel litChamber litPool litValves fx fy fz fs mood gel pool grid`), aucun nom de propriété GSAP ; `POSE0` (candidate a, vue sur bouchon) ; `VIEW` (17 poses) ; `BENCHED`, `STAGED` ; `LOOK` (`dof` 8 sur `plugTop`, `valve`, `trigger`, `heap` seulement).
+- `src/main.js` : en-tête « Cuve percée » (aucune durée de la fosse n'est sourcée) puis chrono T+ depuis `cede` (T+00:30 à `mince`, T+05:00 à `recouvre`, illustratif dans les fourchettes IRSN) ; « Corium » : « > 2 000 °C » / « Sous l'eau ». Cinq actes : `acte2b.js` ajouté (l'acte 2 faisait 15 phrases).
+- Actes : squelettes qui construisent, sur les repères réels.
+- `index.html` : `chip-salle`, `chip-170` (« 170 mètres carrés »), `chip-jamais` (« En conditions réelles »), `chip-vannes`, `chip-pompe`, `retitle` (« Noyé tout de suite » → « Étalé, puis noyé »), `chip-reponse`, `#duel` (Un EPR / Pas un EPR — jamais de réponse tapée), `#next` 040 (« 73 pompiers pris au piège par le feu. Aucun mort. », la phrase de la voix) ; `#cta-field` et `#film` retirés (chevauchements au `check`).
+- `episode.json` : 64 repères vérifiés sur la table (`epais` = `principe:perce-0.72`, car `principe:Épais` attrape « épaisseur » à 34,60 ; `mince` = `reponse:mince`, `mincep` celui du principe ; aucun nom de beat) ; `cover` provisoire sur `chambre` (éclaté, el 28) ; `sfx` reposés **dans les souffles** (table des trous de la voix : `.cache/planches/039/architecte/gaps.mjs`) — sortis des mots : le `swish` d'ouverture (finit à 0,24 avant « Ton »), l'impact de l'éclaté (21,58, quand les pièces se posent), celui des vannes (`seules-0.28` = 60,72), le blip du verdict (`trop-0.3` = 68,77) ; ajoutés : coups sur fond, lâche, couler, ouvrir, perce, sortie, cède, l'arrivée dans la chambre, étale, vapeur ; clics de l'éclaté (mangé, fusible, canal, sec), partage, fermées, commentaire. Trois lignes de `sources` (chrono, maquette, IRWST en secteur).
+- `npm run check -- 039` : passe (restent 3 avertissements de contraste à 5,19 s : le squelette de l'acte 1 met le haut de la cuve sous l'en-tête — à l'agent de l'acte 1).
+
+## Planches (16 images lues sur 25)
+1. Bouchons, 8 : la contre-plongée ne tenait pas la cuve (pied à 3,8 m) ; `chamberLow` se lit déjà (cuve rouge, fosse, canal, chambre) ; les plans larges de flanc (`az` −50) coupent la cuve ; l'éclaté de flanc perd la chambre ; `valve` illisible (le muret masque).
+2. Cuve abaissée, `az` −18, 8 : **convention vérifiée** (à `az` −18, chambre devant, cuve derrière, empilées) ; `POSE0` à fov 64 / el −20 tient le ventre rouge en haut et la porte en bas ; `wide` à `az` −18 bon ; l'éclaté garde un `SPREAD` à régler ; `valve` toujours faible ; l'annonce du 040 se lit sous le panneau.
+
+## Poses provisoires (réglées sur bouchons) — à recaler par le chef de production
+Toutes celles de `VIEW` sauf `wide`, `section` et `POSE0` (vues sur planche, à confirmer sur les vrais décors) : `overPit` (voile rose du bouchon), `exploded` (dépend du `SPREAD` de `model.js`), `valve` et `trigger` (à refaire : le muret), `channel`, `sheet`, `graze`, `pool`, `heap`, `pitSide`, `plugTop`, `teaser`, `chamberLow`. Pas de `HAND`.
+
+## À changer ailleurs
+- `scripts/sd.mjs` (`script`) : une option `--words` (mots et leurs fins) et une liste des souffles ≥ 0,25 s — j'ai repris un script dans `.cache/planches/039/architecte/` (demandé déjà au 021 et au 025).
+- `kit/lib/ref.mjs` : un repère `beat:mot` qui ne prendrait que le mot entier (`principe:Épais` attrape « épaisseur ») — par ex. `beat:=mot`.
+- Catalogue : après rendu, `005/reactor.js` devient « repris par 039 » ; `039/model.js` (récupérateur) et `039/corium.js` (une coulée de lave qui s'étale) sont réutilisables pour tout sujet nucléaire ou de fonderie.
+- Décorateur : `batiment.js` seulement — caillebotis, chemins de câbles, éclairage de secours, signalétique sans texte ; rien sur le système, rien dans la chambre ni dans la fosse.
