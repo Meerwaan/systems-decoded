@@ -1,6 +1,20 @@
 {
   "name": "Système Décodé",
   "handle": "systeme.decode",
+  "comptes": {
+    "tiktok": {
+      "handle": "systemesdecodes",
+      "url": "https://www.tiktok.com/@systemesdecodes"
+    },
+    "instagram": {
+      "handle": "systemesdecodes",
+      "url": "https://www.instagram.com/systemesdecodes/"
+    },
+    "youtube": {
+      "handle": "@SystèmesDécodé",
+      "url": "https://www.youtube.com/@Syst%C3%A8mesD%C3%A9cod%C3%A9"
+    }
+  },
   "bio": "Ils veillent pendant que tu dors.\nOn les décode, un système à la fois.",
   "bios": {
     "instagram": "Ils veillent pendant que tu dors.\nOn les décode, un système à la fois.\nUn dossier en 3D, 80 secondes.\n#commentcamarche #ingenierie #securite",
