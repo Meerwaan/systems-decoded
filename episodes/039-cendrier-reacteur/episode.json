@@ -1,0 +1,317 @@
+{
+  "id": "039",
+  "serie": "dossier",
+  "slug": "cendrier-reacteur",
+  "title": "Le cendrier du réacteur",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Réacteur",
+      "en fusion"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Récupérateur de corium",
+    "caption": "Récupérateur de corium, le « core catcher » de l'EPR : quand le cœur d'un réacteur fond et perce sa cuve, on ne l'arrête pas. On le laisse couler, par une porte qui fond, vers une salle vide de 170 m². Et pour l'eau : ni pompe, ni courant. Le réacteur près de chez toi : chambre d'étalement… ou pas ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#nucleaire",
+      "#reacteur",
+      "#science"
+    ],
+    "pinned": "En France, le parc ancien n'a pas de chambre d'étalement : il a reçu d'autres modifications. Le réacteur près de chez toi : chambre… ou pas ?",
+    "instagram": {
+      "caption": "Ton réacteur nucléaire fond. L'acier lâche. Et on le laisse couler.\n\nDossier 039 : le récupérateur de corium de l'EPR. Une fosse en béton sacrificiel, une porte fusible, un canal… et une chambre de 170 m², vide. Pourquoi un cœur fondu étalé ne perce plus le sol. Une reconstitution : ce système n'a jamais servi en conditions réelles.\n\nLe réacteur près de chez toi : chambre d'étalement… ou pas ?",
+      "hashtags": [
+        "#nucleaire",
+        "#reacteur",
+        "#energie",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ton réacteur nucléaire fond… et on le laisse couler : le récupérateur de corium",
+      "description": "Dossier 039 — le récupérateur de corium (« core catcher ») de l'EPR ouvert : la fosse en béton sacrificiel sous la cuve, la porte fusible, le canal, la chambre d'étalement de 170 m² et la piscine du bâtiment réacteur. Pourquoi un cœur fondu étalé devient mince et ne perce plus le sol. Une reconstitution : ce système n'a jamais servi en conditions réelles.\n\nIngénieurs et techniciens du nucléaire : qu'est-ce qu'on a simplifié ? Et toi : le réacteur près de chez toi, chambre d'étalement… ou pas ?",
+      "hashtags": [
+        "#shorts",
+        "#nucleaire",
+        "#reacteur",
+        "#energie",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "La scène est un scénario reconstitué en 3D : un récupérateur de corium n'a jamais servi en conditions réelles sur un EPR — docs/faits/039-cendrier-reacteur.md § 1, § 10",
+    "Le cœur d'un réacteur peut fondre ; le corium se forme à 2 500–3 000 °C (« plus de deux mille degrés ») — Connaissance des énergies, « Qu'appelle-t-on le corium ? » [S] ; bain ≈ 2 200 °C, IRSN (extrait) [S/O]",
+    "Le corium perce le fond de la cuve d'acier — Fischer & Bechta, NURETH-16, 2015, § 9 [P] ; IRSN (extrait) [S]",
+    "Il s'accumule dans la fosse, couverte de béton sacrificiel conçu pour être érodé — Fischer & Bechta, NURETH-16, 2015, § 9 [P]",
+    "Une porte fusible au centre du fond de la fosse, seule sortie, fondue par le corium — IRSN-2008/98 cité par Laponche, Global Chance, 2019 [P/S] ; Fischer (« melt plug ») [P]",
+    "Un canal de décharge mène à la chambre d'étalement, placée à côté et non sous la cuve — IRSN-2008/98 cité par Laponche [P/S] ; Fischer § 9.1 [P]",
+    "La chambre d'étalement est à sec jusqu'à l'arrivée du corium — IRSN-2008/98 cité par Laponche [P/S] ; Fischer [P]",
+    "Chambre d'étalement de 170 m² — ASN, inspection du 09/12/2011, INSSN-CAE-2011-0659 [P] ; IRSN, programme de recherche sur l'étalement (2005) [S]",
+    "Principe : la chaleur du corium naît dans tout son volume ; le flux par mètre carré croît avec son épaisseur, étalé il devient mince — IRSN, programme de recherche sur l'étalement (2005) [S]",
+    "Étalement « en quelques dizaines de secondes » ; l'eau recouvre le corium « après plusieurs minutes » — IRSN-2008/98 cité par Laponche [P/S]",
+    "Les déclencheurs des vannes de noyage sont détruits par la coulée ; une fois ouvertes, elles restent ouvertes — Fischer & Bechta, NURETH-16, 2015, § 9 [P]",
+    "L'eau vient de la piscine IRWST dans le bâtiment réacteur, par gravité, sans pompe ni source d'énergie (système passif) — Fischer [P] ; Connaissance des énergies [S]",
+    "De l'eau trop tôt sur le corium : explosion de vapeur, d'où l'étalement à sec — Fischer [P] ; IRSN-2008/98 cité par Laponche [P/S]",
+    "Question du commentaire : le parc français plus ancien n'a pas de chambre d'étalement (refroidissement par-dessus seulement), mais a reçu des modifications de stabilisation — IRSN, résumé [P] ; Laponche citant l'ASN/IRSN [P/S]",
+    "L'image reconstitue la coulée, la fosse, la porte, le canal, la chambre, les vannes et la piscine : aucun schéma ni photo sous licence vérifiée",
+    "Prochain dossier : soixante-treize pompiers encerclés par le feu, aucun brûlé (Butte Fire, Idaho, 1985) — consigne du lot, docs/faits/040-abri-anti-feu.md"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "voir": "Contre-plongée depuis le fond de la fosse : la cuve d'acier, énorme, rougit par-dessous et une goutte orange perce et tombe vers nous ; en bas du cadre, au centre du sol de béton, la porte fusible, petite mais lisible ; au mot « couler » la goutte devient un filet.",
+      "text": "Ton réacteur nucléaire *fond*. L'acier lâche. Et on le laisse +couler+.",
+      "vo": "[tense] Ton réacteur nucléaire fond. L'acier lâche. Et on le laisse couler.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ton réacteur nucléaire fond. L'acier lâche. Et on le laisse couler."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "voir": "Travelling qui part de la fosse et longe le canal jusqu'à la chambre d'étalement, vide, sombre, à sec ; puis la piscine du bâtiment aux rayons X, vannes fermées, l'eau immobile ; sur « ouvrir » gros plan sur une vanne close.",
+      "text": "Sur l'[EPR|e-pé-erre], c'est prévu : une salle vide l'attend. Pour l'eau, ni pompe, ni courant, ni toi. Alors qui va l'*ouvrir* ?",
+      "vo": "[firm, matter-of-fact] Sur l'e-pé-erre, c'est prévu : une salle vide l'attend. Pour l'eau, ni pompe, ni courant, ni toi. [short pause] Alors qui va l'ouvrir ?"
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "voir": "Retour sous la cuve, même instant, chrono à l'écran : le fond rougit et se perce, le corium coule dans la fosse et ronge le béton (fumée, niveau qui monte) ; on finit en plongée sur la porte fusible au centre du fond, qui commence à rougir.",
+      "text": "Plus de [2 000|deux mille] degrés. Le fond de la cuve se *perce*. Le cœur fondu ronge une fosse de béton. Une seule sortie… une porte qui doit +fondre+.",
+      "vo": "[tense] Plus de deux mille degrés. Le fond de la cuve se perce. Le cœur fondu ronge une fosse de béton. Une seule sortie... une porte qui doit fondre."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "voir": "La caméra recule de la porte et, sur « ouvre », l'ensemble s'éclate en l'air : cuve, fosse, porte fusible, canal, chambre d'étalement, piscine, chacun séparé sur fond sombre.",
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ]
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "voir": "On suit le chemin du corium sur l'éclaté, pièce par pièce, chacune nommée : la fosse et sa couche de béton sacrificiel qui s'écaille, la porte fusible au centre, le canal qui part de côté, et au bout la chambre d'étalement, grande dalle vide et sèche.",
+      "text": "La fosse, en béton sacrificiel : fait pour être mangé. Au centre, la porte fusible. Puis un canal. Et au bout… la chambre d'étalement. À +sec+.",
+      "vo": "[conversational, curious] La fosse, en béton sacrificiel : fait pour être mangé. Au centre, la porte fusible. Puis un canal. Et au bout... la chambre d'étalement. À sec.",
+      "voAlt": [
+        "[curious] La fosse, en béton sacrificiel : fait pour être mangé. Au centre, la porte fusible. Puis un canal. Et au bout... la chambre d'étalement. À sec."
+      ]
+    },
+    {
+      "id": "principe",
+      "voir": "Sur la dalle, la même masse de corium deux fois : un tas épais, dont la chaleur (flèches rouges serrées) traverse le sol ; puis il s'étale en galette mince sur toute la chambre, les flèches s'espacent et raccourcissent ; « 170 m² » s'inscrit sur la dalle.",
+      "text": "Pourquoi l'étaler ? Le cœur fondu chauffe dans toute son épaisseur. Épais, il perce le sol. Étalé sur [170|cent soixante-dix] mètres carrés, il devient mince : sa chaleur se +partage+.",
+      "vo": "[curious] Pourquoi l'étaler ? [short pause] Le cœur fondu chauffe dans toute son épaisseur. Épais, il perce le sol. Étalé sur cent soixante-dix mètres carrés, il devient mince : sa chaleur se partage."
+    },
+    {
+      "id": "repos",
+      "voir": "La chambre vide en vue rasante, plancher de fonte froid, rien ne bouge ; la caméra monte vers la piscine du bâtiment, eau calme, vannes fermées et leurs déclencheurs posés au ras de la dalle ; aucun personnage.",
+      "text": "Il n'a jamais servi. Il *dort*, à sec, à côté de la cuve. Dans le bâtiment, une piscine attend. Vannes fermées. Et personne ne viendra les +ouvrir+.",
+      "vo": "[warm, conversational] Il n'a jamais servi. Il dort, à sec, à côté de la cuve. Dans le bâtiment, une piscine attend. Vannes fermées. Et personne ne viendra les ouvrir.",
+      "voAlt": [
+        "[curious] Il n'a jamais servi. Il dort, à sec, à côté de la cuve. Dans le bâtiment, une piscine attend. Vannes fermées. Et personne ne viendra les ouvrir."
+      ]
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "voir": "Le chrono reprend : la porte fusible rougit, s'affaisse et fond ; le corium jaillit dans le canal et la caméra le suit en travelling rapide, à sa hauteur, jusqu'à l'entrée de la chambre.",
+      "text": "La porte fusible *cède*. Le cœur fondu s'engouffre dans le canal. Droit vers la +chambre+.",
+      "vo": "[firm, matter-of-fact] La porte fusible cède. Le cœur fondu s'engouffre dans le canal. Droit vers la chambre."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "voir": "Le climax en grand, plongée large sur toute la chambre : la coulée orange s'étale d'un bord à l'autre en quelques secondes, mince ; elle atteint les déclencheurs, qui se brisent ; les vannes s'ouvrent, l'eau descend par le canal central, monte autour et déborde sur la galette dans un nuage de vapeur.",
+      "text": "Il *s'étale*. En quelques dizaines de secondes. Une mer orange, mince. Les vannes s'ouvrent… seules. Plusieurs minutes passent. L'eau descend, sans pompe. Et le +recouvre+.",
+      "vo": "[tense] Il s'étale. En quelques dizaines de secondes. Une mer orange, mince. Les vannes s'ouvrent... seules. Plusieurs minutes passent. L'eau descend, sans pompe. Et le recouvre."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "voir": "Le contre-exemple : de l'eau versée sur le tas épais encore dans la fosse, explosion de vapeur rouge ; puis la bonne image : la galette étalée, l'eau qui la recouvre calmement, la dalle qui passe au vert.",
+      "text": "Voilà le secret : on ne noie *pas* tout de suite un cœur fondu. Trop tôt, l'eau peut exploser en vapeur. L'eau vient +après+.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : on ne noie pas tout de suite un cœur fondu. Trop tôt, l'eau peut exploser en vapeur. L'eau vient après."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "voir": "Retour en arrière sur un déclencheur : la coulée passe dessus et le détruit, la vanne bascule ouverte et reste ouverte, l'eau file ; puis la chambre noyée, calme ; les chevrons montent vers la colonne de boutons.",
+      "text": "Et l'eau, qui l'a ouverte ? Le cœur fondu lui-même : en s'étalant, il détruit les déclencheurs des vannes. En +commentaire+ : le réacteur près de chez toi… un [EPR|e-pé-erre], ou *pas* ?",
+      "vo": "[conversational, curious] Et l'eau, qui l'a ouverte ? [short pause] Le cœur fondu lui-même : en s'étalant, il détruit les déclencheurs des vannes. [short pause] En commentaire : le réacteur près de chez toi... un e-pé-erre, ou pas ?",
+      "voAlt": [
+        "[curious] Et l'eau, qui l'a ouverte ? [short pause] Le cœur fondu lui-même : en s'étalant, il détruit les déclencheurs des vannes. [short pause] En commentaire : le réacteur près de chez toi... un e-pé-erre, ou pas ?"
+      ]
+    },
+    {
+      "id": "like",
+      "voir": "La galette refroidie sous l'eau, vue de trois quarts, le système en vert qui veille ; un filet d'eau tombe encore du canal central.",
+      "text": "+Like+ : pour quelqu'un qui croit qu'on éteint tout avec de l'*eau*.",
+      "vo": "[warm, conversational] Like : [short pause] pour quelqu'un qui croit qu'on éteint tout avec de l'eau.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour quelqu'un qui croit qu'on éteint tout avec de l'eau."
+      ]
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "voir": "Panneau « S'abonner pour l'ouvrir » et ses chevrons ; derrière, le dossier suivant en silhouette : une ligne de feu qui encercle une rangée d'abris posés au sol.",
+      "text": "+Abonne-toi+ : prochain dossier, [73|soixante-treize] pompiers pris au piège par le feu… et aucun *mort*.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, soixante-treize pompiers pris au piège par le feu... et aucun mort."
+    },
+    {
+      "id": "boucle",
+      "voir": "Retour arrière rapide jusque sous la cuve, en contre-plongée depuis la fosse : la cuve qui rougit, la porte fusible en bas du cadre, la même image que la première.",
+      "text": "Et tout recommence quand…",
+      "vo": "[calm] Et tout recommence quand,"
+    }
+  ],
+  "cues": {
+    "choc": "accroche:fond",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:vannes-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:recommence"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

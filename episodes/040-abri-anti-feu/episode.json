@@ -1,0 +1,322 @@
+{
+  "id": "040",
+  "serie": "dossier",
+  "slug": "abri-anti-feu",
+  "title": "Abri anti-feu",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Abri",
+      "anti-feu"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Abri anti-feu",
+    "caption": "Abri anti-feu, le « fire shelter » des pompiers forestiers : le front de flammes te passe dessus, et entre lui et toi il n'y a qu'une feuille d'aluminium qui fond bien avant le feu. Soixante-treize pompiers s'y sont couchés, encerclés sur une crête de l'Idaho. Pour ne pas griller : tu te couches pieds vers le feu… ou tête vers le feu ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#pompier",
+      "#feudeforet",
+      "#incendie"
+    ],
+    "pinned": "À la Butte, des abris déchirés sur dix à quarante-cinq centimètres protégeaient encore. Et toi : pieds vers le feu… ou tête ?",
+    "instagram": {
+      "caption": "Le feu te passe dessus. Et tu es sous une feuille d'alu.\n\nDossier 040 : l'abri anti-feu des pompiers forestiers. Une feuille d'aluminium sur de la silice, une lame d'air, de la fibre de verre, une seconde feuille… et comment un métal qui fond bien avant les flammes te garde en vie dessous. Le 29 août 1985, sur une crête de l'Idaho, 73 pompiers encerclés s'y sont couchés.\n\nPour ne pas griller : pieds vers le feu… ou tête vers le feu ?",
+      "hashtags": [
+        "#pompier",
+        "#feudeforet",
+        "#incendie",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Le feu te passe dessus… et tu es sous une feuille d'alu : l'abri anti-feu des pompiers",
+      "description": "Dossier 040 — l'abri anti-feu individuel (« fire shelter ») des pompiers forestiers ouvert : la feuille d'aluminium collée sur la silice, la lame d'air, la fibre de verre et la seconde feuille tournée vers toi. Pourquoi le feu te chauffe surtout par rayonnement, et ce que deux kilos plié sur un sac en font. Et le 29 août 1985, dans l'Idaho (Butte Fire) : 73 pompiers encerclés sur une crête, une heure et demie sous leurs abris. Une reconstitution.\n\nPompiers forestiers : qu'est-ce qu'on a simplifié ? Et toi : pieds vers le feu… ou tête vers le feu ?",
+      "hashtags": [
+        "#shorts",
+        "#pompier",
+        "#feudeforet",
+        "#incendie",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Butte Fire, forêt nationale de Salmon (Idaho), 29 août 1985 : 73 pompiers déploient leur abri au sommet d'une crête — Jukkala & Putnam, « Forest Fire Shelters Save Lives », Fire Management Notes 47(2), 1986 [P] ; wildfiretoday.com/?p=36253 [S]",
+    "« Encerclés » : 118 pompiers pris au piège par le passage du front (entrapment), 45 en zone de sécurité, 73 sous abri — wildfiretoday.com [S] ; le mot simplifie « pris au piège »",
+    "Environ une heure et demie sous les abris — wildfiretoday.com [S] (d'autres synthèses : 1 à 2 h)",
+    "Aucun brûlé ; cinq hospitalisés une nuit pour coup de chaleur — wildfiretoday.com [S]",
+    "Des manches de pelle posés près d'eux complètement consumés — wildfiretoday.com [S]",
+    "Au moins 60 des 73 seraient morts sans abri : estimation des enquêteurs — Jukkala & Putnam 1986 [P]",
+    "Abris déchirés sur 4 à 18 pouces (10 à 45 cm) qui protégeaient encore du rayonnement (dit dans l'épinglé seulement) — Jukkala & Putnam 1986 [P]",
+    "L'aluminium fond à 1 220 °F (≈ 660 °C), bien en dessous des flammes d'un feu de forêt (≈ 870 à 1 100 °C) — rapport d'enquête Yarnell Hill (SAI, 23/09/2013), tableau des températures [P] ; Scientific American [S]",
+    "La colle alu/tissu se délamine vers 500 °F (≈ 260 °C) — rapport Yarnell Hill, même tableau [P]",
+    "Couches : feuille d'aluminium contrecollée à une toile de silice tissée (alu vers l'extérieur), lame d'air, fibre de verre contrecollée à une seconde feuille d'alu tournée vers l'intérieur — Scientific American ; textiles.org/?p=753 [S]",
+    "L'alu renvoie plus de 9 sur 10 du rayonnement (95 % selon Scientific American, 90 % ailleurs : dit « plus de neuf sur dix ») ; la lame d'air freine le reste — Scientific American [S]",
+    "Le feu chauffe surtout par rayonnement (« comme le soleil » : image de la voix, pas une citation) — Scientific American [S]",
+    "≈ 2 kg (4,3 lb), plié comme un pain de mie ; déployé ≈ 218 cm de long — Scientific American ; Wikipédia « Fire shelter » [S]",
+    "Moins de 20 s pour le déployer : objectif d'entraînement du MTDC — résumé de recherche d'une page MTDC non lue (403) [S]",
+    "Face contre terre, la bouche près du sol, bords tenus à la main et par les sangles — MTDC via résumé de recherche [S] ; Jukkala & Putnam [P]",
+    "L'air le plus frais est à quelques centimètres du sol ; le plus dangereux est de respirer l'air chaud — Jukkala & Putnam 1986, citant une étude FAA [P]",
+    "Il ne supporte qu'un contact limité avec les flammes ; un contact prolongé délamine la couche externe — Jukkala & Putnam [P] ; Scientific American [S] (limite honnête, sans nommer Yarnell Hill)",
+    "Vent estimé à 80-110 km/h par un survivant — Jukkala & Putnam [P] (la voix dit seulement « le vent rabat les flammes »)",
+    "Pieds vers le feu (réponse de la question du commentaire, que le film ne dit pas ; l'image la montre) — MTDC via résumé de recherche [S]",
+    "Scène : reconstitution de la Butte Fire ; le chrono, la direction du vent et l'ordre des gestes sont un scénario, l'image reconstitue (aucune image réelle utilisée)",
+    "Annonce 041 : sur la station spatiale, un débris arrive à dix kilomètres par seconde — fait du dossier 041 (consigne de la salle d'écriture, à sourcer dans docs/faits/041-*)"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Le feu te passe *dessus*. Et tu es sous une feuille d'+alu+.",
+      "vo": "[tense] Le feu te passe dessus. Et tu es sous une feuille d'alu.",
+      "voAlt": [
+        "[firm, matter-of-fact] Le feu te passe dessus. Et tu es sous une feuille d'alu."
+      ],
+      "voir": "À ras du sol sur une crête raclée : un dôme d'alu argenté couché au premier plan (40 % de la largeur, de trois quarts), le mur de flammes qui déferle derrière lui et roule par-dessus dès l'image 1, braises qui filent ; aux rayons X sous la feuille, un pompier plein, à plat ventre."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Les +flammes+ peuvent la faire fondre. Pourtant, elle peut te garder en vie… sauf si tu lèves la *tête*.",
+      "vo": "[firm, matter-of-fact] Les flammes peuvent la faire fondre. [short pause] Pourtant, elle peut te garder en vie... sauf si tu lèves la tête.",
+      "voir": "On glisse sous la feuille : la lueur orange la traverse sans la percer ; dessous, le pompier couché, visage contre la terre ; sur « tête », sa tête se soulève d'un rien vers une nappe d'air rouge sombre qui flotte plus haut."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Autour de toi, [73|soixante-treize] pompiers, pris au *piège* sur la crête. Le vent rabat les flammes sur vous. [20|Vingt] secondes pour déplier ton +abri+, au mieux.",
+      "vo": "[tense] Autour de toi, soixante-treize pompiers, pris au piège sur la crête. Le vent rabat les flammes sur vous. Vingt secondes pour déplier ton abri, au mieux.",
+      "voir": "Plan large et bas depuis le bout de la crête : des dizaines de silhouettes aux rayons X sur des emplacements raclés au bulldozer, le front qui monte des deux flancs du canyon et les referme ; le vent couche les flammes vers eux ; le chrono part à 00:20 ; dernière image : ton paquet argenté, sorti de son étui, secoué par ses poignées."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "L'abri déplié, seul sur son halo, de trois quarts : sur « on », il s'ouvre en vue éclatée, ses couches qui se décollent les unes des autres comme des pages."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Dehors, une feuille d'aluminium collée sur de la silice. Dessous, une lame d'air. Puis la fibre de verre… et une seconde feuille, tournée vers +toi+.",
+      "vo": "[conversational, curious] Dehors, une feuille d'aluminium collée sur de la silice. Dessous, une lame d'air. Puis la fibre de verre... et une seconde feuille, tournée vers toi.",
+      "voAlt": [
+        "[curious] Dehors, une feuille d'aluminium collée sur de la silice. Dessous, une lame d'air. Puis la fibre de verre... et une seconde feuille, tournée vers toi."
+      ],
+      "voir": "La caméra descend couche par couche dans l'éclaté, chaque pièce nommée quand elle est dite : l'alu brillant sur sa trame de silice, la lame d'air (un vide clair entre deux couches), la fibre de verre, la seconde feuille dont le reflet se tourne vers la silhouette couchée."
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi ça marche ? Le feu t'envoie sa chaleur par +rayonnement+, comme le soleil. Ce miroir en renvoie plus de [9|neuf] sur [10|dix]. La lame d'air freine le reste.",
+      "vo": "[curious] Pourquoi ça marche ? [short pause] Le feu t'envoie sa chaleur par rayonnement, comme le soleil. Ce miroir en renvoie plus de neuf sur dix. La lame d'air freine le reste.",
+      "voir": "Sur la coupe refermée : dix traits de rayonnement orange partent du front vers le dôme ; neuf rebondissent sur la feuille extérieure et repartent vers le feu, le dixième entre et s'éteint en traversant la lame d'air avant d'atteindre le pompier."
+    },
+    {
+      "id": "repos",
+      "text": "Plié sur ton sac, il pèse [2|deux] kilos : un pain de mie. Mais sa colle lâche vers [260|deux cent soixante] *degrés*.",
+      "vo": "[warm, conversational] Plié sur ton sac, il pèse deux kilos : un pain de mie. Mais sa colle lâche vers deux cent soixante degrés.",
+      "voAlt": [
+        "[curious] Plié sur ton sac, il pèse deux kilos : un pain de mie. Mais sa colle lâche vers deux cent soixante degrés."
+      ],
+      "voir": "L'abri se replie en pain de mie dans son étui, accroché au sac du pompier ; gros plan sur le joint alu-tissu : la colle qui fume et un coin de feuille qui se soulève."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "*Zéro*. Le front monte sur la crête. À plat ventre, le visage dans la terre. Tes mains plaquent les +bords+.",
+      "vo": "[firm, matter-of-fact] Zéro. Le front monte sur la crête. À plat ventre, le visage dans la terre. Tes mains plaquent les bords.",
+      "voir": "Le chrono tombe à 00:00 ; le front franchit le haut de la crête ; aux rayons X dans le dôme, le pompier plein, pieds vers le feu (l'image le montre, la voix ne le dit pas), visage au sol, mains et sangles qui plaquent les bords contre la terre raclée."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Le feu te passe *dessus*. L'alu renvoie le rayonnement. À côté, les manches de pelle se consument. Dessous, tu respires l'air du sol. Environ une heure et demie. [73|Soixante-treize] abris. Aucun +brûlé+.",
+      "vo": "[tense] Le feu te passe dessus. L'alu renvoie le rayonnement. À côté, les manches de pelle se consument. Dessous, tu respires l'air du sol. Environ une heure et demie. Soixante-treize abris. Aucun brûlé.",
+      "voir": "Le climax en grand : le front roule sur le dôme ; sur « renvoie », toute la nappe de rayonnement rebondit sur la feuille (veille) ; à côté, une pelle posée au sol brûle jusqu'au fer ; sous le dôme, une fine couche d'air frais vert au ras de la bouche du pompier ; le chrono file à 1 h 30 ; le front s'éloigne, plan large qui recule : soixante-treize dômes argentés intacts sur la crête noircie."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : il n'encaisse *pas* la chaleur rayonnée. Il la +renvoie+. Une flamme collée trop longtemps… et il lâche.",
+      "vo": "[firm, matter-of-fact] Voilà son secret : il n'encaisse pas la chaleur rayonnée. Il la renvoie. Une flamme collée trop longtemps... et il lâche.",
+      "voir": "Coupe du dôme sur son halo : les rayons rebondissent encore sur la feuille, le nom du compte s'allume en vert sur « pas » ; puis une seule langue de flamme se plaque sur un coin : la feuille se décolle, un trou s'ouvre et la chaleur entre — la limite, montrée sur la pièce."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "En Idaho, sans zones dégagées ni abris, au moins soixante seraient morts, estiment les enquêteurs. Et ta tête ? Lève-la, et tu respires l'air chaud : le plus dangereux. En +commentaire+ : pieds vers le feu… ou *tête* ?",
+      "vo": "[conversational, curious] En Idaho, sans zones dégagées ni abris, au moins soixante seraient morts, estiment les enquêteurs. [short pause] Et ta tête ? Lève-la, et tu respires l'air chaud : le plus dangereux. [short pause] En commentaire : pieds vers le feu... ou tête ?",
+      "voAlt": [
+        "[curious] En Idaho, sans zones dégagées ni abris, au moins soixante seraient morts, estiment les enquêteurs. [short pause] Et ta tête ? Lève-la, et tu respires l'air chaud : le plus dangereux. [short pause] En commentaire : pieds vers le feu... ou tête ?"
+      ],
+      "voir": "Plan large de la crête noircie, les dômes alignés, l'en-tête « IDAHO · 29/08/1985 » (la date à l'écran, pas dans la voix) ; puis la coupe d'un dôme : le pompier lève la tête et entre dans la nappe d'air rouge du haut, la couche verte reste collée au sol ; sur la question, deux silhouettes couchées côte à côte, l'une pieds vers le front, l'autre tête vers le front, sans dire laquelle est juste."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour ceux qui montent au *feu* à ta place.",
+      "vo": "[warm, conversational] Like : [short pause] pour ceux qui montent au feu à ta place.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour ceux qui montent au feu à ta place."
+      ],
+      "voir": "Le pompier se relève au bord de son dôme, l'abri plié sous le bras, de dos face à la pente encore fumante ; les chevrons du rail désignent le bouton du like."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, sur la station spatiale, un débris arrive à [10|dix] kilomètres par *seconde*.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, sur la station spatiale, un débris arrive à dix kilomètres par seconde.",
+      "voir": "Le panneau « S'abonner pour l'ouvrir » et ses chevrons ; derrière, la crête bascule dans le noir et une petite étincelle traverse le cadre en un éclair : le débris annoncé, sans rien montrer de la station."
+    },
+    {
+      "id": "boucle",
+      "text": "Ici, sur ta crête…",
+      "vo": "[calm] Ici, sur ta crête,",
+      "voir": "On revient à ras du sol sur la crête raclée, le dôme argenté au premier plan, le mur de flammes qui se lève derrière : la dernière image retombe sur la première."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:dessus",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:renvoie-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:crête"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

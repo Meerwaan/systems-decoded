@@ -1,0 +1,320 @@
+{
+  "id": "041",
+  "serie": "dossier",
+  "slug": "bouclier-iss",
+  "title": "Le bouclier de l'ISS",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Le bouclier",
+      "de l'ISS"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "ISS",
+    "caption": "ISS, la Station spatiale internationale : un débris d'un centimètre fonce sur ta tête à dix kilomètres par seconde, quinze fois plus vite qu'une balle, et personne ne l'a vu venir. Entre lui et toi : une tôle d'un ou deux millimètres. Le plus dangereux là-haut : le gros… ou le petit ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#espace",
+      "#iss",
+      "#astronaute"
+    ],
+    "pinned": "Un fragment de quelques millièmes de millimètre a fait un éclat de 7 mm dans un hublot de l'ISS. Le plus dangereux : le gros… ou le petit ?",
+    "instagram": {
+      "caption": "Un débris fonce sur ta tête. Dix kilomètres par seconde. Ta station le laisse frapper.\n\nDossier 041 : le bouclier anti-débris de l'ISS. Une tôle d'aluminium d'un ou deux millimètres, dix centimètres de vide, un matelas de céramique et de kevlar… et pourquoi une tôle fine devant du vide arrête ce qu'une plaque épaisse laisserait passer. Et le 15 novembre 2021, quand plus de 1 500 morceaux sont arrivés.\n\nLe plus dangereux là-haut : le gros… ou le petit ?",
+      "hashtags": [
+        "#espace",
+        "#iss",
+        "#astronaute",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Un débris fonce sur ta tête à 10 km/s… et ta station le laisse frapper : le bouclier de l'ISS",
+      "description": "Dossier 041 — le bouclier anti-débris de la Station spatiale internationale ouvert (le bouclier de Whipple « rembourré », imaginé par l'astronome Fred Whipple dans les années 1940) : une tôle d'aluminium d'un ou deux millimètres, une dizaine de centimètres de vide, un matelas de céramique (Nextel) et de kevlar, puis la coque, presque cinq millimètres. Pourquoi, à dix kilomètres par seconde, le débris ne perce pas la tôle fine : il s'y brise en un nuage qui s'étale avant d'arriver. Ce qu'il arrête, environ un centimètre… et ce qu'il n'arrête pas : le 15 novembre 2021.\n\nIngénieurs, passionnés d'espace : qu'est-ce qu'on a simplifié ? Et toi : le plus dangereux là-haut, le gros… ou le petit ?",
+      "hashtags": [
+        "#shorts",
+        "#espace",
+        "#iss",
+        "#astronaute",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Scène : scénario reconstitué — un débris d'environ un centimètre, non suivi, frappe un module de l'ISS pendant qu'un astronaute dort ; aucun impact de cette taille n'est daté ; le nuage de fragments, l'astronaute et la manœuvre à l'image sont reconstitués.",
+    "Vitesse moyenne d'un débris en orbite basse ≈ 10 km/s (pics ≈ 15) — NASA ODPO FAQ [P] ; 8 à 9 km/s en moyenne sur l'ISS, NASA TP-2003-210788 (Christiansen) [P]. Dit « dix kilomètres par seconde ».",
+    "« Quinze fois plus vite qu'une balle » : 10 km/s ≈ 22 000 mph contre ≈ 1 500 mph pour une balle — Estell, NASA, « Space Debris and ISS » (2023) [P].",
+    "Trop petit pour être vu : seuls les objets d'environ 10 cm et plus sont suivis depuis le sol — NASA ODQN vol. 24 n° 3 ; Estell [P].",
+    "Pare-chocs (« bumper ») en aluminium ≈ 1,3 à 2 mm, dit « un ou deux millimètres » [O] — TP-2003-210788, fig. 5-8 et 3-13 [P, valeurs lues en texte, à confirmer sur la figure].",
+    "Écart pare-chocs / paroi ≈ 10,7 à 11,4 cm, dit « dix centimètres » [O] — TP-2003-210788 [P].",
+    "Matelas de Nextel (fibre de céramique) et de Kevlar entre le pare-chocs et la paroi — TP-2003-210788 [P] ; HVIT, Shield Development [P].",
+    "Paroi arrière en aluminium 2219-T87 de 4,8 mm, dite « presque cinq millimètres » ; derrière, la cabine pressurisée — TP-2003-210788 [P].",
+    "Principe : le projectile ne perce pas, il est brisé en un nuage qui s'étale en traversant l'écart ; sa quantité de mouvement est répartie sur une grande zone de la paroi, quand une plaque unique encaisse en un point très localisé — TP-2003-210788 §3.1 et §4 [P]. « Une pluie, pas une balle » : image de la voix.",
+    "Bouclier plus lourd à l'avant et sur les flancs, plus léger côté Terre (pas partout pareil) — TP-2003-210788 [P].",
+    "Efficace contre les débris d'environ 1 cm et moins — NASA ODQN vol. 24 n° 3 [P] ; exigence de conception : sphère d'aluminium de 1,3 cm à 7 km/s, TP-2003 et HVIT [P]. Que le bouclier tienne contre un débris d'un centimètre à 10 km/s : l'image reconstitue, aucun impact daté.",
+    "Choc de l'ordre du mégabar (≈ un million de fois la pression atmosphérique) pour de l'aluminium à 7 km/s — TP-2003-210788 §3.1 [P] ; dit en ordre de grandeur [O].",
+    "Le projectile brisé en fragments solides et gouttes de métal fondu (en partie seulement, jamais « vaporisé ») ; le Nextel et le Kevlar le choquent à nouveau ; ce qui touche la paroi arrière est « bénin » — TP-2003-210788 [P] ; HVIT, Shield Development [P]. Le pare-chocs est percé : TP-2003 [P].",
+    "« Le vaisseau le plus blindé jamais lancé » — NASA ODPO FAQ [P].",
+    "Les gros débris (suivis, ≥ ~10 cm) sont évités par manœuvre : 35 manœuvres d'évitement et 5 mises à l'abri depuis 1999 (Estell 2023) [P] ; ΔV de 0,3 à 1 m/s — Estell [P].",
+    "15 novembre 2021 : un missile antisatellite russe à tir direct détruit le satellite Kosmos 1408 ; plus de 1 500 fragments suivis ; les sept membres d'équipage (4 NASA, 2 cosmonautes, 1 ESA) s'abritent dans Crew Dragon et Soyouz — NASA, communiqué RELEASE21-156 [P, lu en résumé] ; Spaceflight Now, 15/11/2021 [S]. On ne dit pas si le bouclier aurait arrêté un morceau de ce nuage.",
+    "Épinglé : un éclat d'environ 7 mm dans une vitre de la Cupola (vers avril 2016), dû à un fragment, peut-être de peinture ou de métal, de quelques millièmes de millimètre — ESA citée par VOA et ScienceAlert [S].",
+    "Like : « plus c'est épais, plus ça protège », l'idée reçue que contredit TP-2003-210788 (une plaque unique concentre l'énergie en un point ; le Whipple pèse bien moins pour la même protection) [P].",
+    "Description YouTube : Fred Whipple propose le pare-météorites dans les années 1940 — NASA TP-2003 / HVIT [P] ; article « Meteorites and Space Travel », Astronomical Journal, 1947 — résumé ADS [S]."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Un débris fonce sur ta *tête*. [10|Dix] kilomètres par seconde. Ta station le laisse +frapper+.",
+      "vo": "[tense] Un débris fonce sur ta tête. Dix kilomètres par seconde. Ta station le laisse frapper.",
+      "voAlt": [
+        "[firm, matter-of-fact] Un débris fonce sur ta tête. Dix kilomètres par seconde. Ta station le laisse frapper."
+      ],
+      "voir": "Orbite, Terre en bas du cadre : vue basse de trois quarts sous un module de l'ISS aux rayons X (coque de verre ; dedans, plein, l'astronaute endormi dans son sac de couchage contre la paroi ; dehors, la tôle du bouclier, fine et lisible, à une main de la coque) ; dès l'image 1, une bille incandescente orange file vers la paroi à hauteur de sa tête, traînée de lumière ; sur « tête », elle n'est plus qu'à quelques longueurs ; sur « frapper », la station ne dévie pas d'un cheveu."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Devant ta coque : une tôle d'un ou deux +millimètres+. Au-delà d'un centimètre… tu te caches *où* ?",
+      "vo": "[firm, matter-of-fact] Devant ta coque : une tôle d'un ou deux millimètres. [short pause] Au-delà d'un centimètre... tu te caches où ?",
+      "voir": "Gros plan de profil sur la paroi : la tôle d'aluminium, mince comme un trait, puis le vide, puis la coque ; la bille en bord de cadre ; sur « centimètre », une jauge d'un centimètre se pose contre la bille et une bille plus grosse, rouge signal, apparaît derrière elle ; sur « où », retour sur l'astronaute endormi, seul dans le module."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Un centimètre : trop petit pour être vu. [15|Quinze] fois plus vite qu'une *balle*. Derrière ta paroi : ton air. Tu dors… Tout repose sur cette +tôle+.",
+      "vo": "[tense] Un centimètre : trop petit pour être vu. Quinze fois plus vite qu'une balle. Derrière ta paroi : ton air. Tu dors... Tout repose sur cette tôle.",
+      "voir": "Même seconde, la bille au ralenti : un radar au sol la balaie sans l'accrocher ; à côté d'elle, une balle de fusil fantôme laissée sur place ; on traverse la paroi : la cabine, son air en halo, l'astronaute qui dort ; on ressort et on finit sur la tôle seule, en grand, sur son halo, la bille au bord du cadre."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "La caméra se pose sur la tôle, de trois quarts ; sur « on », la paroi s'éclate en couches le long du chemin de la bille."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "D'abord, la tôle d'aluminium. Un matelas de céramique et de kevlar. Ta coque, [3|trois] à [5|cinq] millimètres. Et le cœur… [10|dix] centimètres de +vide+.",
+      "vo": "[conversational, curious] D'abord, la tôle d'aluminium. Un matelas de céramique et de kevlar. Ta coque, trois à cinq millimètres. Et le cœur... dix centimètres de vide.",
+      "voAlt": [
+        "[curious] D'abord, la tôle d'aluminium. Un matelas de céramique et de kevlar. Ta coque, trois à cinq millimètres. Et le cœur... dix centimètres de vide."
+      ],
+      "voir": "Éclaté de trois quarts qui suit le chemin de la bille, de dehors vers dedans : la tôle d'aluminium mince ; le matelas, couches blanches de céramique et jaunes de kevlar ; la coque épaisse, cote « presque 5 mm » ; sur « vide », les couches se resserrent et l'écart entre la tôle et le reste s'éclaire, vide, en grand, sur son halo."
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi du vide ? Le débris perce la tôle, mais il s'y +brise+, en nuage. En [10|dix] centimètres, ce nuage s'étale. Et ta coque reçoit une pluie… pas une balle.",
+      "vo": "[curious] Pourquoi du vide ? [short pause] Le débris perce la tôle, mais il s'y brise, en nuage. En dix centimètres, ce nuage s'étale. Et ta coque reçoit une pluie... pas une balle.",
+      "voir": "Coupe au ralenti extrême : la bille touche la tôle, s'y écrase et se fend en un cône de fragments qui s'élargit dans l'écart, une jauge de dix centimètres dessous ; à côté, en miroir, la même bille sur une plaque unique et épaisse : un seul point qui creuse ; sur « pluie », la coque reçoit des dizaines de petits points étalés, sur « balle », la plaque du miroir se troue."
+    },
+    {
+      "id": "repos",
+      "text": "Il attend, plus épais à l'avant de la station. Il arrête un centimètre. Pas plus. Et le tien… fait un *centimètre*.",
+      "vo": "[warm, conversational] Il attend, plus épais à l'avant de la station. Il arrête un centimètre. Pas plus. Et le tien... fait un centimètre.",
+      "voAlt": [
+        "[curious] Il attend, plus épais à l'avant de la station. Il arrête un centimètre. Pas plus. Et le tien... fait un centimètre."
+      ],
+      "voir": "La station entière aux rayons X dans le silence, la Terre qui défile : le bouclier en vert veille, plus épais à l'avant dans le sens de la marche ; une jauge « 1 cm » s'allume ; sur « le tien », la bille rouge revient se poser contre la jauge : exactement la même taille."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "*Contact*. Sur la tôle, un choc d'un million de fois la pression de l'air.",
+      "vo": "[firm, matter-of-fact] Contact. Sur la tôle, un choc d'un million de fois la pression de l'air.",
+      "voir": "Retour au module, même instant que la scène, chrono figé : la bille touche la tôle de plein fouet, éclair ; une onde de choc en anneau signal court dans le métal ; panneau haut : « ≈ un million de fois la pression de l'air »."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "La tôle se perce. Le débris se brise. Gouttes de métal fondu. Le nuage s'ouvre dans le vide. La céramique le casse encore. Ta coque encaisse… et +tient+.",
+      "vo": "[tense] La tôle se perce. Le débris se brise. Gouttes de métal fondu. Le nuage s'ouvre dans le vide. La céramique le casse encore. Ta coque encaisse... et tient.",
+      "voir": "Le mécanisme en grand, de trois quarts : la tôle percée d'un trou net ; derrière, le cône de fragments et de gouttes incandescentes s'ouvre dans les dix centimètres de vide ; les couches blanches du matelas l'attrapent et le hachent encore ; la coque reçoit une pluie de points, se bombe à peine et tient ; la caméra traverse la paroi : l'astronaute dort toujours."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà le secret : ta station, la plus blindée jamais lancée, n'arrête *pas* les gros débris. Elle les +esquive+… quand elle les voit.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : ta station, la plus blindée jamais lancée, n'arrête pas les gros débris. Elle les esquive... quand elle les voit.",
+      "voir": "On recule jusqu'à la station entière sur la Terre ; le nom du compte s'allume ; sur « gros débris », un objet rouge de la taille d'une balle de baseball approche ; sur « esquive », les moteurs du vaisseau arrimé à l'arrière s'allument, la station change d'orbite d'un cheveu et l'objet passe à côté."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et au-dessus, tu te caches où ? En [2021|deux mille vingt et un], un missile russe détruit un satellite : plus de [1 500|mille cinq cents] morceaux suivis. Les sept astronautes se réfugient… dans leurs +capsules+. En +commentaire+ : le plus dangereux… le gros, ou le *petit* ?",
+      "vo": "[conversational, curious] Et au-dessus, tu te caches où ? [short pause] En deux mille vingt et un, un missile russe détruit un satellite : plus de mille cinq cents morceaux suivis. Les sept astronautes se réfugient... dans leurs capsules. [short pause] En commentaire : le plus dangereux... le gros, ou le petit ?",
+      "voAlt": [
+        "[curious] Et au-dessus, tu te caches où ? [short pause] En deux mille vingt et un, un missile russe détruit un satellite : plus de mille cinq cents morceaux suivis. Les sept astronautes se réfugient... dans leurs capsules. [short pause] En commentaire : le plus dangereux... le gros, ou le petit ?"
+      ],
+      "voir": "Reconstitution : au loin, un satellite se disperse en un nuage de points rouges qui s'étale le long de l'orbite ; dans la station aux rayons X, les sept silhouettes flottent vers les deux capsules arrimées, Dragon et Soyouz, et s'y enferment ; HUD « 15/11/2021 » ; puis en haut, côte à côte, une bille d'un centimètre et une balle de baseball ; chevrons vers les commentaires."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour qui croit que plus c'est épais, plus ça *protège*.",
+      "vo": "[warm, conversational] Like : [short pause] pour qui croit que plus c'est épais, plus ça protège.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour qui croit que plus c'est épais, plus ça protège."
+      ],
+      "voir": "Une plaque épaisse et la tôle fine avec son vide, côte à côte ; une bille frappe chacune : la plaque est creusée en un point, la tôle et son vide tiennent ; chevrons vers le bouton like."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, un char dont le toit est fait pour sauter… pour sauver l'*équipage*.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, un char dont le toit est fait pour sauter... pour sauver l'équipage.",
+      "voir": "Panneau « Prochain dossier : classé », un char aux rayons X sous scellés dans le noir, son toit seul souligné ; chevrons « S'abonner pour l'ouvrir »."
+    },
+    {
+      "id": "boucle",
+      "text": "Comme ici, quand…",
+      "vo": "[calm] Comme ici, quand,",
+      "voir": "Retour sous le module, vue basse de trois quarts : la bille incandescente file vers la paroi, l'astronaute dort ; la dernière image rejoint la première."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:tête",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:tient-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:ici"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
