@@ -1,0 +1,1081 @@
+{
+ "id": "L06",
+ "slug": "blackout",
+ "title": "Blackout",
+ "format": "long",
+ "genre": "affaire",
+ "fps": 30,
+ "lead": 0.2,
+ "tail": 0.45,
+ "voice": {
+  "name": "Eric",
+  "voiceId": "9osbeK6KzhDRV0yX4rTq",
+  "model": "eleven_v4_turbo",
+  "stability": 0.4,
+  "similarity": 0.8,
+  "speed": 1,
+  "seed": 21,
+  "parts": [
+   "n1",
+   "papenburg",
+   "coupure",
+   "sursis",
+   "manoeuvre",
+   "delestage",
+   "nordest",
+   "recolle",
+   "enquete",
+   "depuis",
+   "du"
+  ]
+ },
+ "post": {
+  "youtube": {
+   "title": "15 millions de foyers coupés exprès : le blackout européen de 2006",
+   "titleAlts": [
+    "Ils coupent une ligne pour un paquebot, 31 min plus tard l'Europe se casse en trois : le blackout de 2006",
+    "15 secondes pour couper l'Europe en trois : la nuit du blackout européen"
+   ],
+   "titleNote": "Autocomplétion YouTube (fr, 04/11/2026, agent faits) : rien sur « panne 2006 », « panne géante », « blackout 4 novembre » ; « blackout europe » et « european blackout » existent, « blackout espagne explication / portugal » est vivant (2025) : d'où « blackout » + « européen » dans chaque titre, et l'Espagne dans la description. Paires titre / miniature, chacune complète l'autre : titre A (« coupés exprès », l'effet voulu) avec « UN PAQUEBOT » (la cause apparente : la ligne coupée à 21 h 38-39 pour le Norwegian Pearl ; le film dit que le bateau n'est pas la cause) ; titre B (le paquebot, 31 min) avec « L'EUROPE EN 3 » (22:10:28,7) ; titre C (15 secondes) avec « À 49 HZ, ON TE COUPE » (le premier étage du délestage, 5 M de foyers en France).",
+   "keyword": "blackout europe",
+   "descriptionTemplate": "Blackout européen, 4 novembre 2006 : à 22 h 10, une ligne saute dans le nord de l'Allemagne. Quinze secondes plus tard, le réseau électrique européen est coupé en trois, et environ 15 millions de foyers perdent le courant, dont 5 millions en France. Pas par accident : pour sauver le reste du continent.\n\nUn documentaire en 3D qui reconstitue la nuit seconde par seconde, d'après le rapport final de l'UCTE et celui de la CRE : comment marche le réseau électrique européen (50 hertz, la règle N-1), la ligne coupée pour laisser passer un paquebot, les 17 secondes de la cascade, le délestage automatique qui arrête la chute à 49 Hz, l'Est qui s'emballe à 51,4 Hz, et comment on recolle l'Europe. Et ce qui a changé depuis, jusqu'au blackout de l'Espagne et du Portugal du 28 avril 2025.\n\nChapitres\n__CHAPITRES__\n\nPièces du dossier et sources\n· UCTE, « Final Report – System Disturbance on 4 November 2006 » (30 janvier 2007) : https://eepublicdownloads.entsoe.eu/clean-documents/pre2015/publications/ce/otherreports/Final-Report-20070130.pdf\n· CRE, rapport d'enquête sur la panne d'électricité du 4 novembre 2006 (7 février 2007) : https://www.cre.fr/fileadmin/Documents/Communiques_de_presse/import/1170938766980.pdf\n· ENTSO-E, blackout ibérique du 28 avril 2025 : https://www.entsoe.eu/publications/blackout/28-april-2025-Iberian-blackout\n\nLa 3D est une reconstitution d'après les rapports d'enquête. Aucune image de journal télévisé ni d'aucune chaîne.\n\nEt toi : si un jour c'est ta maison qu'on coupe pour sauver le continent… d'accord, ou pas d'accord ?\n\nSystème Décodé ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite, pour un autre jour où un plan a été mis à l'épreuve.",
+   "hashtags": [
+    "#blackout",
+    "#electricite",
+    "#documentaire",
+    "#histoirevraie",
+    "#europe"
+   ],
+   "pinned": "D'accord ou pas d'accord ? Le 4 novembre 2006, en France, seul le premier des quatre étages du délestage a servi : 5 millions de foyers, pour que le continent tienne.",
+   "endScreen": "Les 15 dernières secondes laissent la moitié droite de l'image libre pour l'écran de fin.",
+   "chapters": [
+    "22 h 10 : l'Europe coupée en trois",
+    "Comment marche le réseau électrique européen",
+    "La règle N-1 : la roue de secours du réseau",
+    "Une ligne à couper pour un paquebot",
+    "21 h 38 : la règle N-1 ne tient plus",
+    "31 minutes de sursis",
+    "Les 17 secondes qui cassent l'Europe",
+    "Le délestage : 11 secondes pour ne pas tout perdre",
+    "51,4 hertz : l'autre moitié s'emballe",
+    "Recoller l'Europe",
+    "L'enquête : ce que dit le rapport",
+    "Ce qui te protège depuis",
+    "Alors, qui a éteint ta lumière ?"
+   ],
+   "tags": [
+    "blackout",
+    "blackout europe",
+    "blackout européen",
+    "european blackout",
+    "blackout 2006",
+    "panne électricité europe",
+    "panne de courant géante",
+    "délestage",
+    "réseau électrique",
+    "comment marche le réseau électrique",
+    "50 hertz",
+    "fréquence réseau électrique",
+    "règle N-1",
+    "norwegian pearl",
+    "blackout espagne",
+    "blackout espagne explication",
+    "RTE",
+    "UCTE",
+    "documentaire électricité",
+    "reconstitution 3d"
+   ]
+  }
+ },
+ "thumb": {
+  "at": "coupe+1",
+  "title": [
+   "UN",
+   "PAQUEBOT"
+  ],
+  "tone": "signal",
+  "tag": "LIGNE 380 KV · 4 NOV. 2006",
+  "cam": {
+   "side": -420,
+   "drift": 0
+  },
+  "grade": {
+   "contrast": 1.32,
+   "saturation": 1.15
+  }
+ },
+ "thumb2": {
+  "at": "trois+1",
+  "title": [
+   "L'EUROPE",
+   "EN 3"
+  ],
+  "tone": "signal",
+  "tag": "22:10:28 · 4 NOV. 2006",
+  "cam": {
+   "side": -420,
+   "drift": 0
+  },
+  "grade": {
+   "contrast": 1.32,
+   "saturation": 1.15
+  }
+ },
+ "thumb3": {
+  "at": "clac+0.5",
+  "title": [
+   "À 49 HZ,",
+   "ON TE COUPE"
+  ],
+  "tone": "signal",
+  "tag": "DÉLESTAGE · 5 M DE FOYERS",
+  "cam": {
+   "side": -420,
+   "drift": 0
+  },
+  "grade": {
+   "contrast": 1.32,
+   "saturation": 1.15
+  }
+ },
+ "sources": [
+  "Faits : docs/faits/L06-blackout-europe.md (recherche du 04/11/2026, niveaux P/S/O). Source maîtresse lue en entier : UCTE, « Final Report – System Disturbance on 4 November 2006 », 30/01/2007, 84 p. — https://eepublicdownloads.entsoe.eu/clean-documents/pre2015/publications/ce/otherreports/Final-Report-20070130.pdf (P). Le rapport n'exprime aucun jugement de responsabilité (p. 3) : le film dit « le rapport conclut ».",
+  "Chronologie (UCTE p. 17-23, 42, annexe 3) : demande du chantier 18/09 pour le 5/11 à 01:00 ; « très chargé mais sûr » (TenneT, RWE, 27/10) ; le 3/11 vers 12:00, avancée au 4/11 à 22:00, RWE et TenneT non prévenus, absente du fichier DACF de 18:00 ; prévenus le 4/11 à 19:00 ; 21:29 calcul E.ON sans violation, N-1 supposé sans calcul numérique ; 21:38 et 21:39 les deux circuits Conneforde–Diele ; N-1 violé dès 21:40 (simulation du comité, p. 48) ; 21:41 RWE signale 1 795 A ; appels 21:46, 21:50, 21:52 ; 22:05-22:07 +100 MW ; 22:08 RWE demande une intervention urgente ; 22:10:11 couplage des jeux de barres à Landesbergen (« sans calcul », +67 A) ; 22:10:13 Landesbergen–Wehrendorf déclenche (2 120 A, seuil 2 100 A à Wehrendorf) ; 22:10:15 Bielefeld/Ost–Spexard puis Elsen, Bechterdissen ; 22:10:27-28 lignes au sud du Main, Autriche ; séparation 22:10:28,7 et 28,9 ; 22:10:32 liaisons Maroc–Espagne.",
+  "Le système (UCTE p. 12, 30, 54) : 23 pays, 450 M de personnes, ≈ 220 000 km de lignes ; bande normale ±180 mHz ; N-1 (politique 3) ; réserves primaire, secondaire, tertiaire (< 15 min) ; délestage par étages à partir de 49 Hz. « Des milliers d'alternateurs » et « l'électricité ne se stocke pas dans les fils » : ordres de grandeur de physique, non tirés du rapport. Italie 2003 : 55 M de personnes (CRE p. 4).",
+  "La chute de l'Ouest (UCTE p. 25-29) : ≈ 8 940 MW de déséquilibre, pente 120-150 mHz/s, réserve primaire ≈ 2 050 MW ; pompes arrêtées dès 49,5 Hz (1 600 MW) ; production perdue ≈ 10 900 MW dont 4 892 MW d'éolien (60 % de l'éolien, 30 % de la cogénération) ; arrêt de la chute à 22:10:39 ; ≈ 17 000 MW délestés ; Portugal 19 %. « Moins de vingt secondes » de 50 à 47,5 Hz : calcul (2,5 Hz ÷ 0,15 Hz/s ≈ 17 s, O). 47,5 Hz = découplage des centrales (CRE). « Sept réacteurs » : Annales des Mines, Réalités industrielles, août 2007, J.-P. Leteurtrois (S) — https://www.annales.org/ri/2007/ri-aout-2007/leteurtrois.pdf",
+  "France (CRE, 07/02/2007, p. 3, 33-40) : 5 M de clients, ≈ 6 300 MW délestés, seul le 1er échelon (49 Hz) sur quatre (49 / 48,5 / 48 / 47,5 Hz) ; service prioritaire non délesté ; réalimentation en deux demi-échelons à 22:30 et 22:40, tout repris vers 23:10 ; précision des relais ±0,15 Hz contre 0,1 Hz visé par l'UCTE (note 27) ; décret du 23/12/2006 (participation des distributeurs au délestage). — https://www.cre.fr/fileadmin/Documents/Communiques_de_presse/import/1170938766980.pdf",
+  "Nord-Est et resynchronisation (UCTE p. 27, 30-35, 42-43) : surplus > 10 000 MW, 51,4 Hz, ≈ 6 200 MW d'éolien déclenchés, retour vers 50,3 Hz, reconnexion automatique non contrôlée, remontée à partir de 22:13, surcharge Mikulowa–Czarna, « danger réel de nouvelle séparation » ; Ouest : ≈ 16 800 MW démarrés surtout hydrauliques, ≈ 50 Hz vers 22:24-25 ; dispositif de couplage : écart ≤ 500 mHz, angle ≤ 10°, 45 s ; tentatives ratées, 22:47 Allemagne/Autriche, 22:49 Sud-Est, 38 min ; normal en moins de 2 h. Bilan : ≈ 15 M de foyers (UCTE p. 5), une dizaine de pays (CRE), Maroc 300-350 MW (UCTE p. 39) ; aucun décès dans les trois rapports.",
+  "Enquête (UCTE p. 6, 8, 19, 48-49) : ni conditions climatiques extraordinaires ni défaillance technique ; causes : N-1 non tenu, coordination insuffisante ; réglages Landesbergen 3 000 A / Wehrendorf 2 100 A (tableau 1), valeurs échangées en sept. 2003 ; la manœuvre de 22:10:11 « ne peut pas être considérée comme une cause » ; recommandations p. 8-9, 58-63 (N-1 en ligne et avec les voisins, plate-forme temps réel, unités raccordées en distribution tenues comme celles du transport).",
+  "Depuis : Coreso, centre de coordination créé par RTE et Elia (18/12/2008, 24 h/24 depuis le 29/06/2009, analyses toutes les 15 min) — https://www.coreso.eu/rte-and-elia-create-coreso/ (S ; la page ne le relie pas au 4/11/2006 : le film ne le dit pas). Pylônes de l'Ems relevés de 84 à 110 m en 2007 : Wikimedia Commons, fichier « 380-kV-Ems-Freileitungskreuzung IMGP0026.jpg » (S, à confirmer). Espagne-Portugal : ENTSO-E, page du 28/04/2025 (« le plus sévère en plus de 20 ans », cause en tension) — https://www.entsoe.eu/publications/blackout/28-april-2025-Iberian-blackout (P).",
+  "Pièces du dossier possibles : photo « Norwegian Pearl in Papenburg, Germany » (Commons, Pink Dispatcher, CC BY-SA 2.0) — à n'utiliser qu'avec crédit, et sans dire qu'elle date de cette nuit ; photo des pylônes relevés (Commons, Rainer Knäpper, Licence Art Libre + GFDL 1.2). Figures du rapport UCTE : licence non établie, citées quelques secondes et redessinées en 3D. Le navire n'est jamais montré sur l'Ems cette nuit-là (le rapport ne dit pas s'il est passé)."
+ ],
+ "beats": [
+  {
+   "id": "accroche",
+   "chap": "22 h 10 : l'Europe coupée en trois",
+   "text": "[22 h 10|Vingt-deux heures dix]. Loin de toi, une ligne *saute* dans le nord de l'Allemagne.",
+   "vo": "[tense] Vingt-deux heures dix. Loin de toi, une ligne saute dans le nord de l'Allemagne.",
+   "voAlt": [
+    "[tense] Vingt-deux heures dix. [short pause] Loin de toi, une ligne saute dans le nord de l'Allemagne."
+   ]
+  },
+  {
+   "id": "promesse",
+   "text": "Quinze secondes plus tard, l'Europe est coupée en *trois*. Et en France… ta lumière s'éteint.",
+   "vo": "[conversational, curious] Quinze secondes plus tard, l'Europe est coupée en trois. Et en France... ta lumière s'éteint."
+  },
+  {
+   "id": "expres",
+   "text": "Cinq millions de foyers. Et ce n'est pas la ligne qui te coupe. C'est ton réseau. +Exprès+.",
+   "vo": "[curious] Cinq millions de foyers. Et ce n'est pas la ligne qui te coupe. C'est ton réseau. Exprès."
+  },
+  {
+   "id": "defi",
+   "fil": "tient",
+   "hold": 0.3,
+   "text": "À l'Ouest, l'aiguille des [50|cinquante] hertz plonge. Si elle touche [47,5|quarante-sept et demi]… tout l'ouest du continent s'éteint.",
+   "vo": "[serious] À l'Ouest, l'aiguille des cinquante hertz plonge. Si elle touche quarante-sept et demi... tout l'ouest du continent s'éteint."
+  },
+  {
+   "id": "paquebot",
+   "text": "Une demi-heure plus tôt, on avait coupé une ligne… pour laisser passer un *paquebot*.",
+   "vo": "[warm, conversational] Une demi-heure plus tôt, on avait coupé une ligne... pour laisser passer un paquebot."
+  },
+  {
+   "id": "curiosite",
+   "fil": "du",
+   "hold": 0.3,
+   "text": "Mais le rapport officiel conclut : ni tempête, ni panne. Ni le bateau. Alors, qui a éteint ta *lumière* ?",
+   "vo": "[curious] Mais le rapport officiel conclut : ni tempête, ni panne. Ni le bateau. Alors, qui a éteint ta lumière ?"
+  },
+  {
+   "id": "dessous",
+   "hold": 0.3,
+   "text": "Pour le savoir… il faut ouvrir la machine sur laquelle ta prise est *branchée*.",
+   "vo": "[conversational, curious] Pour le savoir... il faut ouvrir la machine sur laquelle ta prise est branchée."
+  },
+  {
+   "id": "ouvre",
+   "chap": "Comment marche le réseau électrique européen",
+   "hold": 0.4,
+   "text": "Alors… on l'ouvre.",
+   "vo": "[calm] Alors... on l'ouvre.",
+   "voAlt": [
+    "[calm] Alors... [short pause] on l'ouvre."
+   ]
+  },
+  {
+   "id": "eclate",
+   "text": "Des centrales. Des lignes à très haute tension. Des postes. Et au bout, des millions de *prises*.",
+   "vo": "[curious] Des centrales. Des lignes à très haute tension. Des postes. Et au bout, des millions de prises."
+  },
+  {
+   "id": "pays",
+   "text": "[23|Vingt-trois] pays, branchés ensemble.",
+   "vo": "[conversational, curious] Vingt-trois pays, branchés ensemble."
+  },
+  {
+   "id": "gens",
+   "text": "[450 millions|Quatre cent cinquante millions] de personnes. Un seul réseau.",
+   "vo": "[warm, conversational] Quatre cent cinquante millions de personnes. Un seul réseau."
+  },
+  {
+   "id": "chef",
+   "text": "[220 000|Deux cent vingt mille] kilomètres de lignes. Et pas de chef : chaque gestionnaire gère sa zone… et doit s'entendre avec ses *voisins*.",
+   "vo": "[curious] Deux cent vingt mille kilomètres de lignes. Et pas de chef : chaque gestionnaire gère sa zone... et doit s'entendre avec ses voisins."
+  },
+  {
+   "id": "coeur",
+   "text": "Au centre, les +alternateurs+ des centrales. Des rotors d'acier, entraînés par des turbines. Et tous tournent… au même rythme.",
+   "vo": "[conversational, curious] Au centre, les alternateurs des centrales. Des rotors d'acier, entraînés par des turbines. Et tous tournent... au même rythme."
+  },
+  {
+   "id": "rythme",
+   "text": "Ce rythme, c'est la fréquence : [50|cinquante] hertz. La même à Lisbonne, à Paris, à Varsovie. C'est le *pouls* du continent.",
+   "vo": "[warm, conversational] Ce rythme, c'est la fréquence : cinquante hertz. La même à Lisbonne, à Paris, à Varsovie. C'est le pouls du continent."
+  },
+  {
+   "id": "sens",
+   "text": "Le courant de ta prise change de sens cent fois par seconde. Partout. En même temps.",
+   "vo": "[curious] Le courant de ta prise change de sens cent fois par seconde. Partout. En même temps."
+  },
+  {
+   "id": "stock",
+   "text": "Et sur un réseau, l'électricité ne se stocke pas. À chaque seconde, il faut produire ce que l'Europe consomme.",
+   "vo": "[conversational, curious] Et sur un réseau, l'électricité ne se stocke pas. À chaque seconde, il faut produire ce que l'Europe consomme."
+  },
+  {
+   "id": "principe",
+   "text": "Le principe tient en une phrase. Si on consomme plus qu'on ne produit, les alternateurs *freinent*. Tous ensemble. Et la fréquence baisse.",
+   "vo": "[warm, conversational] Le principe tient en une phrase. Si on consomme plus qu'on ne produit, les alternateurs freinent. Tous ensemble. Et la fréquence baisse."
+  },
+  {
+   "id": "bande",
+   "text": "En temps normal, elle ne doit pas s'écarter de plus de [0,18|dix-huit centièmes] de hertz.",
+   "vo": "[curious] En temps normal, elle ne doit pas s'écarter de plus de dix-huit centièmes de hertz."
+  },
+  {
+   "id": "reserves",
+   "text": "Pour la tenir, des réserves en couches : une qui réagit en quelques secondes, une en quelques minutes, une en moins d'un quart d'heure. Mais ce soir-là… il en faudra *plus*.",
+   "vo": "[warm, conversational] Pour la tenir, des réserves en couches : une qui réagit en quelques secondes, une en quelques minutes, une en moins d'un quart d'heure. Mais ce soir-là... il en faudra plus."
+  },
+  {
+   "id": "n1",
+   "chap": "La règle N-1 : la roue de secours du réseau",
+   "fil": "n1",
+   "text": "Et pour qu'elle ne bouge pas, une règle tient tout le réseau. Elle s'appelle [N-1|N moins un].",
+   "vo": "[conversational, curious] Et pour qu'elle ne bouge pas, une règle tient tout le réseau. Elle s'appelle N moins un."
+  },
+  {
+   "id": "n1b",
+   "text": "Le réseau doit survivre à la perte de n'importe quel élément. Une ligne, une centrale. Sans que rien d'autre ne *saute*.",
+   "vo": "[curious] Le réseau doit survivre à la perte de n'importe quel élément. Une ligne, une centrale. Sans que rien d'autre ne saute."
+  },
+  {
+   "id": "concret",
+   "text": "Concrètement : si une ligne tombe, son courant passe par les autres. Elles doivent avoir la place de le prendre.",
+   "vo": "[warm, conversational] Concrètement : si une ligne tombe, son courant passe par les autres. Elles doivent avoir la place de le prendre."
+  },
+  {
+   "id": "italie",
+   "text": "Ce n'est pas de la théorie : trois ans plus tôt, presque toute l'Italie s'est éteinte.",
+   "vo": "[serious] Ce n'est pas de la théorie : trois ans plus tôt, presque toute l'Italie s'est éteinte."
+  },
+  {
+   "id": "italie2",
+   "text": "Plus de cinquante millions de personnes dans le noir.",
+   "vo": "[warm, conversational] Plus de cinquante millions de personnes dans le noir."
+  },
+  {
+   "id": "roue",
+   "text": "Le N moins un, c'est la roue de secours. Et chaque gestionnaire la vérifie… dans sa zone.",
+   "vo": "[conversational, curious] Le N moins un, c'est la roue de secours. Et chaque gestionnaire la vérifie... dans sa zone."
+  },
+  {
+   "id": "derniere",
+   "midroll": true,
+   "hold": 1.2,
+   "text": "Et si la roue de secours ne suffit pas ? Il reste une toute dernière défense. Cachée près de chez toi. Et ce soir-là… elle va *servir*.",
+   "vo": "[curious] Et si la roue de secours ne suffit pas ? Il reste une toute dernière défense. Cachée près de chez toi. Et ce soir-là... elle va servir."
+  },
+  {
+   "id": "papenburg",
+   "chap": "Une ligne à couper pour un paquebot",
+   "text": "Retour en arrière. À Papenburg, dans le nord-ouest de l'Allemagne, le chantier naval Meyer Werft termine un paquebot de croisière : le *Norwegian Pearl*.",
+   "vo": "[warm, conversational] Retour en arrière. À Papenburg, dans le nord-ouest de l'Allemagne, le chantier naval Meyer Werft termine un paquebot de croisière : le Norwegian Pearl."
+  },
+  {
+   "id": "ems",
+   "text": "Le chantier est loin de la côte. Pour gagner la mer, chaque navire doit descendre l'Ems. Et au-dessus de la rivière passe une double ligne à [380 000|trois cent quatre-vingt mille] volts.",
+   "vo": "[curious] Le chantier est loin de la côte. Pour gagner la mer, chaque navire doit descendre l'Ems. Et au-dessus de la rivière passe une double ligne à trois cent quatre-vingt mille volts."
+  },
+  {
+   "id": "coupe",
+   "text": "Des pylônes de [84|quatre-vingt-quatre] mètres. Pour laisser passer le navire dessous… la ligne doit être *coupée*.",
+   "vo": "[conversational, curious] Des pylônes de quatre-vingt-quatre mètres. Pour laisser passer le navire dessous... la ligne doit être coupée."
+  },
+  {
+   "id": "riviere",
+   "fil": "du",
+   "text": "Une rivière en Allemagne, une ligne coupée… et ta lumière, ce soir-là, en dépend déjà.",
+   "vo": "[serious] Une rivière en Allemagne, une ligne coupée... et ta lumière, ce soir-là, en dépend déjà."
+  },
+  {
+   "id": "demande",
+   "text": "Le chantier demande la coupure pour le [5|cinq] novembre, à une heure du matin. Les voisins font leurs calculs : très chargé… mais sûr.",
+   "vo": "[curious] Le chantier demande la coupure pour le cinq novembre, à une heure du matin. Les voisins font leurs calculs : très chargé... mais sûr."
+  },
+  {
+   "id": "avance",
+   "text": "Puis, la veille vers midi, nouvelle demande : avancer de trois heures. Au samedi soir… à [22 h|vingt-deux heures].",
+   "vo": "[warm, conversational] Puis, la veille vers midi, nouvelle demande : avancer de trois heures. Au samedi soir... à vingt-deux heures."
+  },
+  {
+   "id": "eon",
+   "text": "E.ON Netz, qui gère la ligne, refait le calcul sur son réseau. Ça passe. Mais ses deux voisins, [[RWE|èr double-vé eu]|èr double-vé eu] et TenneT… ne sont pas *prévenus*.",
+   "vo": "[conversational, curious] E.ON Netz, qui gère la ligne, refait le calcul sur son réseau. Ça passe. Mais ses deux voisins, èr double-vé eu|èr double-vé eu] et TenneT... ne sont pas prévenus."
+  },
+  {
+   "id": "dixneuf",
+   "text": "Ils l'apprendront le soir même. À [19 h|dix-neuf heures]. Trois heures avant.",
+   "vo": "[serious] Ils l'apprendront le soir même. À dix-neuf heures. Trois heures avant."
+  },
+  {
+   "id": "detail",
+   "fil": "detail",
+   "text": "Et ailleurs, il y a un détail. Une autre ligne : Landesbergen–Wehrendorf. Un bout chez E.ON, l'autre chez [[RWE|èr double-vé eu]|èr double-vé eu].",
+   "vo": "[curious] Et ailleurs, il y a un détail. Une autre ligne : Landesbergen–Wehrendorf. Un bout chez E.ON, l'autre chez èr double-vé eu|èr double-vé eu]."
+  },
+  {
+   "id": "detail2",
+   "fil": "detail",
+   "hold": 0.8,
+   "text": "À chaque bout, un relais de protection. Et ces deux relais… ne sont pas réglés *pareil*.",
+   "vo": "[conversational, curious] À chaque bout, un relais de protection. Et ces deux relais... ne sont pas réglés pareil."
+  },
+  {
+   "id": "coupure",
+   "chap": "21 h 38 : la règle N-1 ne tient plus",
+   "text": "Samedi soir. On consomme peu. Mais le vent souffle sur le nord de l'Allemagne, et l'électricité file d'est en *ouest*.",
+   "vo": "[warm, conversational] Samedi soir. On consomme peu. Mais le vent souffle sur le nord de l'Allemagne, et l'électricité file d'est en ouest."
+  },
+  {
+   "id": "travaux",
+   "text": "C'est le week-end : des lignes sont déjà arrêtées pour travaux. Et sur tout le continent, [274 000|deux cent soixante-quatorze mille] mégawatts sont produits.",
+   "vo": "[curious] C'est le week-end : des lignes sont déjà arrêtées pour travaux. Et sur tout le continent, deux cent soixante-quatorze mille mégawatts sont produits."
+  },
+  {
+   "id": "calcul",
+   "text": "[21 h 29|Vingt et une heures vingt-neuf]. Dernier calcul chez E.ON Netz : aucune limite dépassée.",
+   "vo": "[conversational, curious] Vingt et une heures vingt-neuf. Dernier calcul chez E.ON Netz : aucune limite dépassée."
+  },
+  {
+   "id": "suppose",
+   "fil": "n1",
+   "text": "Et le N moins un ? D'après le rapport, l'équipe le suppose respecté. Sans le *calculer*.",
+   "vo": "[serious] Et le N moins un ? D'après le rapport, l'équipe le suppose respecté. Sans le calculer."
+  },
+  {
+   "id": "premier",
+   "text": "[21 h 38|Vingt et une heures trente-huit] : premier circuit coupé. [21 h 39|Trente-neuf] : le second. La ligne est hors tension.",
+   "vo": "[curious] Vingt et une heures trente-huit : premier circuit coupé. Trente-neuf : le second. La ligne est hors tension."
+  },
+  {
+   "id": "aiguille",
+   "fil": "tient",
+   "text": "Pour l'instant, l'aiguille est à cinquante. Elle ne bougera pas… pendant trente et une *minutes*.",
+   "vo": "[conversational, curious] Pour l'instant, l'aiguille est à cinquante. Elle ne bougera pas... pendant trente et une minutes."
+  },
+  {
+   "id": "report",
+   "text": "Le courant qui passait par là se jette sur les lignes voisines. Et les alarmes de forte charge… s'*allument*.",
+   "vo": "[curious] Le courant qui passait par là se jette sur les lignes voisines. Et les alarmes de forte charge... s'allument."
+  },
+  {
+   "id": "viole",
+   "fil": "n1",
+   "text": "Plus tard, les enquêteurs referont le calcul. Dès [21 h 40|vingt et une heures quarante], la règle N moins un n'est plus *tenue*.",
+   "vo": "[warm, conversational] Plus tard, les enquêteurs referont le calcul. Dès vingt et une heures quarante, la règle N moins un n'est plus tenue."
+  },
+  {
+   "id": "suivent",
+   "midroll": true,
+   "hold": 1.2,
+   "text": "Autrement dit : il suffit maintenant qu'une seule ligne tombe… pour que les autres suivent.",
+   "vo": "[serious] Autrement dit : il suffit maintenant qu'une seule ligne tombe... pour que les autres suivent."
+  },
+  {
+   "id": "sursis",
+   "chap": "31 minutes de sursis",
+   "fil": "detail",
+   "text": "[21 h 41|Vingt et une heures quarante et une]. [[RWE|èr double-vé eu]|èr double-vé eu] prévient E.ON : sur Landesbergen–Wehrendorf, sa limite est de [1 795|mille sept cent quatre-vingt-quinze] ampères.",
+   "vo": "[conversational, curious] Vingt et une heures quarante et une. èr double-vé eu|èr double-vé eu] prévient E.ON : sur Landesbergen–Wehrendorf, sa limite est de mille sept cent quatre-vingt-quinze ampères."
+  },
+  {
+   "id": "appels",
+   "text": "Les coups de téléphone s'enchaînent : trois appels en six minutes. La situation est jugée… *tendue*.",
+   "vo": "[curious] Les coups de téléphone s'enchaînent : trois appels en six minutes. La situation est jugée... tendue."
+  },
+  {
+   "id": "salon",
+   "text": "Chez toi, personne ne sait rien. C'est samedi soir. La télé, un repas, un ascenseur qui monte.",
+   "vo": "[warm, conversational] Chez toi, personne ne sait rien. C'est samedi soir. La télé, un repas, un ascenseur qui monte."
+  },
+  {
+   "id": "salon2",
+   "fil": "du",
+   "text": "Et dans une demi-heure, ta lumière va s'éteindre… sans que tu touches à un *interrupteur*.",
+   "vo": "[conversational, curious] Et dans une demi-heure, ta lumière va s'éteindre... sans que tu touches à un interrupteur."
+  },
+  {
+   "id": "cent",
+   "text": "Vers [22 h 05|vingt-deux heures cinq], cent mégawatts de plus arrivent sur la ligne. Elle dépasse la *limite*.",
+   "vo": "[curious] Vers vingt-deux heures cinq, cent mégawatts de plus arrivent sur la ligne. Elle dépasse la limite."
+  },
+  {
+   "id": "urgent",
+   "text": "[22 h 08|Vingt-deux heures huit]. [[RWE|èr double-vé eu]|èr double-vé eu] rappelle. Il faut intervenir. Tout de *suite*.",
+   "vo": "[warm, conversational] Vingt-deux heures huit. èr double-vé eu|èr double-vé eu] rappelle. Il faut intervenir. Tout de suite."
+  },
+  {
+   "id": "seuil",
+   "fil": [
+    "tient",
+    "du"
+   ],
+   "hold": 1,
+   "text": "Dans un peu plus de deux minutes, l'Europe sera coupée en trois. Si tu veux voir comment on la recolle… +abonne-toi+, on y entre.",
+   "vo": "[conversational, curious] Dans un peu plus de deux minutes, l'Europe sera coupée en trois. Si tu veux voir comment on la recolle... abonne-toi, on y entre."
+  },
+  {
+   "id": "manoeuvre",
+   "chap": "Les 17 secondes qui cassent l'Europe",
+   "text": "[22 h 10 min 11 s|Vingt-deux heures dix minutes et onze secondes]. Au poste de Landesbergen, E.ON Netz tente de soulager la ligne.",
+   "vo": "[curious] Vingt-deux heures dix minutes et onze secondes. Au poste de Landesbergen, E.ON Netz tente de soulager la ligne."
+  },
+  {
+   "id": "barres",
+   "text": "On couple deux jeux de barres : les grands conducteurs où arrivent les lignes du poste. D'habitude… séparés.",
+   "vo": "[conversational, curious] On couple deux jeux de barres : les grands conducteurs où arrivent les lignes du poste. D'habitude... séparés."
+  },
+  {
+   "id": "sanscalcul",
+   "text": "Une manœuvre décidée sans simulation, dans la précipitation, note le rapport. Le courant devait baisser.",
+   "vo": "[warm, conversational] Une manœuvre décidée sans simulation, dans la précipitation, note le rapport. Le courant devait baisser."
+  },
+  {
+   "id": "monte",
+   "text": "Il *monte*. [67|Soixante-sept] ampères de plus. Deux secondes.",
+   "vo": "[curious] Il monte. Soixante-sept ampères de plus. Deux secondes."
+  },
+  {
+   "id": "trip",
+   "text": "[22:10:13|Dix et treize secondes]. À Wehrendorf, le relais mesure [2 120|deux mille cent vingt] ampères.",
+   "vo": "[conversational, curious] Dix et treize secondes. À Wehrendorf, le relais mesure deux mille cent vingt ampères."
+  },
+  {
+   "id": "seuilrwe",
+   "fil": "detail",
+   "text": "Son seuil, côté [RWE|èr double-vé eu] : [2 100|deux mille cent].",
+   "vo": "[curious] Son seuil, côté èr double-vé eu : deux mille cent."
+  },
+  {
+   "id": "saute",
+   "text": "La ligne *saute*.",
+   "vo": "[conversational, curious] La ligne saute."
+  },
+  {
+   "id": "cascade",
+   "text": "Son courant se jette sur les voisines. Qui saturent. Et sautent à leur tour.",
+   "vo": "[warm, conversational] Son courant se jette sur les voisines. Qui saturent. Et sautent à leur tour."
+  },
+  {
+   "id": "bielefeld",
+   "text": "[22:10:15|Dix et quinze]. Bielefeld. Puis Elsen. Bechterdissen. La cascade descend vers le *sud*.",
+   "vo": "[curious] Dix et quinze. Bielefeld. Puis Elsen. Bechterdissen. La cascade descend vers le sud."
+  },
+  {
+   "id": "tension",
+   "text": "La tension s'effondre. Les relais ne voient plus une surcharge… ils croient voir un *court-circuit*.",
+   "vo": "[conversational, curious] La tension s'effondre. Les relais ne voient plus une surcharge... ils croient voir un court-circuit."
+  },
+  {
+   "id": "protegent",
+   "text": "Ils sont faits pour protéger chaque ligne. Pas pour sauver l'Europe.",
+   "vo": "[warm, conversational] Ils sont faits pour protéger chaque ligne. Pas pour sauver l'Europe."
+  },
+  {
+   "id": "main",
+   "text": "[22:10:27|Dix et vingt-sept]. Au sud du Main, les dernières lignes qui tiennent l'Europe ensemble déclenchent. Bavière. *Autriche*.",
+   "vo": "[curious] Dix et vingt-sept. Au sud du Main, les dernières lignes qui tiennent l'Europe ensemble déclenchent. Bavière. Autriche."
+  },
+  {
+   "id": "dechire",
+   "text": "[22:10:28|Dix et vingt-huit]. Et sept dixièmes. L'Europe se *déchire*.",
+   "vo": "[conversational, curious] Dix et vingt-huit. Et sept dixièmes. L'Europe se déchire."
+  },
+  {
+   "id": "trois",
+   "text": "Trois morceaux. L'Ouest, avec la France. Le Nord-Est. Le Sud-Est. Trois fréquences… et plus aucune ne suit les autres.",
+   "vo": "[warm, conversational] Trois morceaux. L'Ouest, avec la France. Le Nord-Est. Le Sud-Est. Trois fréquences... et plus aucune ne suit les autres."
+  },
+  {
+   "id": "seule",
+   "text": "Chaque morceau doit maintenant tenir seul. Sans les autres.",
+   "vo": "[conversational, curious] Chaque morceau doit maintenant tenir seul. Sans les autres."
+  },
+  {
+   "id": "maroc",
+   "midroll": true,
+   "hold": 1.2,
+   "text": "[22:10:32|Dix et trente-deux]. De l'autre côté de la Méditerranée… même le *Maroc* décroche.",
+   "vo": "[curious] Dix et trente-deux. De l'autre côté de la Méditerranée... même le Maroc décroche."
+  },
+  {
+   "id": "delestage",
+   "chap": "Le délestage : 11 secondes pour ne pas tout perdre",
+   "text": "À l'Ouest, il manque d'un coup près de [9 000|neuf mille] mégawatts. L'équivalent de sept gros réacteurs *nucléaires*.",
+   "vo": "[conversational, curious] À l'Ouest, il manque d'un coup près de neuf mille mégawatts. L'équivalent de sept gros réacteurs nucléaires."
+  },
+  {
+   "id": "freinent",
+   "text": "Les alternateurs freinent. Tous. Et l'aiguille plonge : jusqu'à [0,15|quinze centièmes] de hertz… par *seconde*.",
+   "vo": "[curious] Les alternateurs freinent. Tous. Et l'aiguille plonge : jusqu'à quinze centièmes de hertz... par seconde."
+  },
+  {
+   "id": "reserve",
+   "text": "La première réserve démarre. Mais elle ne pèse qu'environ [2 000|deux mille] mégawatts. Pour un trou de neuf mille.",
+   "vo": "[warm, conversational] La première réserve démarre. Mais elle ne pèse qu'environ deux mille mégawatts. Pour un trou de neuf mille."
+  },
+  {
+   "id": "pompes",
+   "text": "Les centrales de pompage, qui remontaient de l'eau dans leurs barrages, s'arrêtent net. Ça ne suffit pas.",
+   "vo": "[conversational, curious] Les centrales de pompage, qui remontaient de l'eau dans leurs barrages, s'arrêtent net. Ça ne suffit pas."
+  },
+  {
+   "id": "pire",
+   "text": "Et ça empire. Sous [49,5|quarante-neuf et demi], une multitude de petites éoliennes et de petites centrales se *déconnectent*.",
+   "vo": "[curious] Et ça empire. Sous quarante-neuf et demi, une multitude de petites éoliennes et de petites centrales se déconnectent."
+  },
+  {
+   "id": "onze",
+   "text": "Elles n'étaient pas faites pour tenir plus bas. Au total, près de [11 000|onze mille] mégawatts de production lâchent.",
+   "vo": "[warm, conversational] Elles n'étaient pas faites pour tenir plus bas. Au total, près de onze mille mégawatts de production lâchent."
+  },
+  {
+   "id": "vingt",
+   "fil": "tient",
+   "text": "À cette vitesse, quarante-sept et demi arrive en une vingtaine de *secondes*.",
+   "vo": "[curious] À cette vitesse, quarante-sept et demi arrive en une vingtaine de secondes."
+  },
+  {
+   "id": "noir",
+   "text": "Et à quarante-sept et demi, les centrales se déconnecteraient pour se protéger. Ce serait le *noir*.",
+   "vo": "[conversational, curious] Et à quarante-sept et demi, les centrales se déconnecteraient pour se protéger. Ce serait le noir."
+  },
+  {
+   "id": "geste",
+   "fil": "n1",
+   "text": "Le N moins un a lâché. Les réserves ne suffisent pas. Il reste un seul geste assez rapide. Et ce n'est pas un humain qui le fait.",
+   "vo": "[warm, conversational] Le N moins un a lâché. Les réserves ne suffisent pas. Il reste un seul geste assez rapide. Et ce n'est pas un humain qui le fait."
+  },
+  {
+   "id": "relais",
+   "text": "Dans les postes qui alimentent ton quartier, des relais regardent la fréquence. Ils sont réglés… à [49|quarante-neuf] hertz.",
+   "vo": "[curious] Dans les postes qui alimentent ton quartier, des relais regardent la fréquence. Ils sont réglés... à quarante-neuf hertz."
+  },
+  {
+   "id": "seul",
+   "text": "Pas d'ordinateur central. Chaque relais décide seul, en regardant la même aiguille.",
+   "vo": "[warm, conversational] Pas d'ordinateur central. Chaque relais décide seul, en regardant la même aiguille."
+  },
+  {
+   "id": "clac",
+   "text": "Quarante-neuf. Les relais *ouvrent*.",
+   "vo": "[curious] Quarante-neuf. Les relais ouvrent."
+  },
+  {
+   "id": "foyers",
+   "fil": "du",
+   "text": "Cinq millions de foyers français perdent le courant. Peut-être le tien. Les hôpitaux, en principe, non : ils sont sur une liste qu'on ne coupe pas.",
+   "vo": "[conversational, curious] Cinq millions de foyers français perdent le courant. Peut-être le tien. Les hôpitaux, en principe, non : ils sont sur une liste qu'on ne coupe pas."
+  },
+  {
+   "id": "ouest",
+   "text": "Dans toute la zone Ouest, [17 000|dix-sept mille] mégawatts de consommation sont coupés. Au Portugal, presque un *cinquième*.",
+   "vo": "[warm, conversational] Dans toute la zone Ouest, dix-sept mille mégawatts de consommation sont coupés. Au Portugal, presque un cinquième."
+  },
+  {
+   "id": "tient",
+   "paie": "tient",
+   "text": "[22:10:39|Vingt-deux heures dix et trente-neuf secondes]. L'aiguille s'arrête. Tout près de quarante-neuf. Ça +tient+.",
+   "vo": "[curious] Vingt-deux heures dix et trente-neuf secondes. L'aiguille s'arrête. Tout près de quarante-neuf. Ça tient."
+  },
+  {
+   "id": "etage",
+   "text": "En France, un seul étage du plan a servi. Il en restait *trois*.",
+   "vo": "[conversational, curious] En France, un seul étage du plan a servi. Il en restait trois."
+  },
+  {
+   "id": "inverse",
+   "fil": "recolle",
+   "hold": 0.6,
+   "text": "Mais à l'autre bout de l'Europe… c'est exactement l'inverse qui se passe.",
+   "vo": "[warm, conversational] Mais à l'autre bout de l'Europe... c'est exactement l'inverse qui se passe."
+  },
+  {
+   "id": "nordest",
+   "chap": "51,4 hertz : l'autre moitié s'emballe",
+   "text": "Au Nord-Est, il y a trop d'électricité. Celle qui partait vers l'Ouest n'a plus de route : plus de [10 000|dix mille] mégawatts en trop.",
+   "vo": "[conversational, curious] Au Nord-Est, il y a trop d'électricité. Celle qui partait vers l'Ouest n'a plus de route : plus de dix mille mégawatts en trop."
+  },
+  {
+   "id": "accelerent",
+   "text": "Les alternateurs *accélèrent*. La fréquence grimpe… jusqu'à [51,4|cinquante et un virgule quatre] hertz.",
+   "vo": "[curious] Les alternateurs accélèrent. La fréquence grimpe... jusqu'à cinquante et un virgule quatre hertz."
+  },
+  {
+   "id": "eoliennes",
+   "text": "Cette fois, ce sont les éoliennes qui aident : plus de [6 000|six mille] mégawatts se déconnectent automatiquement. On redescend vers [50,3|cinquante virgule trois].",
+   "vo": "[warm, conversational] Cette fois, ce sont les éoliennes qui aident : plus de six mille mégawatts se déconnectent automatiquement. On redescend vers cinquante virgule trois."
+  },
+  {
+   "id": "aucun",
+   "text": "Ici, aucun relais à quarante-neuf ne peut aider : il ne manque rien. Il y a *trop*.",
+   "vo": "[conversational, curious] Ici, aucun relais à quarante-neuf ne peut aider : il ne manque rien. Il y a trop."
+  },
+  {
+   "id": "reviennent",
+   "text": "Puis elles se *reconnectent*. Toutes seules. Sans qu'aucun gestionnaire ne le leur demande.",
+   "vo": "[curious] Puis elles se reconnectent. Toutes seules. Sans qu'aucun gestionnaire ne le leur demande."
+  },
+  {
+   "id": "pologne",
+   "text": "[22 h 13|Vingt-deux heures treize]. La fréquence remonte. Encore. En Pologne, une ligne sature.",
+   "vo": "[conversational, curious] Vingt-deux heures treize. La fréquence remonte. Encore. En Pologne, une ligne sature."
+  },
+  {
+   "id": "deuxieme",
+   "fil": "recolle",
+   "midroll": true,
+   "hold": 1.2,
+   "text": "Le rapport parle d'un danger réel. L'Europe pourrait se casser… une *deuxième* fois.",
+   "vo": "[serious] Le rapport parle d'un danger réel. L'Europe pourrait se casser... une deuxième fois."
+  },
+  {
+   "id": "recolle",
+   "chap": "Recoller l'Europe",
+   "text": "À l'Ouest, il faut produire. Vite. Près de [17 000|dix-sept mille] mégawatts démarrent, surtout dans les *barrages*.",
+   "vo": "[warm, conversational] À l'Ouest, il faut produire. Vite. Près de dix-sept mille mégawatts démarrent, surtout dans les barrages."
+  },
+  {
+   "id": "pouls",
+   "text": "[22 h 24|Vingt-deux heures vingt-quatre]. Cinquante hertz. Le pouls est revenu.",
+   "vo": "[curious] Vingt-deux heures vingt-quatre. Cinquante hertz. Le pouls est revenu."
+  },
+  {
+   "id": "rallume",
+   "text": "En France, on rallume par moitiés : à [22 h 30|vingt-deux heures trente], puis dix minutes plus tard. Pas tout d'un coup : la fréquence *retomberait*.",
+   "vo": "[conversational, curious] En France, on rallume par moitiés : à vingt-deux heures trente, puis dix minutes plus tard. Pas tout d'un coup : la fréquence retomberait."
+  },
+  {
+   "id": "plusdur",
+   "text": "Reste le plus dur : recoller les trois morceaux.",
+   "vo": "[warm, conversational] Reste le plus dur : recoller les trois morceaux."
+  },
+  {
+   "id": "conditions",
+   "text": "Deux zones ne se touchent que si elles tournent presque à la même vitesse. Moins d'un demi-hertz d'écart. Et un angle de moins de dix *degrés*.",
+   "vo": "[curious] Deux zones ne se touchent que si elles tournent presque à la même vitesse. Moins d'un demi-hertz d'écart. Et un angle de moins de dix degrés."
+  },
+  {
+   "id": "automate",
+   "text": "Un automate guette cet instant. On le lance… et on attend [45|quarante-cinq] secondes.",
+   "vo": "[conversational, curious] Un automate guette cet instant. On le lance... et on attend quarante-cinq secondes."
+  },
+  {
+   "id": "echecs",
+   "hold": 0.4,
+   "text": "Des tentatives échouent. On recommence.",
+   "vo": "[warm, conversational] Des tentatives échouent. On recommence."
+  },
+  {
+   "id": "recouple",
+   "paie": "recolle",
+   "text": "[22 h 47|Vingt-deux heures quarante-sept]. L'Allemagne et l'Autriche se recouplent. Ça *tient*.",
+   "vo": "[curious] Vingt-deux heures quarante-sept. L'Allemagne et l'Autriche se recouplent. Ça tient."
+  },
+  {
+   "id": "sudest",
+   "text": "[22 h 49|Quarante-neuf]. Le Sud-Est revient. Trente-huit minutes après la cassure… l'Europe bat de nouveau d'un seul +cœur+.",
+   "vo": "[conversational, curious] Quarante-neuf. Le Sud-Est revient. Trente-huit minutes après la cassure... l'Europe bat de nouveau d'un seul cœur."
+  },
+  {
+   "id": "rallume2",
+   "text": "En France, vers [23 h 10|vingt-trois heures dix], tout le monde est rallumé.",
+   "vo": "[warm, conversational] En France, vers vingt-trois heures dix, tout le monde est rallumé."
+  },
+  {
+   "id": "bilan",
+   "hold": 0.4,
+   "text": "Environ quinze millions de foyers coupés, dans une dizaine de pays, jusqu'au Maroc. Moins de deux heures. Et aucun décès n'est rapporté.",
+   "vo": "[serious] Environ quinze millions de foyers coupés, dans une dizaine de pays, jusqu'au Maroc. Moins de deux heures. Et aucun décès n'est rapporté."
+  },
+  {
+   "id": "comment2",
+   "fil": [
+    "du",
+    "detail"
+   ],
+   "hold": 0.6,
+   "text": "Reste une question. Comment une ligne coupée pour un bateau… a-t-elle pu casser un *continent* ? La réponse passe par deux chiffres.",
+   "vo": "[curious] Reste une question. Comment une ligne coupée pour un bateau... a-t-elle pu casser un continent ? La réponse passe par deux chiffres."
+  },
+  {
+   "id": "enquete",
+   "chap": "L'enquête : ce que dit le rapport",
+   "text": "Janvier [2007|deux mille sept]. Les gestionnaires du continent publient leur rapport final, avec la chronologie à la seconde. [84|Quatre-vingt-quatre] pages. Une *pièce* du dossier.",
+   "vo": "[warm, conversational] Janvier deux mille sept. Les gestionnaires du continent publient leur rapport final, avec la chronologie à la seconde. Quatre-vingt-quatre pages. Une pièce du dossier."
+  },
+  {
+   "id": "climat",
+   "text": "Première conclusion : ni conditions climatiques extraordinaires, ni défaillance du matériel. Rien n'a cassé.",
+   "vo": "[curious] Première conclusion : ni conditions climatiques extraordinaires, ni défaillance du matériel. Rien n'a cassé."
+  },
+  {
+   "id": "causes",
+   "paie": "n1",
+   "text": "Deux causes. La règle N moins un, qui n'était pas tenue. Et une coordination insuffisante entre *gestionnaires*.",
+   "vo": "[conversational, curious] Deux causes. La règle N moins un, qui n'était pas tenue. Et une coordination insuffisante entre gestionnaires."
+  },
+  {
+   "id": "prevenus",
+   "text": "Des voisins prévenus à dix-neuf heures. Des prévisions où la coupure n'apparaissait pas. Et chacun avait fait son calcul… sur son seul réseau.",
+   "vo": "[warm, conversational] Des voisins prévenus à dix-neuf heures. Des prévisions où la coupure n'apparaissait pas. Et chacun avait fait son calcul... sur son seul réseau."
+  },
+  {
+   "id": "lebout",
+   "paie": "detail",
+   "text": "Et le détail du début ? Landesbergen–Wehrendorf. Côté E.ON, le relais coupait à [3 000|trois mille] ampères. Côté [[RWE|èr double-vé eu]|èr double-vé eu]… à [2 100|deux mille cent].",
+   "vo": "[curious] Et le détail du début ? Landesbergen–Wehrendorf. Côté E.ON, le relais coupait à trois mille ampères. Côté èr double-vé eu|èr double-vé eu]... à deux mille cent."
+  },
+  {
+   "id": "deux003",
+   "text": "Même ligne. Deux réglages. Les dernières valeurs échangées entre les deux dataient de [2003|deux mille trois].",
+   "vo": "[conversational, curious] Même ligne. Deux réglages. Les dernières valeurs échangées entre les deux dataient de deux mille trois."
+  },
+  {
+   "id": "bas",
+   "text": "Et c'est toujours le chiffre le plus bas… qui *décide*.",
+   "vo": "[warm, conversational] Et c'est toujours le chiffre le plus bas... qui décide."
+  },
+  {
+   "id": "precision",
+   "text": "En France, [la CRE|le régulateur de l'énergie] trouve que huit départs sur dix prévus au premier étage ont bien ouvert. Et des relais précis à quinze centièmes de hertz, quand la règle en demandait dix.",
+   "vo": "[curious] En France, le régulateur de l'énergie trouve que huit départs sur dix prévus au premier étage ont bien ouvert. Et des relais précis à quinze centièmes de hertz, quand la règle en demandait dix."
+  },
+  {
+   "id": "pascause",
+   "text": "Et la manœuvre de vingt-deux heures dix ? Le rapport l'écrit noir sur blanc : elle ne peut pas être considérée comme une *cause*.",
+   "vo": "[conversational, curious] Et la manœuvre de vingt-deux heures dix ? Le rapport l'écrit noir sur blanc : elle ne peut pas être considérée comme une cause."
+  },
+  {
+   "id": "condamne",
+   "text": "Le réseau n'avait déjà plus de marge. Depuis vingt et une heures quarante. Il suffisait d'une ligne.",
+   "vo": "[serious] Le réseau n'avait déjà plus de marge. Depuis vingt et une heures quarante. Il suffisait d'une ligne."
+  },
+  {
+   "id": "change",
+   "midroll": true,
+   "hold": 1.2,
+   "text": "Alors, qu'est-ce qui en est sorti ? Pour *toi* ?",
+   "vo": "[curious] Alors, qu'est-ce qui en est sorti ? Pour toi ?"
+  },
+  {
+   "id": "depuis",
+   "chap": "Ce qui te protège depuis",
+   "text": "Le rapport demande d'abord que le N moins un se calcule en ligne, régulièrement… en simulant aussi les pannes chez les *voisins*.",
+   "vo": "[warm, conversational] Le rapport demande d'abord que le N moins un se calcule en ligne, régulièrement... en simulant aussi les pannes chez les voisins."
+  },
+  {
+   "id": "partage",
+   "text": "Que tout le continent partage ce qu'il voit, en temps réel. Et que les petites éoliennes et centrales tiennent le choc… comme les grandes.",
+   "vo": "[conversational, curious] Que tout le continent partage ce qu'il voit, en temps réel. Et que les petites éoliennes et centrales tiennent le choc... comme les grandes."
+  },
+  {
+   "id": "decret",
+   "text": "En France, un décret du [23|vingt-trois] décembre [2006|deux mille six] oblige les distributeurs à participer au *délestage*.",
+   "vo": "[warm, conversational] En France, un décret du vingt-trois décembre deux mille six oblige les distributeurs à participer au délestage."
+  },
+  {
+   "id": "bruxelles",
+   "text": "Depuis [2009|deux mille neuf], à Bruxelles, un centre de coordination analyse la sûreté du réseau de plusieurs pays… toutes les quinze minutes.",
+   "vo": "[curious] Depuis deux mille neuf, à Bruxelles, un centre de coordination analyse la sûreté du réseau de plusieurs pays... toutes les quinze minutes."
+  },
+  {
+   "id": "pylones",
+   "text": "Et sur l'Ems, en [2007|deux mille sept], les pylônes ont été relevés à [110|cent dix] mètres. Les paquebots passent *dessous*.",
+   "vo": "[amused] Et sur l'Ems, en deux mille sept, les pylônes ont été relevés à cent dix mètres. Les paquebots passent dessous."
+  },
+  {
+   "id": "espagne",
+   "text": "Est-ce que ça ne peut plus arriver ? Le [28 avril 2025|vingt-huit avril deux mille vingt-cinq], l'Espagne et le Portugal s'éteignent en *entier*.",
+   "vo": "[conversational, curious] Est-ce que ça ne peut plus arriver ? Le vingt-huit avril deux mille vingt-cinq, l'Espagne et le Portugal s'éteignent en entier."
+  },
+  {
+   "id": "severe",
+   "text": "Pour l'Europe, l'incident le plus sévère en plus de vingt ans. Mais ce jour-là, tout a commencé par la tension. Pas par la fréquence.",
+   "vo": "[curious] Pour l'Europe, l'incident le plus sévère en plus de vingt ans. Mais ce jour-là, tout a commencé par la tension. Pas par la fréquence."
+  },
+  {
+   "id": "veille",
+   "text": "Et le relais de ton quartier ? Il est toujours là. Réglé sur la fréquence. Il +veille+.",
+   "vo": "[warm, conversational] Et le relais de ton quartier ? Il est toujours là. Réglé sur la fréquence. Il veille."
+  },
+  {
+   "id": "chute",
+   "hold": 0.4,
+   "text": "Ce soir-là, le réseau ne s'est pas *effondré*. Il s'est +sacrifié+.",
+   "vo": "[curious] Ce soir-là, le réseau ne s'est pas effondré. Il s'est sacrifié."
+  },
+  {
+   "id": "chute2",
+   "hold": 0.3,
+   "text": "Quinze millions de foyers dans le noir… pour que le reste du continent reste allumé. Le rapport le dit : un black-out européen a été *évité*.",
+   "vo": "[conversational, curious] Quinze millions de foyers dans le noir... pour que le reste du continent reste allumé. Le rapport le dit : un black-out européen a été évité."
+  },
+  {
+   "id": "du",
+   "chap": "Alors, qui a éteint ta lumière ?",
+   "paie": "du",
+   "text": "Alors, qui a éteint ta lumière ? Pas le bateau. Une règle supposée respectée, sans simulation. Des voisins prévenus à dix-neuf heures. Deux chiffres aux deux bouts d'une ligne.",
+   "vo": "[warm, conversational] Alors, qui a éteint ta lumière ? Pas le bateau. Une règle supposée respectée, sans simulation. Des voisins prévenus à dix-neuf heures. Deux chiffres aux deux bouts d'une ligne."
+  },
+  {
+   "id": "toi",
+   "hold": 0.4,
+   "text": "Et à la fin… ton propre réseau. Pour ne pas tout *perdre*.",
+   "vo": "[conversational, curious] Et à la fin... ton propre réseau. Pour ne pas tout perdre."
+  },
+  {
+   "id": "comment",
+   "hold": 0.3,
+   "text": "Et toi ? Si un jour, c'est ta maison qu'on coupe pour sauver le continent… dis-moi en +commentaire+ : d'accord… ou pas d'accord ?",
+   "vo": "[curious] Et toi ? Si un jour, c'est ta maison qu'on coupe pour sauver le continent... dis-moi en commentaire : [short pause] d'accord... ou pas d'accord ?"
+  },
+  {
+   "id": "like",
+   "text": "Envoie cette vidéo à un électricien : il te dira si on a tout bon. Et si tu as appris quelque chose… un petit +like+.",
+   "vo": "[warm] Envoie cette vidéo à un électricien : il te dira si on a tout bon. Et si tu as appris quelque chose... un petit like."
+  },
+  {
+   "id": "abo",
+   "text": "On se retrouve très vite, pour un autre jour où un plan a été mis à l'épreuve.",
+   "vo": "[warm] On se retrouve très vite, pour un autre jour où un plan a été mis à l'épreuve."
+  },
+  {
+   "id": "boucle",
+   "text": "Et ce relais attend… le soir où, à [22 h 10|vingt-deux heures dix]…",
+   "vo": "[calm] Et ce relais attend... le soir où, à vingt-deux heures dix,"
+  }
+ ],
+ "cues": {
+  "titre": "expres:Exprès",
+  "miniature": "paquebot:paquebot",
+  "miniature2": "promesse:trois",
+  "miniature3": "expres:Exprès",
+  "tobench": "ouvre:on-0.14",
+  "explode": "ouvre:on",
+  "freq": "rythme:hertz",
+  "n1": "n1:moins",
+  "ligneCoupee": "premier:premier",
+  "subscribe": "seuil:abonne",
+  "manoeuvre": "manoeuvre:Landesbergen",
+  "trip": "saute:saute",
+  "separation": "dechire:déchire",
+  "relais": "clac:ouvrent",
+  "tient": "tient:tient",
+  "recouple": "recouple:tient",
+  "toverdict": "chute-0.12",
+  "tocta": "comment-0.12",
+  "toloop": "boucle-0.12",
+  "rewind": "boucle:soir"
+ },
+ "bedVolume": 0.8,
+ "sfx": [
+  {
+   "type": "space",
+   "mix": 0.22,
+   "size": 0.84,
+   "damp": 0.35
+  },
+  {
+   "type": "music",
+   "width": 0.7,
+   "sections": "chapters",
+   "skip": [
+    "ouvre"
+   ],
+   "drop": 0.5,
+   "gain": -21,
+   "phone": 0.25,
+   "curve": [
+    [
+     0,
+     0.9,
+     0.5
+    ],
+    [
+     "ouvre-0.4",
+     0.55,
+     0
+    ],
+    [
+     "papenburg-1",
+     0.75,
+     0.3
+    ],
+    [
+     "coupure-1",
+     0.85,
+     0.4
+    ],
+    [
+     "sursis-1",
+     0.95,
+     0.6
+    ],
+    [
+     "manoeuvre-1",
+     1,
+     0.85
+    ],
+    [
+     "delestage-1",
+     1,
+     0.9
+    ],
+    [
+     "tient",
+     0.75,
+     0.3
+    ],
+    [
+     "nordest-1",
+     0.95,
+     0.6
+    ],
+    [
+     "recolle-1",
+     0.85,
+     0.5
+    ],
+    [
+     "recouple",
+     0.7,
+     0.2
+    ],
+    [
+     "enquete-1",
+     0.75,
+     0.3
+    ],
+    [
+     "depuis-1",
+     0.8,
+     0.4
+    ],
+    [
+     "chute",
+     0.7,
+     0
+    ],
+    [
+     "boucle",
+     0.8,
+     0.5
+    ]
+   ]
+  },
+  {
+   "type": "drone",
+   "gain": -27,
+   "curve": [
+    [
+     0,
+     0.8
+    ],
+    [
+     "rewind",
+     0.8
+    ]
+   ]
+  },
+  {
+   "type": "ambience",
+   "preset": "wind",
+   "from": 0,
+   "gain": -36
+  },
+  {
+   "type": "chapters",
+   "style": "film",
+   "skip": [
+    "ouvre"
+   ]
+  },
+  {
+   "type": "boom",
+   "at": 0.03,
+   "gain": -13,
+   "size": 1.2
+  },
+  {
+   "type": "suck",
+   "to": "ouvre-0.04",
+   "dur": 0.3,
+   "gain": -18
+  },
+  {
+   "type": "hush",
+   "from": "ouvre",
+   "to": "explode-0.02",
+   "depth": -14
+  },
+  {
+   "type": "boom",
+   "at": "ouvre$+0.05",
+   "gain": -15,
+   "size": 0.7
+  },
+  {
+   "type": "click",
+   "at": "ouvre$+0.22",
+   "gain": -18
+  },
+  {
+   "type": "click",
+   "at": "ouvre$+0.38",
+   "gain": -19,
+   "pitch": 0.85
+  },
+  {
+   "type": "click",
+   "at": "ouvre$+0.54",
+   "gain": -20,
+   "pitch": 1.15
+  },
+  {
+   "type": "impact",
+   "at": "toloop",
+   "gain": -16,
+   "size": 0.7
+  },
+  {
+   "type": "rewind",
+   "at": "rewind",
+   "dur": 1,
+   "gain": -21
+  }
+ ]
+}

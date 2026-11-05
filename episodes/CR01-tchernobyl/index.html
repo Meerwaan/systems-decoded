@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · CR01 · Tchernobyl</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (en-tête du Compte à rebours, étiquettes, appels) sont stylés dans kit/brand.css
+         ([data-serie="compte-a-rebours"]). Ici : la couleur de chaque étiquette de CE film, fixée par identifiant (.chip--live est alarme). */
+      #chip-diesel, #chip-20s, #chip-1983 { color: var(--ambre); }
+      #chip-1pct, #chip-6pct, #chip-barres, #chip-530 { color: var(--alarme); }
+      #chip-bilan, #chip-insag1, #chip-insag7 { color: var(--papier); }
+      #chip-12s { color: var(--veille); } /* entre à depuis : --veille y est vert */
+      #chip-barres i { display: block; font: 600 24px/1.3 var(--mono); color: var(--papier); font-style: normal; margin-top: 6px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-serie="compte-a-rebours" data-phase="nuit" data-composition-id="main" data-start="0" data-duration="150.6" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <!-- l'en-tête du Compte à rebours (kit/brand.css [data-serie="compte-a-rebours"], piloté par crHud dans main.js) :
+           l'étiquette à gauche, le nom du compte à droite, l'HEURE RÉELLE au centre (ambre), le temps qui reste dessous (alarme) -->
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span id="hud-tag">Compte à rebours · 01</span></div>
+        <em class="hud__brand" id="hud-brand">Système Décodé</em>
+        <i class="hud__burst" id="hud-burst"></i>
+        <div class="hud__clock" id="hud-clock">01:23:40</div>
+        <div class="hud__remain" id="hud-remain">T−40 s</div>
+        <nav class="hud__acts" id="hud-acts">
+          <span>01 L'heure</span><span>02 Le défaut</span><span>03 Depuis</span>
+        </nav>
+      </header>
+
+      <!-- Pas de pièce du dossier dans ce film : aucune source ouverte n’en porte une (INSAG-7 jamais lu ; docs/journal/CR01-architecte.md). -->
+
+      <!-- LES CHIFFRES QUE L’IMAGE NE MONTRE PAS (une étiquette à la fois, zone haute 436–790 ; chip(id, null, 96, 470, de, à)) -->
+      <div id="chip-diesel" class="chip chip--live"><span>Diesels de secours</span><b>≈ 1 minute</b></div>
+      <div id="chip-1pct" class="chip chip--live"><span>Puissance</span><b>1 %</b></div>
+      <div id="chip-6pct" class="chip chip--live"><span>Puissance</span><b>6 %</b></div>
+      <div id="chip-barres" class="chip chip--live"><span>Marge · l’équivalent de</span><b>8 barres</b><i>Minimum : 15</i></div>
+      <div id="chip-20s" class="chip chip--live"><span>Descente des barres</span><b>≈ 20 secondes</b></div>
+      <div id="chip-530" class="chip chip--live"><span>Puissance</span><b>+ de 530 MW</b></div>
+      <div id="chip-bilan" class="chip chip--live"><span>Cette nuit-là : 2 morts</span><b>28</b><i>dans les mois suivants</i></div>
+      <div id="chip-1983" class="chip chip--live"><span>Effet déjà vu</span><b>1983</b></div>
+      <div id="chip-12s" class="chip chip--live"><span>Descente des barres</span><b>18 → 12 secondes</b></div>
+      <div id="chip-insag1" class="chip chip--live"><span>Enquête · 1986</span><b>Les hommes</b></div>
+      <div id="chip-insag7" class="chip chip--live"><span>Enquête · 1992</span><b>Surtout la machine</b></div>
+
+      <!-- appels à l’action (fin.js) : désignent l’interface, ne la remplacent pas. Pas de like dans ce format. -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <!-- abo : le prochain compte à rebours, nommé par la voix ; un seul fait (CSB, résumé du rapport final 2014) -->
+      <section id="next">
+        <div class="panel__h"><span>Prochain compte à rebours · 02</span><span>Classé</span></div>
+        <div id="next-title"><span>Deepwater Horizon</span><span id="next-redact"></span></div>
+        <div id="next-fact"><span>Une vanne qui se ferme… sans sceller le puits.</span></div>
+        <div id="next-cta"><span>S’abonner pour l’ouvrir</span><span>+</span></div>
+      </section>
+
+      <!-- la question du commentaire en DEUX réponses (duelCall, fin.js, toneA ET toneB null : aucune ne s’allume d’une couleur
+           qui répondrait à la place du spectateur — le défaut de duelCall est vert pour B) -->
+      <div id="duel">
+        <div class="kicker">La tienne ?</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">Les hommes</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">La machine</span></div>
+        <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
+      </div>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+      <!-- le grain de film, sur tout le cadre (reconstitution.js le déplace image par image, sur le temps du film) -->
+      <div id="grain" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

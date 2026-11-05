@@ -85,17 +85,17 @@
       ]
     },
     {
+      "id": "principe",
+      "text": "Pourquoi ça marche ? La loi physique, en mots simples. Et un +chiffre+ qu'on retient.",
+      "vo": "[curious] Pourquoi ça marche ? [short pause] La loi physique, en mots simples. Et un chiffre qu'on retient."
+    },
+    {
       "id": "repos",
       "text": "Comment il attend, sans bruit. Et sa dernière phrase *retend*.",
       "vo": "[warm, conversational] Comment il attend, sans bruit. Et sa dernière phrase retend.",
       "voAlt": [
         "[curious] Comment il attend, sans bruit. Et sa dernière phrase retend."
       ]
-    },
-    {
-      "id": "seuil",
-      "text": "+Abonne-toi+ : les mots de l'accroche reviennent… *regarde*.",
-      "vo": "[tense] Abonne-toi : les mots de l'accroche reviennent... regarde."
     },
     {
       "id": "zero",
@@ -135,8 +135,8 @@
     {
       "id": "abo",
       "hold": 0.2,
-      "text": "Prochain dossier : un seul fait, et il *menace*.",
-      "vo": "[serious] Prochain dossier : un seul fait, et il menace."
+      "text": "+Abonne-toi+ : prochain dossier, un seul fait, et il *menace*.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, un seul fait, et il menace."
     },
     {
       "id": "boucle",

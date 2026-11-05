@@ -7,7 +7,7 @@
 - **Le mot-choc avant 3 s.** Les trois films qui ont percé sur TikTok disent le mot qui fait peur ou qui retourne à 3,2 s au plus : 015 « plein (gaz) » 3,2 s · 009 « (ton) visage » 3,2 s · 010 « lame » 2,3 s, « (tu le) gardes » 3,2 s. Les huit autres films postés à partir du 8 octobre le disent entre 3,6 et 4,3 s et plafonnent à 16 k. Biais connu : les trois ont été postés entre 19 h et 23 h (007, posté à 2 h du matin : 2,8 k).
 - **La première seconde est la première fuite** (TikTok l'écrit sur les deux courbes, 015 et 012). Dans les deux, l'accroche perd ≈ 20 points et la promesse encore ≈ 20 : c'est la décroissance normale, pareille sur le meilleur film et sur un film moyen.
 - **Ce qui sépare le meilleur film : la scène (10 → 25 s).** 015 : −10 points dans la scène (1,3 par seconde), −17 de 10 à 24 s. 012 : −13 (1,8 par seconde), −23. La scène du 015 reste dans l'instant de l'accroche et ajoute une image et un enjeu par phrase ; celle du 012 saute à « toute une nuit » (une hypothèse, des litres par minute). Le 015 la dit vite (+4 % sur le débit médian du film), le 012 à +0 %, le 025 à −9 %.
-- **Qui passe le seuil reste** : l'acte 3 ne perd presque rien (0,2 point par seconde sur les deux courbes). L'effort se met avant.
+- **Qui arrive à l'acte 3 reste** : l'acte 3 ne perd presque rien (0,2 point par seconde sur les deux courbes). L'effort se met avant.
 - **Les commentaires** (TikTok, pour 1 000 vues) : « Sur ton tableau, tu lis 30 mA… ou rien ? » 3,5 ‰ · « tu sauterais au dernier moment ? » 2,0 · « il chauffe encore combien de temps ? » 1,7 · « pour ou contre ? » 1,1 — contre « tu le tentes ? » 0,03 · « ta pédale a déjà tremblé ? » 0,06 · « il a quel âge ? » 0,3 · « tu y vas ? » 0,7. Les premiers films avaient peu de vues : le taux baisse quand les vues montent. Mais le partage est net : une lecture à faire chez soi ou un camp à choisir fait écrire ; une expérience passée ou un « tu le ferais ? » sans enjeu, non. Et une question à laquelle le film répond lui-même (008) ne fait rien.
 
 ## 1. Les trois premières secondes, mot à mot
@@ -47,14 +47,25 @@ Chaque phrase ouvre une question ou en paie une en ouvrant la suivante. Le parco
 | 4-10 | promesse | Comment c'est possible ? Et cette condition (C) ? |
 | 10-19 | scène | Il reste quoi pour te sauver ? |
 | 19-21 | « Alors… on l'ouvre. » | Qu'y a-t-il dedans ? |
-| 21-38 | éclaté, repos | Comment il sait ? Et ça va marcher ? (la dernière phrase retend) |
-| 38-41 | seuil | — il promet l'acte 3 avec les mots de l'accroche |
-| 41-60 | zéro, réponse | À temps ? |
+| 21-30 | éclaté | Qu'y a-t-il dedans ? (on suit la pièce qui agit, jusqu'au cœur) |
+| 30-38 | principe | Pourquoi ça marche ? (la loi, montrée sur la pièce, et un chiffre qu'on retient) |
+| 38-45 | repos | Et ça va marcher ? (la dernière phrase retend) |
+| 45-62 | zéro, réponse | À temps ? |
 | 60-67 | chute | Alors c'est l'inverse de ce que je croyais ? |
 | 67-80 | ce qui est dû + commentaire | La réponse au C… et toi ? |
-| 80-92 | like, prochain dossier, boucle | Et le prochain ? (la boucle relance le film) |
+| 80-98 | like, abonne-toi + prochain dossier, boucle | Et le prochain ? (la boucle relance le film) |
 
 **Les portes d'acte finissent sur une question** : la scène sur l'objet qu'on ouvre ; l'autopsie sur une phrase qui retend (de préférence avec les mots de l'accroche : « Et ta fusée lâche… pile dans cette fenêtre. ») ; la réponse sur la victoire, que la chute retourne ; la chute sur le retour du C. **L'éclaté suit un chemin** — la pièce qui agit, d'un bout à l'autre (015 : « Sur le pont… Dessous, il continue… et au bout… ») — il n'énumère pas (« Un capteur… Un capteur… Un capteur… »).
+
+## 4 bis. L'autopsie apprend quelque chose (depuis le 03/11)
+
+Merwan, sur le 035 (passage à niveau) : « la vidéo est très bien, mais on passe sur le sujet assez vite… détailler un peu plus pour en apprendre, que ce soit plus éducatif ». Le 035 nomme les pièces (mât, feu, demi-barrière, lisse) et dit l'ordre des événements, mais ne dit jamais **pourquoi** la lisse casse (où elle est fragile, quelle force il faut) : on sait quoi, pas comment.
+
+- **Le spectateur repart avec une chose qu'il peut expliquer à quelqu'un.** Le test : à la fin du principe, peut-il répondre à « et pourquoi ça marche ? » en une phrase ? Sinon, le principe est à réécrire.
+- **Le principe = la loi + le geste + un chiffre** : la physique en mots de tous les jours (« le métal chauffé se dilate », « la pression pousse sur la plus petite surface »), montrée sur la pièce même pendant que la voix la dit, et un ordre de grandeur qui frappe (« une barrière qui casse sous le poids d'une main »). Le chiffre est sourcé (`sources`) ou devient un ordre de grandeur.
+- **Le vocabulaire du métier, expliqué une fois** : le mot juste (« la lisse », « le fusible mécanique ») suivi de ce qu'il veut dire. C'est ce que les électriciens et les techniciens partagent.
+- **Pas de cours** : une seule loi par film, jamais deux. Pas de formule, pas d'unité à symbole à l'écran. Le principe reste au présent, à la 2ᵉ personne quand c'est possible.
+- **Le dossier de faits le prépare** : la section « Le mécanisme ouvert » de `faits` donne déjà « pourquoi ça marche » en une phrase sourcée ; le scénariste n'a qu'à la dire.
 
 ## 5. La question du commentaire
 
@@ -64,7 +75,7 @@ Chaque phrase ouvre une question ou en paie une en ouvrant la suivante. Le parco
 
 ## 6. Le budget de mots
 
-**255 à 265 mots affichés** (≈ 88 à 97 s en `eleven_v4_turbo`, mesuré sur les 021 à 025) ; au-delà de 265, couper — la scène et le commentaire d'abord.
+**265 à 280 mots affichés** (≈ 92 à 100 s en `eleven_v4_turbo`) ; au-delà de 280, couper — la scène et le commentaire d'abord, **jamais le principe**. Le 03/11, le seuil (8 mots) part et le principe (18 à 32) entre : le film gagne ≈ 5 s, toutes au service de ce qu'on apprend.
 
 | Phrase | Mots | Phrase | Mots |
 | --- | --- | --- | --- |
@@ -73,8 +84,8 @@ Chaque phrase ouvre une question ou en paie une en ouvrant la suivante. Le parco
 | scène | 22-30 | chute | 17-23 |
 | « Alors… on l'ouvre. » | 3 | ce qui est dû + commentaire | 25-35 |
 | éclaté | 20-28 | like | 7-12 |
-| repos | 20-28 | prochain dossier | 12-17 |
-| seuil | 7-10 (3 s au plus) | boucle | 4-6 (2 s au plus) |
+| repos | 20-28 | abonne-toi + prochain dossier | 14-19 |
+| principe | 18-32 | boucle | 4-6 (2 s au plus) |
 
 ## 7. La voix : la direction par défaut
 
@@ -82,12 +93,12 @@ La recette des 17 premiers films, confirmée : **le film d'une seule requête**,
 
 | Phrase | Balise | Si Merwan dit non à B |
 | --- | --- | --- |
-| accroche, scène, seuil, réponse | `[tense]` | — |
+| accroche, scène, réponse | `[tense]` | — |
 | promesse, zéro, chute | `[firm, matter-of-fact]` | — |
 | « Alors… on l'ouvre. » | `[calm]` (`voAlt` : avec `[short pause]`, si la pause n'est pas jouée) | — |
-| éclaté, commentaire | `[conversational, curious]` | `[curious]` |
+| éclaté, principe, commentaire | `[conversational, curious]` | `[curious]` |
 | repos, like | `[warm, conversational]` ; `[amused]` une fois par film au plus, sur un paradoxe mécanique de l'autopsie | `[curious]`, `[firm, matter-of-fact]` |
-| prochain dossier | `[serious]` | — |
+| abonne-toi + prochain dossier | `[serious]` | — |
 | boucle | `[calm]`, une virgule au bout du `vo` | — |
 
 - **Le banc du 21/10 (025, scène → « on l'ouvre » → éclaté → repos, deux requêtes courtes, 228 crédits)** : la direction du long (B) relève l'autopsie (éclaté +1,4 dt contre −0,2 pour celle du film) mais **aplatit la menace** (`[serious]` sur la scène : −0,5 dt contre +1,8 pour `[tense]`, mêmes mots) — `[serious]` n'est donc pas `[tense]` ; et **« on l'ouvre » traîne dans les deux** (1,47 et 1,39 s, 8,9 et 9,4 l/s, −36 % de débit, au-delà du seuil de `npm run voice`), alors que la reprise que garde le film, enregistrée elle aussi en requête courte, tient 1,31 s, et que les prises entières des 021 à 025 le donnent entre 1,07 et 1,31 s. Une requête courte ne le garantit pas : la prise du film entier reste sa source, une reprise se juge à la mesure. D'où le tableau : la conversation pour l'autopsie et les appels à l'action, la menace et l'acte 3 comme avant. Le verdict de Merwan sur B tranche la colonne de droite (le modèle porte les deux : `vo` et `voAlt`).
@@ -114,7 +125,7 @@ Avant la voix, pour chaque phrase :
 
 ## Ce que vérifie `npm run script`
 
-Après la table du minutage, `Écriture` (`scripts/lib/ecriture.mjs`) : le nombre de mots (film, accroche, scène), le mot-choc et sa seconde, une 2ᵉ personne dans les dix premiers mots, « Alors… on l'ouvre. » mot pour mot et une seule fois, l'ordre de la fin (chute → commentaire → like → prochain dossier → boucle), le seuil (« Abonne-toi », dix mots au plus) et aucun « Abonne-toi » au prochain dossier, la boucle (« … » à l'écran, virgule dans la voix), la question du commentaire (« ? », deux camps), les balises (une par phrase, en tête, aucune interdite, `[amused]` une fois, jamais trois fois la même de suite), les MAJUSCULES et les « ! » dans la voix, une unité à symbole dans les sous-titres (« µs » se lit « MS »), la légende (mot cherché en tête, cinq hashtags) et l'épinglé (150 caractères). Ce sont des avertissements : rien n'est bloqué.
+Après la table du minutage, `Écriture` (`scripts/lib/ecriture.mjs`) : le nombre de mots (film, accroche, scène), le mot-choc et sa seconde, une 2ᵉ personne dans les dix premiers mots, « Alors… on l'ouvre. » mot pour mot et une seule fois, l'ordre de la fin (chute → commentaire → like → prochain dossier → boucle), le principe (18 à 32 mots, un chiffre), « Abonne-toi » au prochain dossier et nulle part ailleurs, la boucle (« … » à l'écran, virgule dans la voix), la question du commentaire (« ? », deux camps), les balises (une par phrase, en tête, aucune interdite, `[amused]` une fois, jamais trois fois la même de suite), les MAJUSCULES et les « ! » dans la voix, une unité à symbole dans les sous-titres (« µs » se lit « MS »), la légende (mot cherché en tête, cinq hashtags) et l'épinglé (150 caractères). Ce sont des avertissements : rien n'est bloqué.
 
 Depuis le 27/10 (salle d'écriture), ce qu'un script écrit par un agent peut laisser passer : du **texte du modèle** resté en place (`__TITLE__`, `#sujet1`, une phrase de `kit/template/episode.json` mot pour mot) ; `vo` (et chaque `voAlt`) qui n'a **pas les mêmes mots que `text` dans le même ordre**, balises et `[85|quatre-vingt-cinq]` lus comme la voix les dit (le contrôle de la voix, lui, accepte un mot en trop) ; **`sources` vide** ; **`post.keyword` absent** ; un **titre YouTube** de plus de 100 caractères ; un **repère `beat:mot`** dont le début attrape plusieurs mots différents (« accroche:t » → « ta », « tension » : le premier est pris). Vérifiés sur 001 à 030 : aucun ne sonne sur 026 à 030 ; `post.keyword` manque aux 001 à 025, d'avant ce champ.
 

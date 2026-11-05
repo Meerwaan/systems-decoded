@@ -1,0 +1,23 @@
+# 038 sous-marin — état du chef de production
+
+- 22 h 12 : chef lancé (de l'architecte au rendu). Voix et audio/ validés, ne pas toucher. Jauge 4 % / hebdo 43 %. Remise à zéro 03 h 10.
+- Contrainte : 037 monté en parallèle → 2 agents à la fois au plus tant que renders/037-parachute.mp4 absent. Rien dans kit/ ni hors 038, pas de commit.
+- Décor neuf : le sous-marin (Los Angeles, verre, ballasts AV/AR pleins, bouteilles d'air, air vert). Mer/fond à reprendre : 034/fond.js (boîte noire), mer 023, océan L04.
+- index.html : remettre la ligne étiquettes opacité 0 (comme 036).
+- Étape en cours : architecte.
+- 22 h 40 : architecte rendu (a7cc152d26c539637, 371 k, 73 outils, 25 min). check OK. Décors : src/sousmarin.js, src/mer.js (enveloppe 034/fond). Pas de décorateur. Actes : acte1, acte2, acte2b, acte3, fin. Candidates image 0 : .cache/planches/038/architecte/candidates.json (B = POSE0).
+- 22 h 41 : episode.json text « 7 000 » / « 1 000 » avec espace (vérifié : voix toujours valide). Jauge 22 % / 46 %.
+- 22 h 42 : vague décors lancée (sousmarin.js, mer.js).
+- 23 h 05 : décors rendus — sousmarin (a65c02d0ffe40cb66, 285 k, 40 outils) ; mer (ad7591abda0f879aa, 283 k, 29 outils). « À changer ailleurs » appliqués (7 VIEW, pitch → mer.update, cover.cam = exploded el 30). Non fait : débris de roche dans le poste (plan crew) — à voir en relecture. check OK.
+- 23 h 15 : image 0 choisie (variante q, planches .cache/planches/038/image0*.jpg), POSE0 collée. docs/038-actes-maj.md écrit.
+- 23 h 20 : 037 rendu → jusqu'à 4 agents. Vague actes 1 lancée : acte1, acte2b, acte3, fin (acte2 en vague 2). Jauge 31 % / 47 %.
+- 23 h 30 : vague actes 1 rendue — acte1 ab1f18e30c7fa1d23 (219 k), acte2b a7e21de73400536d4 (225 k), acte3 aed4971af1e51bbf8 (216 k), fin ab565c4fae8c514aa (221 k). Poses torn/aft/climb inlinées dans les actes : VIEW non modifiées. Vague 2 : acte2 lancé. Jauge 39 % / 48 %.
+- 23 h 40 : acte2 rendu (a519428dc135fb25b, 225 k). cover.at = ballasts1+0.3. Étape : relecture (4 planches de 8).
+- 23 h 55 : relecture (5 planches relu1-5) + check OK + brouillon + qa : voix calée, −14,06 LUFS ; ✗ parasites 25.57, 46.47, 47.67 ; heurtés 17.6, 42.7, 19.8 ; 1re demi-seconde 0,8 ; swish 49.44 déplacé (devant-0.2, dur 0.18). Étape : vague retoucheurs.
+- 00 h 05 : index.html #duel-a/#duel-b 50px (le 2e camp était illisible). Vague retoucheurs lancée : acte1, acte2, acte3, mer.js. Jauge 43 % / 49 %. acte2b non retouché (heurtés 42.7/34.8 modérés).
+- 00 h 20 : retoucheurs rendus — acte1 a3671aad5c6b3344a, acte2 af665dee79ee7d8bf, acte3 ab09a9b93615fb1ef, mer a952c86185ded48ab. Brouillon 2 en cours.
+- 00 h 30 : brouillon 2 : 0 parasite, voix calée ; restent 1re demi-seconde 1,0, plage lente 14.5–17, heurtés 42.7/34.8/41.1 (acte2b), 70.5 le bateau à flot se lit immergé. Vague retouche 2 : acte1, acte2b, fin. Jauge 52 % / 50 %.
+- 00 h 50 : retouche 2 rendue — acte1 a8b6ee1c597017392 (1re demi-s 3,1), acte2b a1211c6ce6fb4a50a, fin a62dc6f32f2e2cf54. mer.js voile 0,5→0,75. Étape : rendu final.
+- 01 h 00 : acte2b — bloc de roche retiré du plan commande (rock 0 à la coupe 42,00, par le chef). RENDU FINAL : renders/038-sous-marin.mp4 ; qa : 0 parasite, voix calée (0 ms), −14,07 LUFS, 1re demi-seconde 3,0, aucune plage lente, aucun son sur un mot. Couverture, copie iPhone, posts.mjs OK.
+- FAIT. Jetons d'agents ≈ 3,21 M (15 agents). Jauge fin 59 % / 51 %. Reste à Merwan : regarder le film ; abo/boucle provisoires (039 non choisi).
+- Un cran en dessous : 35,5 cube sur fond noir (ballast autour à peine lu) ; 47,0 commande en boîte sombre ; 58,8 la surface encore sombre (coque sous le voile) ; 11,95 proue « accordéon » plus que « canette » ; 39 bouteilles petites ; 48,9 / 56,9 mouvements les plus heurtés (17,3 / 16,6, moyenne 3,4).

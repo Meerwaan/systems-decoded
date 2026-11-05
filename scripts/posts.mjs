@@ -463,6 +463,50 @@ const POSTS = {
       hashtags: ["#shorts", "#boitenoire", "#avion", "#aviation", "#science"],
     },
   },
+  "036-eolienne": {
+    instagram: {
+      caption: "Tempête. Au-dessus de toi, les pales s'emballent. Et il ne leur reste qu'une batterie.\n\nDossier 036 : l'éolienne. Une nacelle, un moyeu, et pour chaque pale, un moteur et sa propre batterie. Pourquoi une pale tournée de quatre-vingt-dix degrés ne pousse plus… et ce qui s'est passé à Formerie, dans l'Oise, en 2019.\n\nUne éolienne à l'arrêt par grand vent : panne… ou sécurité ?",
+      hashtags: ["#eolienne", "#energie", "#tempete", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Tempête : les pales s'emballent… et il ne leur reste qu'une batterie : l'éolienne",
+      description: "Dossier 036 — l'éolienne ouverte : la nacelle, le moyeu, et pour chaque pale un moteur de pitch et sa propre batterie de secours. Pourquoi une pale mise en drapeau, tournée de quatre-vingt-dix degrés, ne porte plus, et pourquoi une seule suffit à ralentir le rotor. Et Formerie, dans l'Oise, en 2019 : des batteries au tiers de leur capacité, un mât plié en deux.\n\nTechniciens éoliens : qu'est-ce qu'on a simplifié ? Et toi, une éolienne à l'arrêt par grand vent : panne… ou sécurité ?",
+      hashtags: ["#shorts", "#eolienne", "#energie", "#tempete", "#science"],
+    },
+  },
+  "037-parachute": {
+    instagram: {
+      caption: "Tu tombes, inconscient. Ton sac, lui, est réveillé.\n\nDossier 037 : le déclencheur du parachute de secours. Un boîtier d'environ 200 grammes, un capteur de pression, un coupe-boucle… et quatre secondes pour agir à ta place. À condition que tu l'aies allumé ce matin.\n\nTu fais confiance au boîtier… ou à ta main ?",
+      hashtags: ["#parachutisme", "#parachute", "#skydiving", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Tu tombes, inconscient… et ton sac, lui, est réveillé : le déclencheur du parachute de secours",
+      description: "Dossier 037 — le déclencheur automatique du parachute de secours (AAD) ouvert : le boîtier et son capteur de pression, le câble, le coupe-boucle et la boucle qui garde le secours fermé. Pourquoi plus de 35 mètres par seconde, vers 225 mètres du sol, veut dire que personne n'a tiré… et ce qu'il fait à ta place.\n\nSauteurs : qu'est-ce qu'on a simplifié ? Et toi : tu fais confiance au boîtier… ou à ta main ?",
+      hashtags: ["#shorts", "#parachutisme", "#parachute", "#skydiving", "#science"],
+    },
+  },
+  "038-sous-marin": {
+    instagram: {
+      caption: "Ton sous-marin fonce dans une montagne. Elle n'est pas sur ta carte.\n\nDossier 038 : la chasse d'urgence du sous-marin. Des bouteilles d'air comprimé, des vannes, des ballasts… et pourquoi un mètre cube d'eau chassé par de l'air, c'est une tonne en moins. Le 8 janvier 2005, à 160 mètres, l'USS San Francisco l'a vécu, l'avant écrasé.\n\nLa faute : à la carte… ou à ceux qui la lisent ?",
+      hashtags: ["#sousmarin", "#marine", "#ocean", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ton sous-marin fonce dans une montagne… qui n'est pas sur ta carte : la chasse d'urgence",
+      description: "Dossier 038 — la chasse d'urgence aux ballasts ouverte : les bouteilles d'air comprimé, les vannes, les ballasts entre la coque épaisse et la coque légère. Pourquoi un mètre cube d'eau remplacé par de l'air allège le bateau d'environ une tonne (Archimède). Et le 8 janvier 2005 : l'USS San Francisco, à 160 mètres et à pleine vitesse, contre une montagne sous-marine absente de sa carte.\n\nEn mémoire de Joseph Allen Ashley, 24 ans.\n\nSous-mariniers : qu'est-ce qu'on a simplifié ? Et toi : la faute, à la carte… ou à ceux qui la lisent ?",
+      hashtags: ["#shorts", "#sousmarin", "#marine", "#ocean", "#science"],
+    },
+  },
+  "CR01-tchernobyl": {
+    instagram: {
+      caption: "Tchernobyl, 26 avril 1986, 1 h 23 : on appuie sur l'arrêt d'urgence… et le réacteur accélère.\n\nCompte à rebours 01 : la nuit de Tchernobyl, à la seconde près. L'essai préparé la veille, les barres retirées une à une, la turbine qui ralentit, le bouton AZ-5 — et ce qu'il a fait d'abord. Tout est vrai, reconstitué en maquette.\n\nPour toi : les hommes… ou la machine ?",
+      hashtags: ["#tchernobyl", "#chernobyl", "#nucleaire", "#histoire", "#comptearebours"],
+    },
+    youtube: {
+      title: "Tchernobyl, 1 h 23 : on appuie sur l'arrêt d'urgence… et le réacteur accélère",
+      description: "Compte à rebours 01 — la nuit du 26 avril 1986 à Tchernobyl, reconstituée à la seconde : l'essai préparé à 14 h la veille, la puissance qui s'effondre, les barres retirées (8 quand le règlement en exige 15), la turbine qui ralentit, puis le bouton AZ-5 — et ce qu'il a fait d'abord. Et ce qui a changé depuis sur les réacteurs de ce type.\n\nPour toi : les hommes… ou la machine ?",
+      hashtags: ["#shorts", "#tchernobyl", "#nucleaire", "#histoire", "#science"],
+    },
+  },
 };
 
 const problems = [];

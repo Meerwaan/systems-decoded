@@ -1,0 +1,534 @@
+{
+  "id": "038",
+  "serie": "dossier",
+  "slug": "sous-marin",
+  "title": "Sous-marin",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "ballasts1+0.3",
+    "title": [
+      "Sous-marin",
+      "éventré"
+    ],
+    "cam": {
+      "tx": -2600,
+      "ty": -250,
+      "tz": 0,
+      "d": 9800,
+      "az": 64,
+      "el": 30,
+      "shift": -430,
+      "side": 0,
+      "fov": 32,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Sous-marin",
+    "caption": "Sous-marin, la chasse d'urgence aux ballasts : à cent soixante mètres et à pleine vitesse, ta proue s'écrase comme une canette contre une montagne qui n'est pas sur ta carte. Pour remonter, il ne te reste que de l'air comprimé. Contre sept mille tonnes. La faute : à la carte… ou à ceux qui la lisent ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#sousmarin",
+      "#marine",
+      "#ocean"
+    ],
+    "pinned": "Réponds juste : « la carte » ou « ceux qui la lisent ». Elle n'avait pas cette montagne ; d'autres, à bord, signalaient un danger.",
+    "instagram": {
+      "caption": "Ton sous-marin fonce dans une montagne. Elle n'est pas sur ta carte.\n\nDossier 038 : la chasse d'urgence du sous-marin. Des bouteilles d'air comprimé, des vannes, des ballasts… et pourquoi un mètre cube d'eau chassé par de l'air, c'est une tonne en moins. Le 8 janvier 2005, à 160 mètres, l'USS San Francisco l'a vécu, l'avant écrasé.\n\nLa faute : à la carte… ou à ceux qui la lisent ?",
+      "hashtags": [
+        "#sousmarin",
+        "#marine",
+        "#ocean",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ton sous-marin fonce dans une montagne… qui n'est pas sur ta carte : la chasse d'urgence",
+      "description": "Dossier 038 — la chasse d'urgence aux ballasts ouverte : les bouteilles d'air comprimé, les vannes, les ballasts entre la coque épaisse et la coque légère. Pourquoi un mètre cube d'eau remplacé par de l'air allège le bateau d'environ une tonne (Archimède). Et le 8 janvier 2005 : l'USS San Francisco, à 160 mètres et à pleine vitesse, contre une montagne sous-marine absente de sa carte.\n\nEn mémoire de Joseph Allen Ashley, 24 ans.\n\nSous-mariniers : qu'est-ce qu'on a simplifié ? Et toi : la faute, à la carte… ou à ceux qui la lisent ?",
+      "hashtags": [
+        "#shorts",
+        "#sousmarin",
+        "#marine",
+        "#ocean",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Scène : cas réel, l'USS San Francisco (SSN-711), sous-marin nucléaire d'attaque américain, 8 janvier 2005, ≈ 360 milles au sud-est de Guam — Navy via Star-Bulletin (08/05/2005) ; Wikipedia SSN-711 [S]. Le rapport d'enquête de la Navy n'a pas été lu : tout l'accident est [S].",
+    "Immergé à 525 pieds (≈ 160 m), à vitesse maximale (« flank speed ») — Navy via Star-Bulletin ; NR-HA [S]. Aucune vitesse chiffrée n'est dite.",
+    "Montagne sous-marine absente de la carte utilisée (carte de 1989 de la Defense Mapping Agency) ; d'autres cartes à bord montraient un danger proche — Navy via Star-Bulletin ; Wikipedia [S]",
+    "Proue « écrasée comme une canette », ballasts avant rompus, dôme sonar détruit, coque épaisse intacte — navalinstitute.com.au ; CBS ; Wikipedia [S]",
+    "Des hommes projetés par le choc — CBS [S]",
+    "À 525 pieds, environ seize fois la pression de surface — CBS [S]",
+    "Environ 7 000 t — CBS [S]",
+    "Le chef de quart actionne la chasse d'urgence — Navy Times, 08/11/2016 [S]",
+    "Ballasts avant éventrés : l'air de la chasse part dans l'océan ; les ballasts arrière se remplissent d'air et remontent lentement le bateau — CBS [S]. Aucun temps de remontée n'est dit ; le San Francisco n'a pas « jailli » hors de l'eau (aucune source) : la 3D le montre crever la surface sans en sortir.",
+    "98 blessés dont un mort, Joseph Allen Ashley, 24 ans (« un marin ne reviendra pas », sans le nommer dans le film) — Navy via Star-Bulletin ; CBS ; Wikipedia [S]",
+    "Chasse d'urgence : bouteilles d'air haute pression, circuit d'urgence qui lâche tout l'air vers les ballasts principaux, réservoirs extérieurs à la coque épaisse, pleins d'eau en plongée — Wikipedia EMBT [S] ; noms des vannes : vocabulaire [O]",
+    "L'air ne chasse l'eau que d'un réservoir intact — physique générale [O]",
+    "Archimède : en plongée, le bateau pèse autant que l'eau qu'il déplace ; un mètre cube d'eau remplacé par de l'air l'allège d'environ une tonne (eau ≈ 1 000 kg/m³) — [O]",
+    "L'image reconstitue : les gestes de l'équipage et la commande (aucune source minute par minute), la forme de la montagne (schématique), l'assiette et la remontée.",
+    "En-tête : la profondeur (160 m = 525 pieds [S]) et la pression, ≈ 17 fois celle de la surface à 160 m (calcul de la contre-vérification) ; pendant la remontée, les profondeurs intermédiaires sont illustratives (aucun temps de remontée n'est dit ni montré).",
+    "L'image reconstitue la disposition intérieure (ballasts, bouteilles, vannes, tuyaux, commande : schématiques, aucun plan de la classe Los Angeles lu) et les cartes à l'écran (aucun extrait de la carte de 1989 reproduit ; « Danger signalé » dit ce que les sources rapportent des autres cartes à bord).",
+    "La montagne : une paroi et un cône schématiques ; sa forme réelle n'est pas connue de nous. À la surface, le bateau crève le plan d'eau sans en sortir."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ton sous-marin fonce dans une *montagne*. Elle n'est pas sur ta +carte+.",
+      "vo": "[tense] Ton sous-marin fonce dans une montagne. Elle n'est pas sur ta carte.",
+      "voAlt": [
+        "[tense] Ton avant éclate contre une montagne. Et l'air qui doit te sauver... fuit par le trou."
+      ],
+      "voir": "Nuit noire sous l'eau, vue basse de trois quarts avant, sous la coque : la proue du sous-marin aux rayons X (coque de verre, ballasts avant et bouteilles d'air pleins à l'intérieur) fonce plein cadre dans son sillage de bulles vers une paroi de roche qui sort du noir ; sur « montagne », la roche remplit le fond ; sur « carte », panneau haut : la carte de bord, vide là où se dresse la roche."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Pour remonter, tu n'as que de l'+air+. Contre [7 000|sept mille] tonnes. Et cette montagne… pourquoi ta carte l'*ignore* ?",
+      "vo": "[firm, matter-of-fact] Pour remonter, tu n'as que de l'air. Contre sept mille tonnes. [short pause] Et cette montagne... pourquoi ta carte l'ignore ?",
+      "voir": "La caméra file le long de la coque jusqu'aux bouteilles d'air comprimé, vert veille ; le bateau entier, masse noire, s'enfonce sous une flèche « 7 000 t » ; sur « l'ignore », retour à la carte vide, la roche à quelques mètres de la proue."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Le choc écrase ta proue comme une *canette*. Des marins sont projetés. À [160|cent soixante] mètres : [17|dix-sept] fois la pression de surface. Il reste un geste… la chasse d'+urgence+.",
+      "vo": "[tense] Le choc écrase ta proue comme une canette. Des marins sont projetés. À cent soixante mètres : dix-sept fois la pression de surface. Il reste un geste... la chasse d'urgence.",
+      "voir": "Même seconde, l'impact : la proue se plie contre la roche comme une canette, le dôme sonar éclate, les ballasts avant se déchirent ; dedans, des silhouettes aux rayons X basculent vers l'avant (jamais un corps en gros plan) ; des flèches de pression serrent la coque de partout ; on finit serré sur la commande de chasse d'urgence, au poste de conduite, seule éclairée."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "La caméra quitte la commande et suit sa tuyauterie vers le flanc du bateau ; sur « on », la coque légère s'éclate en pièces."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Au départ, des bouteilles d'air comprimé. Une commande ouvre leurs vannes. L'air file vers les ballasts : des réservoirs autour de la coque… pleins d'+eau+.",
+      "vo": "[conversational, curious] Au départ, des bouteilles d'air comprimé. Une commande ouvre leurs vannes. L'air file vers les ballasts : des réservoirs autour de la coque... pleins d'eau.",
+      "voAlt": [
+        "[curious] Au départ, des bouteilles d'air comprimé. Une commande ouvre leurs vannes. L'air file vers les ballasts : des réservoirs autour de la coque... pleins d'eau."
+      ],
+      "voir": "Éclaté d'une tranche du bateau, de trois quarts, qui suit le chemin de l'air : les bouteilles, la commande, ses vannes qui pivotent ; un trait vert court dans le tuyau jusqu'aux ballasts, entre coque épaisse et coque légère, pleins d'eau sombre ; on finit sur un ballast seul, en grand, sur son halo."
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi ça remonte ? Archimède : ton bateau pèse autant que l'eau qu'il déplace. Un mètre cube d'eau remplacé par de l'air… c'est [1 000|mille] +kilos+ en moins.",
+      "vo": "[curious] Pourquoi ça remonte ? [short pause] Archimède : ton bateau pèse autant que l'eau qu'il déplace. Un mètre cube d'eau remplacé par de l'air... c'est mille kilos en moins.",
+      "voir": "Le ballast seul, en coupe : un cube d'un mètre d'eau s'y découpe, l'air le chasse par le bas ; à côté, sur une balance, un bloc d'une tonne s'envole ; une flèche verte vers le haut grandit sous la coque."
+    },
+    {
+      "id": "repos",
+      "text": "L'air attend dans ses bouteilles. La mer remplit les ballasts. Un geste lâche tout. Mais l'air ne chasse l'eau… que d'un réservoir *intact*.",
+      "vo": "[warm, conversational] L'air attend dans ses bouteilles. La mer remplit les ballasts. Un geste lâche tout. Mais l'air ne chasse l'eau... que d'un réservoir intact.",
+      "voAlt": [
+        "[curious] L'air attend dans ses bouteilles. La mer remplit les ballasts. Un geste lâche tout. Mais l'air ne chasse l'eau... que d'un réservoir intact."
+      ],
+      "voir": "Le bateau entier aux rayons X, en plongée, calme : bouteilles pleines en vert, ballasts pleins d'eau, la commande au repos ; sur « intact », la caméra glisse d'un ballast arrière fermé jusqu'à un ballast avant déchiré, l'eau qui y entre et en sort librement."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Le chef de quart lâche la +chasse+. L'air comprimé fonce dans les ballasts. Devant… et *derrière*.",
+      "vo": "[firm, matter-of-fact] Le chef de quart lâche la chasse. L'air comprimé fonce dans les ballasts. Devant... et derrière.",
+      "voir": "Retour au poste, même instant que la scène : la commande bascule ; l'air quitte les bouteilles et fonce dans les tuyaux en deux traits verts, l'un vers l'avant, l'autre vers l'arrière ; plan large du bateau entier, la roche derrière la proue."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Devant, les ballasts sont éventrés. L'air s'*échappe*. Derrière, ils se remplissent d'air. Lentement, le bateau +monte+. La surface. [98|Quatre-vingt-dix-huit] blessés, dont un qui ne reviendra pas.",
+      "vo": "[tense] Devant, les ballasts sont éventrés. L'air s'échappe. Derrière, ils se remplissent d'air. Lentement, le bateau monte. La surface. Quatre-vingt-dix-huit blessés, dont un qui ne reviendra pas.",
+      "voir": "Le mécanisme en grand, le bateau entier de trois quarts : à l'avant, l'air entre dans les ballasts déchirés et ressort en gerbes de bulles blanches par la déchirure ; à l'arrière, l'eau est chassée, l'air vert grossit dans les ballasts ; le bateau, proue écrasée, décolle de la roche et monte lentement vers la lumière ; sur « la surface », la coque crève le plan d'eau sans en jaillir ; puis le bateau flotte, immobile, sous un ciel bas (aucun corps)."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà le secret : ta chasse d'urgence n'était *pas* intacte. L'avant fuyait. Et elle t'a quand même remonté… grâce à l'+arrière+.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : ta chasse d'urgence n'était pas intacte. L'avant fuyait. Et elle t'a quand même remonté... grâce à l'arrière.",
+      "voir": "Sous la surface, la caméra longe le bateau de l'avant déchiré, qui perd encore des bulles, jusqu'à l'arrière, ballasts pleins d'air en vert ; le nom du compte s'allume ; sur « l'arrière », l'arrière seul, en grand."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "C'était le San Francisco, en [2005|deux mille cinq]. Et ta carte ? Elle n'avait pas cette montagne. D'autres cartes, à bord, signalaient un danger. En +commentaire+ : la faute… à la carte, ou à ceux qui la *lisent* ?",
+      "vo": "[conversational, curious] C'était le San Francisco, en deux mille cinq. [short pause] Et ta carte ? Elle n'avait pas cette montagne. D'autres cartes, à bord, signalaient un danger. [short pause] En commentaire : la faute... à la carte, ou à ceux qui la lisent ?",
+      "voAlt": [
+        "[curious] C'était le San Francisco, en deux mille cinq. [short pause] Et ta carte ? Elle n'avait pas cette montagne. D'autres cartes, à bord, signalaient un danger. [short pause] En commentaire : la faute... à la carte, ou à ceux qui la lisent ?"
+      ],
+      "voir": "Le bateau en surface, de loin, nom « SSN-711 » au HUD ; on redescend vers la montagne, entière et schématique ; en haut, deux cartes côte à côte : celle de 1989, vide, et une autre qui marque un danger tout près ; chevrons vers les commentaires."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour quelqu'un qui croit que tout est sur les *cartes*.",
+      "vo": "[warm, conversational] Like : [short pause] pour quelqu'un qui croit que tout est sur les cartes.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour quelqu'un qui croit que tout est sur les cartes."
+      ],
+      "voir": "La carte de bord, posée sur l'eau sombre, glisse et rétrécit au-dessus d'un océan bien plus grand qu'elle ; chevrons vers le bouton like."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, classé. Un système qui dort près de toi… jusqu'à la seconde où tout *lâche*.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, classé. Un système qui dort près de toi... jusqu'à la seconde où tout lâche.",
+      "voir": "Panneau « Prochain dossier : classé », un système sous scellés dans le noir ; chevrons « S'abonner pour l'ouvrir »."
+    },
+    {
+      "id": "boucle",
+      "text": "Comme ce jour où…",
+      "vo": "[calm] Comme ce jour où,",
+      "voir": "Retour sous l'eau, vue basse de trois quarts avant : la proue fonce vers la paroi de roche qui sort du noir ; la dernière image rejoint la première."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:montagne",
+    "carte1": "accroche:carte",
+    "remonter": "promesse:remonter",
+    "air1": "promesse:l'air",
+    "mille7": "promesse:tonnes-0.48",
+    "tonnes": "promesse:tonnes",
+    "montagne2": "promesse:montagne",
+    "ignore": "promesse:l'ignore",
+    "crash": "scene-0.3",
+    "canette": "scene:canette",
+    "projetes": "scene:projetés",
+    "metres": "scene:mètres",
+    "pression": "scene:pression",
+    "geste": "scene:geste",
+    "chasse1": "scene:chasse",
+    "urgence1": "scene:d'urgence",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:l'ouvre",
+    "bouteilles": "eclate:bouteilles",
+    "commande": "eclate:commande",
+    "vannes": "eclate:vannes",
+    "air2": "eclate:l'air",
+    "ballasts1": "eclate:ballasts",
+    "reservoirs": "eclate:réservoirs",
+    "coque": "eclate:coque",
+    "pleins": "eclate:pleins",
+    "eau1": "eclate:d'eau",
+    "toprincipe": "principe-0.12",
+    "archimede": "principe:archimède",
+    "pese": "principe:pèse",
+    "deplace": "principe:déplace",
+    "cube": "principe:cube",
+    "remplace": "principe:remplacé",
+    "air3": "principe:l'air",
+    "mille1": "principe:kilos-0.28",
+    "kilos": "principe:kilos",
+    "attend": "repos:attend",
+    "mer": "repos:mer",
+    "geste2": "repos:geste",
+    "lache1": "repos:lâche",
+    "mais": "repos:mais",
+    "intact": "repos:intact",
+    "tozero": "zero-0.12",
+    "chef": "zero:chef",
+    "lacheZ": "zero:lâche",
+    "chasse2": "zero:chasse",
+    "fonce": "zero:fonce",
+    "devant1": "zero:devant",
+    "derriere1": "zero:derrière",
+    "eventres": "reponse:éventrés",
+    "echappe": "reponse:s'échappe",
+    "derriere2": "reponse:derrière",
+    "trigger": "reponse:remplissent",
+    "lentement": "reponse:lentement",
+    "monte": "reponse:monte",
+    "surface": "reponse:surface",
+    "blesses": "reponse:blessés",
+    "reviendra": "reponse:reviendra",
+    "toverdict": "chute-0.12",
+    "secret": "chute:secret",
+    "verdict": "chute:pas",
+    "intacte": "chute:intacte",
+    "avant": "chute:l'avant",
+    "fuyait": "chute:fuyait",
+    "remonte": "chute:remonté",
+    "arriere": "chute:l'arrière",
+    "tocta": "comment-0.12",
+    "sanfrancisco": "comment:san",
+    "an2005": "comment:deux",
+    "carte2": "comment:carte",
+    "montagne3": "comment:montagne",
+    "autres": "comment:d'autres",
+    "danger": "comment:danger",
+    "commentaire": "comment:commentaire",
+    "faute": "comment:faute",
+    "duelA": "comment:faute+0.8",
+    "duelB": "comment:ceux",
+    "cartes": "like:cartes",
+    "prochain": "abo:prochain",
+    "classe": "abo:classé",
+    "systeme": "abo:système",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:jour"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "accroche:elle-0.25",
+      "gain": -15,
+      "pitch": 0.85
+    },
+    {
+      "type": "blip",
+      "at": "promesse-0.3",
+      "gain": -17,
+      "pitch": 1
+    },
+    {
+      "type": "impact",
+      "at": "promesse:et-0.4",
+      "gain": -15,
+      "size": 1
+    },
+    {
+      "type": "impact",
+      "at": "crash",
+      "gain": -10,
+      "size": 1.6
+    },
+    {
+      "type": "hit",
+      "at": "crash",
+      "gain": -13,
+      "pitch": 0.75
+    },
+    {
+      "type": "impact",
+      "at": "scene:des-0.25",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "hit",
+      "at": "scene:fois-0.45",
+      "gain": -17,
+      "pitch": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "scene:il-0.22",
+      "gain": -16,
+      "pitch": 1
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "ouvre$+0.06",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "eclate:des-0.14",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "eclate:une-0.24",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "eclate:l'air-0.24",
+      "gain": -17
+    },
+    {
+      "type": "blip",
+      "at": "principe:ton-0.25",
+      "gain": -17,
+      "pitch": 0.9
+    },
+    {
+      "type": "blip",
+      "at": "principe:c'est-0.22",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "hit",
+      "at": "repos-0.22",
+      "gain": -16,
+      "pitch": 1
+    },
+    {
+      "type": "hit",
+      "at": "repos:mais-0.28",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "hiss",
+      "gain": -18,
+      "from": "zero:l'air-0.3",
+      "to": "zero:l'air-0.04"
+    },
+    {
+      "type": "swish",
+      "at": "zero:devant-0.2",
+      "dur": 0.18,
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "reponse:derrière-0.4",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "impact",
+      "at": "reponse:lentement-0.36",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "hit",
+      "at": "reponse:la-0.22",
+      "gain": -15,
+      "pitch": 1
+    },
+    {
+      "type": "impact",
+      "at": "reponse:surface+0.62",
+      "gain": -13,
+      "size": 1.2
+    },
+    {
+      "type": "blip",
+      "at": "chute:l'avant-0.18",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "click",
+      "at": "comment:ou-0.1",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "like-0.36",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "like:pour-0.22",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "abo:prochain-0.28",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "abo:un-0.22",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

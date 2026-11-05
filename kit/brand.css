@@ -294,3 +294,84 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 .thread__k i { display: block; width: 10px; height: 10px; border-radius: 50%; background: currentColor; box-shadow: 0 0 12px currentColor; }
 .thread__t { margin-top: 12px; font: 700 46px/1.05 var(--display); letter-spacing: 0.01em; color: var(--ink); white-space: nowrap; text-shadow: 0 2px 0 rgba(0, 0, 0, 0.7), 0 0 14px rgba(0, 0, 0, 0.9); }
 .thread.is-veille .thread__k { color: var(--veille); }
+
+/* ─────────────────────────────────────────────── COMPTE À REBOURS (CRnn) · « la reconstitution », V3 « le noir chaud » (05/11)
+   Same studio 3D and fonts as the dossiers; recognised by the WARM black (amber light, amber grid), the giant amber clock, the red fault.
+   Only under [data-serie="compte-a-rebours"] (on #root): the dossiers and the longs never see it. kit/lib/reconstitution.js, docs/reconstitution.md.
+   papier = structure, text · ambre = the time (clock, hours said, tag) · alarme = the fault. No green before `depuis`:
+   --veille is amber until #root turns data-phase="depuis" (crHud), so every kit device marked veille stays amber all night. */
+[data-serie="compte-a-rebours"] {
+  --bg: #0b0705;
+  --papier: #efeae0;
+  --ambre: #ffb23e;
+  --alarme: #ff2d2d;
+  --ink: var(--papier);
+  --ink-dim: rgba(239, 234, 224, 0.62);
+  --ink-faint: rgba(239, 234, 224, 0.22);
+  --signal: var(--alarme);
+  --veille: #5cffb0; /* V3 (05/11): green = what works, from the first second (no longer reserved to `depuis`) */
+}
+[data-serie="compte-a-rebours"] #vignette {
+  background:
+    radial-gradient(ellipse 80% 62% at 50% 44%, transparent 50%, rgba(0, 0, 0, 0.55) 100%),
+    linear-gradient(to bottom, rgba(11, 7, 5, 0.82) 0, rgba(11, 7, 5, 0) 20%, rgba(11, 7, 5, 0) 60%, rgba(11, 7, 5, 0.9) 100%);
+}
+[data-serie="compte-a-rebours"] #hud-shade { background: linear-gradient(to bottom, rgba(11, 7, 5, 0.86) 0, rgba(11, 7, 5, 0.74) 72%, rgba(11, 7, 5, 0) 100%); }
+
+/* the header: tag left, account right, the REAL TIME huge in the middle (the hero), the time left under it, the acts down the left */
+/* (the audit measures each text by its font's full height: the three rows are spaced on that, from 220 — still under the search bar's 205 — to ≈ 412) */
+[data-serie="compte-a-rebours"] #hud { top: 214px; height: 198px; }
+[data-serie="compte-a-rebours"] .hud__tag { position: absolute; left: 0; top: 0; font: 500 20px/1 var(--mono); letter-spacing: 0.16em; color: var(--ambre); }
+[data-serie="compte-a-rebours"] .hud__dot { width: 11px; height: 11px; background: var(--ambre); box-shadow: 0 0 14px var(--ambre); }
+[data-serie="compte-a-rebours"] .hud__brand {
+  position: absolute; right: 0; top: 0; margin: 0;
+  font: 500 20px/1 var(--mono); font-style: normal; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-dim);
+}
+[data-serie="compte-a-rebours"] .hud__clock {
+  position: absolute; left: 0; right: 0; top: 40px; width: max-content; margin: 0 auto;
+  font: 800 106px/0.9 var(--mono); letter-spacing: -0.035em; font-variant-numeric: tabular-nums; color: #ffc25a;
+  text-shadow: 0 0 26px rgba(255, 178, 62, 0.55), 0 0 70px rgba(255, 140, 40, 0.28), 0 3px 0 rgba(0, 0, 0, 0.6);
+}
+[data-serie="compte-a-rebours"] .hud__burst {
+  position: absolute; left: 50%; top: 92px; width: 640px; height: 170px; margin: -85px 0 0 -320px; opacity: 0; pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(255, 178, 62, 0.5) 0, rgba(255, 178, 62, 0.16) 38%, rgba(255, 178, 62, 0) 68%);
+}
+[data-serie="compte-a-rebours"] .hud__remain {
+  position: absolute; left: 0; right: 0; top: 168px; width: max-content; margin: 0 auto;
+  font: 700 26px/1 var(--mono); letter-spacing: 0.04em; font-variant-numeric: tabular-nums; color: var(--alarme);
+  text-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+}
+[data-serie="compte-a-rebours"] .hud__acts {
+  position: absolute; left: 0; right: auto; top: 46px;
+  display: flex; flex-direction: column; gap: 11px; font: 500 18px/1 var(--mono); letter-spacing: 0.12em;
+}
+
+/* captions and hook cards: the kit writes the colour inline (overlay.js TONE) — *mot* is the alarm, +mot+ the amber (green in `depuis`) */
+[data-serie="compte-a-rebours"] :is(.cap__w, .hook__w)[style*="rgb(255, 91, 46)"] { color: var(--alarme) !important; }
+[data-serie="compte-a-rebours"] :is(.cap__w, .hook__w)[style*="rgb(92, 255, 176)"] { color: var(--veille) !important; }
+
+/* a piece of the file: a paper card, slightly askew, its reference in mono, lit by the same hard light as the maquette (hard shadow) */
+[data-serie="compte-a-rebours"] .piece {
+  position: absolute; left: calc(var(--safe-l) + 24px); top: calc(var(--slot-top) + 24px); width: 620px;
+  padding: 24px 30px 22px; background: var(--papier); color: #1c1a17;
+  transform: rotate(-2.2deg); transform-origin: 30% 50%;
+  box-shadow: 20px 24px 0 rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+[data-serie="compte-a-rebours"] .piece__ref {
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  padding-bottom: 12px; margin-bottom: 16px; border-bottom: 2px solid #1c1a17;
+  font: 700 21px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase;
+}
+[data-serie="compte-a-rebours"] .piece__ref b { padding: 5px 9px; background: var(--ambre); color: #1c1a17; }
+[data-serie="compte-a-rebours"] .piece__body { font: 600 36px/1.16 var(--display); }
+[data-serie="compte-a-rebours"] .piece mark { background: none; color: inherit; box-shadow: inset 0 -0.4em 0 rgba(255, 45, 45, 0.5); }
+[data-serie="compte-a-rebours"] .piece__src { margin-top: 14px; font: 500 17px/1.25 var(--mono); letter-spacing: 0.06em; color: rgba(28, 26, 23, 0.72); }
+
+/* the felt-pen mark (reconstitution.js feutre): alarm red, glowing a little on the warm black; placed on its anchor every frame */
+[data-serie="compte-a-rebours"] .feutre { position: absolute; left: 0; top: 0; opacity: 0; pointer-events: none; overflow: visible; filter: drop-shadow(0 0 7px rgba(255, 45, 45, 0.65)) drop-shadow(0 2px 0 rgba(0, 0, 0, 0.5)); }
+
+/* the film grain: fine, over the whole frame, nothing else. Moved by reconstitution.js on the frame number (deterministic) */
+[data-serie="compte-a-rebours"] #grain {
+  pointer-events: none; opacity: var(--grain, 0.16); mix-blend-mode: overlay; background-size: 240px 240px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='2' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='2.6' intercept='-0.8'/%3E%3CfeFuncG type='linear' slope='2.6' intercept='-0.8'/%3E%3CfeFuncB type='linear' slope='2.6' intercept='-0.8'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+}

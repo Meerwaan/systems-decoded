@@ -13,7 +13,8 @@ export function newEpisode(id, slug, title, { affaire = false } = {}) {
   // L01, L02…: a long (YouTube, 16:9) from kit/template-long; 001, 002…: a short from kit/template
   const from = path.join(ROOT, "kit", /^L\d/.test(id) ? "template-long" : "template");
   // HS01, HS02…: a hors-série short (a promo now, sponsored films later): same template, its own tag and acts
-  const serie = /^HS\d/.test(id) ? "hors-serie" : "dossier";
+  // CR01, CR02…: a "Compte à rebours" short (docs/recette-compte-a-rebours.md): same template, its own tag and acts
+  const serie = /^HS\d/.test(id) ? "hors-serie" : /^CR\d/.test(id) ? "compte-a-rebours" : "dossier";
   const { tag, acts } = SERIES[serie];
   const fill = (text) => text.replaceAll("__SERIE__", serie).replaceAll("__TAG__", tag).replaceAll("__ACT1__", acts[0]).replaceAll("__ACT2__", acts[1]).replaceAll("__ACT3__", acts[2]).replaceAll("__NUM__", serie === "dossier" ? id : id.replace(/^[A-Z]+/, "")).replaceAll("__ID__", id).replaceAll("__SLUG__", slug).replaceAll("__TITLE__", title || slug);
   const copy = (src, dst) => {
@@ -41,6 +42,7 @@ export function newEpisode(id, slug, title, { affaire = false } = {}) {
     fs.writeFileSync(file, JSON.stringify({ ...ordered, ...merged }, null, 2) + "\n");
   }
   fs.mkdirSync(path.join(dir, "audio"), { recursive: true });
+  if (serie === "compte-a-rebours") console.log(`\n  Compte à rebours : lire docs/recette-compte-a-rebours.md, puis remplacer les beats du modèle`);
   if (affaire) console.log(`\n  Affaire réelle : lire docs/recette-long-affaire.md avant d'écrire le script`);
   console.log(`\n  Épisode créé: ${path.relative(ROOT, dir)}`);
   console.log(`  1. script dans episode.json   2. modèle + mise en scène dans src/   3. npm run snap -- ${id}\n`);

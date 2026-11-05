@@ -3,12 +3,12 @@
 // Each part has its shot on its word, with a gesture that shows what it is for. A mechanism is shown from
 // three quarters, never from the front; try four azimuths at once with `npm run look` before choosing a side.
 import { setAct } from "@kit/overlay.js";
-import { benchCut, followCall } from "@kit/blocks.js";
+import { benchCut } from "@kit/blocks.js";
 import { SET, HOME, VIEW, BENCHED } from "./world.js";
 
 export default function acte2({ D, world, co }) {
   const { tl, st, shot, chip } = D;
-  const t = D.times({ ouvre: "ouvre", tobench: "tobench", explode: "explode", eclate: "eclate", coeur: "eclate:cœur", repos: "repos", seuil: "seuil", seuilEnd: "seuil$", tozero: "tozero" });
+  const t = D.times({ ouvre: "ouvre", tobench: "tobench", explode: "explode", eclate: "eclate", coeur: "eclate:cœur", principe: "principe", repos: "repos", tozero: "tozero" });
   setAct(tl, 2, t.ouvre);
 
   // "alors…" — time stops; "…on l'ouvre": the bench, and from there the camera backs away as the system comes apart
@@ -25,13 +25,13 @@ export default function acte2({ D, world, co }) {
   cTop.show(tl, t.eclate + 0.1);
   cTop.hide(tl, t.coeur - 0.4);
 
-  // "il attend." — how it waits: a slow breath, never a flicker
-  st(t.repos, 1.2, { heart: 0.8 }, "sine.inOut");
-  shot(t.repos, t.seuil - t.repos, { d: 60, az: -40 }, "sine.inOut");
+  // "pourquoi ça marche ?" — the principle: the heart again, close, and the law shown on the part itself
+  // (a force, a flow, a heat), never a diagram pasted beside it. Its number goes in a chip if the image can't show it.
+  st(t.principe, 0.6, { heart: 1.6 }, "sine.inOut");
+  shot(t.principe - 0.1, t.repos - t.principe + 0.1, { d: 48, az: -46, el: 14 }, "sine.inOut");
 
-  // THE THRESHOLD — "Abonne-toi : ce qui arrive maintenant, on te le montre en entier." The one subscribe call most
-  // viewers are still there to hear (see followCall). The film does not stop for it: the camera is already leaving
-  // for what act 3 will show, the account name lights up, the chevrons point at the button. No panel.
-  followCall(tl, { from: t.seuil, to: Math.min(t.seuilEnd + 0.15, t.tozero - 0.1) });
-  shot(t.seuil - 0.1, t.tozero - t.seuil, { d: 46, az: -30, el: 16 }, "sine.inOut");
+  // "il attend." — how it waits: a slow breath, never a flicker; the last sentence tightens, and we leave for act 3.
+  // (Since 03/11 there is no subscribe call here any more: it is asked once, at the end, with the next file.)
+  st(t.repos, 1.2, { heart: 0.8 }, "sine.inOut");
+  shot(t.repos, t.tozero - t.repos, { d: 60, az: -40 }, "sine.inOut");
 }

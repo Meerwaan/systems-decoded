@@ -24,15 +24,15 @@ Le dossier (`028`, `L05`…), le sujet et l'angle proposé, le chemin du fichier
 
 ## Le fichier, dans cet ordre
 
-1. `# <ep> — <sujet> : <l'angle>` puis **Verdict sur l'angle** (tient / à ajuster / ne tient pas, trois lignes ; le sujet est-il « vu et revu » sur les réseaux ?).
+1. `# <ep> — <sujet> : <l'angle>` puis **Verdict sur l'angle** (tient / à ajuster / ne tient pas, trois lignes ; le sujet est-il « vu et revu » sur les réseaux ?). Il passe **les deux tests** (`docs/plan-scale-novembre.md` § 3, depuis le 03/11) : **le spectacle**, un événement physique énorme, en cours, lisible sans le son dès la première seconde (dis lequel) ; **l'histoire**, quelqu'un, un danger, quelques secondes, et une raison d'envoyer le film à un proche. S'il n'en passe qu'un, propose l'angle qui passe les deux.
 2. **La scène** : un cas réel daté et sourcé si possible, sinon le scénario typique sourcé ; ce qu'on peut **montrer**.
 3. **Le système qui sauve** : ce qu'il est vraiment, où il est, qui l'a.
-4. **Le mécanisme ouvert** : 5 à 8 pièces nommées (le mot d'un professionnel), matières, tailles ; ce qui déclenche ; l'ordre des événements ; délais et seuils chiffrés et sourcés.
+4. **Le mécanisme ouvert** : 5 à 8 pièces nommées (le mot d'un professionnel), matières, tailles ; ce qui déclenche ; l'ordre des événements ; délais et seuils chiffrés et sourcés ; et **pourquoi ça marche** en une phrase sourcée (la loi physique en mots simples, un ordre de grandeur) : c'est le beat `principe` du script.
 5. **Chiffres** : chacun avec sa source et son niveau.
 6. **Ce qui retourne une idée reçue** : deux ou trois candidates de chute, sourcées.
 7. **La question du commentaire** : deux ou trois candidates **fermées, à deux camps, une réponse d'un mot** — de préférence une lecture que le spectateur peut faire chez lui et dont une réponse fait peur (« Sur ton tableau, tu lis 30 mA… ou rien ? »). Jamais « tu le tentes ? », « tu as déjà… ? », « tu le savais ? ».
 8. **L'histoire du système** : qui, quand, deux lignes.
-9. **Pour l'annonce** : une phrase de 12 à 17 mots, un seul fait sûr (dite à la fin du film précédent).
+9. **Pour l'annonce** : une phrase de 12 à 17 mots (dite après « Abonne-toi : »), un seul fait sûr (dite à la fin du film précédent).
 10. **À ne pas dire** : erreurs courantes, chiffres qui circulent et ne tiennent pas, raccourcis faux.
 11. **Ce que la voix peut dire** : dix phrases courtes (huit mots en moyenne), vraies telles quelles.
 12. **Sources** : les liens, et pour chacun ce que tu y as lu.

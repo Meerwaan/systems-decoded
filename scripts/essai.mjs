@@ -52,8 +52,10 @@ export async function essai(dir, { file, budget = 0, ref = null } = {}) {
       throw new Error(`Essai "${t.nom}" : les mots ne sont plus ceux du script (${err.message})`);
     }
     const model = t.model ?? ep.voice.model;
-    const stamp = hashOf(JSON.stringify({ voice: ep.voice.voiceId, model, settings, text }));
-    return { ...t, model, vo, text, settings, stamp, mp3: path.join(out, `${t.nom}.mp3`), meta: path.join(out, `${t.nom}.json`) };
+    // `voice`: another narrator on the same passage (a new format's voice is chosen this way)
+    const voiceId = t.voice ?? ep.voice.voiceId;
+    const stamp = hashOf(JSON.stringify({ voice: voiceId, model, settings, text }));
+    return { ...t, voiceId, model, vo, text, settings, stamp, mp3: path.join(out, `${t.nom}.mp3`), meta: path.join(out, `${t.nom}.json`) };
   });
   const have = (t) => fs.existsSync(t.mp3) && fs.existsSync(t.meta) && JSON.parse(fs.readFileSync(t.meta, "utf8")).stamp === t.stamp;
   const todo = trials.filter((t) => !have(t));
@@ -88,7 +90,7 @@ export async function essai(dir, { file, budget = 0, ref = null } = {}) {
       break;
     }
     process.stdout.write(`  ${t.nom} … `);
-    const res = await fetch(`${API}/text-to-speech/${ep.voice.voiceId}/with-timestamps?output_format=${ep.voice.format ?? "mp3_44100_128"}`, {
+    const res = await fetch(`${API}/text-to-speech/${t.voiceId}/with-timestamps?output_format=${ep.voice.format ?? "mp3_44100_128"}`, {
       method: "POST",
       headers: { "xi-api-key": elevenKey(), "content-type": "application/json" },
       body: JSON.stringify({ text: t.text, model_id: t.model, seed: ep.voice.seed ?? 21, voice_settings: t.settings }),

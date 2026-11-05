@@ -1,0 +1,15 @@
+{
+  "phrases": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5"
+  ],
+  "essais": [
+    {
+      "nom": "eric-conversation",
+      "note": "Eric qui te raconte, une direction par ligne"
+    }
+  ]
+}

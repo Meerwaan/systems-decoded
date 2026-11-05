@@ -17,6 +17,7 @@ const WEAK = /(tu le tentes|tu y vas|tu as déjà|a déjà|il a quel âge|tu le 
 export function ecriture(ep, sched) {
   if (/^L\d{2}$/.test(String(ep.id))) return ecritureLong(ep, sched);
   if (/^HS\d{2}$/.test(String(ep.id))) return ecritureHorsSerie(ep, sched);
+  if (/^CR\d{2}$/.test(String(ep.id))) return ecritureCompteARebours(ep, sched);
   if (!/^(\d{3}|X\d{2})$/.test(String(ep.id))) return null; // X30… : a trial script of the writers' room, read as a short
   const out = [];
   const warn = (msg) => out.push(msg);
@@ -28,7 +29,7 @@ export function ecriture(ep, sched) {
 
   // 1. the word budget: the film, the hook (A·B·C), the scene (the costliest ten seconds of the curve)
   const { total, hook, hookWords } = mesures(ep);
-  if (total > 265) warn(`${total} mots affichés : au-delà de 265 le film passe ≈ 95 s — couper la scène et le commentaire d'abord`);
+  if (total > 280) warn(`${total} mots affichés : au-delà de 280 le film passe ≈ 100 s — couper la scène et le commentaire d'abord, jamais le principe`);
   if (total < 240) warn(`${total} mots affichés : sous 240, vérifier que le film tient ses ≈ 85 s (60 s au moins)`);
   if (hookWords < 26 || hookWords > 32) warn(`accroche (${hook.map((b) => b.id).join(" + ")}) : ${hookWords} mots — 26 à 32, finis avant 10 s`);
   const hookEnd = sched.beats.find((b) => b.id === hook.at(-1)?.id)?.end;
@@ -74,17 +75,18 @@ export function ecriture(ep, sched) {
   if (at.includes(-1)) warn(`la fin attend ${END.join(" → ")} (manque : ${END.filter((id, i) => at[i] < 0).join(", ")})`);
   else if (at.some((x, i) => i > 0 && x < at[i - 1])) warn(`ordre de la fin : ${END.join(" → ")} (ici : ${ids.filter((id) => END.includes(id)).join(" → ")})`);
   const abo = beat("abo");
-  if (abo && /abonne/i.test(plain(abo))) warn("prochain dossier : la voix ne redemande pas l'abonnement (le seuil l'a fait, le panneau le porte)");
+  // since 03/11 (Merwan: « le abonne-toi en plein milieu… ça fait perdre les gens ») the subscribe call is asked
+  // once, at the end, with the next file — never in the middle of the film (films 008 to 035 had a "seuil" beat)
+  if (abo && !/abonne/i.test(plain(abo))) warn("prochain dossier : il commence par « Abonne-toi : » (la seule demande d'abonnement du film)");
+  for (const b of ep.beats) if (b.id !== "abo" && /abonne/i.test(plain(b))) warn(`${b.id} : « abonne-toi » au milieu du film — une seule demande, à la fin, avec le prochain dossier`);
 
-  // 5. the threshold: two words of asking and a promise, three seconds, never in the hook
-  const seuil = beat("seuil");
-  if (!seuil) warn("pas de seuil : « Abonne-toi : … » à la porte de l'acte 3");
+  // 5. the principle (since 03/11): what the viewer learns — why it works, in plain words, with a number
+  const principe = beat("principe");
+  if (!principe) warn("pas de principe : entre l'éclaté et le repos, pourquoi ça marche (la loi physique en mots simples, un chiffre)");
   else {
-    if (!/^abonne-toi/i.test(plain(seuil).trim())) warn("seuil : il commence par « Abonne-toi »");
-    if (words(plain(seuil)).length > 10) warn(`seuil : ${words(plain(seuil)).length} mots — dix au plus (3 s)`);
-    if (ids.indexOf("zero") >= 0 && ids.indexOf("seuil") > ids.indexOf("zero")) warn("seuil : avant l'acte 3 (zero), pas après");
-    const s = sched.beats.find((b) => b.id === "seuil");
-    if (s && s.start < 12) warn(`seuil à ${s.start.toFixed(1)} s : jamais dans l'accroche`);
+    const n = words(plain(principe)).length;
+    if (n < 18 || n > 32) warn(`principe : ${n} mots — 18 à 32`);
+    if (!/\d/.test(principe.text)) warn("principe : aucun chiffre — un ordre de grandeur qu'on retient");
   }
 
   // 6. the loop: unfinished on screen, suspended in the voice
@@ -474,6 +476,84 @@ const tail = (s, n = 60) => (s.length <= n ? s : `…${s.slice(s.length - n).rep
 const list = (x) => (x == null ? [] : Array.isArray(x) ? x : [x]);
 
 /** How a phrase leaves the viewer: on a question, a suspension, a threat, a promise — or flat (null). */
+// A "Compte à rebours" (CR01…, docs/recette-compte-a-rebours.md): a real day, to the second, in ≈ 65 s.
+function ecritureCompteARebours(ep, sched) {
+  const out = [];
+  const warn = (msg) => out.push(msg);
+  const ids = ep.beats.map((b) => b.id);
+  const beat = (id) => ep.beats.find((b) => b.id === id);
+  const plain = (b) => plainText(b.tokens);
+  const time = Object.fromEntries(sched.beats.map((b) => [b.id, b]));
+  const k = sched.estimated ? 0.8 : 1; // the estimate runs ≈ 20 % long against the turbo voice
+  const fr = (x, d = 1) => Number(x).toFixed(d).replace(".", ",");
+  const HOUR = /\b\d{1,2}\s?h(\s?\d{2})?\b|\b\d{1,2}:\d{2}\b|\[\d{1,2}\s?h/i;
+
+  // 1. the budget: 340 to 450 words shown, ≈ 2 to 2 min 45, never over 3 min (Instagram) — Merwan, 04/11: « un vrai contenu éducatif, qu'on comprenne tout le déroulé »
+  const total = ep.beats.reduce((n, b) => n + b.tokens.filter((t) => /[\p{L}\p{N}]/u.test(t.d)).length, 0);
+  if (total > 450) warn(`${total} mots affichés : 450 au plus (≈ 2 min 45, jamais au-delà de 3 min)`);
+  if (total < 340) warn(`${total} mots affichés : 340 à 450 (≈ 2 min à 2 min 45) — tout le déroulé, expliqué`);
+  if (!sched.estimated && sched.duration < 60) warn(`${fr(sched.duration)} s : jamais sous 60 s`);
+
+  // 2. the beats of the format, in order
+  const ORDER = ["accroche", "promesse", "issue", "depuis", "comment", "abo", "boucle"];
+  const at = ORDER.map((id) => ids.indexOf(id));
+  if (at.includes(-1)) warn(`le format attend ${ORDER.join(" → ")} (manque : ${ORDER.filter((id, i) => at[i] < 0).join(", ")})`);
+  else if (at.some((x, i) => i > 0 && x < at[i - 1])) warn(`ordre : ${ORDER.join(" → ")}`);
+  const steps = ep.beats.filter((b) => /^t\d+$/.test(b.id));
+  if (steps.length < 5 || steps.length > 10) warn(`compte à rebours : ${steps.length} étapes (t1…) — cinq à dix`);
+  for (const b of steps) {
+    if (!HOUR.test(b.text)) warn(`${b.id} : pas d'heure — chaque étape s'ouvre sur son heure réelle`);
+    const n = words(plain(b)).length;
+    if (n > 48) warn(`${b.id} : ${n} mots — une étape, ses faits et son pourquoi (48 au plus)`);
+  }
+
+  // 3. the hook: the hour and the event, to you, shock word before 3 s, A·B·C (accroche + promesse) 26 to 32 words
+  const acc = beat("accroche");
+  if (acc && !HOUR.test(acc.text)) warn("accroche : l'heure réelle n'y est pas");
+  const opening = ep.beats.slice(0, 2).map(plain).join(" ").split(/\s+/).slice(0, 10).join(" ");
+  if (!YOU.test(opening)) warn("aucune 2ᵉ personne dans les dix premiers mots (ta, ton, tes, tu…)");
+  const hookWords = ["accroche", "promesse"].reduce((n, id) => n + (beat(id) ? words(plain(beat(id))).length : 0), 0);
+  if (hookWords < 26 || hookWords > 32) warn(`accroche + promesse : ${hookWords} mots — 26 à 32, finis avant 10 s`);
+  if (ep.cues?.choc == null) warn('pas de repère "choc" : déclare le mot-choc ("choc": "accroche:mot")');
+  else if (sched.cues?.choc != null && sched.cues.choc > 3.05 && !sched.estimated) warn(`mot-choc à ${fr(sched.cues.choc, 2)} s — avant 3 s`);
+  const promesse = beat("promesse");
+  if (promesse && !/\?/.test(promesse.text)) warn("promesse : la décision ouverte (C) finit sur « ? »");
+
+  // 4. no dossier signature here; one subscribe call, at the end
+  for (const b of ep.beats) if (/on l['’]ouvre/i.test(plain(b))) warn(`${b.id} : « on l'ouvre » est la signature des dossiers, pas de ce format`);
+  const abo = beat("abo");
+  if (abo && !/^abonne-toi/i.test(plain(abo).trim())) warn("abo : il commence par « Abonne-toi : prochain compte à rebours… »");
+  for (const b of ep.beats) if (b.id !== "abo" && /abonne/i.test(plain(b))) warn(`${b.id} : « abonne-toi » ailleurs qu'à la fin`);
+
+  // 5. what we learn: "depuis" names today's system and a number
+  const depuis = beat("depuis");
+  if (depuis && !/\d/.test(depuis.text)) warn("depuis : aucun chiffre — le système d'aujourd'hui et un ordre de grandeur");
+
+  // 6. the comment and the loop
+  const comment = beat("comment");
+  if (comment) {
+    const q = (plain(comment).match(/[^.?!:]*\?/g) ?? []).at(-1) ?? "";
+    if (!/…|\bou\b/i.test(q)) warn("commentaire : une question fermée à deux camps (« … ou … ? »)");
+  }
+  const loop = beat("boucle");
+  if (loop) {
+    if (!/…\s*$/.test(loop.text)) warn("boucle : elle finit par « … » à l'écran");
+    if (!/,\s*$/.test(loop.vo ?? "")) warn("boucle : son vo finit par une virgule");
+  }
+
+  // 7. directions: one tag at most per beat, at the head; never three [tense] in a row
+  let run = 0;
+  for (const b of ep.beats) {
+    const tags = [...(b.vo ?? "").matchAll(TAG)].map((m) => m[1].trim()).filter((t) => !PAUSE.test(t));
+    if (tags.length > 1) warn(`${b.id} : ${tags.length} balises — une au plus, en tête`);
+    if (tags.some((t) => BANNED.includes(t.toLowerCase()))) warn(`${b.id} : balise interdite (${tags.join(", ")})`);
+    run = tags[0]?.toLowerCase() === "tense" ? run + 1 : 0;
+    if (run === 3) warn(`${b.id} : trois [tense] de suite — alterner avec [firm, matter-of-fact]`);
+  }
+  if (time.issue && time.issue.start * k < 38) warn(`l'issue arrive à ${fr(time.issue.start * k)} s : le compte à rebours est trop court`);
+  return out;
+}
+
 function relance(b, { strict = false } = {}) {
   const text = plainText(b.tokens);
   const last = lastSentence(text);
@@ -855,7 +935,7 @@ export function printEcriture(ep, sched) {
   if (long) printLongMap(ep, sched);
   const out = ecriture(ep, sched);
   if (!out) return;
-  const recipe = long ? "docs/recette-long.md" : /^HS\d{2}$/.test(String(ep.id)) ? "docs/recette-promo.md" : "docs/recette-script.md";
+  const recipe = long ? "docs/recette-long.md" : /^HS\d{2}$/.test(String(ep.id)) ? "docs/recette-promo.md" : /^CR\d{2}$/.test(String(ep.id)) ? "docs/recette-compte-a-rebours.md" : "docs/recette-script.md";
   if (!out.length) console.log(`  Écriture : rien à signaler (${recipe})\n`);
   else console.log(`  Écriture (${recipe}) — ${out.length} avertissement${out.length > 1 ? "s" : ""} :\n${out.map((m) => `    · ${m}`).join("\n")}\n`);
 }

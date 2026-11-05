@@ -1,0 +1,544 @@
+{
+  "id": "CR01",
+  "serie": "compte-a-rebours",
+  "slug": "tchernobyl",
+  "title": "Tchernobyl",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "defaut$",
+    "title": [
+      "Tchernobyl",
+      "01:23:40"
+    ],
+    "lastTone": "#ffb23e",
+    "cam": {
+      "tx": 4000,
+      "ty": 125,
+      "tz": 0,
+      "d": 1050,
+      "az": -56,
+      "el": 20,
+      "fov": 30,
+      "shift": -300,
+      "side": 0,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Tchernobyl",
+    "caption": "Tchernobyl, le bouton d'arrêt d'urgence AZ-5 : la nuit du 26 avril 1986, à la seconde près. La sécurité devait tout arrêter, et ce qu'elle a fait d'abord est la pire surprise de l'histoire du nucléaire. Pour toi : les hommes… ou la machine ?",
+    "hashtags": [
+      "#tchernobyl",
+      "#chernobyl",
+      "#nucleaire",
+      "#comptearebours",
+      "#apprendresurtiktok"
+    ],
+    "pinned": "Réponds juste : les hommes ou la machine.",
+    "instagram": {
+      "caption": "Tchernobyl, 26 avril 1986, 1 h 23 : on appuie sur l'arrêt d'urgence… et le réacteur accélère.\n\nCompte à rebours 01 : la nuit de Tchernobyl, à la seconde près. L'essai préparé la veille, les barres retirées une à une, la turbine qui ralentit, le bouton AZ-5 — et ce qu'il a fait d'abord. Tout est vrai, reconstitué en maquette.\n\nPour toi : les hommes… ou la machine ?",
+      "hashtags": [
+        "#tchernobyl",
+        "#chernobyl",
+        "#nucleaire",
+        "#histoire",
+        "#comptearebours"
+      ]
+    },
+    "youtube": {
+      "title": "Tchernobyl, 1 h 23 : on appuie sur l'arrêt d'urgence… et le réacteur accélère",
+      "description": "Compte à rebours 01 — la nuit du 26 avril 1986 à Tchernobyl, reconstituée à la seconde : l'essai préparé à 14 h la veille, la puissance qui s'effondre, les barres retirées (8 quand le règlement en exige 15), la turbine qui ralentit, puis le bouton AZ-5 — et ce qu'il a fait d'abord. Et ce qui a changé depuis sur les réacteurs de ce type.\n\nPour toi : les hommes… ou la machine ?",
+      "hashtags": [
+        "#shorts",
+        "#tchernobyl",
+        "#nucleaire",
+        "#histoire",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Chronologie de la nuit (00:28 effondrement de la puissance, 01:00 remontée en retirant des barres, 01:23:04 début de l'essai et ralentissement des pompes, 01:23:40 appui sur AZ-5, 01:23:43 plus de 530 MWt) — WNA « Sequence of events », qui reprend INSAG-7 [S] ; AZ-5 à 01:23:39 selon d'autres chronologies (Wikipedia), écart d'une seconde",
+    "Moins de barres dans le cœur que le minimum requis — WNA (8 estimées à 01:22:30, minimum 15) ; NEA (6 à 8, minimum 30) [S] ; aucun chiffre dit",
+    "AZ-5 insère toutes les barres absorbantes — IRSN, fiches M. Chouha 2006 [S]",
+    "Une vingtaine de secondes pour la course complète — NEA « environ 20 s » ; Wikipedia citant INSAG-7 (18-20 s) [S]",
+    "Bloc de graphite (déplaceur) au bout de l'absorbant, qui chasse l'eau en bas du canal ; l'eau absorbe plus de neutrons que le graphite ; la puissance monte d'abord en bas du cœur — WNA RBMK (« the initial entry of the control rods actually added reactivity to the lower region of the core ») ; IRSN (« l'insertion des barres à partir d'une position haute provoquait d'abord une augmentation de la réactivité ») [S] ; longueurs 4,5 m et 1,25 m NON dites (⚠)",
+    "Les barres s'arrêtent avant d'atteindre le bas — WNA (journal de l'ingénieur de contrôle) [S]",
+    "Deux explosions, quelques secondes après l'appui (4 à 7 s, heure exacte non figée) — WNA ; NEA [S/O]",
+    "Dalle supérieure de 1 000 tonnes soulevée — WNA ; Wikipedia (sarcophage) [S] ; la forme du vol à l'image est reconstituée",
+    "Bilan : 2 morts le jour même, 28 morts du syndrome d'irradiation aiguë dans les mois suivants — UNSCEAR 2008 (relais) ; WNA [S] ; aucun chiffre à long terme",
+    "Effet constaté quelques années avant (Ignalina) — IRSN ; Wikipedia citant INSAG-7 p. 13 (1983) [S]",
+    "Deux enquêtes : INSAG-1 (1986) met en avant l'action des opérateurs, INSAG-7 (1992) la conception du réacteur — Wikipedia ; résumé AIEA [S] ; INSAG-7 non ouvert (402)",
+    "Depuis : barres redessinées sans colonne d'eau, insertion de 18 à 12 s, absorbants fixes ajoutés (80 à 90) sur tous les RBMK — WNA ; IRSN [S] ; dates précises non trouvées",
+    "Réacteurs français (REP) : coefficient de température négatif par conception, effet stabilisant — IRSN, fiches M. Chouha 2006 [S]",
+    "Annonce : Deepwater Horizon, la mâchoire de cisaillement du BOP probablement actionnée sans sceller le puits — CSB, rapport final 2014, résumé seul (⚠ rapport non ouvert)",
+    "Image : la salle de commande, les personnes, le mouvement exact des barres, le vol de la dalle et la forme des explosions sont reconstitués (maquette d'enquête) ; la voix ne prête l'appui à personne",
+    "Image : maquettes d’enquête (le cœur au 1:10, une tranche de canal agrandie et tassée en hauteur, la centrale au 1:50, la salle de commande) ; dans la barre, les proportions eau 1,25 m · graphite 4,5 m · eau 1,25 m sur 7 m sont suivies à l’image et jamais dites ; neutrons, atomes, xénon et lueur de puissance sont des schémas ; la forme des explosions et le vol de la dalle sont reconstitués ; personne n’appuie sur AZ-5 à l’image. En-tête : compte jusqu’à l’appui sur AZ-5 (01:23:40, WNA ; 01:23:39 ailleurs) ; « 01:22:30 » (marge de 8 barres, WNA) pour « 01 h 22 » ; à t8 l’heure s’affiche « 01:23 » sans seconde (heure des explosions non figée)"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "[01 h 23|Une heure vingt-trois]. Arrêt d'urgence… et ton réacteur *accélère*.",
+      "vo": "[tense] Une heure vingt-trois. Arrêt d'urgence... et ton réacteur accélère."
+    },
+    {
+      "id": "promesse",
+      "text": "C'est *Tchernobyl*. Tout est +vrai+, minute par minute. Mais pourquoi le bouton qui devait tout arrêter… a fait l'*inverse* ?",
+      "vo": "[conversational, curious] C'est Tchernobyl. Tout est vrai, minute par minute. Mais pourquoi le bouton qui devait tout arrêter... a fait l'inverse ?"
+    },
+    {
+      "id": "principe",
+      "text": "D'abord, comment ça marche. L'uranium se casse et lâche des neutrons, qui cassent d'autres atomes. Ça chauffe l'eau, la vapeur fait tourner la turbine. Pour freiner : des barres qui avalent les neutrons.",
+      "vo": "[conversational, curious] D'abord, comment ça marche. L'uranium se casse et lâche des neutrons, qui cassent d'autres atomes. Ça chauffe l'eau, la vapeur fait tourner la turbine. Pour freiner : des barres qui avalent les neutrons."
+    },
+    {
+      "id": "piege",
+      "text": "Et ce réacteur a un piège : l'eau aussi avale des neutrons. Changée en *vapeur*, elle en avale moins… et la réaction accélère. Retiens bien ça.",
+      "vo": "[firm, matter-of-fact] Et ce réacteur a un piège : l'eau aussi avale des neutrons. Changée en vapeur, elle en avale moins... et la réaction accélère. Retiens bien ça."
+    },
+    {
+      "id": "t1",
+      "text": "La veille, [14 h 00|quatorze heures]. On prépare un essai de *sécurité*. Si le courant est coupé, les diesels de secours mettent environ une minute à démarrer. La turbine, en ralentissant, peut-elle faire tourner les pompes pendant cette minute ?",
+      "vo": "[conversational, curious] La veille, quatorze heures. On prépare un essai de sécurité. Si le courant est coupé, les diesels de secours mettent environ une minute à démarrer. La turbine, en ralentissant, peut-elle faire tourner les pompes pendant cette minute ?"
+    },
+    {
+      "id": "report",
+      "text": "Pour l'essai, on coupe le refroidissement de *secours*. Puis le réseau réclame du courant : tout est repoussé… à la nuit.",
+      "vo": "[firm, matter-of-fact] Pour l'essai, on coupe le refroidissement de secours. Puis le réseau réclame du courant : tout est repoussé... à la nuit."
+    },
+    {
+      "id": "t2",
+      "text": "[00 h 28|Minuit vingt-huit]. La puissance s'*effondre* : à peine un pour cent. Le xénon, un gaz qui avale les neutrons, freine sa remontée.",
+      "vo": "[conversational, curious] Minuit vingt-huit. La puissance s'effondre : à peine un pour cent. Le xénon, un gaz qui avale les neutrons, freine sa remontée."
+    },
+    {
+      "id": "t3",
+      "text": "[01 h 00|Une heure]. Pour le relancer, on retire des barres. Encore, et encore. Il remonte à six pour cent… avec très peu de *barres* dedans.",
+      "vo": "[tense] Une heure. Pour le relancer, on retire des barres. Encore, et encore. Il remonte à six pour cent... avec très peu de barres dedans."
+    },
+    {
+      "id": "t4",
+      "text": "[01 h 22|Une heure vingt-deux]. Il reste l'équivalent de *huit* barres. Le règlement en exige quinze au moins. Plusieurs protections sont coupées. Et l'essai est lancé quand même.",
+      "vo": "[firm, matter-of-fact] Une heure vingt-deux. Il reste l'équivalent de huit barres. Le règlement en exige quinze au moins. Plusieurs protections sont coupées. Et l'essai est lancé quand même."
+    },
+    {
+      "id": "t5",
+      "text": "[01 h 23|Une heure vingt-trois], zéro quatre. L'essai commence : la turbine ralentit, les pompes aussi. L'eau bout davantage… et souviens-toi : plus de vapeur, plus de *puissance*.",
+      "vo": "[conversational, curious] Une heure vingt-trois, zéro quatre. L'essai commence : la turbine ralentit, les pompes aussi. L'eau bout davantage... et souviens-toi : plus de vapeur, plus de puissance."
+    },
+    {
+      "id": "t6",
+      "text": "[01 h 23|Une heure vingt-trois], quarante. Arrêt d'urgence : le bouton *AZ-5*. Les barres descendent. Il leur faut près de vingt secondes.",
+      "vo": "[tense] Une heure vingt-trois, quarante. Arrêt d'urgence : le bouton AZ-5. Les barres descendent. Il leur faut près de vingt secondes."
+    },
+    {
+      "id": "defaut",
+      "text": "Sauf que… tu sais ce qu'il y a au bout ? Du *graphite*, sous la partie qui freine. En entrant, il chasse l'eau du bas du cœur, l'eau qui avalait les neutrons. Alors pendant quelques secondes… le frein *accélère*.",
+      "vo": "[conversational, curious] Sauf que... tu sais ce qu'il y a au bout ? Du graphite, sous la partie qui freine. En entrant, il chasse l'eau du bas du cœur, l'eau qui avalait les neutrons. Alors pendant quelques secondes... le frein accélère."
+    },
+    {
+      "id": "t7",
+      "text": "[01 h 23|Une heure vingt-trois], quarante-trois. Plus de [530|cinq cent trente] mégawatts, et ça monte en flèche. Le cœur surchauffe… les barres se *bloquent* avant le fond.",
+      "vo": "[tense] Une heure vingt-trois, quarante-trois. Plus de cinq cent trente mégawatts, et ça monte en flèche. Le cœur surchauffe... les barres se bloquent avant le fond."
+    },
+    {
+      "id": "t8",
+      "hold": 0.3,
+      "text": "Toujours [01 h 23|une heure vingt-trois]. Les tubes éclatent, la vapeur *explose*. La dalle du réacteur, un disque géant, se soulève. Une seconde explosion. Le graphite prend feu.",
+      "vo": "[firm, matter-of-fact] Toujours une heure vingt-trois. Les tubes éclatent, la vapeur explose. La dalle du réacteur, un disque géant, se soulève. Une seconde explosion. Le graphite prend feu."
+    },
+    {
+      "id": "issue",
+      "hold": 0.3,
+      "text": "Deux morts cette nuit-là, [28|vingt-huit] pompiers et employés dans les mois suivants. Et le pire ? Cet effet des barres, on l'avait *déjà* vu trois ans plus tôt. Les parades n'avaient pas été appliquées.",
+      "vo": "[calm] Deux morts cette nuit-là, vingt-huit pompiers et employés dans les mois suivants. Et le pire ? Cet effet des barres, on l'avait déjà vu trois ans plus tôt. Les parades n'avaient pas été appliquées."
+    },
+    {
+      "id": "depuis",
+      "text": "Depuis, ces barres ont été redessinées : plus d'eau sous le graphite, +douze+ secondes au lieu de [18|dix-huit]. En France, nos réacteurs font l'inverse : quand l'eau chauffe, la réaction +ralentit+. Toute seule.",
+      "vo": "[warm, conversational] Depuis, ces barres ont été redessinées : plus d'eau sous le graphite, douze secondes au lieu de dix-huit. En France, nos réacteurs font l'inverse : quand l'eau chauffe, la réaction ralentit. Toute seule."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "La première enquête a accusé les hommes. La seconde, surtout la machine. Et toi, en +commentaire+ : les hommes… ou la machine ?",
+      "vo": "[conversational, curious] La première enquête a accusé les hommes. La seconde, surtout la machine. [short pause] Et toi, en commentaire : les hommes... ou la machine ?"
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+ : chaque compte à rebours, un vrai accident et une sécurité qui lâche. Prochain : Deepwater Horizon, une vanne qui se ferme… sans sceller le *puits*.",
+      "vo": "[warm, conversational] Abonne-toi : [short pause] chaque compte à rebours, un vrai accident et une sécurité qui lâche. Prochain : Deepwater Horizon, une vanne qui se ferme... sans sceller le puits."
+    },
+    {
+      "id": "boucle",
+      "text": "Comme ici, à…",
+      "vo": "[calm] Comme ici, à,"
+    }
+  ],
+  "cues": {
+    "choc": "accroche:accélère",
+    "tchernobyl": "promesse:Tchernobyl",
+    "vrai": "promesse:vrai",
+    "bouton": "promesse:bouton-0.1",
+    "inverse": "promesse:l'inverse",
+    "toprincipe": "principe-0.12",
+    "uranium": "principe:L'uranium",
+    "toloupe": "principe:L'uranium-0.12",
+    "neutrons1": "principe:neutrons",
+    "cassent": "principe:cassent",
+    "atomes": "principe:atomes",
+    "chauffe": "principe:chauffe",
+    "vapeur1": "principe:vapeur",
+    "toturbine1": "principe:turbine-0.12",
+    "turbine1": "principe:turbine",
+    "tofreiner": "principe:Pour-0.13",
+    "freiner": "principe:freiner",
+    "avalent": "principe:avalent",
+    "totrap": "piege-0.12",
+    "trap": "piege:piège",
+    "eau1": "piege:l'eau",
+    "avale1": "piege:avale",
+    "changee": "piege:Changée",
+    "moins": "piege:moins",
+    "accelere1": "piege:accélère",
+    "retiens": "piege:Retiens",
+    "tot1": "t1-0.12",
+    "essai": "t1:essai",
+    "courant": "t1:courant",
+    "diesels": "t1:diesels",
+    "minute1": "t1:minute",
+    "turbine2": "t1:turbine",
+    "ralentissant": "t1:ralentissant",
+    "pompes1": "t1:pompes",
+    "toreport": "report-0.12",
+    "coupe": "report:coupe",
+    "refroid": "report:refroidissement",
+    "reseau": "report:réseau",
+    "repousse": "report:repoussé",
+    "nuit": "report:nuit",
+    "tot2": "t2-0.12",
+    "effondre": "t2:s'effondre",
+    "peine": "t2:peine",
+    "xenonW": "t2:xénon",
+    "freine2": "t2:freine",
+    "toxenon": "t2:Le-0.12",
+    "tot3": "t3-0.12",
+    "retire": "t3:retire",
+    "encore1": "t3:Encore",
+    "etEncore": "t3:et",
+    "remonte": "t3:remonte",
+    "six": "t3:six",
+    "peu": "t3:peu",
+    "tot4": "t4-0.12",
+    "huit": "t4:huit",
+    "reglement": "t4:règlement",
+    "quinze": "t4:quinze",
+    "toprot": "t4:Plusieurs-0.12",
+    "protections": "t4:protections",
+    "lance": "t4:lancé",
+    "tot5": "t5-0.12",
+    "commence": "t5:commence",
+    "ralentit": "t5:ralentit",
+    "pompes2": "t5:pompes",
+    "tofuel5": "t5:L'eau-0.12",
+    "bout": "t5:bout",
+    "souviens": "t5:souviens",
+    "vapeur2": "t5:vapeur",
+    "puissance2": "t5:puissance",
+    "tot6": "t6-0.12",
+    "arret": "t6:Arrêt",
+    "azcinq": "t6:AZ",
+    "descendent": "t6:descendent",
+    "tobarres": "t6:Les-0.12",
+    "vingt": "t6:secondes-0.12",
+    "todefaut": "defaut-0.12",
+    "bout2": "defaut:bout",
+    "tocanal": "defaut:Du-0.12",
+    "graphite1": "defaut:graphite",
+    "freine3": "defaut:freine",
+    "entrant": "defaut:entrant",
+    "chasse": "defaut:chasse",
+    "bas": "defaut:bas",
+    "avalait": "defaut:avalait",
+    "alors": "defaut:Alors",
+    "accelere2": "defaut:accélère",
+    "frein": "defaut:accélère-0.24",
+    "tot7": "t7-0.12",
+    "cinq30": "t7:530",
+    "fleche": "t7:flèche",
+    "surchauffe": "t7:surchauffe",
+    "bloquent": "t7:bloquent",
+    "tot8": "t8-0.12",
+    "eclatent": "t8:éclatent",
+    "explose": "t8:explose",
+    "dalle": "t8:dalle",
+    "souleve": "t8:soulève",
+    "seconde": "t8:seconde",
+    "feu": "t8:feu",
+    "toissue": "issue-0.14",
+    "morts": "issue:morts",
+    "topire": "issue:pire-0.32",
+    "pompiers": "issue:pompiers",
+    "pire": "issue:pire",
+    "effet": "issue:effet",
+    "trois": "issue:trois",
+    "parades": "issue:parades",
+    "todepuis": "depuis-0.14",
+    "redessinees": "depuis:redessinées",
+    "eau3": "depuis:d'eau",
+    "douze": "depuis:douze",
+    "tofrance": "depuis:En-0.12",
+    "france": "depuis:France",
+    "chauffe2": "depuis:chauffe",
+    "ralentit2": "depuis:ralentit",
+    "seule": "depuis:Toute",
+    "tocta": "comment-0.14",
+    "hommes1": "comment:hommes",
+    "tomachine": "comment:seconde-0.24",
+    "seconde2": "comment:seconde",
+    "machine1": "comment:machine",
+    "commentaire": "comment:commentaire",
+    "duelA": "comment:ou-0.52",
+    "duelB": "comment:ou+0.2",
+    "toabo": "abo-0.14",
+    "chaque": "abo:chaque",
+    "prochain": "abo:Prochain",
+    "deepwater": "abo:Deepwater",
+    "vanne": "abo:vanne",
+    "sceller": "abo:sceller",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:ici"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -25,
+      "curve": [
+        [
+          0,
+          0.9
+        ],
+        [
+          "toprincipe",
+          0.5
+        ],
+        [
+          "tot1",
+          0.6
+        ],
+        [
+          "tot4",
+          0.75
+        ],
+        [
+          "tot6",
+          0.9
+        ],
+        [
+          "todefaut",
+          0.7
+        ],
+        [
+          "tot7",
+          1
+        ],
+        [
+          "toissue",
+          0.4
+        ],
+        [
+          "todepuis",
+          0.35
+        ],
+        [
+          "tocta",
+          0.3
+        ],
+        [
+          "rewind",
+          0.9
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.8
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -15,
+      "size": 1.1
+    },
+    {
+      "type": "hit",
+      "at": "choc+0.5",
+      "gain": -15,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "atomes+1.42",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "hit",
+      "at": "accelere1+0.55",
+      "gain": -15
+    },
+    {
+      "type": "clack",
+      "at": "t1-0.17",
+      "gain": -14
+    },
+    {
+      "type": "clack",
+      "at": "t2-0.17",
+      "gain": -14
+    },
+    {
+      "type": "clack",
+      "at": "t3-0.17",
+      "gain": -14
+    },
+    {
+      "type": "clack",
+      "at": "t4-0.17",
+      "gain": -14
+    },
+    {
+      "type": "clack",
+      "at": "t5-0.17",
+      "gain": -13
+    },
+    {
+      "type": "clack",
+      "at": "t6-0.17",
+      "gain": -12
+    },
+    {
+      "type": "clack",
+      "at": "t7-0.17",
+      "gain": -12
+    },
+    {
+      "type": "clack",
+      "at": "t8-0.17",
+      "gain": -12
+    },
+    {
+      "type": "hit",
+      "at": "reseau-0.4",
+      "gain": -16,
+      "pitch": 0.85
+    },
+    {
+      "type": "hit",
+      "at": "peine-0.25",
+      "gain": -16,
+      "pitch": 0.7
+    },
+    {
+      "type": "click",
+      "at": "etEncore-0.85",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "remonte-0.4",
+      "gain": -17,
+      "pitch": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "protections-0.6",
+      "gain": -15,
+      "pitch": 0.85
+    },
+    {
+      "type": "impact",
+      "at": "descendent-0.75",
+      "gain": -14,
+      "size": 0.8
+    },
+    {
+      "type": "hush",
+      "from": "todefaut",
+      "to": "graphite1",
+      "depth": -8
+    },
+    {
+      "type": "hit",
+      "at": "bout2+0.42",
+      "gain": -14,
+      "pitch": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "tot7-0.3",
+      "gain": -12
+    },
+    {
+      "type": "beeps",
+      "from": "bloquent+0.72",
+      "to": "tot8+0.05",
+      "gain": -19
+    },
+    {
+      "type": "boom",
+      "at": "dalle-0.4",
+      "gain": -12,
+      "size": 1.1
+    },
+    {
+      "type": "impact",
+      "at": "seconde+0.86",
+      "gain": -12,
+      "size": 1.3,
+      "crack": 1
+    },
+    {
+      "type": "boom",
+      "at": "toissue-0.1",
+      "gain": -15,
+      "size": 0.8
+    },
+    {
+      "type": "hush",
+      "from": "toissue",
+      "to": "pire",
+      "depth": -8
+    },
+    {
+      "type": "sting",
+      "at": "todepuis",
+      "gain": -21
+    },
+    {
+      "type": "swish",
+      "at": "prochain-0.3",
+      "dur": 0.35,
+      "gain": -19
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "gain": -20
+    }
+  ]
+}

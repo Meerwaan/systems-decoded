@@ -1,0 +1,35 @@
+# 038 · Sous-marin — journal de l'architecte
+
+2026-11-04, soir. Contrat du dossier 038 : plan, monde, bouchons, page, repères, sons, plans des décors et des actes. Voix réelle : 92,6 s (rien touché dans `audio/`, ni `text` ni `vo`).
+
+## Fait
+- Lu : catalogue (mer et marine : 034/fond, 015, L04 ; aucun sous-marin), recettes (agents, actes, décorateur : où il entre, ce qu'il reçoit), règles d'image (première moitié), faits 038 (« À ne pas dire ») et contre-vérification, le 036 comme modèle le plus récent (journal de l'architecte, `world.js`, `main.js`, tête et une section des décors et des actes, `index.html`), l'API de `034/src/fond.js` (en-tête, `update`, ancres), azimut de `kit/lib/stage.js` (caméra en t + d·(sin az·cos el, sin el, cos az·cos el) : az 0 en +z, −90 en −x — confirmé).
+- **Réutilisé** : `034-boite-noire/src/fond.js` enveloppé par `mer.js` (neige marine, surface vue d'en dessous, fond en lignes, `fog`) ; l'épave de l'A330 cachée (`A.tail` ; débris et point de la boîte à cacher par le décor). **Écarté** : la mer du 023 et l'océan du L04 (surface vue d'en haut, de jour, porte-avions dedans : rien de ce qu'il faut sous l'eau la nuit) — la surface vue de côté se fait dans `mer.js`.
+- **Découpage des décors (deux fichiers, consigne)** : `sousmarin.js` (le bateau : coques et kiosque de verre, équipage de verre, et pleins le système — quatre ballasts, six bouteilles, deux vannes, deux tuyaux, la commande ; l'air veille, les bulles, la proue écrasée, les flèches, le cube du principe, l'éclaté) · `mer.js` (034 enveloppé + la paroi + la montagne entière + la surface de côté, ciel bas, écume). **Pas de décorateur** (la neige, les bulles, l'air font la vie ; le poste est habillé par `sousmarin.js`). `sousmarin.js` est l'agent le plus lourd : sa section des décors est la plus précise.
+- `plan.js` : échelle VRAIE (Los Angeles : 110 m × 10 m) ; **origine = le bateau, proue vers −x, bâbord +z** ; **le bateau ne bouge pas, la mer bouge** (convention du 034 : surface à +depth·100, roche à x = bow − gap·100) ; `pitch` (+ nez en haut = rotation.z −pitch). Disposition intérieure schématique (une seule batterie de bouteilles au milieu, deux lignes vers l'avant et l'arrière : c'est ce que dit le `voir` de `zero`, « deux traits verts »). `pressureAt` (×17 à 160 m). `BENCHAT` : l'établi sur place sous l'avant.
+- `world.js` : SCENE / BENCH (en place, pas de re-parentage : la mer s'éteint, le système reste) ; `FIRST` 43 nombres (dont `set` et 8 de lumière) ; `VIEW` 27 poses ; `BENCHED` / `STAGED`.
+- `main.js` : l'en-tête est **la profondeur** (« PROFONDEUR 160 m », « Surface » quand il flotte) et **la pression** (« ×17 », signal ≥ ×5). Pas de chrono : la voix ne dit aucun temps et la consigne interdit toute heure.
+- Actes : cinq fichiers (`acte2.js` l'éclaté 9,5 s ; `acte2b.js` le principe et le repos 15,8 s, 9 phrases), squelettes qui construisent ; `model.js` du modèle retiré.
+- `index.html` : écrit par script ; **la ligne d'opacité 0 au départ remise** (celle du 036, plus `#carte`, `#cartes`) ; `#carte` (la carte de bord en SVG : route, cercle vide), `#cartes` (deux cartes : « Ta carte · 1989 — Rien » / « Autre carte · À bord — Danger signalé »), 9 étiquettes, retitle « Une chasse intacte » → « Grâce à l'arrière » (pas « l'arrière seul » : non sourcé), duel La carte / Ceux qui la lisent, prochain dossier « Classé » sans numéro ni chiffre (provisoire, consigne), en-tête profondeur / pression.
+- `episode.json` : 83 repères vérifiés sur la table ; `explode` déplacé de « on » à « l'ouvre » (l'impact passe après « l'ouvre ») ; `trigger` sur « remplissent » (l'impact du climax dans le souffle avant « Lentement ») ; le blip du verdict après « intacte » ; 37 sons, tous dans un souffle mesuré (écarts mot à mot de `gen/episode.data.js`) sauf `rewind` ; `hiss` (paramètres `from`/`to`) sur le départ de l'air ; `cover` à `eclate$` (établi, el 30) ; trois lignes de `sources` (en-tête, disposition et cartes reconstituées, montagne schématique et surface sans jaillir).
+- `npm run check -- 038` passe (0 erreur ; avertissements du squelette : canvas au bord, chevauchement `#cartes`/`#duel` à 77 s — à régler dans `fin.js`).
+
+## Planches (24 images lues sur 25)
+1. Bouchons, 8 (`--bare`) : conventions ✓ (proue à gauche vue de bâbord-arrière, la roche au bout de la proue, l'établi sous l'avant) ; les candidates (az 18–58) sortaient le bateau du cadre ou ne voyaient pas la roche.
+2. 8 : `gap` fonctionne (la roche monte dans le cadre entre 0 et 6,5 s) ; un cadre vertical ne tient la proue et la roche que presque dans l'axe (`az` 60–90) ; la commande-bouchon remplit le cadre à d 330.
+3. 8, avec l'en-tête : « PROFONDEUR 160 m · PRESSION ×17 » lisible ; vu de profil (`az` 26–28) le bateau n'est qu'un tronçon de tube → les plans larges passent à `az` 62–66 ; la coque de verre du bouchon est presque invisible de loin (le décor doit la tenir par ses arêtes).
+
+## Décisions
+- Le cœur est le ballast **avant bâbord** (+z, côté caméra), celui qui se déchire.
+- Sur l'établi, le bateau est intact (`crush` 0) : l'établi montre le système tel qu'il est construit ; le repos revient dans la mer, bateau blessé (`crush` 1), pour que « un réservoir intact » se montre sur les vrais ballasts.
+- La balance du principe n'est pas faite : le mètre cube d'eau qui sort du ballast et tombe EST les mille kilos en moins.
+- La carte de bord est un panneau 2D (zone haute), pas un objet 3D : une seule pièce, lisible, reprise à la fin (deux cartes). La carte « qui rétrécit sur l'océan » du like est laissée à l'agent de `fin.js` (le like a déjà `#net` en zone haute).
+
+## Poses provisoires (réglées sur bouchons) — à recaler par le chef de production
+**Toutes** : `POSE0` (= `VIEW.underB`), `underA`, `keelC`, `bowD` (les quatre candidates), `bottles`, `mass`, `near`, `impact`, `crew`, `press`, `cmd` (vue sur un pupitre-bouchon), `system`, `exploded`, `bank`, `valve`, `tank`, `cube`, `whole`, `aft`, `torn`, `blow`, `climb`, `surface`, `float`, `mountain` (non vues : `near`, `impact`, `crew`, `bank`, `valve`, `tank`, `cube`, `aft`, `torn`, `blow`, `surface`, `float`, `mountain`). Le `cover` d'`episode.json` aussi.
+
+## À changer ailleurs
+- `kit/template/index.html` : la ligne `.chip--live, #retitle, #net, #next, #cta-field, #duel, #film, .rail { opacity: 0; }` manque toujours au modèle (déjà signalé au 036).
+- `scripts/sd.mjs` (`script`) : une option `--words` (la table mot à mot et les souffles ; je l'ai tirée de `gen/episode.data.js`) — demandée depuis le 021.
+- `episode.json` → `text` (pas touché : `beatHash`) : les nombres s'affichent « 7000 » et « 1000 » dans les sous-titres (`[7000|sept mille]`, `[1000|mille]`) ; la consigne veut « 7 000 » et « 1 000 ». Les étiquettes les écrivent avec l'espace ; les sous-titres demandent `[7 000|sept mille]` et `[1 000|mille]` — au chef de production de voir si le changement de `text` touche la voix (hash) avant de le faire.
+- `kit/lib/` : la neige qui file à l'horizontale (si `mer.js` recopie le shader du 034) et `skin` (10ᵉ copie) → `kit/lib/effets.js`.

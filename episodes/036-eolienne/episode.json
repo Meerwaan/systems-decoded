@@ -1,0 +1,497 @@
+{
+  "id": "036",
+  "serie": "dossier",
+  "slug": "eolienne",
+  "title": "Éolienne",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "L'éolienne",
+      "dans la tempête"
+    ],
+    "cam": {
+      "tx": -421,
+      "ty": 8060,
+      "tz": 354,
+      "d": 3600,
+      "az": -75,
+      "el": 30,
+      "shift": -250,
+      "side": 100,
+      "fov": 32,
+      "roll": 0,
+      "dof": 0
+    },
+    "state": {
+      "explode": 1,
+      "cover": 0.3,
+      "batt": 1,
+      "motors": 1,
+      "heart": 0,
+      "litMast": 0,
+      "litNacelle": 0,
+      "litGen": 0,
+      "litHub": 0,
+      "litMotor": 0,
+      "pitchA": 0,
+      "pitchB": 0,
+      "pitchC": 0,
+      "fx": -123,
+      "fy": 8070,
+      "fz": 103,
+      "fs": 760
+    }
+  },
+  "post": {
+    "keyword": "Éolienne",
+    "caption": "Éolienne, la mise en drapeau : en pleine tempête, le réseau coupe et le rotor accélère juste au-dessus de la route. Pour faire pivoter ces pales géantes, il ne reste qu'une batterie par pale… si elle n'a pas vieilli. Une éolienne à l'arrêt par grand vent : panne… ou sécurité ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#eolienne",
+      "#energie",
+      "#tempete"
+    ],
+    "pinned": "Réponds juste : « panne » ou « sécurité ». Indice : regarde l'angle de ses pales.",
+    "instagram": {
+      "caption": "Tempête. Au-dessus de toi, les pales s'emballent. Et il ne leur reste qu'une batterie.\n\nDossier 036 : l'éolienne. Une nacelle, un moyeu, et pour chaque pale, un moteur et sa propre batterie. Pourquoi une pale tournée de quatre-vingt-dix degrés ne pousse plus… et ce qui s'est passé à Formerie, dans l'Oise, en 2019.\n\nUne éolienne à l'arrêt par grand vent : panne… ou sécurité ?",
+      "hashtags": [
+        "#eolienne",
+        "#energie",
+        "#tempete",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Tempête : les pales s'emballent… et il ne leur reste qu'une batterie : l'éolienne",
+      "description": "Dossier 036 — l'éolienne ouverte : la nacelle, le moyeu, et pour chaque pale un moteur de pitch et sa propre batterie de secours. Pourquoi une pale mise en drapeau, tournée de quatre-vingt-dix degrés, ne porte plus, et pourquoi une seule suffit à ralentir le rotor. Et Formerie, dans l'Oise, en 2019 : des batteries au tiers de leur capacité, un mât plié en deux.\n\nTechniciens éoliens : qu'est-ce qu'on a simplifié ? Et toi, une éolienne à l'arrêt par grand vent : panne… ou sécurité ?",
+      "hashtags": [
+        "#shorts",
+        "#eolienne",
+        "#energie",
+        "#tempete",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Scène (tempête, réseau coupé, rotor qui accélère, ta voiture sous l'éolienne) : scénario reconstitué, pas un cas réel. Le seul cas réel cité, Formerie, n'est jamais dit « tempête ».",
+    "Quand le réseau coupe, chaque pale est mise en drapeau par son propre système de réglage d'urgence alimenté par batterie — notice Enercon E-82 E2 (dossier préfectoral de la Mayenne, 2012), p. 9-10 [P]",
+    "Batteries de pitch dans le moyeu, un entraînement (moteur + réducteur) par pale — dossier de faits 036, « Le mécanisme ouvert » : Enercon [P] pour la batterie par pale, [S] pour le moteur par pale",
+    "Bout de pale au-delà de deux cents kilomètres-heure — calcul : V136 (rotor 136 m, 14 tr/min, EDD Fourris p. 5-6) ≈ 360 km/h ; E-82 (rotor 82 m, 18 tr/min, notice Enercon p. 3, 18) ≈ 280 km/h [O]",
+    "Une pale peut lâcher — ARIA n° 53010, Formerie (pale délaminée après survitesse) ; ARIA n° 45960, Saint-Cirgues-en-Montagne (pale tombée) [P]",
+    "Une pale est une aile : son angle au vent crée la force qui fait tourner le rotor ; tournée vers 90° (drapeau), elle « décroche du vent » — notice Enercon p. 12-13 [P] ; la portance est une explication de principe [O]",
+    "Une seule pale en drapeau suffit à ralentir tout le rotor : « Il suffirait de décrocher du vent une seule des trois pales… » — notice Enercon E-82 E2 [P]",
+    "En fonctionnement, le pitch règle l'angle des pales pour tenir la vitesse nominale — notice Enercon E-82 E2 [P]",
+    "Rotor au ralenti à environ trois tours par minute, pales en drapeau — notice Enercon E-82 E2, p. 13 [P]",
+    "En fonctionnement, freinage « exclusivement » aérodynamique, frein de rotor pour la maintenance et l'arrêt une fois les pales inclinées — notice Enercon E-82 E2, p. 9 [P]",
+    "Formerie (Oise), 23/01/2019 : coupure du réseau, pales restées en position de production, survitesse, mât plié en deux ; 18 batteries au plomb par pale, capacité réelle 43 Ah au lieu de 129,6 Ah (un tiers) — ARIA n° 53010, BARPI [P]",
+    "Tests annuels des batteries en charge (suites de Formerie) — ARIA n° 53010 [P] ; « grimper là-haut » : image du métier, non sourcée comme geste précis",
+    "Une éolienne à l'arrêt par grand vent est mise à l'abri (drapeau au-delà de 25 m/s sur V136, jusqu'à 28-34 m/s sur Enercon Storm Control) — EDD Fourris ; notice Enercon p. 16 [P] (non dit dans la voix, sert la question du commentaire)",
+    "037 annoncé sans chiffre : un boîtier qui ouvre le parachute de réserve à la place du parachutiste — faits du 037 en cours",
+    "L'en-tête : vitesse en bout de pale calculée (π × 82 m × régime / 60) sur un rotor de 82 m (notice Enercon E-82 E2, p. 3) à partir d'un régime illustratif ; jusqu'à 18 tr/min c'est le régime nominal [P], au-delà c'est la survitesse, illustrative. « Pales » : l'angle de pas de la pale A, de 0 (production) à environ 90° (drapeau, notice Enercon p. 12-13 [P]).",
+    "Image : une éolienne de l'ordre d'une Enercon E-82 (rotor 82 m, moyeu 78 m) à l'échelle vraie, reconstituée en 3D ; les pièces du moyeu (moteur de pas, coffret de batteries, roulement de pale, générateur annulaire, étrier du frein de rotor) ont des tailles et des places illustratives, jamais affichées. Pas de vérin hydraulique : ce modèle règle ses pales à l'électricité.",
+    "Image : la route et la voiture (celles du 025) à 180 m du mât, hors du disque du rotor : « à portée » d'une pale qui lâcherait (débris jusqu'à 300 m à Formerie, ARIA 53010), jamais sous le rotor.",
+    "Image : Formerie reconstituée (la fiche ARIA 53010 ne précise pas le modèle ; mât de 66 m plié en deux) ; la jauge « au tiers » redit 43 Ah sur 129,6 Ah."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Tempête. Au-dessus de toi, les pales *s'emballent*. Et chacune n'a plus qu'une +batterie+.",
+      "vo": "[tense] Tempête. Au-dessus de toi, les pales s'emballent. Et chacune n'a plus qu'une batterie.",
+      "voAlt": [
+        "[firm, matter-of-fact] Tempête. Au-dessus de toi, les pales s'emballent. Et chacune n'a plus qu'une batterie.",
+        "[tense] Tempête. Le bout de ces pales file à plus de deux cents kilomètres-heure. Et chacune n'a plus qu'une batterie."
+      ],
+      "voir": "Contre-plongée depuis la route, de nuit, pluie oblique : trois pales géantes qui balaient le ciel de tempête et accélèrent (flou en bout de pale dès l'image 1), le mât aux rayons X qui monte dans le cadre, le moyeu plein et sombre sur son halo, petit mais lisible ; en bas, les phares de ta voiture ; sur « batterie », une lueur verte s'allume dans le moyeu."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Le réseau a sauté : c'est elle qui doit +sauver+ ce géant. Si elle n'a pas *vieilli*.",
+      "vo": "[firm, matter-of-fact] Le réseau a sauté : c'est elle qui doit sauver ce géant. [short pause] Si elle n'a pas vieilli.",
+      "voir": "La ligne électrique au pied du mât s'éteint d'un coup ; la caméra monte le long du mât jusqu'au moyeu aux rayons X, où une batterie pleine s'allume en vert ; sur « vieilli », sa jauge descend et vire au signal."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Le rotor accélère. Le bout des pales dépasse [200|deux cents] kilomètres-heure. Une pale peut *lâcher*… ta voiture est à portée. Il faut les faire pivoter. Sans *courant*.",
+      "vo": "[tense] Le rotor accélère. Le bout des pales dépasse deux cents kilomètres-heure. Une pale peut lâcher... ta voiture est à portée. Il faut les faire pivoter. Sans courant.",
+      "voir": "Même instant, même lieu : le rotor de face qui prend de la vitesse, compteur « 200 km/h » qui monte dans l'en-tête, chrono qui défile ; une pale qui vibre, puis plan vertical du bout de pale jusqu'à la voiture sur la route en bas (la trajectoire en signal) ; dernière image : le pied d'une pale, à l'entrée du moyeu, immobile sur son axe."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "Le vent tombe d'un coup ; on recule du pied de pale et, sur « ouvre », nacelle et moyeu s'ouvrent en vue éclatée, de trois quarts."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "En haut du mât, la nacelle et son générateur. Devant, le moyeu. Dedans, sur ce modèle, un moteur par pale… et sa propre +batterie+.",
+      "vo": "[conversational, curious] En haut du mât, la nacelle et son générateur. Devant, le moyeu. Dedans, sur ce modèle, un moteur par pale... et sa propre batterie.",
+      "voAlt": [
+        "[curious] En haut du mât, la nacelle et son générateur. Devant, le moyeu. Dedans, sur ce modèle, un moteur par pale... et sa propre batterie."
+      ],
+      "voir": "Vue éclatée qui suit un chemin : le haut du mât, la nacelle qui se soulève et montre son générateur, le moyeu qui s'avance, puis dedans, au pied de chaque pale, un moteur de pitch avec sa couronne ; on isole en dernier, en gros plan, le bloc de batteries d'une pale (le cœur), en veille."
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi ça marche ? Une pale, c'est une aile : de biais au vent, elle tire le rotor. En drapeau, tournée de [90|quatre-vingt-dix] degrés, l'aile ne porte plus. Une seule suffit à tout +ralentir+.",
+      "vo": "[curious] Pourquoi ça marche ? [short pause] Une pale, c'est une aile : de biais au vent, elle tire le rotor. En drapeau, tournée de quatre-vingt-dix degrés, l'aile ne porte plus. Une seule suffit à tout ralentir.",
+      "voir": "Une seule pale coupée en travers : son profil d'aile, des filets de vent qui l'attaquent de biais et une flèche qui tire le rotor ; elle pivote sur son axe jusqu'à 90° (arc gradué 0 → 90 à son pied), se présente par la tranche, les filets glissent et la flèche s'éteint ; plan large : une seule des trois pales pivote et le rotor ralentit."
+    },
+    {
+      "id": "repos",
+      "text": "Par vent fort, ses pales pivotent juste assez pour garder leur vitesse. Ses batteries, elles, attendent. Et quand le courant saute… il ne reste qu'*elles*.",
+      "vo": "[warm, conversational] Par vent fort, ses pales pivotent juste assez pour garder leur vitesse. Ses batteries, elles, attendent. Et quand le courant saute... il ne reste qu'elles.",
+      "voAlt": [
+        "[curious] Par vent fort, ses pales pivotent juste assez pour garder leur vitesse. Ses batteries, elles, attendent. Et quand le courant saute... il ne reste qu'elles."
+      ],
+      "voir": "L'éolienne refermée, vent régulier : les trois pales corrigent leur angle de quelques degrés, par petites touches ; travelling dans le moyeu aux rayons X sur les trois blocs de batteries, verts, immobiles ; sur « saute », la ligne au sol clignote."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Le réseau coupe. Plus de courant pour les moteurs de pales. Le rotor *s'emballe*.",
+      "vo": "[firm, matter-of-fact] Le réseau coupe. Plus de courant pour les moteurs de pales. Le rotor s'emballe.",
+      "voir": "Retour à la tempête, chrono qui reprend : la ligne du réseau s'éteint au sol, les trois moteurs de pitch s'éteignent dans le moyeu, puis plan large d'en bas : le rotor accélère en grand, le flou s'allonge, le compteur de tours grimpe à chaque phrase."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Les batteries prennent le relais. Les moteurs tournent. Chaque pale +pivote+. [90|Quatre-vingt-dix] degrés. Plus rien ne pousse. Et le rotor retombe… à quelques tours par minute.",
+      "vo": "[tense] Les batteries prennent le relais. Les moteurs tournent. Chaque pale pivote. Quatre-vingt-dix degrés. Plus rien ne pousse. Et le rotor retombe... à quelques tours par minute.",
+      "voir": "Le climax en grand : les trois blocs de batteries s'allument en vert, les moteurs de pitch tournent sur leur couronne, puis le rotor entier vu d'en bas : les trois pales pivotent ensemble d'un quart de tour et passent par la tranche, le flou de mouvement s'efface, le rotor ralentit jusqu'à presque s'arrêter, compteur à 3 tr/min."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà le secret : ce n'est *pas* un frein qui la ralentit. Ni la batterie. C'est le +vent+ qu'elle lâche.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : ce n'est pas un frein qui la ralentit. Ni la batterie. C'est le vent qu'elle lâche.",
+      "voir": "Dans la nacelle, le disque de frein reste froid, éteint ; la batterie s'éteint après son effort ; plan large : l'éolienne au ralenti dans la tempête, pales par la tranche, et les filets de vent qui glissent le long d'elles sans la pousser."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et si la batterie a vieilli ? Formerie, [2019|deux mille dix-neuf] : batteries au tiers de leur capacité. Le mât a plié en *deux*. En +commentaire+ : une éolienne à l'arrêt par grand vent… panne, ou sécurité ?",
+      "vo": "[conversational, curious] Et si la batterie a vieilli ? [short pause] Formerie, deux mille dix-neuf : batteries au tiers de leur capacité. Le mât a plié en deux. [short pause] En commentaire : une éolienne à l'arrêt par grand vent... panne, ou sécurité ?",
+      "voAlt": [
+        "[curious] Et si la batterie a vieilli ? [short pause] Formerie, deux mille dix-neuf : batteries au tiers de leur capacité. Le mât a plié en deux. [short pause] En commentaire : une éolienne à l'arrêt par grand vent... panne, ou sécurité ?"
+      ],
+      "voir": "Pièce du dossier : « ARIA 53010 — Formerie, 23/01/2019 » ; reconstitution : jauge de batterie au tiers, les pales qui ne pivotent pas, le mât qui plie en deux en son milieu ; puis l'éolienne au repos, pales par la tranche, pour la question."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour ceux qui grimpent là-haut tester ces *batteries*.",
+      "vo": "[warm, conversational] Like : [short pause] pour ceux qui grimpent là-haut tester ces batteries.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour ceux qui grimpent là-haut tester ces batteries."
+      ],
+      "voir": "Contre-plongée le long de l'échelle intérieure du mât aux rayons X, une silhouette de technicien qui monte vers le moyeu et ses batteries vertes ; les chevrons désignent la colonne de boutons."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, un boîtier qui déclenche ton parachute à ta place, si tu ne le fais *pas*.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, un boîtier qui déclenche ton parachute à ta place, si tu ne le fais pas.",
+      "voir": "Panneau « S'abonner pour l'ouvrir », DOSSIER 037 : un petit boîtier aux rayons X sur un sac de parachute, en chute libre, dont le voyant passe au vert ; chevrons vers le bouton d'abonnement."
+    },
+    {
+      "id": "boucle",
+      "text": "Seul, comme une éolienne en pleine…",
+      "vo": "[calm] Seul, comme une éolienne en pleine,",
+      "voir": "On remonte vers la contre-plongée de la première image : les pales reprennent leur vitesse dans la pluie ; la dernière image est la première."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:s'emballent",
+    "batterie1": "accroche:batterie",
+    "saute1": "promesse:sauté",
+    "sauver": "promesse:sauver",
+    "geant": "promesse:géant",
+    "vieilli1": "promesse:vieilli",
+    "toscene": "scene-0.10",
+    "accelere": "scene:accélère",
+    "kmh200": "scene:200",
+    "lacher": "scene:lâcher",
+    "tovoiture": "scene:voiture-0.24",
+    "voiture": "scene:voiture",
+    "portee": "scene:portée",
+    "pivoter": "scene:pivoter",
+    "courant1": "scene:courant",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:l'ouvre",
+    "mat": "eclate:mât",
+    "nacelle": "eclate:nacelle",
+    "generateur": "eclate:générateur",
+    "moyeu": "eclate:moyeu",
+    "dedans": "eclate:Dedans",
+    "modele": "eclate:modèle",
+    "moteur": "eclate:moteur",
+    "batterie2": "eclate:batterie",
+    "toprincipe": "principe-0.12",
+    "aile": "principe:aile",
+    "biais": "principe:biais",
+    "tire": "principe:tire",
+    "drapeau": "principe:drapeau",
+    "deg90a": "principe:90",
+    "porte": "principe:porte",
+    "seule": "principe:seule",
+    "ralentir": "principe:ralentir",
+    "torepos": "repos-0.12",
+    "pivotent": "repos:pivotent",
+    "vitesse": "repos:vitesse",
+    "attendent": "repos:attendent",
+    "saute2": "repos:saute",
+    "qelles": "repos:qu'elles",
+    "tozero": "zero-0.12",
+    "coupe": "zero:coupe",
+    "moteurs1": "zero:moteurs",
+    "emballe": "zero:s'emballe",
+    "relais": "reponse:relais",
+    "tournent": "reponse:tournent",
+    "trigger": "reponse:pivote-0.05",
+    "pivoted": "reponse:pivote+0.42",
+    "deg90b": "reponse:90",
+    "pousse": "reponse:pousse",
+    "retombe": "reponse:retombe",
+    "tours": "reponse:tours",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "frein": "chute:frein",
+    "ralentit": "chute:ralentit+0.42",
+    "nibatt": "chute:Ni",
+    "ventlache": "chute:vent",
+    "lache": "chute:lâche",
+    "tocta": "comment-0.12",
+    "vieilli2": "comment:vieilli",
+    "formerie": "comment:Formerie",
+    "tiers": "comment:tiers",
+    "plie": "comment:plié",
+    "plieDeux": "comment:plié+0.44",
+    "commentaire": "comment:commentaire",
+    "panne": "comment:panne",
+    "securite": "comment:sécurité",
+    "tolike": "like-0.12",
+    "grimpent": "like:grimpent",
+    "likeEnd": "like$",
+    "toabo": "abo-0.12",
+    "prochain": "abo:prochain",
+    "boitier": "abo:boîtier",
+    "parachute": "abo:parachute",
+    "aboEnd": "abo$",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:éolienne"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "torepos",
+          0.65
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "retombe",
+          0.55
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "rain",
+      "from": 0,
+      "to": "tobench",
+      "gain": -30
+    },
+    {
+      "type": "rain",
+      "from": "torepos",
+      "to": "tocta",
+      "gain": -31
+    },
+    {
+      "type": "rain",
+      "from": "toloop",
+      "to": "rewind",
+      "gain": -31
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "choc+0.47",
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "saute1+0.36",
+      "gain": -17,
+      "size": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "vieilli1+0.36",
+      "gain": -15,
+      "pitch": 0.85
+    },
+    {
+      "type": "hit",
+      "at": "lacher+0.40",
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "ouvre$+0.05",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "generateur+0.65",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "moyeu+0.37",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "moteur+0.85",
+      "gain": -18
+    },
+    {
+      "type": "blip",
+      "at": "batterie2+0.37",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "deg90a+0.82",
+      "gain": -18
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "hit",
+      "at": "coupe+0.29",
+      "gain": -14
+    },
+    {
+      "type": "hit",
+      "at": "emballe+0.45",
+      "gain": -14
+    },
+    {
+      "type": "click",
+      "at": "tournent+0.29",
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "pivoted",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "ralentit",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

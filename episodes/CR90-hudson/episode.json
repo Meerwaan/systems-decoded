@@ -1,0 +1,125 @@
+{
+  "id": "CR90",
+  "serie": "compte-a-rebours",
+  "slug": "hudson",
+  "title": "Hudson",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "t5$",
+    "title": [
+      "Hudson"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Avion de l'Hudson, le vol 1549 : deux moteurs pleins d'oies, trois minutes et demie, et New York sous les ailes. Toi aux commandes : demi-tour… ou le fleuve ?",
+    "hashtags": [
+      "#avionhudson",
+      "#sully",
+      "#aviation",
+      "#comptearebours",
+      "#apprendresurtiktok"
+    ],
+    "pinned": "Réponds juste : demi-tour ou fleuve.",
+    "keyword": "Avion de l'Hudson"
+  },
+  "sources": [
+    {
+      "//": "Faits : docs/faits/L05-hudson.md (NTSB AAR-10/03, Federal Register 2023-06413). Beat depuis : règle FAA 14 CFR 33.76(e), effective le 05/06/2023, cite le vol 1549. Simulations : 8 passes sur 15 réussies avec virage immédiat, 1 passe à 35 s de retard échoue (p. 49-50). Premier navire 15:34:40. Présentation du format glissée dans l'histoire : promesse (« vrai, à la seconde près »), horloge du HUD, abo (« chaque compte à rebours est un vrai jour »). Contre-vérification : docs/faits/CR01-contre-verification.md (t1, t3, t4, depuis, comment corrigés). RANGÉ le 04/11 (Merwan : sujet déjà posté) ; voix enregistrée (345 crédits), gardée."
+    }
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "[15 h 27|Quinze heures vingt-sept]. Tes deux moteurs avalent des *oies*.",
+      "vo": "[tense] Quinze heures vingt-sept. Tes deux moteurs avalent des oies."
+    },
+    {
+      "id": "promesse",
+      "text": "Tout ce qui suit est +vrai+, à la seconde près. Il te reste trois minutes et demie. Alors… demi-tour, ou le *fleuve* ?",
+      "vo": "[conversational, curious] Tout ce qui suit est vrai, à la seconde près. Il te reste trois minutes et demie. Alors... demi-tour, ou le fleuve ?"
+    },
+    {
+      "id": "t1",
+      "text": "[15 h 27|Quinze heures vingt-sept], trente secondes. L'avion plafonne à [3 000|trois mille] pieds. Le commandant a pris la *main*.",
+      "vo": "[tense] Quinze heures vingt-sept, trente secondes. L'avion plafonne à trois mille pieds. Le commandant a pris la main."
+    },
+    {
+      "id": "t2",
+      "text": "[15 h 28|Quinze heures vingt-huit]. Le contrôle lui offre LaGuardia, juste derrière. Il répond : *impossible*.",
+      "vo": "[firm, matter-of-fact] Quinze heures vingt-huit. Le contrôle lui offre LaGuardia, juste derrière. Il répond : impossible."
+    },
+    {
+      "id": "t3",
+      "text": "[15 h 29|Quinze heures vingt-neuf]. Teterboro ? Trop loin. Sous lui, Manhattan. Le meilleur endroit… c'est l'+Hudson+.",
+      "vo": "[tense] Quinze heures vingt-neuf. Teterboro ? Trop loin. Sous lui, Manhattan. Le meilleur endroit... c'est l'Hudson."
+    },
+    {
+      "id": "t4",
+      "text": "[15 h 29|Quinze heures vingt-neuf], quarante-neuf secondes. Il sort les volets, à [270|deux cent soixante-dix] pieds. Le fleuve *monte* vers toi.",
+      "vo": "[firm, matter-of-fact] Quinze heures vingt-neuf, quarante-neuf secondes. Il sort les volets, à deux cent soixante-dix pieds. Le fleuve monte vers toi."
+    },
+    {
+      "id": "t5",
+      "hold": 0.3,
+      "text": "[15 h 30|Quinze heures trente], quarante-trois secondes. Contact. [125|Cent vingt-cinq] nœuds. Et l'avion… *flotte*.",
+      "vo": "[tense] Quinze heures trente, quarante-trois secondes. Contact. Cent vingt-cinq nœuds. Et l'avion... flotte."
+    },
+    {
+      "id": "issue",
+      "hold": 0.3,
+      "text": "Les [155|cent cinquante-cinq] à bord sortent sur les ailes. Premier bateau : quatre minutes. Tout le monde est +sauvé+.",
+      "vo": "[calm] Les cent cinquante-cinq à bord sortent sur les ailes. Premier bateau : quatre minutes. Tout le monde est sauvé."
+    },
+    {
+      "id": "depuis",
+      "text": "Ce jour-là a changé ton avion. Depuis [2023|deux mille vingt-trois], pour être certifié, un nouveau moteur doit avaler un oiseau envoyé vers son +cœur+. La règle cite ce vol.",
+      "vo": "[warm, conversational] Ce jour-là a changé ton avion. Depuis deux mille vingt-trois, pour être certifié, un nouveau moteur doit avaler un oiseau envoyé vers son cœur. La règle cite ce vol."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Au simulateur, demi-tour immédiat : ça passe une fois sur deux. Avec trente-cinq secondes pour décider : l'essai *échoue*. En +commentaire+ : toi aux commandes… demi-tour, ou le *fleuve* ?",
+      "vo": "[warm, conversational] Au simulateur, demi-tour immédiat : ça passe une fois sur deux. Avec trente-cinq secondes pour décider : l'essai échoue. [short pause] En commentaire : toi aux commandes... demi-tour, ou le fleuve ?"
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+ : chaque compte à rebours est un vrai jour. Le prochain : un avion sans carburant, au-dessus de l'*Atlantique*.",
+      "vo": "[conversational, curious] Abonne-toi : [short pause] chaque compte à rebours est un vrai jour. Le prochain : un avion sans carburant, au-dessus de l'Atlantique."
+    },
+    {
+      "id": "boucle",
+      "text": "D'ici là… on rembobine à…",
+      "vo": "[calm] D'ici là... on rembobine à,"
+    }
+  ],
+  "cues": {
+    "choc": "accroche:oies",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:rembobine"
+  },
+  "bedVolume": 0.8,
+  "sfx": []
+}

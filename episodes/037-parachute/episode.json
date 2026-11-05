@@ -1,0 +1,552 @@
+{
+  "id": "037",
+  "serie": "dossier",
+  "slug": "parachute",
+  "title": "Parachute de secours",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Parachute",
+      "de secours"
+    ],
+    "cam": {
+      "tx": -2,
+      "ty": 26,
+      "tz": 16,
+      "d": 370,
+      "az": -42,
+      "el": 32,
+      "shift": -420,
+      "side": 0,
+      "fov": 30,
+      "roll": 0,
+      "dof": 0
+    },
+    "state": {
+      "explode": 1,
+      "power": 1,
+      "wake": 1,
+      "heart": 0,
+      "section": 0,
+      "litLoop": 1,
+      "litCutter": 1,
+      "litFlap": 0.5,
+      "litUnit": 0.5,
+      "fabric": 1
+    }
+  },
+  "post": {
+    "keyword": "Parachute de secours",
+    "caption": "Parachute de secours, le déclencheur automatique (AAD) : tu tombes à deux cents à l'heure, inconscient, et personne ne tirera ta poignée. Dans ton sac, un boîtier de 198 grammes compte l'air depuis le matin… s'il est allumé. Un boîtier qui agit à ta place : tu lui fais confiance… ou à ta main ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#parachutisme",
+      "#parachute",
+      "#skydiving"
+    ],
+    "pinned": "Réponds juste : « boîtier » ou « main ». En France, il est obligatoire, et allumé, à chaque saut.",
+    "instagram": {
+      "caption": "Tu tombes, inconscient. Ton sac, lui, est réveillé.\n\nDossier 037 : le déclencheur du parachute de secours. Un boîtier d'environ 200 grammes, un capteur de pression, un coupe-boucle… et quatre secondes pour agir à ta place. À condition que tu l'aies allumé ce matin.\n\nTu fais confiance au boîtier… ou à ta main ?",
+      "hashtags": [
+        "#parachutisme",
+        "#parachute",
+        "#skydiving",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Tu tombes, inconscient… et ton sac, lui, est réveillé : le déclencheur du parachute de secours",
+      "description": "Dossier 037 — le déclencheur automatique du parachute de secours (AAD) ouvert : le boîtier et son capteur de pression, le câble, le coupe-boucle et la boucle qui garde le secours fermé. Pourquoi plus de 35 mètres par seconde, vers 225 mètres du sol, veut dire que personne n'a tiré… et ce qu'il fait à ta place.\n\nSauteurs : qu'est-ce qu'on a simplifié ? Et toi : tu fais confiance au boîtier… ou à ta main ?",
+      "hashtags": [
+        "#shorts",
+        "#parachutisme",
+        "#parachute",
+        "#skydiving",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Dossier de faits, niveaux de source et « à ne pas dire » : docs/faits/037-parachute.md.",
+    "La scène est un scénario (aucun nom, aucune cause du malaise), sur le modèle d'un cas réel : septembre 2018, USA, CYPRES Expert — un sauteur perd connaissance juste après la sortie, tombe en tournant environ une minute, le déclencheur ouvre son secours, il se réveille au sol — CYPRES save list, mai 2022 [S, rapport auto-déclaré côté fabricant]. Autres cas d'inconscience après collision en chute (2014, 2015, 2019, 2021), même liste [S].",
+    "Chute libre à plat ≈ 200 km/h (≈ 55 m/s) — FAI (extrait de recherche) et manuels français [S]/[O].",
+    "Unité de traitement du CYPRES 2 Expert : 198 g, capteur de pression barométrique, logée sous le rabat du secours — CYPRES 2 User's Guide, éd. 2025, §1.3, p. 6-7, 53-54 [P].",
+    "« Quatre secondes » : 225 m à ≈ 55 m/s ≈ 4,1 s — calcul, ordre de grandeur [O]. 225 m est un repère (« approx. ») : un boîtier peut tirer jusqu'à 260 ft plus haut que son réglage — Vigil.aero [S] ; aucun temps d'ouverture de la voile n'est dit.",
+    "Le sauteur le met en marche avant le premier saut du jour ; il s'éteint seul au bout de 14 h ; il ne s'allume pas seul — CYPRES 2 User's Guide, p. 5-6 [P].",
+    "Pièces et chemin : unité de traitement, câble, coupe-boucle (≈ 43 × 8 mm), boucle de fermeture passée dans le trou du coupe-boucle, qui tient le conteneur fermé — CYPRES 2 User's Guide, §1.3, §14 [P] ; principe breveté en 1987 [P].",
+    "Principe : l'air est plus dense et sa pression plus forte plus bas [O, connaissance générale] ; le boîtier lit la pression et calcule la vitesse verticale [P] ; sous voile ouverte, quelques mètres par seconde (mode Student : 3 à 13 m/s) [P] ; seuil Expert 35 m/s, ≈ 70 % de la vitesse de chute libre [P] — CYPRES 2 User's Guide, §2.1, p. 11.",
+    "Zéro au sol : à la mise en marche, il mesure la pression ambiante et en prend la moyenne comme niveau du sol (auto-test de 10 s), puis compte l'altitude pendant la montée — CYPRES 2 User's Guide, p. 5-6 [P].",
+    "Mode Expert : tir si la vitesse de descente dépasse ≈ 35 m/s vers ≈ 225 m (750 ft) du sol, actif jusqu'à ≈ 40 m — CYPRES 2 User's Guide, §2.1, p. 11, 54 [P].",
+    "Le coupe-boucle : un piston qui avance d'environ 5 mm et tranche la boucle ; rien n'est projeté ; le CYPRES « ne peut pas ouvrir ton secours », il coupe seulement la boucle — CYPRES 2 User's Guide [P].",
+    "Après la coupe, le conteneur s'ouvre et la voile se gonfle (extracteur à ressort, vent relatif) — connaissance générale du métier, non chiffrée, aucune durée [O] ; l'image reconstitue la coupe et l'ouverture.",
+    "Il ne détecte pas l'inconscience : aucun capteur du corps, seulement la vitesse sous un seuil d'altitude — CYPRES 2 User's Guide [P].",
+    "En France, le déclencheur de sécurité est obligatoire et doit être en fonction marche pour tous les pratiquants — FFP, Directive technique n° 49 modifiée le 27/03/2026, applicable au 01/04/2026 [P].",
+    "Annonce du 038 : en remontée d'urgence, l'air comprimé chasse l'eau des ballasts et le sous-marin jaillit à la surface — fait fourni par la consigne, à sourcer dans le dossier de faits du 038.",
+    "L’en-tête : l’altitude au-dessus du sol (1 350 m à la première image, la chute en temps réel à ≈ 55 m/s dans l’acte 1, ralentie autour de la fenêtre dans l’acte 3) et la vitesse de chute en km/h (≈ 200 en chute libre, ≈ 5 m/s sous voile, dans la fourchette du manuel : 3 à 13 m/s) — chiffres du dossier de faits ; la montée de l’avion va à ≈ 4 000 m (cas de 2018 : 13 500 ft) [S].",
+    "L’image reconstitue : le conteneur et la place des pièces (boîtier dans sa pochette, coupe-boucle sur le plancher du secours, boucle à travers son trou, unité de contrôle sur le rabat), la diode verte (image de « allumé »), la voile de secours et ses suspentes plus petites qu’en vrai, le second sauteur du principe, la nappe de la fenêtre à 225 m (un repère, pas un seuil exact). Aucune durée d’ouverture n’est montrée."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Tu tombes, *inconscient*. Ton sac, lui, est +réveillé+.",
+      "vo": "[tense] Tu tombes, inconscient. Ton sac, lui, est réveillé.",
+      "voAlt": [
+        "[firm, matter-of-fact] Tu tombes, inconscient. Ton sac, lui, est réveillé.",
+        "[tense] Tu tombes, inconscient. Personne n'a tiré ta poignée. Et ton parachute s'ouvre."
+      ],
+      "voir": "Ciel ouvert, caméra qui chute avec lui, sous lui et de côté (perspective basse) : le parachutiste aux rayons X, inerte, bras et jambes ballants, tourne sur lui-même sur 40 % de la largeur ; derrière lui, très loin, la campagne en damier qui grossit ; sur son dos, le sac plein, et sous le rabat du secours, petit mais lisible, le boîtier dont la diode verte pulse ; sur « réveillé », elle s'allume franc."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Dedans, environ [200|deux cents] grammes vont agir à ta place. À quatre secondes du sol. Sauf si, ce matin, tu as *oublié* de l'allumer.",
+      "vo": "[firm, matter-of-fact] Dedans, environ deux cents grammes vont agir à ta place. À quatre secondes du sol. [short pause] Sauf si, ce matin, tu as oublié de l'allumer.",
+      "voir": "On traverse le sac aux rayons X jusqu'au boîtier plein sous le rabat du secours (« 198 g » dans l'en-tête), l'altitude qui défile en haut ; sur « quatre secondes », un chrono « 4 s » s'inscrit ; sur « oublié », l'écran du boîtier et sa diode s'éteignent d'un coup."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Tu tournes, à [200|deux cents] kilomètres-heure. Le sol *monte*. Ta poignée ? Personne ne la tirera. Il ne reste que ce boîtier, dans ton dos.",
+      "vo": "[tense] Tu tournes, à deux cents kilomètres-heure. Le sol monte. Ta poignée ? [short pause] Personne ne la tirera. Il ne reste que ce boîtier, dans ton dos.",
+      "voir": "Même instant, vue basse : le corps tourne, la campagne monte vers lui (altitude qui défile dans l'en-tête) ; gros plan sur la poignée de secours intacte, la main inerte qui flotte à côté ; on finit serré sur le dos, le rabat du secours avec la diode verte dessous : ce que « on l'ouvre » va ouvrir."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "La caméra se pose sur le conteneur du secours, de trois quarts, sur son halo ; sur « on », le sac s'éclate."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Sous le rabat, le boîtier et son capteur de pression. Un câble file au coupe-boucle. Et dans son trou passe… +la boucle+ qui le garde fermé.",
+      "vo": "[conversational, curious] Sous le rabat, le boîtier et son capteur de pression. Un câble file au coupe-boucle. Et dans son trou passe... la boucle qui le garde fermé.",
+      "voAlt": [
+        "[curious] Sous le rabat, le boîtier et son capteur de pression. Un câble file au coupe-boucle. Et dans son trou passe... la boucle qui le garde fermé."
+      ],
+      "voir": "Éclaté du conteneur de secours qui suit un chemin : le rabat se soulève, le boîtier sort de sa pochette avec son capteur de pression ; son câble file jusqu'au coupe-boucle, un petit tube ; la caméra entre dans le tube : la boucle de fermeture passe dans son trou et tient les rabats serrés ; elle s'allume en vert, seule, sur son halo."
+    },
+    {
+      "id": "principe",
+      "text": "Plus tu descends, plus l'air s'épaissit. Le boîtier lit sa pression… et à quelle +vitesse+ elle monte. Une voile ouverte : quelques mètres par seconde. Au-delà de [35|trente-cinq], pour lui, c'est une *chute*.",
+      "vo": "[curious] Plus tu descends, plus l'air s'épaissit. Le boîtier lit sa pression... et à quelle vitesse elle monte. Une voile ouverte : quelques mètres par seconde. Au-delà de trente-cinq, pour lui, c'est une chute.",
+      "voir": "Le boîtier seul, en grand, de trois quarts, qui descend dans une colonne d'air dont les grains se resserrent ; une jauge de pression qui monte sur son flanc ; puis deux silhouettes côte à côte : une voile ouverte qui descend doucement, un corps qui file ; un trait vert à « 35 » les sépare, le corps passe au-dessus et vire au rouge."
+    },
+    {
+      "id": "repos",
+      "text": "Au sol, il prend cette pression comme son zéro. Dans l'avion, il compte la montée. Et sa fenêtre ne s'ouvre que vers [225|deux cent vingt-cinq] mètres du *sol*.",
+      "vo": "[warm, conversational] Au sol, il prend cette pression comme son zéro. Dans l'avion, il compte la montée. Et sa fenêtre ne s'ouvre que vers deux cent vingt-cinq mètres du sol.",
+      "voAlt": [
+        "[curious] Au sol, il prend cette pression comme son zéro. Dans l'avion, il compte la montée. Et sa fenêtre ne s'ouvre que vers deux cent vingt-cinq mètres du sol."
+      ],
+      "voir": "Le sac posé au sol, le matin : la jauge du boîtier se cale sur zéro ; l'avion qui monte, le compteur d'altitude grimpe ; puis la chute vue de loin, et une nappe horizontale qui s'allume à 225 m au-dessus du damier : la fenêtre."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "[225|Deux cent vingt-cinq] mètres. Plus de [35|trente-cinq] mètres par seconde. Ta main ne bouge pas. Quatre *secondes*.",
+      "vo": "[firm, matter-of-fact] Deux cent vingt-cinq mètres. Plus de trente-cinq mètres par seconde. Ta main ne bouge pas. Quatre secondes.",
+      "voir": "Vue basse : le corps traverse la nappe des 225 m ; l'en-tête affiche l'altitude et la vitesse au-dessus de 35 ; la main inerte qui flotte près de la poignée ; le chrono « 4 s » part."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Dans le coupe-boucle, un piston avance de [5|cinq] millimètres. La boucle est +tranchée+. Ton secours s'ouvre. La voile se gonfle. Et toi… tu n'as pas bougé.",
+      "vo": "[tense] Dans le coupe-boucle, un piston avance de cinq millimètres. La boucle est tranchée. Ton secours s'ouvre. La voile se gonfle. Et toi... tu n'as pas bougé.",
+      "voir": "Le climax en grand : dans le coupe-boucle plein cadre, le piston avance, la boucle se coupe en deux ; on recule d'un coup : les rabats s'ouvrent, l'extracteur part, la voile de secours se déroule et se gonfle au-dessus du corps toujours inerte ; l'altitude ralentit (coupe et ouverture reconstituées, aucune durée)."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà le secret : il ne sait *pas* que tu es inconscient. Il n'ouvre même pas ton parachute. Il coupe un +fil+.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : il ne sait pas que tu es inconscient. Il n'ouvre même pas ton parachute. Il coupe un fil.",
+      "voir": "La caméra recule du parachutiste suspendu sous sa voile, toujours immobile, puis revient au coupe-boucle, la boucle coupée en deux bouts ; le nom du compte s'allume ; sur « un fil », le bout de boucle coupé plein cadre."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et si tu ne l'as pas allumé ? Il ne fait rien. En France, il doit être allumé à chaque saut. En +commentaire+ : tu fais confiance au boîtier… ou à ta *main* ?",
+      "vo": "[conversational, curious] Et si tu ne l'as pas allumé ? [short pause] Il ne fait rien. En France, il doit être allumé à chaque saut. [short pause] En commentaire : tu fais confiance au boîtier... ou à ta main ?",
+      "voAlt": [
+        "[curious] Et si tu ne l'as pas allumé ? [short pause] Il ne fait rien. En France, il doit être allumé à chaque saut. [short pause] En commentaire : tu fais confiance au boîtier... ou à ta main ?"
+      ],
+      "voir": "Retour au matin, le sac au sol : l'écran éteint, le pouce d'un sauteur appuie sur le bouton, l'auto-test défile, la diode passe au vert ; puis les deux camps côte à côte : le boîtier à gauche, une main sur la poignée à droite."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour quelqu'un qui saute ce *week-end*.",
+      "vo": "[warm, conversational] Like : [short pause] pour quelqu'un qui saute ce week-end.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour quelqu'un qui saute ce week-end."
+      ],
+      "voir": "Le parachutiste posé dans un champ sous sa voile de secours affaissée, vu de loin, de trois quarts ; chevrons vers le bouton like."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, le sous-marin. En urgence, l'air comprimé chasse l'eau de ses ballasts… et il *jaillit*.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, le sous-marin. En urgence, l'air comprimé chasse l'eau de ses ballasts... et il jaillit.",
+      "voir": "Panneau « Prochain dossier » : un sous-marin aux rayons X sous la surface, ses ballasts pleins d'eau ; l'air comprimé les vide en un souffle et il jaillit, l'étrave hors de l'eau ; chevrons « S'abonner pour l'ouvrir »."
+    },
+    {
+      "id": "boucle",
+      "text": "Comme ce boîtier, quand…",
+      "vo": "[calm] Comme ce boîtier, quand,",
+      "voir": "Retour en chute libre, même cadre que la première image : le corps inerte qui tourne, la campagne derrière, la diode verte du boîtier ; la dernière image rejoint la première."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:inconscient",
+    "reveille": "accroche$",
+    "sol1": "promesse:sol",
+    "eteint": "promesse$",
+    "kmh200": "scene:kilomètres",
+    "monte1": "scene:monte",
+    "poignee": "scene:poignée",
+    "boitier1": "scene:boîtier",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:l'ouvre",
+    "rabat": "eclate:rabat",
+    "capteur": "eclate:pression",
+    "cable": "eclate:câble",
+    "coupe1": "eclate:coupe",
+    "trou": "eclate:trou",
+    "ferme": "eclate$",
+    "toprincipe": "principe-0.12",
+    "epaissit": "principe:s'épaissit",
+    "monte2": "principe:monte",
+    "voile1": "principe:voile",
+    "trente5": "principe:trente",
+    "chute1": "principe$",
+    "torepos": "repos-0.12",
+    "zero1": "repos:zéro",
+    "avion": "repos:l'avion",
+    "fenetre": "repos:fenêtre",
+    "gate1": "repos:deux",
+    "tozero": "zero-0.12",
+    "sec1": "zero:seconde",
+    "main1": "zero:main",
+    "sec4": "zero$",
+    "piston": "reponse:piston",
+    "mm": "reponse:millimètres",
+    "trigger": "reponse:tranchée-0.05",
+    "tranche": "reponse:tranchée",
+    "souvre": "reponse:s'ouvre",
+    "gonfle": "reponse:gonfle",
+    "toi": "reponse:toi",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "inconscient2": "chute:inconscient",
+    "parachute": "chute:parachute",
+    "fil": "chute$",
+    "tocta": "comment-0.12",
+    "france": "comment:France",
+    "saut": "comment:saut",
+    "commentaire": "comment:commentaire",
+    "duelA": "comment:boîtier",
+    "duelB": "comment:main",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:quand"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "torepos",
+          0.6
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "ambience",
+      "preset": "wind",
+      "from": 0,
+      "gain": -30,
+      "curve": [
+        [
+          0,
+          1
+        ],
+        [
+          "tobench",
+          1
+        ],
+        [
+          "explode",
+          0
+        ],
+        [
+          "toprincipe",
+          0.5
+        ],
+        [
+          "torepos",
+          0.15
+        ],
+        [
+          "fenetre",
+          0.6
+        ],
+        [
+          "tozero",
+          1
+        ],
+        [
+          "gonfle+0.4",
+          0.35
+        ],
+        [
+          "toverdict",
+          0.25
+        ],
+        [
+          "tocta",
+          0
+        ],
+        [
+          "toloop",
+          1
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "choc+0.50",
+      "gain": -15
+    },
+    {
+      "type": "blip",
+      "at": "reveille+0.06",
+      "gain": -17,
+      "pitch": 1.2
+    },
+    {
+      "type": "hit",
+      "at": "sol1+0.30",
+      "gain": -15,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "eteint+0.08",
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "monte1+0.28",
+      "gain": -14
+    },
+    {
+      "type": "click",
+      "at": "poignee+0.36",
+      "gain": -17
+    },
+    {
+      "type": "blip",
+      "at": "boitier1+0.36",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "ouvre$+0.05",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "rabat+0.30",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "capteur+0.24",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "coupe1+0.52",
+      "gain": -18
+    },
+    {
+      "type": "blip",
+      "at": "ferme+0.08",
+      "gain": -17,
+      "pitch": 1.1
+    },
+    {
+      "type": "click",
+      "at": "monte2+0.24",
+      "gain": -18
+    },
+    {
+      "type": "hit",
+      "at": "chute1+0.06",
+      "gain": -15
+    },
+    {
+      "type": "click",
+      "at": "zero1+0.30",
+      "gain": -18
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "hit",
+      "at": "sec1+0.36",
+      "gain": -14
+    },
+    {
+      "type": "hit",
+      "at": "sec4+0.08",
+      "gain": -14,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "mm+0.52",
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "tranche+0.40",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "swish",
+      "at": "souvre+0.38",
+      "dur": 0.18,
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "gonfle+0.34",
+      "gain": -15,
+      "size": 1
+    },
+    {
+      "type": "blip",
+      "at": "inconscient2+0.50",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "hit",
+      "at": "fil+0.08",
+      "gain": -15
+    },
+    {
+      "type": "blip",
+      "at": "saut+0.18",
+      "gain": -17,
+      "pitch": 1.2
+    },
+    {
+      "type": "click",
+      "at": "like+0.36",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "abo+0.40",
+      "gain": -18
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "id": "CR02",
+  "serie": "compte-a-rebours",
+  "slug": "deepwater",
+  "title": "Deepwater Horizon",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Deepwater Horizon"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "caption": "Le mot que les gens cherchent, et son synonyme courant : (« ESP, le contrôle de trajectoire : »). Puis l'accroche prolongée, sans la répéter ni dire la chute. Puis la question du commentaire : ceci… ou cela ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#sujet1",
+      "#sujet2",
+      "#communaute"
+    ],
+    "pinned": "Les deux réponses à recopier, 150 caractères au plus : « Réponds juste : ceci ou cela. »"
+  },
+  "sources": [],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ta main *glisse*. Le mot-choc tombe avant trois secondes.",
+      "vo": "[tense] Ta main glisse. Le mot-choc tombe avant trois secondes.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ta main glisse. Le mot-choc tombe avant trois secondes."
+      ]
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Un fait qu'on a du mal à croire : pas un +soulagement+. Et la question… qu'on ne paie qu'à la *fin*.",
+      "vo": "[firm, matter-of-fact] Un fait qu'on a du mal à croire : pas un soulagement. [short pause] Et la question... qu'on ne paie qu'à la fin."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Même seconde, même lieu. Une image par phrase, l'enjeu monte. Ta tâche, avant qu'il soit *trop* tard.",
+      "vo": "[tense] Même seconde, même lieu. Une image par phrase, l'enjeu monte. Ta tâche, avant qu'il soit trop tard."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ]
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "On suit la pièce qui agit, d'un bout à l'autre. Et au bout… +le cœur+.",
+      "vo": "[conversational, curious] On suit la pièce qui agit, d'un bout à l'autre. Et au bout... le cœur.",
+      "voAlt": [
+        "[curious] On suit la pièce qui agit, d'un bout à l'autre. Et au bout... le cœur."
+      ]
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi ça marche ? La loi physique, en mots simples. Et un +chiffre+ qu'on retient.",
+      "vo": "[curious] Pourquoi ça marche ? [short pause] La loi physique, en mots simples. Et un chiffre qu'on retient."
+    },
+    {
+      "id": "repos",
+      "text": "Comment il attend, sans bruit. Et sa dernière phrase *retend*.",
+      "vo": "[warm, conversational] Comment il attend, sans bruit. Et sa dernière phrase retend.",
+      "voAlt": [
+        "[curious] Comment il attend, sans bruit. Et sa dernière phrase retend."
+      ]
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "*Zéro*. Le danger arrive. Des points. Pas de virgules.",
+      "vo": "[firm, matter-of-fact] Zéro. Le danger arrive. Des points. Pas de virgules."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Le système agit. Mot par mot. Et pour la première fois… il +réagit+.",
+      "vo": "[tense] Le système agit. Mot par mot. Et pour la première fois... il réagit."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : ce n'est *pas* ce que tu croyais. C'est +l'inverse+.",
+      "vo": "[firm, matter-of-fact] Voilà son secret : ce n'est pas ce que tu croyais. C'est l'inverse."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et la question du début ? Sa réponse, en une phrase. En +commentaire+ : toi, tu savais lire ça… ou *pas* ?",
+      "vo": "[conversational, curious] Et la question du début ? [short pause] Sa réponse, en une phrase. [short pause] En commentaire : toi, tu savais lire ça... ou pas ?",
+      "voAlt": [
+        "[curious] Et la question du début ? [short pause] Sa réponse, en une phrase. [short pause] En commentaire : toi, tu savais lire ça... ou pas ?"
+      ]
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : une raison tirée de l'histoire, pour quelqu'un d'autre.",
+      "vo": "[warm, conversational] Like : [short pause] une raison tirée de l'histoire, pour quelqu'un d'autre.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] une raison tirée de l'histoire, pour quelqu'un d'autre."
+      ]
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, un seul fait, et il *menace*.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, un seul fait, et il menace."
+    },
+    {
+      "id": "boucle",
+      "text": "Ici, tout commence toujours par…",
+      "vo": "[calm] Ici, tout commence toujours par,"
+    }
+  ],
+  "cues": {
+    "choc": "accroche:glisse",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:réagit-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:toujours"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "hit",
+      "at": 0.02,
+      "gain": -13,
+      "pitch": 0.9
+    },
+    {
+      "type": "impact",
+      "at": 0.03,
+      "gain": -14,
+      "size": 1.2
+    },
+    {
+      "type": "swish",
+      "at": 0.14,
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.6,
+      "gain": -17
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "impact",
+      "at": "explode",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -12,
+      "size": 1.2
+    },
+    {
+      "type": "impact",
+      "at": "trigger",
+      "gain": -10,
+      "size": 1.4
+    },
+    {
+      "type": "blip",
+      "at": "verdict",
+      "gain": -15,
+      "pitch": 0.7,
+      "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}

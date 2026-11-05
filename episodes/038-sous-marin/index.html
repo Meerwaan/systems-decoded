@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · 038 · Sous-marin</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
+         kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+
+      /* rien de ceci n'est à l'écran tant qu'un acte ne l'a pas fait entrer */
+      .chip--live, #retitle, #net, #next, #cta-field, #duel, #film, .rail, #carte, #cartes { opacity: 0; }
+
+      /* l'en-tête : la profondeur (en grand) et la pression (main.js la colore : signal en profondeur) */
+      #hud-count { color: var(--signal); }
+      #hud-clock::before { content: "Profondeur"; font: 500 20px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); opacity: 0.75; margin-right: 14px; vertical-align: 0.5em; }
+
+      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
+      #chip-ssn { color: var(--ink); }
+      #chip-chasse, #chip-coeur, #chip-archimede, #chip-tonne, #chip-intact, #chip-arriere { color: var(--veille); }
+      /* #chip-tonnes, #chip-eventres : signal (par défaut) */
+
+      /* la carte de bord (acte 1) et les deux cartes côte à côte (fin) : la zone haute, une seule à la fois */
+      #carte { left: var(--safe-l); top: var(--slot-top); width: 560px; }
+      #cartes { left: var(--safe-l); right: var(--clear-r); top: var(--slot-top); display: flex; gap: 22px; padding: 0; border: 0; background: none; }
+      #cartes .panel { position: relative; flex: 1; }
+      .chart { display: block; width: 100%; height: 250px; margin-top: 16px; }
+      .chart .grid { stroke: var(--ink-faint); stroke-width: 1.5; }
+      .chart .iso { fill: none; stroke: var(--ink-dim); stroke-width: 2; }
+      .chart .track { fill: none; stroke: var(--veille); stroke-width: 3.5; stroke-dasharray: 12 9; }
+      .chart .boat { fill: var(--veille); }
+      .chart .void { fill: none; stroke: var(--ink-dim); stroke-width: 2; stroke-dasharray: 4 8; }
+      .chart .hazard { fill: rgba(255, 91, 46, 0.18); stroke: var(--signal); stroke-width: 3; }
+      .chart__foot { margin-top: 12px; font: 500 21px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; }
+      .chart__foot.is-void { color: var(--ink-dim); }
+      .chart__foot.is-hazard { color: var(--signal); }
+
+      /* la chute : « Une chasse intacte » barré → « Grâce à l'arrière » */
+      #retitle-main { font-size: 96px; }
+      #retitle-slot { height: 96px; }
+      #retitle-strike { top: 46px; }
+      #next-fact span { font-size: 36px; line-height: 1.2; letter-spacing: 0.06em; }
+      #duel-a, #duel-b { font-size: 50px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="92.633" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 038</span></div>
+        <div class="hud__title" id="hud-title">Sous-marin</div>
+        <div class="hud__clock" id="hud-clock">160 m</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Pression</span><b id="hud-count-v">×17</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- 01 · MENACE (acte1.js) -->
+      <!-- la carte de bord : la route du bateau, et devant lui, rien — là où se dresse la roche (aucune vraie carte reproduite) -->
+      <section id="carte" class="panel">
+        <div class="panel__h"><span>Carte de bord</span><span>Ta route</span></div>
+        <svg class="chart" viewBox="0 0 500 250" aria-hidden="true">
+          <path class="grid" d="M0 62H500M0 125H500M0 188H500M125 0V250M250 0V250M375 0V250" />
+          <path class="iso" d="M18 230c40-30 90-36 120-14s40 34 80 28M402 20c30 10 70 6 88 26M440 236c20-26 44-34 60-30" />
+          <path class="track" d="M40 170C130 160 210 140 300 120" />
+          <path class="boat" d="M300 120l-22 -12v24z" transform="rotate(-12 300 120)" />
+          <circle class="void" cx="392" cy="100" r="46" />
+        </svg>
+        <div class="chart__foot is-void">Devant toi · rien</div>
+      </section>
+      <div id="chip-tonnes" class="chip chip--live"><span>Ton sous-marin</span><b>7 000 tonnes</b></div>
+      <div id="chip-chasse" class="chip chip--live"><span>Il reste</span><b>La chasse d'urgence</b></div>
+
+      <!-- 02 · AUTOPSIE (acte2.js) ; les pièces se nomment avec co.add -->
+      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>Les ballasts</b></div>
+      <!-- le principe et le repos (acte2b.js) -->
+      <div id="chip-archimede" class="chip chip--live"><span>Archimède</span><b>Il pèse l'eau qu'il déplace</b></div>
+      <div id="chip-tonne" class="chip chip--live"><span>Un mètre cube d'air</span><b>1 000 kilos en moins</b></div>
+      <div id="chip-intact" class="chip chip--live"><span>À une condition</span><b>Un réservoir intact</b></div>
+
+      <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
+      <div id="chip-eventres" class="chip chip--live"><span>Devant</span><b>Ballasts éventrés</b></div>
+      <div id="chip-arriere" class="chip chip--live"><span>Derrière</span><b>Ballasts intacts</b></div>
+
+      <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Ce qui t'a remonté</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">Une chasse intacte<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Grâce à l'arrière</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- ce que le film doit (fin.js) : la pièce du dossier, puis les deux cartes -->
+      <div id="chip-ssn" class="chip chip--live"><span>USS San Francisco · SSN-711</span><b>Janvier 2005</b></div>
+      <section id="cartes" class="panel">
+        <div class="panel">
+          <div class="panel__h"><span>Ta carte</span><span>1989</span></div>
+          <svg class="chart" viewBox="0 0 300 250" aria-hidden="true">
+            <path class="grid" d="M0 62H300M0 125H300M0 188H300M100 0V250M200 0V250" />
+            <path class="iso" d="M14 226c34-26 70-30 96-10" />
+            <path class="track" d="M20 170C90 160 140 142 190 124" />
+            <circle class="void" cx="240" cy="104" r="34" />
+          </svg>
+          <div class="chart__foot is-void">Rien</div>
+        </div>
+        <div class="panel">
+          <div class="panel__h"><span>Autre carte</span><span>À bord</span></div>
+          <svg class="chart" viewBox="0 0 300 250" aria-hidden="true">
+            <path class="grid" d="M0 62H300M0 125H300M0 188H300M100 0V250M200 0V250" />
+            <path class="iso" d="M14 226c34-26 70-30 96-10" />
+            <path class="track" d="M20 170C90 160 140 142 190 124" />
+            <path class="hazard" d="M226 70l34 18 4 34-30 20-30-12-8-34z" />
+          </svg>
+          <div class="chart__foot is-hazard">Danger signalé</div>
+        </div>
+      </section>
+
+      <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 personne</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <!-- un seul fait comme appât ; aucun chiffre -->
+        <div id="next-fact"><span>Un système qui dort près de toi.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <!-- hors-série (filmCall) : non utilisé dans ce dossier -->
+      <section id="film">
+        <div class="panel__h"><span>Film complet</span><span id="film-length">0 min 00</span></div>
+        <div id="film-title">Le titre</div>
+        <div id="film-bar"><i></i></div>
+        <div id="film-where"><span>Sur YouTube</span><span>Système Décodé</span></div>
+      </section>
+
+      <!-- la question du commentaire en DEUX réponses (duelCall, fin.js) : chacune s'allume quand la voix la dit, le film
+           ne répond jamais à la place du spectateur. -->
+      <div id="duel">
+        <div class="kicker">La tienne ?</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">La carte</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Ceux qui la lisent</span></div>
+        <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
+      </div>
+      <div id="cta-field">
+        <div class="kicker">La question de l'accroche ?</div>
+        <div id="cta-field-v"><span id="cta-typed" class="is-veille">RÉPONSE</span><span id="cta-caret"></span></div>
+      </div>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

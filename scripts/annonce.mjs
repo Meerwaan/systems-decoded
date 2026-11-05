@@ -39,6 +39,12 @@ const ANNONCES = {
     kicker: "Nouveau grand format · 11 min 20",
     title: ["Il reste", "<s>3 min 32</s>"],
     sub: "Tes deux moteurs viennent d'avaler des oies,<br>à 860 mètres au-dessus de New York.<br>Demi-tour… ou fleuve ?",
+    lien: {
+      at: 54.2,
+      kicker: "Le film complet · 11 min 20",
+      title: ["Demi-tour", "ou <s>fleuve</s> ?"],
+      sub: "155 personnes à bord. New York sous les ailes.<br>Et 3 min 32 pour choisir.",
+    },
   },
 };
 
@@ -107,10 +113,11 @@ const story = ({ frame, a, heure, lien }) => `<!doctype html><meta charset="utf-
 const args = process.argv.slice(2);
 const id = args.find((x) => !x.startsWith("--"));
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
-const a = ANNONCES[id];
+const lien = args.includes("--lien");
+// an entry may carry its own `lien` words and frame, so the "en ligne" story is not the countdown one again
+const a = ANNONCES[id] && (lien && ANNONCES[id].lien ? { ...ANNONCES[id], ...ANNONCES[id].lien } : ANNONCES[id]);
 if (!a) throw new Error(`annonce : ${id ?? "?"} inconnu (${Object.keys(ANNONCES).join(", ")})`);
 const heure = opt("--heure", "18 h 15");
-const lien = args.includes("--lien");
 const out = path.resolve(opt("--out", path.join(ROOT, "renders")));
 const dir = resolveEpisode(id);
 await build(dir, { quiet: true });

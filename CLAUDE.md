@@ -23,6 +23,8 @@ Le nom n'existe qu'à un endroit dans le code : `BRAND.name` (`kit/lib/brand.js`
 
 ## La règle qui passe avant tout : storytelling et rétention
 
+**Une vraie expérience, pas du brainrot** (Merwan, 03/11) : chaque film se vit comme une scène de cinéma et apprend quelque chose de vrai. Le spectacle sert l'histoire et le savoir ; jamais un effet, un bruit ou une émotion plaqués pour retenir sans rien donner. La voix se dirige comme un acteur (souffles, silences, soulagement) quand la scène le demande, pas pour faire du bruit.
+
 C'est ce qui fait grimper le compte. Un épisode n'est pas une fiche technique, c'est une scène : quelqu'un, un danger, et un système qui a quelques secondes pour agir. La technique arrive **quand l'histoire en a besoin**.
 
 ### L'accroche, c'est 99 % du travail
@@ -45,12 +47,12 @@ Elle tient en trois temps, dans les 8 à 9 premières secondes — la **méthode
 1. **Accroche A · B · C**.
 2. **La scène et le compte à rebours** : ce qui se passe si rien n'agit. Le chrono reste à l'écran jusqu'à la fin. **C'est la cible n° 1 (10 → 25 s)** : même instant que l'accroche, une image et un enjeu par phrase, l'enjeu visible, une tâche pour le spectateur, 30 mots au plus, une seule pause, dite vite.
 3. **« Alors… on l'ouvre. »** : la vue éclatée. Énumération courte, puis on isole **le cœur**. **C'est la phrase signature du compte** : mot pour mot, jamais reformulée ni fondue dans une autre phrase ; seule dans son beat, une seule fois par film ; jouée `[calm]` avec sa pause (une prise où la pause manque se reprend) ; l'éclaté s'ouvre sur le mot. **Son ton : nonchalant, sûr de lui, charismatique** (1,06 à 1,36 s, 10,5 à 15,9 l/s sur les 005 à 017). Elle se dit **toujours dans la même requête que la scène tendue qui la précède**, jamais en tête d'une requête ni reprise seule : `npm run voice` la rattache d'office et signale « « on l'ouvre » traîne » au-delà de 1,5 s ou sous 9,5 l/s — une prise ainsi signalée se reprend avant le montage.
-4. **Le mécanisme au repos** : comment il attend. Phrases courtes, une idée par phrase.
-5. **Le seuil** (≈ 25–32 s, à la porte de l'acte 3) : une phrase, trois secondes au plus — la demande d'abonnement, portée par la promesse de ce qui arrive.
+4. **Le principe** (beat `principe`, depuis le 03/11) : **pourquoi ça marche**, la loi physique en mots simples, montrée sur la pièce elle-même, et un chiffre qu'on retient (18 à 32 mots). C'est ce que le spectateur repart en sachant — Merwan, sur le 035 : « on passe sur le sujet assez vite… plus éducatif ». Un film peut aller jusqu'à ≈ 100 s pour ça ; le principe ne se coupe jamais pour gagner du temps.
+5. **Le mécanisme au repos** : comment il attend. Phrases courtes, une idée par phrase ; la dernière retend vers l'acte 3.
 6. **Le danger arrive** : on reprend le chrono, le mécanisme réagit, climax.
 7. **Chute** : on retourne l'idée reçue (« Tu ne percutes pas un airbag qui se gonfle. Tu t'enfonces dans un airbag qui se dégonfle. »).
 8. **Ce que le film doit encore** : la réponse à la curiosité du C, et la question du commentaire. Juste après la chute.
-9. **Le like**, puis **le prochain dossier, en tout dernier**.
+9. **Le like**, puis **l'abonnement avec le prochain dossier, en tout dernier**.
 10. **Rebouclage** : dernière phrase inachevée — la queue de l'annonce du prochain dossier —, dernière image = première image.
 
 Relance la tension toutes les 8–12 s (un fait, une question, un changement de plan). Aucune phrase ne doit pouvoir être coupée sans que l'histoire y perde. Recette d'écriture complète : `docs/recette-script.md` (à lire avant d'écrire un script ; `npm run script` la vérifie). **La promesse ne rassure pas** ; **la question du commentaire est fermée, à deux camps** ; la légende TikTok ouvre sur le mot cherché (`post.keyword`). Les films qui ont percé sont sortis entre 19 h et 23 h.
@@ -73,14 +75,14 @@ Trois CTA par épisode — **like, commentaire, abonnement** — chacun avec sa 
 1. **la chute** ;
 2. **ce qui est dû** : la question du C revient et on y répond, puis la question du commentaire — tout de suite, sans rien entre les deux ;
 3. **le like**, une phrase ;
-4. **le prochain dossier, en tout dernier** : plus rien du sujet en cours ne revient après lui. La voix l'annonce, avec un seul fait ; **elle ne redemande pas l'abonnement** : c'est le panneau qui le porte (« S'abonner pour l'ouvrir »), et ses chevrons ;
+4. **l'abonnement et le prochain dossier, en tout dernier** : plus rien du sujet en cours ne revient après lui. « Abonne-toi : prochain dossier… », avec un seul fait — c'est la seule demande d'abonnement du film ; le panneau (« S'abonner pour l'ouvrir ») et ses chevrons la montrent ;
 5. **la boucle** : la queue de cette annonce — une demi-phrase inachevée, deux secondes au plus, aucun fait nouveau, qui retombe sur les premiers mots de l'accroche.
 
 Dans le modèle : `kit/template/episode.json` (beats `chute → comment → like → abo → boucle`, repère `tocta` sur `comment`) et `kit/template/src/fin.js`.
 
 - **Like** : un motif altruiste ou utile, lié au sujet.
 - **Commentaire** : la question du C revient, on y répond en un mot.
-- **Abonnement : au seuil, pas à la fin.** Une seule phrase à la porte de l'acte 3 : deux mots de demande, puis la promesse de ce que l'acte 3 va montrer, avec les mots de l'épisode — de préférence ceux de l'accroche (008 : « Abonne-toi : ce millième de seconde, on te le montre en entier. »). Jamais une formule passe-partout, jamais plus de trois secondes, jamais dans les dix secondes de l'accroche. **Le film ne s'arrête pas pour elle** : pas de panneau, pas de silence, la caméra déjà en route vers la menace, chevrons `#rail-seuil`. Beat `seuil` dirigé `[tense]` ; `followCall` (`kit/lib/blocks.js`) à la fin d'`acte2.js`. Le seuil « passe crème » : on n'y touche pas.
+- **Abonnement : à la fin seulement (depuis le 03/11, à partir du 036).** Merwan : « le abonne-toi en plein milieu… ça fait perdre les gens… on a déjà une bonne base, on le laisse à la fin ; pas mal de gens regardent jusqu'à la fin ». Plus de beat `seuil` ni de `followCall` au milieu : la seule demande ouvre le beat `abo` (« Abonne-toi : prochain dossier… »), sa raison est le prochain dossier. `npm run script` signale tout « abonne-toi » ailleurs. Les 008 à 035, en ligne, gardent leur seuil (on ne reposte pas). Les longs gardent le leur tant qu'aucune courbe ne dit le contraire.
 
 À l'image, les chevrons `.rail` désignent la colonne de boutons de TikTok ; on n'imite pas l'interface. `npm run voice` signale un CTA dit trop vite : le redonner à jouer avec une pause.
 
@@ -96,7 +98,7 @@ On ne reprend pas le trait de @souslecapot_ (dessin blanc sur bleu nuit, vues en
 - **Le temps réel** : l'histoire se déroule à la seconde, le chrono affiché est celui que dit la voix.
 - **De la vraie 3D éclairée comme en studio** (Three.js) : pièces pleines aux arêtes fines, ombres douces, reflets, flou de mouvement, vue éclatée qui s'ouvre et se referme.
 - **Deux matières** : le système qu'on autopsie est **plein** (sombre, arêtes claires, posé sur un halo de lumière) ; ce qui l'entoure est vu **aux rayons X** (coque de verre, traits fins, et à l'intérieur, pleins, les seuls éléments qui comptent).
-- **Trois couleurs qui ont un sens** : `ink` #E9E4D8 (structure, texte) · `veille` #5CFFB0 (le système vivant) · `signal` #FF5B2E (la menace). Rien d'autre.
+- **Trois couleurs qui ont un sens** : `ink` #E9E4D8 (structure, texte) · `veille` #5CFFB0 (le système vivant) · `signal` #FF5B2E (la menace). Rien d'autre. (Le « Compte à rebours » a sa propre DA, « le noir chaud », validée le 05/11 : la même 3D studio et les mêmes polices que les dossiers, en noir chaud éclairé à l'ambre, horloge ambre géante ; **vert quand ça marche, rouge quand c'est l'incident** — jamais de fond clair, de papier ni de typo à empattements. `docs/recette-compte-a-rebours.md`, `kit/lib/reconstitution.js`.)
 - **Typo** : Barlow Condensed (titres, sous-titres) + JetBrains Mono (HUD, données).
 - **Sous-titres mot à mot** : chaque mot apparaît quand il est dit, jamais avant ; `*mot*` = signal, `+mot+` = veille. Ils sont en capitales : une unité à symbole (« 10 µs ») s'écrit en toutes lettres dans `text`, ou va dans l'en-tête.
 
@@ -216,5 +218,7 @@ Des longs de 9 à 14 minutes, 16:9, numérotés `L01`, `L02`… — « un vrai r
 | l'état et les leçons d'un dossier court | `docs/memoire/dossiers-001-017.md`, `docs/memoire/dossiers-018-030.md` ; les nuits : `docs/journal/` |
 | proposer la suite (sujets faits, écartés, demandés) | `docs/memoire/sujets.md` |
 | le rush YouTube (4 000 h avant le 31/01/2027 : rythme, affaires réelles, compilations, stock de courts) | `docs/plan-rush-youtube.md` |
+| faire grandir TikTok (10 k), l'argent (plan du 03/11) | `docs/plan-scale-novembre.md`, relevé `metrics/exports/2026-11-03/releve.md` |
+| le format « Compte à rebours » (CRnn : un vrai jour à la seconde en ≈ 65 s, une narratrice, pilotes en réels d'essai Instagram) | `docs/recette-compte-a-rebours.md` |
 | les passes « scale » du 21/10 | `docs/scale/` |
 | un fait sourcé | `docs/faits/<ep>-*.md` et `<ep>-contre-verification.md` |

@@ -1,0 +1,31 @@
+{
+  "voix": "Eric 9osbeK6KzhDRV0yX4rTq, eleven_v4_turbo, stabilité 0.4, une requête",
+  "valide": "2026-11-03, Merwan : « Légendaire, c’est parfait »",
+  "beats": [
+    {
+      "id": "c1",
+      "text": "Quinze heures vingt-sept. Tu viens de décoller de New York… et là, un choc. Tes deux moteurs s'étouffent.",
+      "vo": "[conversational, curious] Quinze heures vingt-sept. Tu viens de décoller de New York... et là, un choc. Tes deux moteurs s'étouffent."
+    },
+    {
+      "id": "c2",
+      "text": "Trois minutes et demie. Pas une piste à portée. Alors… tu fais quoi ?",
+      "vo": "[tense] Trois minutes et demie. Pas une piste à portée. Alors... tu fais quoi ?"
+    },
+    {
+      "id": "c3",
+      "text": "Lui, il choisit le fleuve. Deux cents pieds. Cent. Il tire sur le manche.",
+      "vo": "[firm, matter-of-fact] Lui, il choisit le fleuve. Deux cents pieds. Cent. Il tire sur le manche."
+    },
+    {
+      "id": "c4",
+      "text": "Contact. Cent vingt-cinq nœuds. Et l'avion… flotte.",
+      "vo": "[tense] Contact. [short pause] Cent vingt-cinq nœuds. Et l'avion... flotte."
+    },
+    {
+      "id": "c5",
+      "text": "Cent cinquante-cinq personnes à bord. Et tu sais quoi ? Toutes sauvées.",
+      "vo": "[warm, conversational] Cent cinquante-cinq personnes à bord. Et tu sais quoi ? Toutes sauvées."
+    }
+  ]
+}

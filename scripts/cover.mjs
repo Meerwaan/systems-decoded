@@ -98,6 +98,7 @@ const STYLE = `
 //   tagStyle "solid"   the tag filled with `tagTone` (default "veille"), dark letters: a block of colour in the grid
 //   tagSize 46         the tag's letters, px
 //   foot "…"           the line under the title instead of the account's name ("Film complet · 8 min 51")
+//   lastTone "#ffb23e" the colour of the title's last line (default the veille green; the Compte à rebours: its amber, the time)
 const shortExtra = (c) => {
   const css = [];
   const tone = `var(--${c.tagTone ?? "veille"})`;
@@ -105,6 +106,7 @@ const shortExtra = (c) => {
     css.push(`#cover .tag { display: inline-flex; padding: 16px 24px; background: ${tone}; color: #070a0c; font-weight: 700; box-shadow: 0 8px 0 rgba(0,0,0,0.55); } #cover .tag i { background: #070a0c; box-shadow: none; }`);
   if (c.tagSize != null) css.push(`#cover .tag { font-size: ${c.tagSize}px; }`);
   if (c.foot) css.push(`#cover .brand { color: ${tone}; }`);
+  if (c.lastTone) css.push(`#cover h1 span:last-child { color: ${c.lastTone}; }`);
   return css.join("\n");
 };
 
