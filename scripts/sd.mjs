@@ -125,6 +125,7 @@ const HELP = `
   npm run check   -- <ep> [--force]              lint + audits HyperFrames (rien de changé depuis le dernier : son résultat, tout de suite)
   npm run preview -- <ep>                        studio HyperFrames (lecture en direct)
   npm run render  -- <ep> [--draft] [--out f.mp4]   MP4 final dans renders/ (--out : ailleurs, pour un essai)
+  npm run camera  -- <ep>                        la caméra, sans rendu : part du film où l'image est quasi fixe, plages fixes, coupes (pilote 038)
   npm run qa      -- <ep> [--file x.mp4]         contrôle le MP4 rendu : voix calée, niveau, images parasites, fluidité
   npm run compil  -- C01 [--draft] [--out f.mp4]   compilation YouTube 16:9 : nos courts rendus + une voix neuve (docs/recette-compil.md)
   npm run srt     -- <ep>                      format long : sous-titres (renders/<ep>.srt) et chapitres horodatés de la description YouTube
@@ -331,6 +332,11 @@ try {
     case "brand": {
       const { brand } = await import("./brand.mjs");
       await brand();
+      break;
+    }
+    case "camera": {
+      const { camera } = await import("./camera.mjs");
+      await camera(resolveEpisode(args[0]));
       break;
     }
     case "qa": {

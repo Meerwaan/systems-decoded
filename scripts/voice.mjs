@@ -7,6 +7,7 @@
 // Credits are someone's money: nothing is ever recorded without a budget on the command line.
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { elevenKey } from "./lib/env.mjs";
 import { loadEpisode, scriptHash, beatHash, beatHashes, directions, alignTokens, schedule, hashOf, core, acts, stabilityOf } from "./lib/episode.mjs";
 import { decodeAudio, trackPitch, prosodyReport } from "./lib/audio.mjs";
@@ -547,6 +548,13 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, alone = 
       say(`  Rien n'a été enregistré. Avec l'accord de Merwan : ajoute --budget ${Math.ceil(estimate / 50) * 50}  (solde : npm run credits)`);
       if (!ep.beats.every((b) => covered(b.id))) throw new Error("Des phrases n'ont aucun enregistrement : pas de voix à monter pour l'instant.");
     } else {
+      // a script still holding the template's placeholder text is not a script: never pay to record it
+      const kit = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "kit");
+      const placeholders = new Set(
+        ["template", "template-long"].flatMap((t) => (readJson(path.join(kit, t, "episode.json"))?.beats ?? []).map((b) => b.text).filter((t) => t && t.length > 25)),
+      );
+      const blank = ep.beats.filter((b) => placeholders.has(b.text)).map((b) => b.id);
+      if (blank.length) throw new Error(`Script pas écrit : ${blank.join(", ")} gardent le texte du modèle. Rien n'a été enregistré.`);
       say(`\n  Enregistrement : ${what} ≈ ${estimate} crédits (budget ${budget})`);
       let halted = null;
       for (const [k, p] of plan.entries()) {

@@ -17,7 +17,7 @@
     "2026-11-05": {
       "tiktok": {
         "abonnes": 2376,
-        "likes": 28000,
+        "likes": 28100,
         "videos": 42
       },
       "instagram": {
@@ -26,9 +26,26 @@
         "videos": 42
       },
       "youtube": {
-        "abonnes": 1150,
+        "abonnes": 1160,
         "approx": true,
         "videos": 46
+      }
+    },
+    "2026-11-06": {
+      "tiktok": {
+        "abonnes": 2379,
+        "likes": 28100,
+        "videos": 42
+      },
+      "youtube": {
+        "abonnes": 1160,
+        "approx": true,
+        "videos": 47
+      },
+      "instagram": {
+        "abonnes": 41000,
+        "approx": true,
+        "videos": 42
       }
     }
   }

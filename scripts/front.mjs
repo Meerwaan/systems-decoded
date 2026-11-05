@@ -170,7 +170,7 @@ function postOf(post) {
     // the same film on the other two platforms (scripts/posts.mjs)
     instagram: alsoOn(post.instagram, ["caption"]),
     // a long's block also carries the other titles of YouTube's test, its pinned comment and the end-screen reminder
-    youtube: alsoOn(post.youtube, ["title", "description", "pinned", "endScreen"], ["titleAlts"]),
+    youtube: alsoOn(post.youtube, ["title", "description", "pinned", "endScreen", "related", "relatedWhy"], ["titleAlts"]), // related : le long à mettre en « vidéo associée » d'un Short ("L04"), quand le bureau ne doit pas le deviner
   };
 }
 
@@ -571,6 +571,9 @@ async function liveAccounts(force = false) {
           }
         }),
       );
+      // the video feed sometimes answers empty: keep the last list rather than show nothing
+      const before = accountsCache && accountsCache.data.accounts.youtube;
+      if (accounts.youtube && !(accounts.youtube.latest || []).length && before && (before.latest || []).length) accounts.youtube.latest = before.latest;
       const history = keepAccounts(accounts);
       const data = { at: Date.now(), accounts, history };
       accountsCache = { at: data.at, data };

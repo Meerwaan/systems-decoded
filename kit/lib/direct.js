@@ -87,6 +87,55 @@ export const carry = (a, b, c, k = 1) => {
 };
 
 /**
+ * The curve of D.path: through every key, the speed carried from one to the next (Hermite), each number on its own,
+ * never past a key (the tangent is the weighted harmonic mean of the two slopes around it, 0 where a number turns
+ * back: Fritsch–Butland). `d` travels in logarithm (by ratio). Ends: "go" leaves / lands at the slope of the first /
+ * last stretch, "rest" from / to a stop. Returns (time) → pose.
+ */
+const PATH_KEYS = ["tx", "ty", "tz", "d", "az", "el", "fov", "shift", "side", "roll", "drift", "dof"];
+export function pathCurve(ks, { from = "go", to = "go" } = {}) {
+  const n = ks.length;
+  const ts = ks.map((k) => k.at);
+  const chans = PATH_KEYS.filter((key) => ks.every((k) => typeof k.pose[key] === "number")).map((key) => {
+    const ys = ks.map((k) => (key === "d" ? Math.log(Math.max(1e-6, k.pose[key])) : k.pose[key]));
+    const h = ts.slice(1).map((t, i) => t - ts[i]);
+    const dl = h.map((hi, i) => (ys[i + 1] - ys[i]) / hi);
+    const m = ys.map((_, i) => {
+      if (i === 0) return n > 1 && from === "go" ? dl[0] : 0;
+      if (i === n - 1) return to === "go" ? dl[i - 1] : 0;
+      const a = dl[i - 1];
+      const b = dl[i];
+      if (a * b <= 0) return 0;
+      const w1 = 2 * h[i] + h[i - 1];
+      const w2 = h[i] + 2 * h[i - 1];
+      return (w1 + w2) / (w1 / a + w2 / b);
+    });
+    return { key, ys, m, h };
+  });
+  const held = Object.fromEntries(Object.keys(ks[0].pose).filter((k) => !chans.some((c) => c.key === k)).map((k) => [k, ks[0].pose[k]]));
+  return (time) => {
+    let i = 0;
+    while (i < n - 2 && time >= ts[i + 1]) i++;
+    const out = { ...held };
+    if (n === 1 || time <= ts[0]) i = 0;
+    for (const c of chans) {
+      let y;
+      if (n === 1 || time <= ts[0]) y = c.ys[0];
+      else if (time >= ts[n - 1]) y = c.ys[n - 1];
+      else {
+        const hi = c.h[i];
+        const s = (time - ts[i]) / hi;
+        const s2 = s * s;
+        const s3 = s2 * s;
+        y = (2 * s3 - 3 * s2 + 1) * c.ys[i] + (s3 - 2 * s2 + s) * hi * c.m[i] + (-2 * s3 + 3 * s2) * c.ys[i + 1] + (s3 - s2) * hi * c.m[i + 1];
+      }
+      out[c.key] = c.key === "d" ? Math.exp(y) : y;
+    }
+    return out;
+  };
+}
+
+/**
  * `first`  the state of the world on the first frame (and on the last: the film loops)
  * `pose0`  the camera of the first frame — complete: tx, ty, tz, d, az, el, fov, shift, side, roll, drift
  * `ride`   (S) => [x, y, z]: the travel of what the camera follows, added to every shot (and to the
@@ -154,6 +203,33 @@ export function createDirector({ EP = window.__EPISODE, stage, first, pose0, rid
       shot(at, after, d, "sine.out");
     }
     return d;
+  };
+  /**
+   * THE CAMERA THAT NEVER STOPS (plan-séquence, 2026-11-05). Merwan: « que les événements s'enchaînent, la caméra
+   * glisse comme un plan séquence… que le mec ne puisse pas lâcher le regard ». A chain of `shot`s in sine.inOut brakes
+   * to a stop on every pose: measured on 015, 037 and 038, the picture sits still (< 4 °/s) 36 % of the film.
+   * `path` lays ONE move through a list of poses, each reached at its instant, WITHOUT STOPPING on any of them: the
+   * camera passes through a pose at speed and is already leaving for the next (a spline through the keys).
+   *   keys  [[at, pose], …] — `at` in seconds or a ref ("beat:mot"); the first pose complete, the next ones only what
+   *         changes (each is merged on the one before). Two keys 1 to 3 s apart, one per idea of the sentence.
+   *   opt   { from: "go" | "rest" — the first key is passed at speed (the default: after a cut, the move is already
+   *           running) or left from a stop · to: "go" | "rest" — the same for the last key ("go" when a cut or another
+   *           path follows, "rest" to settle) }
+   * The distance travels by ratio (a dive keeps its pace to the last metre), the other numbers along a curve that never
+   * overshoots a key (no bounce past a pose: the camera does not go through what the pose was framing round). The path
+   * owns the camera from its first key to its last: no shot inside it (punch, jolt and drift still ride on it).
+   * Returns the last pose (complete): a `cut` or the next `path` leaves from it.
+   */
+  const path = (keys, { from = "go", to = "go" } = {}) => {
+    const base = { roll: 0, side: 0, shift: 0, fov: 28, drift: 0.3, dof: 0 };
+    let acc = { ...base };
+    const ks = keys.map(([at, pose]) => {
+      acc = { ...acc, ...pose };
+      return { at: typeof at === "number" ? at : T.at(at), pose: { ...acc } };
+    });
+    for (let i = 1; i < ks.length; i++) if (ks[i].at <= ks[i - 1].at) throw new Error(`[direct] path: la clé ${i} (${ks[i].at.toFixed(2)} s) ne vient pas après la précédente`);
+    shots.push({ at: ks[0].at, dur: ks.at(-1).at - ks[0].at, path: { ks, from, to } });
+    return { ...ks.at(-1).pose };
   };
   /** A knock on the camera (never on a wide picture full of level lines: one frame jumps and comes back). */
   const jolt = (at, k, dur = 0.5) => {
@@ -304,6 +380,13 @@ export function createDirector({ EP = window.__EPISODE, stage, first, pose0, rid
     shots.sort((a, b) => a.at - b.at);
     shots.forEach((s, i) => {
       if (s.cut) return tw.set(C, s.pose, s.at);
+      if (s.path) {
+        const next = shots[i + 1];
+        if (next && next.at < s.at + s.dur - 1e-3) console.warn(`[direct] path ${s.at.toFixed(2)}–${(s.at + s.dur).toFixed(2)} s : un autre plan commence dedans (${next.at.toFixed(2)} s)`);
+        const curve = pathCurve(s.path.ks, s.path);
+        const u = { t: s.at };
+        return tw.to(u, { t: s.at + s.dur, duration: s.dur, ease: "none", onUpdate: () => Object.assign(C, curve(u.t)), onStart: () => Object.assign(C, curve(u.t)) }, s.at);
+      }
       const room = (shots[i + 1]?.at ?? END) - s.at;
       const duration = Math.min(s.dur, Math.max(0.05, room));
       const r = s.fromD == null || s.pose.d == null ? 1 : s.pose.d / s.fromD;
@@ -330,7 +413,7 @@ export function createDirector({ EP = window.__EPISODE, stage, first, pose0, rid
 
   return {
     EP, T, END, tEnd, handOver, S, W, C, tl, tw, first, pose0, riding,
-    at: T.at, st, now, shot, cut, match, jolt, punch, show, hide, blip, panel, follow, chip, readout, verdict, loop, quiet, captionStyle, commit,
+    at: T.at, st, now, shot, cut, match, path, jolt, punch, show, hide, blip, panel, follow, chip, readout, verdict, loop, quiet, captionStyle, commit,
     breath: T.breath, threads, cliff,
     /** { name: "beat:mot" } → { name: seconds } */
     times: (refs) => Object.fromEntries(Object.entries(refs).map(([k, ref]) => [k, T.at(ref)])),

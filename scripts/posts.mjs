@@ -584,6 +584,17 @@ const POSTS = {
       hashtags: ["#shorts", "#fusee", "#ariane5", "#espace", "#science"],
     },
   },
+  "CR02-deepwater": {
+    instagram: {
+      caption: "Deepwater Horizon, 20 avril 2010, 21 h 40 : la boue jaillit jusqu'en haut du derrick. Neuf minutes plus tard, tout explose.\n\nCompte à rebours 02 : la soirée du golfe du Mexique, minute par minute. Le test de pression jugé réussi, le puits qui coule sans que personne le voie, les mâchoires du BOP qui se ferment trop tard — et la dernière sécurité qui se ferme… sans sceller le puits. Tout est vrai, reconstitué en maquette.\n\nToi : 1 400 d'un côté, zéro de l'autre… tu valides, ou tu arrêtes tout ?",
+      hashtags: ["#deepwaterhorizon", "#petrole", "#histoire", "#ingenierie", "#comptearebours"],
+    },
+    youtube: {
+      title: "Deepwater Horizon, 21 h 49 : la dernière sécurité se ferme… et le puits coule quand même",
+      description: "Compte à rebours 02 — la soirée du 20 avril 2010 sur Deepwater Horizon, reconstituée minute par minute d'après l'enquête du CSB : le test de pression jugé réussi à 19 h 55, le puits qui coule dès 21 h 08, la boue dans le derrick à 21 h 40, les mâchoires du BOP, l'explosion de 21 h 49 — puis le bouton d'urgence, le dernier recours automatique, et pourquoi ses lames n'ont pas scellé le puits. Et ce qui a changé depuis sur les BOP sous-marins.\n\nToi : 1 400 d'un côté, zéro de l'autre… tu valides, ou tu arrêtes tout ?",
+      hashtags: ["#shorts", "#deepwaterhorizon", "#petrole", "#histoire", "#science"],
+    },
+  },
 };
 
 const problems = [];

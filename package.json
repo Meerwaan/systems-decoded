@@ -16,6 +16,7 @@
     "preview": "node scripts/sd.mjs preview",
     "render": "node scripts/sd.mjs render",
     "qa": "node scripts/sd.mjs qa",
+    "camera": "node scripts/sd.mjs camera",
     "brand": "node scripts/sd.mjs brand",
     "cover": "node scripts/sd.mjs cover",
     "phone": "node scripts/sd.mjs phone",
