@@ -14,6 +14,7 @@
     "similarity": 0.8,
     "speed": 1,
     "seed": 21,
+    "language": "fr",
     "parts": [
       "ouvre",
       "etape1",
