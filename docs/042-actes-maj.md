@@ -1,0 +1,10 @@
+# 042 — ce que les décors ont changé (à lire avant d'écrire un acte)
+
+1. **Première image : candidate b** (`POSE0` inchangée : avant-gauche, au ras du sol, sous le canon, le feu derrière la tourelle). `FIRST` passe à `blow: 0.08`, `column: 0.45` (le panneau fendu, les flammes par son bord, un jet de ≈ 3 m) : acte1 part de là et `fin.js` y revient (boucle `cut` +12° puis `D.loop` SANS `fromD`).
+2. **Caisson** : la came est un disque en œuf (22 × 16) qui passe d'œuf debout à œuf couché vers les portes ; `A.cam`, `A.rod` ont bougé (axe x −80,9 ; tringle x −87,1, z −7,8). `VIEW.cam` recalé (tx −190, ty 11). Pendant `lock` 0 → 0,9, tenir `blow = 0.05 + 0.028·lock/0.9`, puis relâcher `blow` après `lock` 1. `bulge` ne se lit que d'en bas (el ≈ 8) : invisible depuis `secBench` (el 22). En éclaté, des obus traversent la paroi arrière : ne pas s'y attarder.
+3. **Caisson, nombres** : `press` fait naître les six flèches face par face (cerclées de noir, devant tout) ; `vent` les fait sortir par le toit (`blow` ≥ 0,05) ; `section` met la paroi +z en verre ; `crack` fissure le bloc du like.
+4. **Char** : `reach` 0,5 = le chargeur se retourne, 1 = un pas de 50 cm vers sa porte, mains sur le culot ; `grab` est passé à `tank.update`. `VIEW.duo` resserré (d 2100, el 14), `OTHER.heading` 180 (le bras vient à côté de notre chargeur, le râtelier sort de la zone des boutons), `VIEW.loader` tx −150.
+5. **Feu** : `column` 0,15 léchage · 0,4 jet de 3 m · 1 colonne de 9 m ; `fall` la fait retomber ; `teaser` 0 → 0,4 faisceau · 0,4 → 0,7 train · 0,7 → 0,95 le bloc l'avale. `VIEW.teaser` recalé (d 2700, el 16, fov 40, side 100). La colonne s'éteint avant l'en-tête (y < 600).
+6. **À surveiller** : sur `zero` (`zero:lâche+0.6`) un halo blanc-saumon en haut du cadre ; un rectangle signal sur le toit et une bande blanche en haut de `mech` avec `column: 0` ; le train de l'annonce file de dos.
+7. **Habillage** : une lisière et une crête en traits, visibles seulement œil bas (< 1,95 m) ; sur `columnWide`, un bout de lisière au bord droit.
+8. `VIEW.mech` reste à az −46 (l'agent du caisson proposait −26 : casse l'ordre des azimuts).
