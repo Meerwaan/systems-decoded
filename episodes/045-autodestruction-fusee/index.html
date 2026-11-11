@@ -9,16 +9,24 @@
     <style>
       /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
          kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
-
-      /* le second compteur de l'en-tête (.hud__count est signal par défaut) */
-      #hud-count { color: var(--ink); }
+      .chip--live, #retitle, #net, #next, #duel, .rail { opacity: 0; }
+      /* l'en-tête : « H0+… s » depuis l'allumage (main.js fixe les couleurs : signal pendant le danger, encre à l'arrêt sur
+         le pas de tir, veille une fois la charge passée) ; le second compteur, l'incidence (« > 20° » : Lions) */
+      #hud-clock { color: var(--signal); }
+      #hud-count { color: var(--signal); }
       /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
-      #chip-toi { color: var(--ink); }
-      #chip-coeur { color: var(--veille); }
+      #chip-charge, #chip-couloir, #chip-acier { color: var(--veille); }
+      #chip-pas, #chip-cnes { color: var(--ink); }
+      #chip-sri { color: var(--signal); }
+      /* la chute */
+      #retitle-main { font-size: 104px; }
+      #retitle-slot { height: 104px; }
+      #retitle-strike { top: 50px; }
+      #next-fact span { font-size: 36px; line-height: 1.2; letter-spacing: 0.06em; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="60" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="92.8" data-width="1080" data-height="1920">
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
@@ -28,8 +36,8 @@
       <header id="hud">
         <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 045</span></div>
         <div class="hud__title" id="hud-title">L'autodestruction de la fusée</div>
-        <div class="hud__clock" id="hud-clock">T−3,0 s</div>
-        <div class="hud__count" id="hud-count"><span id="hud-count-l">Mesure</span><b id="hud-count-v">0</b></div>
+        <div class="hud__clock" id="hud-clock">H0+38,8 s</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Incidence</span><b id="hud-count-v">&gt; 20°</b></div>
         <div class="hud__rule"></div>
         <nav class="hud__acts">
           <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
@@ -37,22 +45,33 @@
         </nav>
       </header>
 
-      <!-- 01 · MENACE (acte1.js) -->
-      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <!-- 01 · MENACE (acte1.js) : l'en-tête porte le danger (le chrono, l'incidence) ; aucune hauteur ni distance affichée
+           (la géographie est une maquette) ; une étiquette à la fois en zone haute -->
+      <!-- « Une fusée emporte sa propre charge » / « Il reste sa charge » : la ligne verte le long de la coque -->
+      <div id="chip-charge" class="chip chip--live"><b>Sa charge</b></div>
+      <!-- « À un kilomètre du pas de tir » -->
+      <div id="chip-pas" class="chip chip--live"><b>Pas de tir</b></div>
+      <!-- « …que dans son couloir » / « Sa règle : jamais hors du couloir » -->
+      <div id="chip-couloir" class="chip chip--live"><span>La règle</span><b>Son couloir</b></div>
 
-      <!-- 02 · AUTOPSIE (acte2.js) -->
-      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>En veille</b></div>
+      <!-- 02 · AUTOPSIE (acte2.js) : les pièces se nomment avec co.add (« Antenne », « Sécurité-armement », « Détonateur »,
+           « Cordeau », « Charge linéaire », « Cuivre »), sans chiffre ; une seule étiquette à la fois en zone haute -->
+      <!-- « …qui coupe jusqu'à deux centimètres d'acier » (fiche Pyroalliance : « up to 22 mm ») -->
+      <div id="chip-acier" class="chip chip--live"><span>Jusqu'à</span><b>Deux centimètres d'acier</b></div>
 
-
-      <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
+      <!-- le repos et 03 · RÉPONSE (acte3.js) -->
+      <!-- « À Kourou, la sauvegarde du CNES suit chaque seconde » -->
+      <div id="chip-cnes" class="chip chip--live"><span>Kourou</span><b>Sauvegarde du CNES</b></div>
+      <!-- « Ses centrales inertielles lâchent » -->
+      <div id="chip-sri" class="chip chip--live"><span>Le guidage</span><b>Centrales inertielles</b></div>
 
       <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
       <div id="retitle">
-        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
+        <div class="kicker" id="retitle-k">Sa sauvegarde</div>
         <div id="retitle-main">
           <span id="retitle-slot">
-            <span id="retitle-a">L'idée reçue<i id="retitle-strike"></i></span>
-            <span id="retitle-b" class="is-veille">La vérité</span>
+            <span id="retitle-a">Ratée<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Réussie</span>
           </span>
         </div>
       </div>
@@ -68,32 +87,19 @@
       </section>
 
       <section id="next">
-        <div class="panel__h"><span>Prochain dossier · 000</span><span>Classé</span></div>
+        <div class="panel__h"><span>Prochain dossier · 046</span><span>Classé</span></div>
         <div id="next-title"><span id="next-redact"></span></div>
-        <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
-        <div id="next-fact"><span>Un fait, un seul.</span></div>
+        <!-- un seul fait, celui que dit la voix (046) ; aucun chiffre -->
+        <div id="next-fact"><span>Une flamme qui brûle pour que l'usine n'explose pas.</span></div>
         <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
-      </section>
-
-      <!-- hors-série (filmCall) : le long vers lequel la promo envoie — le mot YouTube, jamais son logo -->
-      <section id="film">
-        <div class="panel__h"><span>Film complet</span><span id="film-length">0 min 00</span></div>
-        <div id="film-title">Le titre</div>
-        <div id="film-bar"><i></i></div>
-        <div id="film-where"><span>Sur YouTube</span><span>Système Décodé</span></div>
       </section>
 
       <!-- la question du commentaire posée en DEUX réponses (duelCall, fin.js) : chacune s'allume quand la voix la dit, le film ne
            répond jamais à la place du spectateur — prendre parti fait commenter. Une question fermée à deux issues seulement. -->
       <div id="duel">
-        <div class="kicker">La tienne ?</div>
-        <div id="duel-row"><span id="duel-a" class="duel__opt">Réponse A</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Réponse B</span></div>
+        <div class="kicker">Une fusée qui dévie ?</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">Un humain</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">La machine</span></div>
         <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
-      </div>
-      <div id="cta-field">
-        <div class="kicker">La question de l'accroche ?</div>
-        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de lettres) -->
-        <div id="cta-field-v"><span id="cta-typed" class="is-veille">RÉPONSE</span><span id="cta-caret"></span></div>
       </div>
 
       <div id="callouts" class="layer"></div>
@@ -102,6 +108,8 @@
       <div id="flash" class="layer"></div>
 
       <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
       <!-- AUDIO:END -->
     </div>
 

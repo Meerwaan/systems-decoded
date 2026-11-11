@@ -9,29 +9,49 @@
   "voice": {
     "name": "Eric",
     "voiceId": "9osbeK6KzhDRV0yX4rTq",
-    "model": "eleven_v4_turbo",
+    "model": "eleven_v4",
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21
+    "seed": 21,
+    "language": "fr"
   },
   "cover": {
-    "at": "eclate$",
+    "at": "eclate:coque",
     "title": [
       "Fusée",
       "autodétruite"
     ],
     "cam": {
-      "tx": 0,
-      "ty": 8,
+      "tx": -30,
+      "ty": 6,
       "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
-      "shift": -430,
+      "d": 450,
+      "az": -60,
+      "el": 32,
+      "shift": -280,
       "side": 0,
-      "fov": 28,
+      "fov": 30,
       "roll": 0
+    },
+    "state": {
+      "set": 0,
+      "explode": 1,
+      "solo": 0,
+      "section": 0,
+      "jet": 0,
+      "plate": 0,
+      "fire": 0.44,
+      "litAnt": 0.6,
+      "litLock": 0.6,
+      "litDet": 0.6,
+      "litCord": 1,
+      "litCharge": 1,
+      "arm": 1,
+      "watch": 1,
+      "listen": 1,
+      "pool": 0.3,
+      "grid": 0.16
     }
   },
   "post": {
@@ -81,7 +101,15 @@
     "La salle de sauvegarde du CNES à Kourou suit le vol (caméras, radars, télémesure) — CNES, « La sauvegarde vol d'Ariane 6… » 2025 [P] ; le CNES est chargé de la sauvegarde par la loi sur les opérations spatiales [S]",
     "Humain ou machine : le CNES prépare une sauvegarde autonome embarquée (UDS, confiée à Safran Space), envisagée « à partir de 2030 » — communiqué CNES du 04/06/2026 [P]",
     "Épinglé : la cause, la conversion d'un flottant 64 bits en entier 16 bits dans une fonction d'alignement inutile en vol, logiciel repris d'Ariane 4 — Lions §2.1 [P]",
-    "La scène est le vrai vol 501 ; « ta fusée » est un rôle donné au spectateur, la mise en scène 3D reconstitue"
+    "La scène est le vrai vol 501 ; « ta fusée » est un rôle donné au spectateur, la mise en scène 3D reconstitue",
+    "Annonce du 046 : la torchère de raffinerie est un système de sécurité contre la surpression — les soupapes envoient le gaz en trop vers la torche, qui le brûle ; une veilleuse reste allumée pour l'enflammer à tout instant — Wikipédia « Gas flare » [S] ; Canadian Fuels, « Flaring 101 » [S] ; brevet US 4 490 106 (allumage des torchères) [P]",
+    "Mise en scène : la géographie est une MAQUETTE (1 km = 40 m) pour tenir dans un cadre vertical une fusée de 50 m à « quatre kilomètres au-dessus du sol, à un kilomètre du pas de tir » — le rapport 4 : 1 est gardé, aucune hauteur ni distance n'est affichée ; la fusée, le pas de tir, la cabine et la chaîne sont à leur taille, arrondie",
+    "Image : Ariane 5 G (EPC, deux EAP, case à équipements, coiffe) reconstituée d'après des plans publics, arrondie ; les charges le long de la coque, leur place et leur nombre sont génériques (le détail d'Ariane 5 n'a pas été trouvé à la source)",
+    "En-tête : « H0+… s » depuis l'allumage du Vulcain (Lions §1.1) — 38,8 → 39,0 s sur l'accroche (désintégration « vers H0+39 s ») ; au repos il court en accéléré (« suit chaque seconde ») jusqu'à 32 s sur « bascule », puis 36,0 / 36,7 / 39,0 sur les mots ; second compteur : l'incidence, en degrés jusqu'à 20, puis « > 20° » (Lions §2.1) — aucun chiffre au-delà",
+    "Image : la cabine de sauvegarde du CNES est placée près du pas de tir pour la mise en scène (la vraie salle est à des kilomètres) ; son écran montre la bande du couloir et la trajectoire, schématiques",
+    "Image : les débris retombent près du pas de tir, à l'est, sur la mangrove et la savane (Lions §1.3) ; aucune étiquette ne dit qu'ils sont tombés « dans le couloir »",
+    "Principe à l'image : la coupe de la charge (V, doublure de cuivre, jet qui traverse une plaque de 2 cm, « jusqu'à » 22 mm — fiche Pyroalliance) est une reconstitution au ralenti",
+    "Le dôme de ciel et la grille du sol à l'infini sont ceux du 026 (026/src/sky.js) ; la torchère du 046 à l'horizon est une silhouette, hors de Kourou"
   ],
   "beats": [
     {
@@ -184,8 +212,8 @@
     },
     {
       "id": "abo",
-      "text": "+Abonne-toi+ : prochain dossier, À FAIRE.",
-      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, À FAIRE.",
+      "text": "+Abonne-toi+ : prochain dossier, la flamme géante d'une raffinerie : elle brûle pour que l'usine n'*explose* pas.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, la flamme géante d'une raffinerie : elle brûle pour que l'usine n'explose pas.",
       "hold": 0.2,
       "voir": "Le panneau « S'abonner pour l'ouvrir », le dossier suivant sous scellés, ses chevrons."
     },
@@ -198,14 +226,20 @@
   ],
   "cues": {
     "choc": "accroche:déchire",
-    "tobench": "ouvre:on-0.14",
+    "toscene": "promesse$+0.42",
+    "tobench": "ouvre-0.4",
     "explode": "ouvre:on",
+    "torepos": "repos-0.16",
     "tozero": "zero-0.12",
     "trigger": "reponse:détone-0.05",
     "toverdict": "chute-0.12",
     "verdict": "chute:pas",
     "tocta": "comment-0.12",
-    "toloop": "boucle-0.12",
+    "duelA": "comment:humain",
+    "duelB": "comment:machine",
+    "tolike": "like-0.3",
+    "toabo": "abo-0.3",
+    "toloop": "boucle-0.3",
     "rewind": "boucle:seconde"
   },
   "bedVolume": 0.8,
@@ -219,8 +253,12 @@
           0.8
         ],
         [
-          "explode",
+          "tobench",
           0.5
+        ],
+        [
+          "torepos",
+          0.6
         ],
         [
           "tozero",
@@ -254,12 +292,64 @@
       "type": "impact",
       "at": 0.03,
       "gain": -14,
-      "size": 1.2
+      "size": 1.2,
+      "crack": 1
     },
     {
       "type": "swish",
-      "at": 0.14,
+      "at": 0.02,
+      "dur": 0.28,
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "accroche:déchire$+0.06",
+      "gain": -15,
+      "size": 1,
+      "crack": 1
+    },
+    {
+      "type": "swish",
+      "at": "accroche:seule$+0.08",
       "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "accroche:prévu$+0.06",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "promesse:charge$+0.06",
+      "gain": -19
+    },
+    {
+      "type": "swish",
+      "at": "promesse$+0.12",
+      "dur": 0.3,
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "toscene",
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "scene:tir$+0.06",
+      "gain": -17,
+      "size": 0.9,
+      "crack": 1
+    },
+    {
+      "type": "click",
+      "at": "scene:couloir$+0.06",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "scene$+0.04",
       "gain": -15
     },
     {
@@ -276,9 +366,95 @@
     },
     {
       "type": "impact",
-      "at": "explode",
+      "at": "ouvre$+0.06",
       "gain": -16,
       "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "eclate:sol$+0.06",
+      "gain": -19
+    },
+    {
+      "type": "click",
+      "at": "eclate:verrou$+0.06",
+      "gain": -19
+    },
+    {
+      "type": "click",
+      "at": "eclate:sécurité$+0.06",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:détonateur$+0.06",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "eclate:bout$+0.06",
+      "gain": -19
+    },
+    {
+      "type": "hit",
+      "at": "eclate$+0.06",
+      "gain": -15
+    },
+    {
+      "type": "swish",
+      "at": "principe:tranche$+0.16",
+      "dur": 0.25,
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "principe:V$+0.04",
+      "gain": -19
+    },
+    {
+      "type": "click",
+      "at": "principe:cuivre$+0.04",
+      "gain": -19
+    },
+    {
+      "type": "impact",
+      "at": "principe:seconde$+0.04",
+      "gain": -15,
+      "size": 0.9,
+      "crack": 1
+    },
+    {
+      "type": "impact",
+      "at": "principe$+0.06",
+      "gain": -16,
+      "size": 0.9,
+      "crack": 1
+    },
+    {
+      "type": "hit",
+      "at": "torepos",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "repos:attend$+0.06",
+      "gain": -20
+    },
+    {
+      "type": "blip",
+      "at": "repos:seconde$+0.06",
+      "gain": -20,
+      "pitch": 1.2
+    },
+    {
+      "type": "click",
+      "at": "repos:couloir$+0.06",
+      "gain": -18
+    },
+    {
+      "type": "hit",
+      "at": "repos:là$+0.06",
+      "gain": -15
     },
     {
       "type": "impact",
@@ -287,17 +463,131 @@
       "size": 1.2
     },
     {
+      "type": "click",
+      "at": "zero:l'allumage$+0.06",
+      "gain": -20
+    },
+    {
       "type": "impact",
-      "at": "trigger",
+      "at": "zero:lâchent$+0.05",
+      "gain": -16,
+      "size": 0.8,
+      "crack": 1
+    },
+    {
+      "type": "swish",
+      "at": "zero:fond$+0.16",
+      "dur": 0.24,
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "zero:travers$+0.04",
+      "gain": -17,
+      "size": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "zero$+0.06",
+      "gain": -14
+    },
+    {
+      "type": "impact",
+      "at": "reponse:s'arrachent$+0.06",
+      "gain": -12,
+      "size": 1.3,
+      "crack": 1
+    },
+    {
+      "type": "impact",
+      "at": "reponse:détone$+0.06",
       "gain": -10,
       "size": 1.4
     },
     {
+      "type": "impact",
+      "at": "reponse:s'ouvre$+0.06",
+      "gain": -14,
+      "size": 1,
+      "crack": 1
+    },
+    {
+      "type": "impact",
+      "at": "reponse$+0.06",
+      "gain": -18,
+      "size": 0.7
+    },
+    {
+      "type": "hit",
+      "at": "toverdict",
+      "gain": -14
+    },
+    {
+      "type": "hit",
+      "at": "chute:raté$+0.06",
+      "gain": -16
+    },
+    {
       "type": "blip",
-      "at": "verdict",
+      "at": "chute:tout$+0.1",
       "gain": -15,
       "pitch": 0.7,
       "heavy": true
+    },
+    {
+      "type": "impact",
+      "at": "chute$+0.06",
+      "gain": -16,
+      "size": 0.8,
+      "crack": 1
+    },
+    {
+      "type": "swish",
+      "at": "comment:charge$+0.16",
+      "dur": 0.3,
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "comment:fils$+0.06",
+      "gain": -17,
+      "size": 0.7,
+      "crack": 1
+    },
+    {
+      "type": "hit",
+      "at": "comment:commentaire$+0.06",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "comment:décide$+0.04",
+      "gain": -19
+    },
+    {
+      "type": "click",
+      "at": "comment$+0.06",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "like:like$+0.06",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "like$+0.06",
+      "gain": -19
+    },
+    {
+      "type": "hit",
+      "at": "abo:abonne$+0.06",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "abo:raffinerie$+0.06",
+      "gain": -19
     },
     {
       "type": "impact",
@@ -307,8 +597,8 @@
     },
     {
       "type": "rewind",
-      "at": "rewind",
-      "dur": 1,
+      "at": "boucle$+0.04",
+      "dur": 0.6,
       "gain": -21
     }
   ]
