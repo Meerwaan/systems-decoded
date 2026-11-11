@@ -9,11 +9,12 @@
   "voice": {
     "name": "Eric",
     "voiceId": "9osbeK6KzhDRV0yX4rTq",
-    "model": "eleven_v4_turbo",
+    "model": "eleven_v4",
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21
+    "seed": 21,
+    "language": "fr"
   },
   "cover": {
     "at": "eclate$",
@@ -22,16 +23,26 @@
       "pare-balles"
     ],
     "cam": {
-      "tx": 0,
-      "ty": 8,
-      "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
+      "tx": -6,
+      "ty": 118,
+      "tz": 64,
+      "d": 330,
+      "az": -42,
+      "el": 28,
       "shift": -430,
       "side": 0,
-      "fov": 28,
+      "fov": 30,
       "roll": 0
+    },
+    "state": {
+      "out": 1,
+      "explode": 1,
+      "housse": 1,
+      "litSeams": 0.6,
+      "litWeave": 0.5,
+      "fiber": 1,
+      "pool": 0.3,
+      "grid": 0.16
     }
   },
   "post": {
@@ -84,7 +95,13 @@
     "Question du commentaire (non répondue par le film) : la protection anti-lame relève d'une norme à part (NIJ 0115.00), un gilet balistique n'est pas automatiquement anti-lame — NIJ Guide [P/S, résumé].",
     "Épinglé : la fibre naît en 1965 chez DuPont (Stephanie Kwolek), d'une solution de polymère trouble qu'on jetait d'habitude ; Kevlar lancé en 1971 — Invention & Technology, Wikipédia [S].",
     "Annonce du 045 : une fusée qui porte sa propre charge pour se détruire elle-même — fait validé par l'orchestrateur, sourcé dans le dossier 045.",
-    "Image : le cône, les couches, la balle en champignon, le bloc d'argile et la règle sont une reconstitution 3D ; aucune image réelle de Nîmes."
+    "Image : le cône, les couches, la balle en champignon, le bloc d'argile et la règle sont une reconstitution 3D ; aucune image réelle de Nîmes.",
+    "Image (maquette à taille vraie) : le panneau avant (32 × 42 cm, ≈ 1,2 cm d'épaisseur), 24 couches dessinées — « des dizaines », aucun nombre n'est dit ni écrit —, le pas des fils dessiné ≈ 4 mm (le vrai ≈ 0,7 mm scintillerait à 270 px), la balle de 9 mm, le cône au plus 44 mm (la limite de la norme dans l'argile, NIJ 0101.06) et sa forme : une reconstitution.",
+    "En-tête : le chrono en millisecondes autour du contact de la pointe avec la première couche est reconstitué — avant le contact, la distance à ≈ 400 m/s (l'ordre de grandeur des munitions d'essai de la norme, 373 à 448 m/s ; la vitesse réelle à Nîmes est inconnue) ; du contact à l'arrêt ≈ 0,2 ms (≈ 4 cm freinés à ≈ 200 m/s en moyenne, ordre de grandeur). Second compteur : « ≈ 400 m/s » (même ordre de grandeur), « Freinée », « Arrêtée », puis le creux lu à la jauge jusqu'à 44 mm (la norme, dite par la voix).",
+    "Principe à l'image : l'essai de traction (un fil de Kevlar et un fil d'acier de même poids — l'acier ≈ 2,3 fois plus fin, densités 1,44 et 7,85 —, l'acier lâche au deuxième bloc, le Kevlar en tient cinq) est une maquette du rapport « à poids égal, cinq fois », pas une expérience décrite par une source ; l'étoile de fils tendus autour du point d'impact illustre « des centaines se tendent ensemble » (NIJ Guide 0101.06).",
+    "La rue : un grand ensemble générique aux rayons X, ses feux, sa fumée et des silhouettes floues — reconstitué ; ni tireur, ni arme, ni visage, ni nom ; le policier est un mannequin de verre ; rien de cassé dans son corps.",
+    "Les fantômes (la plaque rigide où une balle rebondirait, la lame qui ne touche jamais le tissu) sont des images de démonstration ; le film ne répond pas à la question du couteau.",
+    "La fusée du 045 (aux rayons X, sa charge le long du corps) est une maquette."
   ],
   "beats": [
     {
@@ -201,13 +218,22 @@
   ],
   "cues": {
     "choc": "accroche:balle",
-    "tobench": "ouvre:on-0.14",
+    "toscene": "scene-0.14",
+    "toopen": "ouvre-0.14",
     "explode": "ouvre:on",
+    "torepos": "repos-0.1",
+    "topointe": "repos:puis-0.14",
     "tozero": "zero-0.12",
     "trigger": "reponse:champignon-0.05",
+    "towalk": "reponse:gilet+0.6",
     "toverdict": "chute-0.12",
     "verdict": "chute:pas",
     "tocta": "comment-0.12",
+    "toclay": "comment:norme-0.36",
+    "duelA": "comment:vrai",
+    "duelB": "comment:faux",
+    "tolike": "like-0.14",
+    "toabo": "abo-0.14",
     "toloop": "boucle-0.12",
     "rewind": "boucle:nuit"
   },
@@ -224,6 +250,10 @@
         [
           "explode",
           0.5
+        ],
+        [
+          "topointe",
+          0.85
         ],
         [
           "tozero",
@@ -257,13 +287,90 @@
       "type": "impact",
       "at": 0.03,
       "gain": -14,
-      "size": 1.2
+      "size": 1.2,
+      "crack": 1
     },
     {
       "type": "swish",
-      "at": 0.14,
-      "dur": 0.3,
+      "at": 0.02,
+      "dur": 0.28,
       "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "accroche:balle+0.34",
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "accroche:pierre+0.38",
+      "gain": -16,
+      "size": 0.8,
+      "crack": 1
+    },
+    {
+      "type": "hit",
+      "at": "promesse:d'acier+0.5",
+      "gain": -18,
+      "pitch": 1.3
+    },
+    {
+      "type": "swish",
+      "at": "promesse:tissu+0.62",
+      "dur": 0.3,
+      "gain": -19
+    },
+    {
+      "type": "impact",
+      "at": "promesse:ventre+0.26",
+      "gain": -17,
+      "size": 0.7,
+      "crack": 1
+    },
+    {
+      "type": "swish",
+      "at": "promesse$+0.26",
+      "dur": 0.5,
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "toscene",
+      "gain": -14
+    },
+    {
+      "type": "click",
+      "at": "scene:nuit+0.34",
+      "gain": -20
+    },
+    {
+      "type": "impact",
+      "at": "scene:tout+0.22",
+      "gain": -17,
+      "size": 0.9,
+      "crack": 1
+    },
+    {
+      "type": "swish",
+      "at": "scene:tir+0.39",
+      "dur": 0.4,
+      "gain": -16
+    },
+    {
+      "type": "swish",
+      "at": "scene:seconde+0.51",
+      "dur": 0.35,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "scene:elle+0.14",
+      "gain": -19
+    },
+    {
+      "type": "hit",
+      "at": "scene:gilet+0.3",
+      "gain": -16
     },
     {
       "type": "suck",
@@ -279,9 +386,94 @@
     },
     {
       "type": "impact",
-      "at": "explode",
+      "at": "ouvre$+0.06",
       "gain": -16,
       "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "eclate:souple+0.34",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "eclate:housse+0.38",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:ensemble+0.46",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:chacune+0.42",
+      "gain": -20
+    },
+    {
+      "type": "click",
+      "at": "eclate:ces+0.46",
+      "gain": -19
+    },
+    {
+      "type": "blip",
+      "at": "eclate$+0.06",
+      "gain": -16,
+      "pitch": 1.2
+    },
+    {
+      "type": "hit",
+      "at": "principe:tient+0.22",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "principe:voisins+0.38",
+      "gain": -19
+    },
+    {
+      "type": "blip",
+      "at": "principe:ensemble+0.26",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "principe:égal+0.3",
+      "gain": -18
+    },
+    {
+      "type": "impact",
+      "at": "principe:égal+0.42",
+      "gain": -18,
+      "size": 0.6,
+      "crack": 1
+    },
+    {
+      "type": "click",
+      "at": "repos:attend+0.38",
+      "gain": -19
+    },
+    {
+      "type": "click",
+      "at": "repos:rue+0.22",
+      "gain": -20
+    },
+    {
+      "type": "click",
+      "at": "repos:toi+0.22",
+      "gain": -20
+    },
+    {
+      "type": "hit",
+      "at": "topointe",
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "repos:touche+0.46",
+      "gain": -15,
+      "size": 0.7,
+      "crack": 1
     },
     {
       "type": "impact",
@@ -291,16 +483,140 @@
     },
     {
       "type": "impact",
-      "at": "trigger",
+      "at": "zero:cassent+0.42",
+      "gain": -15,
+      "size": 0.6,
+      "crack": 1
+    },
+    {
+      "type": "hit",
+      "at": "zero:tendent+0.34",
+      "gain": -18,
+      "pitch": 0.8
+    },
+    {
+      "type": "click",
+      "at": "zero:voisins+0.34",
+      "gain": -18
+    },
+    {
+      "type": "hit",
+      "at": "zero$+0.06",
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "reponse:cône+0.34",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "reponse:toi+0.22",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "reponse:part+0.3",
+      "gain": -18
+    },
+    {
+      "type": "impact",
+      "at": "reponse:champignon+0.54",
       "gain": -10,
-      "size": 1.4
+      "size": 1.4,
+      "crack": 1
     },
     {
       "type": "blip",
-      "at": "verdict",
+      "at": "reponse:gilet+0.3",
+      "gain": -17,
+      "pitch": 0.9
+    },
+    {
+      "type": "swish",
+      "at": "reponse$+0.23",
+      "dur": 0.5,
+      "gain": -18
+    },
+    {
+      "type": "hit",
+      "at": "toverdict",
+      "gain": -15
+    },
+    {
+      "type": "blip",
+      "at": "chute:mur+0.22",
       "gain": -15,
       "pitch": 0.7,
       "heavy": true
+    },
+    {
+      "type": "swish",
+      "at": "chute:filet+0.46",
+      "dur": 0.22,
+      "gain": -19
+    },
+    {
+      "type": "hit",
+      "at": "tocta",
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "comment:ventre+0.3",
+      "gain": -17,
+      "size": 0.6,
+      "crack": 1
+    },
+    {
+      "type": "swish",
+      "at": "comment:toi+0.30",
+      "dur": 0.28,
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "comment:creux+0.3",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "comment:commentaire+0.38",
+      "gain": -16
+    },
+    {
+      "type": "swish",
+      "at": "comment:couteau+0.41",
+      "dur": 0.3,
+      "gain": -19
+    },
+    {
+      "type": "click",
+      "at": "tolike",
+      "gain": -18
+    },
+    {
+      "type": "blip",
+      "at": "like:like+0.38",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "toabo",
+      "gain": -16
+    },
+    {
+      "type": "blip",
+      "at": "abo:abonne-toi+0.41",
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "abo:explosif+0.58",
+      "gain": -17,
+      "size": 0.6,
+      "crack": 1
     },
     {
       "type": "impact",
@@ -310,8 +626,8 @@
     },
     {
       "type": "rewind",
-      "at": "rewind",
-      "dur": 1,
+      "at": "boucle$+0.06",
+      "dur": 0.7,
       "gain": -21
     }
   ]
