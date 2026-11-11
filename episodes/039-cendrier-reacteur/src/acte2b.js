@@ -46,18 +46,30 @@ const L_POOL = { fx: 650, fy: -60, fz: 1900, fs: 1500 };
 const L_VALVE = { fx: 600, fy: -200, fz: TRIGGERS[1][2], fs: 420 };
 
 export default function acte2b({ D }) {
-  const { st, shot, cut, chip, punch } = D;
+  const { st, cut, path, chip, punch } = D;
   const t = D.times({
     toprincipe: "toprincipe", principe: "principe", chauffe: "chauffe", epais: "epais", perce: "principe:perce",
     etale: "etale", m170: "m170", mincep: "mincep", sa: "principe:sa", partage: "partage",
     torepos: "torepos", dort: "dort", dans: "repos:Dans", piscine: "piscine", vannes: "repos:Vannes", fermees: "fermees",
     tozero: "tozero",
   });
+  // retouche 06/11 (plan-séquence, validé par Merwan pour ce film): four D.path that never stop, three cuts kept
+  // (the thin sheet in the heap's frame, the plant, the pool) — each lands in a move that is already running.
+  const thin = t.sa - 0.13;
+  const up = t.dans - 0.12;
 
   /* ───────────── « Pourquoi l'étaler ? » — a heap lands on the slab ───────────── */
   cut(t.toprincipe, SET.BENCH, HEAP_LOW, { ...BENCHED, litChamber: 0.4, ...L_HEAP });
-  shot(t.toprincipe + 0.02, t.etale - 0.1 - t.toprincipe, HEAP_IN, "sine.inOut");
   st(t.principe, 0.6, { mass: 0.22 }, "sine.out");
+  // low round the heap (the arrows read from low), then up over the whole sheet: one move, through to the cut
+  path([
+    [t.toprincipe, HEAP_LOW],
+    [t.chauffe, { d: 2200, az: -37, el: 10 }],
+    [t.epais, { d: 2080, az: -44, el: 9 }],
+    [t.etale, { d: 2000, az: -36, el: 13, shift: 50 }],
+    [t.mincep, SHEET],
+    [thin - 0.02, { d: 4650, az: -16, el: 55 }],
+  ]);
 
   /* ───────────── « Le cœur fondu chauffe dans toute son épaisseur. » — its heat goes down ───────────── */
   st(t.chauffe - 0.05, 0.5, { arrows: 1 }, "sine.out");
@@ -69,34 +81,42 @@ export default function acte2b({ D }) {
   /* ───────────── « Étalé sur 170 mètres carrés, il devient mince : » — it spreads, we rise to see it ───────────── */
   st(t.etale, 0.5, { arrows: 0 }, "sine.inOut");
   st(t.etale, t.mincep - t.etale, { spread: 1 }, "sine.inOut");
-  shot(t.etale - 0.1, t.mincep + 0.1 - t.etale, SHEET, "sine.inOut", HEAP_IN.d);
   st(t.etale - 0.1, t.mincep + 0.1 - t.etale, { ...L_SHEET }, "sine.inOut");
   chip("chip-170", null, 96, 470, t.m170, t.sa - 0.3);
 
   /* ───────────── « sa chaleur se partage. » — the same low frame as the heap: short, sparse arrows ───────────── */
-  const thin = t.sa - 0.13;
   cut(thin, SET.BENCH, THIN, { ...BENCHED, litChamber: 0.4, mass: 1, spread: 1, arrows: 0, ...L_HEAP });
   st(thin + 0.05, 0.35, { arrows: 1 }, "sine.out");
-  shot(thin + 0.02, t.torepos - 0.02 - thin, THIN_OUT, "sine.inOut");
+  path([
+    [thin, THIN],
+    [t.torepos - 0.02, { d: 1850, az: -40, el: 11 }],
+  ]);
   punch(t.partage, 0.06);
 
   /* ───────────── « Il n'a jamais servi. Il dort, à sec, à côté de la cuve. » — the plant at rest ───────────── */
   cut(t.torepos, SET.PLANT, GRAZE, { ...STAGED, belly: 0, core: 0.3, mood: 0, ...L_REST });
-  shot(t.torepos + 0.02, t.dans - 0.2 - t.torepos, GRAZE_IN, "sine.inOut");
+  path([
+    [t.torepos, GRAZE],
+    [t.dort, { d: 3400, az: -24, el: 23 }],
+    [up - 0.02, { d: 3200, az: -34, el: 26 }],
+  ]);
   chip("chip-jamais", null, 96, 470, t.torepos + 0.14, t.dort - 0.2);
   punch(t.dort, 0.06);
 
-  /* ───────────── « Dans le bâtiment, une piscine attend. » — up to the pool's cut face ───────────── */
-  // retouche 05/11: the climb from the slab to the pool was a jerk (qa 45,5 s) → a clean cut a few frames before « Dans »
-  const up = t.dans - 0.12;
+  /* ───────────── « Dans le bâtiment, une piscine attend. » — over the pool's wall ───────────── */
+  // retouche 05/11: a clean cut a few frames before « Dans »; 06/11: then ONE move from the pool down to the valve
   cut(up, SET.PLANT, POOLWIDE, { ...L_POOL });
-  shot(up + 0.02, t.piscine + 0.3 - up - 0.02, POOL_IN, "sine.inOut");
   st(t.piscine - 0.1, 0.5, { litPool: 0.6 }, "sine.out");
 
   /* ───────────── « Vannes fermées. Et personne ne viendra les ouvrir. » — a shut valve, its trigger on the slab ───────────── */
-  const down = t.piscine + 0.3;
-  shot(down, t.vannes + 0.25 - down, VALVE, "sine.inOut");
-  st(down, t.vannes + 0.25 - down, { ...L_VALVE }, "sine.inOut");
+  const down = t.piscine + 0.25; // the water stays in the frame through « une piscine attend »
+  path([
+    [up, POOLWIDE],
+    [down, { d: 2750, az: -32, el: 43 }],
+    [t.fermees, { ...VALVE, d: 1400, az: -4, el: 36 }],
+    [t.fermees + 1.15, { d: 1250, az: -10, el: 35 }],
+    [t.tozero - 0.05, VALVE_IN],
+  ]);
+  st(down, t.fermees - down, { ...L_VALVE }, "sine.inOut");
   st(t.vannes - 0.05, 0.4, { litValves: 0.6 }, "sine.out");
-  shot(t.vannes + 0.25, t.tozero - 0.05 - (t.vannes + 0.25), VALVE_IN, "sine.inOut");
 }

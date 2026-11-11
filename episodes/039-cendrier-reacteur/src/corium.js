@@ -984,7 +984,7 @@ export function buildCorium() {
     A.blast.position.set(0, poolY + 60 + 120 * boom, 0);
 
     /* the light it throws */
-    const pitGlow = (pitOn ? sm(0, 0.3, P.pit) : 0) + 0.5 * sLen + 0.25 * P.belly + 2.5 * pulse;
+    const pitGlow = (pitOn ? sm(0, 0.3, P.pit) : 0) + 0.5 * sLen + 0.6 * P.belly + 2.5 * pulse; // 06/11: the concrete breathes with the vessel (opening rhythm)
     pitLight.position.set(0, poolY + 140, 0);
     pitLight.intensity = 5e4 * pitGlow;
 

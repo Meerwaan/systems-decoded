@@ -48,7 +48,7 @@ const L_CHAMBER = { fx: 0, fy: -330, fz: 1980, fs: 1500 };
 const L_DRY = { fx: 300, fy: 200, fz: 1000, fs: 2600 };
 
 export default function acte2({ D, world, co }) {
-  const { tl, st, shot, cut, punch } = D;
+  const { tl, st, cut, path, punch } = D;
   const A = world.system.A;
   const t = D.times({
     tobench: "tobench", explode: "explode",
@@ -70,16 +70,30 @@ export default function acte2({ D, world, co }) {
   st(lift, 0.95, { explode: 1 }, "sine.inOut");
   const wideAt = t.tobench + 0.03;
   const wideEnd = t.fosse - 0.36;
-  shot(wideAt, wideEnd - wideAt, EXPL, "sine.inOut", bench.d);
   st(wideAt, wideEnd - wideAt, L_WIDE, "sine.inOut");
   st(lift, 0.6, { litPlug: 0 }, "sine.inOut");
 
+  // PLAN-SÉQUENCE (retouche 06/11) : ONE move from the cut on the bench to the cut before « À sec », through every
+  // part on its word, never braking on a pose (it was seven shots in sine.inOut, each stopping on its pose). Each key
+  // turns round the parts (6 to 17° of az or el from the one before): the parallax, not a picture that grows.
+  const dryAt = t.sec - 0.3;
+  path([
+    [t.tobench, bench], //                                       the cut: the plug at the same place of the frame
+    [wideEnd, EXPL], //                                          the whole exploded view (az −18), the pit risen
+    [t.beton + 0.1, { ...PIT_IN, az: -23 }], //                  « béton » : the lining, through the cut wedge
+    [t.mange, { ...PIT_NEAR, az: -31, el: 25 }], //              « mangé » : closer and round it, the face eaten
+    [t.centre + 0.1, { tx: 0, ty: 250, d: 2300, az: -34, el: 32, shift: 50, dof: 0 }], // « centre » : over the hole
+    [t.porte + 0.2, { ...PLUG_EX, az: -37 }], //                 « porte fusible » : down to the plug, close
+    [t.canal, CHAN_A], //                                        « canal » : along it, from higher
+    [t.bout, { ...CHAN_B, az: -29 }], //                         « au bout » : the melt's way, toward the chamber
+    [t.chambre + 0.05, CHAMBER_EX], //                           « chambre » : out over it
+    [dryAt, { ...CHAMBER_EX, d: 3450, az: -14, el: 49 }], //    on round it, still moving into the cut
+  ]);
+
   /* ───────────── « La fosse, en béton sacrificiel : fait pour être mangé. » ───────────── */
   const pitAt = wideEnd + 0.12;
-  shot(pitAt, 1.0, PIT_IN, "sine.inOut", EXPL.d);
   st(pitAt, 1.0, L_PIT, "sine.inOut");
   st(t.fosse, 0.4, { litPit: 1 }, "sine.out");
-  shot(pitAt + 1.0, t.centre - 0.25 - (pitAt + 1.0), PIT_NEAR, "sine.inOut");
   const cPit = co.add({ title: "Béton sacrificiel", x: 96, y: 480, align: "start", tone: "system", anchor: A.pit });
   cPit.show(tl, t.beton - 0.3);
   st(t.mange - 0.1, 0.8, { eaten: 0.7 }, "sine.out");
@@ -87,18 +101,15 @@ export default function acte2({ D, world, co }) {
 
   /* ───────────── « Au centre, la porte fusible. » — down to the plug ───────────── */
   const plugAt = t.centre - 0.25;
-  shot(plugAt, t.porte + 0.25 - plugAt, PLUG_EX, "sine.inOut", PIT_NEAR.d);
   st(plugAt, t.porte + 0.25 - plugAt, L_PLUG, "sine.inOut");
   st(plugAt, 0.4, { litPit: 0 }, "sine.inOut");
   st(t.porte - 0.05, 0.35, { litPlug: 1 }, "sine.out");
   const cPlug = co.add({ title: "Porte fusible", x: 96, y: 480, align: "start", tone: "system", anchor: A.plug });
   cPlug.show(tl, t.porte - 0.3);
-  cPlug.hide(tl, t.puis - 0.2);
+  cPlug.hide(tl, t.puis - 0.4); // gone before the plug leaves the top of the frame
 
   /* ───────────── « Puis un canal. » — along it, the way the melt will run ───────────── */
   const chanAt = t.puis - 0.15;
-  shot(chanAt, t.canal - chanAt, CHAN_A, "sine.in");
-  shot(t.canal, t.bout - t.canal, CHAN_B, "sine.out");
   st(chanAt, t.canal - chanAt, L_CHAN, "sine.inOut");
   st(t.puis - 0.1, 0.4, { litPlug: 0 }, "sine.inOut");
   st(t.canal - 0.12, 0.35, { litChannel: 1 }, "sine.out");
@@ -108,7 +119,6 @@ export default function acte2({ D, world, co }) {
 
   /* ───────────── « Et au bout… la chambre d'étalement. » — out over the chamber ───────────── */
   const chamberAt = t.bout - 0.1;
-  shot(chamberAt, t.chambre + 0.1 - chamberAt, CHAMBER_EX, "sine.inOut", CHAN_B.d);
   st(chamberAt, t.chambre - chamberAt, L_CHAMBER, "sine.inOut");
   st(t.bout + 0.1, 0.5, { litChannel: 0 }, "sine.inOut");
   st(t.chambre - 0.08, 0.4, { litChamber: 1 }, "sine.out");
@@ -117,12 +127,12 @@ export default function acte2({ D, world, co }) {
   cChamber.hide(tl, t.sec - 0.65);
 
   /* ───────────── « À sec. » — the chamber empty and, apart, the water in its pool ───────────── */
-  // a cut a few frames before « À » (a pull-back from the chamber swept the pool through the header), then a slow push
-  const dryAt = t.sec - 0.3;
-  shot(t.chambre + 0.1, dryAt - (t.chambre + 0.1), { ...CHAMBER_EX, d: 3450 }, "sine.inOut");
+  // a cut a few frames before « À » (a pull-back from the chamber swept the pool through the header); on both sides
+  // the camera turns the same way (az rising), so the eye reads one travelling through the cut
   st(t.chambre + 0.1, dryAt - (t.chambre + 0.1), L_DRY, "sine.inOut");
-  cut(dryAt, SET.BENCH, { ...DRY, d: 8800 });
-  shot(dryAt, t.toprincipe - 0.04 - dryAt, DRY, "sine.out");
+  const DRY_IN = { ...DRY, d: 8800, az: -27, el: 46 };
+  cut(dryAt, SET.BENCH, DRY_IN);
+  path([[dryAt, DRY_IN], [t.toprincipe, DRY]]);
   st(t.sec - 0.05, 0.4, { litPool: 0.8 }, "sine.out");
   punch(t.sec, 0.06, { hold: 0.2, down: 0.45 });
 }
