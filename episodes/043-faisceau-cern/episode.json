@@ -9,11 +9,12 @@
   "voice": {
     "name": "Eric",
     "voiceId": "9osbeK6KzhDRV0yX4rTq",
-    "model": "eleven_v4_turbo",
+    "model": "eleven_v4",
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21
+    "seed": 21,
+    "language": "fr"
   },
   "cover": {
     "at": "eclate$",
@@ -22,16 +23,31 @@
       "du CERN"
     ],
     "cam": {
-      "tx": 0,
-      "ty": 8,
-      "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
-      "shift": -430,
+      "tx": 4510,
+      "ty": 20,
+      "tz": -4300,
+      "d": 1000,
+      "az": -145,
+      "el": 22,
+      "shift": -380,
       "side": 0,
-      "fov": 28,
+      "fov": 30,
       "roll": 0
+    },
+    "state": {
+      "explode": 1,
+      "litKick": 0.4,
+      "litDil": 1,
+      "litBlock": 1,
+      "kick": 0,
+      "dil": 1,
+      "route": 1,
+      "paint": 1,
+      "heat": 0.6,
+      "pool": 1,
+      "cavern": 0.4,
+      "shell": 0.3,
+      "beam": 0
     }
   },
   "post": {
@@ -86,7 +102,13 @@
     "37 dumps prématurés dus aux UFO entre juillet 2010 et début 2012 (« en moins de deux ans ») ; seuils relevés depuis mi-2011 (non dit) — IPAC2012 THPPP086 [P]",
     "Épinglé : plaques de graphite extrudé fissurées après neuf ans de service (une d'environ 50 cm) — home.cern, 08/06/2022 [P] ; arXiv 2505.04235 [P, lecture partielle]",
     "Légende : vitesse du faisceau ≈ vitesse de la lumière [O, connu]",
-    "Annonce du 044 : un policier croit avoir pris une pierre dans les côtes ; c'était une balle — Nîmes, juillet 2023 (fait validé par la consigne, dossier 044) ; policier jamais nommé"
+    "Annonce du 044 : un policier croit avoir pris une pierre dans les côtes ; c'était une balle — Nîmes, juillet 2023 (fait validé par la consigne, dossier 044) ; policier jamais nommé",
+    "Maquette à l'échelle du sujet : l'anneau (26,7 km) dessiné 283 m de tour, les paquets ≈ 80 fois plus serrés, la ligne ≈ 35 fois plus courte ; le bloc, les aimants d'éjection et de dilution gardent leurs proportions ; aucune longueur ne s'affiche à l'image — l'image reconstitue.",
+    "Le train dessiné en 52 groupes de 48 paquets séparés de petits vides (2 496 ≈ 2 500), comme les trains de l'injection, simplifiés ; un seul faisceau suivi (l'ouverture de l'autre en traits fins, vide) — l'image reconstitue.",
+    "Chrono de l'en-tête : reconstitution en microsecondes autour de l'instant où les aimants d'éjection s'allument (T+0) ; sourcés : le tour de 89 µs (T+89 à « dedans »), le trou de 3 µs, une perte d'environ dix tours (IPAC2012, le crochet part ≈ T−900) ; aucun délai entre la détection et l'arrêt n'est chiffré par nos sources : les valeurs intermédiaires ne donnent que l'ordre de grandeur.",
+    "Second compteur : ≈ 2 500 paquets (Run 3, HB2023 THBP49) qui se vident pendant l'extraction, puis les 37 arrêts dus aux grains (IPAC2012 THPPP086).",
+    "Principe à l'image : sur un point unique la plaque s'abîme et se fissure (jamais un trou percé) ; la trace en « e » tient dans la face de 72 cm ; le graphite chauffe vers l'orange, jamais au blanc (contre-vérification).",
+    "Les 15 septa (MSD), qui courbent l'essentiel du faisceau, sont dessinés à la suite des 15 aimants d'éjection (MKD) sans être comptés ; la voix ne compte que les aimants d'éjection."
   ],
   "beats": [
     {
@@ -203,13 +225,18 @@
   ],
   "cues": {
     "choc": "accroche:train",
-    "tobench": "ouvre:on-0.14",
+    "toopen": "ouvre-0.12",
     "explode": "ouvre:on",
+    "torepos": "repos-0.12",
     "tozero": "zero-0.12",
     "trigger": "reponse:s'allument-0.05",
     "toverdict": "chute-0.12",
     "verdict": "chute:pas",
     "tocta": "comment-0.12",
+    "duelA": "comment:prudent",
+    "duelB": "comment:assez",
+    "tolike": "like-0.12",
+    "toabo": "abo-0.12",
     "toloop": "boucle-0.12",
     "rewind": "boucle:mais"
   },
@@ -263,9 +290,66 @@
     },
     {
       "type": "swish",
-      "at": 0.14,
-      "dur": 0.3,
+      "at": 0,
+      "dur": 0.28,
       "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "accroche:lancé+0.36",
+      "gain": -15
+    },
+    {
+      "type": "swish",
+      "at": "accroche:dehors$+0.15",
+      "dur": 0.32,
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "promesse:l'avaler+0.40",
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "promesse:tonnes+0.28",
+      "gain": -15
+    },
+    {
+      "type": "click",
+      "at": "promesse:lui+0.32",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "promesse:gagné+0.32",
+      "gain": -14,
+      "pitch": 0.85
+    },
+    {
+      "type": "impact",
+      "at": "scene:aimants+0.20",
+      "gain": -15,
+      "size": 0.8,
+      "crack": 1
+    },
+    {
+      "type": "impact",
+      "at": "scene:ton-0.36",
+      "gain": -15,
+      "size": 0.8,
+      "crack": 1
+    },
+    {
+      "type": "swish",
+      "at": "scene:milliers$+0.15",
+      "dur": 0.34,
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "scene:issue+0.24",
+      "gain": -16
     },
     {
       "type": "suck",
@@ -281,39 +365,168 @@
     },
     {
       "type": "impact",
-      "at": "explode",
+      "at": "ouvre$+0.04",
       "gain": -16,
       "size": 0.8
     },
     {
+      "type": "click",
+      "at": "eclate:perte+0.36",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:l'anneau+0.32",
+      "gain": -17
+    },
+    {
+      "type": "swish",
+      "at": "eclate:ligne$+0.12",
+      "dur": 0.2,
+      "gain": -17
+    },
+    {
       "type": "impact",
-      "at": "tozero",
+      "at": "eclate$+0.04",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "principe:tient+0.24",
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "principe:lâcherait+0.40",
+      "gain": -15,
+      "size": 0.8,
+      "crack": 1
+    },
+    {
+      "type": "click",
+      "at": "principe:tourner+0.28",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "principe$+0.04",
+      "gain": -15,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "repos:trou+0.28",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "repos:là+0.20",
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "tozero-0.16",
       "gain": -12,
       "size": 1.2
     },
     {
+      "type": "hit",
+      "at": "zero:seuil+0.28",
+      "gain": -14
+    },
+    {
+      "type": "swish",
+      "at": "zero:part$+0.15",
+      "dur": 0.3,
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "zero:trou+0.28",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "reponse:passe+0.36",
+      "gain": -16
+    },
+    {
       "type": "impact",
-      "at": "trigger",
+      "at": "reponse:s'allument+0.39",
       "gain": -10,
       "size": 1.4
     },
     {
+      "type": "swish",
+      "at": "reponse:l'anneau$+0.15",
+      "dur": 0.3,
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "reponse:bloc+0.32",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "reponse:dedans+0.28",
+      "gain": -15
+    },
+    {
+      "type": "click",
+      "at": "reponse:degrés+0.36",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "reponse$+0.04",
+      "gain": -16,
+      "pitch": 0.8
+    },
+    {
       "type": "blip",
-      "at": "verdict",
+      "at": "chute:point+0.20",
       "gain": -15,
       "pitch": 0.7,
       "heavy": true
     },
     {
+      "type": "hit",
+      "at": "chute$+0.06",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "comment:gagné+0.28",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "comment:ans+0.12",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "comment$+0.06",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "like$+0.06",
+      "gain": -17
+    },
+    {
       "type": "impact",
-      "at": "toloop",
+      "at": "toloop-0.36",
       "gain": -16,
       "size": 0.7
     },
     {
       "type": "rewind",
-      "at": "rewind",
-      "dur": 1,
+      "at": "boucle$+0.04",
+      "dur": 0.6,
       "gain": -21
     }
   ]
