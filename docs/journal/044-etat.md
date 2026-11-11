@@ -1,0 +1,23 @@
+# 044-gilet-pare-balles — état du chef de production
+
+- 13:14 UTC départ · jauge 25 % / hebdo 43 % (remise à zéro 17:10 UTC).
+- Architecte a5d6a4488c6462e64 rendu (439 k, 35 min, 73 outils, 20 images) : plan, world, gilet.js + rue.js bouchons, actes squelettes, check OK. Candidates : `.cache/planches/044/architecte/candidates.json` (reco a).
+- Chef : `main.js` second compteur « ≈ 400 m/s » → « En vol » (la voix dit « des centaines de mètres par seconde »).
+- 13:52 vague décors lancée : gilet.js, rue.js (jauge 32 % / 44 %).
+- Reste : décorateur (rue.js seul), image 0, actes-maj, 4 actes, relecture, check, brouillon, qa, retouches, rendu, cover, phone, posts.
+- Notes pour le rapport (hors de mon périmètre, kit/scripts) : `sd.mjs --words`, torse rayons X dans figure.js, catalogue-notes après rendu.
+- 14:25 décors rendus : gilet aa159bb728a58ebaa (392 k, 34 min), rue a99930c0fa8c12ca6 (387 k, 34 min). 7 lignes du gilet appliquées dans world.js (VIEW macro/zero/like/fiber/exploded, commentaires faces/breaks). Jauge 46 % / 46 %.
+- Notes rue pour les actes : 39→41 s `riot` bas ; 72,5→75,5 s le panneau sort de l'argile ; balle fantôme du verdict petite à d 120 (cadrer d ≈ 70). Gilet : éclaté d 260 à vérifier ; champignon petit au like.
+- 14:26 décorateur lancé (rue.js seul).
+- 14:38 décorateur af6e07039c67d7083 rendu (238 k, 11 min, 24 images) ; ligne des feux appliquée dans rue.js l. 967 (lueur poubelle 520). Image 0 : planche `.cache/planches/044/image0.jpg`, choix c2 (macro en coupe d34 az28 el-8) → POSE0 dans world.js. `docs/044-actes-maj.md` écrit.
+- 14:40 vague actes lancée (acte1, acte2, acte3, fin) · jauge 49 % / 46 %.
+- 14:58 actes rendus : acte1 ab714423366d85e28 (309 k), acte2 af141d603ceba0ec7 (292 k), acte3 af7d9c781ed94aae5 (277 k), fin ae34066e02f2c1478 (288 k). Appliqués : sfx impact → `principe:égal+0.42` ; world.js `home` + commentaire acte3.
+- 15:08 check ✓ (1 ⚠ canvas au bord), camera : 0 % quasi fixe, aucune plage fixe, 4 coupes. Planches `.cache/planches/044/relecture1-4.jpg`.
+- Défauts relevés : acte1 2,4 « pierre » (tête coupée, pierres petites), 11,5 balle invisible ; acte2 32,0 « chaque fil touché » toile plate sans croix, 36,5 essai de traction illisible (fil invisible, côté acier vide), 40,0 « il attend » figure assise + planche bizarre ; acte3 53,9 V pâle, 60,6 « Toi » cadrage tronqué ; fin 63,5–66,5 pierres qui flottent + moitié gauche noire sur « mur », 77,0 cadre vide sur « un gilet… couteau », 84,5–87,5 fusée sombre.
+- 15:10 render --draft lancé.
+- 15:04 brouillon rendu + qa : voix calée (0 ms), −14,04 LUFS ; ✗ 2 images parasites 27,90/27,93 ; 1re demi-seconde mouvement 1,6 (trop bas) ; heurtés 26,5 · 28,3 · 60,4 · 38,8 · 30,3 · 55,7 ; 7 swish sur un mot → corrigés par le chef dans episode.json (tissu+0.62, promesse$+0.26, tir+0.39, seconde+0.51, reponse$+0.23, toi+0.30, couteau+0.41). 3 dernières s du brouillon : pas de noir, dernière = première.
+- 15:05 vague retoucheurs ×4 (acte1, acte2, acte3, fin) · jauge 62 % / 48 %.
+- 15:34 retoucheurs rendus : acte1 a51ba4eac72292367 (281 k, 1re demi-s 3,7), acte2 a3507a3e5a66c38f4 (254 k, parasites supprimés, 4 coupes), acte3 aa32d4e34125d2963 (182 k), fin a6bd80a13004414a1 (214 k). Chef : fusée lisible dans rue.js (rocketMat, arêtes 0,85, minW 6, halo makePool) + clé `explosif` el 9 dans fin.js ; planche `.cache/planches/044/verif-fin.jpg` OK.
+- 15:38 render final lancé.
+- 15:43 FINI. Rendu `renders/044-gilet-pare-balles.mp4` : qa ✓ voix calée 0 ms, −14,05 LUFS, aucune image parasite, 1re demi-s 3,7, aucun son sur un mot ; 3 dernières s sans noir, dernière image = première. camera : 2 % quasi fixe, aucune plage fixe, 13 coupes. Couverture (cadrage c2 : d 330, tx −6, az −42), copie iPhone 29 Mio, posts.mjs ✓ (044 : titre 75 car.). Jauge 73 % / 49 %.
+- Restent faibles : 20–21 s mouvement 0,7/0,9 ; 11 s « tir » 1,0 ; 63,5 coupe fine à droite ; 41,6 jambe de verre au premier plan ; charge de la fusée en trait fin. À l'oreille de Merwan : « MÊME TON PARTOUT », « question qui tombe ».
