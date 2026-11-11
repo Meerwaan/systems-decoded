@@ -1016,6 +1016,39 @@
         "021 TGV",
         "011/car"
       ]
+    },
+    "episodes/L06-blackout/src/europe.js": {
+      "cat": "dehors",
+      "nom": "La maquette de l’Europe électrique",
+      "quoi": "Un continent en plaques pleines : pays en arcs partagés, découpe le long de polylignes (SPLIT) avec appartenance par table (PLATE), réseau en rubans d’espace écran à seuils d’extinction par sommet, poussière de villes à rang d’extinction, couches éclatées (centrales, lignes, postes, foyers), lueur de cassure, cadran de fréquence au bord.",
+      "forces": "carte lisible de loin comme de près, la cassure en trois plaques se voit à 160 px ; briques reprenables ribbons() + RIB_VS, clipTri, points().",
+      "defauts": "l’éclaté (« on l’ouvre ») reste sombre, feuilles fines ; la lueur de cassure devient une coulée énorme de près ; tracé de la cassure schématique."
+    },
+    "episodes/L06-blackout/src/terrain.js": {
+      "cat": "dehors",
+      "nom": "Plaine de nuit, ligne 380 kV sur l’Ems, et rue aux rayons X",
+      "quoi": "buildEms : couloir de pylônes Donau, conducteurs en ruban (coupure par circuit, noir qui court), fleuve sombre, hall de chantier naval et paquebot de verre au gabarit pointillé, parc éolien. buildQuartier : immeubles de verre délestés par départ, pièce habitée, ascenseur, poste source, départs sous la rue.",
+      "forces": "première image du L06 (sous la ligne, l’éclair au bout du couloir) ; délestage rang par rang lisible.",
+      "defauts": "le paquebot ne se lit qu’en silhouette pointillée ; les éoliennes sont petites ; windowC de près fait une dalle blanche."
+    },
+    "episodes/L06-blackout/src/model.js": {
+      "cat": "systemes",
+      "nom": "Les systèmes du réseau électrique",
+      "quoi": "Turbo-alternateur à marque stroboscopique (× 3), cadran de fréquence 47–52 Hz à trois aiguilles, ligne sur établi à deux relais et zones rouges, cellules HTA + relais fréquencemétrique + disjoncteur sur chariot à mécanisme visible, synchrocoupleur, rapport qui s’ouvre.",
+      "forces": "cadran et disjoncteur pleins lisibles à 270 px ; le claquement du disjoncteur de profil.",
+      "defauts": "heroBreaker : dalle claire au sol ; armoire E.ON qui encombre l’entrée entre les barres."
+    },
+    "episodes/L06-blackout/src/pieces.js": {
+      "cat": "ignore",
+      "nom": "Les pièces du dossier (L06)",
+      "quoi": "Cadres de documents réels (numéro, source, licence) : du texte et des photos libres, pas un décor."
+    },
+    "episodes/L06-blackout/src/habillage.js": {
+      "cat": "effets",
+      "nom": "Habillage de la plaine et de la rue (L06)",
+      "quoi": "Lumières fixes au sol vues de loin (lightField : fermes, villes lointaines), projecteurs de chantier, ville jusqu’à l’horizon, horloge de la pièce figée à 22 h 10.",
+      "forces": "donne de la profondeur sans charger la première image ; lightField peut monter dans details.js à côté de nightLights.",
+      "defauts": "les points se lisent mal en vignette ; ni voitures, ni arbres, ni brume."
     }
   },
   "effetsCopies": [

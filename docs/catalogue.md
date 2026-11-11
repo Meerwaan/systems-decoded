@@ -1,6 +1,6 @@
 # Catalogue des décors
 
-Généré par `npm run catalogue` le 2026-11-03 à partir du code et de `docs/catalogue-notes.json` — **ne pas éditer à la main** (les notes se corrigent dans le JSON). Vignettes : `docs/catalogue/`.
+Généré par `npm run catalogue` le 2026-11-10 à partir du code et de `docs/catalogue-notes.json` — **ne pas éditer à la main** (les notes se corrigent dans le JSON). Vignettes : `docs/catalogue/`.
 
 **À lire avant de modéliser quoi que ce soit.** Un décor neuf coûte 400 à 580 k jetons et 20 à 57 min ; un décor importé, presque rien (018 : la cuisine entière en 57 lignes d'assemblage ; 019 : la voiture du 011 telle quelle ; 024 : le mur du 016 ; 028 : la chambre du 022 ; L01 : la voiture du 011 et la rue du 014).
 
@@ -109,7 +109,7 @@ Vignettes : `docs/catalogue/planche-lieux.jpg`
   − ancien moteur (main.js).
   `import { buildShaft } from "../../003-ascenseur/src/shaft.js";`
 - **La cuve du réacteur** `005/reactor.js` — Cuve sous pression en verre (900 MWe à l'échelle), cœur de 157 assemblages qui luit, 57 grappes, la couronne de bobines.
-  entrée buildReactor() · lit ./model, ./chain · 342 l.
+  entrée buildReactor() · lit ./model, ./chain · 342 l. · **repris par 039**
   − ancien moteur ; 57 objets identiques de loin = dalle grise (réglé au shader).
   `import { buildReactor } from "../../005-arret-urgence/src/reactor.js";`
 - **Chicago 1942** `005/pile.js` — La pile de graphite sous les gradins, la barre pendue à une corde, l'homme à la hache : une scène historique aux rayons X.
@@ -132,7 +132,7 @@ Vignettes : `docs/catalogue/planche-transports.jpg`
   ◎ VIEW : hook wheel pedal hands chase top lockedFront sideWide …(+10)
   `import { buildStreet } from "../../014-abs/src/street.js";`
 - **La route de campagne de nuit** `025/route.js` — Copie élargie de 014/street : deux voies, bas-côtés et fossés, lisière, sanglier et élan, la voiture à quatre roues de verre, moteur et transmissions, flèches cap / trajectoire, la fusée du 026 au loin.
-  entrée buildRoute() · état `shell gap lane yaw aim steer kmh rolled rain boar moose mooseAt you slide …(+7)` · lit ./plan, ./habillage · 1844 l. · **repris par copie de 014/street, 035**
+  entrée buildRoute() · état `shell gap lane yaw aim steer kmh rolled rain boar moose mooseAt you slide …(+7)` · lit ./plan, ./habillage · 1844 l. · **repris par copie de 014/street, 035, 036**
   + la plus complète des routes ; habillage (balises, panneau, fermes).
   − les bêtes dans les phares tirent vers le gris plein ; de dessus le coin de roue n'est qu'une tache.
   ◎ VIEW : hook chase top wide front rear verge tip …(+13)
@@ -260,7 +260,7 @@ Vignettes : `docs/catalogue/planche-lieux.jpg (L01, L02)`
   ◎ VIEW : hook hook1 hook2 hook3 hook4 hook5 hook6 posteWide …(+36)
   `import { buildPoste } from "../../L02-poste-haute-tension/src/poste.js";`
 - **Pylônes et lignes** `L02/ligne.js` — Pylône double circuit paramétré (`makePylon`), couloir de portées (`makeCorridor`), la ligne dans la campagne, la carte de France.
-  entrée makePylon({ … }), makeCorridor({ … }), buildLigne(), buildMap() · lit ./plan · 1304 l.
+  entrée makePylon({ … }), makeCorridor({ … }), buildLigne(), buildMap() · lit ./plan · 1304 l. · **repris par L06**
   + exporte des briques réutilisables à part : un pylône ou une ligne en une ligne.
   ◎ VIEW : hook hook1 hook2 hook3 hook4 hook5 hook6 posteWide …(+36)
   `import { makePylon, makeCorridor, buildLigne, buildMap } from "../../L02-poste-haute-tension/src/ligne.js";`
@@ -287,14 +287,14 @@ Vignettes : `docs/catalogue/planche-lieux.jpg (L01, L02)`
   + paramétrés, ne lisent aucun épisode ; régler autrement, jamais un gabarit (catalogue des réglages : docs/journal/L01-usine.md).
   `import { xray, makeFurnace, makeVat, makeConveyor } from "@kit/usine.js";`
 - **Kit d'usine 2 : ce qui agit et ce qui teste** `kit/lib/postes.js` — Portique (coupe, sérigraphie, ventouses), salle blanche, soufflerie de trempe, tour de chute et billes, tête factice, banc optique, percuteur ; lampe et traînées (`makeLamp`, `makeStreaks`).
-  entrée makeLamp({ length = 200, r0 = 3, r1 = 36, k = 0.6 } = {}), makeStreaks({ … }), makeGantry({ … }), makeCleanRoom({ … }), makeBlower({ … }), makeDropTower({ … }), makeHeadRig({ … }), makeOpticBench({ … }), makeStriker({ y = 100, size = 50, squareAt = [12, 10], spring = true } = {}) · lit ./brand, ./build3d, ./usine, ./rng · 1354 l. · utilisé par 2 dossiers
+  entrée makeLamp({ length = 200, r0 = 3, r1 = 36, k = 0.6 } = {}), makeStreaks({ … }), makeGantry({ … }), makeCleanRoom({ … }), makeBlower({ … }), makeDropTower({ … }), makeHeadRig({ … }), makeOpticBench({ … }), makeStriker({ y = 100, size = 50, squareAt = [12, 10], spring = true } = {}) · lit ./brand, ./build3d, ./usine, ./rng · 1354 l. · utilisé par 3 dossiers
   + déjà repris par L04 ; réglages dans docs/journal/L01-postes.md.
   `import { makeGantry, makeCleanRoom, makeBlower, makeDropTower, makeHeadRig, makeOpticBench, makeStriker, makeLamp, makeStreaks } from "@kit/postes.js";`
 
 ## Extérieurs, ciel, montagne, météo
 
 - **Le ciel, la Terre, la descente** `026/sky.js` — Dôme à l'infini : noir en haut, limbe de la Terre selon l'altitude, Terre sombre et strates ; près du sol la steppe ; les traînées d'air.
-  entrée buildSky() · lit ./plan, ./habillage · 857 l.
+  entrée buildSky() · lit ./plan, ./habillage · 857 l. · **repris par 041, 045**
   + le dôme le plus complet (sol → 93 km).
   − la courbure ne se lit pas sous 50 km dans un cadre vertical.
   ◎ VIEW : hook stack cross strike fault head towerUp inside …(+17)
@@ -318,11 +318,23 @@ Vignettes : `docs/catalogue/planche-lieux.jpg (L01, L02)`
 - **Habillage de la pente** `029/habillage.js` · *en chantier* — Sapins épars hors du couloir, soleil d'hiver bas, chalet dans la vallée.
   entrée dressSlope({ heightAt = () · lit ./plan · 118 l.
   `import { dressSlope } from "../../029-airbag-avalanche/src/habillage.js";`
+- **La maquette de l’Europe électrique** `L06/europe.js` — Un continent en plaques pleines : pays en arcs partagés, découpe le long de polylignes (SPLIT) avec appartenance par table (PLATE), réseau en rubans d’espace écran à seuils d’extinction par sommet, poussière de villes à rang d’extinction, couches éclatées (centrales, lignes, postes, foyers), lueur de cassure, cadran de fréquence au bord.
+  entrée buildEurope() · lit ./plan · 1639 l.
+  + carte lisible de loin comme de près, la cassure en trois plaques se voit à 160 px ; briques reprenables ribbons() + RIB_VS, clipTri, points().
+  − l’éclaté (« on l’ouvre ») reste sombre, feuilles fines ; la lueur de cassure devient une coulée énorme de près ; tracé de la cassure schématique.
+  ◎ VIEW : hook1 hook2 hook3 hook4 hook5 hook6 mapWide mapTop …(+69)
+  `import { buildEurope } from "../../L06-blackout/src/europe.js";`
+- **Plaine de nuit, ligne 380 kV sur l’Ems, et rue aux rayons X** `L06/terrain.js` — buildEms : couloir de pylônes Donau, conducteurs en ruban (coupure par circuit, noir qui court), fleuve sombre, hall de chantier naval et paquebot de verre au gabarit pointillé, parc éolien. buildQuartier : immeubles de verre délestés par départ, pièce habitée, ascenseur, poste source, départs sous la rue.
+  entrée buildEms(), buildQuartier() · lit ./plan, ./habillage, L02/ligne · 1282 l.
+  + première image du L06 (sous la ligne, l’éclair au bout du couloir) ; délestage rang par rang lisible.
+  − le paquebot ne se lit qu’en silhouette pointillée ; les éoliennes sont petites ; windowC de près fait une dalle blanche.
+  ◎ VIEW : hook1 hook2 hook3 hook4 hook5 hook6 mapWide mapTop …(+69)
+  `import { buildEms, buildQuartier } from "../../L06-blackout/src/terrain.js";`
 
 ## Personnages
 
 - **« Toi » : le personnage de verre** `kit/lib/figure.js` — Un corps de verre d'1,76 m posé comme une marionnette (`reach`, `leg`, `lean`, `hold`) ; mains `ball`, `flat` (moufle) ou `real` (phalanges).
-  entrée makeFigure({ … }) · lit ./brand, ./build3d, ./atmo · 353 l. · utilisé par 34 dossiers
+  entrée makeFigure({ … }) · lit ./brand, ./build3d, ./atmo · 353 l. · utilisé par 43 dossiers
   + utilisé dans presque tous les dossiers ; on le couche, l'agenouille, le fait courir en bougeant son groupe (006/hall).
   − mannequin articulé de près : jamais en gros plan, les mains jamais seules ; de près il passe en verre de la tête aux mains.
   `import { makeFigure } from "@kit/figure.js";`
@@ -356,6 +368,12 @@ Vignettes : `docs/catalogue/planche-lieux.jpg (L01, L02)`
   entrée buildPores() · état `micro bench temp spot ions pores melt liquid touch chain hair litCopper litAlu litFilm` · lit ./plan · 646 l.
   ◎ VIEW : hook bed pillow under cable table away whole …(+10)
   `import { buildPores } from "../../022-batterie-telephone/src/pores.js";`
+- **Habillage de la plaine et de la rue (L06)** `L06/habillage.js` — Lumières fixes au sol vues de loin (lightField : fermes, villes lointaines), projecteurs de chantier, ville jusqu’à l’horizon, horloge de la pièce figée à 22 h 10.
+  entrée dressEms(set), dressQuartier(set) · état `amount` · lit ./plan · 159 l.
+  + donne de la profondeur sans charger la première image ; lightField peut monter dans details.js à côté de nightLights.
+  − les points se lisent mal en vignette ; ni voitures, ni arbres, ni brume.
+  ◎ VIEW : hook1 hook2 hook3 hook4 hook5 hook6 mapWide mapTop …(+69)
+  `import { dressEms, dressQuartier } from "../../L06-blackout/src/habillage.js";`
 
 ## Systèmes déjà modélisés (établi, gros plans, raccords)
 
@@ -425,35 +443,37 @@ Vignettes : `docs/catalogue/planche-lieux.jpg (L01, L02)`
   `import { buildModel } from "../../L04-porte-avions/src/model.js";`
 - **Le signal de passage à niveau G2** `035/model.js` — Mât, croix R24 double face et ses feux rouges, sonnerie, coffret, demi-barrière blanc et rouge rétroréfléchissante qui cède ; buildSignal() → état down give flash ring shine explode sweep litLamp litBell litBar litBoom bench, quatre instances aux géométries partagées. (432 l. ; vue éclatée lisible, feux R24 nets.)
   `import { buildSignal } from "../../035-passage-a-niveau/src/model.js";`
+- **Les systèmes du réseau électrique** `L06/model.js` — Turbo-alternateur à marque stroboscopique (× 3), cadran de fréquence 47–52 Hz à trois aiguilles, ligne sur établi à deux relais et zones rouges, cellules HTA + relais fréquencemétrique + disjoncteur sur chariot à mécanisme visible, synchrocoupleur, rapport qui s’ouvre. (1236 l. ; cadran et disjoncteur pleins lisibles à 270 px ; le claquement du disjoncteur de profil.)
+  `import { buildModel } from "../../L06-blackout/src/model.js";`
 - **Détecteur de CO et le sang** `028/model.js` · *en chantier* — Le détecteur électrochimique (grille, membrane, électrode, puce, buzzer, pile) ; `buildBlood` : la maquette du sang où le CO prend la place de l'oxygène. (691 l.)
   `import { buildModel, buildBlood } from "../../028-detecteur-co/src/model.js";`
 
 ## Le kit (`kit/lib/`) : briques communes
 
 - **Atmosphère** `kit/lib/atmo.js` — Sol en grille qui s'efface (`makeSurface`, `lift` pour espacer), ombre de contact, flaque de lumière (`makePool`), poussières (`makeMotes`, en traînées quand elles filent).
-  entrée makeSurface({ radius = 260, cell = 5, fade = 46, lift = 1 } = {}), makeContact({ amount = 0.5 } = {}), makePool({ radius = 17, color = BRAND.veille } = {}), makeMotes({ … }) · lit ./brand, ./rng · 217 l. · utilisé par 17 dossiers
+  entrée makeSurface({ radius = 260, cell = 5, fade = 46, lift = 1 } = {}), makeContact({ amount = 0.5 } = {}), makePool({ radius = 17, color = BRAND.veille } = {}), makeMotes({ … }) · lit ./brand, ./rng · 217 l. · utilisé par 22 dossiers
   `import { makeSurface, makeContact, makePool, makeMotes } from "@kit/atmo.js";`
 - **Blocs des films** `kit/lib/blocks.js` — L'établi (`makeBench`), l'ambiance (`setMood`), le raccord décor → établi (`benchCut`), le titre barré, les appels à l'action, le prochain dossier, le cartouche d'un long.
-  entrée makeBench(size = 10) · lit ./brand, ./atmo, ./overlay, ./direct · 236 l. · utilisé par 38 dossiers
+  entrée makeBench(size = 10) · lit ./brand, ./atmo, ./overlay, ./direct · 236 l. · utilisé par 53 dossiers
   `import { makeBench, setMood, benchCut } from "@kit/blocks.js";`
 - **Modelage** `kit/lib/build3d.js` — Matières maison (`solid`, `glow`, `glass`, `asShell`, `lineMat`, `fatLine`), formes chanfreinées (`box`, `cyl`, `plate`, `lathe`), pièces qui s'éclatent (`makePart`, `addMesh`, `explode`, `setPartOpacity`).
-  entrée makePart(name, { lift = 0, delay = 0, span = 0.6 } = {}) · lit ./brand · 417 l. · utilisé par 41 dossiers
+  entrée makePart(name, { lift = 0, delay = 0, span = 0.6 } = {}) · lit ./brand · 417 l. · utilisé par 55 dossiers
 - **Le réalisateur** `kit/lib/direct.js` — `createDirector` : état `S`, `st`, `shot`, `cut`, `chip`, `panel`, `ride`, `loop`, `commit`.
-  lit ./timing, ./overlay, ./long · 339 l. · utilisé par 38 dossiers
+  lit ./timing, ./overlay, ./long · 422 l. · utilisé par 53 dossiers
   `import { createDirector } from "@kit/direct.js";`
 - **Le plateau** `kit/lib/stage.js` — Studio : boîtes à lumière, ombres douces, obturateur, bloom, étalonnage ; options `dof`, `air`, `finish`.
-  lit ./brand, ./build3d, ./finish · 546 l. · utilisé par 45 dossiers
+  lit ./brand, ./build3d, ./finish · 546 l. · utilisé par 60 dossiers
   `import { createStage } from "@kit/stage.js";`
 - **Matière des pièces** `kit/lib/finish.js` — Grain d'usinage et traces de main procéduraux (`finishScene`), via `createStage({ finish })`.
   80 l.
 - **Calque 2D** `kit/lib/overlay.js` — Sous-titres mot à mot, cartes d'accroche, callouts, en-tête, chevrons.
-  entrée buildCaptions({ … }), buildHook(container, EP, tl, { beats, maxChars = 19, loopAt } = {}) · lit ./brand · 481 l. · utilisé par 45 dossiers
+  entrée buildCaptions({ … }), buildHook(container, EP, tl, { beats, maxChars = 19, loopAt } = {}) · lit ./brand · 481 l. · utilisé par 60 dossiers
 - **Format long** `kit/lib/long.js` — Cartes de chapitre, mots-clés, en-tête étape / température.
-  entrée buildChapters(container, EP, tl, { lead = 0.9, hold = 2.6, skip = [], kicker = (), buildKeywords(container, EP, tl, { hold = 2.6, skip = [], quiet = [] } = {}) · 171 l. · utilisé par 5 dossiers
+  entrée buildChapters(container, EP, tl, { lead = 0.9, hold = 2.6, skip = [], kicker = (), buildKeywords(container, EP, tl, { hold = 2.6, skip = [], quiet = [] } = {}) · 171 l. · utilisé par 6 dossiers
 - **Cadre 16:9** `kit/lib/landscape.js` — À importer en premier dans le main.js d'un long.
   lit ./brand · 10 l.
 - **Le décorateur (`makeDresser`)** `kit/lib/details.js` — Petites choses d'un lieu habité, en verre et traits : rail et ustensiles, bocaux, bouteilles, planche, bouilloire, prise, torchon, horloge, fenêtre et ville, chariot, perfusion, bras, lueur, lavis, lamelles, poussières, lumières de la ville la nuit (`nightLights`).
-  entrée makeDresser({ order = 26, tone = 1, seed = 11 } = {}) · lit ./brand, ./build3d, ./atmo, ./rng · 563 l. · utilisé par 7 dossiers
+  entrée makeDresser({ order = 26, tone = 1, seed = 11 } = {}) · lit ./brand, ./build3d, ./atmo, ./rng · 563 l. · utilisé par 11 dossiers
   + habille un décor réutilisé à moindre coût (docs/recette-decorateur.md).
   `import { makeDresser } from "@kit/details.js";`
 
@@ -461,17 +481,17 @@ Vignettes : `docs/catalogue/planche-lieux.jpg (L01, L02)`
 
 Ces fonctions ne s'importent pas (elles ne sont pas exportées) : on recopie **la version indiquée en premier** (la plus récente du plus gros groupe), ou mieux, on la fait monter dans le kit (voir « Recommandations »). Détecté automatiquement (trois épisodes ou plus) ; les crochets groupent les copies identiques à plus de 75 %.
 
-- `makeEmbers` (9 ép.) — braises qui tombent de ce qui chauffe, périodiques : [004/room 003/shaft] [010/shop 008/house] [L03/avion 013/rail] [007/model] [027/camion] [L04/bord]
-- `skin` (9 ép.) — peau lissée par sections (fuselages, coques) : [L05/avion L04/bord L03/avion 034/fond 026/launcher 023/avion 021/train 015/rafale 007/jet]
-- `makeSparks` (7 ép.) — étincelles lentes de ce qui frotte : [015/rafale 013/f1] [003/model] [011/pack] [013/model] [013/rail] [016/wall] [026/launcher] [L02/ligne]
+- `makeEmbers` (13 ép.) — braises qui tombent de ce qui chauffe, périodiques : [043/anneau 004/room 003/shaft] [010/shop 008/house] [L03/avion 013/rail] [007/model] [027/camion] [039/batiment] [040/feu] [042/caisson] [042/feu] [L04/bord]
+- `skin` (10 ép.) — peau lissée par sections (fuselages, coques) : [L05/avion L04/bord L03/avion 038/sousmarin 034/fond 026/launcher 023/avion 021/train 015/rafale 007/jet]
+- `makeStreaks` (9 ép.) — traînées d'air et de vitesse (ciel, chute) : [037/ciel 026/sky 023/avion 007/jet] [036/vent 020/tour] [011/car] [041/station] [045/fusee]
+- `makeBall` (8 ép.) — une boule de lumière (cœur blanc + teinte), le point qui « a un endroit » : [L04/model 043/sortie 022/model 020/model 018/model 017/model 015/model] [039/corium]
+- `makeSparks` (8 ép.) — étincelles lentes de ce qui frotte : [015/rafale 013/f1] [003/model] [011/pack] [013/model] [013/rail] [016/wall] [026/launcher] [039/corium] [L02/ligne]
+- `makeGlow` (7 ép.) — boule de lumière sans bord face à l'œil (dérivée de 008) : [041/station 026/sky] [L06/terrain L02/ligne] [028/foyer] [029/pente] [045/kourou]
 - `makeSprites` (7 ép.) — lumières ponctuelles à longue traîne (phares, feux) : [025/route 019/cabine 014/street 013/f1 011/car 008/house] [027/camion]
 - `headGeometry` (6 ép.) — la tête de verre sculptée (front, nez, menton, oreilles) : [022/chambre 017/suite 016/wall 012/hob 009/kitchen] [028/foyer]
-- `makeBall` (6 ép.) — une boule de lumière (cœur blanc + teinte), le point qui « a un endroit » : [L04/model 022/model 020/model 018/model 017/model 015/model]
 - `makeRibbon` (6 ép.) — ruban posé sur des points (ceinture, sangle, câble plat) : [025/route 014/street 011/car] [019/cabine] [029/pente] [L04/bord]
 - `makeSet` (6 ép.) — verre et traits d'une pièce (murs, plafond) : [017/suite 016/wall] [028/foyer 022/chambre] [012/hob] [020/tour]
-- `makeStreaks` (5 ép.) — traînées d'air et de vitesse (ciel, chute) : [026/sky 023/avion 007/jet] [011/car] [020/tour]
-- `gridMaterial` (4 ép.) — sol qui n'est que sa grille, qui s'efface en rasant : [028/foyer 022/chambre 020/tour 017/suite]
-- `makeGlow` (4 ép.) — boule de lumière sans bord face à l'œil (dérivée de 008) : [026/sky] [028/foyer] [029/pente] [L02/ligne]
+- `gridMaterial` (5 ép.) — sol qui n'est que sa grille, qui s'efface en rasant : [028/foyer 022/chambre 020/tour 017/suite] [039/batiment]
 - `makeSpray` (4 ép.) — gerbe d'eau des pneus, embruns : [025/route 014/street] [010/model] [023/avion]
 - `bodyLines` (3 ép.) — traits de carrosserie qui s'effacent avec la profondeur : [025/route 014/street 011/car]
 - `glassFigure` (3 ép.) — un personnage de verre de la tête aux mains, tête sculptée : [028/foyer 022/chambre 017/suite]
@@ -521,17 +541,214 @@ Ajouter une entrée dans `docs/catalogue-notes.json` → `entries` (au moins `ca
   ◎ VIEW : hook doorIn handle floor deep you edge aisle …(+12)
   `import { buildVol } from "../../033-porte-avion/src/vol.js";`
 - **fond** `034/fond.js` — *(à décrire)*
-  entrée buildFond() · lit ./plan, 023/plan · 864 l.
+  entrée buildFond() · lit ./plan, 023/plan · 864 l. · **repris par 038**
   ◎ VIEW : hook beacon sink range ocean floor alone crushed …(+13)
   `import { buildFond } from "../../034-boite-noire/src/fond.js";`
 - **model** `034/model.js` — *(à décrire)*
   entrée buildSystem() · lit ./plan · 863 l.
   ◎ VIEW : hook beacon sink range ocean floor alone crushed …(+13)
   `import { buildSystem } from "../../034-boite-noire/src/model.js";`
-- **model** `HS05/model.js` — *(à décrire)*
+- **acte2b** `036/acte2b.js` — *(à décrire)*
+  lit ./world · 155 l.
+  ◎ VIEW : hook behind windscreen road verge wide rotor section …(+10)
+- **eolienne** `036/eolienne.js` — *(à décrire)*
+  entrée buildTurbine() · état `tower blades rpm pitchA pitchB pitchC shake reach mains fold tech mood flow` · lit ./plan, ./habillage · 676 l.
+  ◎ VIEW : hook behind windscreen road verge wide rotor section …(+10)
+  `import { buildTurbine } from "../../036-eolienne/src/eolienne.js";`
+- **habillage** `036/habillage.js` — *(à décrire)*
+  entrée dressTurbine({ top }) · état `tower mains` · lit ./plan · 136 l.
+  ◎ VIEW : hook behind windscreen road verge wide rotor section …(+10)
+  `import { dressTurbine } from "../../036-eolienne/src/habillage.js";`
+- **model** `036/model.js` — *(à décrire)*
+  entrée buildSystem() · état `bench cover rotor pitchA pitchB pitchC explode batt charge motors heart litMast litNacelle litGen …(+3)` · lit ./plan · 574 l.
+  ◎ VIEW : hook behind windscreen road verge wide rotor section …(+10)
+  `import { buildSystem } from "../../036-eolienne/src/model.js";`
+- **vent** `036/vent.js` — *(à décrire)*
+  entrée buildWind() · état `storm flow lift gauge slip pitchA rotor` · lit ./plan · 559 l.
+  ◎ VIEW : hook behind windscreen road verge wide rotor section …(+10)
+  `import { buildWind } from "../../036-eolienne/src/vent.js";`
+- **acte2b** `037/acte2b.js` — *(à décrire)*
+  lit ./world · 90 l.
+  ◎ VIEW : hook dive side under headdown rig back handle …(+12)
+- **ciel** `037/ciel.js` — *(à décrire)*
+  entrée buildSky() · lit ./plan, ./habillage · 603 l.
+  ◎ VIEW : hook dive side under headdown rig back handle …(+12)
+  `import { buildSky } from "../../037-parachute/src/ciel.js";`
+- **habillage** `037/habillage.js` — *(à décrire)*
+  entrée dressSky({ tone = 1 } = {}) · 233 l.
+  ◎ VIEW : hook dive side under headdown rig back handle …(+12)
+  `import { dressSky } from "../../037-parachute/src/habillage.js";`
+- **model** `037/model.js` — *(à décrire)*
+  entrée buildSystem() · lit ./plan · 822 l.
+  ◎ VIEW : hook dive side under headdown rig back handle …(+12)
+  `import { buildSystem } from "../../037-parachute/src/model.js";`
+- **sauteur** `037/sauteur.js` — *(à décrire)*
+  entrée buildDiver() · lit ./plan · 664 l.
+  ◎ VIEW : hook dive side under headdown rig back handle …(+12)
+  `import { buildDiver } from "../../037-parachute/src/sauteur.js";`
+- **acte2b** `038/acte2b.js` — *(à décrire)*
+  lit ./world · 133 l.
+  ◎ VIEW : hook underA underB keelC bowD bottles mass near …(+18)
+- **mer** `038/mer.js` — *(à décrire)*
+  entrée buildMer() · état `depth rush wreck ping range beam shell pool mood` · lit ./plan, 034/fond · 842 l.
+  ◎ VIEW : hook underA underB keelC bowD bottles mass near …(+18)
+  `import { buildMer } from "../../038-sous-marin/src/mer.js";`
+- **sousmarin** `038/sousmarin.js` — *(à décrire)*
+  entrée buildSub() · lit ./plan · 1147 l.
+  ◎ VIEW : hook underA underB keelC bowD bottles mass near …(+18)
+  `import { buildSub } from "../../038-sous-marin/src/sousmarin.js";`
+- **acte2b** `039/acte2b.js` — *(à décrire)*
+  lit ./world · 123 l.
+  ◎ VIEW : hook overPit chamberLow section plugTop channel sheet graze …(+8)
+- **batiment** `039/batiment.js` — *(à décrire)*
+  entrée buildBatiment() · lit ./plan, ./habillage, 005/reactor · 535 l.
+  ◎ VIEW : hook overPit chamberLow section plugTop channel sheet graze …(+8)
+  `import { buildBatiment } from "../../039-cendrier-reacteur/src/batiment.js";`
+- **corium** `039/corium.js` — *(à décrire)*
+  entrée buildCorium() · lit ./plan · 999 l.
+  ◎ VIEW : hook overPit chamberLow section plugTop channel sheet graze …(+8)
+  `import { buildCorium } from "../../039-cendrier-reacteur/src/corium.js";`
+- **habillage** `039/habillage.js` — *(à décrire)*
+  entrée dressBatiment() · état `amount` · lit ./plan · 126 l.
+  ◎ VIEW : hook overPit chamberLow section plugTop channel sheet graze …(+8)
+  `import { dressBatiment } from "../../039-cendrier-reacteur/src/habillage.js";`
+- **model** `039/model.js` — *(à décrire)*
+  entrée buildSystem() · lit ./plan · 819 l.
+  ◎ VIEW : hook overPit chamberLow section plugTop channel sheet graze …(+8)
+  `import { buildSystem } from "../../039-cendrier-reacteur/src/model.js";`
+- **crete** `040/crete.js` — *(à décrire)*
+  entrée buildCrete() · état `shell the then black embers which from one a` · lit ./plan, ./habillage · 707 l.
+  ◎ VIEW : hook under crest canyon shake system whole exploded …(+16)
+  `import { buildCrete } from "../../040-abri-anti-feu/src/crete.js";`
+- **feu** `040/feu.js` — *(à décrire)*
+  entrée buildFire() · état `front along far lit veille the` · lit ./plan · 620 l.
+  ◎ VIEW : hook under crest canyon shake system whole exploded …(+16)
+  `import { buildFire } from "../../040-abri-anti-feu/src/feu.js";`
+- **habillage** `040/habillage.js` — *(à décrire)*
+  entrée dressCrete() · lit ./plan · 230 l.
+  ◎ VIEW : hook under crest canyon shake system whole exploded …(+16)
+  `import { dressCrete } from "../../040-abri-anti-feu/src/habillage.js";`
+- **model** `040/model.js` — *(à décrire)*
+  entrée buildModel() · état `bench each one held shaking the you prone feet boots facing not never it …(+1)` · lit ./plan · 876 l.
+  ◎ VIEW : hook under crest canyon shake system whole exploded …(+16)
+  `import { buildModel } from "../../040-abri-anti-feu/src/model.js";`
+- **acte2b** `041/acte2b.js` — *(à décrire)*
+  lit ./world · 131 l.
+  ◎ VIEW : hook cabinHead labLow issLow profile billeClose cabin tole …(+13)
+- **habillage** `041/habillage.js` — *(à décrire)*
+  entrée dressStation() · lit ./plan · 284 l.
+  ◎ VIEW : hook cabinHead labLow issLow profile billeClose cabin tole …(+13)
+  `import { dressStation } from "../../041-bouclier-iss/src/habillage.js";`
+- **model** `041/model.js` — *(à décrire)*
+  entrée buildModel() · 39 l.
+  ◎ VIEW : hook cabinHead labLow issLow profile billeClose cabin tole …(+13)
+  `import { buildModel } from "../../041-bouclier-iss/src/model.js";`
+- **station** `041/station.js` — *(à décrire)*
+  entrée buildStation() · lit ./plan, ./habillage · 1152 l.
+  ◎ VIEW : hook cabinHead labLow issLow profile billeClose cabin tole …(+13)
+  `import { buildStation } from "../../041-bouclier-iss/src/station.js";`
+- **whipple** `041/whipple.js` — *(à décrire)*
+  entrée buildWhipple() · lit ./plan · 1057 l.
+  ◎ VIEW : hook cabinHead labLow issLow profile billeClose cabin tole …(+13)
+  `import { buildWhipple } from "../../041-bouclier-iss/src/whipple.js";`
+- **caisson** `042/caisson.js` — *(à décrire)*
+  entrée buildCaisson() · état `explode section litBox litPanel litDoors litCam weak burn press arrowRoof arrowDoor vent bulge blow …(+9)` · lit ./plan · 906 l.
+  ◎ VIEW : hook rear panelHigh bustleLow roof doorSlit section crewWide …(+17)
+  `import { buildCaisson } from "../../042-toit-du-char/src/caisson.js";`
+- **char** `042/char.js` — *(à décrire)*
+  entrée buildChar() · état `shell crew you reach other arm heat bench` · lit ./plan, ./habillage · 685 l.
+  ◎ VIEW : hook rear panelHigh bustleLow roof doorSlit section crewWide …(+17)
+  `import { buildChar } from "../../042-toit-du-char/src/char.js";`
+- **feu** `042/feu.js` — *(à décrire)*
+  entrée buildFeu() · état `column fall blow teaser bench` · lit ./plan · 672 l.
+  ◎ VIEW : hook rear panelHigh bustleLow roof doorSlit section crewWide …(+17)
+  `import { buildFeu } from "../../042-toit-du-char/src/feu.js";`
+- **habillage** `042/habillage.js` — *(à décrire)*
+  entrée dressChar() · lit ./plan · 121 l.
+  ◎ VIEW : hook rear panelHigh bustleLow roof doorSlit section crewWide …(+17)
+  `import { dressChar } from "../../042-toit-du-char/src/habillage.js";`
+- **anneau** `043/anneau.js` — *(à décrire)*
+  entrée buildAnneau() · état `shell ring beam gap dump grain spray coil hero slice sensors loss alert sweep …(+2)` · lit ./plan, ./habillage · 1117 l.
+  ◎ VIEW : hook side under inpipe train blockFar grainFloat coil …(+23)
+  `import { buildAnneau } from "../../043-faisceau-cern/src/anneau.js";`
+- **habillage** `043/habillage.js` — *(à décrire)*
+  entrée dressTunnel(), dressCavern() · état `shell` · lit ./plan · 212 l.
+  ◎ VIEW : hook side under inpipe train blockFar grainFloat coil …(+23)
+  `import { dressTunnel, dressCavern } from "../../043-faisceau-cern/src/habillage.js";`
+- **sortie** `043/sortie.js` — *(à décrire)*
+  entrée buildSortie() · état `cavern explode litKick litSepta litLine litDil litBlock arm kick septa dil route paint heat …(+6)` · lit ./habillage, ./plan · 824 l.
+  ◎ VIEW : hook side under inpipe train blockFar grainFloat coil …(+23)
+  `import { buildSortie } from "../../043-faisceau-cern/src/sortie.js";`
+- **gilet** `044/gilet.js` — *(à décrire)*
+  entrée buildGilet() · lit ./plan · 1343 l.
+  ◎ VIEW : hook front macro wide cut belly night shot …(+27)
+  `import { buildGilet } from "../../044-gilet-pare-balles/src/gilet.js";`
+- **habillage** `044/habillage.js` — *(à décrire)*
+  entrée dressRue() · lit ./plan · 223 l.
+  ◎ VIEW : hook front macro wide cut belly night shot …(+27)
+  `import { dressRue } from "../../044-gilet-pare-balles/src/habillage.js";`
+- **rue** `044/rue.js` — *(à décrire)*
+  entrée buildRue() · lit ./plan, ./habillage · 1628 l.
+  ◎ VIEW : hook front macro wide cut belly night shot …(+27)
+  `import { buildRue } from "../../044-gilet-pare-balles/src/rue.js";`
+- **fusee** `045/fusee.js` — *(à décrire)*
+  entrée buildFusee() · lit ./plan · 1458 l.
+  ◎ VIEW : hook low side rip prevu det wide padView …(+30)
+  `import { buildFusee } from "../../045-autodestruction-fusee/src/fusee.js";`
+- **habillage** `045/habillage.js` — *(à décrire)*
+  entrée dressKourou() · lit ./plan · 207 l.
+  ◎ VIEW : hook low side rip prevu det wide padView …(+30)
+  `import { dressKourou } from "../../045-autodestruction-fusee/src/habillage.js";`
+- **kourou** `045/kourou.js` — *(à décrire)*
+  entrée buildKourou() · lit ./plan, ./habillage, 026/sky · 1197 l.
+  ◎ VIEW : hook low side rip prevu det wide padView …(+30)
+  `import { buildKourou } from "../../045-autodestruction-fusee/src/kourou.js";`
+- **sauvegarde** `045/sauvegarde.js` — *(à décrire)*
+  entrée buildSauvegarde() · lit ./plan · 582 l.
+  ◎ VIEW : hook low side rip prevu det wide padView …(+30)
+  `import { buildSauvegarde } from "../../045-autodestruction-fusee/src/sauvegarde.js";`
+- **model** `046/model.js` — *(à décrire)*
   entrée buildModel() · 39 l.
   ◎ VIEW : system exploded whole
-  `import { buildModel } from "../../HS05-hudson/src/model.js";`
+  `import { buildModel } from "../../046-torchere/src/model.js";`
+- **acte2b** `CR01/acte2b.js` — *(à décrire)*
+  lit ./world · 144 l.
+  ◎ VIEW : coeurLow coeur coeurBottom slab canal canalLow canalTop fuel …(+12)
+- **canal** `CR01/canal.js` — *(à décrire)*
+  entrée buildCanal() · lit ./plan · 742 l.
+  ◎ VIEW : coeurLow coeur coeurBottom slab canal canalLow canalTop fuel …(+12)
+  `import { buildCanal } from "../../CR01-tchernobyl/src/canal.js";`
+- **centrale** `CR01/centrale.js` — *(à décrire)*
+  entrée buildCentrale() · lit ./plan · 534 l.
+  ◎ VIEW : coeurLow coeur coeurBottom slab canal canalLow canalTop fuel …(+12)
+  `import { buildCentrale } from "../../CR01-tchernobyl/src/centrale.js";`
+- **coeur** `CR01/coeur.js` — *(à décrire)*
+  entrée buildCoeur() · lit ./plan · 604 l.
+  ◎ VIEW : coeurLow coeur coeurBottom slab canal canalLow canalTop fuel …(+12)
+  `import { buildCoeur } from "../../CR01-tchernobyl/src/coeur.js";`
+- **salle** `CR01/salle.js` — *(à décrire)*
+  entrée buildSalle() · lit ./plan · 275 l.
+  ◎ VIEW : coeurLow coeur coeurBottom slab canal canalLow canalTop fuel …(+12)
+  `import { buildSalle } from "../../CR01-tchernobyl/src/salle.js";`
+- **acte2b** `CR02/acte2b.js` — *(à décrire)*
+  lit ./world · 178 l.
+  ◎ VIEW : floorLow rig under line table seabed sink puits …(+17)
+- **bop** `CR02/bop.js` — *(à décrire)*
+  entrée buildBop() · lit ./plan · 1067 l.
+  ◎ VIEW : floorLow rig under line table seabed sink puits …(+17)
+  `import { buildBop } from "../../CR02-deepwater/src/bop.js";`
+- **plateforme** `CR02/plateforme.js` — *(à décrire)*
+  entrée buildPlateforme() · lit ./plan · 939 l.
+  ◎ VIEW : floorLow rig under line table seabed sink puits …(+17)
+  `import { buildPlateforme } from "../../CR02-deepwater/src/plateforme.js";`
+- **puits** `CR02/puits.js` — *(à décrire)*
+  entrée buildPuits() · lit ./plan · 714 l.
+  ◎ VIEW : floorLow rig under line table seabed sink puits …(+17)
+  `import { buildPuits } from "../../CR02-deepwater/src/puits.js";`
+- **model** `CR90/model.js` — *(à décrire)*
+  entrée buildModel() · 39 l.
+  ◎ VIEW : system exploded whole
+  `import { buildModel } from "../../CR90-hudson/src/model.js";`
 - **avion** `L05/avion.js` — *(à décrire)*
   entrée makeRaft(), buildAvion() · lit ./plan · 1710 l.
   ◎ VIEW : hook1 hook2 hook3 hook4 hook5 hook6 wide profile …(+44)
@@ -556,6 +773,9 @@ Ajouter une entrée dans `docs/catalogue-notes.json` → `entries` (au moins `ca
   entrée buildSystemes() · lit ./plan · 1388 l.
   ◎ VIEW : hook1 hook2 hook3 hook4 hook5 hook6 wide profile …(+44)
   `import { buildSystemes } from "../../L05-hudson/src/systemes.js";`
+- **reconstitution** `kit/lib/reconstitution.js` — *(à décrire)*
+  lit ./brand, ./build3d, ./atmo, ./direct · 412 l. · utilisé par 2 dossiers
+  `import "@kit/reconstitution.js";`
 
 ## Recommandations
 
