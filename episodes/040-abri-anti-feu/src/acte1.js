@@ -17,28 +17,21 @@ import { setAct } from "@kit/overlay.js";
 import { POSE0, VIEW, STAGED } from "./world.js";
 
 /* ── the poses ── */
-// the hook's dive: the same view, closer on the hem, the camera rising to the ground's level
-const HEM = { ty: 44, tz: -26, d: 400, az: -26, el: 1, fov: 44, shift: 30 };
-// under the sheet: the section, then closer on your head (it lifts into the red)
-// (retouche 06/11: higher and closer — the section and you fill the subject zone, the flames no longer a band cut by
-// the header; the camera orbits all along, then a cut on « sauf » closes on your head from above, at the end of the body)
+// (plan-séquence, 06/11: every move is ONE `path` whose keys turn 6–15° from one to the next and never stop on a pose;
+// the only cuts left change place or time — outside → under the sheet, flash-forward → −0:25, crest → canyon → hands.
+// All the orbits turn the same way on screen (az growing), so each cut reads as one travelling.)
+// the hook's dive: orbiting toward the hem, the camera rising to the ground's level
+const HEM = { ty: 44, tz: -26, d: 400, az: -40, el: 1, fov: 44, shift: 30 };
+// under the sheet, one orbit from the section (« fondre ») to your head's end (« garder »), closing on your head
+// as it lifts into the red (« lèves ») — the old cuts on « pourtant » and « sauf » are gone
 const UNDER = { ...VIEW.under, ty: 16, tz: 30, d: 460, az: -56, el: 24, shift: 80 };
-const UNDER_IN = { tz: 34, d: 400, az: -40, el: 27 };
-// « pourtant » (a cut): three-quarters from your head's end, the arc of the dome over your back, the floor lighting
-const MID = { ...VIEW.under, tx: 0, ty: 24, tz: 40, d: 370, az: -30, el: 28, shift: 70, side: 0 };
-const MID_IN = { d: 310, az: -16, el: 25, shift: 160 };
-const HEAD = { ...VIEW.under, tx: 0, ty: 22, tz: 52, d: 270, az: -80, el: 15, shift: 60, side: 150 };
-const HEAD_IN = { d: 235, az: -72, el: 17 };
 // the crest, running along it toward the crews
 const CREST = { ...VIEW.crest, side: 60 };
-const CREST_ON = { tx: -1500, tz: -1450, d: 5000 };
-// over the edge, the front climbing
-const CANYON = { ...VIEW.canyon, fov: 32 };
-const CANYON_IN = { fov: 27, el: 31 };
-// your hands, the packet
-const SHAKE = { ...VIEW.shake, ty: 78, d: 380, az: -46, el: 6, shift: 40 };
-const SHAKE_OPEN = { ty: 70, d: 500, az: -50, shift: 70 };
-const SHAKE_IN = { d: 470, az: -46 };
+// over the edge, the front climbing (an orbit, no longer a zoom)
+const CANYON = { ...VIEW.canyon, fov: 32, az: 1, el: 34 };
+// your hands, the packet: an orbit that lands on the exit pose (act 2's raccord)
+const SHAKE = { ...VIEW.shake, ty: 78, d: 380, az: -66, el: 8, shift: 40 };
+const SHAKE_IN = { ty: 70, d: 470, az: -46, el: 6, shift: 70 };
 
 export default function acte1({ D, world }) {
   const { tl, st, cut, chip, path, punch } = D;
@@ -57,15 +50,23 @@ export default function acte1({ D, world }) {
   // from frame 1 the front surges at the dome, the wind slaps the flames flat, the foil flares (FIRST at frame 0)
   st(0, 0.7, { front: -3.6 }, "power2.out");
   st(0.7, t.promesse - 0.7, { front: -2 }, "none");
+  // gusts, one after the other (never two tweens of `lean` or `heat` at once): on « dessus » and on « Et »
   st(0, 0.45, { lean: 0.97 }, "power2.out");
-  st(0.45, 0.9, { lean: 0.78 }, "sine.inOut");
-  st(1.35, t.promesse - 1.35, { lean: 0.85 }, "sine.inOut");
+  st(0.45, t.dessus - 0.5, { lean: 0.8 }, "sine.inOut");
+  st(t.dessus - 0.05, 0.35, { lean: 1 }, "power2.out");
+  st(t.dessus + 0.3, t.et - t.dessus - 0.35, { lean: 0.8 }, "sine.inOut");
+  st(t.et - 0.05, 0.35, { lean: 0.97 }, "power2.out");
+  st(t.et + 0.3, t.promesse - t.et - 0.45, { lean: 0.85 }, "sine.inOut");
   st(0, 0.4, { heat: 0.56 }, "power2.out");
-  st(0.4, 1.2, { heat: 0.42 }, "sine.inOut");
+  st(0.4, t.dessus - 0.45, { heat: 0.44 }, "sine.inOut");
+  st(t.dessus - 0.05, 0.3, { heat: 0.55 }, "power2.out");
+  st(t.dessus + 0.25, t.alu - t.dessus - 0.6, { heat: 0.45 }, "sine.inOut");
   st(0, t.toscene, { clock: 4 + t.toscene }, "none"); // the flash-forward runs in real time
   path([
     [0, { ...POSE0 }],
-    [t.et, { d: 500, ty: 54 }],
+    // leaves POSE0 turning the way the loop arrives (az falling, ≈ 6 °/s: fin.js lands on POSE0 still moving)
+    [t.dessus + 0.4, { d: 515, ty: 56, az: -30, el: -3 }],
+    [t.alu - 0.2, { d: 455, ty: 50, az: -35, el: -1 }],
     [t.promesse - 0.1, HEM],
   ], { from: "go", to: "go" });
   punch(t.dessus, 0.06);
@@ -74,20 +75,14 @@ export default function acte1({ D, world }) {
   /* ── under the sheet ── */
   const under = t.promesse - 0.1;
   cut(under, null, UNDER, { cut: 1, you: 1, hands: 1, head: 0, cool: 0, hot: 0.25, heat: 0.45, lean: 0.85, front: -2, embers: 1 });
+  // one orbit: the section and the foil (« fondre ») → three-quarters from your head's end, the floor lighting
+  // (« garder ») → close on your head, which lifts into the red in the frame (« lèves »), no cut on it
   path([
     [under, UNDER],
-    [t.pourtant - 0.15, UNDER_IN],
-  ], { from: "go", to: "go" });
-  cut(t.pourtant - 0.15, null, MID, {});
-  path([
-    [t.pourtant - 0.15, MID],
-    [t.sauf - 0.15, MID_IN],
-  ], { from: "go", to: "go" });
-  // « sauf »: a cut, close on your head at the end of the body; it pushes in while the head lifts
-  cut(t.sauf - 0.15, null, HEAD, {});
-  path([
-    [t.sauf - 0.15, HEAD],
-    [t.toscene - 0.04, HEAD_IN],
+    [t.fondre + 0.55, { ty: 20, tz: 35, d: 415, az: -45, el: 27 }],
+    [t.garder, { ty: 24, tz: 40, d: 360, az: -33, el: 28, shift: 100 }],
+    [t.leves - 0.1, { ty: 22, tz: 47, d: 305, az: -22, el: 24, shift: 120 }],
+    [t.toscene - 0.04, { tz: 52, d: 272, az: -13, el: 20, shift: 130 }],
   ], { from: "go", to: "go" });
   // « fondre »: a puff of heat on the foil (embers, the wind laying the flames), and it holds; then the gusts go on
   st(t.fondre - 0.25, 0.3, { heat: 0.6, lean: 0.95 }, "power2.out");
@@ -110,7 +105,8 @@ export default function acte1({ D, world }) {
   st(t.toscene, t.tobench - t.toscene, { clock: -25.43 + (t.tobench - t.toscene) }, "none");
   path([
     [t.toscene, CREST],
-    [t.le - 0.2, CREST_ON],
+    [t.piege - 0.6, { tx: -1850, tz: -1520, d: 5300, az: -54, el: 13 }],
+    [t.le - 0.2, { tx: -1500, tz: -1450, d: 5000, az: -46, el: 12 }],
   ], { from: "go", to: "go" });
   st(t.n73 - 0.1, 1.0, { crowd: 1 }, "sine.inOut"); // « 73 »: the crews come up along the crest
   st(t.toscene, t.le - t.toscene, { front: -100 }, "none");
@@ -122,7 +118,8 @@ export default function acte1({ D, world }) {
   cut(canyon, null, CANYON, { front: -80, lean: 0.3, embers: 1, crowd: 1 });
   path([
     [canyon, CANYON],
-    [t.vingt - 0.2, CANYON_IN],
+    [t.rabat + 0.45, { az: 7, el: 31, fov: 30 }],
+    [t.vingt - 0.2, { az: 13, el: 29, fov: 28 }],
   ], { from: "go", to: "go" });
   st(canyon, t.vingt - canyon, { front: -45 }, "none");
   st(t.rabat - 0.1, 0.8, { lean: 0.8 }, "power2.out");
@@ -132,9 +129,9 @@ export default function acte1({ D, world }) {
   cut(shake, null, SHAKE, { front: -45, lean: 0.8, fold: 1, deploy: 0.05, crowd: 1, embers: 1 });
   path([
     [shake, SHAKE],
-    [t.deplier + 0.35, SHAKE_OPEN],
+    [t.deplier + 0.35, { ty: 72, d: 450, az: -56, el: 7, shift: 60 }],
     [t.ouvre - 0.05, SHAKE_IN],
-  ], { from: "go", to: "rest" });
+  ], { from: "go", to: "go" }); // acte2 takes it on, still moving (plan-séquence)
   st(t.secondes - 0.05, t.deplier - t.secondes + 0.1, { fold: 0.5 }, "power2.inOut");
   st(shake, t.ouvre - 0.05 - shake, { front: -35, deploy: 0.15, abris: 9 }, "none");
 }

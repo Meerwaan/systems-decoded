@@ -23,6 +23,13 @@ export default function acte2({ D, world }) {
 
   /* ── « Alors… » — on the shake act 1 leaves, the wind drops, the embers die: the story's time stops (hush) ── */
   st(t.ouvre - 0.05, 0.5, { embers: 0, lean: 0.15, fire: 0.35, smoke: 0.5 }, "power2.out");
+  // retouche 2 (raccord acte1): from act 1's exit pose (SHAKE_IN, unchanged) the orbit goes on the way act 1 turned
+  // (az up, backing off) until the cut — the hush is not a still frame
+  const SHAKE_OUT = { ...VIEW.shake, ty: 70, d: 470, az: -46, el: 6, shift: 70 };
+  path([
+    [t.ouvre - 0.05, SHAKE_OUT],
+    [t.tobench - 0.02, { ...SHAKE_OUT, ty: 67, d: 515, az: -37, el: 5, shift: 75 }],
+  ], { from: "go", to: "go" });
 
   /* ── cut to the bench: the shelter deployed, alone on its pool, you under it in glass ── */
   const cutAt = t.tobench - 0.02;
@@ -43,8 +50,6 @@ export default function acte2({ D, world }) {
   // ONE move, from the cut to the principe's section: back to the whole exploded view, then down the pages, one
   // layer per word, never stopping on any of them (path); the near half comes off on « tournée vers toi ».
   const exploded = VIEW.exploded;
-  // the section, closer than VIEW.section: the fire end of the dome (where the rays strike) and you inside it
-  const section = { ...VIEW.section, tx: 0, ty: 28, tz: -78, d: 430, el: 8, shift: 70 };
   path([
     [cutAt, sys],
     [c3 + 0.1, exploded],
@@ -54,25 +59,29 @@ export default function acte2({ D, world }) {
     // retouche: the feet end stayed past the right edge at 25.4 → farther, less side-on, the pile pushed left (tz +)
     [t.fibre - 0.04, { ...exploded, tz: 20, ty: 56, d: 800, az: -46, el: 12, shift: 130 }],
     [t.seconde - 0.04, { ...exploded, tz: 24, ty: 42, d: 780, az: -52, el: 9, shift: 130 }],
-    [t.tournee + 0.4, { ...exploded, tx: 0, ty: 30, tz: 45, d: 520, az: -80, el: 8, shift: 100 }],
-    [t.principe - 0.1, { ...exploded, tx: 0, ty: 30, tz: 40, d: 495, az: -83, el: 8, shift: 100 }],
+    // retouche 2 (plan-séquence): the turn toward « toi » spread over three keys, the pile kept whole until « tournée »
+    // (26.9 it brushed the right edge), accelerating into the cut — never braking on a key
+    [t.tournee - 0.04, { ...exploded, tx: 0, tz: 34, ty: 38, d: 830, az: -57, el: 9, shift: 126 }],
+    [t.tournee + 0.58, { ...exploded, tx: 0, tz: 44, ty: 32, d: 600, az: -72, el: 8, shift: 106 }],
+    [t.principe - 0.1, { ...exploded, tx: 0, tz: 45, ty: 30, d: 500, az: -84, el: 8, shift: 100 }],
   ], { from: "go", to: "go" });
   // retouche: « Pourquoi » — a clean cut onto the closed section (the close of the pages was the jerkiest of the film)
+  // retouche 2 (plan-séquence): ONE move from « Pourquoi » to the end of the principe — it turns round the section's
+  // fire end (az and el change on every key) and dives, without a cut, onto the tenth ray on « freine »: it goes in,
+  // slows, dies in the gap, seen whole (no cut on the strong moment). az, el, d, tz all monotone: no key brakes.
   const secAt = t.principe - 0.1;
+  const section = { ...VIEW.section, tx: 0, ty: 30, tz: -72, d: 470, az: -110, el: 16, shift: 75, dof: 0 };
   cut(secAt, null, section, { explode: 0, litInner: 0 });
+  const leakAt = t.freine - 0.12; // the tenth ray's start
   path([
     [secAt, section],
-    [t.miroir, { ...section, d: section.d * 0.93 }],
-    [t.lame2, { ...section, d: section.d * 0.86 }],
-    [t.freine - 0.12, { ...section, ty: 24, tz: -88, d: 330, el: 7, shift: 65 }],
-  ], { from: "go", to: "go" });
-  // retouche: « freine » — a cut in the axis onto the tenth ray, close (d 60 → 50): it goes in, slows, dies in the gap
-  const leakAt = t.freine - 0.12;
-  const leakPose = { ...section, tx: 0, ty: 22, tz: -104, d: 60, az: -90, el: 5, shift: 10, dof: 4 };
-  cut(leakAt, null, leakPose, {});
-  path([
-    [leakAt, leakPose],
-    [t.principeEnd + 0.24, { ...leakPose, d: 50, el: 4 }],
+    [t.feu, { ...section, ty: 29, tz: -76, d: 440, az: -102, el: 13, shift: 72 }],
+    [t.rayon, { ...section, ty: 28, tz: -80, d: 410, az: -95, el: 11, shift: 70 }],
+    [t.miroir, { ...section, ty: 26, tz: -84, d: 370, az: -87, el: 9, shift: 66 }],
+    [t.neuf, { ...section, ty: 25, tz: -88, d: 270, az: -81, el: 7, shift: 58 }],
+    [t.lame2, { ...section, ty: 23, tz: -96, d: 140, az: -77, el: 6, shift: 30, dof: 2 }],
+    [t.freine - 0.04, { ...section, ty: 22, tz: -102, d: 85, az: -75, el: 5, shift: 14, dof: 3 }],
+    [t.principeEnd + 0.24, { ...section, ty: 22, tz: -104, d: 55, az: -72, el: 4, shift: 10, dof: 4 }],
   ], { from: "go", to: "go" });
 
   // each layer lit on its word
@@ -97,13 +106,16 @@ export default function acte2({ D, world }) {
 
   /* ── cut: the loaf on the bag — it settles into its case; 2 kilos ── */
   const packAt = t.principeEnd + 0.26;
-  cut(packAt, SET.BENCH, VIEW.packBench, {
+  // retouche 2: it turns round the loaf (20° of az across the shot), it does not only grow
+  const pack = { ...VIEW.packBench, az: -48, el: 28 };
+  cut(packAt, SET.BENCH, pack, {
     ...BENCHED, fold: 0.9, clock: -16.26, abris: 9, rays: 0, bounce: 0, leak: 0, pool: 0.2, grid: 0.16,
   });
   st(packAt + 0.05, 0.9, { fold: 1 }, "sine.out");
   path([
-    [packAt, VIEW.packBench],
-    [t.rattrape - 0.16, { ...VIEW.packBench, d: VIEW.packBench.d * 0.86, az: -30, el: 22 }],
+    [packAt, pack],
+    [t.kilos, { ...pack, d: pack.d * 0.93, az: -38, el: 25 }],
+    [t.rattrape - 0.16, { ...pack, d: pack.d * 0.86, az: -28, el: 22 }],
   ], { from: "go", to: "go" });
   chip("chip-poids", null, 96, 470, t.kilos, t.rattrape - 0.3);
 
@@ -111,11 +123,15 @@ export default function acte2({ D, world }) {
   const glueAt = t.rattrape - 0.14;
   // from the −x side, three-quarters on the head end: the dome's corner, its hem, the smoke and the glow under it
   // (VIEW.glueClose at d 120 reads as a grey mass at 270 px; from +x the eye falls inside the shelter)
-  const glue = { ...VIEW.glueClose, tx: 20, ty: 10, tz: 100, d: 260, az: -25, el: 24, shift: 100, dof: 6 };
+  // retouche 2: it comes round the corner (az −12 → −20, el 27 → 24: the corner drifts from the centre toward its
+  // place, never into the right zone); the end pose (act 3's seam) unchanged
+  const glueEnd = { ...VIEW.glueClose, tx: 20, ty: 10, tz: 100, d: 260 * 0.88, az: -20, el: 24, shift: 100, dof: 6 };
+  const glue = { ...glueEnd, d: 275, az: -12, el: 27 };
   cut(glueAt, SET.BENCH, glue, { ...BENCHED, fold: 0, glue: 0, clock: -16.26, abris: 9 });
   path([
     [glueAt, glue],
-    [t.tozero, { ...glue, d: glue.d * 0.88, az: -20 }],
+    [t.lache, { ...glueEnd, d: 252, az: -16, el: 25.5 }],
+    [t.tozero, glueEnd],
   ], { from: "go", to: "go" });
   st(t.lache - 0.06, 1.3, { glue: 1 }, "power2.out");
   punch(t.lache, 0.06);
