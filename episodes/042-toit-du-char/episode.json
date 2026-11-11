@@ -9,29 +9,41 @@
   "voice": {
     "name": "Eric",
     "voiceId": "9osbeK6KzhDRV0yX4rTq",
-    "model": "eleven_v4_turbo",
+    "model": "eleven_v4",
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21
+    "seed": 21,
+    "language": "fr"
   },
   "cover": {
-    "at": "eclate$",
+    "at": "eclate:coulissantes",
     "title": [
       "Le toit",
       "du char"
     ],
     "cam": {
-      "tx": 0,
-      "ty": 8,
-      "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
-      "shift": -430,
+      "tx": -40,
+      "ty": 30,
+      "tz": 10,
+      "d": 1420,
+      "az": -46,
+      "el": 30,
+      "shift": -370,
       "side": 0,
-      "fov": 28,
+      "fov": 30,
       "roll": 0
+    },
+    "state": {
+      "explode": 1,
+      "litBox": 1,
+      "litPanel": 1,
+      "litDoors": 1,
+      "litCam": 1,
+      "burn": 0.45,
+      "seal": 1,
+      "door": 0,
+      "press": 0
     }
   },
   "post": {
@@ -85,7 +97,14 @@
     "Le feu monte en colonne au-dessus de l'équipage : gaz et flammes sortent par le haut — US 5,201,556 [P] ; la colonne elle-même, sa hauteur et sa forme : l'image reconstitue.",
     "L'image reconstitue : la silhouette du char, la disposition intérieure (caisson, panneau, portes, tringle, came : schématiques, d'après les figures du brevet), les silhouettes d'équipage (jamais blessées, jamais un corps en gros plan), aucun pays ni insigne.",
     "Annonce du 043 : le faisceau du CERN porte ≈ 362 MJ, l'énergie d'un train de 200 m lancé à 155 km/h, et un bloc d'arrêt l'avale — dossier 043.",
-    "Épinglé TikTok : brevet allemand US 4,864,913, déposé le 19/11/1976 (priorité 22/11/1975), accordé le 12/09/1989 : soute derrière l'équipage, porte coulissante, parois qui se rompent [P]"
+    "Épinglé TikTok : brevet allemand US 4,864,913, déposé le 19/11/1976 (priorité 22/11/1975), accordé le 12/09/1989 : soute derrière l'équipage, porte coulissante, parois qui se rompent [P]",
+    "Échelle : le char et son caisson sont dessinés à la taille vraisemblable d’un char de combat moderne (≈ 8 m de caisse, 2,4 m au toit de tourelle, un canon de 120 mm) sans en copier aucun : silhouette générique, aucun pays, aucun insigne ; la colonne de feu, le vol du panneau, l’autre tourelle et l’annonce du 043 sont une maquette ; aucune grandeur n’est affichée sur l’image.",
+    "L’en-tête compte en millisecondes autour de l’instant où le toit lâche (T+0) : l’ordre de grandeur « quelques millisecondes » vient du brevet US 4,864,913 [P] ; aucun délai n’est publié pour ce char : les valeurs affichées (T−3 ms au feu de poudre, T+2 ms au verrouillage) sont reconstituées [O].",
+    "« Ta porte » (en-tête) dit l’état que montre l’image : fermée, ouverte, joint ouvert (sans verrou, US 5,201,556 [P]), verrouillée (US 5,201,556 [P]).",
+    "Au commentaire, l’en-tête compte le temps où la porte du chargeur reste ouverte à l’image (≈ 2 s) : « only opened for a couple of seconds » — Wikipédia « Autoloader » [S].",
+    "L’autre tourelle (« une machine ») : un chargeur automatique générique dans l’arrière de la tourelle, deux hommes d’équipage, sans porte ni cloison dessinées (non confirmées pour le Leclerc) ; aucun char nommé ni reconnaissable — defense.gouv.fr [P].",
+    "Le pilote est dans la caisse, à l’avant, loin du caisson (contre-vérification) : l’image ne le met jamais « juste devant » la porte.",
+    "Le contre-exemple du like (un bloc d’acier fermé de partout qui se fend de tous côtés) est une image du principe, pas un essai : l’image reconstitue."
   ],
   "beats": [
     {
@@ -202,13 +221,23 @@
   ],
   "cues": {
     "choc": "accroche:brûlent",
+    "toscene": "scene-0.14",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "toprincipe": "principe-0.12",
+    "torest": "repos-0.12",
     "tozero": "zero-0.12",
-    "trigger": "reponse:plaque-0.05",
+    "trigger": "reponse:tourne+0.48",
+    "towide": "reponse:verrouillées+0.62",
     "toverdict": "chute-0.12",
     "verdict": "chute:pas",
     "tocta": "comment-0.12",
+    "opendoor": "comment:s'ouvre-0.1",
+    "shutdoor": "comment:obus+0.52",
+    "duelA": "comment:homme",
+    "duelB": "comment$-0.2",
+    "tolike": "like-0.2",
+    "toabo": "abo-0.2",
     "toloop": "boucle-0.12",
     "rewind": "boucle:toit"
   },
@@ -262,9 +291,68 @@
     },
     {
       "type": "swish",
-      "at": 0.14,
-      "dur": 0.3,
+      "at": 0,
+      "dur": 0.28,
       "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "accroche:brûlent+0.38",
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "accroche:saute+0.38",
+      "gain": -13,
+      "size": 1.1,
+      "crack": 1
+    },
+    {
+      "type": "click",
+      "at": "accroche:exprès+0.38",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "promesse:là+0.12",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "promesse:ouverte+0.34",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "toscene",
+      "gain": -14,
+      "pitch": 0.85
+    },
+    {
+      "type": "impact",
+      "at": "scene:flambe+0.40",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "scene:monte+0.48",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "scene:chemin+0.22",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "scene:toit+0.30",
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "scene$+0.06",
+      "gain": -14
     },
     {
       "type": "suck",
@@ -280,9 +368,81 @@
     },
     {
       "type": "impact",
-      "at": "explode",
+      "at": "ouvre$+0.04",
       "gain": -16,
       "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "eclate:d'obus+0.35",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:lâcher+0.38",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:coulissantes+0.54",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:reliée+0.80",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "eclate$+0.06",
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "toprincipe",
+      "gain": -16,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "principe:caisson+0.38",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "principe:moins+0.22",
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "principe$+0.06",
+      "gain": -17,
+      "size": 0.7
+    },
+    {
+      "type": "click",
+      "at": "repos:fermées+0.38",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "repos:gaz+0.38",
+      "gain": -18
+    },
+    {
+      "type": "hit",
+      "at": "repos:toi+0.14",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "repos:rebondissent+0.54",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "repos$+0.06",
+      "gain": -15
     },
     {
       "type": "impact",
@@ -292,16 +452,99 @@
     },
     {
       "type": "impact",
-      "at": "trigger",
+      "at": "zero:flambe+0.38",
+      "gain": -15,
+      "size": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "zero:toit+0.22",
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "zero$+0.06",
+      "gain": -11,
+      "size": 1.3,
+      "crack": 1
+    },
+    {
+      "type": "swish",
+      "at": "reponse:s'envole+0.64",
+      "dur": 0.34,
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "reponse:tringle+0.34",
+      "gain": -15
+    },
+    {
+      "type": "impact",
+      "at": "reponse:tourne+0.50",
       "gain": -10,
-      "size": 1.4
+      "size": 1.4,
+      "crack": 1
+    },
+    {
+      "type": "click",
+      "at": "reponse:cadre+0.46",
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "reponse$+0.06",
+      "gain": -14,
+      "size": 1.2
     },
     {
       "type": "blip",
-      "at": "verdict",
+      "at": "chute$+0.06",
       "gain": -15,
       "pitch": 0.7,
       "heavy": true
+    },
+    {
+      "type": "click",
+      "at": "comment:ouverte+0.38",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "comment:obus+0.60",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "comment:machine+0.38",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "tolike",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "like:like+0.38",
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "like$+0.06",
+      "gain": -16,
+      "size": 0.8
+    },
+    {
+      "type": "click",
+      "at": "abo:abonne-toi+0.41",
+      "gain": -17
+    },
+    {
+      "type": "swish",
+      "at": "abo:lancé+0.58",
+      "dur": 0.3,
+      "gain": -17
     },
     {
       "type": "impact",
@@ -311,8 +554,8 @@
     },
     {
       "type": "rewind",
-      "at": "rewind",
-      "dur": 1,
+      "at": "boucle$+0.04",
+      "dur": 0.7,
       "gain": -21
     }
   ]
