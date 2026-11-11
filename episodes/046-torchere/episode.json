@@ -1,0 +1,240 @@
+{
+  "id": "046",
+  "serie": "dossier",
+  "slug": "torchere",
+  "title": "Torchère",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "language": "fr"
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Torchère",
+      "de raffinerie"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Torchère",
+    "caption": "Torchère, la torche de raffinerie : cette flamme géante, c'est la sortie de secours de toute l'usine. Fos-sur-Mer, 31 août 2017 : un défaut électrique coupe un compresseur, et tout le gaz part vers elle. Une torchère qui fume : bon signe… ou mauvais signe ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#raffinerie",
+      "#industrie",
+      "#securite"
+    ],
+    "pinned": "Milford Haven, 1994 : le ballon d'une torche déborde, le liquide casse le tuyau. Explosion. Toi : une torchère qui fume, bon ou mauvais signe ?",
+    "instagram": {
+      "caption": "Ta raffinerie crache une flamme géante. Elle le fait exprès.\n\nDossier 046 : la torchère de raffinerie. Les soupapes, le collecteur, le ballon qui retient le liquide, la garde hydraulique… et pourquoi le feu ne redescend pas dans l'usine : sans air, le gaz ne brûle pas. Le 31 août 2017, à Fos-sur-Mer, un défaut électrique a coupé un compresseur : tout le gaz est parti à la torche.\n\nUne torchère qui fume : bon signe… ou mauvais signe ?",
+      "hashtags": [
+        "#raffinerie",
+        "#torchere",
+        "#industrie",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ta raffinerie crache une flamme géante… exprès : la torchère, sortie de secours de l'usine",
+      "description": "Dossier 046 — la torchère de raffinerie ouverte : toutes les soupapes de sûreté de l'usine débouchent dans un même collecteur ; un ballon retient le liquide (sinon, il pleuvrait du feu) ; la garde hydraulique et le gaz de purge gardent l'air dehors, parce que sans air le gaz ne brûle pas ; et la flamme pilote, allumée jour et nuit, enflamme tout ce qui arrive. Le cas réel : Fos-sur-Mer, 31 août 2017, 16 h 30, un défaut électrique arrête un compresseur. Une reconstitution.\n\nRaffineurs, chimistes, pompiers : qu'est-ce qu'on a simplifié ? Et toi : une torchère qui fume, bon signe… ou mauvais signe ?",
+      "hashtags": [
+        "#shorts",
+        "#raffinerie",
+        "#torchere",
+        "#industrie",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Scène : reconstitution de Fos-sur-Mer, 31/08/2017 — défaut électrique à 16 h 30, un compresseur de l'unité de craquage catalytique s'arrête, les unités en aval doivent être dépressurisées et, par procédure, les hydrocarbures gazeux vont à la torche — fiche ARIA n° 50272 [P]. « Ton usine » est un rôle donné au spectateur ; positions, flux et couleurs : l'image reconstitue.",
+    "La torche allumée exprès (dépressurisation « par procédure ») — ARIA n° 50272 [P]",
+    "La torche est la sortie de secours qui empêche l'usine d'exploser : toutes les soupapes de sûreté y débouchent, via un collecteur commun — IChemE Hazards 25, Denham & Donnelly 2015 [S]",
+    "Gaz relâché à l'air libre sans flamme : évent à l'air libre, risque de nuage qui s'enflamme (flash fire) — IChemE Hazards 25 [S]",
+    "Le ballon de torche retient le liquide ; sinon, pluie de liquide en feu retombant de la flamme (rain-out) — IChemE Hazards 25 [S]",
+    "Garde hydraulique : le gaz bulle dans un liquide, la pression reste positive et la flamme ne redescend pas vers l'usine — IChemE Hazards 25 [S]",
+    "Sans air, pas de combustion ; air + gaz dans une conduite fermée = mélange explosif ; gaz de purge en flux continu (« vingt-quatre heures sur vingt-quatre ») pour que l'air ne remonte pas — IChemE Hazards 25 [S]",
+    "Au repos, presque rien ne brûle : le gaz de purge et la flamme pilote — IChemE Hazards 25 [S]",
+    "Flamme pilote allumée en permanence pour enflammer ce qui arrive — IChemE Hazards 25 [S] ; 40 CFR 63.670 [P, extraits de recherche]",
+    "Fumée noire et bruit perçus hors du site (« elle gronde » ; l'image montre le panache) — ARIA n° 50272 [P]",
+    "Compresseur redémarré à 17 h (une demi-heure plus tard), retour à la normale vers 17 h 30, pas de blessé signalé — ARIA n° 50272 [P]",
+    "Chute : le danger, c'est une torche éteinte — si la flamme pilote s'éteint, la torche devient un évent à l'air libre et le gaz sort sans brûler — IChemE Hazards 25 [S]",
+    "Poza Rica (Mexique) : torche éteinte plus de vingt minutes, 22 morts, 320 hospitalisés (gaz toxique) — IChemE Hazards 25 [S] ; année non dite (le dossier écrit 1951)",
+    "Épinglé : Milford Haven (Texaco), 1994 — le ballon de torche déborde, un bouchon de liquide rompt un coude du collecteur, explosion puis incendies — IChemE Hazards 25 [S]",
+    "Annonce 047 : canot de sauvetage à chute libre, lâché dans le vide avec l'équipage sanglé dedans — IACS SSE 11/4/2, Steamship Mutual 2006 [S] (formulation prudente : ni hauteur ni obligation dites)"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ta raffinerie crache une flamme *géante*. Elle le fait +exprès+.",
+      "vo": "[tense] Ta raffinerie crache une flamme géante. Elle le fait exprès.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ta raffinerie crache une flamme géante. Elle le fait exprès."
+      ],
+      "voir": "Contre-plongée au pied de la torche : la cheminée pleine (sombre sur halo, 40 % de la largeur), à son sommet la flamme enfle d'un coup dès l'image 1 avec un panache de fumée noire ; derrière, les colonnes de la raffinerie aux rayons X, rouges (signal) ; au bout du tube, la flamme pilote minuscule (veille), déjà là."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Ce feu, c'est ce qui l'empêche d'*exploser*. Sauf le jour où sa plus petite flamme… *s'éteint*.",
+      "vo": "[firm, matter-of-fact] Ce feu, c'est ce qui l'empêche d'exploser. [short pause] Sauf le jour où sa plus petite flamme... s'éteint.",
+      "voir": "Recul le long de la cheminée jusqu'au gros tuyau qui la relie aux colonnes ; sur « exploser », une colonne gonflée de rouge éclate en fantôme puis s'efface ; sur « plus petite flamme », serré sur le bout de la torche : à côté du panache, la flammèche verte vacille."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Un défaut électrique coupe un compresseur. Ton usine doit vider son gaz sous pression. À l'air libre ? Un nuage prêt à flamber. Il reste une sortie… la *torche*.",
+      "vo": "[tense] Un défaut électrique coupe un compresseur. Ton usine doit vider son gaz sous pression. À l'air libre ? Un nuage prêt à flamber. Il reste une sortie... la torche.",
+      "voir": "Quelques secondes avant, même raffinerie aux rayons X, chrono 16:30 : au premier plan un compresseur plein dont le rotor ralentit et s'arrête (éclair signal sur son moteur) ; les colonnes se remplissent de rouge (pression) ; sur « air libre », un nuage fantôme déborde autour d'elles puis s'efface ; on suit le collecteur jusqu'au pied de la torche, serré dessus."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "Le chrono et le gaz se figent dans le collecteur ; le réseau de torche (soupape, collecteur, ballon, garde, cheminée) sort du décor et se pose sur le halo ; il s'ouvre sur « ouvre »."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Toutes les soupapes débouchent dans un seul tuyau : le collecteur. Un ballon y retient le liquide : sinon, il pleuvrait du *feu*. Et au bout… +la garde hydraulique+.",
+      "vo": "[conversational, curious] Toutes les soupapes débouchent dans un seul tuyau : le collecteur. Un ballon y retient le liquide : sinon, il pleuvrait du feu. Et au bout... la garde hydraulique.",
+      "voAlt": [
+        "[curious] Toutes les soupapes débouchent dans un seul tuyau : le collecteur. Un ballon y retient le liquide : sinon, il pleuvrait du feu. Et au bout... la garde hydraulique."
+      ],
+      "voir": "Éclaté sur le chemin du gaz : trois colonnes et leurs soupapes, dont les sorties convergent dans le gros collecteur ; le ballon couché, en coupe, où le liquide (signal) tombe au fond pendant que le gaz continue ; sur « feu », des gouttes enflammées fantômes tombent de la flamme ; au bout, la garde hydraulique en coupe (veille) : le cœur."
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi le feu ne redescend pas dans l'usine ? Sans air, le gaz ne brûle pas. Alors, [24|vingt-quatre] heures sur [24|vingt-quatre], un filet de gaz monte dans la torche : l'+air+ reste dehors.",
+      "vo": "[curious] Pourquoi le feu ne redescend pas dans l'usine ? [short pause] Sans air, le gaz ne brûle pas. Alors, vingt-quatre heures sur vingt-quatre, un filet de gaz monte dans la torche : l'air reste dehors.",
+      "voir": "La garde hydraulique et la cheminée en grand, de trois quarts : des bulles de gaz traversent le bain et montent (veille) ; en haut, des flèches d'air (signal) tentent d'entrer par le bout du tube et sont repoussées par le filet de gaz qui monte sans arrêt ; la flamme reste au bout, dehors."
+    },
+    {
+      "id": "repos",
+      "text": "Le reste du temps, elle dort. Presque rien ne brûle : ce filet de gaz, et une flamme minuscule. Puis ta raffinerie… perd un *compresseur*.",
+      "vo": "[warm, conversational] Le reste du temps, elle dort. Presque rien ne brûle : ce filet de gaz, et une flamme minuscule. Puis ta raffinerie... perd un compresseur.",
+      "voAlt": [
+        "[curious] Le reste du temps, elle dort. Presque rien ne brûle : ce filet de gaz, et une flamme minuscule. Puis ta raffinerie... perd un compresseur."
+      ],
+      "voir": "Le réseau se referme et rentre dans la raffinerie aux rayons X, au calme : au sommet de la torche, une flamme minuscule et le filet de gaz qui monte ; on redescend vers le compresseur au pied des colonnes ; sur « compresseur », son rotor s'arrête net (éclair signal)."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Les vannes s'*ouvrent*. Le gaz se rue dans le collecteur. Il traverse le ballon. Il bulle dans la garde. Il monte.",
+      "vo": "[firm, matter-of-fact] Les vannes s'ouvrent. Le gaz se rue dans le collecteur. Il traverse le ballon. Il bulle dans la garde. Il monte.",
+      "voir": "Chrono repris à 16:30 : les vannes des colonnes s'ouvrent, le gaz (signal) se rue dans le collecteur et on le suit, une étape par phrase : traversée du ballon, bulles dans la garde, montée dans la cheminée vers le bout."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Au bout, la petite flamme l'allume. La torche enfle. Elle gronde. Dans l'usine, la pression +retombe+. Une demi-heure plus tard, le compresseur repart. Rien n'a explosé.",
+      "vo": "[tense] Au bout, la petite flamme l'allume. La torche enfle. Elle gronde. Dans l'usine, la pression retombe. Une demi-heure plus tard, le compresseur repart. Rien n'a explosé.",
+      "voir": "Le climax en grand : le gaz atteint le bout, la flamme pilote l'allume et la torche enfle jusqu'à la flamme géante de la première image, panache noir ; en bas, les colonnes passent du rouge au calme (la pression retombe) ; chrono 17:00, le rotor du compresseur repart ; plan large, la raffinerie intacte sous la flamme."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà le secret : ce n'est *pas* quand elle est géante qu'il faut avoir peur. C'est quand elle *s'éteint*.",
+      "vo": "[firm, matter-of-fact] Voilà le secret : ce n'est pas quand elle est géante qu'il faut avoir peur. C'est quand elle s'éteint.",
+      "voir": "La flamme géante au sommet ; sur « s'éteint », elle s'éteint d'un coup et un nuage gris de gaz cru (signal) sort du bout du tube et descend vers les colonnes ; le nom du compte s'allume en vert."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et sa plus petite flamme ? La flamme pilote, allumée jour et nuit. Sans elle, le gaz sort sans brûler : au Mexique, une torche éteinte, un gaz toxique, [22|vingt-deux] morts. En +commentaire+ : une torchère qui fume… bon signe, ou *mauvais* ?",
+      "vo": "[conversational, curious] Et sa plus petite flamme ? [short pause] La flamme pilote, allumée jour et nuit. Sans elle, le gaz sort sans brûler : au Mexique, une torche éteinte, un gaz toxique, vingt-deux morts. [short pause] En commentaire : une torchère qui fume... bon signe, ou mauvais ?",
+      "voAlt": [
+        "[curious] Et sa plus petite flamme ? [short pause] La flamme pilote, allumée jour et nuit. Sans elle, le gaz sort sans brûler : au Mexique, une torche éteinte, un gaz toxique, vingt-deux morts. [short pause] En commentaire : une torchère qui fume... bon signe, ou mauvais ?"
+      ],
+      "voir": "Serré sur le bout du tube : la flamme pilote (veille), toute petite à côté du panache ; sur « sans brûler », elle s'éteint en fantôme et le gaz sort en nuage incolore (traits signal) ; sur la question, la torche rallumée qui fume noir, sans réponse."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour ceux qui la voient de leur fenêtre.",
+      "vo": "[warm, conversational] Like : [short pause] pour ceux qui la voient de leur fenêtre.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour ceux qui la voient de leur fenêtre."
+      ],
+      "voir": "La torche au calme, vue à travers une fenêtre d'immeuble aux rayons X au premier plan ; chevrons vers la colonne de boutons."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, le canot qu'on lâche dans le *vide*, avec tout l'équipage sanglé dedans.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, le canot qu'on lâche dans le vide, avec tout l'équipage sanglé dedans.",
+      "voir": "Panneau du prochain dossier : un canot fermé aux rayons X sur sa rampe à la poupe d'un cargo, l'équipage sanglé dedans en traits fins ; « S'abonner pour l'ouvrir » et ses chevrons."
+    },
+    {
+      "id": "boucle",
+      "text": "Et pendant qu'il tombe…",
+      "vo": "[calm] Et pendant qu'il tombe,",
+      "voir": "Le canot glisse de la rampe et plonge ; raccord sur la contre-plongée au pied de la torche, la flamme qui enfle : dernière image = première image."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:géante",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:allume-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:tombe"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "drone",
+      "gain": -24,
+      "curve": [
+        [0, 0.8],
+        ["explode", 0.5],
+        ["tozero", 0.9],
+        ["trigger", 1],
+        ["toverdict", 0.45],
+        ["tocta", 0.4],
+        ["rewind", 0.8]
+      ]
+    },
+    { "type": "hit", "at": 0.02, "gain": -13, "pitch": 0.9 },
+    { "type": "impact", "at": 0.03, "gain": -14, "size": 1.2 },
+    { "type": "swish", "at": 0.14, "dur": 0.3, "gain": -15 },
+    { "type": "suck", "to": "ouvre-0.04", "dur": 0.6, "gain": -17 },
+    { "type": "hush", "from": "ouvre", "to": "explode-0.02", "depth": -14 },
+    { "type": "impact", "at": "explode", "gain": -16, "size": 0.8 },
+    { "type": "impact", "at": "tozero", "gain": -12, "size": 1.2 },
+    { "type": "impact", "at": "trigger", "gain": -10, "size": 1.4 },
+    { "type": "blip", "at": "verdict", "gain": -15, "pitch": 0.7, "heavy": true },
+    { "type": "impact", "at": "toloop", "gain": -16, "size": 0.7 },
+    { "type": "rewind", "at": "rewind", "dur": 1, "gain": -21 }
+  ]
+}
