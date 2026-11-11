@@ -54,8 +54,11 @@ export async function essai(dir, { file, budget = 0, ref = null } = {}) {
     const model = t.model ?? ep.voice.model;
     // `voice`: another narrator on the same passage (a new format's voice is chosen this way)
     const voiceId = t.voice ?? ep.voice.voiceId;
-    const stamp = hashOf(JSON.stringify({ voice: voiceId, model, settings, text }));
-    return { ...t, voiceId, model, vo, text, settings, stamp, mp3: path.join(out, `${t.nom}.mp3`), meta: path.join(out, `${t.nom}.json`) };
+    // `language`: the language imposed on the request ("fr"); without it, the model guesses the accent from the text
+    // (06/11: Eric drifted into a Québécois accent here and there on the CR02 — Merwan wants Parisian French, always)
+    const language = t.language === undefined ? (ep.voice.language ?? null) : t.language;
+    const stamp = hashOf(JSON.stringify({ voice: voiceId, model, settings, text, ...(language && { language }) }));
+    return { ...t, voiceId, model, language, vo, text, settings, stamp, mp3: path.join(out, `${t.nom}.mp3`), meta: path.join(out, `${t.nom}.json`) };
   });
   const have = (t) => fs.existsSync(t.mp3) && fs.existsSync(t.meta) && JSON.parse(fs.readFileSync(t.meta, "utf8")).stamp === t.stamp;
   const todo = trials.filter((t) => !have(t));
@@ -93,7 +96,7 @@ export async function essai(dir, { file, budget = 0, ref = null } = {}) {
     const res = await fetch(`${API}/text-to-speech/${t.voiceId}/with-timestamps?output_format=${ep.voice.format ?? "mp3_44100_128"}`, {
       method: "POST",
       headers: { "xi-api-key": elevenKey(), "content-type": "application/json" },
-      body: JSON.stringify({ text: t.text, model_id: t.model, seed: ep.voice.seed ?? 21, voice_settings: t.settings }),
+      body: JSON.stringify({ text: t.text, model_id: t.model, seed: t.seed ?? ep.voice.seed ?? 21, voice_settings: t.settings, ...(t.language && { language_code: t.language }) }),
     });
     if (!res.ok) throw new Error(`ElevenLabs ${res.status}: ${(await res.text()).slice(0, 400)}`);
     const cost = Number(res.headers.get("character-cost") ?? 0);

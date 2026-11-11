@@ -47,6 +47,9 @@ async function synthesize(ep, text, seed, stability = ep.voice.stability) {
     model_id: v.model,
     seed,
     voice_settings: { stability, similarity_boost: v.similarity, speed: v.speed },
+    // the language imposed on the request: without it the model guesses the accent from the text
+    // (06/11: a Québécois accent here and there on the CR02 — Merwan wants Parisian French, never anything else)
+    ...(v.language && { language_code: v.language }),
   };
   const res = await fetch(`${API}/text-to-speech/${v.voiceId}/with-timestamps?output_format=${v.format ?? "mp3_44100_128"}`, {
     method: "POST",
