@@ -13,7 +13,8 @@
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21
+    "seed": 21,
+    "language": "fr"
   },
   "cover": {
     "at": "defaut$",
@@ -23,14 +24,14 @@
     ],
     "lastTone": "#ffb23e",
     "cam": {
-      "tx": 0,
-      "ty": 8,
+      "tx": -5000,
+      "ty": 84,
       "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
-      "fov": 28,
-      "shift": -430,
+      "d": 340,
+      "az": -72,
+      "el": 4,
+      "fov": 30,
+      "shift": -300,
       "side": 0,
       "roll": 0
     }
@@ -86,7 +87,7 @@
     "Fuite du 20/04 au 15/07/2010 (« près de trois mois », 86 ou 87 jours selon le comptage) ; 4,9 millions de barils ± 10 % — DOI / FRTG, communiqué du 11/03/2011 [P]",
     "Depuis : Well Control Rule du BSEE, Federal Register 29/04/2016 (en vigueur le 28/07/2016) : deux jeux de lames cisaillantes (délai de 5 ans), centrage du tube (7 ans), vérification du cisaillement par un tiers indépendant — Federal Register, lu par résumé [P] ; la révision de 2019 garde la double lame et le tiers indépendant — fiche BSEE 2019 [P] ; « doit avoir » : obligation posée en 2016, avec délais de mise en conformité",
     "Épinglé TikTok : les deux boîtiers de commande n'auraient pas passé les essais d'acceptation en usine du fabricant — CSB Vol. 2, constat 6 [P]",
-    "Image : la plateforme, le derrick, la boue, le pupitre, les cadrans, les boîtiers et le BOP sont des maquettes reconstituées ; la forme du jet de boue, des flammes et du pliage est reconstituée ; personne n'est montré ni nommé ; aucune scène du film de 2016. En-tête : l'heure réelle par étape (simulation ES) ; t9 affiche « 21:58 » comme borne (« avant 21 h 58 ») ; T− compte jusqu'à 21:49",
+    "Image : la plateforme, le derrick, la boue, la mer, le puits en coupe, les cadrans et leur pupitre, le bouton d’urgence, les boîtiers et le BOP sont des maquettes reconstituées, chacune à l’échelle de son sujet (l’eau, la roche et la largeur du puits sont tassées ou agrandies ; aucune grandeur n’est affichée) ; la forme du jet de boue, des flammes, du naufrage et du pliage est reconstituée ; l’ordre des éléments du BOP suit le CSB (annulaires en haut, lames au-dessus des mâchoires) ; les deux cadrans sont ceux du tube et de la ligne (kill line) ; le compteur de débit est un indicateur de la maquette (débits de la simulation CSB), pas un instrument du bord ; le bouton est pressé sans personne à l’image ; personne n’est montré ni nommé ; aucune scène du film de 2016. En-tête : l’heure réelle par étape (simulation ES) ; t9 affiche « 21:58 » comme borne (« avant 21 h 58 ») ; à l’issue, les dates du naufrage (22 avril) et de la fermeture du puits (15 juillet) ; à depuis, 2016 ; T− compte jusqu’à 21:49 (l’explosion)",
     "Annonce : aucun sujet nommé — le rapport final du JTSB sur Haneda (JAL 516) n'est pas trouvé publié au 05/11/2026 (rapports d'étape du 25/12/2024 et du 25/12/2025 seulement)"
   ],
   "beats": [
@@ -104,14 +105,14 @@
     },
     {
       "id": "principe",
-      "text": "D'abord, comment ça marche. Un puits, c'est un long tube plein de boue lourde. Tant que son poids bat la pression du gaz d'en bas… rien ne +remonte+.",
-      "vo": "[conversational, curious] D'abord, comment ça marche. Un puits, c'est un long tube plein de boue lourde. Tant que son poids bat la pression du gaz d'en bas... rien ne remonte.",
+      "text": "D'abord, comment ça marche. Un puits, c'est un long conduit plein de boue lourde. Tant que son poids bat la pression du gaz d'en bas… rien ne +remonte+.",
+      "vo": "[conversational, curious] D'abord, comment ça marche. Un puits, c'est un long conduit plein de boue lourde. Tant que son poids bat la pression du gaz d'en bas... rien ne remonte.",
       "voir": "Coupe verticale du puits en maquette : la colonne de boue (verte, stable) appuie vers le bas, des flèches de gaz poussent du fond et restent bloquées ; une balance des deux poussées penche du côté boue."
     },
     {
       "id": "bop",
-      "text": "Sinon, reste une dernière barrière, au fond : le *BOP*. Des mâchoires qui serrent le tube… et des lames qui le coupent pour fermer le puits.",
-      "vo": "[firm, matter-of-fact] Sinon, reste une dernière barrière, au fond : le BOP. Des mâchoires qui serrent le tube... et des lames qui le coupent pour fermer le puits.",
+      "text": "Sinon, reste une dernière barrière, au fond : le *BOP*. Des mâchoires qui serrent le conduit… et des lames qui le coupent pour fermer le puits.",
+      "vo": "[firm, matter-of-fact] Sinon, reste une dernière barrière, au fond : le BOP. Des mâchoires qui serrent le conduit... et des lames qui le coupent pour fermer le puits.",
       "voir": "Le BOP plein, de trois quarts, sur son halo : les étages s'allument tour à tour en vert — joint en caoutchouc, mâchoires qui serrent le tube, puis les deux lames qui coupent et ferment."
     },
     {
@@ -158,8 +159,8 @@
     },
     {
       "id": "t6",
-      "text": "[21 h 47|Vingt et une heures quarante-sept]. Une mâchoire se ferme sur le tube. Cette fois, ça *tient*. Sauf que le gaz est déjà au-dessus… et il monte vers toi.",
-      "vo": "[tense] Vingt et une heures quarante-sept. Une mâchoire se ferme sur le tube. Cette fois, ça tient. Sauf que le gaz est déjà au-dessus... et il monte vers toi.",
+      "text": "[21 h 47|Vingt et une heures quarante-sept]. Une mâchoire se ferme sur le conduit. Cette fois, ça *tient*. Sauf que le gaz est déjà au-dessus… et il monte vers toi.",
+      "vo": "[tense] Vingt et une heures quarante-sept. Une mâchoire se ferme sur le conduit. Cette fois, ça tient. Sauf que le gaz est déjà au-dessus... et il monte vers toi.",
       "voir": "Les mâchoires du bas claquent sur le tube et passent au vert : plus rien ne passe dessous ; mais au-dessus du BOP, une poche rouge déjà dans la colonne montante file vers la surface, la caméra la suit."
     },
     {
@@ -183,8 +184,8 @@
     },
     {
       "id": "defaut",
-      "text": "Et le puits coule toujours. Tu sais pourquoi ? Le tube s'était *plié* : tordu en partie par la pression dedans, comme un tuyau d'arrosage. Hors du centre, les lames l'ont percé… sans le *couper* net.",
-      "vo": "[conversational, curious] Et le puits coule toujours. Tu sais pourquoi ? Le tube s'était plié : tordu en partie par la pression dedans, comme un tuyau d'arrosage. Hors du centre, les lames l'ont percé... sans le couper net.",
+      "text": "Et le puits coule toujours. Tu sais pourquoi ? Le conduit s'était *plié* : tordu en partie par la pression dedans, comme un tuyau d'arrosage. Hors du centre, les lames l'ont percé… sans le *couper* net.",
+      "vo": "[conversational, curious] Et le puits coule toujours. Tu sais pourquoi ? Le conduit s'était plié : tordu en partie par la pression dedans, comme un tuyau d'arrosage. Hors du centre, les lames l'ont percé... sans le couper net.",
       "voir": "LE CLIMAX, en grand : coupe du BOP agrandie, le tube se cambre sous la pression et sort de l'axe ; les deux lames se ferment, une moitié du tube reste hors des lames, pincée et percée ; le tube plié en rouge, cerclé ; le flux rouge continue."
     },
     {
@@ -202,15 +203,15 @@
     },
     {
       "id": "depuis",
-      "text": "Depuis [2016|deux mille seize], aux États-Unis, un BOP doit avoir +deux+ jeux de lames, un moyen de garder le tube au +centre+, et un cisaillement vérifié par un expert indépendant.",
-      "vo": "[warm, conversational] Depuis deux mille seize, aux États-Unis, un BOP doit avoir deux jeux de lames, un moyen de garder le tube au centre, et un cisaillement vérifié par un expert indépendant.",
+      "text": "Depuis [2016|deux mille seize], aux États-Unis, un BOP doit avoir +deux+ jeux de lames, un moyen de garder le conduit au +centre+, et un cisaillement vérifié par un expert indépendant.",
+      "vo": "[warm, conversational] Depuis deux mille seize, aux États-Unis, un BOP doit avoir deux jeux de lames, un moyen de garder le conduit au centre, et un cisaillement vérifié par un expert indépendant.",
       "voir": "La lumière blanchit, grille et halo passent au vert : le BOP corrigé, un second jeu de lames s'ajoute, une bague recentre le tube droit dans l'axe, les lames se ferment et coupent net, en vert."
     },
     {
       "id": "comment",
       "hold": 0.3,
-      "text": "Pourquoi les lames n'ont pas scellé le puits ? Un tube plié. Mais tout avait commencé par deux cadrans. Toi, en +commentaire+ : [1 400|mille quatre cents] d'un côté, zéro de l'autre… tu valides, ou tu arrêtes tout ?",
-      "vo": "[conversational, curious] Pourquoi les lames n'ont pas scellé le puits ? Un tube plié. Mais tout avait commencé par deux cadrans. [short pause] Toi, en commentaire : mille quatre cents d'un côté, zéro de l'autre... tu valides, ou tu arrêtes tout ?",
+      "text": "Pourquoi les lames n'ont pas scellé le puits ? Un conduit plié. Mais tout avait commencé par deux cadrans. Toi, en +commentaire+ : [1 400|mille quatre cents] d'un côté, zéro de l'autre… tu valides, ou tu arrêtes tout ?",
+      "vo": "[conversational, curious] Pourquoi les lames n'ont pas scellé le puits ? Un conduit plié. Mais tout avait commencé par deux cadrans. [short pause] Toi, en commentaire : mille quatre cents d'un côté, zéro de l'autre... tu valides, ou tu arrêtes tout ?",
       "voir": "Le tube plié dans les lames, puis raccord sur les deux cadrans de 19:55 (1 400 / 0) ; deux camps en duel sous les cadrans : « je valide » / « j'arrête tout »."
     },
     {
@@ -233,7 +234,7 @@
     "fermer": "promesse:fermer",
     "sceller": "promesse:sceller",
     "toprincipe": "principe-0.12",
-    "tube1": "principe:tube",
+    "tube1": "principe:conduit",
     "boue1": "principe:boue",
     "pese": "principe:poids",
     "gaz1": "principe:gaz",
@@ -302,7 +303,7 @@
     "coule": "issue:coule",
     "barils": "issue:barils",
     "todepuis": "depuis-0.14",
-    "deux": "depuis:deux",
+    "deux": "depuis:jeux-0.12",
     "centre2": "depuis:centre",
     "expert": "depuis:expert",
     "tocta": "comment-0.14",
@@ -315,10 +316,34 @@
     "chaque": "abo:chaque",
     "lache": "abo:lâché",
     "toloop": "boucle-0.12",
-    "rewind": "boucle:soir"
+    "rewind": "boucle:soir",
+    "avant58": "t9:Avant",
+    "jours": "issue:plateforme-0.3",
+    "mois": "issue:puits-0.35",
+    "minutes": "promesse:minutes",
+    "remplace": "t1:remplace",
+    "entre": "t3:entre",
+    "sauf": "t6:Sauf",
+    "celui": "t8:celui",
+    "rien": "t8:Rien",
+    "letube": "defaut:conduit-0.18",
+    "boitier": "pire:boîtier",
+    "lautre": "pire:l'autre",
+    "cisaillement": "depuis:cisaillement",
+    "mais": "comment:Mais"
   },
   "bedVolume": 0.8,
   "sfx": [
+    {
+      "type": "clack",
+      "at": "jours",
+      "gain": -16
+    },
+    {
+      "type": "clack",
+      "at": "mois",
+      "gain": -16
+    },
     {
       "type": "drone",
       "gain": -25,
@@ -387,19 +412,19 @@
     },
     {
       "type": "hit",
-      "at": "choc+0.5",
+      "at": "accroche$+0.06",
       "gain": -15,
       "pitch": 0.9
     },
     {
       "type": "hit",
-      "at": "sceller+0.6",
+      "at": "promesse$+0.08",
       "gain": -15,
       "pitch": 0.85
     },
     {
       "type": "click",
-      "at": "dix1+0.5",
+      "at": "piege:Retiens-0.25",
       "gain": -17,
       "pitch": 1.1
     },
@@ -445,7 +470,7 @@
     },
     {
       "type": "clack",
-      "at": "t9-0.17",
+      "at": "avant58-0.17",
       "gain": -12
     },
     {
@@ -455,13 +480,8 @@
       "pitch": 0.8
     },
     {
-      "type": "hit",
-      "at": "dix2+0.5",
-      "gain": -15
-    },
-    {
       "type": "impact",
-      "at": "tient-0.5",
+      "at": "t6:Cette-0.24",
       "gain": -14,
       "size": 0.8
     },
@@ -502,7 +522,7 @@
     },
     {
       "type": "rewind",
-      "at": "rewind",
+      "at": "boucle:à-0.3",
       "gain": -20
     }
   ]

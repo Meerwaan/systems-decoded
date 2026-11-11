@@ -7,99 +7,76 @@
     <link rel="stylesheet" href="gen/brand.css" />
     <script src="gen/gsap.min.js"></script>
     <style>
-      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
-         kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
-
-      /* le second compteur de l'en-tête (.hud__count est signal par défaut) */
-      #hud-count { color: var(--ink); }
-      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
-      #chip-toi { color: var(--ink); }
-      #chip-coeur { color: var(--veille); }
+      /* Les dispositifs récurrents (en-tête du Compte à rebours, étiquettes, appels) sont stylés dans kit/brand.css
+         ([data-serie="compte-a-rebours"]). Ici : la couleur de chaque étiquette de CE film, fixée par identifiant (.chip--live est alarme). */
+      #chip-tube, #chip-bilan { color: var(--papier); }
+      #chip-ligne, #chip-22, #chip-fuite { color: var(--alarme); }
+      #chip-reussi, #chip-10, #chip-regle { color: var(--veille); } /* chip-reussi vire à l'alarme sur « Il ne l'était pas » (acte2.js) */
+      .chip i { display: block; font: 600 24px/1.3 var(--mono); color: var(--papier); font-style: normal; margin-top: 6px; }
+      #hud-remain { color: rgb(255, 107, 107); }
+      #chip-regle, #chip-fuite { white-space: normal; flex-wrap: wrap; max-width: 820px; } #chip-regle i, #chip-fuite i { flex-basis: 100%; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="154.433" data-width="1080" data-height="1920">
+    <div id="root" data-serie="compte-a-rebours" data-phase="nuit" data-composition-id="main" data-start="0" data-duration="156.2" data-width="1080" data-height="1920">
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
       <div id="title-shade"></div>
       <svg id="leaders" viewBox="0 0 1080 1920"></svg>
 
+      <!-- l'en-tête du Compte à rebours (kit/brand.css [data-serie="compte-a-rebours"], piloté par crHud dans main.js) :
+           l'étiquette à gauche, le nom du compte à droite, l'HEURE RÉELLE au centre (ambre), le temps qui reste dessous (alarme) -->
       <header id="hud">
-        <div class="hud__tag"><i class="hud__dot"></i><span>Compte à rebours 02</span></div>
-        <div class="hud__title" id="hud-title">Deepwater Horizon</div>
-        <div class="hud__clock" id="hud-clock">T−3,0 s</div>
-        <div class="hud__count" id="hud-count"><span id="hud-count-l">Mesure</span><b id="hud-count-v">0</b></div>
-        <div class="hud__rule"></div>
-        <nav class="hud__acts">
+        <div class="hud__tag"><i class="hud__dot"></i><span id="hud-tag">Compte à rebours · 02</span></div>
+        <em class="hud__brand" id="hud-brand">Système Décodé</em>
+        <i class="hud__burst" id="hud-burst"></i>
+        <div class="hud__clock" id="hud-clock">21:40</div>
+        <div class="hud__remain" id="hud-remain">T−9 min</div>
+        <nav class="hud__acts" id="hud-acts">
           <span>01 L'heure</span><span>02 Le défaut</span><span>03 Depuis</span>
-          <em class="hud__brand">Système Décodé</em>
         </nav>
       </header>
 
-      <!-- 01 · MENACE (acte1.js) -->
-      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <!-- Pas de pièce du dossier dans ce film : le rapport du CSB n'a été lu que par extraits ; aucune page n'est citée telle quelle (docs/journal/CR02-architecte.md). -->
 
-      <!-- 02 · AUTOPSIE (acte2.js) -->
-      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>En veille</b></div>
+      <!-- LES CHIFFRES QUE L’IMAGE NE MONTRE PAS (une étiquette à la fois, zone haute 436–790 ; chip(id, null, 96, 470, de, à)) -->
+      <div id="chip-10" class="chip chip--live"><span>D'habitude, on referme</span><b>≈ 10</b><i>barils par minute</i></div>
+      <div id="chip-tube" class="chip chip--live"><span>19 h 55 · le conduit</span><b>1 400 psi</b></div>
+      <div id="chip-ligne" class="chip chip--live"><span>La ligne</span><b>0 psi</b></div>
+      <div id="chip-reussi" class="chip chip--live"><span>Le test</span><b>Jugé réussi</b></div>
+      <div id="chip-22" class="chip chip--live"><span>21 h 31 · ça entre à</span><b>≈ 22</b><i>barils par minute</i></div>
+      <div id="chip-bilan" class="chip chip--live"><span>20 avril 2010</span><b>11 morts</b></div>
+      <div id="chip-fuite" class="chip chip--live"><span>Près de trois mois de fuite</span><b>≈ 4,9 millions</b><i>de barils</i></div>
+      <div id="chip-regle" class="chip chip--live"><span>Depuis 2016 · États-Unis</span><b>2 jeux de lames</b><i>conduit centré · coupe vérifiée</i></div>
 
-
-      <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
-
-      <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
-      <div id="retitle">
-        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
-        <div id="retitle-main">
-          <span id="retitle-slot">
-            <span id="retitle-a">L'idée reçue<i id="retitle-strike"></i></span>
-            <span id="retitle-b" class="is-veille">La vérité</span>
-          </span>
-        </div>
-      </div>
-
-      <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
+      <!-- appels à l’action (fin.js) : désignent l’interface, ne la remplacent pas. Pas de like dans ce format. -->
       <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
-      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
       <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
 
-      <section id="net" class="panel">
-        <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 personne</span></div>
-        <div id="net-grid"><i id="net-wave"></i></div>
-      </section>
-
+      <!-- abo : le prochain compte à rebours, que la voix ne nomme pas (le rapport final de l’affaire prévue n’est pas publié) :
+           le titre reste caviardé ; le fait est la promesse du format, dite par la voix -->
       <section id="next">
-        <div class="panel__h"><span>Prochain dossier · 000</span><span>Classé</span></div>
-        <div id="next-title"><span id="next-redact"></span></div>
-        <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
-        <div id="next-fact"><span>Un fait, un seul.</span></div>
-        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+        <div class="panel__h"><span>Prochain compte à rebours · 03</span><span>Classé</span></div>
+        <div id="next-title"><span>Dossier classé</span><span id="next-redact"></span></div>
+        <div id="next-fact"><span>Un vrai accident. La sécurité qui a lâché.</span></div>
+        <div id="next-cta"><span>S’abonner pour l’ouvrir</span><span>+</span></div>
       </section>
 
-      <!-- hors-série (filmCall) : le long vers lequel la promo envoie — le mot YouTube, jamais son logo -->
-      <section id="film">
-        <div class="panel__h"><span>Film complet</span><span id="film-length">0 min 00</span></div>
-        <div id="film-title">Le titre</div>
-        <div id="film-bar"><i></i></div>
-        <div id="film-where"><span>Sur YouTube</span><span>Système Décodé</span></div>
-      </section>
-
-      <!-- la question du commentaire posée en DEUX réponses (duelCall, fin.js) : chacune s'allume quand la voix la dit, le film ne
-           répond jamais à la place du spectateur — prendre parti fait commenter. Une question fermée à deux issues seulement. -->
+      <!-- la question du commentaire en DEUX réponses (duelCall, fin.js, toneA ET toneB null : aucune ne s’allume d’une couleur
+           qui répondrait à la place du spectateur — le défaut de duelCall est vert pour B) -->
       <div id="duel">
         <div class="kicker">La tienne ?</div>
-        <div id="duel-row"><span id="duel-a" class="duel__opt">Réponse A</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Réponse B</span></div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">Je valide</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">J’arrête tout</span></div>
         <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
-      </div>
-      <div id="cta-field">
-        <div class="kicker">La question de l'accroche ?</div>
-        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de lettres) -->
-        <div id="cta-field-v"><span id="cta-typed" class="is-veille">RÉPONSE</span><span id="cta-caret"></span></div>
       </div>
 
       <div id="callouts" class="layer"></div>
       <div id="hook"></div>
       <div id="captions"></div>
       <div id="flash" class="layer"></div>
+      <!-- le grain de film, sur tout le cadre (reconstitution.js le déplace image par image, sur le temps du film) -->
+      <div id="grain" class="layer"></div>
 
       <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
       <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>

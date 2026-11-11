@@ -1,0 +1,156 @@
+{
+ "phrases": [
+  "accroche",
+  "promesse",
+  "principe",
+  "bop"
+ ],
+ "film": {
+  "accroche": {
+   "score": 2.84,
+   "flags": [],
+   "mood": "tendu",
+   "register": -3.011858079167884,
+   "spread": 2.7373525814723267,
+   "rate": 20.253164556962023,
+   "pause": 0.25000000000000006,
+   "seconds": 2.6719999999999997,
+   "level": -0.06901264789880912,
+   "lift": 0,
+   "clip": "audio/takes/b1ca68c5/cut/take-21.accroche.mp3"
+  },
+  "promesse": {
+   "score": 3.19,
+   "flags": [
+    "question qui tombe"
+   ],
+   "mood": "conversational, curious",
+   "register": 0.9226212255578186,
+   "spread": 3.594838029572202,
+   "rate": 17.424242424242422,
+   "pause": 0.2800000000000001,
+   "seconds": 6.3469999999999995,
+   "level": -0.15727022365638277,
+   "lift": 0,
+   "clip": "audio/takes/b1ca68c5/cut/take-21.promesse.mp3"
+  },
+  "principe": {
+   "score": 4.5,
+   "flags": [],
+   "mood": "conversational, curious",
+   "register": 1.1679770201667754,
+   "spread": 5.107192550611956,
+   "rate": 17.96116504854369,
+   "pause": 0.2900000000000001,
+   "seconds": 7.1309999999999985,
+   "level": 0.5004048278293567,
+   "lift": 0,
+   "clip": "audio/takes/b1ca68c5/cut/take-21.principe.mp3"
+  },
+  "bop": {
+   "score": 3.91,
+   "flags": [],
+   "mood": "firm, matter-of-fact",
+   "register": 0.5408939200048454,
+   "spread": 3.9119030397026817,
+   "rate": 17.77408637873754,
+   "pause": 0.2700000000000001,
+   "seconds": 7.139999999999997,
+   "level": 0.2675875735851214,
+   "lift": 0,
+   "clip": "audio/takes/b1ca68c5/cut/take-21.bop.mp3"
+  }
+ },
+ "essais": [
+  {
+   "nom": "suite-curious",
+   "note": "passage entier, [curious] au lieu de [conversational, curious]",
+   "stability": 0.4,
+   "model": "eleven_v4_turbo",
+   "rows": [
+    {
+     "id": "accroche",
+     "register": -3.1736646968689004,
+     "level": -1.5274628140155784,
+     "rate": 5.321915084338924,
+     "spread": 2.814507238625563,
+     "pause": 0.24000000000000007,
+     "flags": []
+    },
+    {
+     "id": "promesse",
+     "register": 0.6401629264218052,
+     "level": -0.7643986868140544,
+     "rate": -3.999338365324512,
+     "spread": 3.245610107513175,
+     "pause": 0.3900000000000002,
+     "flags": []
+    },
+    {
+     "id": "principe",
+     "register": 1.45041168494904,
+     "level": -0.06321902758054421,
+     "rate": -6.352731088098695,
+     "spread": 4.801308340175972,
+     "pause": 0.35000000000000014,
+     "flags": []
+    },
+    {
+     "id": "bop",
+     "register": 0.7749169600763947,
+     "level": -0.26523713800837356,
+     "rate": -4.655913481536267,
+     "spread": 3.7629680990003753,
+     "pause": 0.3200000000000001,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\CR02-deepwater\\audio\\essais\\CR0-essai-suite-curious.mp3"
+  },
+  {
+   "nom": "suite-nue",
+   "note": "passage entier, aucune balise sur les deux phrases conversationnelles",
+   "stability": 0.4,
+   "model": "eleven_v4_turbo",
+   "rows": [
+    {
+     "id": "accroche",
+     "register": -2.8320224440576918,
+     "level": -2.246040080089532,
+     "rate": 7.013833398946789,
+     "spread": 2.6212292419315206,
+     "pause": 0.26000000000000006,
+     "flags": []
+    },
+    {
+     "id": "promesse",
+     "register": -1.1368464531767333,
+     "level": 0.6978683790762581,
+     "rate": -7.3097060078995195,
+     "spread": 3.6946634075073876,
+     "pause": 0.5500000000000003,
+     "flags": []
+    },
+    {
+     "id": "principe",
+     "register": 0.4857373055492378,
+     "level": 1.1038197640941547,
+     "rate": -3.417080025029695,
+     "spread": 4.941712249314251,
+     "pause": 0.5000000000000002,
+     "flags": []
+    },
+    {
+     "id": "bop",
+     "register": 1.3594632224781678,
+     "level": 1.0577771644114051,
+     "rate": -2.9422125800606103,
+     "spread": 3.845319094701956,
+     "pause": 0.46000000000000024,
+     "flags": []
+    }
+   ],
+   "listen": "C:\\Users\\merwa.ORDI-MERWAN\\Documents\\systems-decoded\\episodes\\CR02-deepwater\\audio\\essais\\CR0-essai-suite-nue.mp3"
+  }
+ ]
+}
