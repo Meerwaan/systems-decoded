@@ -9,28 +9,29 @@
   "voice": {
     "name": "Eric",
     "voiceId": "9osbeK6KzhDRV0yX4rTq",
-    "model": "eleven_v4_turbo",
+    "model": "eleven_v4",
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21
+    "seed": 21,
+    "language": "fr"
   },
   "cover": {
-    "at": "eclate$",
+    "at": "eclate:matelas",
     "title": [
       "Le bouclier",
       "de l'ISS"
     ],
     "cam": {
       "tx": 0,
-      "ty": 8,
-      "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
+      "ty": 0,
+      "tz": 9,
+      "d": 230,
+      "az": -58,
+      "el": 34,
       "shift": -430,
       "side": 0,
-      "fov": 28,
+      "fov": 30,
       "roll": 0
     }
   },
@@ -86,7 +87,11 @@
     "15 novembre 2021 : un missile antisatellite russe à tir direct détruit le satellite Kosmos 1408 ; plus de 1 500 fragments suivis ; les sept membres d'équipage (4 NASA, 2 cosmonautes, 1 ESA) s'abritent dans Crew Dragon et Soyouz — NASA, communiqué RELEASE21-156 [P, lu en résumé] ; Spaceflight Now, 15/11/2021 [S]. On ne dit pas si le bouclier aurait arrêté un morceau de ce nuage.",
     "Épinglé : un éclat d'environ 7 mm dans une vitre de la Cupola (vers avril 2016), dû à un fragment, peut-être de peinture ou de métal, de quelques millièmes de millimètre — ESA citée par VOA et ScienceAlert [S].",
     "Like : « plus c'est épais, plus ça protège », l'idée reçue que contredit TP-2003-210788 (une plaque unique concentre l'énergie en un point ; le Whipple pèse bien moins pour la même protection) [P].",
-    "Description YouTube : Fred Whipple propose le pare-météorites dans les années 1940 — NASA TP-2003 / HVIT [P] ; article « Meteorites and Space Travel », Astronomical Journal, 1947 — résumé ADS [S]."
+    "Description YouTube : Fred Whipple propose le pare-météorites dans les années 1940 — NASA TP-2003 / HVIT [P] ; article « Meteorites and Space Travel », Astronomical Journal, 1947 — résumé ADS [S].",
+    "Échelle : la station, le module, le bouclier et la bille sont à leur taille vraie ; la Terre (dôme de studio du 026, à 400 km), la distance du nuage de Kosmos 1408, l'écart de la manœuvre « d'un cheveu » et le char du prochain dossier sont des maquettes — aucune grandeur n'y est mesurée à l'écran.",
+    "En-tête : le compte à rebours est le temps qu'il reste à la bille, à 10 km/s (la voix), pour la distance montrée à l'image (1 cm ≈ 1 µs) ; après le contact, le temps que met le nuage à traverser les dix centimètres à cette vitesse (≈ 10 µs, calcul) — reconstitution.",
+    "Le miroir (« la même bille sur une plaque unique ») : une plaque d'aluminium de même épaisseur que la tôle et la coque réunies, percée en un point — reconstitué d'après TP-2003-210788 §3.1 (une plaque unique encaisse l'énergie en un point très localisé).",
+    "La balle de fusil laissée sur place, le balayage radar qui ne l'accroche pas, la bille d'un centimètre contre la balle de baseball : images de la voix, reconstituées."
   ],
   "beats": [
     {
@@ -203,15 +208,67 @@
   ],
   "cues": {
     "choc": "accroche:tête",
+    "frappe": "accroche:frapper",
+    "tole1": "promesse:tôle",
+    "cm1": "promesse:centimètre",
+    "caches": "promesse:caches",
+    "cm2": "scene:centimètre",
+    "vu": "scene:vu",
+    "balle": "scene:balle",
+    "paroi": "scene:paroi",
+    "air": "scene:air",
+    "dors": "scene:dors",
+    "tole2": "scene:tôle",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
-    "tozero": "zero-0.12",
+    "alu": "eclate:d'aluminium",
+    "matelas": "eclate:matelas",
+    "kevlar": "eclate:kevlar",
+    "coque": "eclate:coque",
+    "coeur": "eclate:cœur",
+    "vide": "eclate:vide",
+    "perce1": "principe:perce",
+    "brise1": "principe:brise",
+    "etale": "principe:s'étale",
+    "pluie": "principe:pluie",
+    "pasballe": "principe:pas",
+    "avant": "repos:l'avant",
+    "arrete": "repos:arrête",
+    "tien": "repos:tien",
+    "tozero": "repos$+0.1",
+    "contact": "zero:Contact",
+    "million": "zero:million",
+    "perce": "reponse:perce",
+    "brise": "reponse:brise",
+    "gouttes": "reponse:Gouttes",
+    "nuage": "reponse:nuage",
+    "ceramique": "reponse:céramique",
+    "encaisse": "reponse:encaisse",
     "trigger": "reponse:tient-0.05",
     "toverdict": "chute-0.12",
+    "blindee": "chute:blindée",
     "verdict": "chute:pas",
+    "esquive": "chute:esquive",
+    "voit": "chute:voit",
     "tocta": "comment-0.12",
+    "annee": "comment:2021",
+    "missile": "comment:missile",
+    "morceaux": "comment:morceaux",
+    "astronautes": "comment:astronautes",
+    "capsules": "comment:capsules",
+    "commentaire": "comment:commentaire",
+    "duelA": "comment:gros",
+    "duelB": "comment:petit",
+    "epais": "like:épais",
+    "protege": "like:protège",
+    "prochain": "abo:prochain",
+    "char": "abo:char",
+    "toit": "abo:toit",
+    "sauver": "abo:sauver",
     "toloop": "boucle-0.12",
-    "rewind": "boucle:ici"
+    "rewind": "boucle:ici",
+    "toduo": "comment:capsules+0.56",
+    "toabo": "abo-0.12"
   },
   "bedVolume": 0.8,
   "sfx": [
@@ -232,8 +289,12 @@
           0.9
         ],
         [
-          "trigger",
+          "contact",
           1
+        ],
+        [
+          "trigger",
+          0.6
         ],
         [
           "toverdict",
@@ -263,9 +324,72 @@
     },
     {
       "type": "swish",
-      "at": 0.14,
-      "dur": 0.3,
+      "at": 0,
+      "dur": 0.24,
       "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "accroche:tête+0.36",
+      "gain": -15
+    },
+    {
+      "type": "hit",
+      "at": "accroche:frapper+0.44",
+      "gain": -17,
+      "pitch": 0.8
+    },
+    {
+      "type": "click",
+      "at": "promesse:coque+0.28",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "promesse:millimètres+0.56",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "promesse:caches+0.30",
+      "gain": -15
+    },
+    {
+      "type": "click",
+      "at": "scene:centimètre+0.64",
+      "gain": -17
+    },
+    {
+      "type": "swish",
+      "at": "scene:vu+0.24",
+      "dur": 0.28,
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "scene:balle+0.32",
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "scene:paroi+0.40",
+      "gain": -18,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "scene:air+0.40",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "scene:dors+0.40",
+      "gain": -19
+    },
+    {
+      "type": "click",
+      "at": "scene:tôle+0.24",
+      "gain": -17
     },
     {
       "type": "suck",
@@ -281,28 +405,165 @@
     },
     {
       "type": "impact",
-      "at": "explode",
+      "at": "ouvre:l'ouvre+0.40",
       "gain": -16,
       "size": 0.8
     },
     {
-      "type": "impact",
-      "at": "tozero",
-      "gain": -12,
-      "size": 1.2
+      "type": "click",
+      "at": "eclate:d'aluminium+0.67",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:kevlar+0.48",
+      "gain": -17
+    },
+    {
+      "type": "swish",
+      "at": "promesse:où+0.45",
+      "dur": 0.26,
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:cœur$+0.17",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "eclate:vide+0.32",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "principe:vide+0.20",
+      "gain": -18
     },
     {
       "type": "impact",
-      "at": "trigger",
+      "at": "principe:nuage+0.40",
+      "gain": -17,
+      "size": 0.7
+    },
+    {
+      "type": "click",
+      "at": "principe:s'étale+0.56",
+      "gain": -18
+    },
+    {
+      "type": "hit",
+      "at": "principe:pluie+0.36",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "principe:balle+0.32",
+      "gain": -15
+    },
+    {
+      "type": "click",
+      "at": "repos:station+0.28",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "repos:tien+0.32",
+      "gain": -16
+    },
+    {
+      "type": "impact",
+      "at": "tozero",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "impact",
+      "at": "zero:contact+0.12",
       "gain": -10,
       "size": 1.4
     },
     {
+      "type": "hit",
+      "at": "zero:l'air+0.30",
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "reponse:perce+0.40",
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "reponse:brise+0.48",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "reponse:fondu+0.48",
+      "gain": -18
+    },
+    {
+      "type": "swish",
+      "at": "reponse:vide+0.32",
+      "dur": 0.25,
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "reponse:encore+0.40",
+      "gain": -17
+    },
+    {
+      "type": "impact",
+      "at": "reponse:encaisse+0.56",
+      "gain": -14,
+      "size": 1
+    },
+    {
+      "type": "impact",
+      "at": "reponse:tient+0.32",
+      "gain": -15,
+      "size": 0.8
+    },
+    {
       "type": "blip",
-      "at": "verdict",
+      "at": "chute:esquive+0.56",
       "gain": -15,
       "pitch": 0.7,
       "heavy": true
+    },
+    {
+      "type": "swish",
+      "at": "chute:voit+0.36",
+      "dur": 0.5,
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "comment:au-dessus+0.36",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "comment:capsules+0.48",
+      "gain": -17
+    },
+    {
+      "type": "click",
+      "at": "comment:commentaire+0.56",
+      "gain": -18
+    },
+    {
+      "type": "impact",
+      "at": "like:épais+0.32",
+      "gain": -17,
+      "size": 0.7
+    },
+    {
+      "type": "hit",
+      "at": "abo:abonne-toi+0.43",
+      "gain": -17
     },
     {
       "type": "impact",
@@ -312,8 +573,8 @@
     },
     {
       "type": "rewind",
-      "at": "rewind",
-      "dur": 1,
+      "at": "boucle$+0.02",
+      "dur": 0.7,
       "gain": -21
     }
   ]
