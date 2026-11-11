@@ -180,11 +180,43 @@
       "tiktok": "2026-11-05T18:25",
       "youtube": "2026-11-05T19:14"
     },
+    "038-sous-marin": {
+      "tiktok": "2026-11-06T17:09",
+      "instagram": "2026-11-06T18:41",
+      "youtube": "2026-11-07T08:57"
+    },
+    "039-cendrier-reacteur": {
+      "tiktok": "2026-11-07T22:43",
+      "instagram": "2026-11-07T22:43",
+      "youtube": "2026-11-08T22:06"
+    },
+    "040-abri-anti-feu": {
+      "youtube": "2026-11-08T22:18",
+      "instagram": "2026-11-08T22:18",
+      "tiktok": "2026-11-08T22:19"
+    },
+    "041-bouclier-iss": {
+      "tiktok": "2026-11-09T21:46",
+      "instagram": "2026-11-09T21:49",
+      "youtube": "2026-11-10T16:59"
+    },
+    "042-toit-du-char": {
+      "tiktok": "2026-11-10T17:47",
+      "instagram": "2026-11-11T10:24",
+      "youtube": "2026-11-11T10:24"
+    },
     "C01-ta-voiture": {
       "youtube": "2026-11-05T21:04"
     },
     "CR01-tchernobyl": {
-      "instagram": "2026-11-05T21:04"
+      "instagram": "2026-11-05T21:04",
+      "tiktok": "2026-11-07T08:56",
+      "youtube": "2026-11-07T08:57"
+    },
+    "CR02-deepwater": {
+      "tiktok": "2026-11-11T10:27",
+      "instagram": "2026-11-11T15:23",
+      "youtube": "2026-11-11T15:23"
     },
     "HS01-pare-brise": {
       "tiktok": "2026-10-16T17:37",
@@ -225,6 +257,9 @@
     },
     "L05-hudson": {
       "youtube": "2026-11-03T17:18"
+    },
+    "L06-blackout": {
+      "youtube": false
     }
   }
 }

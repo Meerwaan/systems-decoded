@@ -33,9 +33,9 @@
     },
     "2026-11-06": {
       "tiktok": {
-        "abonnes": 2379,
-        "likes": 28100,
-        "videos": 42
+        "abonnes": 2386,
+        "likes": 28200,
+        "videos": 43
       },
       "youtube": {
         "abonnes": 1160,
@@ -45,7 +45,92 @@
       "instagram": {
         "abonnes": 41000,
         "approx": true,
-        "videos": 42
+        "videos": 43
+      }
+    },
+    "2026-11-07": {
+      "youtube": {
+        "abonnes": 1180,
+        "approx": true,
+        "videos": 49
+      },
+      "tiktok": {
+        "abonnes": 2392,
+        "likes": 28800,
+        "videos": 45
+      },
+      "instagram": {
+        "abonnes": 41000,
+        "approx": true,
+        "videos": 44
+      }
+    },
+    "2026-11-08": {
+      "youtube": {
+        "abonnes": 1190,
+        "approx": true,
+        "videos": 51
+      },
+      "tiktok": {
+        "abonnes": 2419,
+        "likes": 29200,
+        "videos": 46
+      },
+      "instagram": {
+        "abonnes": 41000,
+        "approx": true,
+        "videos": 45
+      }
+    },
+    "2026-11-09": {
+      "tiktok": {
+        "abonnes": 2416,
+        "likes": 29300,
+        "videos": 47
+      },
+      "youtube": {
+        "abonnes": 1190,
+        "approx": true,
+        "videos": 52
+      },
+      "instagram": {
+        "abonnes": 42000,
+        "approx": true,
+        "videos": 47
+      }
+    },
+    "2026-11-10": {
+      "youtube": {
+        "abonnes": 1200,
+        "approx": true,
+        "videos": 53
+      },
+      "instagram": {
+        "abonnes": 42000,
+        "approx": true,
+        "videos": 48
+      },
+      "tiktok": {
+        "abonnes": 2463,
+        "likes": 29500,
+        "videos": 48
+      }
+    },
+    "2026-11-11": {
+      "instagram": {
+        "abonnes": 42000,
+        "approx": true,
+        "videos": 48
+      },
+      "tiktok": {
+        "abonnes": 2507,
+        "likes": 29700,
+        "videos": 49
+      },
+      "youtube": {
+        "abonnes": 1200,
+        "approx": true,
+        "videos": 53
       }
     }
   }
