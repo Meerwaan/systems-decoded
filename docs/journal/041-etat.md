@@ -1,0 +1,39 @@
+# 041 bouclier de l'ISS — état (chef de production)
+
+Consigne : de l'architecte au film rendu (sort lundi 09/11 20 h). Voix faite le 08/11 (eleven_v4, une prise, 92,9 s) : n'y pas toucher, aucun crédit. « MÊME TON PARTOUT » et « question qui tombe » laissés à Merwan. `abo` annonce le 042 (toit du char). Caméra en plan-séquence (comme 039/040/CR02) dans chaque consigne d'acte et de retoucheur ; mesure `npm run camera -- 041`. Planches dans .cache/planches/041/. Rien de commité.
+
+## Fait
+- 08/11 02:22 UTC : chrono `decors` ; jauge 10 % / hebdo 19 % (remise fenêtre 07:10 UTC). Aucun décor spatial au catalogue → tout neuf.
+
+## En vol
+- architecte (lancé 02:24 UTC)
+
+## Reste
+architecte → décors → décorateur → image 0 → actes-maj → actes ×4 → relecture → check → brouillon + qa → retouches → render → qa → camera → cover → phone → posts.mjs
+- 02:52 architecte a0f46b90841c09da9 rendu (0,39 M, 29 min, 60 outils). Décors neufs : whipple.js (système plein), station.js (ISS rayons X) ; Terre = 026 sky.js importé. Actes : acte1 0→20,54 · acte2 →31,41 · acte2b →47,34 · acte3 →61,45 · fin →92,87. Candidates image 0 : docs/041-actes.md § « Les candidates » (a : el −4 fov 48 ; b la mieux notée mais bille cachée, regarder en biais ; d shift −260).
+- 02:53 jauge 36 % / hebdo 23 % (fenêtre +26 pts pendant l'architecte). Vague décors lancée : whipple + station.
+- 03:2x décors rendus : whipple afeb5b36815ba7e60 (0,37 M, 31 min), station aaa05f9b7a6b213d8 (0,37 M, 30 min). « À changer ailleurs » appliqués (GAUGE10.y −8, KOSMOS.along, VIEW cone/gap/pair/billeClose/shelter/shelterSoyuz/kosmos).
+- Image 0 : 5 planches (.cache/planches/041/image0*.jpg) → q2 retenue (5/6) : POSE0 az −30 d 520 el −10 ; FIRST dist 100, cabin 0.4, litBumper 0.6. docs/041-actes-maj.md écrit. Défaut connu : coupon en orbite = plaque grise lavande.
+- 03:30 jauge 57 % / hebdo 26 % (≈ 10 pts par agent par demi-heure mesurés, pas 9/h) → vague de 3 : decorateur (station) + acte2b + acte3. Reste ensuite acte1, acte2, fin (après la remise de 07:10 si la jauge > 75 %).
+- 03:47 rendus : décorateur a534942bdf7d5564d (0,27 M, 13 min ; villes/nuages sur second dôme, objets du labo), acte2b aae20f0da00f4f2df (0,29 M), acte3 a2b6184b3f1b71823 (0,28 M). flown d'acte2b gardé tel quel (0 → 24, la Terre s'arrête sur « tien », choix de l'acte). Jauge 67 % / 27 %.
+- Vague acte1 + acte2 + fin lancée (consignes : acte2 dernière clé à t.principe − 0.12 ; fin : coupe toverdict sur VIEW.cabin {STAGED, burst 1, molten 1, cabin 0.6, mood 0, dist 0, shock 1} + flown → 175 jusqu'au like).
+- 04:10 rendus : acte1 acaa4fc3cc10b5988 (0,31 M, 20 min), acte2 a9ffb889a28146aed (0,25 M), fin ab2ebc97c5bf1b783 (0,28 M). camera : 0 % quasi fixe, aucune plage fixe. sfx : click eclate → « cœur$+0.17 », swish « promesse:où+0.45 » ajouté. Relecture en cours.
+- À revoir au brouillon (agents) : 15,7–16,0 sortie de paroi (acte1) ; 43,5–44,3 plongée (2b) ; 59,75–60,6 traversée cabine (acte3) ; 65,4 trait diagonal, 69,9 équipage illisible (fin) ; 29,45 fermeture (acte2).
+- 04:14 relecture : 6 planches .cache/planches/041/relecture/p1–p6.jpg ; check ✓ (67/67 contraste, 1 ⚠ bord gauche) ; brouillon renders/041-bouclier-iss-draft.mp4 ; qa : voix calée 0 ms, −14,04 LUFS ; 1 image parasite 84,07 ; heurtés 43,0 (31,9) · 62,7 · 15,3 · 61,2 · 92,6 · 40,7 ; 1re demi-seconde 1,3 ; swish « chute:voit » déplacé à « chute$+0.04 » (fait). Boucle 92,85 = 0,02 ✓.
+- 04:15 jauge 79 % / hebdo 28 % → vague de 4 retoucheurs impossible (> 85 %). EN FILE : reprise à 07:10 UTC.
+
+## Vague de retouches à lancer (4 `retoucheur`, une consigne par fichier, + la ligne plan-séquence)
+- **acte1.js** (journal docs/journal/041-acte1.md) : (1) 1re demi-seconde mouvement 1,3 → viser ≥ 3 : caméra lancée dès l'image 1 depuis POSE0 (l'image 0 ne change pas) ; (2) 15,3 heurté 16,7 + 15,85 « Derrière ta paroi » : la tête en grosse boule et les bras en bâtons au premier plan → caméra plus loin de la tête, une personne qui dort, traversée plus douce ; (3) 18,6 « Tout repose » : une grande plaque grise translucide couvre le cadre et monte derrière l'en-tête → la tôle entière + la bille lisibles (comme à 20,0), rien derrière l'en-tête.
+- **acte2b.js** (041-acte2b.md) : (1) 43,0 heurté 31,9 (pire du film) + 44,0 « il arrête un centimètre » : la plongée sur Columbus donne une tache blanche illisible → plongée plus douce ou coupe dans le souffle, coupon veille lisible ; (2) 40,7 heurté 14,7 : la coupe sur l'ISS doit être une vraie coupe ; (3) 40,0 « pas » : cadre presque vide → la plaque-miroir percée et son jet, lisibles ; (4) 32,5 la paire trop petite à 270 px → plus près.
+- **acte3.js** (041-acte3.md) : 61,2 heurté 16,4 : le recul dans la cabine 59,75 → 61,45 (165 °/s) → plus doux, sans changer la pose rendue à fin.
+- **fin.js** (041-fin.md) : (1) image parasite 84,07 = l'éclair de la bille sur la plaque épaisse ne dure qu'une image → ≥ 4 images (fondu 0,15 s) ; (2) 82,0 début du like : cadre presque vide (sol vert, plaques hors champ) → la plaque épaisse et sa bille dès « Like » ; (3) 62,7 heurté 16,8 : sortie du labo 61–62 s (160–176 °/s) → plus doux ; (4) 92,6 heurté 16,3 : vérifier que c'est la coupe de la boucle et pas un mouvement ; (5) 65,4 trait clair en diagonale (bord de panneau) → hors cadre ; (6) 69,9 « tu te caches où » : l'équipage illisible à d 13 000 → plus près.
+- Ensuite : render, qa, camera, cover (acte2 propose : repère `eclate:matelas`, pose { tx 0, ty 0, tz 9, d 230, az −58, el 34, fov 30, shift 120 }, état BENCHED + explode 1, litBumper/litBlanket/litWall 1, litGap 0,8 — à juger sur planche), phone, posts.mjs (vérifier que 041 y est).
+- Jetons d'agents à 04:15 : ≈ 2,82 M (architecte 0,39 · décors 0,37 + 0,37 · habillage 0,27 · actes 0,31 + 0,25 + 0,29 + 0,28 + 0,28).
+
+## Reprise du 08/11 (chef n° 2, 07:13 UTC)
+- 07:14 vague de 4 retoucheurs (jauge 0 % / 29 %). 07:34 rendus : acte1 a626e1d4edda4f44f (0,23 M, 15 min ; coupe à 15,10, bille en expo.out dès l'image 1), acte2b a99b4245b9f366759 (0,22 M ; coupes 39,79 et 43,16), acte3 ac7b6a3fda1b97d6c (0,21 M ; recul adouci), fin a6f700913ca1f66aa (0,26 M ; éclair 5 images, coupes like−0,3 et avant « ta station »). « À changer ailleurs » : rien.
+- Chef : acte1 TOLE d 150→230, tole2 138→210, tobench 132→200 (tôle entière sous l'en-tête ; acte2 coupe à tobench, sans effet). acte2b : MIRROR_SHOT az −112 d 140 (+ ses clés), COUPON_SHOT az −125 d 220 tz 6 el 16, clé arrete+0,7 az −120 d 190 (trois quarts au lieu du profil en lame). Planches .cache/planches/041/relecture2/.
+- 07:37 check ✓ (67/67) ; camera 0 % quasi fixe, aucune plage fixe, 28 coupes. Jauge 12 % / 30 %. Reste : render → qa → cover → phone → posts.mjs.
+- 07:40–08:00 chef : son « chute$+0.04 » → « chute:voit+0.36 » (qa : sur « voit ») ; éclair de la plaque (fin.js) 0,18 → 0,42 s (parasite 84,10) ; LAB_OUT d 2600 → 1200 (62,2) ; acte2b station d 6000/5000 → 8000/6800 (42,2) ; acte1 caméra gardée sur la balle 13,8–15,1 (la bille la double ; plage lente 13–15 levée). **Boucle noire 91,0–92,4 au rendu** (pas au look ni au snap, déjà dans le brouillon du chef n° 1) : `fromD` retiré de D.loop (fin.js) → corrigé. Cut de boucle avec `flown: 0`.
+- 08:02 rendu final : qa ✓ (aucune image parasite, voix 0 ms, −14,04 LUFS, aucune plage lente, aucun son sur un mot, aucune image noire) ; heurtés max 14,6 (61,2) · 14,0 (42,2) ; camera 0 % quasi fixe, 28 coupes. Reste : cover → phone → posts.mjs.
+- 08:06 couverture refaite : repère `eclate:matelas`, cam tz 9 d 230 az −58 el 34 (les trois couches éclatées, proposition d'acte2) → renders/041-bouclier-iss-couverture.png ; copie iPhone 29,1 Mio ; posts.mjs : titre 93 car., Instagram 456 car. Jauge 15 % / 30 %. **Dossier livré** ; reste à Merwan : l'oreille (MÊME TON PARTOUT, question qui tombe) et la publication lundi 20 h. Rien de commité.
