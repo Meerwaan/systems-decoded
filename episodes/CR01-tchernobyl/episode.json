@@ -9,11 +9,12 @@
   "voice": {
     "name": "Eric",
     "voiceId": "9osbeK6KzhDRV0yX4rTq",
-    "model": "eleven_v4_turbo",
+    "model": "eleven_v4",
     "stability": 0.4,
     "similarity": 0.8,
     "speed": 1,
-    "seed": 21
+    "seed": 21,
+    "language": "fr"
   },
   "cover": {
     "at": "defaut$",
