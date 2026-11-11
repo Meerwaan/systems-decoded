@@ -1,0 +1,11 @@
+# 043 · ce que les décors ont changé (à lire avant `docs/043-actes.md`)
+
+1. **Image 0 = candidate « H1b »** (planche de quatre, 5/6) : `POSE0 = { tx: 0, ty: 2, tz: 0, d: 62, az: -77, el: 4.6, fov: 34 }`, œil entre bobine et culasse de l'aimant 0, le grain rouge et sa gerbe, le train en diagonale, les capteurs veille en haut. Le 6ᵉ point est à l'acte 1 : **`gap` tourne dès t = 0** (ease "none") et la gerbe vit dès l'image 1 ; à t = 0 un trou de wagon passe à x 76–128.
+2. **Poses remplacées dans `VIEW`** : `coil`, `hero` (le paquet héros est à s 100, plus à s 70), `monitor` (anneau.js) ; `blockFar`, `exitLit`, `exploded`, `kickers` (d 680), `gapFind` (az −132 : l'ancien filmait les cuves de profil), `fire`, `lineLong`, `lineRush`, `blockHero`, `dilution` (sortie.js). `faceClose`, `verdict`, `etrace` tiennent.
+3. **Le train de près est une barre blanche** : il ne se lit « train » que quand un trou de wagon passe — dans un plan serré, faire passer un trou (`gap`). De près les aimants se lisent par contours et brides.
+4. **La bobine chaude à `coil` 0,7 fait une bande rouge** plus qu'une tache : ne pas tenir longtemps à 0,7 en gros plan.
+5. **Le « e » suit `max(paint, dump·1,108 − 0,108)`** : le premier paquet touche la face à `dump` ≈ 0,098 ; à 0,6 le « e » en est à 0,557. `sweep` > 0 met les cuves en signal ; `crack` = fissures, jamais de trou ; `heat` reste orange.
+6. **`exploded` est petit** (40 m de système) : l'éclaté se lit en plan d'embranchement ; l'éventail du flot vers le « e » ne se voit qu'en gros plan ; dans `blockFar` et `exitLit` le tunnel de l'anneau entre dans le cadre.
+7. **Jamais vus en image après réglage** (à vérifier sur ta planche, ou poser autre chose) : `side`, `under`, `inpipe`, `train`, `trainLong`, la vague `sensors`, le fantôme `sweep`, `ringPulse`, `like`, la pierre → balle du teaser.
+8. **La boucle** : `cut` +12° puis `D.loop` **sans `fromD`** (le 041 a rendu noir de 91,0 à 92,4 s).
+9. **Habillage** (`src/habillage.js`) : le tunnel (ligne cryogénique, monorail, chemins de câbles, réglettes) suit `shell` et ne se voit que si un plan regarde un mur (`tally` plus bas, `el` −4, `ty` 40, par exemple) ; les lampes de la caverne suivent `cavern` et se lisent dans `blockFar` / `blockHero`.
