@@ -1,0 +1,359 @@
+{
+  "id": "CR04",
+  "serie": "compte-a-rebours",
+  "slug": "lac-megantic",
+  "title": "Lac-Mégantic",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "language": "fr"
+  },
+  "cover": {
+    "at": "t6$",
+    "title": [
+      "Lac-Mégantic",
+      "0 h 58"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Lac-Mégantic",
+    "caption": "Lac-Mégantic, la catastrophe ferroviaire du 6 juillet 2013 : à 0 h 58, un train de 72 wagons de pétrole, garé en haut d'une pente, démarre tout seul. Ses freins à main sont serrés. La nuit minute par minute, d'après l'enquête du BST. Toi : un train de pétrole garé la nuit, seul… tu trouves ça normal, ou pas ?",
+    "hashtags": [
+      "#lacmegantic",
+      "#train",
+      "#ferroviaire",
+      "#comptearebours",
+      "#apprendresurtiktok"
+    ],
+    "pinned": "Sans personne à bord, il a franchi 13 passages à niveau avant de dérailler. Toi : un train de pétrole garé seul la nuit… normal, ou pas ?",
+    "instagram": {
+      "caption": "Lac-Mégantic, 6 juillet 2013, 0 h 58 : un train de 72 wagons de pétrole, garé à Nantes, au Québec, démarre tout seul. Ses freins à main sont serrés.\n\nCompte à rebours 04 : la nuit minute par minute, d'après l'enquête du BST. Les sept freins à main, l'essai jugé réussi, le feu sur la locomotive de tête, le moteur qu'on coupe comme le veulent les consignes — et cinquante-neuf minutes plus tard, le départ. Tout est vrai, reconstitué en maquette.\n\nToi : ta locomotive fume, garée en pente… tu la laisses tourner, ou tu la coupes ?",
+      "hashtags": [
+        "#lacmegantic",
+        "#train",
+        "#histoire",
+        "#ingenierie",
+        "#comptearebours"
+      ]
+    },
+    "youtube": {
+      "title": "Lac-Mégantic, 0 h 58 : un train garé démarre tout seul… freins à main serrés",
+      "description": "Compte à rebours 04 — la nuit du 5 au 6 juillet 2013 à Nantes et Lac-Mégantic (Québec), reconstituée minute par minute d'après le rapport R13D0054 du Bureau de la sécurité des transports du Canada : le train garé en haut de la pente à 22 h 49, les sept freins à main, l'essai de 23 h 03, le feu de 23 h 40, le moteur coupé à 23 h 58 et l'air des freins qui fuit — puis le départ de 0 h 58 et la descente vers le centre-ville. Comment marchent les freins à air d'un train, pourquoi l'essai a réussi, et ce qui a changé depuis au Canada. Le rapport ne nomme personne et ne désigne aucun coupable.\n\nToi : ta locomotive fume, garée en pente… tu la laisses tourner, ou tu la coupes ?",
+      "hashtags": [
+        "#shorts",
+        "#lacmegantic",
+        "#train",
+        "#histoire",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "0 h 58 min 21 s : le train part (« run away »), sans personne à bord, freins à main serrés — BST, rapport d'enquête ferroviaire R13D0054, tableau 1, § 1.1 [P]",
+    "« Cinquante-neuf minutes plus tôt, on a coupé sa locomotive » : arrêt de la locomotive de tête à 23 h 58 min 42 s → départ 0 h 58 min 21 s = 59 min 39 s — R13D0054, tableau 1, annexe A [P] (calcul)",
+    "Frein indépendant des locomotives : la pression d'air dans le cylindre pousse les sabots sur les roues ; le compresseur entraîné par le moteur recharge le réservoir principal ; sans compresseur, l'air fuit lentement par les raccords ; le frein à main serre les sabots sans air — R13D0054 § 1.9, 1.13.1, 1.14.2.1 [P] ; « rechargé par un compresseur » simplifie compresseur + réservoir principal",
+    "Train ≈ 10 290 tonnes (« dix mille ») — § 1.7 [P] ; force de freinage nécessaire pour le tenir sur la pente ≈ 146 700 lb, dite « l'équivalent d'environ soixante-six tonnes de freinage » (≈ 66,5 tonnes-force) — § 1.14.2.3, 2.2 [P] ; conversion = calcul [O]",
+    "22 h 49 min 37 s : arrêt à Nantes (Québec), voie principale en pente descendante ; 7,2 milles (≈ 11,6 km, « douze kilomètres ») de Lac-Mégantic, 360 pieds plus bas (« en bas de la pente ») ; 72 wagons-citernes de pétrole brut ; 5 locomotives, la seule de tête en marche — § 1.1, 1.4.1, 1.8.1, tableau 1 [P]",
+    "7 freins à main serrés (les 5 locomotives, le wagon VB, le wagon tampon), tous en tête — § 1.1, 2.2 [P] ; le dénominateur « 73 voitures » du dossier de faits n'est pas dit (72 + 1 + 5 + 1 = 79 véhicules)",
+    "23 h 03 min 48 s, essai d'efficacité : freins automatiques desserrés, freins indépendants des locomotives laissés serrés ; d'autres mécaniciens de MMA ne les desserraient pas non plus (« comme d'autres chez toi ») — tableau 1, § 1.1, 2.2 [P] ; règle CROR 112 b : desserrer les freins à air et vérifier que les freins à main seuls retiennent le train — § 1.12.1 [P]",
+    "23 h 40 : appel au 911 pour un feu sur la locomotive de tête — § 1.1, annexe A [P] ; réparation non conforme du moteur de la MMA 5017 (octobre 2012), huile surchauffée dans le turbo — § 1.15.1, 2.1 [P]",
+    "23 h 58 : les pompiers coupent le moteur (coupe-circuit de carburant d'urgence, disjoncteurs) conformément aux instructions ferroviaires ; le compresseur s'arrête avec lui — § 1.1, 2.1, annexe A [P] ; aucune faute ne leur est prêtée",
+    "0 h 05 min 55 s : la pression de la conduite générale commence à baisser, ≈ 1 psi par minute (cylindre du frein indépendant dès 0 h 13 min 55 s, même rythme) — tableau 1 [P] ; personne ne redémarre une locomotive — § 2.1 [P] ; ≈ 0 h 44 : le contremaître de MMA et les pompiers quittent le site (« tout le monde repart ») — annexe A [P]",
+    "Au départ : force totale ≈ 146 000 lb (frein indépendant à 27 psi ≈ 97 400 lb + freins à main) contre ≈ 146 700 lb nécessaires, soit ≈ 700 lb (≈ 320 kg-force, « à peine quelques centaines de kilos ») de moins — § 2.2 [P] ; conversion = calcul [O]",
+    "Les 7 freins à main ≈ 48 600 lb au total, soit ≈ 33 % des 146 700 lb (« à peine un tiers ») — § 1.14.2.3, 2.2 [P] ; pourcentage = calcul ; l'essai a réussi parce que les freins indépendants restaient serrés — § 1.1, 2.1 [P] ; non dit : un des sept (MMA 5026) n'a pas serré correctement (soupape QRB)",
+    "1 h 15 min 30 s : 65 mph (≈ 105 km/h) ; restriction permanente à 10 mph (≈ 16 km/h) à la rue Frontenac, au centre-ville — tableau 1, § 1.4.1 [P]",
+    "Déraillement au centre-ville, incendie du pétrole, 47 morts — R13D0054, sommaire, § 1.2 [P]",
+    "« L'enquête ne cherche pas de coupable » : le BST ne détermine ni faute ni responsabilité — page de garde du rapport [P] ; « dix-huit facteurs » — communiqué du BST du 19/08/2014 repris sur canada.ca [S]",
+    "Depuis : directive d'urgence de Transports Canada (23/07/2013) puis règle générale M (iii) du REFC approuvée le 26/12/2013 : équipage minimal de deux pour un train avec au moins un wagon-citerne chargé de marchandises dangereuses ; 30/12/2013 : TC ordonne aux chemins de fer de déposer leurs instructions sur l'essai d'efficacité des freins à main (règle 112) — R13D0054 § 4.1, 4.1.6 [P] ; « deux mille treize » = l'année des deux décisions",
+    "« Surtout l'air » : au départ, ≈ 97 400 lb sur ≈ 146 000 venaient encore du frein à air des locomotives — § 2.2 [P] ; « il fallait au moins douze freins à main » = le plus bas des scénarios du BST (12 à 18 posés sur les seuls wagons ; 15 à 20 avec l'arrêt fait à 13 psi ; 18 à 26 sans aucun frein à air) — § 2.2 [P]",
+    "Épinglé TikTok : 13 passages à niveau traversés — § 1.1 [P]",
+    "Image : le train, la pente, la ville, les locomotives, le moteur, le compresseur, les cylindres, les sabots, les volants de frein à main, le manomètre, le coupe-circuit et l'aiguille de vitesse sont des maquettes reconstituées ; la jauge « 66 » est un indicateur de la maquette (force convertie en tonnes), pas un instrument du bord ; le panneau « 16 » est en km/h pour le film (la restriction réelle est de 10 mph) ; la forme de la fumée, du feu et du déraillement est reconstituée ; personne n'est montré ni nommé (le rapport ne nomme personne) ; « tu » met le spectateur à la place du mécanicien sans lui prêter de faute (pratique répandue selon le BST) ; leviers et volants bougent sans main ; aucune photo ni schéma du rapport (reproduction non commerciale). En-tête : l'heure réelle par étape ; T− compte de 23:58:42 à 0:58:21",
+    "Annonce : À FAIRE — le CR05 n'est pas choisi (réserve : Challenger 1986) ; l'abo dit le format sans fait du prochain, la boucle tient sans lui"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "[0 h 58|Zéro heure cinquante-huit]. Ton train garé *démarre*. Ses freins à main sont serrés.",
+      "vo": "[tense] Zéro heure cinquante-huit. Ton train garé démarre. Ses freins à main sont serrés.",
+      "voAlt": [
+        "[firm, matter-of-fact] Zéro heure cinquante-huit. Ton train garé démarre. Ses freins à main sont serrés."
+      ],
+      "voir": "Contre-plongée au ras du rail, de nuit, sur la pente de Nantes : la grande roue d'acier de la locomotive de tête, son sabot de frein serré dessus, qui commence à tourner (le sujet bouge dès l'image 1) ; derrière, le trait des wagons-citernes qui file dans le noir ; en contrebas, au fond, les lumières de la ville (la menace) ; un volant de frein à main serré, petit mais lisible, sur le flanc de la locomotive ; cabine vide ; horloge ambre géante à 0:58."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "[59|Cinquante-neuf] minutes plus tôt, on a coupé sa *locomotive*. Alors, qui le tenait : l'air… ou ses freins à main ?",
+      "vo": "[conversational, curious] Cinquante-neuf minutes plus tôt, on a coupé sa locomotive. [short pause] Alors, qui le tenait : l'air... ou ses freins à main ?",
+      "voAlt": [
+        "[curious] Cinquante-neuf minutes plus tôt, on a coupé sa locomotive. [short pause] Alors, qui le tenait : l'air... ou ses freins à main ?"
+      ],
+      "voir": "L'horloge recule de 0:58 à 23:58 ; la locomotive de tête à l'arrêt, son échappement cesse de fumer, le moteur s'éteint ; puis deux camps côte à côte sur la même locomotive : le manomètre d'air dont l'aiguille tient, et le volant de frein à main serré ; T− 59:39 sous l'horloge."
+    },
+    {
+      "id": "principe",
+      "text": "D'abord, comment ça marche. Les freins d'une locomotive serrent avec de l'air, rechargé par un compresseur. Coupe le moteur… et l'air fuit, doucement. Le frein à main, lui, tient sans air. S'il y en a *assez*.",
+      "vo": "[conversational, curious] D'abord, comment ça marche. Les freins d'une locomotive serrent avec de l'air, rechargé par un compresseur. Coupe le moteur... et l'air fuit, doucement. Le frein à main, lui, tient sans air. S'il y en a assez.",
+      "voAlt": [
+        "[curious] D'abord, comment ça marche. Les freins d'une locomotive serrent avec de l'air, rechargé par un compresseur. Coupe le moteur... et l'air fuit, doucement. Le frein à main, lui, tient sans air. S'il y en a assez."
+      ],
+      "voir": "Maquette de la locomotive en coupe, de trois quarts sur son halo : le moteur entraîne le compresseur (vert) qui remplit le réservoir ; l'air vert court jusqu'au cylindre, dont le piston pousse le sabot contre la roue ; moteur coupé, le compresseur s'arrête, de petites bouffées s'échappent des raccords, le piston recule d'un cran ; à côté, un volant de frein à main tourne seul et tend sa chaîne jusqu'au sabot."
+    },
+    {
+      "id": "seuil",
+      "text": "Pour tenir ce train de dix mille tonnes sur sa pente, il faut l'équivalent d'environ [66|soixante-six] tonnes de freinage. Retiens ce chiffre.",
+      "vo": "[firm, matter-of-fact] Pour tenir ce train de dix mille tonnes sur sa pente, il faut l'équivalent d'environ soixante-six tonnes de freinage. Retiens ce chiffre.",
+      "voir": "Le train entier de profil sur la pente : une flèche rouge, le poids qui tire vers le bas de la pente ; une flèche verte, les freins qui retiennent ; au-dessus, une jauge horizontale avec une marque « 66 » qui reste allumée."
+    },
+    {
+      "id": "t1",
+      "text": "[22 h 49|Vingt-deux heures quarante-neuf]. Tu gares ton train à Nantes, au Québec : soixante-douze wagons de pétrole. Lac-Mégantic est à douze kilomètres, en bas de la pente. Tu laisses une locomotive allumée… et tu serres sept freins à *main*.",
+      "vo": "[conversational, curious] Vingt-deux heures quarante-neuf. Tu gares ton train à Nantes, au Québec : soixante-douze wagons de pétrole. Lac-Mégantic est à douze kilomètres, en bas de la pente. Tu laisses une locomotive allumée... et tu serres sept freins à main.",
+      "voAlt": [
+        "[curious] Vingt-deux heures quarante-neuf. Tu gares ton train à Nantes, au Québec : soixante-douze wagons de pétrole. Lac-Mégantic est à douze kilomètres, en bas de la pente. Tu laisses une locomotive allumée... et tu serres sept freins à main."
+      ],
+      "voir": "L'horloge saute à 22:49 ; le train ralentit et s'immobilise sur la voie en pente, vu de haut et de trois quarts ; la caméra glisse le long de la pente jusqu'aux lumières de la ville tout en bas ; retour sur la tête : cinq locomotives, une seule fume, en vert ; sept volants de frein à main s'allument un à un, tous en tête du train, les soixante-douze wagons derrière restent sans."
+    },
+    {
+      "id": "t2",
+      "text": "[23 h 03|Vingt-trois heures trois]. L'essai : on desserre les freins à air, et les freins à main doivent tenir seuls. Mais, comme d'autres chez toi, tu laisses serrés les freins à air des locomotives. Rien ne bouge. Essai *réussi*.",
+      "vo": "[tense] Vingt-trois heures trois. L'essai : on desserre les freins à air, et les freins à main doivent tenir seuls. Mais, comme d'autres chez toi, tu laisses serrés les freins à air des locomotives. Rien ne bouge. Essai réussi.",
+      "voir": "Le pupitre de la cabine en gros plan : la poignée du frein du train se desserre (le vert s'éteint le long des wagons), celle des locomotives reste serrée, leurs cylindres pleins d'air encore verts ; plan large : le train ne bouge pas d'un millimètre ; la marque « réussi » s'allume en vert — puis la cabine se vide."
+    },
+    {
+      "id": "t3",
+      "text": "[23 h 40|Vingt-trois heures quarante]. Quelqu'un appelle le neuf-un-un : un *feu* sur la locomotive de tête. Son moteur avait été mal réparé.",
+      "vo": "[firm, matter-of-fact] Vingt-trois heures quarante. Quelqu'un appelle le neuf-un-un : un feu sur la locomotive de tête. Son moteur avait été mal réparé.",
+      "voir": "Horloge à 23:40 ; la locomotive de tête, seule allumée, en contre-plongée de trois quarts : une fumée épaisse puis des flammes sortent de sa cheminée ; en transparence, le moteur et son turbo passent au rouge, cerclés."
+    },
+    {
+      "id": "t4",
+      "text": "[23 h 58|Vingt-trois heures cinquante-huit]. Les pompiers coupent le moteur, comme le prévoient les consignes. Le feu s'éteint. Mais avec le moteur… le *compresseur* s'arrête.",
+      "vo": "[tense] Vingt-trois heures cinquante-huit. Les pompiers coupent le moteur, comme le prévoient les consignes. Le feu s'éteint. Mais avec le moteur... le compresseur s'arrête.",
+      "voir": "Horloge à 23:58 ; le coupe-circuit de carburant d'urgence sur le flanc de la locomotive bascule (aucune main à l'image) ; les flammes retombent et s'éteignent ; en transparence, le moteur ralentit et s'arrête, et le compresseur vert cesse de tourner et vire au rouge ; le T− démarre."
+    },
+    {
+      "id": "t5",
+      "text": "[0 h 05|Zéro heure cinq]. L'air fuit : environ un psi par minute. Le moteur reste coupé. Vers [0 h 44|zéro heure quarante-quatre], tout le monde repart. Le train reste *seul*.",
+      "vo": "[conversational, curious] Zéro heure cinq. L'air fuit : environ un psi par minute. Le moteur reste coupé. Vers zéro heure quarante-quatre, tout le monde repart. Le train reste seul.",
+      "voAlt": [
+        "[curious] Zéro heure cinq. L'air fuit : environ un psi par minute. Le moteur reste coupé. Vers zéro heure quarante-quatre, tout le monde repart. Le train reste seul."
+      ],
+      "voir": "Horloge à 0:05 ; gros plan sur le manomètre du cylindre de frein : l'aiguille quitte sa marque et descend, cran par cran ; de petites bouffées d'air s'échappent des raccords sous la locomotive ; l'horloge défile jusqu'à 0:44 : des phares de véhicules s'éloignent sur la route, puis le train seul dans le noir sur sa pente."
+    },
+    {
+      "id": "t6",
+      "text": "[0 h 58|Zéro heure cinquante-huit]. Souviens-toi : soixante-six tonnes. Il en manque à peine quelques centaines de kilos. Le train *part*. Tout seul.",
+      "vo": "[tense] Zéro heure cinquante-huit. Souviens-toi : soixante-six tonnes. Il en manque à peine quelques centaines de kilos. Le train part. Tout seul.",
+      "voir": "Horloge à 0:58:21, T− à zéro ; la jauge du seuil revient : la barre (air des locomotives + sept freins à main) descend et passe juste sous la marque 66, elle vire au rouge ; raccord sur la première image : la roue de tête, sabot toujours serré, qui se met à tourner ; les attelages se tendent un à un le long des wagons."
+    },
+    {
+      "id": "defaut",
+      "hold": 0.2,
+      "text": "Et ton essai ? Il a réussi grâce à l'air des locomotives. Tes sept freins à main, seuls, donnaient à peine un *tiers* de ce qu'il fallait. Et l'air… se vidait depuis presque une heure.",
+      "vo": "[conversational, curious] Et ton essai ? Il a réussi grâce à l'air des locomotives. Tes sept freins à main, seuls, donnaient à peine un tiers de ce qu'il fallait. Et l'air... se vidait depuis presque une heure.",
+      "voAlt": [
+        "[curious] Et ton essai ? Il a réussi grâce à l'air des locomotives. Tes sept freins à main, seuls, donnaient à peine un tiers de ce qu'il fallait. Et l'air... se vidait depuis presque une heure."
+      ],
+      "voir": "LE CLIMAX, en grand, sur le train qui prend la pente : dans le cylindre de frein de la locomotive, le piston recule à mesure que l'air vert s'échappe, le sabot se décolle de la roue ; les sept freins à main restent seuls, chaînes tendues, rouges et cerclés ; à côté, la jauge les montre bloqués au tiers de la marque 66 ; les roues tournent de plus en plus vite sous les sabots."
+    },
+    {
+      "id": "t7",
+      "text": "[1 h 15|Une heure quinze]. Sans personne à bord, le train entre dans Lac-Mégantic à cent cinq kilomètres-heure. Au passage à niveau du centre, la limite est à *seize*.",
+      "vo": "[tense] Une heure quinze. Sans personne à bord, le train entre dans Lac-Mégantic à cent cinq kilomètres-heure. Au passage à niveau du centre, la limite est à seize.",
+      "voir": "Horloge à 1:15 ; le train vu de face depuis le bas de la pente, cabine vide, qui fonce vers la caméra ; une aiguille de vitesse passe 40, 80, 105 ; un panneau de limite « 16 » au bord de la voie, entre les premières maisons en maquette d'argile, défile en un éclair."
+    },
+    {
+      "id": "issue",
+      "hold": 0.3,
+      "text": "Il déraille en plein centre. Le pétrole s'embrase. [47|Quarante-sept] morts. L'enquête ne cherche pas de coupable : elle relève [18|dix-huit] facteurs.",
+      "vo": "[calm] Il déraille en plein centre. Le pétrole s'embrase. Quarante-sept morts. L'enquête ne cherche pas de coupable : elle relève dix-huit facteurs.",
+      "voir": "Vue large et lointaine, sobre : les wagons-citernes en maquette qui se couchent dans la courbe, une lueur rouge qui monte derrière les toits ; personne à l'image ; puis la pente vide et l'horloge qui s'arrête."
+    },
+    {
+      "id": "depuis",
+      "text": "Depuis [2013|deux mille treize], au Canada, un train avec des citernes de matières dangereuses roule avec +deux+ personnes à bord, au minimum. Et chaque compagnie a dû déposer sa méthode d'essai des freins à main.",
+      "vo": "[warm, conversational] Depuis deux mille treize, au Canada, un train avec des citernes de matières dangereuses roule avec deux personnes à bord, au minimum. Et chaque compagnie a dû déposer sa méthode d'essai des freins à main.",
+      "voAlt": [
+        "[curious] Depuis deux mille treize, au Canada, un train avec des citernes de matières dangereuses roule avec deux personnes à bord, au minimum. Et chaque compagnie a dû déposer sa méthode d'essai des freins à main."
+      ],
+      "voir": "La lumière blanchit, grille et halo passent au vert : la cabine de la locomotive avec deux sièges et deux casques ; puis l'essai refait : les freins à air des locomotives se desserrent (le vert s'éteint), et une rangée de volants de frein à main, bien plus nombreux, tient seule le train, en vert."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Alors, qui le tenait ? Surtout l'air. Pour l'enquête, il fallait au moins [12|douze] freins à main. Toi, en +commentaire+ : un train de pétrole garé la nuit, seul… tu trouves ça normal, ou *pas* ?",
+      "vo": "[conversational, curious] Alors, qui le tenait ? Surtout l'air. Pour l'enquête, il fallait au moins douze freins à main. [short pause] Toi, en commentaire : un train de pétrole garé la nuit, seul... tu trouves ça normal, ou pas ?",
+      "voAlt": [
+        "[curious] Alors, qui le tenait ? Surtout l'air. Pour l'enquête, il fallait au moins douze freins à main. [short pause] Toi, en commentaire : un train de pétrole garé la nuit, seul... tu trouves ça normal, ou pas ?"
+      ],
+      "voir": "Retour sur les deux camps de la promesse : la colonne d'air verte, haute, et les sept volants dessous ; douze volants s'alignent à côté pour comparer ; puis la locomotive de tête qui fume, garée sur la pente, et deux camps en duel dessous : « je la laisse tourner » / « je la coupe »."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+ : chaque compte à rebours, un vrai accident… et la sécurité qui a *lâché*. Le prochain : À FAIRE.",
+      "vo": "[warm, conversational] Abonne-toi : [short pause] chaque compte à rebours, un vrai accident... et la sécurité qui a lâché. Le prochain : À FAIRE.",
+      "voir": "Panneau « S'abonner » et chevrons vers la colonne de boutons ; derrière, l'horloge ambre qui tourne à rebours vers 0:58."
+    },
+    {
+      "id": "boucle",
+      "text": "Comme cette nuit-là, à…",
+      "vo": "[calm] Comme cette nuit-là, à,",
+      "voir": "La caméra redescend le long du train jusqu'au ras du rail et retrouve exactement la première image : la roue de tête sur la pente, les lumières de la ville en bas, horloge sur 0:58."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:démarre",
+    "tozero": "t6-0.12",
+    "trigger": "t6:part",
+    "toverdict": "defaut-0.12",
+    "verdict": "defaut:tiers",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:nuit"
+  },
+  "bedVolume": 0.8,
+  "sons": [
+    {
+      "id": "CR04-loco-arret",
+      "image": "le moteur diesel de la locomotive de tête s'arrête (coupe-circuit), le compresseur se tait",
+      "duree": 4,
+      "prompt": "Diesel locomotive engine idling, then emergency fuel cut-off: the big engine shudders, winds down and stops, air compressor chugging slows to silence, outdoors at night, medium distance, isolated, no music"
+    },
+    {
+      "id": "CR04-air-fuit",
+      "image": "l'air des freins fuit doucement par les raccords",
+      "duree": 4,
+      "prompt": "Slow steady leak of compressed air from a railway brake hose coupling, thin soft hiss, close, quiet night, isolated, no music"
+    },
+    {
+      "id": "CR04-frein-main",
+      "image": "on serre un frein à main de wagon : le volant tourne, la chaîne se tend",
+      "duree": 3,
+      "prompt": "Railway car hand brake wheel being cranked, ratchet clicks, heavy steel chain tightening and clanking, close, outdoors, isolated, no music"
+    },
+    {
+      "id": "CR04-train-s-ebranle",
+      "image": "le train garé démarre seul : les attelages se tendent un à un, les roues grincent",
+      "duree": 5,
+      "prompt": "Long freight train starting to roll by itself: couplers taking up slack one after another in a chain of heavy metallic clunks, steel wheels creaking slowly on rails, at night, medium distance, isolated, no music"
+    },
+    {
+      "id": "CR04-train-file",
+      "image": "le train dévale la pente de plus en plus vite",
+      "duree": 5,
+      "prompt": "Heavy freight train rolling faster and faster downhill, rhythmic clatter of steel wheels on rail joints accelerating, deep rumble, passing close, at night, isolated, no music"
+    },
+    {
+      "id": "CR04-feu-loco",
+      "image": "un feu sur la locomotive de tête",
+      "reprend": "feu"
+    },
+    {
+      "id": "CR04-deraille",
+      "image": "il déraille et le pétrole s'embrase, vu de loin",
+      "reprend": "explosion"
+    }
+  ],
+  "sfx": [
+    {
+      "type": "space",
+      "mix": 0.18
+    },
+    {
+      "type": "sample",
+      "file": "amb-tension.wav",
+      "loop": true,
+      "from": 0,
+      "gain": -16,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "sample",
+      "file": "sig-dossier.wav",
+      "at": 0.02,
+      "gain": -8,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "riser.wav",
+      "at": "tozero-2",
+      "to": "tozero",
+      "offset": 1.5,
+      "gain": -22
+    },
+    {
+      "type": "sample",
+      "file": "impact-lourd.wav",
+      "at": "tozero",
+      "gain": -17,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "impact-lourd.wav",
+      "at": "trigger",
+      "gain": -15,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "impact-sec.wav",
+      "at": "verdict",
+      "gain": -15
+    },
+    {
+      "type": "sample",
+      "file": "sig-boucle.wav",
+      "at": "rewind",
+      "gain": -8,
+      "offset": 0.6
+    }
+  ]
+}
