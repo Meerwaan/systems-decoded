@@ -1196,12 +1196,14 @@ export function sfx(dir, { ep = loadEpisode(dir), sched = schedule(ep), force = 
         if (!len) return;
         const fi = 0.004;
         const fo = Math.min(fade ?? 0.03, len / 2);
+        // a one-shot on the main bus rings in the shared room ("space", recette-son § 10), like the synthesized punctuation
+        const toSend = send && target === main && SPACE.all !== false ? 1 : 0;
         writeLR(t0, len, (t, i, out) => {
           const k = Math.round(t * SR);
           const env = Math.min(1, t / fi, (len - t) / fo);
           out[0] = src.L[k] * g * gl * env;
           out[1] = src.R[k] * g * gr * env;
-        }, target);
+        }, target, toSend);
         return;
       }
       // the loop: its last `xf` samples blended into its first, then played modulo (M − xf)

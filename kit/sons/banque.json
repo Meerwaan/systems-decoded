@@ -1,0 +1,469 @@
+{
+  "lisezmoi": "La banque de sons enregistrés (docs/recette-son.md). Chaque son se fabrique une fois avec `npm run sons -- --budget N` (effets sonores ElevenLabs), puis sert à tous les films : kit/sons/<id>.wav, silence du début retiré, ponctuels ramenés à une crête de -1 dBFS, boucles à -20 LUFS. Un épisode le joue par le type `sample` de scripts/sfx.mjs (\"file\": \"<id>.wav\"). Un son propre à un sujet s'ajoute ici avec \"sujet\": \"<ep>\".",
+  "tarif": {
+    "creditsParSeconde": 11,
+    "lu": "2026-11-12",
+    "source": "devis ElevenLabs du jour (estimate_only) : 55 crédits pour un son de durée automatique ≈ 5 s ; le 23/10, 11 crédits par seconde demandée, 481 facturés pour 638 annoncés. Le coût réel se mesure au solde avant et après chaque son."
+  },
+  "sons": [
+    {
+      "id": "sig-ouverture",
+      "famille": "signature",
+      "duree": 3.5,
+      "prompt": "A heavy precision metal case unlocking: one deep mechanical latch clack, then a smooth hydraulic slide opening with a soft airy release, close-mic, clean, cinematic, no music"
+    },
+    {
+      "id": "sig-dossier",
+      "famille": "signature",
+      "duree": 3,
+      "prompt": "Single deep cinematic hit with a cold metallic ring that decays slowly, dark and premium, documentary trailer style, no music"
+    },
+    {
+      "id": "sig-boucle",
+      "famille": "signature",
+      "duree": 2,
+      "prompt": "Short reverse swell of air and metal shimmer rising into a sudden stop, cinematic transition, no music"
+    },
+    {
+      "id": "impact-lourd",
+      "famille": "impact",
+      "duree": 3,
+      "prompt": "Deep cinematic boom with sub-bass drop and a short dark tail, trailer impact, no music"
+    },
+    {
+      "id": "impact-metal",
+      "famille": "impact",
+      "duree": 2.5,
+      "prompt": "Heavy steel impact clang, a thick metal plate hit hard, short ringing tail, close-mic, no music"
+    },
+    {
+      "id": "impact-sec",
+      "famille": "impact",
+      "duree": 1.5,
+      "prompt": "Tight punchy dry hit, short and controlled, modern trailer punctuation, no reverb, no music"
+    },
+    {
+      "id": "whoosh-rapide",
+      "famille": "transition",
+      "duree": 1.5,
+      "prompt": "Fast clean whoosh passing by, airy and tight, camera transition, no music"
+    },
+    {
+      "id": "whoosh-lent",
+      "famille": "transition",
+      "duree": 2.5,
+      "prompt": "Slow deep airy whoosh, smooth and wide, cinematic camera move, no music"
+    },
+    {
+      "id": "riser",
+      "famille": "transition",
+      "duree": 4,
+      "prompt": "Tension riser building with filtered noise and low rumble, rising pitch, ending abruptly, cinematic, no music"
+    },
+    {
+      "id": "reverse-swell",
+      "famille": "transition",
+      "duree": 2.5,
+      "prompt": "Reverse cymbal swell with a dark low layer, rising into a cut, cinematic, no music"
+    },
+    {
+      "id": "aspiration",
+      "famille": "transition",
+      "duree": 1.5,
+      "prompt": "Sudden air suction pulling everything into silence, vacuum inhale, cinematic, no music"
+    },
+    {
+      "id": "clic-mecanisme",
+      "famille": "mecanisme",
+      "duree": 1,
+      "prompt": "One small precise mechanical click, fine watch-like metal mechanism, close-mic, isolated"
+    },
+    {
+      "id": "verrou",
+      "famille": "mecanisme",
+      "duree": 1.5,
+      "prompt": "Metal latch locking into place, solid spring-loaded snap, close-mic, isolated"
+    },
+    {
+      "id": "ressort",
+      "famille": "mecanisme",
+      "duree": 1.5,
+      "prompt": "Compressed metal spring releasing suddenly, short twang and snap, close-mic, isolated"
+    },
+    {
+      "id": "engrenages",
+      "famille": "mecanisme",
+      "duree": 3,
+      "prompt": "Small metal gears turning and ratcheting, precise clockwork mechanism, close-mic, isolated"
+    },
+    {
+      "id": "servo",
+      "famille": "mecanisme",
+      "duree": 2,
+      "prompt": "Small electric servo motor whirring and stopping, precise robotic movement, close-mic, isolated"
+    },
+    {
+      "id": "relais",
+      "famille": "mecanisme",
+      "duree": 1,
+      "prompt": "Electrical relay clacking shut, crisp single click of a contactor, close-mic, isolated"
+    },
+    {
+      "id": "disjoncteur",
+      "famille": "mecanisme",
+      "duree": 1.5,
+      "prompt": "Heavy industrial circuit breaker switch thrown, deep mechanical thunk, close-mic, isolated"
+    },
+    {
+      "id": "pieces-glissent",
+      "famille": "mecanisme",
+      "duree": 2.5,
+      "prompt": "Precision metal parts sliding apart smoothly, soft metallic friction and small clicks, an object coming apart, close-mic"
+    },
+    {
+      "id": "hydraulique",
+      "famille": "mecanisme",
+      "duree": 2.5,
+      "prompt": "Hydraulic piston pushing with a pressurized hiss and a solid stop, industrial, close-mic"
+    },
+    {
+      "id": "etincelle",
+      "famille": "danger",
+      "duree": 2,
+      "prompt": "Electrical arc crackling and sparking, high voltage short circuit, close, isolated"
+    },
+    {
+      "id": "explosion",
+      "famille": "danger",
+      "duree": 4,
+      "prompt": "Big explosion with a deep rolling rumble and debris, realistic, slightly distant, no music"
+    },
+    {
+      "id": "pyro",
+      "famille": "danger",
+      "duree": 1.5,
+      "prompt": "Small pyrotechnic charge firing, sharp pop with a quick gas burst, realistic, isolated"
+    },
+    {
+      "id": "feu",
+      "famille": "danger",
+      "duree": 3,
+      "prompt": "Fire bursting into flames with a whoosh, then crackling, realistic, isolated"
+    },
+    {
+      "id": "verre",
+      "famille": "danger",
+      "duree": 2,
+      "prompt": "Glass shattering, a pane breaking with falling shards, realistic, close"
+    },
+    {
+      "id": "metal-ecrase",
+      "famille": "danger",
+      "duree": 3,
+      "prompt": "Metal crumpling and crashing, car body deforming in a collision, realistic, close"
+    },
+    {
+      "id": "vapeur",
+      "famille": "danger",
+      "duree": 3,
+      "prompt": "High pressure steam release, strong hiss from a valve, realistic, isolated"
+    },
+    {
+      "id": "moteur-fusee",
+      "famille": "danger",
+      "duree": 5,
+      "prompt": "Rocket engine ignition into a powerful roaring thrust, deep crackling low rumble, realistic, no music"
+    },
+    {
+      "id": "alarme",
+      "famille": "signal",
+      "duree": 3,
+      "prompt": "Electronic safety alarm beeping in a fast repeating pattern, like a smoke detector, realistic room"
+    },
+    {
+      "id": "bip",
+      "famille": "signal",
+      "duree": 1,
+      "prompt": "One soft clean electronic confirmation beep, modern device interface, isolated"
+    },
+    {
+      "id": "sirene-lointaine",
+      "famille": "signal",
+      "duree": 5,
+      "prompt": "Emergency vehicle siren in the distance across a city at night, realistic, no music"
+    },
+    {
+      "id": "amb-interieur-nuit",
+      "famille": "ambiance",
+      "duree": 8,
+      "boucle": true,
+      "prompt": "Quiet apartment at night, faint fridge hum and very distant traffic, calm room tone, no voices, no music"
+    },
+    {
+      "id": "amb-rue",
+      "famille": "ambiance",
+      "duree": 8,
+      "boucle": true,
+      "prompt": "City street ambience, passing cars and distant urban hum, no voices, no music"
+    },
+    {
+      "id": "amb-usine",
+      "famille": "ambiance",
+      "duree": 8,
+      "boucle": true,
+      "prompt": "Large industrial plant ambience, deep machinery hum and distant metallic activity, no voices, no music"
+    },
+    {
+      "id": "amb-cabine-avion",
+      "famille": "ambiance",
+      "duree": 8,
+      "boucle": true,
+      "prompt": "Airliner cabin in flight, steady jet engine drone and air flow, no voices, no music"
+    },
+    {
+      "id": "amb-voiture",
+      "famille": "ambiance",
+      "duree": 8,
+      "boucle": true,
+      "prompt": "Inside a car driving on a road, tire and road noise with engine hum, no voices, no music"
+    },
+    {
+      "id": "amb-vent",
+      "famille": "ambiance",
+      "duree": 8,
+      "boucle": true,
+      "prompt": "Strong outdoor wind gusting over open land, realistic, no music"
+    },
+    {
+      "id": "amb-pluie",
+      "famille": "ambiance",
+      "duree": 8,
+      "boucle": true,
+      "prompt": "Steady rain falling outside with soft drops on a roof, realistic, no music"
+    },
+    {
+      "id": "amb-electrique",
+      "famille": "ambiance",
+      "duree": 8,
+      "boucle": true,
+      "prompt": "Electrical substation hum, steady transformer buzz and faint crackle, no voices, no music"
+    },
+    {
+      "id": "amb-tension",
+      "famille": "ambiance",
+      "duree": 10,
+      "boucle": true,
+      "prompt": "Dark low cinematic drone, slow evolving tension bed with deep sub and faint metallic texture, no melody, no drums"
+    },
+    {
+      "id": "045-coque-dechire",
+      "duree": 3,
+      "prompt": "Huge metal rocket structure tearing apart in the air, shrieking metal and ripping, with a deep roar, realistic",
+      "famille": "sujet",
+      "sujet": "045",
+      "image": "la fusée bascule et se déchire, les boosters s'arrachent"
+    },
+    {
+      "id": "045-charge-lineaire",
+      "duree": 2.5,
+      "prompt": "Linear shaped charge detonating along a metal hull: sharp fast explosive crack running like a zipper, metal cut open, realistic",
+      "famille": "sujet",
+      "sujet": "045",
+      "image": "la charge linéaire détone, la coque s'ouvre"
+    },
+    {
+      "id": "045-debris-tombent",
+      "duree": 4,
+      "prompt": "Burning debris falling from the sky and crashing into mangrove and savanna, scattered distant impacts, realistic",
+      "famille": "sujet",
+      "sujet": "045",
+      "image": "tout retombe près du pas de tir, dans la mangrove et la savane"
+    },
+    {
+      "id": "045-telemetrie",
+      "duree": 2,
+      "prompt": "Radio telemetry signal: short data burst chirps and static from a tracking antenna, technical, isolated",
+      "famille": "sujet",
+      "sujet": "045",
+      "image": "une antenne écoute le sol"
+    },
+    {
+      "id": "045-jet-tranche",
+      "duree": 1.5,
+      "prompt": "Shaped charge copper jet punching straight through a thick steel plate: a sharp hissing metallic tear and a short ringing crack, close, realistic, isolated",
+      "famille": "sujet",
+      "sujet": "045",
+      "image": "le jet de cuivre perce la plaque d'acier (principe, 37,2 → 38,6)"
+    },
+    {
+      "id": "045-liaisons-rompues",
+      "duree": 1.5,
+      "prompt": "Metal struts and electrical cables snapping apart under tension: a hard metallic snap, a cable whip and a short burst of crackling sparks, close, realistic, isolated",
+      "famille": "sujet",
+      "sujet": "045",
+      "image": "à la jonction, les liaisons du booster cèdent et coupent leurs fils, des étincelles (75,7)"
+    },
+    {
+      "id": "046-compresseur-arret",
+      "duree": 3,
+      "prompt": "Large industrial compressor winding down and stopping after a power cut, motor whine falling, realistic",
+      "famille": "sujet",
+      "sujet": "046",
+      "image": "le compresseur s'arrête"
+    },
+    {
+      "id": "046-gaz-collecteur",
+      "duree": 3,
+      "prompt": "Pressurized gas rushing through a large steel pipe, rising whoosh and metallic pipe resonance, industrial, realistic",
+      "famille": "sujet",
+      "sujet": "046",
+      "image": "le gaz se rue dans le collecteur, traverse le ballon"
+    },
+    {
+      "id": "046-bulles-garde",
+      "duree": 3,
+      "prompt": "Gas bubbling up through water in a large steel tank, deep heavy gurgling bubbles, industrial, realistic",
+      "famille": "sujet",
+      "sujet": "046",
+      "image": "le gaz bulle dans la garde hydraulique"
+    },
+    {
+      "id": "046-flamme-pilote",
+      "duree": 6,
+      "boucle": true,
+      "prompt": "Small pilot flame burning steadily with a soft gas hiss, close, calm, isolated",
+      "famille": "sujet",
+      "sujet": "046",
+      "image": "la petite flamme veille au sommet de la torche"
+    },
+    {
+      "id": "046-torche-gronde",
+      "duree": 5,
+      "prompt": "Huge industrial gas flare roaring: powerful jet of burning gas, deep turbulent rumble and flame rush, outdoors, realistic",
+      "famille": "sujet",
+      "sujet": "046",
+      "image": "la torche enfle et gronde"
+    },
+    {
+      "id": "047-porte-ferme",
+      "duree": 2,
+      "prompt": "Dishwasher door being closed firmly by hand: hinged stainless steel door swinging up, rubber seal thud and plastic latch clicking shut, kitchen, close-mic, isolated, no music",
+      "famille": "sujet",
+      "sujet": "047",
+      "image": "la porte du lave-vaisselle se ferme"
+    },
+    {
+      "id": "047-jets-bras",
+      "duree": 5,
+      "boucle": true,
+      "prompt": "Inside a closed running dishwasher: rotating spray arm throwing water jets that drum on ceramic dishes and stainless steel walls, steady rhythmic swish and splatter, close-mic, isolated, no music",
+      "famille": "sujet",
+      "sujet": "047",
+      "image": "le bras tourne et crache ses jets sur le plat et les parois"
+    },
+    {
+      "id": "047-pompe",
+      "duree": 4,
+      "prompt": "Small electric circulation pump of a dishwasher starting and running: low motor hum, water sucked from a plastic sump with gurgling, then pushed through a tube, close-mic, isolated, no music",
+      "famille": "sujet",
+      "sujet": "047",
+      "image": "la pompe aspire l'eau du puisard et la renvoie"
+    },
+    {
+      "id": "047-trappe-pastille",
+      "duree": 2,
+      "prompt": "Small spring-loaded plastic flap of a dishwasher detergent dispenser snapping open, then a detergent tablet dropping into shallow water with a soft plop, close-mic, isolated, no music",
+      "famille": "sujet",
+      "sujet": "047",
+      "image": "la trappe s'ouvre, la pastille tombe dans l'eau"
+    },
+    {
+      "id": "047-croute-lache",
+      "duree": 3,
+      "prompt": "Hard baked-on food crust cracking and peeling off a ceramic baking dish under a strong water jet, crisp flaking pieces falling into water, close-mic, isolated, no music",
+      "famille": "sujet",
+      "sujet": "047",
+      "image": "la croûte se fend et se décolle sous les jets"
+    },
+    {
+      "id": "048-roue-coupe",
+      "duree": 4,
+      "prompt": "Giant tunnel boring machine cutterhead slowly rotating and grinding through wet clay and stones underground, deep heavy steel scraping and rumbling, close, isolated, no music",
+      "famille": "sujet",
+      "sujet": "048",
+      "image": "la roue de coupe tourne et broie la terre (accroche, éclaté, réponse)"
+    },
+    {
+      "id": "048-front-s-ecroule",
+      "duree": 3,
+      "prompt": "Wet soil and gravel collapsing and sliding into an underground void, heavy earth crumbling with a low creak of asphalt settling above, close, isolated, no music",
+      "famille": "sujet",
+      "sujet": "048",
+      "image": "devant la roue, la terre s'écroule et la chaussée se creuse (accroche, scène, zéro)"
+    },
+    {
+      "id": "048-vis-extraction",
+      "duree": 3,
+      "prompt": "Large steel screw conveyor turning slowly inside a tube, pushing thick wet mud, heavy grinding and squelching, industrial machine, close, isolated, no music",
+      "famille": "sujet",
+      "sujet": "048",
+      "image": "la vis d'extraction tourne et tire la terre pâteuse de la chambre, puis freine"
+    },
+    {
+      "id": "048-voussoir",
+      "duree": 2,
+      "prompt": "Heavy precast concrete tunnel segment pushed into place by a hydraulic arm against other segments, dull concrete thud with a short steel clank, close, isolated, no music",
+      "famille": "sujet",
+      "sujet": "048",
+      "image": "un voussoir de béton se pose dans l'anneau (repos)"
+    },
+    {
+      "id": "CR03-pneu-eclate",
+      "duree": 2,
+      "prompt": "Large aircraft tire bursting at very high speed on a concrete runway: violent rubber explosion bang, shredded rubber flapping and slapping, close, outdoors, isolated, no music",
+      "famille": "sujet",
+      "sujet": "CR03",
+      "image": "le pneu du train gauche passe sur la lamelle et éclate (t3)"
+    },
+    {
+      "id": "CR03-debris-aile",
+      "duree": 1.5,
+      "prompt": "Heavy chunk of rubber slamming into the underside of an aluminium aircraft wing full of fuel: deep hollow metallic boom with a dull liquid-filled thud, close, isolated, no music",
+      "famille": "sujet",
+      "sujet": "CR03",
+      "image": "le morceau de pneu frappe le dessous de l'aile, sous le réservoir plein (t3, defaut)"
+    },
+    {
+      "id": "CR03-panneau-arrache",
+      "duree": 2,
+      "prompt": "Aluminium aircraft skin panel bulging and tearing off from inside under a liquid pressure surge: metallic pop, rivets snapping, sudden gush of fuel, close, isolated, no music",
+      "famille": "sujet",
+      "sujet": "CR03",
+      "image": "la paroi s'enfonce, le kérosène est repoussé et le panneau d'intrados s'arrache de l'intérieur (defaut)"
+    },
+    {
+      "id": "CR03-kerosene-fuite",
+      "duree": 3,
+      "prompt": "Jet fuel gushing violently from a ruptured aircraft wing tank at speed: heavy liquid torrent spraying into the air stream, strong wind rush, outdoors, isolated, no music",
+      "famille": "sujet",
+      "sujet": "CR03",
+      "image": "le kérosène jaillit sous l'aile à soixante kilos par seconde (promesse, t4)"
+    },
+    {
+      "id": "CR03-torche-feu",
+      "duree": 4,
+      "prompt": "Huge trailing kerosene fire behind a jet aircraft at full power: deep roaring turbulent flame rush, fire whoosh blending with jet engine roar, outdoors, isolated, no music",
+      "famille": "sujet",
+      "sujet": "CR03",
+      "image": "la traînée de feu de plusieurs dizaines de mètres derrière l'avion (accroche, t4)"
+    },
+    {
+      "id": "CR03-alarme-feu",
+      "duree": 3,
+      "prompt": "Airliner cockpit engine fire warning: loud continuous fire bell ringing with a single master warning gong chime, heard inside a cockpit, isolated, no voices, no music",
+      "famille": "sujet",
+      "sujet": "CR03",
+      "image": "l'alarme feu moteur du poste de pilotage, cloche et gong (t5)"
+    }
+  ]
+}

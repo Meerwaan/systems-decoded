@@ -1,0 +1,530 @@
+{
+  "clic-mecanisme": {
+    "duree": 1,
+    "lufs": -21.94,
+    "crete": -1,
+    "cout": 11,
+    "fait": "2026-11-12T18:23",
+    "prompt": "One small precise mechanical click, fine watch-like metal mechanism, close-mic, isolated"
+  },
+  "sig-ouverture": {
+    "duree": 2.99,
+    "lufs": -23.14,
+    "crete": -1,
+    "cout": 39,
+    "fait": "2026-11-12T18:23",
+    "prompt": "A heavy precision metal case unlocking: one deep mechanical latch clack, then a smooth hydraulic slide opening with a soft airy release, close-mic, clean, cinematic, no music"
+  },
+  "sig-dossier": {
+    "duree": 3,
+    "lufs": -12.5,
+    "crete": -1,
+    "cout": 33,
+    "fait": "2026-11-12T18:23",
+    "prompt": "Single deep cinematic hit with a cold metallic ring that decays slowly, dark and premium, documentary trailer style, no music"
+  },
+  "sig-boucle": {
+    "duree": 2,
+    "lufs": -9.49,
+    "crete": -1,
+    "cout": 104,
+    "fait": "2026-11-12T18:23",
+    "prompt": "Short reverse swell of air and metal shimmer rising into a sudden stop, cinematic transition, no music"
+  },
+  "impact-lourd": {
+    "duree": 3,
+    "lufs": -6.07,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-12T18:24",
+    "prompt": "Deep cinematic boom with sub-bass drop and a short dark tail, trailer impact, no music"
+  },
+  "impact-metal": {
+    "duree": 0.76,
+    "lufs": -17.03,
+    "crete": -1,
+    "annonce": 28,
+    "fait": "2026-11-12T18:24",
+    "prompt": "Heavy steel impact clang, a thick metal plate hit hard, short ringing tail, close-mic, no music"
+  },
+  "impact-sec": {
+    "duree": 0.95,
+    "lufs": -10.23,
+    "crete": -1,
+    "annonce": 17,
+    "fait": "2026-11-12T18:24",
+    "prompt": "Tight punchy dry hit, short and controlled, modern trailer punctuation, no reverb, no music"
+  },
+  "whoosh-rapide": {
+    "duree": 0.76,
+    "lufs": -14.5,
+    "crete": -1,
+    "annonce": 17,
+    "fait": "2026-11-12T18:24",
+    "prompt": "Fast clean whoosh passing by, airy and tight, camera transition, no music"
+  },
+  "whoosh-lent": {
+    "duree": 2.22,
+    "lufs": -12.62,
+    "crete": -1,
+    "annonce": 28,
+    "fait": "2026-11-12T18:24",
+    "prompt": "Slow deep airy whoosh, smooth and wide, cinematic camera move, no music"
+  },
+  "riser": {
+    "duree": 3.52,
+    "lufs": -9.77,
+    "crete": -1,
+    "annonce": 44,
+    "fait": "2026-11-12T18:24",
+    "prompt": "Tension riser building with filtered noise and low rumble, rising pitch, ending abruptly, cinematic, no music"
+  },
+  "reverse-swell": {
+    "duree": 2.48,
+    "lufs": -15.99,
+    "crete": -1,
+    "annonce": 28,
+    "fait": "2026-11-12T18:24",
+    "prompt": "Reverse cymbal swell with a dark low layer, rising into a cut, cinematic, no music"
+  },
+  "aspiration": {
+    "duree": 1.48,
+    "lufs": -8.14,
+    "crete": -1,
+    "annonce": 17,
+    "fait": "2026-11-12T18:24",
+    "prompt": "Sudden air suction pulling everything into silence, vacuum inhale, cinematic, no music"
+  },
+  "verrou": {
+    "duree": 0.42,
+    "lufs": -16.55,
+    "crete": -1,
+    "annonce": 17,
+    "fait": "2026-11-12T18:24",
+    "prompt": "Metal latch locking into place, solid spring-loaded snap, close-mic, isolated"
+  },
+  "ressort": {
+    "duree": 1.44,
+    "lufs": -25.25,
+    "crete": -1,
+    "annonce": 17,
+    "fait": "2026-11-12T18:25",
+    "prompt": "Compressed metal spring releasing suddenly, short twang and snap, close-mic, isolated"
+  },
+  "engrenages": {
+    "duree": 2.92,
+    "lufs": -17.35,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-12T18:25",
+    "prompt": "Small metal gears turning and ratcheting, precise clockwork mechanism, close-mic, isolated"
+  },
+  "servo": {
+    "duree": 2,
+    "lufs": -8.95,
+    "crete": -1,
+    "annonce": 22,
+    "fait": "2026-11-12T18:25",
+    "prompt": "Small electric servo motor whirring and stopping, precise robotic movement, close-mic, isolated"
+  },
+  "relais": {
+    "duree": 1,
+    "lufs": -24.52,
+    "crete": -1,
+    "annonce": 11,
+    "fait": "2026-11-12T18:25",
+    "prompt": "Electrical relay clacking shut, crisp single click of a contactor, close-mic, isolated"
+  },
+  "disjoncteur": {
+    "duree": 0.49,
+    "lufs": -15.95,
+    "crete": -1,
+    "annonce": 17,
+    "fait": "2026-11-12T18:25",
+    "prompt": "Heavy industrial circuit breaker switch thrown, deep mechanical thunk, close-mic, isolated"
+  },
+  "pieces-glissent": {
+    "duree": 2.27,
+    "lufs": -24.48,
+    "crete": -1,
+    "annonce": 28,
+    "fait": "2026-11-12T18:25",
+    "prompt": "Precision metal parts sliding apart smoothly, soft metallic friction and small clicks, an object coming apart, close-mic"
+  },
+  "hydraulique": {
+    "duree": 2.48,
+    "lufs": -10.46,
+    "crete": -1,
+    "annonce": 28,
+    "fait": "2026-11-12T18:25",
+    "prompt": "Hydraulic piston pushing with a pressurized hiss and a solid stop, industrial, close-mic"
+  },
+  "etincelle": {
+    "duree": 1.95,
+    "lufs": -13,
+    "crete": -1,
+    "annonce": 22,
+    "fait": "2026-11-12T18:25",
+    "prompt": "Electrical arc crackling and sparking, high voltage short circuit, close, isolated"
+  },
+  "explosion": {
+    "duree": 4,
+    "lufs": -14,
+    "crete": -1,
+    "annonce": 44,
+    "fait": "2026-11-12T18:25",
+    "prompt": "Big explosion with a deep rolling rumble and debris, realistic, slightly distant, no music"
+  },
+  "pyro": {
+    "duree": 1.48,
+    "lufs": -15.94,
+    "crete": -1,
+    "annonce": 17,
+    "fait": "2026-11-12T18:25",
+    "prompt": "Small pyrotechnic charge firing, sharp pop with a quick gas burst, realistic, isolated"
+  },
+  "feu": {
+    "duree": 2.44,
+    "lufs": -13.12,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-12T18:25",
+    "prompt": "Fire bursting into flames with a whoosh, then crackling, realistic, isolated"
+  },
+  "verre": {
+    "duree": 2,
+    "lufs": -9.67,
+    "crete": -1,
+    "annonce": 22,
+    "fait": "2026-11-12T18:25",
+    "prompt": "Glass shattering, a pane breaking with falling shards, realistic, close"
+  },
+  "metal-ecrase": {
+    "duree": 3,
+    "lufs": -7.86,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-12T18:25",
+    "prompt": "Metal crumpling and crashing, car body deforming in a collision, realistic, close"
+  },
+  "vapeur": {
+    "duree": 3,
+    "lufs": -9.74,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-12T18:26",
+    "prompt": "High pressure steam release, strong hiss from a valve, realistic, isolated"
+  },
+  "moteur-fusee": {
+    "duree": 4.88,
+    "lufs": -9.55,
+    "crete": -1,
+    "annonce": 55,
+    "fait": "2026-11-12T18:26",
+    "prompt": "Rocket engine ignition into a powerful roaring thrust, deep crackling low rumble, realistic, no music"
+  },
+  "alarme": {
+    "duree": 3,
+    "lufs": -6.73,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-12T18:27",
+    "prompt": "Electronic safety alarm beeping in a fast repeating pattern, like a smoke detector, realistic room"
+  },
+  "bip": {
+    "duree": 1,
+    "lufs": -14.75,
+    "crete": -1,
+    "annonce": 11,
+    "fait": "2026-11-12T18:27",
+    "prompt": "One soft clean electronic confirmation beep, modern device interface, isolated"
+  },
+  "sirene-lointaine": {
+    "duree": 4.99,
+    "lufs": -14.82,
+    "crete": -1,
+    "annonce": 55,
+    "fait": "2026-11-12T18:27",
+    "prompt": "Emergency vehicle siren in the distance across a city at night, realistic, no music"
+  },
+  "amb-interieur-nuit": {
+    "duree": 8,
+    "lufs": -19.99,
+    "crete": -7.42,
+    "annonce": 88,
+    "fait": "2026-11-12T18:27",
+    "prompt": "Quiet apartment at night, faint fridge hum and very distant traffic, calm room tone, no voices, no music"
+  },
+  "amb-rue": {
+    "duree": 8,
+    "lufs": -20,
+    "crete": -3.08,
+    "annonce": 88,
+    "fait": "2026-11-12T18:27",
+    "prompt": "City street ambience, passing cars and distant urban hum, no voices, no music"
+  },
+  "amb-usine": {
+    "duree": 8,
+    "lufs": -20,
+    "crete": -2.6,
+    "annonce": 88,
+    "fait": "2026-11-12T18:27",
+    "prompt": "Large industrial plant ambience, deep machinery hum and distant metallic activity, no voices, no music"
+  },
+  "amb-cabine-avion": {
+    "duree": 8,
+    "lufs": -20,
+    "crete": -7.05,
+    "annonce": 88,
+    "fait": "2026-11-12T18:27",
+    "prompt": "Airliner cabin in flight, steady jet engine drone and air flow, no voices, no music"
+  },
+  "amb-voiture": {
+    "duree": 8,
+    "lufs": -19.99,
+    "crete": -4.86,
+    "annonce": 88,
+    "fait": "2026-11-12T18:27",
+    "prompt": "Inside a car driving on a road, tire and road noise with engine hum, no voices, no music"
+  },
+  "amb-vent": {
+    "duree": 8,
+    "lufs": -19.99,
+    "crete": -5.52,
+    "annonce": 88,
+    "fait": "2026-11-12T18:27",
+    "prompt": "Strong outdoor wind gusting over open land, realistic, no music"
+  },
+  "amb-pluie": {
+    "duree": 8,
+    "lufs": -20.98,
+    "crete": -1,
+    "annonce": 88,
+    "fait": "2026-11-12T18:27",
+    "prompt": "Steady rain falling outside with soft drops on a roof, realistic, no music"
+  },
+  "amb-electrique": {
+    "duree": 8,
+    "lufs": -20,
+    "crete": -10.34,
+    "annonce": 88,
+    "fait": "2026-11-12T18:28",
+    "prompt": "Electrical substation hum, steady transformer buzz and faint crackle, no voices, no music"
+  },
+  "amb-tension": {
+    "duree": 10,
+    "lufs": -20.01,
+    "crete": -8.53,
+    "annonce": 110,
+    "fait": "2026-11-12T18:28",
+    "prompt": "Dark low cinematic drone, slow evolving tension bed with deep sub and faint metallic texture, no melody, no drums"
+  },
+  "045-coque-dechire": {
+    "duree": 2.6,
+    "lufs": -5.14,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-12T18:47",
+    "prompt": "Huge metal rocket structure tearing apart in the air, shrieking metal and ripping, with a deep roar, realistic"
+  },
+  "045-charge-lineaire": {
+    "duree": 2.48,
+    "lufs": -16.08,
+    "crete": -1,
+    "annonce": 28,
+    "fait": "2026-11-12T18:47",
+    "prompt": "Linear shaped charge detonating along a metal hull: sharp fast explosive crack running like a zipper, metal cut open, realistic"
+  },
+  "045-debris-tombent": {
+    "duree": 3.21,
+    "lufs": -12.24,
+    "crete": -1,
+    "annonce": 44,
+    "fait": "2026-11-12T18:47",
+    "prompt": "Burning debris falling from the sky and crashing into mangrove and savanna, scattered distant impacts, realistic"
+  },
+  "045-telemetrie": {
+    "duree": 2,
+    "lufs": -6.1,
+    "crete": -1,
+    "annonce": 22,
+    "fait": "2026-11-12T18:47",
+    "prompt": "Radio telemetry signal: short data burst chirps and static from a tracking antenna, technical, isolated"
+  },
+  "045-jet-tranche": {
+    "duree": 1.48,
+    "lufs": -18.75,
+    "crete": -1,
+    "annonce": 17,
+    "fait": "2026-11-12T18:55",
+    "prompt": "Shaped charge copper jet punching straight through a thick steel plate: a sharp hissing metallic tear and a short ringing crack, close, realistic, isolated"
+  },
+  "045-liaisons-rompues": {
+    "duree": 0.37,
+    "lufs": null,
+    "crete": -1,
+    "annonce": 17,
+    "fait": "2026-11-12T18:55",
+    "prompt": "Metal struts and electrical cables snapping apart under tension: a hard metallic snap, a cable whip and a short burst of crackling sparks, close, realistic, isolated"
+  },
+  "046-compresseur-arret": {
+    "duree": 3,
+    "lufs": -10.87,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-13T02:46",
+    "prompt": "Large industrial compressor winding down and stopping after a power cut, motor whine falling, realistic"
+  },
+  "046-gaz-collecteur": {
+    "duree": 2.64,
+    "lufs": -10.07,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-13T02:46",
+    "prompt": "Pressurized gas rushing through a large steel pipe, rising whoosh and metallic pipe resonance, industrial, realistic"
+  },
+  "046-bulles-garde": {
+    "duree": 3,
+    "lufs": -15.02,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-13T02:47",
+    "prompt": "Gas bubbling up through water in a large steel tank, deep heavy gurgling bubbles, industrial, realistic"
+  },
+  "046-flamme-pilote": {
+    "duree": 6,
+    "lufs": -20,
+    "crete": -7.63,
+    "annonce": 66,
+    "fait": "2026-11-13T02:47",
+    "prompt": "Small pilot flame burning steadily with a soft gas hiss, close, calm, isolated"
+  },
+  "046-torche-gronde": {
+    "duree": 4.84,
+    "lufs": -9.58,
+    "crete": -1,
+    "annonce": 55,
+    "fait": "2026-11-13T02:47",
+    "prompt": "Huge industrial gas flare roaring: powerful jet of burning gas, deep turbulent rumble and flame rush, outdoors, realistic"
+  },
+  "047-porte-ferme": {
+    "duree": 1.58,
+    "lufs": -17.62,
+    "crete": -1,
+    "annonce": 22,
+    "fait": "2026-11-13T07:03",
+    "prompt": "Dishwasher door being closed firmly by hand: hinged stainless steel door swinging up, rubber seal thud and plastic latch clicking shut, kitchen, close-mic, isolated, no music"
+  },
+  "047-jets-bras": {
+    "duree": 5,
+    "lufs": -20,
+    "crete": -9.29,
+    "annonce": 55,
+    "fait": "2026-11-13T07:04",
+    "prompt": "Inside a closed running dishwasher: rotating spray arm throwing water jets that drum on ceramic dishes and stainless steel walls, steady rhythmic swish and splatter, close-mic, isolated, no music"
+  },
+  "047-pompe": {
+    "duree": 3.85,
+    "lufs": -11.59,
+    "crete": -1,
+    "annonce": 44,
+    "fait": "2026-11-13T07:04",
+    "prompt": "Small electric circulation pump of a dishwasher starting and running: low motor hum, water sucked from a plastic sump with gurgling, then pushed through a tube, close-mic, isolated, no music"
+  },
+  "047-trappe-pastille": {
+    "duree": 1.3,
+    "lufs": -22.11,
+    "crete": -1,
+    "annonce": 22,
+    "fait": "2026-11-13T07:04",
+    "prompt": "Small spring-loaded plastic flap of a dishwasher detergent dispenser snapping open, then a detergent tablet dropping into shallow water with a soft plop, close-mic, isolated, no music"
+  },
+  "047-croute-lache": {
+    "duree": 2.65,
+    "lufs": -30.08,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-13T07:04",
+    "prompt": "Hard baked-on food crust cracking and peeling off a ceramic baking dish under a strong water jet, crisp flaking pieces falling into water, close-mic, isolated, no music"
+  },
+  "048-roue-coupe": {
+    "duree": 3.23,
+    "lufs": -15.38,
+    "crete": -1,
+    "annonce": 44,
+    "fait": "2026-11-13T07:04",
+    "prompt": "Giant tunnel boring machine cutterhead slowly rotating and grinding through wet clay and stones underground, deep heavy steel scraping and rumbling, close, isolated, no music"
+  },
+  "048-front-s-ecroule": {
+    "duree": 2.05,
+    "lufs": -18.09,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-13T07:04",
+    "prompt": "Wet soil and gravel collapsing and sliding into an underground void, heavy earth crumbling with a low creak of asphalt settling above, close, isolated, no music"
+  },
+  "048-vis-extraction": {
+    "duree": 2.82,
+    "lufs": -13.16,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-13T07:04",
+    "prompt": "Large steel screw conveyor turning slowly inside a tube, pushing thick wet mud, heavy grinding and squelching, industrial machine, close, isolated, no music"
+  },
+  "048-voussoir": {
+    "duree": 1.38,
+    "lufs": -17.76,
+    "crete": -1,
+    "annonce": 22,
+    "fait": "2026-11-13T07:04",
+    "prompt": "Heavy precast concrete tunnel segment pushed into place by a hydraulic arm against other segments, dull concrete thud with a short steel clank, close, isolated, no music"
+  },
+  "CR03-pneu-eclate": {
+    "duree": 1.76,
+    "lufs": -10.51,
+    "crete": -1,
+    "annonce": 22,
+    "fait": "2026-11-13T16:37",
+    "prompt": "Large aircraft tire bursting at very high speed on a concrete runway: violent rubber explosion bang, shredded rubber flapping and slapping, close, outdoors, isolated, no music"
+  },
+  "CR03-debris-aile": {
+    "duree": 0.55,
+    "lufs": -17.24,
+    "crete": -1,
+    "annonce": 17,
+    "fait": "2026-11-13T16:37",
+    "prompt": "Heavy chunk of rubber slamming into the underside of an aluminium aircraft wing full of fuel: deep hollow metallic boom with a dull liquid-filled thud, close, isolated, no music"
+  },
+  "CR03-panneau-arrache": {
+    "duree": 2,
+    "lufs": -12.78,
+    "crete": -1,
+    "annonce": 22,
+    "fait": "2026-11-13T16:37",
+    "prompt": "Aluminium aircraft skin panel bulging and tearing off from inside under a liquid pressure surge: metallic pop, rivets snapping, sudden gush of fuel, close, isolated, no music"
+  },
+  "CR03-kerosene-fuite": {
+    "duree": 3,
+    "lufs": -10.93,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-13T16:37",
+    "prompt": "Jet fuel gushing violently from a ruptured aircraft wing tank at speed: heavy liquid torrent spraying into the air stream, strong wind rush, outdoors, isolated, no music"
+  },
+  "CR03-torche-feu": {
+    "duree": 4,
+    "lufs": -6.62,
+    "crete": -1,
+    "annonce": 44,
+    "fait": "2026-11-13T16:37",
+    "prompt": "Huge trailing kerosene fire behind a jet aircraft at full power: deep roaring turbulent flame rush, fire whoosh blending with jet engine roar, outdoors, isolated, no music"
+  },
+  "CR03-alarme-feu": {
+    "duree": 3,
+    "lufs": -4.63,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-13T16:38",
+    "prompt": "Airliner cockpit engine fire warning: loud continuous fire bell ringing with a single master warning gong chime, heard inside a cockpit, isolated, no voices, no music"
+  }
+}
