@@ -1,0 +1,372 @@
+{
+  "id": "051",
+  "serie": "dossier",
+  "slug": "brise-glace",
+  "title": "Le brise-glace",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "language": "fr"
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Brise-glace",
+      "piégé"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Brise-glace",
+    "caption": "Brise-glace, le navire qui ouvre la banquise : en Antarctique, la glace se referme sur un navire et ses cinquante-deux passagers. Le brise-glace venu le chercher se retrouve coincé à son tour. Pourtant, il casse un mètre de glace sans la frapper. Coincé là-bas, toi : tu attends le brise-glace… ou l'hélico ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#briseglace",
+      "#antarctique",
+      "#bateau"
+    ],
+    "pinned": "Le 2 janvier 2014, c'est un hélicoptère qui a évacué les 52 passagers. Leur navire s'est dégagé le 8. Toi : le brise-glace, ou l'hélico ?",
+    "instagram": {
+      "caption": "La glace se referme sur ton navire. Même le brise-glace venu te chercher… reste coincé.\n\nDossier 051 : le brise-glace. Une ceinture d'acier épais à la flottaison, des citernes de chaque bord, et une étrave inclinée, à vingt ou trente degrés : la glace de mer supporte qu'on l'écrase, pas qu'on la plie. Le 25 décembre 2013, en Antarctique, l'Akademik Shokalskiy est pris dans la banquise. Le brise-glace chinois venu le chercher, le Xuelong, s'y retrouve piégé six jours.\n\nCoincé là-bas, toi : tu attends le brise-glace… ou l'hélico ?",
+      "hashtags": [
+        "#briseglace",
+        "#antarctique",
+        "#bateau",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Même le brise-glace venu te sauver reste coincé : comment un brise-glace casse la glace",
+      "description": "Dossier 051 — le brise-glace ouvert : la ceinture de glace, cet acier épais qui court à la flottaison ; ses citernes, de chaque bord ; et son étrave inclinée, à vingt ou trente degrés. Le principe : la glace de mer résiste à l'écrasement, mais mal à la flexion. L'étrave appuie sur la plaque, qui plie et casse — environ soixante pour cent de résistance en moins qu'avec une étrave presque droite. Pris dans la glace, il fait passer l'eau d'un bord à l'autre (quinze secondes sur l'Oden suédois), roule, recule et repart à l'élan. Et l'histoire vraie : le 25 décembre 2013, l'Akademik Shokalskiy et ses cinquante-deux passagers sont pris dans la banquise, en Antarctique ; le brise-glace chinois Xuelong, venu les chercher, y reste piégé six jours, dans une glace que le vent d'est a comprimée. Une reconstitution : les gestes montrés à la fin sont ceux des brise-glace en général, pas ceux documentés du Xuelong.\n\nMarins, ingénieurs navals : qu'est-ce qu'on a simplifié ? Et toi : coincé là-bas, tu attends le brise-glace… ou l'hélico ?",
+      "hashtags": [
+        "#shorts",
+        "#briseglace",
+        "#antarctique",
+        "#bateau",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "La glace se referme sur ton navire : l'Akademik Shokalskiy (navire russe renforcé glace) pris dans la glace de la baie du Commonwealth, Antarctique, à partir du 24-25/12/2013 — Wikipedia « Akademik Shokalskiy » [S]",
+    "Cinquante-deux passagers à bord (et 22 membres d'équipage) — Wikipedia ; AMSA via recherche [S]",
+    "Le brise-glace venu le chercher reste coincé : le Xue Long (Xuelong) piégé six jours, du 1er au 7 janvier 2014 — Zhai et al., Annals of Glaciology 56(69), 2015, doi 10.3189/2015AoG69A007 [P]",
+    "Il casse un mètre de glace : Xuelong classé B1, conçu pour 1,1 m de glace (dont 0,2 m de neige) à 1,5 nœud — Zhai et al. 2015 [P] ; « un mètre » est un arrondi",
+    "Sans la frapper : la glace casse en flexion sous l'étrave inclinée, pas sous le choc — Wikipedia « Icebreaker » citant NRC 2007 ; Riska / POAC via recherche [S]",
+    "Une dizaine de kilomètres à ouvrir : le Xuelong n'approche pas à moins de ≈ 6 milles nautiques (≈ 11 km) — Wikipedia « Akademik Shokalskiy » [S]",
+    "La ceinture de glace : zone de la flottaison la plus renforcée, bordé épais (jusqu'à 50 mm sur les anciens brise-glace polaires) — Wikipedia « Icebreaker » citant Canadian Coast Guard [S]",
+    "Des citernes de chaque bord : citernes de gîte, deux paires de 400 t sur l'Oden — WHOI [S]",
+    "Étrave inclinée, typiquement 20 à 30° avec la flottaison — brevet US5176092 via recherche [S]",
+    "La glace de mer supporte qu'on l'écrase, pas qu'on la plie ; l'étrave inclinée change une part de la poussée en force vers le bas — POAC25 / MDPI 2025 via recherche [S]",
+    "Environ soixante pour cent de résistance en moins : étrave de 82° (« presque droite ») à 20° — étude de 1973 citée par MDPI 2025 [S, reprise indirecte] ; dit « environ »",
+    "En glace plate, la plaque plie, se fend, les blocs tournent et glissent sous la coque — Riska / POAC ; NRC 2007 cité par Wikipedia [S]",
+    "La glace s'empile en crêtes et serre la coque des deux bords : convergence, compaction, crêtes autour du Xuelong — Zhai et al. 2015 [P] ; « nipped » — marineinsight [S]",
+    "L'eau des citernes change de bord, le navire roule, la friction baisse et un navire arrêté se dégage ; Oden : gîte complète en 15 s — CRREL (Backman 1994), WHOI [S]",
+    "Il recule et repart à l'élan (« ramming ») — NAS 2005, chapitre 5 [P]",
+    "Il ne tape pas la glace, il pèse dessus — chute candidate du dossier : rupture en flexion [S POAC/MDPI] ; l'élan, la puissance et la forme de coque font la performance [P NAS 2005]",
+    "Le vent et la marée : six jours, la banquise s'est serrée autour du Xuelong — Zhai et al. 2015 (vent d'est constant, glace qui converge et se compacte) [P]",
+    "Épinglé : évacuation des 52 passagers par hélicoptère le 2/01/2014 ; le Shokalskiy se dégage le 8/01/2014 — Wikipedia, AMSA via recherche [S]",
+    "La scène est réelle (Antarctique, 25/12/2013 → 8/01/2014) ; l'image la reconstitue sans prêter de gestes aux équipages. Les gestes de l'acte 3 (citernes, roulis, recul, élan) sont ceux des brise-glace en général (Oden, brise-glace lourds), pas ceux documentés du Xuelong. Aucun degré de gîte ni débit de pompe n'est dit."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "La glace se *referme* sur ton navire. Même le brise-glace venu te chercher… reste *coincé*.",
+      "vo": "[tense] La glace se referme sur ton navire. Même le brise-glace venu te chercher... reste coincé.",
+      "voAlt": [
+        "[firm, matter-of-fact] La glace se referme sur ton navire. Même le brise-glace venu te chercher... reste coincé."
+      ],
+      "voir": "Au ras de la banquise, en contre-plongée : les plaques de glace glissent et se referment autour de la coque du navire (rayons X) ; derrière lui, la proue pleine du brise-glace, petite mais lisible, qui avance puis s'immobilise, la glace refermée dans son sillage."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Pourtant, il casse un mètre de glace… sans la +frapper+. Alors ce jour-là, qui l'a *bloqué* ?",
+      "vo": "[firm, matter-of-fact] Pourtant, il casse un mètre de glace... sans la frapper. [short pause] Alors ce jour-là, qui l'a bloqué ?",
+      "voir": "De profil, la proue pleine du brise-glace glisse sur une plaque épaisse d'un mètre (cote affichée) qui se fend sans choc ; puis on recule en hauteur : le brise-glace arrêté, la glace serrée tout autour, un point d'interrogation sur ce qui l'entoure."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "[52|Cinquante-deux] passagers à bord, en Antarctique. Les plaques se pressent contre ta coque. Un brise-glace arrive : une dizaine de kilomètres à ouvrir… dans une glace qui se *serre*.",
+      "vo": "[tense] Cinquante-deux passagers à bord, en Antarctique. Les plaques se pressent contre ta coque. Un brise-glace arrive : une dizaine de kilomètres à ouvrir... dans une glace qui se serre.",
+      "voir": "Même instant : sur le pont du navire pris, des silhouettes ; vue basse le long du flanc, les plaques se tassent contre la coque ; vue du dessus, le brise-glace au loin, une ligne de distance (une dizaine de kilomètres) qui ne raccourcit plus pendant que la glace se resserre ; on finit sur la proue du brise-glace."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "Le brise-glace plein, de trois quarts sur son halo, s'ouvre en vue éclatée sur « on »."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Une ceinture d'acier épais court à sa flottaison. Dedans, des citernes, de chaque bord. Et devant… le cœur : l'étrave inclinée, qui pose son +poids+.",
+      "vo": "[conversational, curious] Une ceinture d'acier épais court à sa flottaison. Dedans, des citernes, de chaque bord. Et devant... le cœur : l'étrave inclinée, qui pose son poids.",
+      "voAlt": [
+        "[curious] Une ceinture d'acier épais court à sa flottaison. Dedans, des citernes, de chaque bord. Et devant... le cœur : l'étrave inclinée, qui pose son poids."
+      ],
+      "voir": "Vue éclatée, pièces nommées une à une : la bande d'acier épais à la ligne de flottaison s'allume, puis les deux citernes bâbord et tribord dans la coque, puis on glisse vers l'avant jusqu'à l'étrave inclinée, isolée, une flèche de poids qui descend d'elle."
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi ça casse ? La glace de mer supporte qu'on l'écrase, pas qu'on la *plie*. Inclinée à vingt degrés, l'étrave pèse dessus : environ [60|soixante] pour cent de résistance en moins qu'une étrave presque +droite+.",
+      "vo": "[curious] Pourquoi ça casse ? [short pause] La glace de mer supporte qu'on l'écrase, pas qu'on la plie. Inclinée à vingt degrés, l'étrave pèse dessus : environ soixante pour cent de résistance en moins qu'une étrave presque droite.",
+      "voir": "Gros plan en coupe sur l'étrave et une plaque de glace : une étrave presque droite pousse de face et écrase, rien ne cède ; l'étrave à vingt degrés appuie vers le bas, la plaque se cintre et casse ; à côté, une jauge de résistance qui tombe de soixante pour cent."
+    },
+    {
+      "id": "repos",
+      "text": "En glace plate, la plaque plie, se fend, et les blocs basculent sous la coque. Mais là-bas… la glace se *referme*.",
+      "vo": "[warm, conversational] En glace plate, la plaque plie, se fend, et les blocs basculent sous la coque. Mais là-bas... la glace se referme.",
+      "voAlt": [
+        "[curious] En glace plate, la plaque plie, se fend, et les blocs basculent sous la coque. Mais là-bas... la glace se referme."
+      ],
+      "voir": "De profil, la coque aux rayons X avance lentement en glace plate : la plaque plie sous l'étrave, se fend, les blocs basculent et glissent le long de la coque, dessous ; puis, plan large, les plaques autour se rapprochent et se referment derrière lui."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Elle s'empile en *crêtes*. Des deux bords. Elle serre la coque. Et le brise-glace… s'arrête.",
+      "vo": "[firm, matter-of-fact] Elle s'empile en crêtes. Des deux bords. Elle serre la coque. Et le brise-glace... s'arrête.",
+      "voir": "Vue du dessus puis rasante : la banquise converge des deux bords, se soulève en crêtes contre les flancs ; l'hélice brasse encore, le sillage se fige, le brise-glace s'arrête net ; le chrono repart."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Alors, les citernes de l'Oden. L'eau change de bord : [15|quinze] secondes. Il *roule*. La coque se libère. Il recule… repart à l'élan. La proue pèse. La glace plie… et +casse+.",
+      "vo": "[tense] Alors, les citernes de l'Oden. L'eau change de bord : quinze secondes. Il roule. La coque se libère. Il recule... repart à l'élan. La proue pèse. La glace plie... et casse.",
+      "voir": "Coupe transversale : l'eau passe d'une citerne à l'autre (chrono de quinze secondes), toute la coque roule, la glace se décolle des flancs ; puis le brise-glace recule, repart, sa proue s'appuie sur la crête qui se cintre et casse en grand, les blocs s'écartent de part et d'autre."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : un brise-glace ne tape *pas* la glace. Il pèse dessus. Et pris, il ne force pas : il se +balance+.",
+      "vo": "[firm, matter-of-fact] Voilà son secret : un brise-glace ne tape pas la glace. Il pèse dessus. Et pris, il ne force pas : il se balance.",
+      "voir": "De trois quarts, le brise-glace plein : sa proue posée sur la glace, une flèche de poids vers le bas, la plaque qui cède ; puis la coque qui roule d'un bord à l'autre, lentement, et se dégage."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et qui l'a bloqué, le Xuelong ? Le vent et la marée : six jours, la banquise s'est serrée autour de lui. En +commentaire+ : toi, coincé là-bas : le brise-glace… ou l'*hélico* ?",
+      "vo": "[conversational, curious] Et qui l'a bloqué, le Xuelong ? [short pause] Le vent et la marée : six jours, la banquise s'est serrée autour de lui. [short pause] En commentaire : toi, coincé là-bas : le brise-glace... ou l'hélico ?",
+      "voAlt": [
+        "[curious] Et qui l'a bloqué, le Xuelong ? [short pause] Le vent et la marée : six jours, la banquise s'est serrée autour de lui. [short pause] En commentaire : toi, coincé là-bas : le brise-glace... ou l'hélico ?"
+      ],
+      "voir": "Vue du dessus : de longues flèches de vent d'est poussent la banquise contre les deux navires, un compteur de six jours défile ; puis le duel : le brise-glace d'un côté, un hélicoptère de l'autre, au-dessus du navire pris."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour celui qui croit qu'il suffit de pousser plus *fort*.",
+      "vo": "[warm, conversational] Like : [short pause] pour celui qui croit qu'il suffit de pousser plus fort.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour celui qui croit qu'il suffit de pousser plus fort."
+      ],
+      "voir": "Une étrave presque droite pousse contre un mur de glace qui ne bouge pas, l'hélice s'emballe pour rien ; les chevrons désignent le bouton like."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, le télésiège débrayable. À chaque gare, il lâche le câble… puis le *rattrape*.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, le télésiège débrayable. À chaque gare, il lâche le câble... puis le rattrape.",
+      "voir": "Panneau « S'abonner pour l'ouvrir » : un télésiège entre en gare, sa pince s'ouvre et lâche le câble, le siège ralentit, puis la pince se referme sur le câble qui file ; chevrons vers le bouton."
+    },
+    {
+      "id": "boucle",
+      "text": "Juste au moment où…",
+      "vo": "[calm] Juste au moment où,",
+      "voir": "Retour à la première image : au ras de la banquise, les plaques glissent vers la coque du navire et commencent à se refermer."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:referme",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:casse-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:moment"
+  },
+  "bedVolume": 0.8,
+  "sons": [
+    {
+      "id": "051-glace-fend",
+      "image": "la plaque plie sous l'étrave et se fend (promesse, principe, réponse)",
+      "duree": 2.5,
+      "prompt": "Thick sea ice sheet bending and splitting under a heavy ship bow: a deep groaning creak, then one sharp loud crack, close, realistic, isolated, no music"
+    },
+    {
+      "id": "051-coque-glace",
+      "image": "la banquise se resserre et frotte contre la coque (accroche, scène, zéro)",
+      "duree": 4,
+      "prompt": "Pack ice grinding and scraping slowly against a steel ship hull under pressure: low groaning, creaking ice, heavy scraping, close, realistic, isolated, no music"
+    },
+    {
+      "id": "051-blocs-glace",
+      "image": "les blocs basculent et glissent sous la coque (repos)",
+      "duree": 3,
+      "prompt": "Broken ice blocks tumbling and knocking along a steel ship hull into cold water: heavy hollow thuds and splashes, mid distance, realistic, isolated, no music"
+    },
+    {
+      "id": "051-ballast-eau",
+      "image": "l'eau des citernes change de bord, la coque roule (réponse)",
+      "duree": 4,
+      "prompt": "Huge volume of water rushing through a large pipe between steel ballast tanks inside a ship hull, deep pump hum and sloshing, interior, realistic, isolated, no music"
+    },
+    {
+      "id": "051-helice-effort",
+      "image": "l'hélice brasse, le brise-glace recule puis repart à l'élan (zéro, réponse)",
+      "duree": 4,
+      "prompt": "Large ship diesel engine and propeller churning water under heavy strain, deep rumble rising then surging forward, heard from the deck, realistic, isolated, no music"
+    },
+    {
+      "id": "051-vent-banquise",
+      "image": "le vent d'est sur la banquise (scène, commentaire)",
+      "reprend": "amb-vent"
+    }
+  ],
+  "sfx": [
+    {
+      "type": "space",
+      "mix": 0.18
+    },
+    {
+      "type": "sample",
+      "file": "amb-tension.wav",
+      "loop": true,
+      "from": 0,
+      "gain": -16,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "sample",
+      "file": "sig-dossier.wav",
+      "at": 0.02,
+      "gain": -8,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "aspiration.wav",
+      "at": "ouvre-0.7",
+      "to": "ouvre-0.04",
+      "offset": 0.6,
+      "gain": -18
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "ouvre$+0.02",
+      "depth": -90
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.16",
+      "dur": 0.3,
+      "gain": -5,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.38",
+      "offset": 1.75,
+      "gain": -2,
+      "bus": "main",
+      "dur": 0.55,
+      "fade": 0.2
+    },
+    {
+      "type": "sample",
+      "file": "riser.wav",
+      "at": "tozero-2",
+      "to": "tozero",
+      "offset": 1.5,
+      "gain": -22
+    },
+    {
+      "type": "sample",
+      "file": "impact-lourd.wav",
+      "at": "tozero",
+      "gain": -17,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "impact-lourd.wav",
+      "at": "trigger",
+      "gain": -15,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "impact-sec.wav",
+      "at": "verdict",
+      "gain": -15
+    },
+    {
+      "type": "sample",
+      "file": "sig-boucle.wav",
+      "at": "rewind",
+      "gain": -8,
+      "offset": 0.6
+    }
+  ]
+}
