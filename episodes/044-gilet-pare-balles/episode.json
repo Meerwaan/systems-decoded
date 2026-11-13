@@ -238,6 +238,43 @@
     "rewind": "boucle:nuit"
   },
   "bedVolume": 0.8,
+  "sons": [
+    {
+      "id": "044-rue-nuit",
+      "image": "la nuit, le bruit de la rue couvre tout",
+      "reprend": "amb-rue"
+    },
+    {
+      "id": "044-tir-lointain",
+      "image": "personne n'entend le tir",
+      "duree": 2.5,
+      "prompt": "Single distant gunshot at night in a city, muffled under street noise, realistic"
+    },
+    {
+      "id": "044-balle-fuse",
+      "image": "la balle fonce vers le gilet",
+      "duree": 1.5,
+      "prompt": "Bullet flying past very fast, supersonic crack and whizz, close, realistic, isolated"
+    },
+    {
+      "id": "044-balle-impact-gilet",
+      "image": "la pointe touche la première couche ; la balle s'écrase en champignon",
+      "duree": 1.5,
+      "prompt": "Bullet impacting a soft body armor vest: dull heavy thud into layered fabric, punchy, realistic, close, isolated"
+    },
+    {
+      "id": "044-fibres-tension",
+      "image": "les fils cassent, les suivants se tendent, couche après couche",
+      "duree": 3,
+      "prompt": "Tight synthetic fibers stretching and snapping one after another, taut fabric straining and creaking, close-mic, isolated"
+    },
+    {
+      "id": "044-couches-tissu",
+      "image": "le gilet s'ouvre : la housse, les couches cousues",
+      "duree": 2,
+      "prompt": "Layers of heavy technical fabric sliding and separating, soft rustle, close-mic, isolated"
+    }
+  ],
   "sfx": [
     {
       "type": "drone",

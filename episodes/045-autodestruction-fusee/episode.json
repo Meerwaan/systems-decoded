@@ -243,22 +243,135 @@
     "rewind": "boucle:seconde"
   },
   "bedVolume": 0.8,
+  "sons": [
+    {
+      "id": "045-fusee-vol",
+      "image": "la fusée monte, ses moteurs grondent",
+      "reprend": "moteur-fusee"
+    },
+    {
+      "id": "045-coque-dechire",
+      "image": "la fusée bascule et se déchire, les boosters s'arrachent",
+      "duree": 3,
+      "prompt": "Huge metal rocket structure tearing apart in the air, shrieking metal and ripping, with a deep roar, realistic"
+    },
+    {
+      "id": "045-charge-lineaire",
+      "image": "la charge linéaire détone, la coque s'ouvre",
+      "duree": 2.5,
+      "prompt": "Linear shaped charge detonating along a metal hull: sharp fast explosive crack running like a zipper, metal cut open, realistic"
+    },
+    {
+      "id": "045-debris-tombent",
+      "image": "tout retombe près du pas de tir, dans la mangrove et la savane",
+      "duree": 4,
+      "prompt": "Burning debris falling from the sky and crashing into mangrove and savanna, scattered distant impacts, realistic"
+    },
+    {
+      "id": "045-telemetrie",
+      "image": "une antenne écoute le sol",
+      "duree": 2,
+      "prompt": "Radio telemetry signal: short data burst chirps and static from a tracking antenna, technical, isolated"
+    },
+    {
+      "id": "045-securite-armement",
+      "image": "le verrou de sécurité-armement",
+      "reprend": "verrou"
+    },
+    {
+      "id": "045-tuyeres",
+      "image": "les tuyères braquent à fond (vérins hydrauliques)",
+      "reprend": "hydraulique"
+    },
+    {
+      "id": "045-jet-tranche",
+      "image": "le jet de cuivre perce la plaque d'acier (principe, 37,2 → 38,6)",
+      "duree": 1.5,
+      "reserve": true,
+      "prompt": "Shaped charge copper jet punching straight through a thick steel plate: a sharp hissing metallic tear and a short ringing crack, close, realistic, isolated"
+    },
+    {
+      "id": "045-liaisons-rompues",
+      "image": "à la jonction, les liaisons du booster cèdent et coupent leurs fils, des étincelles (75,7)",
+      "duree": 1.5,
+      "reserve": true,
+      "prompt": "Metal struts and electrical cables snapping apart under tension: a hard metallic snap, a cable whip and a short burst of crackling sparks, close, realistic, isolated"
+    }
+  ],
   "sfx": [
     {
-      "type": "drone",
-      "gain": -24,
+      "type": "space",
+      "mix": 0.18
+    },
+    {
+      "type": "sample",
+      "file": "amb-vent.wav",
+      "loop": true,
+      "from": 0,
+      "to": "tobench",
+      "gain": -25,
+      "fade": 0.25
+    },
+    {
+      "type": "sample",
+      "file": "amb-vent.wav",
+      "loop": true,
+      "from": "torepos",
+      "gain": -25,
+      "fade": 0.4,
+      "curve": [
+        [
+          "torepos",
+          0.6
+        ],
+        [
+          "tozero",
+          0.85
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.6
+        ],
+        [
+          "tocta",
+          0.6
+        ],
+        [
+          "toloop",
+          0.75
+        ]
+      ]
+    },
+    {
+      "type": "sample",
+      "file": "amb-tension.wav",
+      "loop": true,
+      "from": 0,
+      "gain": -16,
       "curve": [
         [
           0,
           0.8
         ],
         [
-          "tobench",
-          0.5
+          "toscene",
+          0.9
+        ],
+        [
+          "explode",
+          0.35
         ],
         [
           "torepos",
-          0.6
+          0.5
+        ],
+        [
+          "repos:bascule",
+          0.8
         ],
         [
           "tozero",
@@ -274,7 +387,7 @@
         ],
         [
           "tocta",
-          0.4
+          0.5
         ],
         [
           "rewind",
@@ -283,323 +396,141 @@
       ]
     },
     {
-      "type": "hit",
+      "type": "sample",
+      "file": "sig-dossier.wav",
       "at": 0.02,
-      "gain": -13,
-      "pitch": 0.9
+      "gain": -8,
+      "bus": "main"
     },
     {
-      "type": "impact",
-      "at": 0.03,
-      "gain": -14,
-      "size": 1.2,
-      "crack": 1
-    },
-    {
-      "type": "swish",
+      "type": "sample",
+      "file": "045-coque-dechire.wav",
       "at": 0.02,
-      "dur": 0.28,
-      "gain": -15
-    },
-    {
-      "type": "impact",
-      "at": "accroche:déchire$+0.06",
-      "gain": -15,
-      "size": 1,
-      "crack": 1
-    },
-    {
-      "type": "swish",
-      "at": "accroche:seule$+0.08",
-      "dur": 0.3,
-      "gain": -17
-    },
-    {
-      "type": "click",
-      "at": "accroche:prévu$+0.06",
-      "gain": -17
-    },
-    {
-      "type": "click",
-      "at": "promesse:charge$+0.06",
-      "gain": -19
-    },
-    {
-      "type": "swish",
-      "at": "promesse$+0.12",
-      "dur": 0.3,
       "gain": -16
     },
     {
-      "type": "hit",
-      "at": "toscene",
-      "gain": -15
-    },
-    {
-      "type": "impact",
-      "at": "scene:tir$+0.06",
-      "gain": -17,
-      "size": 0.9,
-      "crack": 1
-    },
-    {
-      "type": "click",
-      "at": "scene:couloir$+0.06",
-      "gain": -17
-    },
-    {
-      "type": "hit",
-      "at": "scene$+0.04",
-      "gain": -15
-    },
-    {
-      "type": "suck",
+      "type": "sample",
+      "file": "aspiration.wav",
+      "at": "ouvre-0.7",
       "to": "ouvre-0.04",
-      "dur": 0.6,
-      "gain": -17
+      "offset": 0.6,
+      "gain": -14
     },
     {
       "type": "hush",
       "from": "ouvre",
-      "to": "explode-0.02",
+      "to": "ouvre$+0.02",
+      "depth": -90
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.16",
+      "dur": 0.3,
+      "gain": -9,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.38",
+      "offset": 1.75,
+      "gain": 2,
+      "bus": "main",
+      "dur": 0.55,
+      "fade": 0.2
+    },
+    {
+      "type": "sample",
+      "file": "045-telemetrie.wav",
+      "at": 22.7,
+      "dur": 0.45,
+      "fade": 0.15,
+      "gain": -20
+    },
+    {
+      "type": "sample",
+      "file": "verrou.wav",
+      "at": 24.62,
+      "gain": -8
+    },
+    {
+      "type": "sample",
+      "file": "045-charge-lineaire.wav",
+      "at": 33.58,
+      "gain": -12
+    },
+    {
+      "type": "sample",
+      "file": "045-jet-tranche.wav",
+      "at": 37.16,
+      "gain": -12
+    },
+    {
+      "type": "sample",
+      "file": "moteur-fusee.wav",
+      "at": 42.62,
+      "gain": -17,
+      "fade": 1.2
+    },
+    {
+      "type": "sample",
+      "file": "moteur-fusee.wav",
+      "at": "tozero",
+      "offset": 0.6,
+      "gain": -15,
+      "fade": 1.5
+    },
+    {
+      "type": "sample",
+      "file": "hydraulique.wav",
+      "at": 52.46,
+      "gain": -11
+    },
+    {
+      "type": "sample",
+      "file": "045-coque-dechire.wav",
+      "at": 55.84,
+      "gain": -12
+    },
+    {
+      "type": "sample",
+      "file": "045-charge-lineaire.wav",
+      "at": "trigger-0.03",
+      "gain": -6,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "045-debris-tombent.wav",
+      "at": 59.74,
+      "gain": -6,
+      "fade": 0.6
+    },
+    {
+      "type": "hush",
+      "from": 63.1,
+      "to": 63.7,
       "depth": -14
     },
     {
-      "type": "impact",
-      "at": "ouvre$+0.06",
-      "gain": -16,
-      "size": 0.8
+      "type": "sample",
+      "file": "impact-sec.wav",
+      "at": "verdict",
+      "gain": -12
     },
     {
-      "type": "click",
-      "at": "eclate:sol$+0.06",
-      "gain": -19
-    },
-    {
-      "type": "click",
-      "at": "eclate:verrou$+0.06",
-      "gain": -19
-    },
-    {
-      "type": "click",
-      "at": "eclate:sécurité$+0.06",
-      "gain": -17
-    },
-    {
-      "type": "click",
-      "at": "eclate:détonateur$+0.06",
-      "gain": -18
-    },
-    {
-      "type": "click",
-      "at": "eclate:bout$+0.06",
-      "gain": -19
-    },
-    {
-      "type": "hit",
-      "at": "eclate$+0.06",
-      "gain": -15
-    },
-    {
-      "type": "swish",
-      "at": "principe:tranche$+0.16",
-      "dur": 0.25,
-      "gain": -18
-    },
-    {
-      "type": "click",
-      "at": "principe:V$+0.04",
-      "gain": -19
-    },
-    {
-      "type": "click",
-      "at": "principe:cuivre$+0.04",
-      "gain": -19
-    },
-    {
-      "type": "impact",
-      "at": "principe:seconde$+0.04",
-      "gain": -15,
-      "size": 0.9,
-      "crack": 1
-    },
-    {
-      "type": "impact",
-      "at": "principe$+0.06",
-      "gain": -16,
-      "size": 0.9,
-      "crack": 1
-    },
-    {
-      "type": "hit",
-      "at": "torepos",
+      "type": "sample",
+      "file": "045-liaisons-rompues.wav",
+      "at": 75.66,
       "gain": -16
     },
     {
-      "type": "click",
-      "at": "repos:attend$+0.06",
-      "gain": -20
-    },
-    {
-      "type": "blip",
-      "at": "repos:seconde$+0.06",
-      "gain": -20,
-      "pitch": 1.2
-    },
-    {
-      "type": "click",
-      "at": "repos:couloir$+0.06",
-      "gain": -18
-    },
-    {
-      "type": "hit",
-      "at": "repos:là$+0.06",
-      "gain": -15
-    },
-    {
-      "type": "impact",
-      "at": "tozero",
-      "gain": -12,
-      "size": 1.2
-    },
-    {
-      "type": "click",
-      "at": "zero:l'allumage$+0.06",
-      "gain": -20
-    },
-    {
-      "type": "impact",
-      "at": "zero:lâchent$+0.05",
-      "gain": -16,
-      "size": 0.8,
-      "crack": 1
-    },
-    {
-      "type": "swish",
-      "at": "zero:fond$+0.16",
-      "dur": 0.24,
-      "gain": -17
-    },
-    {
-      "type": "impact",
-      "at": "zero:travers$+0.04",
-      "gain": -17,
-      "size": 0.9
-    },
-    {
-      "type": "hit",
-      "at": "zero$+0.06",
-      "gain": -14
-    },
-    {
-      "type": "impact",
-      "at": "reponse:s'arrachent$+0.06",
-      "gain": -12,
-      "size": 1.3,
-      "crack": 1
-    },
-    {
-      "type": "impact",
-      "at": "reponse:détone$+0.06",
+      "type": "sample",
+      "file": "sig-boucle.wav",
+      "at": "rewind",
       "gain": -10,
-      "size": 1.4
-    },
-    {
-      "type": "impact",
-      "at": "reponse:s'ouvre$+0.06",
-      "gain": -14,
-      "size": 1,
-      "crack": 1
-    },
-    {
-      "type": "impact",
-      "at": "reponse$+0.06",
-      "gain": -18,
-      "size": 0.7
-    },
-    {
-      "type": "hit",
-      "at": "toverdict",
-      "gain": -14
-    },
-    {
-      "type": "hit",
-      "at": "chute:raté$+0.06",
-      "gain": -16
-    },
-    {
-      "type": "blip",
-      "at": "chute:tout$+0.1",
-      "gain": -15,
-      "pitch": 0.7,
-      "heavy": true
-    },
-    {
-      "type": "impact",
-      "at": "chute$+0.06",
-      "gain": -16,
-      "size": 0.8,
-      "crack": 1
-    },
-    {
-      "type": "swish",
-      "at": "comment:charge$+0.16",
-      "dur": 0.3,
-      "gain": -17
-    },
-    {
-      "type": "impact",
-      "at": "comment:fils$+0.06",
-      "gain": -17,
-      "size": 0.7,
-      "crack": 1
-    },
-    {
-      "type": "hit",
-      "at": "comment:commentaire$+0.06",
-      "gain": -16
-    },
-    {
-      "type": "click",
-      "at": "comment:décide$+0.04",
-      "gain": -19
-    },
-    {
-      "type": "click",
-      "at": "comment$+0.06",
-      "gain": -18
-    },
-    {
-      "type": "click",
-      "at": "like:like$+0.06",
-      "gain": -17
-    },
-    {
-      "type": "click",
-      "at": "like$+0.06",
-      "gain": -19
-    },
-    {
-      "type": "hit",
-      "at": "abo:abonne$+0.06",
-      "gain": -16
-    },
-    {
-      "type": "click",
-      "at": "abo:raffinerie$+0.06",
-      "gain": -19
-    },
-    {
-      "type": "impact",
-      "at": "toloop",
-      "gain": -16,
-      "size": 0.7
-    },
-    {
-      "type": "rewind",
-      "at": "boucle$+0.04",
-      "dur": 0.6,
-      "gain": -21
+      "offset": 0.6
     }
   ]
 }

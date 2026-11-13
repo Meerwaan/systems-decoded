@@ -241,6 +241,44 @@
     "rewind": "boucle:mais"
   },
   "bedVolume": 0.8,
+  "sons": [
+    {
+      "id": "043-anneau-ronronne",
+      "image": "le faisceau file dans l'anneau, les aimants supraconducteurs tiennent (accroche, scène)",
+      "duree": 8,
+      "boucle": true,
+      "prompt": "Particle accelerator tunnel: deep steady electromagnetic hum of superconducting magnets with a faint high whine, ominous, no music"
+    },
+    {
+      "id": "043-poussiere-pluie",
+      "image": "le grain fait pleuvoir des particules sur les aimants",
+      "duree": 2.5,
+      "prompt": "Fine crackling static and tiny sparkling particles raining onto metal, subtle, close, isolated"
+    },
+    {
+      "id": "043-alerte-controle",
+      "image": "la perte franchit le seuil, l'alerte part",
+      "duree": 3,
+      "prompt": "Control room interlock alarm: two-tone electronic warning chime repeating, technical, calm room"
+    },
+    {
+      "id": "043-capteurs",
+      "image": "3 600 capteurs guettent la moindre perte",
+      "reprend": "bip"
+    },
+    {
+      "id": "043-aimants-kicker",
+      "image": "15 aimants s'allument d'un coup et poussent le train hors de l'anneau",
+      "duree": 2,
+      "prompt": "Powerful electromagnets firing instantly: sharp high-voltage discharge thump with an electric crack, industrial, isolated"
+    },
+    {
+      "id": "043-faisceau-bloc",
+      "image": "le train peint son « e » sur le bloc de graphite",
+      "duree": 3,
+      "prompt": "Intense energy beam slamming into a massive graphite block: deep muffled impact with a sizzling electric burn and low resonance, isolated"
+    }
+  ],
   "sfx": [
     {
       "type": "drone",
