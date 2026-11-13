@@ -6,6 +6,7 @@ import fs from "node:fs";
 import { resolveEpisode, loadEpisode, schedule } from "./lib/episode.mjs";
 import { ecriture, mesures } from "./lib/ecriture.mjs";
 import { planVoice, estimateVoice } from "./voice.mjs";
+import { devisSons, ligneSons } from "./sons.mjs";
 import { logFile, verbose } from "./lib/log.mjs";
 
 const fr = (x, d = 0) => Number(x).toLocaleString("fr-FR", { minimumFractionDigits: d, maximumFractionDigits: d });
@@ -48,6 +49,14 @@ async function dossier(arg) {
     r.warnings = [`contrôles d'écriture indisponibles : ${err.message}`];
   }
 
+  // the sound quote (12/11): the film's own sounds to make, plus its reserve — in the same message as the voice
+  try {
+    const d = devisSons(ep);
+    r.sons = { line: ligneSons(ep), credits: d.listed ? d.credits + d.reserve : 0, listed: d.listed };
+  } catch (err) {
+    r.errors.push(`devis sons impossible : ${err.message}`);
+  }
+
   // the voice quote: what `npm run voice -- <ep>` would announce today, and what a first full take costs
   try {
     const planned = planVoice(dir);
@@ -79,6 +88,7 @@ function lines(r, detail) {
     if (r.voice.estimate > 0) out.push(`    voix : À enregistrer : ${r.voice.what} ≈ ${fr(r.voice.estimate)} crédits ElevenLabs (avec l'accord de Merwan : --budget ${Math.ceil(r.voice.estimate / 50) * 50})`);
     else out.push(`    voix : rien à enregistrer (déjà sur le disque)${r.voice.fresh != null ? ` · une prise neuve coûterait ≈ ${fr(r.voice.fresh)} crédits` : ""}`);
   }
+  if (r.sons) out.push(`    ${r.sons.line}`);
   for (const e of r.errors) out.push(`    ✗ ${e}`);
   if (detail) for (const w of r.warnings) out.push(`    ⚠ ${w}`);
   return out;
@@ -98,6 +108,7 @@ export async function salle(args) {
   const tail = [
     "",
     `  Total voix : ≈ ${fr(total)} crédits ElevenLabs à enregistrer (${toPay.length} dossier${toPay.length > 1 ? "s" : ""}${toPay.length ? ` : ${toPay.map((r) => r.name.slice(0, 3)).join(", ")}` : ""}) — rien n'a été enregistré`,
+    `  Total sons : ≈ ${fr(rows.reduce((n, r) => n + (r.sons?.credits ?? 0), 0))} crédits, réserves comprises (npm run sons -- <dossier>) — rien n'a été fabriqué`,
     `  Verdict : ${errors ? `✗ ${errors} erreur${errors > 1 ? "s" : ""} à corriger avant le devis` : "✓ prêt pour le message à Merwan"} · ${warnings} ⚠ d'écriture (docs/recette-script.md)`,
   ];
   const full = [...head, ...rows.flatMap((r) => [...lines(r, true), ""]), ...tail];

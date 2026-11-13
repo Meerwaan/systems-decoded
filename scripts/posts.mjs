@@ -595,6 +595,94 @@ const POSTS = {
       hashtags: ["#shorts", "#deepwaterhorizon", "#petrole", "#histoire", "#science"],
     },
   },
+  "047-lave-vaisselle": {
+    instagram: {
+      caption: "Ton plat de gratin a cramé. Ton lave-vaisselle a dix litres d'eau pour le décoller.\n\nDossier 047 : le lave-vaisselle ouvert. Une électrovanne, un puisard et ses filtres, une pompe, un bras qui tourne sans moteur… et une pastille qui attend son heure. En moyenne, moitié moins d'eau qu'à la main.\n\nToi : tu rinces encore tes assiettes… ou plus jamais ?",
+      hashtags: ["#lavevaisselle", "#maison", "#astuce", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ton plat de gratin a cramé… et ton lave-vaisselle n'a que dix litres d'eau pour le décoller",
+      description: "Dossier 047 — le lave-vaisselle ouvert : l'électrovanne d'arrivée, le puisard et ses filtres, la pompe de cyclage, le bras d'aspersion qui tourne sans moteur, poussé par la réaction de ses propres jets, et la trappe de la pastille qui ne s'ouvre qu'au lavage principal. Pourquoi le programme éco est si long : le cercle de Sinner — chaleur, temps, produit, action mécanique ; à 50 °C au plus, il compense par le temps. Environ dix litres d'eau par cycle, la même eau qui repasse des centaines de fois dans la pompe. Et en moyenne, moitié moins d'eau qu'un lavage à la main (Université de Bonn, 200 foyers). Une reconstitution.\n\nRéparateurs, techniciens de l'électroménager : qu'est-ce qu'on a simplifié ? Et toi : tu rinces encore tes assiettes… ou plus jamais ?",
+      hashtags: ["#shorts", "#lavevaisselle", "#maison", "#astuce", "#science"],
+    },
+  },
+  "048-tunnelier": {
+    instagram: {
+      caption: "Ta rue s'enfonce. Dessous, une machine vient de lâcher la terre.\n\nDossier 048 : le tunnelier à pression de terre, celui qui creuse le Grand Paris Express. Une roue de presque dix mètres, une chambre pleine de terre, une cloison étanche, une vis… et des vérins qui s'appuient sur des anneaux de sept voussoirs. Ce qui retient la rue au-dessus du tunnel, c'est de la terre, sous pression.\n\nSous chez toi, il passe un tunnel… oui, ou non ?",
+      hashtags: ["#tunnelier", "#grandparisexpress", "#metro", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ta rue s'enfonce… et ce qui la retient, c'est de la terre : le tunnelier du Grand Paris",
+      description: "Dossier 048 — le tunnelier à pression de terre ouvert : sa roue de coupe de près de dix mètres, la chambre d'abattage pleine de terre, la cloison étanche et ses capteurs, la vis d'extraction, les vérins de poussée qui s'appuient sur le dernier anneau de sept voussoirs. Pourquoi la rue ne tombe pas dans le trou : la chambre presse la terre aussi fort que le sol et la nappe poussent sur le front — l'eau seule, c'est un bar tous les dix mètres. Trop peu de pression, le sol s'affaisse ; trop, il se soulève. Une reconstitution : la scène (une rue qui s'enfonce de quelques millimètres) est un scénario, aucun affaissement de ce type n'est documenté sur le Grand Paris Express ; la machine et ses pièces sont celles décrites par le ministère (ligne 16), Herrenknecht, Implenia et Eiffage.\n\nIngénieurs, compagnons du tunnel : qu'est-ce qu'on a simplifié ? Et toi : sous chez toi, il passe un tunnel… oui, ou non ?",
+      hashtags: ["#shorts", "#tunnelier", "#grandparisexpress", "#metro", "#science"],
+    },
+  },
+  "049-gps": {
+    instagram: {
+      caption: "Ton point bleu saute dans un champ. Il a suffi d'un millionième de seconde.\n\nDossier 049 : le GPS. Ton téléphone n'envoie rien aux satellites : il écoute des horloges atomiques à vingt mille kilomètres, chronomètre leurs signaux, et en tire ta position. Pour la lumière, un millionième de seconde, c'est trois cents mètres. Et là-haut, on règle ces horloges trop lentes… exprès.\n\nToi : le point bleu… ou les panneaux ?",
+      hashtags: ["#gps", "#einstein", "#science", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ton point bleu saute dans un champ… pour un millionième de seconde : comment marche le GPS",
+      description: "Dossier 049 — le GPS ouvert : la puce et l'antenne de ton téléphone, qui n'envoient rien et ne font qu'écouter ; à vingt mille kilomètres, le satellite, son antenne, son oscillateur et son horloge atomique. Le principe : chaque satellite dit l'heure, son signal file à la vitesse de la lumière, trois cents mètres par millionième de seconde, et le temps du trajet donne la distance. Quatre satellites : trois pour l'espace, un pour corriger l'horloge à quartz, toujours fausse, de ton téléphone. Et pourquoi on règle les horloges des satellites trop lentes avant le lancement : là-haut, le temps passe plus vite — sans réglage, trente-huit millionièmes de seconde d'avance par jour. La scène (la route de nuit, le carrefour) est un scénario reconstitué.\n\nIngénieurs, géomètres, passionnés d'espace : qu'est-ce qu'on a simplifié ? Et toi : le point bleu… ou les panneaux ?",
+      hashtags: ["#shorts", "#gps", "#einstein", "#science", "#espace"],
+    },
+  },
+  "050-induction": {
+    instagram: {
+      caption: "Ta main touche la plaque allumée. Et tu ne sens rien.\n\nDossier 050 : la plaque à induction ouverte. L'électronique, l'inducteur — une bobine de cuivre sous le verre —, un champ magnétique qui bat vingt-cinq mille fois par seconde… et des courants qui tournent dans le fond de ta casserole. Et pourquoi son verre peut quand même te brûler.\n\nSur ta plaque, tu lis un H… ou rien ?",
+      hashtags: ["#induction", "#cuisine", "#physique", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ta main touche la plaque allumée… et tu ne sens rien : la plaque à induction",
+      description: "Dossier 050 — la plaque à induction ouverte : l'électronique qui transforme le courant du secteur, l'inducteur (une bobine de cuivre plate sous la vitrocéramique), et un champ magnétique qui bat environ 25 000 fois par seconde. Il traverse le verre et fait tourner des courants de Foucault dans le fond de la casserole, qui chauffe comme un fil de grille-pain. Pourquoi un foyer allumé sans casserole n'envoie rien, et pourquoi le verre peut quand même te brûler : c'est la casserole qui le réchauffe, et le voyant H le signale au-dessus d'environ 60 °C. Une scène reconstituée.\n\nÉlectriciens, cuisiniers : qu'est-ce qu'on a simplifié ? Et toi : sur ta plaque, tu lis un H… ou rien ?",
+      hashtags: ["#shorts", "#induction", "#cuisine", "#physique", "#science"],
+    },
+  },
+  "051-brise-glace": {
+    instagram: {
+      caption: "La glace se referme sur ton navire. Même le brise-glace venu te chercher… reste coincé.\n\nDossier 051 : le brise-glace. Une ceinture d'acier épais à la flottaison, des citernes de chaque bord, et une étrave inclinée, à vingt ou trente degrés : la glace de mer supporte qu'on l'écrase, pas qu'on la plie. Le 25 décembre 2013, en Antarctique, l'Akademik Shokalskiy est pris dans la banquise. Le brise-glace chinois venu le chercher, le Xuelong, s'y retrouve piégé six jours.\n\nCoincé là-bas, toi : tu attends le brise-glace… ou l'hélico ?",
+      hashtags: ["#briseglace", "#antarctique", "#bateau", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Même le brise-glace venu te sauver reste coincé : comment un brise-glace casse la glace",
+      description: "Dossier 051 — le brise-glace ouvert : la ceinture de glace, cet acier épais qui court à la flottaison ; ses citernes, de chaque bord ; et son étrave inclinée, à vingt ou trente degrés. Le principe : la glace de mer résiste à l'écrasement, mais mal à la flexion. L'étrave appuie sur la plaque, qui plie et casse — environ soixante pour cent de résistance en moins qu'avec une étrave presque droite. Pris dans la glace, il fait passer l'eau d'un bord à l'autre (quinze secondes sur l'Oden suédois), roule, recule et repart à l'élan. Et l'histoire vraie : le 25 décembre 2013, l'Akademik Shokalskiy et ses cinquante-deux passagers sont pris dans la banquise, en Antarctique ; le brise-glace chinois Xuelong, venu les chercher, y reste piégé six jours, dans une glace que le vent d'est a comprimée. Une reconstitution : les gestes montrés à la fin sont ceux des brise-glace en général, pas ceux documentés du Xuelong.\n\nMarins, ingénieurs navals : qu'est-ce qu'on a simplifié ? Et toi : coincé là-bas, tu attends le brise-glace… ou l'hélico ?",
+      hashtags: ["#shorts", "#briseglace", "#antarctique", "#bateau", "#science"],
+    },
+  },
+  "052-telesiege": {
+    instagram: {
+      caption: "Ton siège lâche le câble. Et tu t'assois dessus.\n\nDossier 052 : le télésiège débrayable ouvert. Une came, un levier et son galet, deux mors, un ressort… et des pneus qui te relancent jusqu'à la vitesse du câble, dix-huit kilomètres-heure. Au bout du quai, chaque pince est pesée.\n\nPour vérifier ta pince : tu fais confiance à la machine… ou au mécanicien ?",
+      hashtags: ["#telesiege", "#ski", "#montagne", "#commentcamarche", "#lesaviezvous"],
+    },
+    youtube: {
+      title: "Ton siège lâche le câble… et tu t'assois dessus : le télésiège débrayable ouvert",
+      description: "Dossier 052 — le télésiège débrayable ouvert : la came de débrayage qui pousse le levier et son galet, les deux mors de la pince, le ressort de serrage, et les trains de pneus qui ralentissent le siège à environ un mètre par seconde sur le quai, puis le relancent jusqu'à la vitesse du câble, environ cinq mètres par seconde, dix-huit kilomètres-heure. À vitesse égale, la pince se referme. Au bout du quai, un dispositif pèse le serrage de chaque pince : insuffisant, l'installation s'arrête et le siège ne quitte pas la gare. La règle : une sécurité de deux au glissement, dans la pente la plus forte de la ligne. Une reconstitution : la scène (une pince qui serre mal au départ) est un scénario ; le mécanisme est celui décrit par le STRMTG, Doppelmayr et remontees-mecaniques.net.\n\nPisteurs, techniciens des remontées mécaniques : qu'est-ce qu'on a simplifié ? Et toi : pour vérifier ta pince, tu fais confiance à la machine… ou au mécanicien ?",
+      hashtags: ["#shorts", "#telesiege", "#ski", "#montagne", "#science"],
+    },
+  },
+  "CR03-concorde": {
+    instagram: {
+      caption: "Concorde, 25 juillet 2000, 16 h 43 : le contrôleur voit des flammes derrière l'avion. Trop tard pour freiner.\n\nCompte à rebours 03 : les deux minutes du vol AF4590, seconde par seconde. Une lamelle de titane de 43 cm sur la piste, un pneu qui éclate, un réservoir qui s'ouvre… sans que rien ne le perce. La sécurité n'avait jamais prévu ça. Tout est vrai, reconstitué en maquette.\n\nToi : du feu sous l'aile après V1… tu décolles, ou tu freines ?",
+      hashtags: ["#concorde", "#aviation", "#histoire", "#ingenierie", "#comptearebours"],
+    },
+    youtube: {
+      title: "Concorde, 16 h 43 : ton avion décolle en feu… et son réservoir s'est ouvert de l'intérieur",
+      description: "Compte à rebours 03 — les deux minutes du vol Air France 4590, le 25 juillet 2000 à Roissy, reconstituées seconde par seconde d'après le BEA (transcription de l'enregistreur, rapport de 2001, synthèse de l'accident) : le « top » de 16 h 42, la vitesse V1 et sa règle, le pneu qui éclate sur une lamelle de titane perdue par un autre avion, les flammes de 16 h 43, l'alarme feu, le train qui ne rentre pas. Puis pourquoi le réservoir a cédé de l'intérieur, sous un choc transmis par le kérosène, et ce qui a changé depuis : le Kevlar dans les réservoirs, de nouveaux pneus, les pistes inspectées trois fois par jour.\n\nPilotes, mécaniciens : qu'est-ce qu'on a simplifié ? Et toi : du feu sous l'aile après V1… tu décolles, ou tu freines ?",
+      hashtags: ["#shorts", "#concorde", "#aviation", "#histoire", "#science"],
+    },
+  },
+  "CR04-lac-megantic": {
+    instagram: {
+      caption: "Lac-Mégantic, 6 juillet 2013, 0 h 58 : un train de 72 wagons de pétrole, garé à Nantes, au Québec, démarre tout seul. Ses freins à main sont serrés.\n\nCompte à rebours 04 : la nuit minute par minute, d'après l'enquête du BST. Les sept freins à main, l'essai jugé réussi, le feu sur la locomotive de tête, le moteur qu'on coupe comme le veulent les consignes — et cinquante-neuf minutes plus tard, le départ. Tout est vrai, reconstitué en maquette.\n\nToi : ta locomotive fume, garée en pente… tu la laisses tourner, ou tu la coupes ?",
+      hashtags: ["#lacmegantic", "#train", "#histoire", "#ingenierie", "#comptearebours"],
+    },
+    youtube: {
+      title: "Lac-Mégantic, 0 h 58 : un train garé démarre tout seul… freins à main serrés",
+      description: "Compte à rebours 04 — la nuit du 5 au 6 juillet 2013 à Nantes et Lac-Mégantic (Québec), reconstituée minute par minute d'après le rapport R13D0054 du Bureau de la sécurité des transports du Canada : le train garé en haut de la pente à 22 h 49, les sept freins à main, l'essai de 23 h 03, le feu de 23 h 40, le moteur coupé à 23 h 58 et l'air des freins qui fuit — puis le départ de 0 h 58 et la descente vers le centre-ville. Comment marchent les freins à air d'un train, pourquoi l'essai a réussi, et ce qui a changé depuis au Canada. Le rapport ne nomme personne et ne désigne aucun coupable.\n\nToi : ta locomotive fume, garée en pente… tu la laisses tourner, ou tu la coupes ?",
+      hashtags: ["#shorts", "#lacmegantic", "#train", "#histoire", "#science"],
+    },
+  },
 };
 
 const problems = [];

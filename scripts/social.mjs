@@ -261,3 +261,260 @@ export async function social({ out = path.join(ROOT, "renders"), only } = {}) {
     fs.rmSync(folder, { recursive: true, force: true });
   }
 }
+
+/* ------------------------------------------------------------------ le pont Instagram → YouTube (npm run pont)
+
+   Pour un long en ligne (Lnn, Cnn, CRnn sur YouTube), tout ce que Merwan poste sur Instagram pour y emmener les
+   41 000 abonnés, prêt à copier : les liens du profil, la séquence de stories (J-1, J0, J0 soir, J+2), le Reel de la
+   promo HSnn s'il existe, les courts déjà en ligne dont la légende renvoie au long, et ce qu'on relève ensuite.
+   Recette : docs/recette-pont-instagram-youtube.md.
+     npm run pont -- L06 [--video <id|adresse>] [--heure "18 h"] [--out <dossier>] [--textes]
+       → <out>/pont-<dossier>.md · story-annonce.png · story-lien.png · story-sondage.png · story-rappel.png · couverture-a-la-une.png
+   Les visuels partent de la miniature du long (renders/<dossier>-miniature.png, celle que le spectateur retrouvera
+   sur YouTube), sans 3D à recalculer. Aucun envoi, aucune connexion : seule la page publique de la chaîne est lue
+   pour retrouver l'adresse du film (sinon --video). */
+
+const STORY_CSS = `
+  .page { width: 1080px; height: 1920px; }
+  .blur { position: absolute; left: -200px; top: -120px; width: 1480px; height: 2160px; object-fit: cover; filter: blur(46px) brightness(0.5) saturate(1.1); }
+  .shade { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(7, 10, 12, 0.9) 0, rgba(7, 10, 12, 0.55) 420px, rgba(7, 10, 12, 0.35) 900px, rgba(7, 10, 12, 0.85) 1500px, rgba(7, 10, 12, 0.96) 1920px); }
+  .hud { position: absolute; left: 88px; right: 88px; top: 286px; display: flex; justify-content: space-between; align-items: center; font: 500 25px/1 var(--mono); color: var(--dim); }
+  .hud em { font-style: normal; display: flex; align-items: center; gap: 16px; color: var(--ink); }
+  .hud .eye { width: 62px; height: 46px; }
+  .rule { position: absolute; left: 88px; right: 88px; top: 352px; height: 2px; background: var(--faint); }
+  .dot.signal { background: var(--signal); box-shadow: 0 0 18px var(--signal); }
+  .kicker { position: absolute; left: 88px; top: 392px; font: 700 30px/1 var(--mono); color: var(--veille); }
+  .card { position: absolute; left: 40px; top: 440px; width: 1000px; height: 563px; overflow: hidden; background: var(--bg); box-shadow: 0 0 0 2px var(--faint), 0 30px 80px rgba(0, 0, 0, 0.7); }
+  .card img { width: 100%; height: 100%; display: block; }
+  .card .dur { position: absolute; right: 14px; bottom: 14px; padding: 8px 12px; background: rgba(7, 10, 12, 0.86); font: 700 26px/1 var(--mono); color: var(--ink); letter-spacing: 0.06em; }
+  h1 { position: absolute; left: 84px; right: 84px; top: 1046px; max-height: 330px; font: 800 78px/1.0 var(--display); text-transform: uppercase; letter-spacing: -0.005em; text-shadow: 0 4px 40px rgba(7, 10, 12, 0.9); }
+  h1 s { text-decoration: none; color: var(--signal); }
+  .lbl { position: absolute; left: 0; right: 0; top: 1418px; text-align: center; font: 700 26px/1 var(--mono); color: var(--veille); }
+  .slot { position: absolute; left: 190px; right: 190px; top: 1452px; height: 118px; }
+  .slot i { position: absolute; width: 34px; height: 34px; border: 0 solid var(--veille); }
+  .slot i:nth-child(1) { left: 0; top: 0; border-left-width: 4px; border-top-width: 4px; } .slot i:nth-child(2) { right: 0; top: 0; border-right-width: 4px; border-top-width: 4px; }
+  .slot i:nth-child(3) { left: 0; bottom: 0; border-left-width: 4px; border-bottom-width: 4px; } .slot i:nth-child(4) { right: 0; bottom: 0; border-right-width: 4px; border-bottom-width: 4px; }
+  .handle { position: absolute; left: 0; right: 0; top: 1598px; text-align: center; font: 700 26px/1 var(--mono); letter-spacing: 0.1em; color: var(--dim); }
+`;
+
+/** Une story du pont, 1080 × 1920 : la miniature du long en carte, son titre au-dessus, la case de l'autocollant dessous. */
+const pontStory = ({ thumb, hud, live, kicker, head, label, handle, dur }) => `<!doctype html><meta charset="utf-8"><style>${BASE}${STORY_CSS}</style><div class="page">
+  <img class="blur" src="${thumb}"><div class="shade"></div>
+  <div class="hud mono"><span><i class="dot${live ? "" : " signal"}"></i>${hud}</span><em><span class="eye">${EYE}</span>Système Décodé</em></div>
+  <div class="rule"></div>
+  <div class="kicker mono">${kicker}</div>
+  <div class="card"><img src="${thumb}">${dur ? `<span class="dur">${dur}</span>` : ""}</div>
+  <h1>${head}</h1>
+  <div class="lbl mono">${label}</div>
+  <div class="slot"><i></i><i></i><i></i><i></i></div>
+  <div class="handle mono">${handle}</div>
+</div>`;
+
+/** La couverture du « À la une » : Instagram n'en montre que le cercle central. */
+const highlightCover = () => `<!doctype html><meta charset="utf-8"><style>${BASE}
+  .page { width: 1080px; height: 1920px; background: radial-gradient(circle at 50% 50%, #0f1518 0, var(--bg) 520px); }
+  .ring { position: absolute; left: 190px; top: 610px; width: 700px; height: 700px; border-radius: 50%; border: 6px solid rgba(92, 255, 176, 0.5); }
+  .eye { position: absolute; left: 330px; top: 740px; width: 420px; height: 312px; }
+  .eye svg { overflow: visible; }
+  .w { position: absolute; left: 0; right: 0; top: 1090px; text-align: center; font: 800 92px/1 var(--display); text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink); }
+</style><div class="page"><div class="ring"></div><div class="eye">${EYE}</div><div class="w">Films</div></div>`;
+
+const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const norm = (s) => String(s ?? "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+const readJson = (file) => (fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : null);
+const kitFonts = () =>
+  [["Barlow Condensed", "barlow-condensed", [500, 600, 700, 800]], ["JetBrains Mono", "jetbrains-mono", [400, 500, 700]]]
+    .flatMap(([family, file, weights]) => weights.map((w) => `@font-face { font-family: "${family}"; font-weight: ${w}; src: url("${pathToFileURL(path.join(ROOT, "kit", "fonts", `${file}-latin-${w}-normal.woff2`)).href}") format("woff2"); }`))
+    .join("\n");
+
+/** La durée du long, lue sur ses sous-titres (renders/<dossier>.srt) : { s, min, clock } ou null. */
+function longDuration(base) {
+  const srt = path.join(ROOT, "renders", `${base}.srt`);
+  if (!fs.existsSync(srt)) return null;
+  const all = [...fs.readFileSync(srt, "utf8").matchAll(/--> (\d+):(\d+):(\d+)[,.](\d+)/g)];
+  if (!all.length) return null;
+  const [, h, m, s] = all.at(-1).map(Number);
+  const t = h * 3600 + m * 60 + s;
+  return { s: t, min: Math.round(t / 60), clock: `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "0")}` };
+}
+
+/** L'adresse du film sur YouTube : --video, sinon le flux public de la chaîne (même titre), sinon la chaîne. */
+async function longUrl(profile, titles, video) {
+  if (video) return { url: /^https?:/.test(video) ? video : `https://youtu.be/${video}`, from: "--video" };
+  const channel = profile.comptes.youtube.url;
+  try {
+    const get = async (u) => {
+      const r = await fetch(u, { headers: { "user-agent": "Mozilla/5.0", "accept-language": "fr-FR,fr;q=0.9" }, signal: AbortSignal.timeout(10000) });
+      if (!r.ok) throw new Error(String(r.status));
+      return r.text();
+    };
+    const id = /"externalId":"(UC[\w-]{22})"/.exec(await get(channel))?.[1];
+    if (!id) throw new Error("chaîne sans identifiant");
+    const xml = await get(`https://www.youtube.com/feeds/videos.xml?channel_id=${id}`);
+    const wanted = titles.map(norm).filter(Boolean).map((w) => new Set(w.split(" ")));
+    const entity = (s) => s.replace(/&amp;/g, "&").replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"');
+    // le titre en ligne a pu être retouché dans Studio : on retient le film dont les mots sont, à 80 % au moins, ceux d'un de nos titres
+    const close = (t) => wanted.some((w) => t.length && t.filter((x) => w.has(x)).length / Math.max(t.length, w.size) >= 0.8);
+    for (const [, e] of xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)) {
+      const t = norm(entity(/<title>([^<]*)<\/title>/.exec(e)?.[1] ?? "")).split(" ").filter(Boolean);
+      if (close(t)) return { url: `https://youtu.be/${/<yt:videoId>([^<]+)</.exec(e)[1]}`, from: "flux public de la chaîne", title: entity(/<title>([^<]*)<\/title>/.exec(e)?.[1] ?? "") || null };
+    }
+    return { url: channel, from: "⚠ film introuvable dans le flux public (15 dernières vidéos) : remplace par son adresse, ou --video <id>" };
+  } catch (err) {
+    return { url: channel, from: `⚠ chaîne illisible (${err.message}) : remplace par l'adresse du film, ou --video <id>` };
+  }
+}
+
+/** Les courts qu'un long prolonge : la table du bureau (front/bureau.js → RELATED) et post.youtube.related des dossiers. */
+function relatedShorts(longId) {
+  const found = new Map();
+  const src = fs.readFileSync(path.join(ROOT, "front", "bureau.js"), "utf8");
+  const block = /const RELATED = (\{[\s\S]*?\n {2}\});/.exec(src)?.[1];
+  const table = block ? new Function(`return ${block}`)() : {};
+  for (const [num, [id, why]] of Object.entries(table)) if (id === longId) found.set(num, why);
+  const dirs = fs.readdirSync(path.join(ROOT, "episodes"));
+  for (const name of dirs) {
+    const ep = readJson(path.join(ROOT, "episodes", name, "episode.json"));
+    if (ep?.post?.youtube?.related === longId) found.set(name.split("-")[0], ep.post.youtube.relatedWhy ?? "");
+  }
+  return [...found].map(([num, why]) => ({ num, why, dir: dirs.find((n) => n.startsWith(`${num}-`)) })).filter((r) => r.dir);
+}
+
+/** La légende Instagram d'un court, avec la phrase d'appel posée juste avant la question de fin (qui reste la dernière). */
+export function captionWithBridge(caption, line) {
+  const parts = String(caption).split("\n\n");
+  if (parts.length < 2) return `${caption}\n\n${line}`;
+  return [...parts.slice(0, -1), line, parts.at(-1)].join("\n\n");
+}
+
+/** `id` : le long (L06, C01…). `out` : où écrire (renders/pont-<dossier>/ par défaut). `textes` : sans les visuels. */
+export async function pont(id, { out, video, heure = "18 h", textes = false } = {}) {
+  const dir = resolveEpisode(id);
+  const base = path.basename(dir);
+  const longId = base.split("-")[0];
+  const ep = readJson(path.join(dir, "episode.json"));
+  const yt = ep.post?.youtube ?? {};
+  const profile = readJson(path.join(ROOT, "brand", "profil.json"));
+  const published = readJson(path.join(ROOT, "metrics", "publication.json"))?.dossiers ?? {};
+  out = out ?? path.join(ROOT, "renders", `pont-${base}`);
+  fs.mkdirSync(out, { recursive: true });
+
+  const where = await longUrl(profile, [yt.title, ...(yt.titleAlts ?? [])], video);
+  const title = where.title ?? yt.title ?? ep.title; // le titre en ligne, s'il a été retouché dans Studio, c'est celui que le spectateur verra
+  const dur = longDuration(base);
+  const min = dur ? `${dur.min} min` : "le film complet";
+  const question = /Et toi\s*:\s*([^\n]+\?)/.exec(yt.descriptionTemplate ?? yt.description ?? "")?.[1] ?? null;
+  const search = `Système Décodé ${yt.keyword ?? ep.title}`;
+  const online = published[base]?.youtube;
+
+  // la promo verticale, s'il y en a une (HSnn pour Lnn)
+  const hsDir = /^L\d+$/.test(longId) ? fs.readdirSync(path.join(ROOT, "episodes")).find((n) => n.startsWith(`HS${longId.slice(1)}-`)) : null;
+  const hs = hsDir ? readJson(path.join(ROOT, "episodes", hsDir, "episode.json")) : null;
+  const shorts = relatedShorts(longId);
+  const bridge = `Pour aller plus loin : « ${title} ». Le film complet (${min}) est sur notre chaîne YouTube, lien en bio.`;
+  const sticker = `LE FILM · ${min.toUpperCase()}`;
+
+  const md = [];
+  md.push(`# Pont Instagram → YouTube · ${base}`, "");
+  md.push(`Écrit par \`npm run pont -- ${longId}\` le ${new Date().toISOString().slice(0, 10)}. Recette : docs/recette-pont-instagram-youtube.md. Rien n'est posté : tout se copie depuis le téléphone.`, "");
+  md.push(`- **Film** : ${title} · ${dur ? `${dur.clock} (${min})` : `durée inconnue (pas de renders/${base}.srt)`}`);
+  md.push(`- **Adresse** : ${where.url} (${where.from})`);
+  md.push(`- **Sur YouTube** : ${online ? `oui (${online === true ? "date inconnue" : online})` : "⚠ pas encore coché au bureau : aucune story de lien avant que le film soit public"}`);
+  md.push(`- **Recherche de secours** (épinglés) : « ${search} »`, "");
+
+  md.push("## 1 · Liens du profil (à J0, dès que le film est public)", "");
+  md.push("Modifier le profil → Liens. Le premier lien est le seul qu'Instagram affiche en clair sous la bio : c'est toujours le dernier long.", "");
+  md.push("| Ordre | Titre du lien | Adresse |", "| --- | --- | --- |");
+  md.push(`| 1 | Nouveau film : ${ep.title} (${min}) | ${where.url} |`);
+  md.push(`| 2 | Tous nos films sur YouTube | ${profile.comptes.youtube.url} |`);
+  md.push(`| 3 | TikTok | ${profile.comptes.tiktok.url} |`, "");
+
+  md.push("## 2 · Les stories", "");
+  md.push("| Quand | Visuel | Autocollant | Texte de l'autocollant | À la une « Films » |", "| --- | --- | --- | --- | --- |");
+  md.push(`| J-1, 21 h (après le court du soir) | story-annonce.png | Compte à rebours, réglé sur J0 ${heure} | Sortie du film | non |`);
+  md.push(`| J0, ${heure} 05 (film public, liens posés) | story-lien.png | Lien → ${where.url} | ${sticker} | **oui** (elle remplace celle de ce film s'il y en avait une) |`);
+  md.push(`| J0, 21 h 30 (après le court) | story-sondage.png | Sondage, les deux camps de la question | — | non |`);
+  md.push(`| J0, juste après le sondage | story-lien.png, reposée | Lien → ${where.url} | ${sticker} | non |`);
+  md.push(`| J+2, 20 h 30 | story-rappel.png | Lien → ${where.url} | ${sticker} | non |`);
+  md.push(`| Ensuite, au catalogue (lundi et vendredi 21 h, chaque film à son tour) | story-rappel.png | Lien → ${where.url} | ${sticker} | non |`, "");
+  if (question) md.push(`Question du sondage : « ${question} »`, "");
+
+  md.push("## 3 · Le Reel", "");
+  if (hs) {
+    const ig = hs.post?.instagram;
+    const isOn = published[hsDir]?.instagram;
+    md.push(`La promo **${hsDir}** ${isOn ? `est déjà sur Instagram (${isOn === true ? "date inconnue" : isOn}) : on n'y touche que pour l'épinglé.` : "sort sur Instagram **J0 vers 19 h 30**, une fois le film public et les liens posés (docs/recette-promo.md, « L'ordre de sortie »)."}`, "");
+    if (ig && !isOn) md.push("Légende :", "", "```", `${ig.caption}\n\n${(ig.hashtags ?? []).join(" ")}`, "```", "");
+  } else {
+    md.push(`Pas de promo HS pour ${longId} : on n'en fabrique pas une pour le pont. Le relais vertical, ce sont les courts liés (§ 4).`, "");
+  }
+  md.push("Commentaire épinglé (sur le Reel de la promo et sur chaque court lié ; une adresse n'y est pas cliquable, d'où la recherche) :", "", "```", `Le film complet (${min}) est sur notre chaîne YouTube : lien en bio, ou cherche « ${search} ».`, "```", "");
+
+  md.push("## 4 · Les courts liés : la phrase d'appel dans leur légende", "");
+  if (!shorts.length) md.push(`Aucun court ne prolonge ${longId} (table RELATED de front/bureau.js, ou post.youtube.related) : rien à modifier.`, "");
+  for (const s of shorts) {
+    const c = readJson(path.join(ROOT, "episodes", s.dir, "episode.json"));
+    const ig = c?.post?.instagram;
+    const isOn = published[s.dir]?.instagram;
+    md.push(`### ${s.dir} · ${isOn ? "déjà en ligne : … → Modifier la légende, puis épingler le commentaire du § 3" : "pas encore sur Instagram : légende à poster telle quelle"}`, "");
+    if (s.why) md.push(`Pourquoi ce lien : ${s.why}`, "");
+    if (ig?.caption) md.push("```", `${captionWithBridge(ig.caption, bridge)}\n\n${(ig.hashtags ?? []).join(" ")}`, "```", "");
+    else md.push(`Pas de post.instagram dans ce dossier : ajoute, juste avant la question de fin, « ${bridge} »`, "");
+  }
+
+  md.push("## 5 · Ce qu'on relève (metrics/pont.json)", "");
+  md.push("- **J+1 et J+7, Instagram** : chaque story → Statistiques → clics sur le lien (et vues) ; profil → tableau de bord professionnel → appuis sur les liens externes.");
+  md.push("- **J+7, YouTube Studio** : ce film → Statistiques → Portée → Sources de trafic → Externe → la ligne Instagram (vues, durée de visionnage), et la part « Accès direct ou inconnu ».");
+  md.push("- **Chaque jour, tout seul** : les abonnés YouTube dans metrics/comptes.json (le bureau les lit).", "");
+
+  const mdFile = path.join(out, `pont-${base}.md`);
+  fs.writeFileSync(mdFile, md.join("\n"));
+  const shown = (f) => (path.relative(ROOT, f).startsWith("..") ? f : path.relative(ROOT, f));
+  console.log(`  → ${shown(mdFile)}`);
+  console.log(`  film : ${where.url} (${where.from}) · ${dur ? dur.clock : "durée ?"} · promo : ${hsDir ?? "aucune"} · courts liés : ${shorts.map((s) => s.num).join(", ") || "aucun"}`);
+  if (!online) console.log(`  ⚠ ${base} n'est pas coché sur YouTube au bureau : rien ne se poste avant que le film soit public`);
+  if (textes) return;
+
+  // les visuels : la miniature du long, posée en carte
+  const thumbFile = path.join(ROOT, "renders", `${base}-miniature.png`);
+  if (!fs.existsSync(thumbFile)) {
+    console.log(`  ⚠ pas de renders/${base}-miniature.png : npm run cover -- ${longId}, puis relance (les textes sont écrits)`);
+    return;
+  }
+  const thumb = pathToFileURL(thumbFile).href;
+  const handle = "Système Décodé · notre chaîne YouTube";
+  const head = esc(title);
+  const ask = question ? esc(question.charAt(0).toUpperCase() + question.slice(1)) : head;
+  const sheets = [
+    { file: "story-annonce.png", html: pontStory({ thumb, hud: `Demain · ${heure}`, live: false, kicker: `Nouveau film · ${min}`, head, label: "Touche pour le rappel", handle, dur: dur?.clock }) },
+    { file: "story-lien.png", html: pontStory({ thumb, hud: "En ligne · maintenant", live: true, kicker: `Le film complet · ${min}`, head, label: "Le lien est juste là", handle, dur: dur?.clock }) },
+    { file: "story-sondage.png", html: pontStory({ thumb, hud: `Le film complet · ${min}`, live: true, kicker: "Et toi ?", head: ask, label: "Vote, puis regarde le film", handle, dur: dur?.clock }) },
+    { file: "story-rappel.png", html: pontStory({ thumb, hud: "Tu l'as raté ?", live: true, kicker: `Le film complet · ${min}`, head, label: "Le lien est juste là", handle, dur: dur?.clock }) },
+    { file: "couverture-a-la-une.png", html: highlightCover() },
+  ];
+  const folder = fs.mkdtempSync(path.join(os.tmpdir(), "sd-pont-"));
+  const browser = await launchChrome(PAGE);
+  try {
+    for (const s of sheets) {
+      const htmlFile = path.join(folder, `${s.file}.html`);
+      fs.writeFileSync(htmlFile, `<style>${kitFonts()}</style>` + s.html);
+      const page = await browser.newPage();
+      await page.setViewport({ width: 1080, height: 1920, deviceScaleFactor: 1 });
+      await page.goto(pathToFileURL(htmlFile).href, { waitUntil: "load" });
+      await page.evaluate(() => document.fonts.ready);
+      // un titre trop long pour sa place se resserre plutôt que de déborder sur la case de l'autocollant
+      await page.evaluate(() => {
+        const h = document.querySelector("h1");
+        let size = 78;
+        while (h && h.scrollHeight > 330 && size > 48) h.style.fontSize = `${(size -= 4)}px`;
+      });
+      const target = path.join(out, s.file);
+      await page.screenshot({ path: target, type: "png" });
+      console.log(`  → ${shown(target)}`);
+      await page.close();
+    }
+  } finally {
+    await browser.close();
+    fs.rmSync(folder, { recursive: true, force: true });
+  }
+}

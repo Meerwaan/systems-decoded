@@ -136,6 +136,7 @@ const HELP = `
   npm run chrono  -- <ep> <étape> | stop | agent <nom> --jetons N | jauge --session N --hebdo N   le chronomètre de la fabrication
   npm run metrics [-- <ep>]                      ce que coûte un dossier (temps, jetons, calcul) et ce qu'il rapporte (audience)
   npm run social  [-- --out <dossier>] [--only facebook|stories|youtube]   deux stories Instagram, la bannière YouTube et l'image du post Facebook, dans renders/
+  npm run pont    -- <long> [--video <id>] [--heure "18 h"] [--out <dossier>] [--textes]   le pont Instagram → YouTube d'un long : liens du profil, stories (visuels 1080×1920), légendes, épinglé, relevés (renders/pont-<dossier>/)
   npm run front   [-- --port 4173]               bureau de publication (vidéo, couverture, légende) et cabine d'écoute de la voix, à ouvrir sur l'iPhone (même Wi-Fi)
   --verbose : la sortie complète d'autrefois (par défaut : un résumé, le détail dans .cache/logs/<ep>-<commande>.log)
   <ep> = numéro d'épisode (ex: 001)
@@ -191,6 +192,11 @@ try {
         await garder(dir, { file: flags.file, nom: String(flags.garder) });
         await build(dir);
       } else await essai(dir, { file: flags.file, budget: flags.budget != null ? Number(flags.budget) : 0, ref: flags.ref ? resolveEpisode(String(flags.ref)) : null });
+      break;
+    }
+    case "sons": {
+      const { sons } = await import("./sons.mjs");
+      await sons({ dir: args[0] ? resolveEpisode(String(args[0])) : null, budget: flags.budget != null ? Number(flags.budget) : 0, only: flags.only, force: Boolean(flags.force) });
       break;
     }
     case "credits": {
@@ -357,6 +363,11 @@ try {
     case "social": {
       const { social } = await import("./social.mjs");
       await social({ out: flags.out ? path.resolve(String(flags.out)) : undefined, only: flags.only ? String(flags.only) : undefined });
+      break;
+    }
+    case "pont": {
+      const { pont } = await import("./social.mjs");
+      await pont(args[0], { out: flags.out ? path.resolve(String(flags.out)) : undefined, video: flags.video ? String(flags.video) : undefined, heure: flags.heure ? String(flags.heure) : undefined, textes: Boolean(flags.textes) });
       break;
     }
     case "front": {

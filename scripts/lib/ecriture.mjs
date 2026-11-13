@@ -152,7 +152,30 @@ export function ecriture(ep, sched) {
 
   // 10. what an agent can leave behind (salle d'écriture, 27/10): mechanical, read in the JSON, never a matter of taste
   for (const m of mecanique(ep, sched)) warn(m);
+
+  // 11. the sound (docs/recette-son.md, 12/11: « des ting, boum, bah »): from the 043 on, recorded sounds that follow the
+  // picture, 12 to 18 one-shots — the films already online keep theirs
+  if (Number(ep.id) >= 43 && (ep.sfx ?? []).length) {
+    const OLD = ["click", "hit", "swish", "blip", "impact", "whoosh"];
+    const shots = ep.sfx.filter((x) => x.at != null && !["hush", "drop", "space"].includes(x.type));
+    if (shots.length > 18) warn(`son : ${shots.length} sons ponctuels — 18 au plus, sur les coupes et les cinq moments (recette-son § 1)`);
+    const old = [...new Set(ep.sfx.filter((x) => OLD.includes(x.type)).map((x) => x.type))];
+    if (old.length) warn(`son : synthés de l'ancienne recette (${old.join(", ")}) — un son de la banque (\`sample\`, kit/sons/banque.json)`);
+    // 12/11 : « pendant le alors, on l'ouvre, il doit pas y avoir de SFX… ça doit être blanc »
+    if (!ep.sfx.some((x) => x.type === "hush" && x.from === "ouvre" && (x.depth ?? 0) <= -60 && /^ouvre\$/.test(String(x.to)))) warn("son : « Alors… on l'ouvre » n'est pas dans un blanc total (hush de ouvre à ouvre$+0.02, depth -90)");
+    if (!ep.sfx.some((x) => x.type === "sample" && /^sig-ouverture/.test(x.file ?? ""))) warn("son : pas de signature sur « on l'ouvre » (sig-ouverture.wav)");
+  }
+  if (Number(ep.id) >= 43) for (const m of sonsDuSujet(ep)) warn(m);
   return out;
+}
+
+/** 12/11 (« si on met un ding sur un coup de pistolet, ça marche pas ») : the film lists the real objects its picture shows,
+ * each with its own sound (episode.json → sons), and its quote goes with the voice's. Shorts from the 043, longs from the L07. */
+export function sonsDuSujet(ep) {
+  const list = ep.sons ?? [];
+  if (!list.length) return ["son : aucune liste `sons` — les objets et gestes que l'image montre, chacun avec son vrai bruit (recette-son § 2) ; son devis va avec la voix"];
+  const bad = list.filter((x) => !x.image || !(x.reprend || x.prompt));
+  return bad.length ? [`son : ${bad.length} son(s) du sujet sans "image" (ce qui bouge) ou sans "prompt" / "reprend"`] : [];
 }
 
 /** The word counts of a short: the film, the hook (the phrases before "scene"), the scene. Shared with `npm run salle`. */
@@ -900,10 +923,12 @@ function ecritureLong(ep, sched) {
       const head = norm(String(yt.descriptionTemplate ?? yt.description ?? "").slice(0, 160));
       if (!head.includes(key)) warn(`description : le mot cherché « ${yt.keyword} » n'est pas dans les deux premières lignes (≈ 160 caractères)`);
     }
-    if ((yt.titleAlts ?? []).length < 2) warn("titre : deux variantes dans post.youtube.titleAlts, pour « Tester et comparer »");
+    // depuis le 12/11 (L07) : plus de test A/B — un titre, une miniature, une description, tout le travail sur eux
+    if (Number(String(ep.id).slice(1)) >= 7 && ((yt.titleAlts ?? []).length || ep.thumb2 || ep.thumb3)) warn("emballage : un seul titre et une seule miniature (plus de titleAlts, thumb2, thumb3) — tout le travail va sur eux");
   }
   if ((yt.hashtags ?? []).length > 5) warn(`hashtags : ${yt.hashtags.length} — cinq au plus`);
   if (LATER.test(norm(String(yt.descriptionTemplate ?? yt.description ?? "")).replace(/prochaine fois/g, ""))) warn("description : elle annonce un sujet ou une date — un rendez-vous, rien d'autre");
+  if (Number(String(ep.id).slice(1)) >= 7) for (const m of sonsDuSujet(ep)) warn(m);
   return out;
 }
 

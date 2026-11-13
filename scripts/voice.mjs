@@ -549,6 +549,13 @@ export async function voice(dir, { takes, retake = [], count = RETAKES, alone = 
     if (budget < estimate) {
       say(`\n  À enregistrer : ${what} ≈ ${estimate} crédits ElevenLabs.`);
       say(`  Rien n'a été enregistré. Avec l'accord de Merwan : ajoute --budget ${Math.ceil(estimate / 50) * 50}  (solde : npm run credits)`);
+      // the film's own sounds go in the same quote (12/11 : « que ça intègre dans les devis de chaque vidéo »)
+      try {
+        const { ligneSons } = await import("./sons.mjs");
+        say(`  ${ligneSons(ep)}  (npm run sons -- ${path.basename(dir)})`);
+      } catch {
+        // no bank: the voice quote stands alone
+      }
       if (!ep.beats.every((b) => covered(b.id))) throw new Error("Des phrases n'ont aucun enregistrement : pas de voix à monter pour l'instant.");
     } else {
       // a script still holding the template's placeholder text is not a script: never pay to record it
