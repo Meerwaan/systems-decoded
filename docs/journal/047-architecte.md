@@ -1,0 +1,32 @@
+# 047 · Lave-vaisselle — journal de l'architecte
+
+2026-11-13. Contrat du dossier 047 : plan, monde, bouchons, page, repères, plans des décors et des actes. Voix réelle : 91,27 s (rien touché dans `audio/`, ni aux beats).
+
+## Fait
+- Lu : catalogue (maison), recettes (agents, actes, décorateur), `regles-image.md`, faits 047 et contre-vérification, champs `voir`, le 025 (journal, plan, world), le modèle de `kit/template/` déjà dans le dossier, l'API de `009/kitchen.js` et l'enveloppe `018/cuisine.js`.
+- **Réutilisé** : la cuisine du 009, importée telle quelle (`cuisine.js`, comme le 018), déplacée de `KITCHEN.at` = [−292, 0, −30] : le lave-vaisselle se tient au bout de son plan de travail (x −32 → fin du 009), un plan de travail de verre le prolonge. Évier du 009 recalculé dans notre repère (`SINK`). Rien d'autre ne se prête : aucun lave-vaisselle au catalogue.
+- `src/plan.js` : origine = centre de l'empreinte du lave-vaisselle, porte vers +z, x à droite. **Azimut vérifié sur bouchon** (az 0 devant la porte, −90 à −x côté évier ; la pompe, à +x, tombe à droite de l'image à az −28 ; le distributeur se lit de la cuve à az −150). Échelle vraie (60 cm, cuve inox, colonnes au vrai volume : r 8, 50 cm = 10 L).
+- `src/world.js` : `FIRST` fermé (46 nombres : `set` ; cuisine 8 ; cuve 7 ; système 18 ; en-tête 2 ; Sinner 2 ; lumière 8), `POSE0` provisoire (candidate A), `VIEW` (17 poses), `BENCHED`, `STAGED`, `sinnerShares`, `apply`. Le système est UN objet re-parenté (scène : origine ; établi : −`BENCH_FROM`) ; `benchCut` prend `origin: BENCH_FROM`. Le distributeur est au système et suit `door` (le système lit `door`).
+- `src/main.js` : en-tête = horloge du programme éco (`cycle` → « 0 h 08 ») + température (`temp`, bornée à 50) ; compteur `#passes-v` ; le cercle de Sinner (`#sinner`, quatre arcs SVG) dessiné à chaque image depuis `sinner` / `sHeat`. `acte2b.js` ajouté (le repos dans la cuve, coupé de l'acte 2 pour que l'étape ne dure pas ce que dure un acte 2 de 28 s).
+- Bouchons gris : `model.js` (toutes les pièces, jets, poussée, pastille qui tombe, ligne de la ronde, `solo`), `cuve.js` (carrosserie, cuve, porte, paniers, plat retourné, croûte en six plaques qui tombent, fantômes), `cuisine.js` (009 réel + plan de travail, eau du robinet, évacuation, toi en boîte, deux colonnes). Actes : squelettes qui construisent.
+- `index.html` : étiquettes masquées au départ, `chip-10l` « Tout le cycle · Dix litres », `chip-moitie`, `chip-50`, `chip-vanne`, `chip-puisard`, `chip-filtres`, `chip-pompe`, `chip-coeur`, `#sinner`, `chip-pastille`, `chip-moteur`, `chip-tient`, `chip-lavage`, `chip-passes`, `chip-bonn` ; retitle « Laver plus fort » → « Laver plus longtemps » (kicker « Son secret ») ; duel « Je rince encore » / « Plus jamais » ; next 048 (« Une roue de près de dix mètres qui creuse sous Paris. »).
+- `episode.json` : 16 repères vérifiés sur la table (`toscene` 9,83 · `tobench` 19,98 · `explode` 20,12 · `torepos` 40,38 · `tozero` 48,63 · `trigger` 63,95 · `toverdict` 64,90 · `verdict` 68,18 · `tocta` 70,09 · `duelA` 78,90 « encore » · `duelB` 79,74 « jamais » · `tolike` 80,54 · `toabo` 83,87 · `toloop` 89,30 · `rewind` 90,32) ; `cover` (éclaté, ty 34, d 190) ; grille `sfx` : les impacts qui tombaient sur « lâche », « longtemps » et « chez » déplacés dans les souffles, le riser sorti de sous la phrase, six sons du sujet posés dans les souffles (porte, bip, pompe ×2, trappe, jets, croûte) — à reprendre par le `monteur-son` ; `sources` : la ligne Bonn corrigée (« le plus souvent superflu »), quatre lignes (image reconstituée, en-tête, colonne de dix litres, compteur de passages).
+- `npm run check -- 047` passe (0 erreur ; 3 avertissements de contraste de l'en-tête à 45,6 s, sur bouchon).
+
+## Planches (20 images lues sur 25)
+1. `p1` (8) : conventions vérifiées ; `VIEW.kitchen` à az −24 ne tient pas évier + machine + colonnes en vertical → passé à az −62 (le long du plan de travail) ; `VIEW.exploded` coupait le bras → ty 42, d 240 ; les jets à 0 faisaient des barres noires (corrigé dans le bouchon).
+2. `p2` (6) : candidates A–D ; A et B lisent la croûte au-dessus des jets ; C (caméra sous le fond) ratée ; D dit « lave-vaisselle ». La résistance orange concurrençait la croûte → `heat` 0 dans `FIRST` (c'est le prélavage).
+3. `p3` (4) : A et B à 0,5 s (le bras a tourné : le sujet bouge) ; B : un jet frôle l'objectif (beau, risque d'image parasite) ; `VIEW.kitchen` az −62 : machine et colonnes lisibles, toi au premier plan.
+4. `p4` (2) : C refaite au-dessus du bras (jets qui montent vers la croûte : graphique, peu reconnaissable) ; D à 0,5 s.
+
+## Décisions
+- Trois décors (système plein, cuve aux rayons X, cuisine importée) : la cuve et la cuisine sont deux lieux, deux agents ; l'eau qui suit les pièces (jets, flaque, filet, ronde) est au système.
+- L'accroche est le **prélavage** (`trap` 0, `tab` 0, `heat` 0, `cycle` 8, `temp` 22) : aucun état à remettre à la coupe de la scène.
+- Le cercle de Sinner est un panneau SVG (zone haute) piloté par l'état, pas de la 3D : net à 270 px, et aucun agent de décor ne le porte.
+- La boucle remonte de sous le plancher de la cuisine (« juste au-dessus, chez toi ») : pas de rue ni de tunnel modélisés.
+- **`voir` que le décor ne tient pas** : « deux assiettes côte à côte, celle rincée et l'autre, aussi propres » (comment) — retiré : pas de mesure de propreté dans la source (contre-vérification) et un accessoire de plus ; la fin montre l'eau qui part à l'égout. « Le thermomètre bloqué à cinquante » → le compteur de l'en-tête. « Le chrono du cycle s'étire en une longue barre » → l'horloge de l'en-tête qui court jusqu'à 3 h 30. « On remonte de sous la rue » → de sous le plancher.
+
+## À changer ailleurs
+- **Provisoires, réglées sur bouchons** (le chef de production les recale sur les journaux des décors) : `POSE0` (candidate A) et tout `VIEW` — surtout `kitchen`, `door`, `tub`, `dispenser`, `hub`, `crust`, `section`, `sink`, `below` (cuve et cuisine), `whole`, `exploded`, `arm`, `principle` (système). La `cover` (`eclate$`) suit `VIEW.exploded`.
+- `scripts/sd.mjs` (`script`) : l'option `--words` demandée depuis le 021 manque toujours (repris `.cache/planches/047/architecte/words.cjs`).
+- Décorateur : `cuve.js` seulement (gouttes sur les parois, buée sur la porte, une ou deux assiettes de verre dans le panier du haut, le joint de porte) ; rien devant le plat ni sur le circuit. La cuisine du 009 est déjà habillée.
