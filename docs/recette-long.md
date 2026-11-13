@@ -153,6 +153,8 @@ Après avoir vu le L01 en entier : « très bien pour un épisode 1 et pilote »
 - **Au plan de mise en scène** (`docs/<ep>-actes.md`), chaque coupe écrit son raccord (forme, objet, mouvement) ; un groupe de chapitres rend à son voisin la pose ET le mouvement en cours.
 - **À construire dans le kit avant le L02** : un fondu de quelques images sur les coupes de lieu à lieu (le plateau connaît les coupes : `stage.cut`), et une aide `D.match(at, from, to)` qui pose une coupe en raccord de mouvement.
 
+> **Depuis le 12/11 (L07) : un seul titre, une seule miniature, une seule description, plus de test A/B** (CLAUDE.md, « Le format long »). Ce qui suit sur les trois miniatures, `titleAlts` et « Tester et comparer » ne vaut plus que pour les L01 à L06 ; le reste (objet plein, mots énormes, titre qui complète la miniature, deux premières lignes de la description) vaut toujours, et se travaille d'autant plus qu'il n'y a qu'une version.
+
 ## La miniature (refaite le 16/10 : la première faisait « vraiment amateur »)
 
 La première version (la tête de verre contre la toile, vue de l'intérieur, grise sur noir) ne donnait pas envie de cliquer : à 160 px, une boule floue et des fissures en cheveux. Ce qui marche mieux :

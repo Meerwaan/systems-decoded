@@ -97,7 +97,7 @@ En décodage (samedi, une semaine sur deux) : les sujets de `docs/memoire/sujets
 - **Instagram et Facebook** : à chaque long, une story avec l'autocollant lien (« le dossier complet est sur YouTube »), le lien en bio, un post.
 - **Shorts** : « vidéo associée » vers le long de la semaine sur chaque court ; c'est réglé dans YouTube Studio, au moment de publier.
 - **Sur YouTube** : un écran de fin vers une autre vidéo longue, un commentaire épinglé vers la suivante, deux playlists (« Les affaires », « Comment c'est fait »).
-- **Titres et miniatures** : trois miniatures en test A/B sur chaque long, dès la sortie. C'est ce qui décide si une vidéo perce.
+- **Titres et miniatures** : ~~trois miniatures en test A/B sur chaque long~~ — depuis le 12/11 (L07), un seul titre, une seule miniature, une seule description, travaillés à fond (CLAUDE.md, « Le format long »). C'est ce qui décide si une vidéo perce.
 
 ## Ce que j'attends de Merwan chaque lundi (deux minutes)
 
