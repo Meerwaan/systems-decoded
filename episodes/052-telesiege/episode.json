@@ -1,0 +1,364 @@
+{
+  "id": "052",
+  "serie": "dossier",
+  "slug": "telesiege",
+  "title": "Le télésiège",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "language": "fr"
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Télésiège",
+      "débrayable"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Télésiège débrayable",
+    "caption": "Télésiège débrayable, la pince du télésiège : en gare, ton siège ne tient plus le câble. Le câble, lui, file sans ralentir, et ton siège doit le rattraper en pleine course, puis le serrer assez fort pour la pente. Pour vérifier ta pince : tu fais confiance à la machine… ou au mécanicien ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#telesiege",
+      "#ski",
+      "#montagne"
+    ],
+    "pinned": "Sun Peaks, 2018 : une pièce probablement oubliée au remontage d'une pince. Le siège a reculé jusqu'au suivant. Toi : la machine, ou le mécanicien ?",
+    "instagram": {
+      "caption": "Ton siège lâche le câble. Et tu t'assois dessus.\n\nDossier 052 : le télésiège débrayable ouvert. Une came, un levier et son galet, deux mors, un ressort… et des pneus qui te relancent jusqu'à la vitesse du câble, dix-huit kilomètres-heure. Au bout du quai, chaque pince est pesée.\n\nPour vérifier ta pince : tu fais confiance à la machine… ou au mécanicien ?",
+      "hashtags": [
+        "#telesiege",
+        "#ski",
+        "#montagne",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ton siège lâche le câble… et tu t'assois dessus : le télésiège débrayable ouvert",
+      "description": "Dossier 052 — le télésiège débrayable ouvert : la came de débrayage qui pousse le levier et son galet, les deux mors de la pince, le ressort de serrage, et les trains de pneus qui ralentissent le siège à environ un mètre par seconde sur le quai, puis le relancent jusqu'à la vitesse du câble, environ cinq mètres par seconde, dix-huit kilomètres-heure. À vitesse égale, la pince se referme. Au bout du quai, un dispositif pèse le serrage de chaque pince : insuffisant, l'installation s'arrête et le siège ne quitte pas la gare. La règle : une sécurité de deux au glissement, dans la pente la plus forte de la ligne. Une reconstitution : la scène (une pince qui serre mal au départ) est un scénario ; le mécanisme est celui décrit par le STRMTG, Doppelmayr et remontees-mecaniques.net.\n\nPisteurs, techniciens des remontées mécaniques : qu'est-ce qu'on a simplifié ? Et toi : pour vérifier ta pince, tu fais confiance à la machine… ou au mécanicien ?",
+      "hashtags": [
+        "#shorts",
+        "#telesiege",
+        "#ski",
+        "#montagne",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "En gare, le siège quitte le câble (la pince s'ouvre) puis le reprend à la sortie ; le câble, lui, ne s'arrête pas et ne ralentit pas en exploitation — remontees-mecaniques.net (tsd_1, tsd_3, « Le télésiège ») ; fr.wikipedia « Télésiège » [S]",
+    "Sur le quai, le siège roule à ≈ 1 m/s (« au pas »), cinq fois moins vite que le câble à ≈ 5 m/s — remontees-mecaniques.net, fr.wikipedia [S, calcul] ; plafond en gare 1,3 m/s pour des skieurs — STRMTG RM2 v3 A4-10 [P]",
+    "Ligne ≈ 5 m/s = 18 km/h, l'allure d'un vélo lancé (plafond 6 m/s) — remontees-mecaniques.net tsd_1 ; fr.wikipedia « Télésiège » [S]",
+    "La came de débrayage appuie sur le levier de la pince (galet) et ouvre les mors — remontees-mecaniques.net [S] ; mors fixe et mors mobile — STRMTG RM1 v5, pièces de sécurité [P] ; ressort de serrage (à boudin ou à torsion) — Doppelmayr, brochure D-Line [P]",
+    "Des pneus prennent le relais du câble, ralentissent puis relancent le siège jusqu'à la vitesse du câble, puis la pince se referme (« la came s'arrête », « le ressort referme » : simplification de cette séquence) — remontees-mecaniques.net [S]",
+    "« À vitesse égale, pour ta pince, le câble est immobile » : explication cinématique de la séquence ci-dessus (vitesse relative nulle), pas une citation [calcul]",
+    "Un capteur pèse le serrage de chaque pince en bout de zone d'embrayage (la came se déforme au passage, un capteur mesure la déformation) — remontees-mecaniques.net tsd_7 [S] ; dispositif obligatoire dans chaque station, qui rend impossible à un véhicule mal serré de quitter la gare — STRMTG RM2 v3 A5-5.1.11 [P], arrêté du 7 août 2009 [P]",
+    "Serrage insuffisant : l'installation s'arrête, le véhicule est isolé pour contrôle — remontees-mecaniques.net [S]",
+    "« Deux fois ce qu'il faut pour ne pas glisser, dans la pente la plus raide » : sécurité de 2 au glissement dans la pente la plus forte, coefficient d'adhérence au plus 0,18 — STRMTG RM2 v3 A5-5.1.11 [P]",
+    "La scène est un scénario : une pince qui serre mal au départ, détectée au pesage, arrêt en gare. La longueur du quai, le chrono et la façon dont la pince serre mal sont reconstitués à l'image ; la voix ne raconte aucun cas réel et ne donne aucun seuil de serrage chiffré (il dépend du modèle)",
+    "Épinglé : Sun Peaks (Colombie-Britannique), 25/08/2018 — un élément de fixation oublié au remontage d'une pince, le siège a reculé sur la pente et heurté le suivant, aucun blessé — Technical Safety BC, II-736022-2018 [P]"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ton siège lâche le *câble*. Et tu t'assois +dessus+.",
+      "vo": "[tense] Ton siège lâche le câble. Et tu t'assois dessus.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ton siège lâche le câble. Et tu t'assois dessus."
+      ],
+      "voir": "Contre-plongée depuis le quai d'embarquement, l'événement déjà en cours : un siège quatre places arrive de la ligne sur 40 % de la largeur, son galet monte sur la came et sa pince s'ouvre ; le câble continue sa course et un vide s'ouvre entre les mors et le câble (la pince, petite mais lisible, liserée de vert) ; derrière, la pente qui plonge et le siège suivant qui arrive. Sur « dessus », le siège libre ralentit et vient vers la caméra, un skieur aux rayons X s'y assoit."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Le câble, lui, ne s'arrête +jamais+. Ton siège doit le rattraper… et le serrer. Mais assez fort, c'est *combien* ?",
+      "vo": "[firm, matter-of-fact] Le câble, lui, ne s'arrête jamais. [short pause] Ton siège doit le rattraper... et le serrer. Mais assez fort, c'est combien ?",
+      "voir": "On suit le câble : il file sans ralentir autour de la grande poulie de gare ; on revient sur le siège qui roule libre, sa pince ouverte à quelques centimètres du câble lancé ; sur « combien ? », les deux mors ouverts en gros plan, immobiles, le câble qui défile entre eux."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Tu avances au pas. Devant, des pneus vont te lancer. Puis la gare finit, et sous toi… la *pente*. Avant ça, ta pince doit mordre le +câble+.",
+      "vo": "[tense] Tu avances au pas. Devant, des pneus vont te lancer. Puis la gare finit, et sous toi... la pente. Avant ça, ta pince doit mordre le câble.",
+      "voir": "Même seconde, le siège suivi de trois quarts arrière : il roule au pas sur le rail de gare, le chrono démarre ; devant, la rangée de pneus qui tournent ; puis la sortie de gare et, sous le câble, la pente raide qui tombe (sol aux rayons X) ; on resserre sur la pince ouverte sous le câble qui file : c'est elle qu'on ouvre."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "La pince sortie du siège, pleine, sur son halo, de trois quarts ; elle s'éclate sur « on »."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "En gare, une came pousse un levier et son galet. Le levier ouvre deux mors : un fixe, un mobile. Et au bout… le +ressort+ qui les serre.",
+      "vo": "[conversational, curious] En gare, une came pousse un levier et son galet. Le levier ouvre deux mors : un fixe, un mobile. Et au bout... le ressort qui les serre.",
+      "voAlt": [
+        "[curious] En gare, une came pousse un levier et son galet. Le levier ouvre deux mors : un fixe, un mobile. Et au bout... le ressort qui les serre."
+      ],
+      "voir": "On suit la poussée d'un bout à l'autre : la came (le rail de gare) appuie sur le galet ; le levier bascule ; les deux mors s'écartent, le fixe et le mobile, nommés ; au bout, le ressort de serrage isolé, le cœur, qui se tend quand les mors s'ouvrent."
+    },
+    {
+      "id": "principe",
+      "text": "Comment il le rattrape ? À quai, tu roules [5|cinq] fois moins vite que le câble. Les pneus te relancent à sa vitesse : à vitesse égale, pour ta pince, le câble est +immobile+.",
+      "vo": "[curious] Comment il le rattrape ? [short pause] À quai, tu roules cinq fois moins vite que le câble. Les pneus te relancent à sa vitesse : à vitesse égale, pour ta pince, le câble est immobile.",
+      "voir": "Deux flèches de vitesse côte à côte sur le quai : celle du câble, longue, celle du siège, cinq fois plus courte ; la rangée de pneus tourne de plus en plus vite et allonge la flèche du siège jusqu'à celle du câble ; quand elles sont égales, caméra posée sur la pince : les torons du câble cessent de défiler, il est figé entre les mors."
+    },
+    {
+      "id": "repos",
+      "text": "Ton siège roule seul. Sa pince attend, ouverte sur la came. Au bout du quai, un capteur pèse chaque pince. Et là… les pneus *accélèrent*.",
+      "vo": "[warm, conversational] Ton siège roule seul. Sa pince attend, ouverte sur la came. Au bout du quai, un capteur pèse chaque pince. Et là... les pneus accélèrent.",
+      "voAlt": [
+        "[curious] Ton siège roule seul. Sa pince attend, ouverte sur la came. Au bout du quai, un capteur pèse chaque pince. Et là... les pneus accélèrent."
+      ],
+      "voir": "Le siège roule seul sur le rail, pince ouverte posée sur la came, une lueur verte qui veille ; on longe le quai jusqu'au capteur de pesage, un tronçon de came instrumenté au bout de la zone d'embrayage ; sur « accélèrent », les pneus prennent de la vitesse sous le siège et le décor commence à défiler."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Le quai finit. [18|Dix-huit] kilomètres-heure, un vélo lancé. La came s'arrête. Le ressort referme ta pince… *mal*.",
+      "vo": "[firm, matter-of-fact] Le quai finit. Dix-huit kilomètres-heure, un vélo lancé. La came s'arrête. Le ressort referme ta pince... mal.",
+      "voir": "Le chrono revient : le siège lancé par les pneus, le quai qui défile ; la came s'interrompt, le galet tombe, le ressort se détend et les mors se referment sur le câble — mais sans force : un liseré rouge sur le ressort, le câble qui patine d'un rien entre les mors."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Le capteur la pèse. *Trop* faible. Et le câble qui ne s'arrête jamais… s'arrête. Ton siège ne quittera pas la +gare+. On l'isole, pour contrôle.",
+      "vo": "[tense] Le capteur la pèse. Trop faible. Et le câble qui ne s'arrête jamais... s'arrête. Ton siège ne quittera pas la gare. On l'isole, pour contrôle.",
+      "voir": "Le climax en grand : la pince passe sur le capteur, la came se plie d'un rien, la mesure reste dans le rouge ; d'un coup tout se fige, plan large de la gare : la grande poulie, les pneus, le câble sur toute la ligne s'arrêtent, les sièges se balancent ; le siège immobile au bout du quai, la pente vide devant lui ; puis il glisse sur une voie de côté, isolé."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : ta pince ne te sauve *pas* seule. La gare vérifie : elle ne te lâche que si ta pince serre +assez+.",
+      "vo": "[firm, matter-of-fact] Voilà son secret : ta pince ne te sauve pas seule. La gare vérifie : elle ne te lâche que si ta pince serre assez.",
+      "voir": "Retour au cadre de l'accroche, figé : le siège au quai, la pince sur la came ; sur « pas », le ressort s'éteint ; sur « assez », la gare entière s'allume en vert autour de la pince ; le nom du compte s'allume."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et assez fort, c'est combien ? Deux fois ce qu'il faut pour ne pas glisser, dans la pente la plus raide. En +commentaire+ : pour ta pince, tu fais confiance à la machine… ou au *mécanicien* ?",
+      "vo": "[conversational, curious] Et assez fort, c'est combien ? [short pause] Deux fois ce qu'il faut pour ne pas glisser, dans la pente la plus raide. [short pause] En commentaire : pour ta pince, tu fais confiance à la machine... ou au mécanicien ?",
+      "voAlt": [
+        "[curious] Et assez fort, c'est combien ? [short pause] Deux fois ce qu'il faut pour ne pas glisser, dans la pente la plus raide. [short pause] En commentaire : pour ta pince, tu fais confiance à la machine... ou au mécanicien ?"
+      ],
+      "voir": "Le siège sur le tronçon le plus raide de la ligne, de profil : une flèche rouge, ce qui le tire vers le bas le long du câble ; une flèche verte, la tenue de la pince, deux fois plus longue ; puis, sur la question, deux cases face à face : le capteur de pesage et l'établi du mécanicien."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour ton ami qui monte sans regarder sa *pince*.",
+      "vo": "[warm, conversational] Like : [short pause] pour ton ami qui monte sans regarder sa pince.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour ton ami qui monte sans regarder sa pince."
+      ],
+      "voir": "Le télésiège repart, les sièges remontent la pente un par un, chaque pince verte ; les chevrons désignent la colonne de boutons."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, À FAIRE.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, À FAIRE.",
+      "voir": "Le panneau « S'abonner pour l'ouvrir », le dossier suivant sous scellés, ses chevrons."
+    },
+    {
+      "id": "boucle",
+      "text": "Et à la prochaine gare…",
+      "vo": "[calm] Et à la prochaine gare,",
+      "voir": "On redescend vers le plan d'ouverture : la contre-plongée depuis le quai, le siège qui arrive de la ligne, son galet qui touche la came."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:câble",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:trop-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:gare"
+  },
+  "bedVolume": 0.8,
+  "sons": [
+    {
+      "id": "052-vent-sommet",
+      "image": "le vent de montagne autour de la gare",
+      "reprend": "amb-vent"
+    },
+    {
+      "id": "052-cable-poulie",
+      "image": "le câble qui file sans ralentir autour de la grande poulie de gare",
+      "duree": 4,
+      "prompt": "Steel haul rope running fast over a large chairlift bullwheel and sheave rollers: steady rhythmic metallic rumble and soft clicking as the cable passes, medium distance, outdoors, isolated, no music"
+    },
+    {
+      "id": "052-pince-ouvre",
+      "image": "le galet monte sur la came, la pince s'ouvre et lâche le câble",
+      "duree": 1.5,
+      "prompt": "Chairlift detachable grip opening as its roller hits the station rail: a hard steel clack, then the jaws releasing the cable with a short metallic scrape, close, isolated, no music"
+    },
+    {
+      "id": "052-pneus",
+      "image": "la rangée de pneus qui ralentit puis relance le siège sur le quai",
+      "duree": 3,
+      "prompt": "Row of rubber tires spinning against a metal plate in a chairlift station, whirring rubber and a rapid thumping as a chair passes over them, accelerating, close, isolated, no music"
+    },
+    {
+      "id": "052-pince-ferme",
+      "image": "le ressort referme les mors sur le câble",
+      "duree": 1.5,
+      "prompt": "Heavy spring-loaded steel grip snapping shut on a thick steel cable: a deep metallic clunk with a short spring twang, close, isolated, no music"
+    },
+    {
+      "id": "052-arret",
+      "image": "tout le télésiège s'arrête d'un coup, les sièges se balancent",
+      "duree": 4,
+      "prompt": "Large chairlift emergency stop: motor winding down, a heavy brake clunk, then the steel cable creaking and the chairs swinging and squeaking on their hangers, outdoors, isolated, no music"
+    }
+  ],
+  "sfx": [
+    {
+      "type": "space",
+      "mix": 0.18
+    },
+    {
+      "type": "sample",
+      "file": "amb-tension.wav",
+      "loop": true,
+      "from": 0,
+      "gain": -16,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "sample",
+      "file": "sig-dossier.wav",
+      "at": 0.02,
+      "gain": -8,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "aspiration.wav",
+      "at": "ouvre-0.7",
+      "to": "ouvre-0.04",
+      "offset": 0.6,
+      "gain": -18
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "ouvre$+0.02",
+      "depth": -90
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.16",
+      "dur": 0.3,
+      "gain": -5,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.38",
+      "offset": 1.75,
+      "gain": -2,
+      "bus": "main",
+      "dur": 0.55,
+      "fade": 0.2
+    },
+    {
+      "type": "sample",
+      "file": "riser.wav",
+      "at": "tozero-2",
+      "to": "tozero",
+      "offset": 1.5,
+      "gain": -22
+    },
+    {
+      "type": "sample",
+      "file": "impact-lourd.wav",
+      "at": "tozero",
+      "gain": -17,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "impact-lourd.wav",
+      "at": "trigger",
+      "gain": -15,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "impact-sec.wav",
+      "at": "verdict",
+      "gain": -15
+    },
+    {
+      "type": "sample",
+      "file": "sig-boucle.wav",
+      "at": "rewind",
+      "gain": -8,
+      "offset": 0.6
+    }
+  ]
+}
