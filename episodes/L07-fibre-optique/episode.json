@@ -1,0 +1,816 @@
+{
+  "id": "L07",
+  "slug": "fibre-optique",
+  "title": "La fibre optique",
+  "format": "long",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "language": "fr",
+    "parts": [
+      "ouvre",
+      "principe",
+      "histoire",
+      "etape1",
+      "preforme",
+      "frittage",
+      "tour",
+      "armure",
+      "test",
+      "cable",
+      "mer",
+      "plage",
+      "soudure",
+      "partage",
+      "chez",
+      "du"
+    ]
+  },
+  "post": {
+    "youtube": {
+      "title": "Internet passe par un fil de verre épais comme un cheveu : comment fonctionne la fibre optique",
+      "titleNote": "Un seul titre (règle du 12/11). L'accroche d'abord (le fil de verre et le cheveu, dits dans la première phrase ; 56 caractères avant les deux points), puis ce que les gens tapent : autocomplétion YouTube relevée le 12/11, « comment fonctionne la fibre optique », « fibre optique comment ca marche », « fibre optique fabrication ». Aucun mot de la miniature.",
+      "keyword": "comment fonctionne la fibre optique",
+      "descriptionTemplate": "Comment fonctionne la fibre optique, et comment on la fabrique : un fil de verre aussi fin qu'un cheveu, tiré du haut d'une tour à un kilomètre par minute.\nCe que tu regardes vient de le traverser. On suit sa fabrication de A à Z, de la flamme au fond de l'océan.\n\nChapitres\n__CHAPITRES__\n\nSources : Fiber Optic Association (fabrication de la fibre) ; IEEE / ETHW, jalon « Low-loss optical fiber, 1970 » ; D. Keck, « Optical fiber spans 30 years » (Lightwave) ; Kao et Hockham, Proc. IEE, 1966 ; Arcep, communiqué du 12/03/2026 ; Union internationale des télécommunications (câbles sous-marins).\n\nSystème Décodé : on ouvre ce que tu utilises tous les jours sans jamais le voir. Abonne-toi : on se retrouve très vite, dans une autre usine.\n\nDerrière ta box, ton câble fibre : en courbe douce… ou plié ?",
+      "hashtags": [
+        "#fibreoptique",
+        "#commentcestfait",
+        "#fabrication"
+      ],
+      "pinned": "Derrière ta box, ton câble fibre : en courbe douce… ou plié ? Un pli serré, et la lumière sort du cœur.",
+      "endScreen": "Les 15 dernières secondes laissent la moitié droite de l'image libre pour l'écran de fin."
+    }
+  },
+  "thumb": {
+    "at": "goutte+2",
+    "title": [
+      "ON TIRE",
+      "DESSUS"
+    ],
+    "tone": "signal",
+    "tag": "Verre · 2 000 °C",
+    "cam": {
+      "side": -420,
+      "drift": 0
+    },
+    "grade": {
+      "contrast": 1.32,
+      "saturation": 1.15
+    }
+  },
+  "sources": [
+    "Fiber Optic Association, « Fiber manufacturing » (foa.org/tech/fibr-mfg.htm) : fibre nue 125 µm ± 1 µm, cœur ≈ 9 µm, four ≈ 1 900 °C, tirage 10 à 20 m/s, jauge laser > 750 mesures/s, double revêtement durci aux UV, contrôle par réflectométrie.",
+    "ETHW / IEEE Milestone « World's first low-loss optical fiber for telecommunications, 1970 » : ≈ 1 000 dB/km avant 1965, cible de 20 dB/km, 17 dB/km mesurés chez Corning en août 1970 (Maurer, Schultz, Keck).",
+    "D. Keck, « Optical fiber spans 30 years », Lightwave, 2000 : le récit de 1970 par l'un des trois chercheurs.",
+    "K. C. Kao et G. A. Hockham, Proc. IEE 113(7), 1966 : la perte vient des impuretés ; prix Nobel de physique 2009 pour Kao.",
+    "Calculs : 1 000 dB/km = la moitié tous les 3 m, 1 % à 20 m ; 17 dB/km = 2 % après 1 km ; 0,2 dB/km = plus de 95 % après 1 km et 1 % après 100 km ; épreuve de traction 0,7 GPa sur 125 µm ≈ 8,6 N, soit près de 0,9 kg.",
+    "Wikipedia « Optical fiber » et « Fibre optique » : écart d'indice cœur / gaine inférieur à 1 %, réflexion totale, ≈ 200 000 km/s, courbure (≈ 30 mm ; 7,5 mm pour les fibres G.657), tirage ≈ 1 km/min.",
+    "Arcep, communiqué du 12/03/2026 : 27,1 millions d'abonnements en fibre fin 2025.",
+    "UIT : plus de 99 % du trafic international par câbles sous-marins ; 150 à 200 pannes par an. Wikipedia « Submarine communications cable » : ≈ 25 mm, répéteurs.",
+    "L'image reconstitue : la tour, le dépôt de la préforme (procédé extérieur, l'un des procédés existants), le banc de traction et les couches du câble sont modélisés d'après ces descriptions, pas d'après une usine précise.",
+    "Deuxième passe (docs/faits/L07-installation.md) : Fiber Optic Association (réseaux optiques passifs : coupleur 1:32 ou 1:64, 1 490 nm descendant et 1 310 nm montant, budget optique jusqu'à ≈ 28 dB ; soudure par fusion : deux caméras, alignement, arc, clivage refusé s'il est mauvais ; réflectométrie).",
+    "Arcep : 28,1 millions d'abonnements en fibre fin juin 2026 ; point de branchement optique de 6 à 12 logements.",
+    "Wikipedia « Submarine communications cable » : charrue d'enfouissement près des côtes, réparation au grappin, raccord à bord, surplus de câble reposé en boucle. TelecomTV : atterrissement du câble Medusa à Marseille (2025).",
+    "Calculs : 1/32 ≈ 3 % de la lumière par foyer ; 28 dB = plus de 99 % de la lumière perdue ; soudure 0,02 à 0,05 dB ≈ 1 % au plus.",
+    "L'image reconstitue : le navire, la charrue, la soudeuse, le coupleur et les boîtiers sont modélisés d'après ces descriptions ; aucun chiffre n'est donné pour la température ou la durée de l'arc, faute de source."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "chap": "Ce que tu regardes passe par du verre",
+      "text": "Ce que tu regardes vient de traverser un fil de *verre*. Aussi fin qu'un cheveu.",
+      "vo": "[tense] Ce que tu regardes vient de traverser un fil de verre. Aussi fin qu'un cheveu."
+    },
+    {
+      "id": "promesse",
+      "text": "Un verre si +pur+ que la lumière y parcourt cent kilomètres avant de s'éteindre. Dans le meilleur verre d'autrefois : vingt mètres.",
+      "vo": "[conversational, curious] Un verre si pur que la lumière y parcourt cent kilomètres avant de s'éteindre. Dans le meilleur verre d'autrefois : vingt mètres."
+    },
+    {
+      "id": "curiosite",
+      "fil": "du",
+      "hold": 0.3,
+      "text": "Et pourtant, chez toi, un seul *geste* suffit à l'éteindre. Lequel… tu le sauras à la fin.",
+      "vo": "[serious] Et pourtant, chez toi, un seul geste suffit à l'éteindre. Lequel... tu le sauras à la fin."
+    },
+    {
+      "id": "defi",
+      "fil": "test",
+      "hold": 1.2,
+      "text": "Mais d'abord, il faut le fabriquer. Et avant de quitter l'usine, ce fil passera une épreuve : on va *tirer* dessus. Tout ce qui est faible… devra casser.",
+      "vo": "[curious] Mais d'abord, il faut le fabriquer. Et avant de quitter l'usine, ce fil passera une épreuve : on va tirer dessus. Tout ce qui est faible... devra casser."
+    },
+    {
+      "id": "ouvre",
+      "chap": "On l'ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ]
+    },
+    {
+      "id": "eclate",
+      "text": "Ton câble, d'abord. Une gaine de plastique. Des fils de renfort. Une couche de résine. Et dessous, le fil de verre : [125|cent vingt-cinq] microns.",
+      "vo": "[conversational, curious] Ton câble, d'abord. Une gaine de plastique. Des fils de renfort. Une couche de résine. Et dessous, le fil de verre : cent vingt-cinq microns."
+    },
+    {
+      "id": "coeur",
+      "text": "Mais la lumière ne passe même pas dans tout le fil. Elle passe au centre, dans +le cœur+ : neuf microns.",
+      "vo": "[curious] Mais la lumière ne passe même pas dans tout le fil. Elle passe au centre, dans le cœur : neuf microns."
+    },
+    {
+      "id": "eclairs",
+      "text": "Dans ces neuf microns, ta vidéo n'est plus une image. C'est une suite d'*éclairs*. Une lumière infrarouge, que tes yeux ne voient pas, allumée et éteinte des milliards de fois par seconde.",
+      "vo": "[warm, conversational] Dans ces neuf microns, ta vidéo n'est plus une image. C'est une suite d'éclairs. Une lumière infrarouge, que tes yeux ne voient pas, allumée et éteinte des milliards de fois par seconde."
+    },
+    {
+      "id": "avant",
+      "hold": 1.2,
+      "text": "Et ces éclairs filent à deux cent mille kilomètres par seconde, dans un fil qui tourne, qui monte, qui descend. Alors pourquoi la lumière… n'en sort *pas* ?",
+      "vo": "[conversational, curious] Et ces éclairs filent à deux cent mille kilomètres par seconde, dans un fil qui tourne, qui monte, qui descend. Alors pourquoi la lumière... n'en sort pas ?"
+    },
+    {
+      "id": "principe",
+      "chap": "Pourquoi la lumière ne s'échappe pas",
+      "text": "Parce que le fil est fait de deux verres. Au centre, le cœur. Autour, la gaine. Et dans le cœur, la lumière va un tout petit peu moins vite que dans la gaine. Moins d'un pour cent d'écart.",
+      "vo": "[warm, conversational] Parce que le fil est fait de deux verres. Au centre, le cœur. Autour, la gaine. Et dans le cœur, la lumière va un tout petit peu moins vite que dans la gaine. Moins d'un pour cent d'écart."
+    },
+    {
+      "id": "ricochet",
+      "text": "Ça suffit. Pense à un caillou lancé sur un lac. Lancé de haut, il coule. Lancé à plat, il *ricoche*. Ici, pareil : la lumière arrive sur la frontière entre les deux verres presque à plat… et elle est renvoyée. Entièrement.",
+      "vo": "[conversational, curious] Ça suffit. Pense à un caillou lancé sur un lac. Lancé de haut, il coule. Lancé à plat, il ricoche. Ici, pareil : la lumière arrive sur la frontière entre les deux verres presque à plat... et elle est renvoyée. Entièrement."
+    },
+    {
+      "id": "miroir",
+      "text": "Puis elle ricoche de l'autre côté. Et encore. Et encore. On appelle ça la réflexion totale. Il n'y a pas un seul *miroir* dans ce fil. Juste deux verres, presque identiques.",
+      "vo": "[amused] Puis elle ricoche de l'autre côté. Et encore. Et encore. On appelle ça la réflexion totale. Il n'y a pas un seul miroir dans ce fil. Juste deux verres, presque identiques."
+    },
+    {
+      "id": "rasant",
+      "fil": "du",
+      "text": "Mais retiens ces deux mots : à *plat*. Tant que la lumière frôle la paroi, elle reste prisonnière. On en reparle.",
+      "vo": "[curious] Mais retiens ces deux mots : à plat. Tant que la lumière frôle la paroi, elle reste prisonnière. On en reparle."
+    },
+    {
+      "id": "transition",
+      "hold": 1.2,
+      "text": "Garder la lumière dedans, c'était donc réglé. Le vrai problème, pendant des années, c'était le verre *lui-même*.",
+      "vo": "[serious] Garder la lumière dedans, c'était donc réglé. Le vrai problème, pendant des années, c'était le verre lui-même."
+    },
+    {
+      "id": "histoire",
+      "chap": "Le verre qui éteignait la lumière",
+      "text": "Années soixante. On sait déjà guider la lumière dans du verre. Mais dans le meilleur verre du moment, elle perd la *moitié* de sa force tous les trois mètres.",
+      "vo": "[conversational, curious] Années soixante. On sait déjà guider la lumière dans du verre. Mais dans le meilleur verre du moment, elle perd la moitié de sa force tous les trois mètres."
+    },
+    {
+      "id": "histoire2",
+      "text": "Trois mètres, la moitié. Six mètres, le quart. Et ça continue.",
+      "vo": "[curious] Trois mètres, la moitié. Six mètres, le quart. Et ça continue."
+    },
+    {
+      "id": "nuit",
+      "text": "À vingt mètres, il en reste un pour cent. Imagine une vitre de cette épaisseur : derrière elle, la lumière est presque *éteinte*. Impossible de relier une ville à une autre. Même un immeuble à son voisin.",
+      "vo": "[serious] À vingt mètres, il en reste un pour cent. Imagine une vitre de cette épaisseur : derrière elle, la lumière est presque éteinte. Impossible de relier une ville à une autre. Même un immeuble à son voisin."
+    },
+    {
+      "id": "kao",
+      "text": "En [1966|mille neuf cent soixante-six], un ingénieur, Charles Kao, publie une idée qui change tout. Le coupable, ce n'est pas le verre. Ce sont ses *impuretés*. Du fer. Du cuivre. De l'eau.",
+      "vo": "[warm, conversational] En mille neuf cent soixante-six, un ingénieur, Charles Kao, publie une idée qui change tout. Le coupable, ce n'est pas le verre. Ce sont ses impuretés. Du fer. Du cuivre. De l'eau."
+    },
+    {
+      "id": "kao2",
+      "text": "Enlève-les, dit-il, et la lumière ira à des kilomètres. Il fixe même la barre à franchir. Cette idée lui vaudra un prix Nobel. Mais ce jour-là, personne ne sait fabriquer un verre pareil.",
+      "vo": "[curious] Enlève-les, dit-il, et la lumière ira à des kilomètres. Il fixe même la barre à franchir. Cette idée lui vaudra un prix Nobel. Mais ce jour-là, personne ne sait fabriquer un verre pareil."
+    },
+    {
+      "id": "corning",
+      "text": "Août [1970|mille neuf cent soixante-dix]. Aux États-Unis, chez le verrier Corning, une petite équipe de chercheurs mesure sa dernière fibre.",
+      "vo": "[conversational, curious] Août mille neuf cent soixante-dix. Aux États-Unis, chez le verrier Corning, une petite équipe de chercheurs mesure sa dernière fibre."
+    },
+    {
+      "id": "corning2",
+      "text": "Au bout d'un kilomètre, il reste deux pour cent de la lumière. Ça paraît peu. C'est la barre de Kao… +franchie+.",
+      "vo": "[curious] Au bout d'un kilomètre, il reste deux pour cent de la lumière. Ça paraît peu. C'est la barre de Kao... franchie."
+    },
+    {
+      "id": "aujourdhui",
+      "fil": "test",
+      "text": "Aujourd'hui, au bout d'un kilomètre, il en reste environ [95|quatre-vingt-quinze] pour cent. Un verre presque parfait… sur lequel, à la fin, on tirera quand même.",
+      "vo": "[warm, conversational] Aujourd'hui, au bout d'un kilomètre, il en reste environ quatre-vingt-quinze pour cent. Un verre presque parfait... sur lequel, à la fin, on tirera quand même."
+    },
+    {
+      "id": "relance1",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Pour en arriver là, il a fallu abandonner ce qui fait le verre depuis toujours : le sable *fondu*. Alors… avec quoi fabrique-t-on celui-là ?",
+      "vo": "[curious] Pour en arriver là, il a fallu abandonner ce qui fait le verre depuis toujours : le sable fondu. Alors... avec quoi fabrique-t-on celui-là ?"
+    },
+    {
+      "id": "etape1",
+      "chap": "Étape 1 : un verre né d'une flamme",
+      "text": "Première étape. Pas de sable. Pas de four de verrier. Un liquide, transparent comme de l'eau : du tétrachlorure de silicium.",
+      "vo": "[warm, conversational] Première étape. Pas de sable. Pas de four de verrier. Un liquide, transparent comme de l'eau : du tétrachlorure de silicium."
+    },
+    {
+      "id": "distille",
+      "text": "Pourquoi un liquide ? Parce qu'un liquide, ça se distille. On le fait bouillir, on ne garde que sa vapeur… et les métaux restent au fond.",
+      "vo": "[conversational, curious] Pourquoi un liquide ? Parce qu'un liquide, ça se distille. On le fait bouillir, on ne garde que sa vapeur... et les métaux restent au fond."
+    },
+    {
+      "id": "vapeur",
+      "text": "Cette vapeur, on l'envoie dans une flamme. Elle y réagit… et il en sort une fumée *blanche*. Chaque grain de cette fumée est un grain de verre pur.",
+      "vo": "[curious] Cette vapeur, on l'envoie dans une flamme. Elle y réagit... et il en sort une fumée blanche. Chaque grain de cette fumée est un grain de verre pur."
+    },
+    {
+      "id": "menace1",
+      "text": "Tant de précautions, parce qu'ici l'ennemi se compte en atomes. Quelques atomes de fer ou de cuivre sur un milliard… et la lumière s'*éteint* en route.",
+      "vo": "[serious] Tant de précautions, parce qu'ici l'ennemi se compte en atomes. Quelques atomes de fer ou de cuivre sur un milliard... et la lumière s'éteint en route."
+    },
+    {
+      "id": "attraper",
+      "hold": 1.2,
+      "text": "On a donc une fumée de verre. Reste à l'attraper. Et à lui donner une forme… sans jamais la *toucher*.",
+      "vo": "[conversational, curious] On a donc une fumée de verre. Reste à l'attraper. Et à lui donner une forme... sans jamais la toucher."
+    },
+    {
+      "id": "preforme",
+      "chap": "Étape 2 : couche après couche",
+      "text": "Deuxième étape. Une tige tourne sur elle-même. La flamme va et vient le long de la tige, et la fumée de verre s'y dépose. Une couche. Puis une autre. Puis une autre.",
+      "vo": "[warm, conversational] Deuxième étape. Une tige tourne sur elle-même. La flamme va et vient le long de la tige, et la fumée de verre s'y dépose. Une couche. Puis une autre. Puis une autre."
+    },
+    {
+      "id": "recette",
+      "text": "Et c'est ici que tout se joue. Les premières couches reçoivent une pincée de germanium : c'est lui qui ralentit la lumière. Ce sera +le cœur+. Les suivantes sont en silice pure : ce sera la gaine.",
+      "vo": "[conversational, curious] Et c'est ici que tout se joue. Les premières couches reçoivent une pincée de germanium : c'est lui qui ralentit la lumière. Ce sera le cœur. Les suivantes sont en silice pure : ce sera la gaine."
+    },
+    {
+      "id": "rappel1",
+      "fil": "du",
+      "text": "La frontière entre les deux, c'est le mur où la lumière ricoche. Celui qu'un seul geste, chez toi, lui fera *traverser*. Patience.",
+      "vo": "[curious] La frontière entre les deux, c'est le mur où la lumière ricoche. Celui qu'un seul geste, chez toi, lui fera traverser. Patience."
+    },
+    {
+      "id": "menace2",
+      "text": "Une recette qui dérive, une poussière prise entre deux couches… et le cœur ne guide plus *rien*.",
+      "vo": "[serious] Une recette qui dérive, une poussière prise entre deux couches... et le cœur ne guide plus rien."
+    },
+    {
+      "id": "plusieurs",
+      "text": "Il existe d'autres façons de bâtir ce cylindre. Le principe ne change pas : le verre se dépose depuis une vapeur, couche par couche.",
+      "vo": "[warm, conversational] Il existe d'autres façons de bâtir ce cylindre. Le principe ne change pas : le verre se dépose depuis une vapeur, couche par couche."
+    },
+    {
+      "id": "craie",
+      "hold": 1.2,
+      "text": "À la fin, on obtient un gros cylindre blanc. Opaque. Poreux comme de la craie. Rien à voir avec du verre. Et dans ses pores, il reste un ennemi : *l'eau*.",
+      "vo": "[conversational, curious] À la fin, on obtient un gros cylindre blanc. Opaque. Poreux comme de la craie. Rien à voir avec du verre. Et dans ses pores, il reste un ennemi : l'eau."
+    },
+    {
+      "id": "frittage",
+      "chap": "Étape 3 : du blanc au transparent",
+      "text": "Troisième étape. Le cylindre descend dans un four. On y fait passer du chlore : il arrache l'eau, jusqu'au fond des pores.",
+      "vo": "[warm, conversational] Troisième étape. Le cylindre descend dans un four. On y fait passer du chlore : il arrache l'eau, jusqu'au fond des pores."
+    },
+    {
+      "id": "frittage2",
+      "text": "Puis on chauffe plus fort. Les grains se soudent. Les pores se referment. Le cylindre rétrécit… et le blanc devient +transparent+. C'est la même matière. Seuls les vides ont disparu.",
+      "vo": "[conversational, curious] Puis on chauffe plus fort. Les grains se soudent. Les pores se referment. Le cylindre rétrécit... et le blanc devient transparent. C'est la même matière. Seuls les vides ont disparu."
+    },
+    {
+      "id": "menace3",
+      "text": "S'il reste de l'eau, elle absorbera la lumière. S'il reste une *bulle*, elle la dispersera.",
+      "vo": "[serious] S'il reste de l'eau, elle absorbera la lumière. S'il reste une bulle, elle la dispersera."
+    },
+    {
+      "id": "paradoxe",
+      "text": "Cette barre de verre, on l'appelle la préforme. Et regarde bien au centre. Le cœur est déjà là. La gaine aussi. La fibre existe déjà… en *énorme*.",
+      "vo": "[amused] Cette barre de verre, on l'appelle la préforme. Et regarde bien au centre. Le cœur est déjà là. La gaine aussi. La fibre existe déjà... en énorme."
+    },
+    {
+      "id": "seuil",
+      "fil": "test",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Il ne reste qu'à étirer cette barre en un fil de plusieurs kilomètres. Sans le casser. Puis à tirer dessus, pour de bon. Si tu veux voir ça… +abonne-toi+, on y arrive.",
+      "vo": "[conversational, curious] Il ne reste qu'à étirer cette barre en un fil de plusieurs kilomètres. Sans le casser. Puis à tirer dessus, pour de bon. Si tu veux voir ça... abonne-toi, on y arrive."
+    },
+    {
+      "id": "tour",
+      "chap": "Étape 4 : la tour de fibrage",
+      "text": "Quatrième étape. La plus spectaculaire. La préforme est suspendue tout en haut d'une tour de plusieurs étages. Sa pointe plonge dans un four : presque deux mille degrés.",
+      "vo": "[warm, conversational] Quatrième étape. La plus spectaculaire. La préforme est suspendue tout en haut d'une tour de plusieurs étages. Sa pointe plonge dans un four : presque deux mille degrés."
+    },
+    {
+      "id": "goutte",
+      "text": "Le verre ramollit. Une goutte se forme, s'étire, tombe… et entraîne derrière elle un *fil*. On attrape ce fil en bas. Et on tire.",
+      "vo": "[conversational, curious] Le verre ramollit. Une goutte se forme, s'étire, tombe... et entraîne derrière elle un fil. On attrape ce fil en bas. Et on tire."
+    },
+    {
+      "id": "proportions",
+      "text": "Le plus beau, c'est que rien ne se mélange. Le cœur reste au centre, la gaine autour. Tout rétrécit ensemble, dans les mêmes proportions, jusqu'à [125|cent vingt-cinq] microns.",
+      "vo": "[curious] Le plus beau, c'est que rien ne se mélange. Le cœur reste au centre, la gaine autour. Tout rétrécit ensemble, dans les mêmes proportions, jusqu'à cent vingt-cinq microns."
+    },
+    {
+      "id": "vitesse",
+      "text": "Et ça va vite. Le fil descend à dix, vingt mètres par seconde. Un *kilomètre* de fibre à la minute. En haut, la préforme s'enfonce lentement dans le four, à mesure que le fil la consomme.",
+      "vo": "[conversational, curious] Et ça va vite. Le fil descend à dix, vingt mètres par seconde. Un kilomètre de fibre à la minute. En haut, la préforme s'enfonce lentement dans le four, à mesure que le fil la consomme."
+    },
+    {
+      "id": "laser",
+      "text": "Alors un laser le surveille. Il mesure son diamètre plus de [750|sept cent cinquante] fois par seconde. Trop épais ? On tire plus vite. Trop fin ? On +ralentit+.",
+      "vo": "[warm, conversational] Alors un laser le surveille. Il mesure son diamètre plus de sept cent cinquante fois par seconde. Trop épais ? On tire plus vite. Trop fin ? On ralentit."
+    },
+    {
+      "id": "menace4",
+      "text": "La marge : un micron. Au-delà, deux fibres mises bout à bout s'alignent mal… et la lumière se *perd* à chaque raccord.",
+      "vo": "[serious] La marge : un micron. Au-delà, deux fibres mises bout à bout s'alignent mal... et la lumière se perd à chaque raccord."
+    },
+    {
+      "id": "nu",
+      "hold": 1.2,
+      "text": "Mais ce fil tout neuf a une faiblesse. Tant qu'il est nu… il ne faut surtout pas le *toucher*.",
+      "vo": "[curious] Mais ce fil tout neuf a une faiblesse. Tant qu'il est nu... il ne faut surtout pas le toucher."
+    },
+    {
+      "id": "armure",
+      "chap": "Étape 5 : une armure, en pleine chute",
+      "text": "Un verre neuf est étonnamment solide. À une condition : que sa surface soit intacte. Un frottement, une poussière, et c'est une *microfissure*. Invisible. Et elle ne demande qu'à grandir.",
+      "vo": "[conversational, curious] Un verre neuf est étonnamment solide. À une condition : que sa surface soit intacte. Un frottement, une poussière, et c'est une microfissure. Invisible. Et elle ne demande qu'à grandir."
+    },
+    {
+      "id": "armure2",
+      "text": "Alors, cinquième étape : on l'habille pendant qu'il tombe, avant qu'il ait touché quoi que ce soit. Deux couches de résine. Une molle, contre le verre, pour amortir. Une dure, autour, pour +protéger+.",
+      "vo": "[warm, conversational] Alors, cinquième étape : on l'habille pendant qu'il tombe, avant qu'il ait touché quoi que ce soit. Deux couches de résine. Une molle, contre le verre, pour amortir. Une dure, autour, pour protéger."
+    },
+    {
+      "id": "rappel2",
+      "fil": "du",
+      "text": "Protéger des chocs. Des frottements. Mais pas du geste dont je t'ai parlé : lui, il ne casse *rien*.",
+      "vo": "[conversational, curious] Protéger des chocs. Des frottements. Mais pas du geste dont je t'ai parlé : lui, il ne casse rien."
+    },
+    {
+      "id": "uv",
+      "text": "Des lampes à ultraviolets les durcissent au passage. Et seulement là… le fil touche sa première poulie, puis s'enroule sur sa bobine.",
+      "vo": "[curious] Des lampes à ultraviolets les durcissent au passage. Et seulement là... le fil touche sa première poulie, puis s'enroule sur sa bobine."
+    },
+    {
+      "id": "doute",
+      "midroll": true,
+      "fil": "test",
+      "hold": 1.2,
+      "text": "Il a l'air parfait. Mais sur des kilomètres, une fissure a pu se glisser sous la résine. Et il n'y a qu'une façon de le *savoir*…",
+      "vo": "[serious] Il a l'air parfait. Mais sur des kilomètres, une fissure a pu se glisser sous la résine. Et il n'y a qu'une façon de le savoir..."
+    },
+    {
+      "id": "test",
+      "chap": "Le test : on tire sur chaque mètre",
+      "text": "On tire. Pas sur un échantillon. Sur *toute* la longueur. Chaque mètre passe entre des roues qui le tendent.",
+      "vo": "[curious] On tire. Pas sur un échantillon. Sur toute la longueur. Chaque mètre passe entre des roues qui le tendent."
+    },
+    {
+      "id": "test2",
+      "text": "La charge : près d'un kilo. Sur un fil de verre. Aussi fin qu'un cheveu.",
+      "vo": "[conversational, curious] La charge : près d'un kilo. Sur un fil de verre. Aussi fin qu'un cheveu."
+    },
+    {
+      "id": "test3",
+      "text": "Le fil est sain ? Il passe. Il cache une fissure ? Tout l'effort se concentre sur elle. Et il *claque*. Net.",
+      "vo": "[curious] Le fil est sain ? Il passe. Il cache une fissure ? Tout l'effort se concentre sur elle. Et il claque. Net."
+    },
+    {
+      "id": "reponse",
+      "paie": "test",
+      "hold": 0.3,
+      "text": "Et c'est voulu. Mieux vaut que ça casse ici que chez toi. On coupe. On repart. Ce qui reste… a +tenu+.",
+      "vo": "[conversational, curious] Et c'est voulu. Mieux vaut que ça casse ici que chez toi. On coupe. On repart. Ce qui reste... a tenu."
+    },
+    {
+      "id": "mesure",
+      "text": "Dernier contrôle : la lumière elle-même. On envoie une impulsion dans la fibre, et on écoute son *écho*. Un défaut le change. On sait où il se trouve.",
+      "vo": "[warm, conversational] Dernier contrôle : la lumière elle-même. On envoie une impulsion dans la fibre, et on écoute son écho. Un défaut le change. On sait où il se trouve."
+    },
+    {
+      "id": "seul",
+      "hold": 1.2,
+      "text": "La fibre est prête. Mais un fil de verre seul ne survit pas dans un mur. Encore moins… au fond d'un *océan*.",
+      "vo": "[curious] La fibre est prête. Mais un fil de verre seul ne survit pas dans un mur. Encore moins... au fond d'un océan."
+    },
+    {
+      "id": "cable",
+      "chap": "Du fil au câble",
+      "text": "Alors on l'assemble. Chaque fibre reçoit une couleur, pour la reconnaître. On les glisse dans des tubes. On ajoute des renforts, une gaine. Voilà un câble.",
+      "vo": "[conversational, curious] Alors on l'assemble. Chaque fibre reçoit une couleur, pour la reconnaître. On les glisse dans des tubes. On ajoute des renforts, une gaine. Voilà un câble."
+    },
+    {
+      "id": "voisins",
+      "fil": "voisins",
+      "text": "Bientôt le tien. Enfin… pas seulement le *tien*. Tu verras.",
+      "vo": "[curious] Bientôt le tien. Enfin... pas seulement le tien. Tu verras."
+    },
+    {
+      "id": "depart",
+      "hold": 1.2,
+      "text": "Reste à l'emmener jusqu'à toi. Et le voyage commence loin : ce que tu regardes a peut-être traversé un *océan*.",
+      "vo": "[warm, conversational] Reste à l'emmener jusqu'à toi. Et le voyage commence loin : ce que tu regardes a peut-être traversé un océan."
+    },
+    {
+      "id": "mer",
+      "chap": "Au fond de l'océan",
+      "text": "Pour traverser un océan, le câble s'endurcit. Les fibres dans un tube d'acier. Des fils d'acier autour. Du cuivre. Une gaine de plastique épaisse. Au large, le tout n'est pas plus gros qu'un tuyau d'*arrosage*.",
+      "vo": "[conversational, curious] Pour traverser un océan, le câble s'endurcit. Les fibres dans un tube d'acier. Des fils d'acier autour. Du cuivre. Une gaine de plastique épaisse. Au large, le tout n'est pas plus gros qu'un tuyau d'arrosage."
+    },
+    {
+      "id": "navire",
+      "text": "Un navire câblier l'emporte, enroulé dans ses cuves. Il avance lentement, et laisse filer le câble derrière lui, jusqu'au fond.",
+      "vo": "[warm, conversational] Un navire câblier l'emporte, enroulé dans ses cuves. Il avance lentement, et laisse filer le câble derrière lui, jusqu'au fond."
+    },
+    {
+      "id": "charrue",
+      "text": "Au large, il est simplement posé. Mais près des côtes, là où passent les bateaux, le navire tire une charrue. Elle ouvre un sillon dans le fond… et *enterre* le câble. Environ un mètre de profondeur, parfois plus.",
+      "vo": "[curious] Au large, il est simplement posé. Mais près des côtes, là où passent les bateaux, le navire tire une charrue. Elle ouvre un sillon dans le fond... et enterre le câble. Environ un mètre de profondeur, parfois plus."
+    },
+    {
+      "id": "repeteur",
+      "text": "Et souviens-toi : après cent kilomètres, il ne reste que quelques pour cent de la lumière.",
+      "vo": "[curious] Et souviens-toi : après cent kilomètres, il ne reste que quelques pour cent de la lumière."
+    },
+    {
+      "id": "repeteur2",
+      "text": "Alors, tous les cinquante à cent kilomètres, un amplificateur la +relance+. Puis un autre. Puis un autre, jusqu'à l'autre rive. C'est le cuivre qui les alimente.",
+      "vo": "[warm, conversational] Alors, tous les cinquante à cent kilomètres, un amplificateur la relance. Puis un autre. Puis un autre, jusqu'à l'autre rive. C'est le cuivre qui les alimente."
+    },
+    {
+      "id": "ancres",
+      "text": "Sa menace ? Les ancres et les chaluts. Chaque année, plus d'une centaine de *pannes*. Et dès que c'est profond… personne ne plonge les réparer.",
+      "vo": "[serious] Sa menace ? Les ancres et les chaluts. Chaque année, plus d'une centaine de pannes. Et dès que c'est profond... personne ne plonge les réparer."
+    },
+    {
+      "id": "grappin",
+      "text": "Alors on le repêche. Le navire traîne un grappin sur le fond, accroche le câble, et remonte un bout. Puis l'autre. À bord, on raccorde un tronçon neuf. Fibre par fibre.",
+      "vo": "[conversational, curious] Alors on le repêche. Le navire traîne un grappin sur le fond, accroche le câble, et remonte un bout. Puis l'autre. À bord, on raccorde un tronçon neuf. Fibre par fibre."
+    },
+    {
+      "id": "grappin2",
+      "text": "Seul souci : le câble réparé est maintenant trop long. On le repose donc en dessinant une grande *boucle*, à plat sur le fond.",
+      "vo": "[amused] Seul souci : le câble réparé est maintenant trop long. On le repose donc en dessinant une grande boucle, à plat sur le fond."
+    },
+    {
+      "id": "rive",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "L'océan est traversé. Il reste le plus compliqué : les derniers kilomètres jusqu'à toi… là où un seul *geste* peut tout éteindre.",
+      "vo": "[curious] L'océan est traversé. Il reste le plus compliqué : les derniers kilomètres jusqu'à toi... là où un seul geste peut tout éteindre.",
+      "fil": "du"
+    },
+    {
+      "id": "plage",
+      "chap": "De la plage à ta rue",
+      "text": "Le câble sort de l'eau sans que personne le voie : il passe sous la plage, souvent dans un conduit foré exprès. Plus de [99|quatre-vingt-dix-neuf] pour cent des données échangées entre continents arrivent comme ça.",
+      "vo": "[warm, conversational] Le câble sort de l'eau sans que personne le voie : il passe sous la plage, souvent dans un conduit foré exprès. Plus de quatre-vingt-dix-neuf pour cent des données échangées entre continents arrivent comme ça."
+    },
+    {
+      "id": "fourreaux",
+      "text": "Ensuite, sous tes pieds. Et là, bonne surprise : souvent, les tuyaux existent déjà. Ce sont ceux du vieux téléphone en *cuivre*. Il suffit d'y faire entrer la fibre.",
+      "vo": "[curious] Ensuite, sous tes pieds. Et là, bonne surprise : souvent, les tuyaux existent déjà. Ce sont ceux du vieux téléphone en cuivre. Il suffit d'y faire entrer la fibre."
+    },
+    {
+      "id": "souffle",
+      "text": "Et souvent, on ne la tire même pas : on la *souffle*. De l'air comprimé file dans le tuyau, entraîne le câble, et l'emmène sur des centaines de mètres.",
+      "vo": "[conversational, curious] Et souvent, on ne la tire même pas : on la souffle. De l'air comprimé file dans le tuyau, entraîne le câble, et l'emmène sur des centaines de mètres."
+    },
+    {
+      "id": "bouche",
+      "text": "Un tuyau écrasé, ou bouché… et le câble s'*arrête*. Parfois, il faut rouvrir le sol.",
+      "vo": "[serious] Un tuyau écrasé, ou bouché... et le câble s'arrête. Parfois, il faut rouvrir le sol."
+    },
+    {
+      "id": "raccord",
+      "hold": 1.2,
+      "text": "Et aucun câble ne va d'un bout à l'autre d'une seule traite. Tôt ou tard, il faut raccorder deux fils de verre. Bout à bout. Au *micron*.",
+      "vo": "[curious] Et aucun câble ne va d'un bout à l'autre d'une seule traite. Tôt ou tard, il faut raccorder deux fils de verre. Bout à bout. Au micron."
+    },
+    {
+      "id": "soudure",
+      "chap": "La soudure : deux fils de verre fondus ensemble",
+      "text": "Souviens-toi du cœur : neuf microns. Pour que la lumière passe d'une fibre à l'autre, les deux cœurs doivent se faire face. Exactement.",
+      "vo": "[warm, conversational] Souviens-toi du cœur : neuf microns. Pour que la lumière passe d'une fibre à l'autre, les deux cœurs doivent se faire face. Exactement."
+    },
+    {
+      "id": "clivage",
+      "text": "D'abord, la coupe. Pas aux ciseaux : le verre s'écraserait. On tend la fibre, on la raye d'un trait minuscule… et elle casse *net*. Une face lisse, bien droite.",
+      "vo": "[conversational, curious] D'abord, la coupe. Pas aux ciseaux : le verre s'écraserait. On tend la fibre, on la raye d'un trait minuscule... et elle casse net. Une face lisse, bien droite."
+    },
+    {
+      "id": "clivage2",
+      "text": "Une coupe à peine de travers… et la machine la *refuse*. On recommence.",
+      "vo": "[serious] Une coupe à peine de travers... et la machine la refuse. On recommence."
+    },
+    {
+      "id": "soudeuse",
+      "text": "La machine, c'est la soudeuse. Deux caméras regardent les fibres, sous deux angles. Des moteurs les alignent, au micron près.",
+      "vo": "[curious] La machine, c'est la soudeuse. Deux caméras regardent les fibres, sous deux angles. Des moteurs les alignent, au micron près."
+    },
+    {
+      "id": "arc",
+      "text": "Puis un arc électrique jaillit entre deux électrodes. Un éclair bref. Les deux bouts de verre fondent… et n'en font plus *qu'un*.",
+      "vo": "[conversational, curious] Puis un arc électrique jaillit entre deux électrodes. Un éclair bref. Les deux bouts de verre fondent... et n'en font plus qu'un."
+    },
+    {
+      "id": "perte",
+      "text": "Une bonne soudure perd environ un pour cent de la lumière. C'est moins qu'un simple connecteur. Le raccord le plus discret de tout le réseau.",
+      "vo": "[warm, conversational] Une bonne soudure perd environ un pour cent de la lumière. C'est moins qu'un simple connecteur. Le raccord le plus discret de tout le réseau."
+    },
+    {
+      "id": "menace5",
+      "text": "Mais une poussière sur le verre, une bulle dans la soudure… et la lumière *bute*. C'est ici que le micron de l'usine prend tout son sens.",
+      "vo": "[serious] Mais une poussière sur le verre, une bulle dans la soudure... et la lumière bute. C'est ici que le micron de l'usine prend tout son sens."
+    },
+    {
+      "id": "manchon",
+      "text": "On ramène enfin un petit manchon sur la soudure, on le chauffe, il se resserre. Et on passe à la suivante. Fibre après fibre.",
+      "vo": "[conversational, curious] On ramène enfin un petit manchon sur la soudure, on le chauffe, il se resserre. Et on passe à la suivante. Fibre après fibre."
+    },
+    {
+      "id": "pastien",
+      "midroll": true,
+      "hold": 1.2,
+      "text": "Soudure après soudure, la fibre atteint ta rue. Et c'est là qu'on découvre une chose étonnante : ce fil… tu le *partages*.",
+      "vo": "[curious] Soudure après soudure, la fibre atteint ta rue. Et c'est là qu'on découvre une chose étonnante : ce fil... tu le partages."
+    },
+    {
+      "id": "partage",
+      "chap": "Une fibre pour trente-deux foyers",
+      "paie": "voisins",
+      "text": "Depuis le central, une seule fibre part vers ton quartier. Et elle dessert trente-deux foyers. Parfois soixante-quatre.",
+      "vo": "[warm, conversational] Depuis le central, une seule fibre part vers ton quartier. Et elle dessert trente-deux foyers. Parfois soixante-quatre."
+    },
+    {
+      "id": "coupleur",
+      "text": "Le secret tient dans une petite pièce de verre, rangée dans une armoire de ta rue : un coupleur. La lumière y entre par un fil… et ressort par trente-deux. Sans moteur. Sans réglage. Sans *courant*.",
+      "vo": "[conversational, curious] Le secret tient dans une petite pièce de verre, rangée dans une armoire de ta rue : un coupleur. La lumière y entre par un fil... et ressort par trente-deux. Sans moteur. Sans réglage. Sans courant."
+    },
+    {
+      "id": "miette",
+      "text": "Chaque foyer ne reçoit donc qu'une miette : environ trois pour cent de la lumière. Et ça +suffit+.",
+      "vo": "[curious] Chaque foyer ne reçoit donc qu'une miette : environ trois pour cent de la lumière. Et ça suffit."
+    },
+    {
+      "id": "budget",
+      "text": "Mieux : entre le central et ton salon, le réseau a le droit de perdre plus de [99|quatre-vingt-dix-neuf] pour cent de la lumière. Il n'arrive qu'une lueur. Ton boîtier la lit quand même.",
+      "vo": "[amused] Mieux : entre le central et ton salon, le réseau a le droit de perdre plus de quatre-vingt-dix-neuf pour cent de la lumière. Il n'arrive qu'une lueur. Ton boîtier la lit quand même."
+    },
+    {
+      "id": "budget2",
+      "fil": "du",
+      "text": "Sauf si tu fais le *geste* dont je t'ai parlé. On y arrive.",
+      "vo": "[curious] Sauf si tu fais le geste dont je t'ai parlé. On y arrive."
+    },
+    {
+      "id": "tous",
+      "text": "Mais alors, tes voisins reçoivent la même lumière que toi ? Oui. Tout ce qui descend arrive chez tout le monde. Chaque boîtier ne garde que ce qui lui est adressé.",
+      "vo": "[warm, conversational] Mais alors, tes voisins reçoivent la même lumière que toi ? Oui. Tout ce qui descend arrive chez tout le monde. Chaque boîtier ne garde que ce qui lui est adressé."
+    },
+    {
+      "id": "montant",
+      "text": "Et dans l'autre sens ? Ta lumière à toi remonte par la *même* fibre. Elle ne gêne pas celle qui descend : elle n'a pas la même couleur. Deux infrarouges, qui se croisent sans se mélanger.",
+      "vo": "[conversational, curious] Et dans l'autre sens ? Ta lumière à toi remonte par la même fibre. Elle ne gêne pas celle qui descend : elle n'a pas la même couleur. Deux infrarouges, qui se croisent sans se mélanger."
+    },
+    {
+      "id": "role",
+      "text": "Et pour ne pas parler tous en même temps, les boîtiers du quartier émettent à tour de rôle. Si vite que tu ne t'en aperçois jamais.",
+      "vo": "[curious] Et pour ne pas parler tous en même temps, les boîtiers du quartier émettent à tour de rôle. Si vite que tu ne t'en aperçois jamais."
+    },
+    {
+      "id": "metres",
+      "hold": 1.2,
+      "text": "Il ne reste que les derniers mètres. Ceux de ton immeuble. De ton mur. De ta *prise*.",
+      "vo": "[conversational, curious] Il ne reste que les derniers mètres. Ceux de ton immeuble. De ton mur. De ta prise."
+    },
+    {
+      "id": "chez",
+      "chap": "Chez toi : les derniers mètres",
+      "text": "Sur ton palier, ou sur le poteau d'en face, un petit coffret dessert une poignée de logements. De là, un dernier câble, très fin, court jusqu'à ta prise.",
+      "vo": "[warm, conversational] Sur ton palier, ou sur le poteau d'en face, un petit coffret dessert une poignée de logements. De là, un dernier câble, très fin, court jusqu'à ta prise."
+    },
+    {
+      "id": "france",
+      "text": "En France, plus de [28|vingt-huit] millions d'abonnements finissent comme ça.",
+      "vo": "[conversational, curious] En France, plus de vingt-huit millions d'abonnements finissent comme ça."
+    },
+    {
+      "id": "vert",
+      "text": "Regarde le connecteur qui s'y branche. Il est *vert*. Ce n'est pas de la décoration : le vert dit que le bout du verre est poli en biais. Huit degrés.",
+      "vo": "[curious] Regarde le connecteur qui s'y branche. Il est vert. Ce n'est pas de la décoration : le vert dit que le bout du verre est poli en biais. Huit degrés."
+    },
+    {
+      "id": "biais",
+      "text": "Un bout bien droit renverrait un peu de lumière en arrière, comme une vitre. En biais, ce reflet part de côté… et se perd.",
+      "vo": "[warm, conversational] Un bout bien droit renverrait un peu de lumière en arrière, comme une vitre. En biais, ce reflet part de côté... et se perd."
+    },
+    {
+      "id": "boitier",
+      "text": "Puis le boîtier optique, parfois caché dans ta box. C'est lui qui lit les éclairs, et les change en signal électrique. La lumière s'arrête +là+.",
+      "vo": "[conversational, curious] Puis le boîtier optique, parfois caché dans ta box. C'est lui qui lit les éclairs, et les change en signal électrique. La lumière s'arrête là."
+    },
+    {
+      "id": "regard",
+      "text": "Un seul conseil : ne regarde jamais dans le bout d'une fibre. Sa lumière est invisible. Tes yeux ne te préviendront *pas*.",
+      "vo": "[serious] Un seul conseil : ne regarde jamais dans le bout d'une fibre. Sa lumière est invisible. Tes yeux ne te préviendront pas."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Alors non, Internet n'est pas dans les nuages. Il est dans du +verre+. Au fond de la mer. Sous ta rue. Et derrière ta box… là où il te reste une chose à savoir.",
+      "vo": "[warm, conversational] Alors non, Internet n'est pas dans les nuages. Il est dans du verre. Au fond de la mer. Sous ta rue. Et derrière ta box... là où il te reste une chose à savoir."
+    },
+    {
+      "id": "du",
+      "chap": "Le geste qui éteint ta fibre",
+      "paie": "du",
+      "text": "Et le geste qui l'éteint, chez toi ? Souviens-toi des deux mots : à plat. La lumière reste prisonnière tant qu'elle frôle la paroi.",
+      "vo": "[serious] Et le geste qui l'éteint, chez toi ? Souviens-toi des deux mots : à plat. La lumière reste prisonnière tant qu'elle frôle la paroi."
+    },
+    {
+      "id": "du2",
+      "text": "Plie le câble trop serré… et dans le virage, elle arrive trop de face. Elle ne ricoche plus. Elle traverse. Le verre n'a rien. La lumière, elle, est *sortie*.",
+      "vo": "[conversational, curious] Plie le câble trop serré... et dans le virage, elle arrive trop de face. Elle ne ricoche plus. Elle traverse. Le verre n'a rien. La lumière, elle, est sortie."
+    },
+    {
+      "id": "du3",
+      "text": "Une fibre classique se met à fuir quand on l'enroule plus serré qu'autour d'une balle de tennis. Celles des logements sont faites pour supporter des courbes plus serrées. Pas un pli. Pas un pied de meuble posé dessus.",
+      "vo": "[warm, conversational] Une fibre classique se met à fuir quand on l'enroule plus serré qu'autour d'une balle de tennis. Celles des logements sont faites pour supporter des courbes plus serrées. Pas un pli. Pas un pied de meuble posé dessus."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Alors va voir derrière ta box, et dis-moi en +commentaire+ : ton câble, il est en courbe douce… ou plié ?",
+      "vo": "[curious] Alors va voir derrière ta box, et dis-moi en commentaire : [short pause] ton câble, il est en courbe douce... ou plié ?"
+    },
+    {
+      "id": "like",
+      "text": "Et envoie cette vidéo à celui qui a coincé sa box derrière un meuble. Si tu as appris quelque chose, un petit +like+.",
+      "vo": "[warm] Et envoie cette vidéo à celui qui a coincé sa box derrière un meuble. Si tu as appris quelque chose, un petit like."
+    },
+    {
+      "id": "abo",
+      "text": "On se retrouve très vite, dans une autre usine, devant un autre objet que tu utilises tous les jours.",
+      "vo": "[warm] On se retrouve très vite, dans une autre usine, devant un autre objet que tu utilises tous les jours."
+    },
+    {
+      "id": "boucle",
+      "text": "Sans jamais te demander d'où vient… ce que tu regardes…",
+      "vo": "[calm] Sans jamais te demander d'où vient... ce que tu regardes,"
+    }
+  ],
+  "cues": {
+    "titre": "accroche:verre",
+    "miniature": "defi:tirer",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:vient"
+  },
+  "bedVolume": 0.8,
+  "sfx": [
+    {
+      "type": "space",
+      "mix": 0.22,
+      "size": 0.84,
+      "damp": 0.35
+    },
+    {
+      "type": "music",
+      "width": 0.7,
+      "sections": "chapters",
+      "skip": [
+        "ouvre"
+      ],
+      "drop": 0.5,
+      "gain": -21,
+      "phone": 0.25,
+      "curve": [
+        [
+          0,
+          0.9,
+          0.5
+        ],
+        [
+          "ouvre-0.4",
+          0.55,
+          0
+        ],
+        [
+          "etape1-1",
+          1,
+          0.55
+        ],
+        [
+          "test-1",
+          1,
+          0.85
+        ],
+        [
+          "chute",
+          0.7,
+          0
+        ],
+        [
+          "boucle",
+          0.8,
+          0.5
+        ]
+      ]
+    },
+    {
+      "type": "drone",
+      "gain": -27,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "ambience",
+      "preset": "room",
+      "from": 0,
+      "gain": -36
+    },
+    {
+      "type": "chapters",
+      "style": "film",
+      "skip": [
+        "ouvre"
+      ]
+    },
+    {
+      "type": "boom",
+      "at": 0.03,
+      "gain": -13,
+      "size": 1.2
+    },
+    {
+      "type": "suck",
+      "to": "ouvre-0.04",
+      "dur": 0.3,
+      "gain": -18
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "explode-0.02",
+      "depth": -14
+    },
+    {
+      "type": "boom",
+      "at": "ouvre$+0.05",
+      "gain": -15,
+      "size": 0.7
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.22",
+      "gain": -18
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.38",
+      "gain": -19,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "ouvre$+0.54",
+      "gain": -20,
+      "pitch": 1.15
+    },
+    {
+      "type": "impact",
+      "at": "toloop",
+      "gain": -16,
+      "size": 0.7
+    },
+    {
+      "type": "rewind",
+      "at": "rewind",
+      "dur": 1,
+      "gain": -21
+    }
+  ]
+}
