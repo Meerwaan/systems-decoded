@@ -10,15 +10,14 @@
       /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
          kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
 
-      /* le second compteur de l'en-tête (.hud__count est signal par défaut) */
-      #hud-count { color: var(--ink); }
+      /* le second compteur de l'en-tête : la flamme pilote (main.js le passe veille / signal) */
+      #hud-count { color: var(--veille); }
       /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
-      #chip-toi { color: var(--ink); }
-      #chip-coeur { color: var(--veille); }
+      #chip-garde, #chip-purge, #chip-pilote { color: var(--veille); }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="60" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="91.967" data-width="1080" data-height="1920">
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
@@ -28,8 +27,8 @@
       <header id="hud">
         <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 046</span></div>
         <div class="hud__title" id="hud-title">Torchère</div>
-        <div class="hud__clock" id="hud-clock">T−3,0 s</div>
-        <div class="hud__count" id="hud-count"><span id="hud-count-l">Mesure</span><b id="hud-count-v">0</b></div>
+        <div class="hud__clock" id="hud-clock">16:30:15</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Pilote</span><b id="hud-count-v">Allumée</b></div>
         <div class="hud__rule"></div>
         <nav class="hud__acts">
           <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
@@ -38,21 +37,26 @@
       </header>
 
       <!-- 01 · MENACE (acte1.js) -->
-      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <div id="chip-arret" class="chip chip--live"><span>Compresseur</span><b>À l'arrêt</b></div>
 
-      <!-- 02 · AUTOPSIE (acte2.js) -->
-      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>En veille</b></div>
+      <!-- 02 · AUTOPSIE (acte2.js) : les pièces se nomment avec co.add (Soupapes, Collecteur, Ballon, Cheminée), sans chiffre -->
+      <div id="chip-garde" class="chip chip--live"><span>Le cœur</span><b>Garde hydraulique</b></div>
+      <div id="chip-purge" class="chip chip--live"><span>Purge</span><b>Jour et nuit</b></div>
 
 
-      <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
+      <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute ; l'heure de l'en-tête suffit (17:00:00) -->
+
+      <!-- ce que le film doit (fin.js) : la réponse au C, puis le fantôme du Mexique (année non tranchée : jamais dite) -->
+      <div id="chip-pilote" class="chip chip--live"><span>Sa plus petite flamme</span><b>La flamme pilote</b></div>
+      <div id="chip-mexique" class="chip chip--live"><span>Poza Rica · Mexique</span><b>Torche éteinte</b></div>
 
       <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
       <div id="retitle">
-        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
+        <div class="kicker" id="retitle-k">Elle fait peur quand elle est…</div>
         <div id="retitle-main">
           <span id="retitle-slot">
-            <span id="retitle-a">L'idée reçue<i id="retitle-strike"></i></span>
-            <span id="retitle-b" class="is-veille">La vérité</span>
+            <span id="retitle-a">Géante<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-signal">Éteinte</span>
           </span>
         </div>
       </div>
@@ -63,15 +67,15 @@
       <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
 
       <section id="net" class="panel">
-        <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 personne</span></div>
+        <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 fenêtre</span></div>
         <div id="net-grid"><i id="net-wave"></i></div>
       </section>
 
       <section id="next">
-        <div class="panel__h"><span>Prochain dossier · 000</span><span>Classé</span></div>
+        <div class="panel__h"><span>Prochain dossier · 047</span><span>Classé</span></div>
         <div id="next-title"><span id="next-redact"></span></div>
-        <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
-        <div id="next-fact"><span>Un fait, un seul.</span></div>
+        <!-- un seul fait, celui que dit la voix (047) ; aucun chiffre -->
+        <div id="next-fact"><span>Il lave avec moins d'eau que toi.</span></div>
         <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
       </section>
 
@@ -86,14 +90,9 @@
       <!-- la question du commentaire posée en DEUX réponses (duelCall, fin.js) : chacune s'allume quand la voix la dit, le film ne
            répond jamais à la place du spectateur — prendre parti fait commenter. Une question fermée à deux issues seulement. -->
       <div id="duel">
-        <div class="kicker">La tienne ?</div>
-        <div id="duel-row"><span id="duel-a" class="duel__opt">Réponse A</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Réponse B</span></div>
+        <div class="kicker">Une torchère qui fume ?</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">Bon signe</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Mauvais</span></div>
         <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
-      </div>
-      <div id="cta-field">
-        <div class="kicker">La question de l'accroche ?</div>
-        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de lettres) -->
-        <div id="cta-field-v"><span id="cta-typed" class="is-veille">RÉPONSE</span><span id="cta-caret"></span></div>
       </div>
 
       <div id="callouts" class="layer"></div>
@@ -102,6 +101,8 @@
       <div id="flash" class="layer"></div>
 
       <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
       <!-- AUDIO:END -->
     </div>
 

@@ -23,15 +23,15 @@
       "de raffinerie"
     ],
     "cam": {
-      "tx": 0,
-      "ty": 8,
+      "tx": -1000,
+      "ty": 950,
       "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
+      "d": 8000,
+      "az": -24,
+      "el": 30,
       "shift": -430,
       "side": 0,
-      "fov": 28,
+      "fov": 32,
       "roll": 0
     }
   },
@@ -83,7 +83,8 @@
     "Chute : le danger, c'est une torche éteinte — si la flamme pilote s'éteint, la torche devient un évent à l'air libre et le gaz sort sans brûler — IChemE Hazards 25 [S]",
     "Poza Rica (Mexique) : torche éteinte plus de vingt minutes, 22 morts, 320 hospitalisés (gaz toxique) — IChemE Hazards 25 [S] ; année non dite (le dossier écrit 1951)",
     "Épinglé : Milford Haven (Texaco), 1994 — le ballon de torche déborde, un bouchon de liquide rompt un coude du collecteur, explosion puis incendies — IChemE Hazards 25 [S]",
-    "Annonce 047 : canot de sauvetage à chute libre, lâché dans le vide avec l'équipage sanglé dedans — IACS SSE 11/4/2, Steamship Mutual 2006 [S] (formulation prudente : ni hauteur ni obligation dites)"
+    "Annonce 047 : un lave-vaisselle utilise moins d'eau qu'une vaisselle à la main en moyenne — étude Eurofins pour l'ADEME (2009) : ≈ 12 L par cycle contre ≈ 42 L à la main, reprise par Selectra, Test-Achats [S] (vrai en moyenne ; à deux bacs, la main peut descendre vers 10 L : l'agent faits du 047 tranche)",
+    "Image : maquette à l'échelle du sujet (une vraie torche fait plusieurs dizaines de mètres, parfois plus de cent ; aucune grandeur n'est affichée). Le tracé du réseau (trois soupapes, collecteur, ballon, garde hydraulique, cheminée), le compresseur, les colonnes et leurs couleurs sont reconstitués ; l'heure de l'en-tête (16 h 30 → 17 h 00) est celle de la fiche ARIA n° 50272, l'incident n'est pas nommé ; les fantômes (colonne qui éclate, nuage, pluie de feu) montrent ce que la torche empêche, pas un fait."
   ],
   "beats": [
     {
@@ -187,54 +188,361 @@
     {
       "id": "abo",
       "hold": 0.2,
-      "text": "+Abonne-toi+ : prochain dossier, le canot qu'on lâche dans le *vide*, avec tout l'équipage sanglé dedans.",
-      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, le canot qu'on lâche dans le vide, avec tout l'équipage sanglé dedans.",
-      "voir": "Panneau du prochain dossier : un canot fermé aux rayons X sur sa rampe à la poupe d'un cargo, l'équipage sanglé dedans en traits fins ; « S'abonner pour l'ouvrir » et ses chevrons."
+      "text": "+Abonne-toi+ : prochain dossier, ton lave-vaisselle, qui lave avec *moins* d'eau que toi.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, ton lave-vaisselle, qui lave avec moins d'eau que toi.",
+      "voir": "Panneau du prochain dossier : un lave-vaisselle aux rayons X, son bras d'aspersion qui tourne, poussé par ses propres jets ; « S'abonner pour l'ouvrir » et ses chevrons."
     },
     {
       "id": "boucle",
-      "text": "Et pendant qu'il tombe…",
-      "vo": "[calm] Et pendant qu'il tombe,",
-      "voir": "Le canot glisse de la rampe et plonge ; raccord sur la contre-plongée au pied de la torche, la flamme qui enfle : dernière image = première image."
+      "text": "Et pendant qu'il tourne…",
+      "vo": "[calm] Et pendant qu'il tourne,",
+      "voir": "Le bras du lave-vaisselle tourne ; raccord par la rotation sur la contre-plongée au pied de la torche, la flamme qui enfle : dernière image = première image."
     }
   ],
   "cues": {
     "choc": "accroche:géante",
+    "toscene": "scene-0.12",
+    "fault": "scene:coupe",
+    "comp": "scene:compresseur",
+    "libre": "scene:libre",
+    "torch": "scene:torche",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "soupapes": "eclate:soupapes",
+    "collect": "eclate:collecteur",
+    "ballon": "eclate:ballon",
+    "feu": "eclate:feu",
+    "coeur": "eclate:garde",
+    "toprincipe": "principe-0.12",
+    "sansair": "principe:Sans",
+    "filet": "principe:filet",
+    "dehors": "principe:dehors",
+    "torepos": "repos-0.12",
+    "dort": "repos:dort",
+    "minuscule": "repos:minuscule",
+    "stop": "repos:compresseur",
     "tozero": "zero-0.12",
+    "open": "zero:vannes",
+    "rue": "zero:rue",
+    "traverse": "zero:traverse",
+    "bulle": "zero:bulle",
+    "monte": "zero:monte",
     "trigger": "reponse:allume-0.05",
+    "enfle": "reponse:enfle",
+    "roar": "reponse:gronde",
+    "falls": "reponse:retombe",
+    "later": "reponse:demi",
+    "restart": "reponse:repart",
+    "intact": "reponse:explosé",
     "toverdict": "chute-0.12",
     "verdict": "chute:pas",
+    "out": "chute:s'éteint",
     "tocta": "comment-0.12",
+    "pilote": "comment:pilote",
+    "sansbruler": "comment:brûler",
+    "mexique": "comment:Mexique",
+    "morts": "comment:morts",
+    "commentaire": "comment:commentaire",
+    "bon": "comment:bon",
+    "mauvais": "comment:mauvais",
+    "tolike": "like-0.12",
+    "fenetre": "like:fenêtre",
+    "toabo": "abo-0.12",
+    "next": "abo:prochain",
+    "washer": "abo:lave-vaisselle",
+    "moins": "abo:moins",
     "toloop": "boucle-0.12",
-    "rewind": "boucle:tombe"
+    "rewind": "boucle:tourne"
   },
   "bedVolume": 0.8,
+  "sons": [
+    {
+      "id": "046-usine",
+      "image": "la raffinerie tourne",
+      "reprend": "amb-usine"
+    },
+    {
+      "id": "046-defaut-electrique",
+      "image": "un défaut électrique",
+      "reprend": "etincelle"
+    },
+    {
+      "id": "046-compresseur-arret",
+      "image": "le compresseur s'arrête",
+      "duree": 3,
+      "prompt": "Large industrial compressor winding down and stopping after a power cut, motor whine falling, realistic"
+    },
+    {
+      "id": "046-soupapes",
+      "image": "les vannes et soupapes s'ouvrent",
+      "reprend": "vapeur"
+    },
+    {
+      "id": "046-gaz-collecteur",
+      "image": "le gaz se rue dans le collecteur, traverse le ballon",
+      "duree": 3,
+      "prompt": "Pressurized gas rushing through a large steel pipe, rising whoosh and metallic pipe resonance, industrial, realistic"
+    },
+    {
+      "id": "046-bulles-garde",
+      "image": "le gaz bulle dans la garde hydraulique",
+      "duree": 3,
+      "prompt": "Gas bubbling up through water in a large steel tank, deep heavy gurgling bubbles, industrial, realistic"
+    },
+    {
+      "id": "046-flamme-pilote",
+      "image": "la petite flamme veille au sommet de la torche",
+      "duree": 6,
+      "boucle": true,
+      "prompt": "Small pilot flame burning steadily with a soft gas hiss, close, calm, isolated"
+    },
+    {
+      "id": "046-torche-gronde",
+      "image": "la torche enfle et gronde",
+      "duree": 5,
+      "prompt": "Huge industrial gas flare roaring: powerful jet of burning gas, deep turbulent rumble and flame rush, outdoors, realistic"
+    }
+  ],
   "sfx": [
     {
-      "type": "drone",
+      "type": "space",
+      "mix": 0.16
+    },
+    {
+      "type": "sample",
+      "file": "amb-usine.wav",
+      "loop": true,
+      "from": "toscene",
+      "to": "tobench",
       "gain": -24,
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "amb-usine.wav",
+      "loop": true,
+      "from": "tozero",
+      "to": "toabo",
+      "gain": -25,
+      "fade": 0.4,
       "curve": [
-        [0, 0.8],
-        ["explode", 0.5],
-        ["tozero", 0.9],
-        ["trigger", 1],
-        ["toverdict", 0.45],
-        ["tocta", 0.4],
-        ["rewind", 0.8]
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.6
+        ],
+        [
+          "tocta",
+          0.5
+        ]
       ]
     },
-    { "type": "hit", "at": 0.02, "gain": -13, "pitch": 0.9 },
-    { "type": "impact", "at": 0.03, "gain": -14, "size": 1.2 },
-    { "type": "swish", "at": 0.14, "dur": 0.3, "gain": -15 },
-    { "type": "suck", "to": "ouvre-0.04", "dur": 0.6, "gain": -17 },
-    { "type": "hush", "from": "ouvre", "to": "explode-0.02", "depth": -14 },
-    { "type": "impact", "at": "explode", "gain": -16, "size": 0.8 },
-    { "type": "impact", "at": "tozero", "gain": -12, "size": 1.2 },
-    { "type": "impact", "at": "trigger", "gain": -10, "size": 1.4 },
-    { "type": "blip", "at": "verdict", "gain": -15, "pitch": 0.7, "heavy": true },
-    { "type": "impact", "at": "toloop", "gain": -16, "size": 0.7 },
-    { "type": "rewind", "at": "rewind", "dur": 1, "gain": -21 }
+    {
+      "type": "sample",
+      "file": "amb-tension.wav",
+      "loop": true,
+      "from": 0,
+      "gain": -17,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "toscene",
+          0.9
+        ],
+        [
+          "explode",
+          0.3
+        ],
+        [
+          "torepos",
+          0.45
+        ],
+        [
+          "stop",
+          0.8
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.45
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "sample",
+      "file": "046-flamme-pilote.wav",
+      "loop": true,
+      "from": "explode",
+      "to": "tozero",
+      "gain": -30,
+      "fade": 0.6
+    },
+    {
+      "type": "sample",
+      "file": "sig-dossier.wav",
+      "at": 0.02,
+      "gain": -8,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "046-torche-gronde.wav",
+      "at": 0.02,
+      "gain": -17,
+      "fade": 1.2
+    },
+    {
+      "type": "sample",
+      "file": "impact-lourd.wav",
+      "at": "promesse:d'exploser+0.55",
+      "gain": -15
+    },
+    {
+      "type": "sample",
+      "file": "etincelle.wav",
+      "at": "toscene-0.3",
+      "gain": -14,
+      "dur": 0.4
+    },
+    {
+      "type": "sample",
+      "file": "046-compresseur-arret.wav",
+      "at": "comp+0.42",
+      "gain": -13,
+      "dur": 0.9,
+      "fade": 0.4
+    },
+    {
+      "type": "sample",
+      "file": "whoosh-lent.wav",
+      "at": "libre+0.4",
+      "gain": -18,
+      "dur": 0.5
+    },
+    {
+      "type": "sample",
+      "file": "aspiration.wav",
+      "at": "ouvre-0.7",
+      "to": "ouvre-0.04",
+      "offset": 0.6,
+      "gain": -14
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "ouvre$+0.02",
+      "depth": -90
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.16",
+      "dur": 0.3,
+      "gain": -9,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.38",
+      "offset": 1.75,
+      "gain": 2,
+      "bus": "main",
+      "dur": 0.55,
+      "fade": 0.2
+    },
+    {
+      "type": "sample",
+      "file": "clic-mecanisme.wav",
+      "at": "eclate:tuyau+0.4",
+      "gain": -14
+    },
+    {
+      "type": "sample",
+      "file": "046-bulles-garde.wav",
+      "at": "eclate:hydraulique+0.55",
+      "gain": -15,
+      "dur": 0.5,
+      "fade": 0.2
+    },
+    {
+      "type": "sample",
+      "file": "046-compresseur-arret.wav",
+      "at": "stop+0.48",
+      "gain": -12,
+      "dur": 0.45,
+      "fade": 0.2
+    },
+    {
+      "type": "sample",
+      "file": "vapeur.wav",
+      "at": "zero:s'ouvrent+0.3",
+      "gain": -13,
+      "dur": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "046-bulles-garde.wav",
+      "at": "zero:garde+0.22",
+      "gain": -12,
+      "dur": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "whoosh-rapide.wav",
+      "at": "monte+0.35",
+      "gain": -14
+    },
+    {
+      "type": "sample",
+      "file": "046-torche-gronde.wav",
+      "at": "trigger+0.4",
+      "gain": -9,
+      "fade": 1.5
+    },
+    {
+      "type": "hush",
+      "from": "intact+0.5",
+      "to": "toverdict",
+      "depth": -14
+    },
+    {
+      "type": "sample",
+      "file": "impact-sec.wav",
+      "at": "out+0.5",
+      "gain": -12
+    },
+    {
+      "type": "sample",
+      "file": "sig-boucle.wav",
+      "at": "rewind",
+      "gain": -10,
+      "offset": 0.6
+    }
   ]
 }
