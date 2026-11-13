@@ -1,0 +1,17 @@
+# CR03 Concorde — état du chef de production
+
+Consigne (13/11, ~16:35 UTC) : de l'architecte au rendu. Compte à rebours (DA noir chaud). Voix faite (148 s, turbo) : n'y pas toucher. Décor modélisé : Concorde fidèle (delta, 4 Olympus en paires, train gauche, réservoir 5 = pièce en défaut, panneau d'intrados arraché de l'intérieur), piste 26R + lamelle de titane, Le Bourget au loin, hôtel de Gonesse. Jamais l'A330/A350 recolorés. Pas de décorateur.
+Arrêts : `monteur-son` seulement si kit/sons/CR03-*.wav existent (sinon « EN ATTENTE : sons du sujet ») ; pas de render final avant confirmation de la voix par la conversation principale (brouillon + qa permis). Planches : .cache/planches/CR03/.
+
+## Journal
+- 13/11 ~16:36 UTC : jauge 1 % / hebdo 10 % (remise 21:30 UTC). Lancement architecte.
+- ~17:06 UTC : architecte rendu (ae798d0e6b838b5e6, 385 k, 65 outils, 30 min) ; check OK. Décors concorde.js / piste.js / reservoir.js ; actes acte1, acte2, acte2b, acte2c (vague 1), acte3, fin (vague 2). Candidates image 0 : .cache/planches/CR03/premiere-image/essais.json (reco (b)). Ouvert pour Merwan : la dernière phrase ne retombe pas sur les premiers mots de l'accroche (seule l'image boucle).
+- ~17:07 UTC : jauge 10 % / 12 %. Vague décors × 3 lancée.
+- ~17:35 UTC : décors rendus — concorde (af8d440624b31f0c1, 324 k, 42 outils), piste (ad13ed8c3a8146ee9, 337 k, 50 outils, 44 images), reservoir (a3a48ab218a168ad8, 299 k, 36 outils). « À changer ailleurs » appliqués (plan.js IMPACT/PANEL/DEBRIS/STRIP ; world.js VIEW ×12, kero) ; check OK.
+- Image 0 : « c d900 » = POSE0 { ...VIEW.arriere, d: 900 } (planche .cache/planches/CR03/image0b.jpg). docs/CR03-actes-maj.md écrit (sans plan-séquence : pilote 038 seul).
+- Faiblesses connues à surveiller en relecture : coupe des deux moteurs (cutaway) peu lisible ; goutte 1979 ; baie du réservoir petite en large ; Le Bourget allumé de près.
+- ~17:55 UTC : actes vague 1 rendus — acte1 (a3c7e26258e9ef6a6, 260 k), acte2 (a2aff606b738e4816, 264 k), acte2b (a5f2f7c6182a7e6d5, 271 k), acte2c (a64b5dc7d7e8afa09, 270 k) ; check OK ; rien à changer ailleurs. À relire : acte1 piste 13,6–21,2 s (avion ≈ 15 px !), jet 8–10,7 s ; acte2 40–44 s (non vus), 27–30 s filet fin ; acte2b C 62–71 s (non vu), 50,6–51,8 ; acte2c 72–75 chargé, 79–84 carte, suie 92–96 illisible.
+- ~18:12 UTC : acte3 (ab7104c70a60dc3f2, 249 k, 48 images) et fin (aa50632cf92100ea4, 253 k) rendus ; #chip-inspect ajouté à index.html. À relire : 99–100, 116,9, 117,6–119,8 (acte3) ; 121,9–123,1, 125,9–129,2 (fin). Relecture en cours.
+- ~18:25 UTC : monteur-son rendu (a07fa49e2485fab5f, 201 k) : 18 ponctuels, lit refait, extrait audio/essais/CR03-son-ecoute.mp3 ; demande un son de réserve CR03-reacteurs (crédits → Merwan) ; propose d'étendre ecriture.mjs § 11 aux CR (hors périmètre).
+- Relecture (.cache/planches/CR03/relecture/p1-4.jpg). Défauts : acte1 13,6–21,2 avion invisible vu d'en haut (et 2,5 petit) ; acte2 28 s intrados/jauge encombré ; acte2b 48,4 « ILÉCLATE » (espace manquant), 62–71 nappe rose du feu sous l'en-tête ; acte2c 81 bâton noir, 93–96 suie illisible ; acte3 99,6–105 coupe du réservoir illisible en large (dalle ambre) ; fin 127 inspection noyée d'ambre. Brouillon lancé.
+- ~18:45 UTC : brouillon + qa : voix calée 0 ms, −14,06 LUFS ; ✗ 14 parasites 37,6–39,0 s (acte2) ; heurtés 35,1 / 90,7 / 49,9 / 39,7 / 37,8 / 131,1 ; plages lentes 2–4,5, 12–21, 21,5–24 s. Jauge 39 % / 16 %. Retoucheurs vague A : acte1, acte2, acte2b, acte2c ; puis acte3, fin.
