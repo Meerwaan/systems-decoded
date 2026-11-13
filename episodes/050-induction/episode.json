@@ -1,0 +1,362 @@
+{
+  "id": "050",
+  "serie": "dossier",
+  "slug": "induction",
+  "title": "La plaque à induction",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "language": "fr"
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Plaque",
+      "à induction"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Plaque à induction",
+    "caption": "Plaque à induction, la table de cuisson à induction : ta main touche le foyer allumé, et tu ne sens rien. À côté, l'eau bout à gros bouillons. Ce n'est pas ta plaque qui chauffe… alors pourquoi son verre peut te brûler ? Sur ta plaque, tu lis un H… ou rien ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#induction",
+      "#cuisine",
+      "#physique"
+    ],
+    "pinned": "Ce bourdonnement à feu vif ? Le plus souvent, il vient du fond de ta casserole, qui vibre. Toi : tu lis un H… ou rien ?",
+    "instagram": {
+      "caption": "Ta main touche la plaque allumée. Et tu ne sens rien.\n\nDossier 050 : la plaque à induction ouverte. L'électronique, l'inducteur — une bobine de cuivre sous le verre —, un champ magnétique qui bat vingt-cinq mille fois par seconde… et des courants qui tournent dans le fond de ta casserole. Et pourquoi son verre peut quand même te brûler.\n\nSur ta plaque, tu lis un H… ou rien ?",
+      "hashtags": [
+        "#induction",
+        "#cuisine",
+        "#physique",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ta main touche la plaque allumée… et tu ne sens rien : la plaque à induction",
+      "description": "Dossier 050 — la plaque à induction ouverte : l'électronique qui transforme le courant du secteur, l'inducteur (une bobine de cuivre plate sous la vitrocéramique), et un champ magnétique qui bat environ 25 000 fois par seconde. Il traverse le verre et fait tourner des courants de Foucault dans le fond de la casserole, qui chauffe comme un fil de grille-pain. Pourquoi un foyer allumé sans casserole n'envoie rien, et pourquoi le verre peut quand même te brûler : c'est la casserole qui le réchauffe, et le voyant H le signale au-dessus d'environ 60 °C. Une scène reconstituée.\n\nÉlectriciens, cuisiniers : qu'est-ce qu'on a simplifié ? Et toi : sur ta plaque, tu lis un H… ou rien ?",
+      "hashtags": [
+        "#shorts",
+        "#induction",
+        "#cuisine",
+        "#physique",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "La plaque ne chauffe pas : elle chauffe le récipient ; le verre n'est chauffé que par la casserole, la chaleur ne s'étale pas — Wikipedia EN « Induction cooking », Wikipedia FR « Plaque à induction » [S]",
+    "Sans récipient adapté, la table ne s'active pas et le niveau de puissance clignote ; l'apport de chaleur s'arrête dès qu'on retire le récipient — Siemens-Home BSH Belgique, aide en ligne, tables de cuisson [P] ; Wikipedia EN [S]",
+    "L'électronique (onduleur) transforme le courant du secteur en courant à haute fréquence envoyé dans l'inducteur, une bobine plate de cuivre sous le verre — Wikipedia FR et EN [S]",
+    "Fréquence typique ≈ 25 kHz (25 à 50 kHz) : le champ bat vingt-cinq mille fois par seconde — Wikipedia FR « typiquement aux alentours de 25 kHz », Wikipedia EN [S]",
+    "Le champ traverse le verre ; il fait naître dans le fond métallique des courants (surtout de Foucault) qui le chauffent par effet Joule, comme une résistance de grille-pain — Wikipedia EN « Induction cooking » [S] ; image du dossier de faits",
+    "Capteur de température du verre et voyant H au-dessus d'environ 60 °C (h entre 45 et 60 °C) — manuel CDA HN6860FR, ManualsLib [S]",
+    "La scène est un scénario typique, pas un fait divers : la main est posée sur un foyer allumé SANS casserole ; les bulles qui retombent, l'anneau de verre orange sont reconstitués ; le H vient d'une mesure ou d'une estimation selon les modèles (manuel CDA : temps de refroidissement estimé) par l'image",
+    "Épinglé : le bourdonnement vient de la casserole, dont le fond multicouche vibre, surtout à forte puissance — Wikipedia EN [S] ; Siemens-Home BSH Belgique [P]",
+    "Annonce du 051 : un brise-glace ne pousse pas la glace, il la plie sous son poids — dossier 051, fait validé (docs/faits/051-brise-glace.md)"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ta main touche la plaque *allumée*. Et tu ne sens +rien+.",
+      "vo": "[tense] Ta main touche la plaque allumée. Et tu ne sens rien.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ta main touche la plaque allumée. Et tu ne sens rien."
+      ],
+      "voir": "Plan bas au ras de la vitrocéramique noire : une main à plat sur le foyer de droite, son afficheur qui clignote ; derrière la main, une casserole inox bout à gros bouillons sur le foyer voisin, vapeur qui monte ; dès l'image 1 l'eau bouillonne et les doigts s'écrasent sur le verre. Sur « rien », rayons X sous la main : la bobine de ce foyer reste sombre."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Ce n'est pas ta +plaque+ qui chauffe. Alors pourquoi son verre peut te *brûler* ?",
+      "vo": "[firm, matter-of-fact] Ce n'est pas ta plaque qui chauffe. [short pause] Alors pourquoi son verre peut te brûler ?",
+      "voir": "Travelling latéral au ras du verre, de la main vers la casserole : sous la main aucune lueur ; autour du fond de la casserole, l'anneau de verre vire à l'orange signal sur « brûler »."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "À côté, ton eau bout à gros bouillons. Même verre, même plaque. Tu vas soulever la casserole… et poser ta main où était son fond. Avant, regarde *dessous*.",
+      "vo": "[tense] À côté, ton eau bout à gros bouillons. Même verre, même plaque. Tu vas soulever la casserole... et poser ta main où était son fond. Avant, regarde dessous.",
+      "voir": "Même seconde, même cuisine : gros plan sur l'eau qui bout ; recul sur les deux foyers d'un même verre ; la main lâche le verre et attrape la poignée, l'anneau orange sous le fond se devine ; sur « dessous », la caméra plonge sous le verre, la plaque entière de trois quarts."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "La plaque de trois quarts, casserole posée dessus ; sur « on », l'éclaté s'ouvre en étages : verre, inducteur, carte électronique, ventilateur, boîtier, et la casserole qui monte au-dessus."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "L'électronique prend le courant du secteur. Elle le lance dans l'inducteur : une bobine de cuivre, sous le verre. Et au bout… le cœur : le fond de ta +casserole+.",
+      "vo": "[conversational, curious] L'électronique prend le courant du secteur. Elle le lance dans l'inducteur : une bobine de cuivre, sous le verre. Et au bout... le cœur : le fond de ta casserole.",
+      "voAlt": [
+        "[curious] L'électronique prend le courant du secteur. Elle le lance dans l'inducteur : une bobine de cuivre, sous le verre. Et au bout... le cœur : le fond de ta casserole."
+      ],
+      "voir": "On suit le courant, trait veille : du cordon à la carte électronique (nommée), puis dans la spirale de cuivre de l'inducteur (nommée), à travers le verre transparent, jusqu'au fond de la casserole, isolé et éclairé sur « casserole »."
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi ça chauffe ? La bobine fait battre un champ magnétique, environ [25 000|vingt-cinq mille] fois par seconde. Il traverse le verre… et fait tourner des courants dans le métal, qui chauffe comme un +grille-pain+.",
+      "vo": "[curious] Pourquoi ça chauffe ? [short pause] La bobine fait battre un champ magnétique, environ vingt-cinq mille fois par seconde. Il traverse le verre... et fait tourner des courants dans le métal, qui chauffe comme un grille-pain.",
+      "voir": "Coupe en gros plan, bobine / verre / fond de casserole : les lignes de champ de la bobine s'inversent (pulsation stroboscopique), traversent le verre sans s'y allumer ; dans l'inox naissent des boucles de courant qui tournent de plus en plus vite, et le métal rougeoie comme un fil de résistance."
+    },
+    {
+      "id": "repos",
+      "text": "Sans casserole, son voyant clignote… et elle ne chauffe rien. Ta main n'a rien senti. Mais ta casserole, elle, est posée à même le verre. Et son fond est *brûlant*.",
+      "vo": "[warm, conversational] Sans casserole, son voyant clignote... et elle ne chauffe rien. Ta main n'a rien senti. Mais ta casserole, elle, est posée à même le verre. Et son fond est brûlant.",
+      "voAlt": [
+        "[curious] Sans casserole, son voyant clignote... et elle ne chauffe rien. Ta main n'a rien senti. Mais ta casserole, elle, est posée à même le verre. Et son fond est brûlant."
+      ],
+      "voir": "Retour au foyer vide sous la main : l'afficheur clignote, la bobine sombre, aucune boucle de courant ; la main posée dessus, immobile. Travelling vers la casserole aux rayons X : le fond inox à plat sur le verre, l'orange qui passe du fond au verre sur « brûle »."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Tu soulèves ta casserole. Le champ s'*éteint*. Net. Les bulles retombent. Et ta main descend.",
+      "vo": "[firm, matter-of-fact] Tu soulèves ta casserole. Le champ s'éteint. Net. Les bulles retombent. Et ta main descend.",
+      "voir": "La casserole décolle du verre ; sur « éteint », les lignes de champ s'effondrent d'un coup, les boucles de courant se figent et disparaissent ; les bulles retombent dans l'eau ; la main redescend vers l'anneau de verre libéré, encore orange."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Mais le verre, lui, a gardé la chaleur du fond. La plaque le +sait+. Sur l'afficheur, un H *apparaît*. Ta main s'arrête. Juste au-dessus.",
+      "vo": "[tense] Mais le verre, lui, a gardé la chaleur du fond. La plaque le sait. Sur l'afficheur, un H apparaît. Ta main s'arrête. Juste au-dessus.",
+      "voir": "Plan bas : l'anneau de verre où était le fond rougeoie et diffuse ; sous le verre, le capteur de température s'allume en veille ; sur « apparaît », un grand H s'allume sur l'afficheur du foyer ; la main se fige à un doigt au-dessus du verre, puis se retire."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : la chaleur ne vient *pas* d'en dessous. Elle naît dans le fond de ta +casserole+.",
+      "vo": "[firm, matter-of-fact] Voilà son secret : la chaleur ne vient pas d'en dessous. Elle naît dans le fond de ta casserole.",
+      "voir": "Coupe de la casserole reposée sur son foyer : la bobine en dessous reste sombre, la chaleur orange naît dans l'épaisseur du fond, monte dans l'eau et ne descend dans le verre qu'au contact ; le nom du compte s'allume."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et pourquoi ce verre peut te brûler ? Parce que c'est ta casserole qui le réchauffe. En +commentaire+ : sur ta plaque, tu lis un H… ou *rien* ?",
+      "vo": "[conversational, curious] Et pourquoi ce verre peut te brûler ? [short pause] Parce que c'est ta casserole qui le réchauffe. [short pause] En commentaire : sur ta plaque, tu lis un H... ou rien ?",
+      "voAlt": [
+        "[curious] Et pourquoi ce verre peut te brûler ? [short pause] Parce que c'est ta casserole qui le réchauffe. [short pause] En commentaire : sur ta plaque, tu lis un H... ou rien ?"
+      ],
+      "voir": "La casserole revient sur l'anneau : l'orange du fond redescend dans le verre ; puis plan serré sur l'afficheur où le H reste allumé ; sur la question, deux cartes face à face : « H » et « rien »."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour celui dont les enfants jouent près de la *plaque*.",
+      "vo": "[warm, conversational] Like : [short pause] pour celui dont les enfants jouent près de la plaque.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour celui dont les enfants jouent près de la plaque."
+      ],
+      "voir": "La plaque vue d'en haut, casserole retirée : le H brille sur le foyer, une petite main d'enfant entre dans le cadre par le bord du plan de travail ; chevrons vers la colonne de boutons."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, le brise-glace. Il ne tape pas sur la glace : il la *plie* sous son poids.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, le brise-glace. Il ne tape pas sur la glace : il la plie sous son poids.",
+      "voir": "Panneau « S'abonner pour l'ouvrir » : l'étrave d'un brise-glace aux rayons X s'appuie sur la banquise, qui fléchit sous son poids et se fend en étoile."
+    },
+    {
+      "id": "boucle",
+      "text": "Pendant ce temps, chez toi…",
+      "vo": "[calm] Pendant ce temps, chez toi,",
+      "voir": "Retour lent au plan d'ouverture : la caméra redescend au ras du verre, la main se repose à plat sur le foyer qui clignote, la casserole bout derrière ; dernière image = première image."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:allumée",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:apparaît-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:chez"
+  },
+  "bedVolume": 0.8,
+  "sons": [
+    {
+      "id": "050-ebullition",
+      "image": "l'eau bout à gros bouillons dans la casserole inox, puis les bulles retombent quand on la soulève",
+      "duree": 4,
+      "prompt": "Water boiling vigorously in a stainless steel saucepan on a stove, big rolling bubbles, close-up, indoor kitchen, isolated, no music"
+    },
+    {
+      "id": "050-main-verre",
+      "image": "une main se pose à plat sur la vitrocéramique",
+      "duree": 1,
+      "prompt": "A bare palm pressing flat onto a smooth glass ceramic cooktop surface, soft skin on glass contact, close-up, quiet kitchen, isolated, no music"
+    },
+    {
+      "id": "050-casserole-souleve",
+      "image": "la casserole décolle du verre, son fond racle à peine",
+      "duree": 2,
+      "prompt": "Stainless steel saucepan lifted off a glass ceramic cooktop, slight scrape of the metal base on glass, small water slosh, close-up, isolated, no music"
+    },
+    {
+      "id": "050-bourdonnement",
+      "image": "la plaque chauffe fort : bourdonnement de la casserole sous le champ",
+      "duree": 4,
+      "prompt": "Faint electrical hum and high-pitched buzz from a pan heating on an induction hob at full power, steady tone, close-up, isolated, no music"
+    },
+    {
+      "id": "050-ventilateur",
+      "image": "le ventilateur refroidit l'électronique sous la plaque",
+      "duree": 3,
+      "prompt": "Small cooling fan whirring inside a kitchen induction cooktop housing, muffled through plastic, steady, close-up, isolated, no music"
+    },
+    {
+      "id": "050-touche-bip",
+      "image": "le foyer allumé clignote sous la main, l'afficheur bipe",
+      "reprend": "bip"
+    }
+  ],
+  "sfx": [
+    {
+      "type": "space",
+      "mix": 0.18
+    },
+    {
+      "type": "sample",
+      "file": "amb-tension.wav",
+      "loop": true,
+      "from": 0,
+      "gain": -16,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "sample",
+      "file": "sig-dossier.wav",
+      "at": 0.02,
+      "gain": -8,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "aspiration.wav",
+      "at": "ouvre-0.7",
+      "to": "ouvre-0.04",
+      "offset": 0.6,
+      "gain": -18
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "ouvre$+0.02",
+      "depth": -90
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.16",
+      "dur": 0.3,
+      "gain": -5,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.38",
+      "offset": 1.75,
+      "gain": -2,
+      "bus": "main",
+      "dur": 0.55,
+      "fade": 0.2
+    },
+    {
+      "type": "sample",
+      "file": "riser.wav",
+      "at": "tozero-2",
+      "to": "tozero",
+      "offset": 1.5,
+      "gain": -22
+    },
+    {
+      "type": "sample",
+      "file": "impact-lourd.wav",
+      "at": "tozero",
+      "gain": -17,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "impact-lourd.wav",
+      "at": "trigger",
+      "gain": -15,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "impact-sec.wav",
+      "at": "verdict",
+      "gain": -15
+    },
+    {
+      "type": "sample",
+      "file": "sig-boucle.wav",
+      "at": "rewind",
+      "gain": -8,
+      "offset": 0.6
+    }
+  ]
+}
