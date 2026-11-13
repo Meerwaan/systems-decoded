@@ -1,0 +1,557 @@
+{
+  "id": "048",
+  "serie": "dossier",
+  "slug": "tunnelier",
+  "title": "Le tunnelier",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "language": "fr"
+  },
+  "cover": {
+    "at": "eclate:vis+0.3",
+    "title": [
+      "Tunnelier",
+      "sous ta rue"
+    ],
+    "cam": {
+      "tx": -100,
+      "ty": 650,
+      "tz": 0,
+      "d": 7600,
+      "az": -52,
+      "el": 30,
+      "shift": -430,
+      "side": 0,
+      "fov": 30,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Tunnelier",
+    "caption": "Tunnelier, la machine qui creuse le métro : sous le Grand Paris, sa roue fait presque dix mètres et passe sous les immeubles. Si la pression lâche derrière elle, la rue au-dessus commence à descendre, et elle ne supporte qu'environ un centimètre. Sous chez toi, il passe un tunnel… oui, ou non ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#tunnelier",
+      "#grandparisexpress",
+      "#metro"
+    ],
+    "pinned": "Un seul lot de la ligne 16 : 9 720 anneaux, 66 799 voussoirs, 19 km de tunnel. Toi : sous chez toi, un tunnel… oui, ou non ?",
+    "instagram": {
+      "caption": "Ta rue s'enfonce. Dessous, une machine vient de lâcher la terre.\n\nDossier 048 : le tunnelier à pression de terre, celui qui creuse le Grand Paris Express. Une roue de presque dix mètres, une chambre pleine de terre, une cloison étanche, une vis… et des vérins qui s'appuient sur des anneaux de sept voussoirs. Ce qui retient la rue au-dessus du tunnel, c'est de la terre, sous pression.\n\nSous chez toi, il passe un tunnel… oui, ou non ?",
+      "hashtags": [
+        "#tunnelier",
+        "#grandparisexpress",
+        "#metro",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ta rue s'enfonce… et ce qui la retient, c'est de la terre : le tunnelier du Grand Paris",
+      "description": "Dossier 048 — le tunnelier à pression de terre ouvert : sa roue de coupe de près de dix mètres, la chambre d'abattage pleine de terre, la cloison étanche et ses capteurs, la vis d'extraction, les vérins de poussée qui s'appuient sur le dernier anneau de sept voussoirs. Pourquoi la rue ne tombe pas dans le trou : la chambre presse la terre aussi fort que le sol et la nappe poussent sur le front — l'eau seule, c'est un bar tous les dix mètres. Trop peu de pression, le sol s'affaisse ; trop, il se soulève. Une reconstitution : la scène (une rue qui s'enfonce de quelques millimètres) est un scénario, aucun affaissement de ce type n'est documenté sur le Grand Paris Express ; la machine et ses pièces sont celles décrites par le ministère (ligne 16), Herrenknecht, Implenia et Eiffage.\n\nIngénieurs, compagnons du tunnel : qu'est-ce qu'on a simplifié ? Et toi : sous chez toi, il passe un tunnel… oui, ou non ?",
+      "hashtags": [
+        "#shorts",
+        "#tunnelier",
+        "#grandparisexpress",
+        "#metro",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Scène (rue, voiture, immeuble, pression qui lâche, deux puis cinq, sept et huit millimètres) : un SCÉNARIO reconstitué ; aucun affaissement de rue n'est documenté sur le Grand Paris Express ; cas réels ailleurs : Toulouse ligne C le 31/05/2025, trou « après le passage » (cause non confirmée), Melbourne North East Link le 05/01/2026 (baisse de pression d'air à l'avant selon l'État) — Le Journal Toulousain ; Tunnels & Tunnelling, mairie de Banyule [S]",
+    "Tunnelier à pression de terre : chambre pleine de terre tenue sous pression derrière la roue, qui équilibre la poussée du sol et de la nappe — énoncé EAE STI2D « Tunnelier du Grand Paris Express », ministère de l'Éducation, ligne 16 lot 1 [P]",
+    "Machines du Grand Paris Express, roue de presque dix mètres (7,725 à 9,83 m ; 9,8 m sur L15 Sud T2C) — Herrenknecht ; Implenia [P]",
+    "Chambre d'abattage derrière la roue, fermée par une cloison étanche (capteurs de pression) — énoncé du ministère [P] ; capteurs : AFTES, fiches pédagogiques [S]",
+    "La vis sort la terre en maintenant la pression ; pression réglée par la poussée contre le débit d'extraction de la vis (« au rythme où elle entre ») — énoncé du ministère [P]",
+    "Vérins de poussée qui s'appuient sur le dernier anneau posé — énoncé du ministère [P]",
+    "Sept voussoirs par anneau — Implenia T2C ; contrôle Eiffage L16 lot 1 (66 799 voussoirs pour 9 720 anneaux) [P]",
+    "La rue ne supporte qu'environ un centimètre : règle « aucun tassement de plus de 10 mm » citée pour Steffie-Orbival (L15 Sud) — travail-industrie.com, blog non officiel [S]",
+    "L'eau seule pousse d'un bar tous les dix mètres de fond ; la chambre presse à peu près pareil, le front ne bouge pas — calcul hydrostatique [O] ; principe : énoncé du ministère [P]",
+    "Réponse (la vis ralentit, les vérins poussent, la pression remonte) : déduite de la régulation poussée contre débit de la vis [P] ; le geste est reconstitué à l'image, la voix ne dit pas qui le commande",
+    "Trop de pression : le sol se soulève — Frontiers (extrait) [S]",
+    "Chute : le tunnelier retient la terre plutôt qu'il ne la repousse — énoncé du ministère [P]",
+    "Épinglé : L16 lot 1, 9 720 anneaux, 66 799 voussoirs, 19 km — Eiffage, 26/01/2023 [P]",
+    "Légende : la machine passe sous les immeubles, travail à 20–50 m de profondeur — travail-industrie.com [S]",
+    "Annonce du 049 : sans réglage, une horloge de satellite GPS avance de trente-huit millionièmes de seconde par jour — fait unique validé pour le dossier 049",
+    "Image : la coupe (la rue, l’immeuble de six étages, les couches de terrain, la nappe) est une reconstitution sans adresse ni sondage réels ; la couverture de 11 m est celle du passage le plus sensible de la L15 Sud, lot T3C (Soletanche Bachy, newsletter 55) ; la machine suit l’énoncé EAE du ministère (ligne 16, lot 1 : Ø 9,83 m, bouclier 11,1 m, 14 paires de vérins) et Implenia (L15 Sud T2C : 7 voussoirs) [P]",
+    "Image : le tassement est montré à sa vraie échelle sur la chaussée (quelques millimètres, invisibles) ; ce qui se lit est une jauge grossie cinquante fois et une lueur de la cuvette — jamais un effondrement, jamais des centimètres ; « ta rue monte » : un bombement léger, sans chiffre [O]",
+    "Image : en-tête — le tassement en millimètres que dit la voix (2, 5, 7, 8) ; « Pression » en mots (équilibre, en chute, trop forte), jamais en chiffres : aucune pression au front du GPE n’est sourcée ; le manomètre n’a pas de graduation chiffrée",
+    "Image : l’échelle de profondeur ne porte qu’une règle (un bar tous les dix mètres d’eau, calcul hydrostatique [O]), aucune valeur au niveau de la machine ; le geste de la réponse (la vis ralentit, les vérins poussent) est reconstitué d’après la régulation poussée contre débit de la vis [P]"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ta rue *s'enfonce*. Dessous, une machine vient de lâcher la +terre+.",
+      "vo": "[tense] Ta rue s'enfonce. Dessous, une machine vient de lâcher la terre.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ta rue s'enfonce. Dessous, une machine vient de lâcher la terre."
+      ],
+      "voir": "Coupe verticale, caméra basse au ras du trottoir, l'événement déjà en cours : la chaussée et sa voiture sur 40 % de la largeur, l'asphalte qui se creuse en cuvette sous les roues ; dessous, aux rayons X, la terre qui coule vers un grand disque qui tourne — la roue du tunnelier, petite mais lisible ; entre les deux, le vide rouge qui monte."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Ce qui la tenait ? De la terre, sous +pression+. Et si cette terre pousse trop *fort*… ta rue fait quoi ?",
+      "vo": "[firm, matter-of-fact] Ce qui la tenait ? De la terre, sous pression. [short pause] Et si cette terre pousse trop fort... ta rue fait quoi ?",
+      "voir": "On plonge dans le sol jusqu'à la machine : derrière la roue, la chambre pleine de terre s'allume en vert, des flèches vertes pressent le front ; sur « trop fort », les flèches s'allongent, la chaussée au-dessus bombe d'un cheveu vers le haut, et l'image se fige."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "Au-dessus, une voiture roule. Un immeuble, six étages. Devant la roue, la terre *s'écroule*. Ta rue ne supporte qu'environ un centimètre. Tout se joue… derrière la +roue+.",
+      "vo": "[tense] Au-dessus, une voiture roule. Un immeuble, six étages. Devant la roue, la terre s'écroule. Ta rue ne supporte qu'environ un centimètre. Tout se joue... derrière la roue.",
+      "voir": "Même seconde, plan large de la coupe : la voiture qui roule sur la chaussée creusée, l'immeuble de six étages aux fenêtres allumées au bord du trou ; sous eux, devant la roue, des blocs de terre qui se détachent du front ; au bord de la chaussée, une règle d'un centimètre dont le trait rouge descend ; on file le long de la roue jusqu'à ce qu'il y a derrière."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "Le tunnelier sorti du sol, plein, de trois quarts sur son halo ; il s'éclate sur « on »."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Un tunnelier du Grand Paris. Sa roue : presque [10|dix] mètres. Derrière, une chambre pleine de terre, fermée par une cloison. Une vis l'en sort. Et au cœur… la +pression+.",
+      "vo": "[conversational, curious] Un tunnelier du Grand Paris. Sa roue : presque dix mètres. Derrière, une chambre pleine de terre, fermée par une cloison. Une vis l'en sort. Et au cœur... la pression.",
+      "voAlt": [
+        "[curious] Un tunnelier du Grand Paris. Sa roue : presque dix mètres. Derrière, une chambre pleine de terre, fermée par une cloison. Une vis l'en sort. Et au cœur... la pression."
+      ],
+      "voir": "On suit la terre d'un bout à l'autre, pièces écartées : la roue de coupe et ses molettes qui tournent, sa cote de dix mètres ; la chambre juste derrière, pleine de terre brune ; la cloison étanche ; la vis inclinée qui tire la terre ; au bout, on isole la chambre et ses capteurs, un manomètre qui s'allume en vert : le cœur."
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi ça tient ? Le sol pousse sur le front, la paroi devant la roue. L'eau seule, c'est un bar tous les [10|dix] mètres de fond. La chambre pousse pareil : rien ne +bouge+.",
+      "vo": "[curious] Pourquoi ça tient ? [short pause] Le sol pousse sur le front, la paroi devant la roue. L'eau seule, c'est un bar tous les dix mètres de fond. La chambre pousse pareil : rien ne bouge.",
+      "voir": "Gros plan en coupe sur le front : des flèches rouges du sol et de la nappe qui pressent la paroi de terre, une échelle de profondeur sur le côté qui gagne un bar tous les dix mètres de fond ; en face, depuis la chambre, des flèches vertes de même longueur ; elles se rejoignent et la paroi s'immobilise."
+    },
+    {
+      "id": "repos",
+      "text": "Ses vérins poussent sur le dernier anneau : sept voussoirs de béton. La vis sort la terre au rythme où elle entre. Et là… la pression *lâche*.",
+      "vo": "[warm, conversational] Ses vérins poussent sur le dernier anneau : sept voussoirs de béton. La vis sort la terre au rythme où elle entre. Et là... la pression lâche.",
+      "voAlt": [
+        "[curious] Ses vérins poussent sur le dernier anneau : sept voussoirs de béton. La vis sort la terre au rythme où elle entre. Et là... la pression lâche."
+      ],
+      "voir": "Le tunnelier au repos aux rayons X, de trois quarts arrière : les vérins s'appuient sur l'anneau, ses sept voussoirs s'allument un à un ; la vis tourne lentement, la terre entre et sort au même débit, le manomètre stable au vert ; sur « lâche », l'aiguille décroche vers le rouge."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "La chambre se *vide*. Le front glisse. Ta rue descend : deux millimètres. Cinq. Sept.",
+      "vo": "[firm, matter-of-fact] La chambre se vide. Le front glisse. Ta rue descend : deux millimètres. Cinq. Sept.",
+      "voir": "Le chrono revient, en millimètres de tassement : dans la chambre la terre baisse et des vides s'ouvrent ; le front glisse en blocs vers la roue ; on remonte en coupe jusqu'à la chaussée qui descend, la règle marque deux, cinq, sept millimètres, près de son trait rouge."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "La vis *ralentit*. Les vérins poussent. La chambre se remplit. La pression +remonte+. Huit millimètres… et ta rue s'arrête. Le front tient.",
+      "vo": "[tense] La vis ralentit. Les vérins poussent. La chambre se remplit. La pression remonte. Huit millimètres... et ta rue s'arrête. Le front tient.",
+      "voir": "Le climax en grand, la machine plein cadre en coupe : la vis freine net, les vérins s'allongent d'un coup contre l'anneau, la roue avance et gave la chambre de terre qui se tasse, l'aiguille du manomètre remonte au vert ; on recule jusqu'à la chaussée : la règle s'arrête à huit millimètres, la voiture passe."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : tu crois qu'un tunnelier creuse. Il passe son temps à *retenir*. La terre devant lui… et ta rue +au-dessus+.",
+      "vo": "[firm, matter-of-fact] Voilà son secret : tu crois qu'un tunnelier creuse. Il passe son temps à retenir. La terre devant lui... et ta rue au-dessus.",
+      "voir": "Retour au cadre de l'accroche, figé : la rue d'aplomb, l'immeuble, la voiture ; dessous, le tunnelier en coupe, la chambre pleine qui presse le front (flèches vertes) et, au-dessus, toute la colonne de terre jusqu'à la chaussée qui tient ; le nom du compte s'allume."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et si cette terre pousse trop fort ? Le sol se soulève : ta rue *monte*. En +commentaire+ : sous chez toi, il passe un tunnel… oui, ou *non* ?",
+      "vo": "[conversational, curious] Et si cette terre pousse trop fort ? [short pause] Le sol se soulève : ta rue monte. [short pause] En commentaire : sous chez toi, il passe un tunnel... oui, ou non ?",
+      "voAlt": [
+        "[curious] Et si cette terre pousse trop fort ? [short pause] Le sol se soulève : ta rue monte. [short pause] En commentaire : sous chez toi, il passe un tunnel... oui, ou non ?"
+      ],
+      "voir": "Les flèches vertes de la chambre s'allongent trop : le front recule et la chaussée bombe vers le haut, la voiture soulevée ; puis, sur la question, un quartier vu de haut et, en transparence dessous, le tracé d'un tunnel ; deux cases, oui et non."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour celui qui dort au-dessus d'un tunnelier, sans le *savoir*.",
+      "vo": "[warm, conversational] Like : [short pause] pour celui qui dort au-dessus d'un tunnelier, sans le savoir.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour celui qui dort au-dessus d'un tunnelier, sans le savoir."
+      ],
+      "voir": "Coupe d'un immeuble de nuit : une fenêtre allumée, quelqu'un qui dort ; loin dessous, le tunnelier qui avance d'un anneau en silence ; les chevrons désignent la colonne de boutons."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, ton GPS. Sans réglage, une horloge de satellite *avance* de [38|trente-huit] millionièmes de seconde par jour.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, ton GPS. Sans réglage, une horloge de satellite avance de trente-huit millionièmes de seconde par jour.",
+      "voir": "Le panneau « S'abonner pour l'ouvrir », le dossier suivant sous scellés : un satellite, son horloge dont l'aiguille prend de l'avance ; ses chevrons."
+    },
+    {
+      "id": "boucle",
+      "text": "Et pendant ce temps…",
+      "vo": "[calm] Et pendant ce temps,",
+      "voir": "On redescend du ciel vers la rue jusqu'au plan d'ouverture : caméra au ras du trottoir, la chaussée qui commence à se creuser au-dessus de la roue."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:s'enfonce",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "torepos": "repos-0.12",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:ralentit-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:retenir",
+    "tocta": "comment-0.12",
+    "duelA": "comment:oui",
+    "duelB": "comment:non",
+    "tolike": "like-0.14",
+    "toabo": "abo-0.14",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:temps"
+  },
+  "bedVolume": 0.8,
+  "sons": [
+    {
+      "id": "048-roue-coupe",
+      "image": "la roue de coupe tourne et broie la terre (accroche, éclaté, réponse)",
+      "duree": 4,
+      "prompt": "Giant tunnel boring machine cutterhead slowly rotating and grinding through wet clay and stones underground, deep heavy steel scraping and rumbling, close, isolated, no music"
+    },
+    {
+      "id": "048-front-s-ecroule",
+      "image": "devant la roue, la terre s'écroule et la chaussée se creuse (accroche, scène, zéro)",
+      "duree": 3,
+      "prompt": "Wet soil and gravel collapsing and sliding into an underground void, heavy earth crumbling with a low creak of asphalt settling above, close, isolated, no music"
+    },
+    {
+      "id": "048-vis-extraction",
+      "image": "la vis d'extraction tourne et tire la terre pâteuse de la chambre, puis freine",
+      "duree": 3,
+      "prompt": "Large steel screw conveyor turning slowly inside a tube, pushing thick wet mud, heavy grinding and squelching, industrial machine, close, isolated, no music"
+    },
+    {
+      "id": "048-verins",
+      "image": "les vérins de poussée s'allongent contre l'anneau (repos, réponse)",
+      "reprend": "hydraulique"
+    },
+    {
+      "id": "048-voussoir",
+      "image": "un voussoir de béton se pose dans l'anneau (repos)",
+      "duree": 2,
+      "prompt": "Heavy precast concrete tunnel segment pushed into place by a hydraulic arm against other segments, dull concrete thud with a short steel clank, close, isolated, no music"
+    },
+    {
+      "id": "048-rue",
+      "image": "la rue au-dessus, la voiture qui roule (accroche, scène, réponse)",
+      "reprend": "amb-rue"
+    },
+    {
+      "id": "048-voiture-passe",
+      "image": "la voiture de verre traverse la rue au-dessus du tunnelier (accroche 0 → 3,7, coupe sur la rue 10,32 → 12,7, « Cinq » 53,56, « s'arrête » 61,32)",
+      "duree": 3,
+      "reserve": true,
+      "prompt": "A single ordinary car passing slowly on a quiet city street at night, rubber tyres rolling on asphalt, soft engine hum, from left to right, medium distance, isolated, no music"
+    }
+  ],
+  "sfx": [
+    {
+      "type": "space",
+      "mix": 0.18
+    },
+    {
+      "type": "sample",
+      "file": "amb-rue.wav",
+      "loop": true,
+      "from": 0,
+      "to": "ouvre-0.04",
+      "gain": -26,
+      "bus": "under",
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "048-roue-coupe.wav",
+      "loop": true,
+      "from": 0,
+      "to": "scene-0.1",
+      "gain": -18,
+      "bus": "under",
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "048-roue-coupe.wav",
+      "loop": true,
+      "from": 13.8,
+      "to": "ouvre-0.04",
+      "gain": -20,
+      "bus": "under",
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "amb-tension.wav",
+      "loop": true,
+      "from": 0,
+      "gain": -16,
+      "bus": "under",
+      "fade": 0.05,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.35
+        ],
+        [
+          "torepos",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.35
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "sample",
+      "file": "048-roue-coupe.wav",
+      "loop": true,
+      "from": "torepos",
+      "to": "toverdict",
+      "gain": -26,
+      "bus": "under",
+      "fade": 0.4
+    },
+    {
+      "type": "sample",
+      "file": "amb-rue.wav",
+      "loop": true,
+      "from": "tozero",
+      "to": "toverdict",
+      "gain": -30,
+      "bus": "under",
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "amb-rue.wav",
+      "loop": true,
+      "from": "toverdict",
+      "to": "tolike",
+      "gain": -28,
+      "bus": "under",
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "amb-interieur-nuit.wav",
+      "loop": true,
+      "from": "tolike",
+      "to": "toabo",
+      "gain": -26,
+      "bus": "under",
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "048-roue-coupe.wav",
+      "loop": true,
+      "from": 80.5,
+      "to": "toabo",
+      "gain": -30,
+      "bus": "under",
+      "fade": 0.6
+    },
+    {
+      "type": "sample",
+      "file": "amb-rue.wav",
+      "loop": true,
+      "from": "toabo",
+      "to": "toloop",
+      "gain": -32,
+      "bus": "under",
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "amb-rue.wav",
+      "loop": true,
+      "from": "toloop",
+      "gain": -26,
+      "bus": "under",
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "048-roue-coupe.wav",
+      "loop": true,
+      "from": "toloop",
+      "gain": -18,
+      "bus": "under",
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "sig-dossier.wav",
+      "at": 0.02,
+      "gain": -8,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "048-front-s-ecroule.wav",
+      "at": 0.04,
+      "gain": -11,
+      "fade": 0.4
+    },
+    {
+      "type": "sample",
+      "file": "048-front-s-ecroule.wav",
+      "at": 13.8,
+      "gain": -8,
+      "dur": 1.9,
+      "fade": 0.4
+    },
+    {
+      "type": "sample",
+      "file": "aspiration.wav",
+      "at": "ouvre-0.7",
+      "gain": -18,
+      "to": "ouvre-0.04",
+      "offset": 0.6
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "ouvre$+0.02",
+      "depth": -90
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.16",
+      "gain": -5,
+      "dur": 0.3,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.38",
+      "gain": -2,
+      "offset": 1.75,
+      "dur": 0.55,
+      "fade": 0.2,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "048-roue-coupe.wav",
+      "at": 24.04,
+      "gain": -13,
+      "dur": 1.2,
+      "fade": 0.5
+    },
+    {
+      "type": "sample",
+      "file": "048-vis-extraction.wav",
+      "at": 29.14,
+      "gain": -9,
+      "dur": 1.7,
+      "fade": 0.5
+    },
+    {
+      "type": "sample",
+      "file": "hydraulique.wav",
+      "at": 41.7,
+      "gain": -12,
+      "dur": 1.6,
+      "fade": 0.4
+    },
+    {
+      "type": "sample",
+      "file": "048-voussoir.wav",
+      "at": 43.36,
+      "gain": -10
+    },
+    {
+      "type": "sample",
+      "file": "impact-lourd.wav",
+      "at": "tozero",
+      "gain": -17,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "048-front-s-ecroule.wav",
+      "at": 50.46,
+      "gain": -10,
+      "dur": 2,
+      "fade": 0.4
+    },
+    {
+      "type": "sample",
+      "file": "048-vis-extraction.wav",
+      "at": 54.88,
+      "gain": -8,
+      "dur": 1.4,
+      "fade": 0.9
+    },
+    {
+      "type": "sample",
+      "file": "hydraulique.wav",
+      "at": 56.26,
+      "gain": -10
+    },
+    {
+      "type": "sample",
+      "file": "048-roue-coupe.wav",
+      "at": 57.3,
+      "gain": -11,
+      "dur": 1.6,
+      "fade": 0.6
+    },
+    {
+      "type": "sample",
+      "file": "impact-sec.wav",
+      "at": 67.76,
+      "gain": -12
+    },
+    {
+      "type": "sample",
+      "file": "sig-boucle.wav",
+      "at": "boucle$+0.02",
+      "gain": -8,
+      "offset": 0.6
+    }
+  ]
+}

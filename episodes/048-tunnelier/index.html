@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · 048 · Tunnelier</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
+         kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+
+      .chip--live, #retitle, #net, #next, #duel, #cta-field, #film, .rail { opacity: 0; }
+      /* le second compteur de l'en-tête : un mot, jamais un chiffre (main.js le colore : veille à l'équilibre, signal sinon) */
+      #hud-count { color: var(--veille); }
+      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
+      #chip-cm, #chip-bar { color: var(--ink); }
+      #chip-tunnelier, #chip-roue, #chip-chambre, #chip-cloison, #chip-vis, #chip-coeur, #chip-pareil, #chip-anneau, #chip-debit, #chip-tient { color: var(--veille); }
+      #chip-lache, #chip-souleve { color: var(--signal); }
+      #next-fact span { font-size: 36px; line-height: 1.2; letter-spacing: 0.06em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="92.067" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 048</span></div>
+        <div class="hud__title" id="hud-title">Tunnelier</div>
+        <div class="hud__clock" id="hud-clock">1 mm</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Pression</span><b id="hud-count-v">En chute</b></div>
+        <div class="hud__rule"></div>
+        <nav class="hud__acts">
+          <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
+          <em class="hud__brand">Système Décodé</em>
+        </nav>
+      </header>
+
+      <!-- 01 · MENACE (acte1.js) : un seul panneau à la fois dans la zone haute -->
+      <div id="chip-cm" class="chip chip--live"><span>Ta rue supporte</span><b>Environ un centimètre</b></div>
+
+      <!-- 02 · AUTOPSIE (acte2.js : l'éclaté, le principe) -->
+      <div id="chip-tunnelier" class="chip chip--live"><span>Grand Paris</span><b>Tunnelier à pression de terre</b></div>
+      <div id="chip-roue" class="chip chip--live"><span>Roue de coupe</span><b>Presque dix mètres</b></div>
+      <div id="chip-chambre" class="chip chip--live"><span>Pleine de terre</span><b>Chambre</b></div>
+      <div id="chip-cloison" class="chip chip--live"><b>Cloison étanche</b></div>
+      <div id="chip-vis" class="chip chip--live"><b>Vis d'extraction</b></div>
+      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>La pression</b></div>
+      <div id="chip-bar" class="chip chip--live"><span>L'eau seule</span><b>Un bar tous les dix mètres</b></div>
+      <div id="chip-pareil" class="chip chip--live"><span>La chambre</span><b>Pousse pareil</b></div>
+
+      <!-- 02 → 03 (acte3.js : le repos, puis la réponse) : un seul panneau à la fois dans la zone haute -->
+      <div id="chip-anneau" class="chip chip--live"><span>Un anneau</span><b>Sept voussoirs</b></div>
+      <div id="chip-debit" class="chip chip--live"><span>Ce qui sort</span><b>Égale ce qui entre</b></div>
+      <div id="chip-lache" class="chip chip--live"><span>La chambre</span><b>Se vide</b></div>
+      <div id="chip-tient" class="chip chip--live"><span>Le front</span><b>Tient</b></div>
+
+      <!-- fin.js : ce que le film doit encore -->
+      <div id="chip-souleve" class="chip chip--live"><span>Trop fort</span><b>Le sol se soulève</b></div>
+
+      <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
+      <div id="retitle">
+        <div class="kicker" id="retitle-k">Son secret</div>
+        <div id="retitle-main">
+          <span id="retitle-slot">
+            <span id="retitle-a">Il creuse<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Il retient</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <section id="net" class="panel">
+        <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 personne</span></div>
+        <div id="net-grid"><i id="net-wave"></i></div>
+      </section>
+
+      <section id="next">
+        <div class="panel__h"><span>Prochain dossier · 049</span><span>Classé</span></div>
+        <div id="next-title"><span id="next-redact"></span></div>
+        <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
+        <div id="next-fact"><span>Sans réglage, l'horloge d'un satellite avance de 38 millionièmes de seconde par jour.</span></div>
+        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+      </section>
+
+      <!-- hors-série (filmCall) : le long vers lequel la promo envoie — le mot YouTube, jamais son logo -->
+      <section id="film">
+        <div class="panel__h"><span>Film complet</span><span id="film-length">0 min 00</span></div>
+        <div id="film-title">Le titre</div>
+        <div id="film-bar"><i></i></div>
+        <div id="film-where"><span>Sur YouTube</span><span>Système Décodé</span></div>
+      </section>
+
+      <!-- la question du commentaire posée en DEUX réponses (duelCall, fin.js) : chacune s'allume quand la voix la dit, le film ne
+           répond jamais à la place du spectateur — prendre parti fait commenter. Une question fermée à deux issues seulement. -->
+      <div id="duel">
+        <div class="kicker">Sous chez toi ?</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">Oui</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Non</span></div>
+        <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
+      </div>
+      <div id="cta-field">
+        <div class="kicker">La question de l'accroche ?</div>
+        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de lettres) -->
+        <div id="cta-field-v"><span id="cta-typed" class="is-veille">RÉPONSE</span><span id="cta-caret"></span></div>
+      </div>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
