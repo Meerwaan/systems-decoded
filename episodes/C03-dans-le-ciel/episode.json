@@ -1,0 +1,292 @@
+{
+  "id": "C03",
+  "slug": "dans-le-ciel",
+  "title": "Dans le ciel",
+  "format": "compil",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21
+  },
+  "compil": {
+    "lines": [
+      "Dans le ciel"
+    ],
+    "kicker": "8 systèmes, du hublot à l'orbite",
+    "chapIntro": "Huit systèmes, du hublot à l'orbite",
+    "chapFin": "La machine ou le pilote ?"
+  },
+  "dossiers": [
+    {
+      "ep": "033",
+      "label": "Porte d'avion",
+      "lines": [
+        "La porte",
+        "d'avion"
+      ],
+      "moment": "En cabine",
+      "chap": "À ta rangée : la porte de l'avion"
+    },
+    {
+      "ep": "031",
+      "label": "Anti-collision",
+      "lines": [
+        "L'anti-",
+        "collision"
+      ],
+      "moment": "Dans le cockpit",
+      "chap": "Deux avions face à face : l'anti-collision"
+    },
+    {
+      "ep": "023",
+      "label": "Éolienne de secours",
+      "lines": [
+        "L'éolienne",
+        "de secours"
+      ],
+      "moment": "Sans moteurs",
+      "chap": "Plus aucun moteur : l'éolienne de secours"
+    },
+    {
+      "ep": "007",
+      "label": "Siège éjectable",
+      "lines": [
+        "Le siège",
+        "éjectable"
+      ],
+      "moment": "En avion de chasse",
+      "chap": "Dans un Rafale : le siège éjectable"
+    },
+    {
+      "ep": "037",
+      "label": "Parachute de secours",
+      "lines": [
+        "Le parachute",
+        "de secours"
+      ],
+      "moment": "En chute libre",
+      "chap": "En chute libre : le parachute de secours"
+    },
+    {
+      "ep": "045",
+      "label": "L'autodestruction de la fusée",
+      "lines": [
+        "L'auto-",
+        "destruction"
+      ],
+      "moment": "Au-dessus du pas de tir",
+      "chap": "Une fusée qui dévie : l'autodestruction"
+    },
+    {
+      "ep": "026",
+      "label": "Soyouz MS-10",
+      "lines": [
+        "Soyouz",
+        "MS-10"
+      ],
+      "moment": "Vers l'orbite",
+      "chap": "Vers l'orbite : le sauvetage de Soyouz MS-10"
+    },
+    {
+      "ep": "041",
+      "label": "Le bouclier de l'ISS",
+      "lines": [
+        "Le bouclier",
+        "de l'ISS"
+      ],
+      "moment": "En orbite",
+      "chap": "En orbite : le bouclier de l'ISS"
+    }
+  ],
+  "post": {
+    "youtube": {
+      "title": "Personne ne peut ouvrir cette porte d'avion en vol : 8 systèmes qui te sauvent dans le ciel",
+      "titleNote": "Compilation (heures de visionnage), sortie mardi 17/11/2026. Un seul titre, une seule miniature, une seule description (règle du 12/11). Titre : le paradoxe du premier dossier (033), vrai en croisière, puis la promesse de la compilation ; « porte d'avion » est le mot cherché et ouvre la description par la question telle qu'on la tape. Autocomplétion YouTube non relevée pour ce dossier : à vérifier le jour de la mise en ligne. Miniature « ELLE SE DÉTRUIT EXPRÈS » (la fusée du 045) : le titre ne la répète pas.",
+      "keyword": "porte d'avion",
+      "descriptionTemplate": "Peut-on ouvrir la porte d'un avion en vol ? En croisière, personne ne peut : c'est l'air qui la ferme. Et ce n'est que le premier des huit systèmes qui te gardent en vie, du hublot jusqu'à l'orbite.\n\nOn les ouvre en 3D, en montant : la porte d'avion plaquée sur ses butées, l'anti-collision TCAS qui met deux avions d'accord, l'éolienne de secours qui a ramené un Airbus sans moteurs jusqu'aux Açores, le siège éjectable du Rafale, le boîtier qui ouvre le parachute de secours d'un parachutiste inconscient, la charge qui détruit une fusée sortie de son couloir, les quatre moteurs qui ont arraché l'équipage de Soyouz MS-10… et le bouclier de la Station spatiale internationale.\n\nChapitres\n__CHAPITRES__\n\nSources : chaque fait vient de son dossier d'origine, où il est sourcé (dossiers 033, 031, 023, 007, 037, 045, 026 et 041 de Système Décodé) ; la voix qui les relie n'ajoute aucun chiffre.\n\nReconstitutions 3D Système Décodé : huit dossiers, reliés en une seule ascension.\n\nEt toi : là-haut, tu fais confiance à qui ? À la machine… ou au pilote ?\n\nSystème Décodé ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite, pour un autre dossier qui veille sur toi.",
+      "description": "Peut-on ouvrir la porte d'un avion en vol ? En croisière, personne ne peut : c'est l'air qui la ferme. Et ce n'est que le premier des huit systèmes qui te gardent en vie, du hublot jusqu'à l'orbite.\n\nOn les ouvre en 3D, en montant : la porte d'avion plaquée sur ses butées, l'anti-collision TCAS qui met deux avions d'accord, l'éolienne de secours qui a ramené un Airbus sans moteurs jusqu'aux Açores, le siège éjectable du Rafale, le boîtier qui ouvre le parachute de secours d'un parachutiste inconscient, la charge qui détruit une fusée sortie de son couloir, les quatre moteurs qui ont arraché l'équipage de Soyouz MS-10… et le bouclier de la Station spatiale internationale.\n\nChapitres\n__CHAPITRES__\n\nSources : chaque fait vient de son dossier d'origine, où il est sourcé (dossiers 033, 031, 023, 007, 037, 045, 026 et 041 de Système Décodé) ; la voix qui les relie n'ajoute aucun chiffre.\n\nReconstitutions 3D Système Décodé : huit dossiers, reliés en une seule ascension.\n\nEt toi : là-haut, tu fais confiance à qui ? À la machine… ou au pilote ?\n\nSystème Décodé ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite, pour un autre dossier qui veille sur toi.",
+      "chapters": [],
+      "hashtags": [
+        "#avion",
+        "#aviation",
+        "#espace",
+        "#fusee",
+        "#parachute"
+      ],
+      "tags": [
+        "porte d'avion",
+        "ouvrir porte avion en vol",
+        "peut-on ouvrir une porte d'avion en vol",
+        "tcas avion",
+        "collision avion",
+        "eolienne de secours avion",
+        "ram air turbine",
+        "avion sans moteur",
+        "planeur des açores",
+        "siège éjectable",
+        "siège éjectable rafale",
+        "parachute de secours",
+        "déclencheur de sécurité parachute",
+        "fusée qui explose",
+        "autodestruction fusée",
+        "soyouz ms-10",
+        "tour de sauvetage soyouz",
+        "station spatiale internationale",
+        "débris spatiaux",
+        "bouclier iss",
+        "reconstitution 3d"
+      ],
+      "pinned": "La fusée qui dévie, c'est Ariane 5, le 4 juin 1996 : son logiciel de guidage venait d'Ariane 4. Et toi, là-haut : la machine ou le pilote ?",
+      "endScreen": "Les dernières secondes (fin1 → fin4) laissent la moitié droite de l'image libre pour l'écran de fin : y mettre le dernier long publié et le bouton d'abonnement."
+    }
+  },
+  "thumb": {
+    "title": [
+      "ELLE SE DÉTRUIT",
+      "EXPRÈS"
+    ],
+    "tag": "8 systèmes · du hublot à l'orbite",
+    "tone": "signal",
+    "note": "Composée hors de cover.mjs (une compilation n'a pas de 3D à elle), comme au C01 : image propre du 045 au beat « reponse » (la charge détone, la coque s'ouvre), les mots à gauche dans la mise en page des longs. renders/C03-dans-le-ciel-miniature.png."
+  },
+  "sources": [
+    "Les faits de chaque dossier sont ceux de son épisode (docs/faits/033, 031, 023, 007, 037, 045, 026, 041) ; les ponts n'ajoutent aucun chiffre."
+  ],
+  "beats": [
+    {
+      "id": "intro1",
+      "chap": "Ouverture",
+      "text": "Colle ton front au hublot. Dehors, il n'y a rien pour te rattraper.",
+      "vo": "[tense] Colle ton front au hublot. Dehors, il n'y a rien pour te rattraper."
+    },
+    {
+      "id": "intro2",
+      "text": "Entre ce siège et l'orbite, huit systèmes attendent le jour où tout lâche. Et là-haut, personne ne viendra t'aider.",
+      "vo": "[conversational, curious] Entre ce siège et l'orbite, huit systèmes attendent le jour où tout lâche. Et là-haut, personne ne viendra t'aider."
+    },
+    {
+      "id": "intro3",
+      "hold": 0.4,
+      "text": "On les ouvre en montant. Et le dernier… laisse le danger le frapper. Exprès.",
+      "vo": "[curious] On les ouvre en montant. Et le dernier... laisse le danger le frapper. Exprès."
+    },
+    {
+      "id": "pont-033",
+      "chap": "Porte d'avion",
+      "hold": 0.4,
+      "text": "Premier dossier, à côté de ton siège. Une porte, une poignée. Et rien d'autre entre toi… et le ciel.",
+      "vo": "[warm, conversational] Premier dossier, à côté de ton siège. Une porte, une poignée. Et rien d'autre entre toi... et le ciel."
+    },
+    {
+      "id": "pont-031",
+      "chap": "Anti-collision",
+      "hold": 0.4,
+      "text": "La porte tient. Mais à l'avant, deux pilotes fixent la nuit. Et dans la nuit… des feux qui ne devraient pas être là.",
+      "vo": "[curious] La porte tient. Mais à l'avant, deux pilotes fixent la nuit. Et dans la nuit... des feux qui ne devraient pas être là."
+    },
+    {
+      "id": "pont-023",
+      "chap": "Éolienne de secours",
+      "hold": 0.4,
+      "text": "Deux machines se sont mises d'accord. Mais parfois, il n'y a personne à éviter. Le problème est à bord… au-dessus de l'océan.",
+      "vo": "[conversational, curious] Deux machines se sont mises d'accord. Mais parfois, il n'y a personne à éviter. Le problème est à bord... au-dessus de l'océan."
+    },
+    {
+      "id": "pont-007",
+      "chap": "Siège éjectable",
+      "hold": 0.4,
+      "text": "Un avion de ligne, on ne le quitte pas en vol : on le pose. Dans un avion de chasse, ton siège… a une autre idée.",
+      "vo": "[warm, conversational] Un avion de ligne, on ne le quitte pas en vol : on le pose. Dans un avion de chasse, ton siège... a une autre idée."
+    },
+    {
+      "id": "pont-037",
+      "chap": "Parachute de secours",
+      "hold": 0.4,
+      "text": "Le siège t'a sorti. Mais imagine une chute sans siège, sans pilote. Et toi… qui ne peux plus rien tirer.",
+      "vo": "[curious] Le siège t'a sorti. Mais imagine une chute sans siège, sans pilote. Et toi... qui ne peux plus rien tirer."
+    },
+    {
+      "id": "pont-045",
+      "chap": "Autodestruction",
+      "hold": 0.4,
+      "text": "On monte encore. Cette fois, personne à bord. Et pourtant, il faut protéger quelqu'un… tous ceux d'en dessous.",
+      "vo": "[conversational, curious] On monte encore. Cette fois, personne à bord. Et pourtant, il faut protéger quelqu'un... tous ceux d'en dessous."
+    },
+    {
+      "id": "pont-026",
+      "chap": "Soyouz MS-10",
+      "hold": 0.4,
+      "text": "Cette fusée-là ne portait personne. La suivante t'emporte, toi et ton équipier. Et quand elle lâche… tu veux en sortir.",
+      "vo": "[warm, conversational] Cette fusée-là ne portait personne. La suivante t'emporte, toi et ton équipier. Et quand elle lâche... tu veux en sortir."
+    },
+    {
+      "id": "pont-041",
+      "chap": "Bouclier de l'ISS",
+      "hold": 0.4,
+      "text": "Ce vaisseau n'a jamais atteint l'orbite. Le dernier dossier y tourne, astronautes à bord. Et ce qui le menace… personne ne le voit venir.",
+      "vo": "[curious] Ce vaisseau n'a jamais atteint l'orbite. Le dernier dossier y tourne, astronautes à bord. Et ce qui le menace... personne ne le voit venir."
+    },
+    {
+      "id": "fin1",
+      "chap": "Fin",
+      "text": "Huit systèmes. Plus on monte, moins un humain a le temps d'agir. Alors on a confié ta vie à l'air, au vent, à la poudre… et à des machines qui ne paniquent pas.",
+      "vo": "[warm, conversational] Huit systèmes. Plus on monte, moins un humain a le temps d'agir. Alors on a confié ta vie à l'air, au vent, à la poudre... et à des machines qui ne paniquent pas."
+    },
+    {
+      "id": "fin2",
+      "hold": 0.3,
+      "text": "Dis-moi en commentaire : là-haut, tu fais confiance à qui ? À la machine… ou au pilote ?",
+      "vo": "[curious] Dis-moi en commentaire : là-haut, tu fais confiance à qui ? [short pause] À la machine... ou au pilote ?"
+    },
+    {
+      "id": "fin3",
+      "text": "Envoie-la à quelqu'un qui a peur en avion : il ne vole jamais seul. Un like, si tu as appris quelque chose.",
+      "vo": "[warm] Envoie-la à quelqu'un qui a peur en avion : il ne vole jamais seul. Un like, si tu as appris quelque chose."
+    },
+    {
+      "id": "fin4",
+      "text": "On se retrouve très vite, pour un autre dossier qui veille sur toi.",
+      "vo": "[warm] On se retrouve très vite, pour un autre dossier qui veille sur toi."
+    }
+  ],
+  "cues": {},
+  "bedVolume": 0.7,
+  "sfx": [
+    {
+      "type": "music",
+      "width": 0.7,
+      "sections": "chapters",
+      "drop": 0.5,
+      "gain": -21,
+      "curve": [
+        [
+          0,
+          0.9,
+          0.5
+        ],
+        [
+          "fin1-0.5",
+          0.8,
+          0.3
+        ]
+      ]
+    },
+    {
+      "type": "drone",
+      "gain": -27,
+      "curve": [
+        [
+          0,
+          0.8
+        ]
+      ]
+    }
+  ]
+}
