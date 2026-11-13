@@ -1,0 +1,14 @@
+{
+  "//": "Le pont Instagram → YouTube (docs/recette-pont-instagram-youtube.md) : ce que Merwan relève à J+1 et J+7 de chaque long, levier par levier. Une ligne par long ; les abonnés YouTube jour par jour sont déjà dans metrics/comptes.json.",
+  "//exemple": {
+    "L06-blackout": {
+      "stories": {
+        "lien-J0": { "releve": "2026-11-14", "vues": 0, "clics": 0 },
+        "rappel-J2": { "releve": "2026-11-15", "vues": 0, "clics": 0 }
+      },
+      "bio": { "releve": "2026-11-19", "appuisLiensExternes7j": 0 },
+      "youtube": { "releve": "2026-11-19", "externeInstagramVues": 0, "externeInstagramHeures": 0, "directInconnuVues": 0 }
+    }
+  },
+  "releves": {}
+}

@@ -120,17 +120,51 @@
       "instagram": {
         "abonnes": 42000,
         "approx": true,
-        "videos": 48
+        "videos": 49
       },
       "tiktok": {
-        "abonnes": 2507,
+        "abonnes": 2508,
         "likes": 29700,
         "videos": 49
       },
       "youtube": {
         "abonnes": 1200,
         "approx": true,
-        "videos": 53
+        "videos": 54
+      }
+    },
+    "2026-11-12": {
+      "tiktok": {
+        "abonnes": 2516,
+        "likes": 29900,
+        "videos": 50
+      },
+      "youtube": {
+        "abonnes": 1210,
+        "approx": true,
+        "videos": 56
+      },
+      "instagram": {
+        "abonnes": 42000,
+        "approx": true,
+        "videos": 50
+      }
+    },
+    "2026-11-13": {
+      "tiktok": {
+        "abonnes": 2520,
+        "likes": 30100,
+        "videos": 50
+      },
+      "youtube": {
+        "abonnes": 1220,
+        "approx": true,
+        "videos": 56
+      },
+      "instagram": {
+        "abonnes": 42000,
+        "approx": true,
+        "videos": 50
       }
     }
   }

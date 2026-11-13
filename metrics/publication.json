@@ -205,6 +205,21 @@
       "instagram": "2026-11-11T10:24",
       "youtube": "2026-11-11T10:24"
     },
+    "043-faisceau-cern": {
+      "tiktok": "2026-11-12T19:05",
+      "instagram": "2026-11-12T19:05",
+      "youtube": "2026-11-12T19:05"
+    },
+    "044-gilet-pare-balles": {
+      "tiktok": "2026-11-12T19:08",
+      "instagram": "2026-11-12T19:15",
+      "youtube": "2026-11-12T19:36"
+    },
+    "045-autodestruction-fusee": {
+      "tiktok": "2026-11-13T17:48",
+      "instagram": "2026-11-13T17:52",
+      "youtube": "2026-11-13T19:15"
+    },
     "C01-ta-voiture": {
       "youtube": "2026-11-05T21:04"
     },
@@ -259,7 +274,7 @@
       "youtube": "2026-11-03T17:18"
     },
     "L06-blackout": {
-      "youtube": false
+      "youtube": "2026-11-12T19:05"
     }
   }
 }
