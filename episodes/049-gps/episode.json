@@ -1,0 +1,354 @@
+{
+  "id": "049",
+  "serie": "dossier",
+  "slug": "gps",
+  "title": "Le GPS",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "language": "fr"
+  },
+  "cover": {
+    "at": "eclate$",
+    "title": [
+      "Le GPS",
+      "au millionième"
+    ],
+    "cam": {
+      "tx": 0,
+      "ty": 8,
+      "tz": 0,
+      "d": 120,
+      "az": -40,
+      "el": 14,
+      "shift": -430,
+      "side": 0,
+      "fov": 28,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "GPS",
+    "caption": "GPS, la géolocalisation du téléphone : de nuit, route inconnue, un carrefour dans cinq secondes… et ton point bleu est dans le champ. Ton téléphone n'envoie rien aux satellites : il écoute des horloges, à vingt mille kilomètres. Et on les règle trop lentes, exprès. Toi : le point bleu… ou les panneaux ?",
+    "hashtags": [
+      "#apprendresurtiktok",
+      "#commentcamarche",
+      "#gps",
+      "#einstein",
+      "#science"
+    ],
+    "pinned": "En 1977, un satellite portait un correcteur à n'allumer que si Einstein avait raison. On l'a allumé. Toi : le point bleu, ou les panneaux ?",
+    "instagram": {
+      "caption": "Ton point bleu saute dans un champ. Il a suffi d'un millionième de seconde.\n\nDossier 049 : le GPS. Ton téléphone n'envoie rien aux satellites : il écoute des horloges atomiques à vingt mille kilomètres, chronomètre leurs signaux, et en tire ta position. Pour la lumière, un millionième de seconde, c'est trois cents mètres. Et là-haut, on règle ces horloges trop lentes… exprès.\n\nToi : le point bleu… ou les panneaux ?",
+      "hashtags": [
+        "#gps",
+        "#einstein",
+        "#science",
+        "#commentcamarche",
+        "#lesaviezvous"
+      ]
+    },
+    "youtube": {
+      "title": "Ton point bleu saute dans un champ… pour un millionième de seconde : comment marche le GPS",
+      "description": "Dossier 049 — le GPS ouvert : la puce et l'antenne de ton téléphone, qui n'envoient rien et ne font qu'écouter ; à vingt mille kilomètres, le satellite, son antenne, son oscillateur et son horloge atomique. Le principe : chaque satellite dit l'heure, son signal file à la vitesse de la lumière, trois cents mètres par millionième de seconde, et le temps du trajet donne la distance. Quatre satellites : trois pour l'espace, un pour corriger l'horloge à quartz, toujours fausse, de ton téléphone. Et pourquoi on règle les horloges des satellites trop lentes avant le lancement : là-haut, le temps passe plus vite — sans réglage, trente-huit millionièmes de seconde d'avance par jour. La scène (la route de nuit, le carrefour) est un scénario reconstitué.\n\nIngénieurs, géomètres, passionnés d'espace : qu'est-ce qu'on a simplifié ? Et toi : le point bleu… ou les panneaux ?",
+      "hashtags": [
+        "#shorts",
+        "#gps",
+        "#einstein",
+        "#science",
+        "#espace"
+      ]
+    }
+  },
+  "sources": [
+    "Ton téléphone n'envoie rien aux satellites : le récepteur GPS ne fait qu'écouter, comme une radio — Penn State GEOG 862, « One-way ranging » (extraits de recherche) [S]",
+    "Un millionième de seconde d'erreur d'horloge ≈ trois cents mètres (1 ns ≈ 30 cm d'erreur de position ; c × 1 µs = 299,79 m) — Ashby, Living Reviews in Relativity 2003, introduction [P] ; calcul",
+    "Les horloges des satellites sont réglées trop lentes exprès avant le lancement (10,22999999543 MHz au lieu de 10,23 MHz) — Ashby 2003 § 5 [P] ; GPS World, « Inside the box: GPS and relativity » [S]",
+    "La scène (la nuit, la route inconnue, le carrefour dans cinq secondes, le point bleu dans le champ, le téléphone en retard d'un millionième, trois puis quatre signaux) est un scénario typique, reconstitué : aucun cas réel daté de dérive de position — docs/faits/049-gps.md, « La scène »",
+    "Satellites à ≈ 20 200 km d'altitude (dit « vingt mille kilomètres ») — gps.gov, Space Segment (archive) [P]",
+    "Pièces : puce et antenne du récepteur ; antenne, oscillateur de référence (10,23 MHz) et horloge atomique de bord (césium ou rubidium) du satellite — Ashby 2003 [P] ; NRL via recherche [S]",
+    "Chaque satellite diffuse l'heure d'émission (message de navigation) ; le signal va à la vitesse de la lumière ; temps de trajet × c = distance (pseudo-distance) — Ashby ; Physics Today (Ashby) [S/P]",
+    "Quatre satellites ou plus presque toujours au-dessus de l'horizon — Ashby ; Ohio State (Pogge) [P/S]",
+    "Chaque distance place le récepteur sur une sphère ; il en faut quatre (trois pour l'espace, une pour l'heure du récepteur), qui se croisent en un seul point — Ashby, GPS World, Physics Today [P] ; logique standard",
+    "L'horloge du téléphone est un quartz bon marché, fausse : d'où la « pseudo »-distance et le quatrième satellite — docs/faits/049-gps.md, « Le mécanisme ouvert » [S] ; la séquence trois sphères puis quatre est une reconstitution à l'image",
+    "Là-haut le temps passe plus vite : sans réglage, ≈ 38 millionièmes de seconde d'avance nette par jour (+45 gravité, −7 vitesse) — GPS World, Ohio State, Physics Today [S] ; Ashby −4,4647 × 10⁻¹⁰ × 86 400 s = 38,6 µs (calcul) [P]",
+    "« Onze kilomètres de lumière » : 38 µs × c ≈ 11,4 km, la distance que parcourt la lumière, pas une erreur de position (le passage direct à une erreur de position est contesté : non dit) — calcul ; GPS World « up to about 11 km » [S]",
+    "Épinglé : NTS-2 (1977), le synthétiseur de décalage relativiste n'a été allumé qu'après ≈ 20 jours de mesure — Ashby 2003 § 5 [P] ; NRL via recherche [S]",
+    "Prochain dossier : une plaque à induction ne chauffe pas, elle fait chauffer la casserole — fait unique donné par la consigne (docs/faits/050-induction.md)"
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ton point bleu saute dans un *champ*. Il a suffi d'un millionième de +seconde+.",
+      "vo": "[tense] Ton point bleu saute dans un champ. Il a suffi d'un millionième de seconde.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ton point bleu saute dans un champ. Il a suffi d'un millionième de seconde."
+      ],
+      "voir": "Contre-plongée depuis le tableau de bord, de nuit, l'événement déjà en cours : le téléphone dans son support, vu de dessous, sur 40 % de la largeur, son écran de navigation lisible — le point bleu glisse hors de la route et saute dans le champ d'à côté ; derrière, par le pare-brise, la route de campagne aux rayons X et un carrefour qui arrive ; tout en haut, un satellite petit mais lisible. Sur « millionième de seconde », un compteur en millionièmes s'allume au coin de l'écran et le point fait son bond de trois cents mètres."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Ton téléphone n'envoie rien aux satellites : il écoute des +horloges+, là-haut. Et on les règle trop *lentes*… exprès.",
+      "vo": "[firm, matter-of-fact] Ton téléphone n'envoie rien aux satellites : il écoute des horloges, là-haut. [short pause] Et on les règle trop lentes... exprès.",
+      "voir": "On remonte du téléphone vers le ciel : des anneaux de lumière descendent d'un satellite jusqu'à la voiture, rien ne remonte ; on cadre le satellite, coque aux rayons X, son horloge pleine à l'intérieur qui pulse en vert ; sur « trop lentes », sa pulsation ralentit d'un cran à côté de celle d'une horloge restée au sol."
+    },
+    {
+      "id": "scene",
+      "hold": 0.3,
+      "text": "De nuit, route inconnue. Un carrefour, dans cinq secondes. Ton point bleu est dans le *champ*. À gauche… ou à droite ? Tout se joue dans ton +téléphone+.",
+      "vo": "[tense] De nuit, route inconnue. Un carrefour, dans cinq secondes. Ton point bleu est dans le champ. À gauche... ou à droite ? Tout se joue dans ton téléphone.",
+      "voir": "Même seconde, plongée sur la route de nuit : ta voiture, phares allumés, fonce vers un carrefour en T, le chrono de cinq secondes qui décompte ; le point bleu projeté au sol, lui, posé dans le champ, de l'autre côté du fossé marqué en rouge ; sur « À gauche… ou à droite ? », les deux branches du carrefour s'allument tour à tour ; on plonge par le pare-brise sur le téléphone dans son support."
+    },
+    {
+      "id": "ouvre",
+      "hold": 0.4,
+      "text": "Alors… on l'ouvre.",
+      "vo": "[calm] Alors... on l'ouvre.",
+      "voAlt": [
+        "[calm] Alors... [short pause] on l'ouvre."
+      ],
+      "voir": "Le téléphone sorti de la voiture, plein, sur son halo, un fil de lumière qui le relie au satellite au-dessus ; l'ensemble s'éclate sur « on »."
+    },
+    {
+      "id": "eclate",
+      "hold": 0.2,
+      "text": "Dans ton téléphone, une puce et son antenne. Elle écoute à [20 000|vingt mille] kilomètres : un satellite. Son oscillateur… et au cœur, une horloge +atomique+.",
+      "vo": "[conversational, curious] Dans ton téléphone, une puce et son antenne. Elle écoute à vingt mille kilomètres : un satellite. Son oscillateur... et au cœur, une horloge atomique.",
+      "voAlt": [
+        "[curious] Dans ton téléphone, une puce et son antenne. Elle écoute à vingt mille kilomètres : un satellite. Son oscillateur... et au cœur, une horloge atomique."
+      ],
+      "voir": "On suit le signal à l'envers, pièce par pièce : la puce de réception et sa petite antenne sortent du téléphone éclaté ; on remonte le fil de lumière jusqu'au satellite, qui s'éclate à son tour : son oscillateur ; au bout, le cœur isolé, plein, sur son halo : l'horloge atomique qui pulse en vert."
+    },
+    {
+      "id": "principe",
+      "text": "Pourquoi ça marche ? Chaque satellite dit l'heure. Son signal file à la vitesse de la lumière : [300|trois cents] mètres par millionième de seconde. Le temps du trajet… donne la +distance+.",
+      "vo": "[curious] Pourquoi ça marche ? [short pause] Chaque satellite dit l'heure. Son signal file à la vitesse de la lumière : trois cents mètres par millionième de seconde. Le temps du trajet... donne la distance.",
+      "voir": "Sur la pièce elle-même : l'horloge atomique marque l'heure sur un anneau de lumière qui part de l'antenne ; l'anneau descend vers la voiture le long d'une règle graduée tous les trois cents mètres, chaque graduation s'allume à chaque millionième du compteur ; à l'arrivée, le chrono du trajet (environ sept centièmes de seconde) se fige et devient un trait de distance entre le satellite et la voiture."
+    },
+    {
+      "id": "repos",
+      "text": "Au-dessus de toi, presque toujours quatre satellites, ou plus. Chaque distance trace une sphère. Mais ton téléphone n'a qu'une horloge à quartz… et elle est *fausse*.",
+      "vo": "[warm, conversational] Au-dessus de toi, presque toujours quatre satellites, ou plus. Chaque distance trace une sphère. Mais ton téléphone n'a qu'une horloge à quartz... et elle est fausse.",
+      "voAlt": [
+        "[curious] Au-dessus de toi, presque toujours quatre satellites, ou plus. Chaque distance trace une sphère. Mais ton téléphone n'a qu'une horloge à quartz... et elle est fausse."
+      ],
+      "voir": "Vue haute, au repos : la Terre et sa constellation qui tourne lentement, quatre satellites au-dessus de la voiture, chacun entouré d'une grande sphère de lumière qui passe par elle ; sur « horloge à quartz », on plonge dans le téléphone : le petit quartz, plein, dont le battement tremble ; sur « fausse », il vire au rouge."
+    },
+    {
+      "id": "zero",
+      "hold": 0.2,
+      "text": "Le carrefour. Trois signaux. Trois sphères. Ton téléphone retarde d'un millionième. Elles se croisent… dans le *champ*.",
+      "vo": "[firm, matter-of-fact] Le carrefour. Trois signaux. Trois sphères. Ton téléphone retarde d'un millionième. Elles se croisent... dans le champ.",
+      "voir": "Le chrono reprend, la voiture arrive au carrefour : trois anneaux descendent, trois sphères seulement, chacune gonflée de trois cents mètres de trop (le quartz rouge) ; elles se croisent en un point qui tombe dans le champ, et le point bleu y saute."
+    },
+    {
+      "id": "reponse",
+      "hold": 0.3,
+      "text": "Un quatrième signal. Une quatrième sphère. Ton téléphone corrige sa propre *heure*. Les quatre se +resserrent+. Ton point bleu revient sur la route.",
+      "vo": "[tense] Un quatrième signal. Une quatrième sphère. Ton téléphone corrige sa propre heure. Les quatre se resserrent. Ton point bleu revient sur la route.",
+      "voir": "Le climax en grand, vue plongeante du ciel jusqu'à la route : un quatrième anneau descend, la quatrième sphère s'ouvre ; dans le téléphone, le quartz se recale et repasse au vert ; les quatre sphères géantes rétrécissent ensemble et se croisent en un seul point net, sur l'asphalte ; le point bleu y claque d'un coup, la voiture passe le carrefour."
+    },
+    {
+      "id": "chute",
+      "hold": 0.4,
+      "text": "Voilà son secret : ton point bleu ne vient *pas* d'une carte. Il vient d'une +horloge+. Où tu es… c'est une question d'heure.",
+      "vo": "[firm, matter-of-fact] Voilà son secret : ton point bleu ne vient pas d'une carte. Il vient d'une horloge. Où tu es... c'est une question d'heure.",
+      "voir": "Retour au cadre de l'accroche, le téléphone vu de dessous : sur « pas », la carte de l'écran se barre et s'efface ; il ne reste qu'une heure qui défile en millionièmes, et le point bleu posé sur la route ; le nom du compte s'allume."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Et ces horloges trop lentes ? Einstein. Là-haut, le temps passe plus vite : sans réglage, [38|trente-huit] millionièmes d'avance par jour. [11|Onze] kilomètres de lumière. En +commentaire+ : toi… le point bleu, ou les *panneaux* ?",
+      "vo": "[conversational, curious] Et ces horloges trop lentes ? [short pause] Einstein. Là-haut, le temps passe plus vite : sans réglage, trente-huit millionièmes d'avance par jour. Onze kilomètres de lumière. [short pause] En commentaire : toi... le point bleu, ou les panneaux ?",
+      "voAlt": [
+        "[curious] Et ces horloges trop lentes ? [short pause] Einstein. Là-haut, le temps passe plus vite : sans réglage, trente-huit millionièmes d'avance par jour. Onze kilomètres de lumière. [short pause] En commentaire : toi... le point bleu, ou les panneaux ?"
+      ],
+      "voir": "Deux horloges côte à côte, celle du satellite en orbite et celle du sol : l'horloge du satellite, non réglée, prend de l'avance, un compteur grimpe jusqu'à trente-huit millionièmes en une journée qui défile ; un trait de lumière de onze kilomètres se déroule au-dessus de la route ; puis deux cases face à face : le point bleu sur l'écran, un panneau de direction dans les phares."
+    },
+    {
+      "id": "like",
+      "text": "+Like+ : pour celui qui croit que son téléphone parle aux *satellites*.",
+      "vo": "[warm, conversational] Like : [short pause] pour celui qui croit que son téléphone parle aux satellites.",
+      "voAlt": [
+        "[firm, matter-of-fact] Like : [short pause] pour celui qui croit que son téléphone parle aux satellites."
+      ],
+      "voir": "Le téléphone et le satellite : les anneaux de lumière ne descendent que dans un sens, une flèche montante tentée puis barrée ; les chevrons désignent la colonne de boutons."
+    },
+    {
+      "id": "abo",
+      "hold": 0.2,
+      "text": "+Abonne-toi+ : prochain dossier, la plaque à induction. Elle ne chauffe pas : elle fait chauffer la *casserole*.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, la plaque à induction. Elle ne chauffe pas : elle fait chauffer la casserole.",
+      "voir": "Le panneau « S'abonner pour l'ouvrir », le dossier suivant sous scellés (une plaque froide, une casserole qui fume), ses chevrons."
+    },
+    {
+      "id": "boucle",
+      "text": "Et pendant qu'elle chauffe…",
+      "vo": "[calm] Et pendant qu'elle chauffe,",
+      "voir": "On remonte vers le plan d'ouverture : la contre-plongée sur le téléphone dans son support, de nuit, le point bleu qui commence à glisser hors de la route."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:champ",
+    "tobench": "ouvre:on-0.14",
+    "explode": "ouvre:on",
+    "tozero": "zero-0.12",
+    "trigger": "reponse:resserrent-0.05",
+    "toverdict": "chute-0.12",
+    "verdict": "chute:pas",
+    "tocta": "comment-0.12",
+    "toloop": "boucle-0.12",
+    "rewind": "boucle:chauffe"
+  },
+  "bedVolume": 0.8,
+  "sons": [
+    {
+      "id": "049-voiture-nuit",
+      "image": "ta voiture roule de nuit sur la route de campagne",
+      "reprend": "amb-voiture"
+    },
+    {
+      "id": "049-signaux",
+      "image": "les signaux des satellites arrivent sur l'antenne du téléphone (trois, puis le quatrième)",
+      "reprend": "045-telemetrie"
+    },
+    {
+      "id": "049-clignotant",
+      "image": "au carrefour, à gauche ou à droite : le clignotant de la voiture",
+      "duree": 3,
+      "prompt": "Car turn signal indicator ticking inside a quiet car cabin at night, steady soft relay clicks, close, isolated, no music"
+    },
+    {
+      "id": "049-pneus-gravier",
+      "image": "la voiture freine au carrefour, ses pneus mordent le gravier du bas-côté",
+      "duree": 2.5,
+      "prompt": "Car tyres braking and rolling onto a gravel road shoulder at night, crunching loose gravel, close, isolated, no music"
+    }
+  ],
+  "sfx": [
+    {
+      "type": "space",
+      "mix": 0.18
+    },
+    {
+      "type": "sample",
+      "file": "amb-tension.wav",
+      "loop": true,
+      "from": 0,
+      "gain": -16,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "explode",
+          0.5
+        ],
+        [
+          "tozero",
+          0.9
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "toverdict",
+          0.45
+        ],
+        [
+          "tocta",
+          0.4
+        ],
+        [
+          "rewind",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "sample",
+      "file": "sig-dossier.wav",
+      "at": 0.02,
+      "gain": -8,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "aspiration.wav",
+      "at": "ouvre-0.7",
+      "to": "ouvre-0.04",
+      "offset": 0.6,
+      "gain": -18
+    },
+    {
+      "type": "hush",
+      "from": "ouvre",
+      "to": "ouvre$+0.02",
+      "depth": -90
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.16",
+      "dur": 0.3,
+      "gain": -5,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.38",
+      "offset": 1.75,
+      "gain": -2,
+      "bus": "main",
+      "dur": 0.55,
+      "fade": 0.2
+    },
+    {
+      "type": "sample",
+      "file": "riser.wav",
+      "at": "tozero-2",
+      "to": "tozero",
+      "offset": 1.5,
+      "gain": -22
+    },
+    {
+      "type": "sample",
+      "file": "impact-lourd.wav",
+      "at": "tozero",
+      "gain": -17,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "impact-lourd.wav",
+      "at": "trigger",
+      "gain": -15,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "impact-sec.wav",
+      "at": "verdict",
+      "gain": -15
+    },
+    {
+      "type": "sample",
+      "file": "sig-boucle.wav",
+      "at": "rewind",
+      "gain": -8,
+      "offset": 0.6
+    }
+  ]
+}
