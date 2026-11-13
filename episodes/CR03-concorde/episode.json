@@ -1,0 +1,716 @@
+{
+  "id": "CR03",
+  "serie": "compte-a-rebours",
+  "slug": "concorde",
+  "title": "Concorde",
+  "fps": 30,
+  "lead": 0.2,
+  "tail": 0.45,
+  "voice": {
+    "name": "Eric",
+    "voiceId": "9osbeK6KzhDRV0yX4rTq",
+    "model": "eleven_v4_turbo",
+    "stability": 0.4,
+    "similarity": 0.8,
+    "speed": 1,
+    "seed": 21,
+    "language": "fr"
+  },
+  "cover": {
+    "at": "defaut$",
+    "title": [
+      "Concorde",
+      "16:43"
+    ],
+    "lastTone": "#ffb23e",
+    "cam": {
+      "tx": 30020,
+      "ty": 82,
+      "tz": -30000,
+      "d": 270,
+      "az": -64,
+      "el": 6,
+      "fov": 30,
+      "shift": -300,
+      "side": 0,
+      "roll": 0
+    }
+  },
+  "post": {
+    "keyword": "Concorde",
+    "caption": "Concorde, le crash du 25 juillet 2000 : à Roissy, à 16 h 43, ton avion décolle en feu, et il est trop tard pour freiner. Sous l'aile, le réservoir s'est ouvert… de l'intérieur. Le compte à rebours, seconde par seconde. Toi : le Concorde qui revole en 2001… tu remontes dedans, ou pas ?",
+    "hashtags": [
+      "#concorde",
+      "#aviation",
+      "#avion",
+      "#comptearebours",
+      "#apprendresurtiktok"
+    ],
+    "pinned": "La lamelle tombée sur la piste avait été remplacée seize jours plus tôt, à Houston. Toi : le Concorde qui revole en 2001… tu remontes dedans, ou pas ?",
+    "instagram": {
+      "caption": "Concorde, 25 juillet 2000, 16 h 43 : le contrôleur voit des flammes derrière l'avion. Trop tard pour freiner.\n\nCompte à rebours 03 : les deux minutes du vol AF4590, seconde par seconde. Une lamelle de titane de 43 cm sur la piste, un pneu qui éclate, un réservoir qui s'ouvre… sans que rien ne le perce. La sécurité n'avait jamais prévu ça. Tout est vrai, reconstitué en maquette.\n\nToi : du feu sous l'aile après V1… tu décolles, ou tu freines ?",
+      "hashtags": [
+        "#concorde",
+        "#aviation",
+        "#histoire",
+        "#ingenierie",
+        "#comptearebours"
+      ]
+    },
+    "youtube": {
+      "title": "Concorde, 16 h 43 : ton avion décolle en feu… et son réservoir s'est ouvert de l'intérieur",
+      "description": "Compte à rebours 03 — les deux minutes du vol Air France 4590, le 25 juillet 2000 à Roissy, reconstituées seconde par seconde d'après le BEA (transcription de l'enregistreur, rapport de 2001, synthèse de l'accident) : le « top » de 16 h 42, la vitesse V1 et sa règle, le pneu qui éclate sur une lamelle de titane perdue par un autre avion, les flammes de 16 h 43, l'alarme feu, le train qui ne rentre pas. Puis pourquoi le réservoir a cédé de l'intérieur, sous un choc transmis par le kérosène, et ce qui a changé depuis : le Kevlar dans les réservoirs, de nouveaux pneus, les pistes inspectées trois fois par jour.\n\nPilotes, mécaniciens : qu'est-ce qu'on a simplifié ? Et toi : du feu sous l'aile après V1… tu décolles, ou tu freines ?",
+      "hashtags": [
+        "#shorts",
+        "#concorde",
+        "#aviation",
+        "#histoire",
+        "#science"
+      ]
+    }
+  },
+  "sources": [
+    "Vol Air France 4590, Concorde F-BTSC, Roissy-Charles de Gaulle, 25 juillet 2000 ; 100 passagers et 9 membres d'équipage (109 à bord) — BEA, synthèse « Accident du Concorde, 25 juillet 2000 » [P]",
+    "Heures du film en heure locale (UTC + 2) : « top » 16:42:31, V1 16:43:03, pneu ≈ 16:43:10, « des flammes derrière vous » 16:43:13, alarme feu 16:43:22, « le train ne rentre pas » 16:43:56, « Le Bourget » 16:44:00, perte de poussée 16:44:29, fin de l'enregistrement 16:44:31 — BEA, annexe 2 du rapport final (transcription du CVR, en UTC) et rapport intermédiaire du 10/07/2001 § 16 [P]",
+    "78 s entre « des flammes derrière vous » (14:43:13,4 UTC) et la fin de l'enregistrement (14:44:31,6) ; 120 s entre « top » et l'impact — calcul sur la transcription du CVR, BEA annexe 2 [P]",
+    "Règle V1 : avant, on arrête pour un feu moteur ou un éclat de pneu ; après V1, on continue — briefing du commandant, CVR 14:39:04, BEA annexe 2 [P] ; V1 = 150 kt, point de non-retour — briefing et synthèse BEA [P]",
+    "Six perforations de réservoir avant 2000, la pire à Washington le 14/06/1979, 4 kg/s de fuite — BEA, synthèse [P] ; leur lien avec des débris de pneu : dossier de faits § 3",
+    "Réservoir n° 5 intégré à l'aile gauche, au-dessus du train principal gauche, là où frappe le débris de pneu ; le feu s'accroche au puits de train voisin — BEA, synthèse ; annexe 8 [P]",
+    "Un DC-10 de Continental a décollé de la même piste cinq minutes plus tôt ; la lamelle d'usure en titane tombée de son moteur 3 mesure 435 mm de long, ≈ 1,4 mm d'épaisseur — BEA, synthèse ; rapport intermédiaire 2001 § 16.6.4 [P]",
+    "Le pneu n° 2 du train principal gauche éclate après V1, à plus de 300 km/h (175 kt, BEA 2001 ; ≈ 300 km/h, synthèse) ; un morceau de plus de 4 kg (4,45 kg) frappe le dessous de l'aile — BEA, synthèse ; annexe 8 [P]",
+    "« Des flammes derrière vous » : le contrôleur, 14:43:13,4 UTC — transcription du CVR [P]",
+    "Fuite ≈ 60 kg/s (≈ 75 L/s), contre 4 kg/s à Washington en 1979 — BEA, synthèse [P] ; « au moins dix fois plus » suit le rapport final (« environ dix fois ») ; ancien calcul rapport des deux chiffres, calculé ici [O]",
+    "Alarme feu moteur 2 à 14:43:22,8 UTC, 11 s après le début du feu ; moteur 2 coupé ; moteurs 2 puis 1 en pompage, en avalant gaz chauds et carburant non brûlé — BEA 2001 § 16.12.2 ; synthèse ; transcription [P]",
+    "« The gear isn't retracting » à 14:43:56,7 UTC ; vol à ≈ 200 ft (≈ 60 m) pendant ≈ une minute — transcription ; BEA 2001, synopsis [P]",
+    "Trois alarmes GPWS (trop près du sol) de 14:43:59 à 14:44:03 ; « Le Bourget, Le Bourget » à 14:44:00,6 — transcription du CVR [P]",
+    "Perte brutale de poussée à 14:44:29,5 ; une partie des commandes de vol détruite, forte inclinaison à gauche — BEA 2001 § 16 ; synthèse [P]",
+    "Impact sur un hôtel ; 113 morts : 109 à bord, 4 au sol — BEA, synthèse [P]",
+    "Le débris frappe l'intrados ; déformation de la paroi et propagation de l'onde dans le kérosène ; la paroi cède de l'intérieur — BEA, synthèse et rapport intermédiaire § 16 [P] ; le rapport final parle d'une « transmission d'énergie » vers un autre point de la paroi [S] : la voix s'en tient à « le choc traverse le kérosène et fait céder la paroi ailleurs, de l'intérieur »",
+    "Un liquide ne se comprime pas — physique générale [O], cohérente avec l'« onde de choc hydrodynamique » du BEA [P]",
+    "Panneau d'intrados ≈ 300 × 300 mm retrouvé sur la piste, bombé vers l'extérieur, sans trace d'impact ; la lamelle n'a touché que le pneu — annexe 8 du rapport final ; BEA, synthèse [P]",
+    "Il n'avait jamais été anticipé qu'un éclatement de pneu provoque une onde de choc dans le réservoir et le perce de l'intérieur — BEA, synthèse [P]",
+    "2001 : revêtement de Kevlar dans les réservoirs, nouveaux pneus radiaux — BEA, synthèse [P]",
+    "Inspections de piste : trois par jour exigées, deux en moyenne avant l'accident ; passage à trois par jour à Roissy — BEA 2001 § 18.3.2.1 et § 18.3 [P]",
+    "« Aucune manœuvre de l'équipage n'aurait pu empêcher l'accident » — BEA, synthèse [P]",
+    "Épinglé : la lamelle avait été remplacée à Houston le 9 juillet 2000, seize jours avant l'accident — BEA 2001 § 16.6.3 [P]",
+    "Annonce du CR04 : cinquante-neuf minutes après l'arrêt de sa locomotive, un train garé démarre tout seul (Lac-Mégantic) — fait validé, dossier CR04",
+    "Reconstitution : la forme du feu, la trajectoire du débris de pneu et l'allure de l'onde dans le kérosène ne sont décrites par aucune source, l'image les reconstitue ; ni cabine, ni passager, ni image du crash",
+    "Image (architecte, 13/11) : maquettes d'argile reconstituées — le Concorde au 1:20 d'après son trois-vues publié (longueur 61,66 m, envergure 25,6 m, voie 7,72 m, empattement 18,19 m), la piste 26R (4 215 × 45 m) au 1:20, distances à l'ouest de la piste COMPRESSÉES (Gonesse, l'hôtel et la piste du Bourget beaucoup plus près qu'en vrai) ; positions sur la piste de V1 (≈ 1 240 m), de la lamelle (≈ 1 780 m) et de la rotation reconstituées depuis les heures du CVR, non lues ; le réservoir n° 5 en coupe au 1:2 (une baie entre deux nervures, le panneau grossi), la jauge de débit (0 à 70 kg/s) est un indicateur du film, pas un instrument de bord ; le véhicule d'inspection est générique ; aucune cabine, aucun passager, aucune image du crash."
+  ],
+  "beats": [
+    {
+      "id": "accroche",
+      "text": "Ton Concorde décolle en *feu*. [16 h 43|Seize heures quarante-trois]. Trop tard pour *freiner*.",
+      "vo": "[tense] Ton Concorde décolle en feu. Seize heures quarante-trois. Trop tard pour freiner.",
+      "voAlt": [
+        "[firm, matter-of-fact] Ton Concorde décolle en feu. Seize heures quarante-trois. Trop tard pour freiner."
+      ],
+      "voir": "Contre-plongée depuis la piste, au ras du bitume : le Concorde passe au-dessus de la caméra en pleine accélération, nez qui se lève, une traînée de flammes rouges qui jaillit sous l'aile gauche et s'étire derrière lui ; l'horloge ambre géante à 16:43:13 ; la lamelle, petit trait gris, déjà au premier plan sur le bitume."
+    },
+    {
+      "id": "promesse",
+      "hold": 0.3,
+      "text": "Il te reste [78|soixante-dix-huit] secondes. Et sous ton aile, le réservoir s'est ouvert… de l'*intérieur*. Comment ?",
+      "vo": "[firm, matter-of-fact] Il te reste soixante-dix-huit secondes. Et sous ton aile, le réservoir s'est ouvert... de l'intérieur. Comment ?",
+      "voir": "La caméra remonte sous l'aile gauche : le réservoir 5 en volume sombre dans l'intrados, un panneau qui bombe vers l'extérieur et s'arrache, le kérosène qui s'échappe en nuage ; T− 1:18 en rouge sous l'horloge."
+    },
+    {
+      "id": "principe",
+      "text": "D'abord, une règle : [V1|vé un]. Une vitesse. Avant elle, tu peux encore freiner. Après, c'est le point de non-retour : tu décolles, quoi qu'il arrive. Ce jour-là, [V1|vé un], c'est [150|cent cinquante] nœuds.",
+      "vo": "[conversational, curious] D'abord, une règle : vé un. Une vitesse. Avant elle, tu peux encore freiner. Après, c'est le point de non-retour : tu décolles, quoi qu'il arrive. Ce jour-là, vé un, c'est cent cinquante nœuds.",
+      "voAlt": [
+        "[curious] D'abord, une règle : vé un. Une vitesse. Avant elle, tu peux encore freiner. Après, c'est le point de non-retour : tu décolles, quoi qu'il arrive. Ce jour-là, vé un, c'est cent cinquante nœuds."
+      ],
+      "voir": "La piste en maquette vue de haut, de trois quarts : une ligne tracée en travers marque V1 ; avant elle, la piste qui reste est verte (l'avion freine et s'arrête à temps) ; après, elle passe au rouge, trop courte : la maquette d'avion franchit la ligne et ne peut plus que décoller ; « 150 nœuds » s'inscrit sur la ligne."
+    },
+    {
+      "id": "reservoir",
+      "text": "Et ton kérosène ? Dans les ailes, tout près des roues. Six fois déjà, un pneu éclaté a abouti à un réservoir percé. Le pire cas : [4|quatre] kilos par seconde. Retiens bien ce chiffre.",
+      "vo": "[conversational, curious] Et ton kérosène ? Dans les ailes, tout près des roues. Six fois déjà, un pneu éclaté a abouti à un réservoir percé. Le pire cas : quatre kilos par seconde. Retiens bien ce chiffre.",
+      "voir": "Le Concorde plein en maquette, vu de dessous et de trois quarts : les réservoirs de l'aile s'allument en vert, le réservoir 5 juste au-dessus du train principal gauche ; un petit trou s'ouvre et goutte, un compteur de débit s'arrête sur « 4 kg/s », la marque 4 reste sur le cadran."
+    },
+    {
+      "id": "t1",
+      "text": "[16:42:31|Seize heures quarante-deux]. Top : tu mets les gaz, [109|cent neuf] personnes à bord. Sur la piste, un avion parti cinq minutes plus tôt a perdu une lamelle de *titane*. [43|Quarante-trois] centimètres.",
+      "vo": "[firm, matter-of-fact] Seize heures quarante-deux. Top : tu mets les gaz, cent neuf personnes à bord. Sur la piste, un avion parti cinq minutes plus tôt a perdu une lamelle de titane. Quarante-trois centimètres.",
+      "voir": "L'horloge saute à 16:42:31 ; le Concorde en bout de piste, quatre tuyères qui s'allument en ambre, il s'élance vers la caméra ; on glisse vers l'avant sur la piste jusqu'à la lamelle posée sur le bitume, gros plan, une règle de 43 cm se déroule à côté ; elle passe au rouge, cerclée."
+    },
+    {
+      "id": "t2",
+      "text": "[16:43:03|Seize heures quarante-trois]. Ton copilote annonce : [V1|vé un]. Le point de *non-retour*.",
+      "vo": "[tense] Seize heures quarante-trois. Ton copilote annonce : vé un. Le point de non-retour.",
+      "voir": "L'horloge saute à 16:43:03 ; la ligne V1 du principe sur la piste, vue au ras du sol : le train avant du Concorde la franchit, la piste devant lui passe au rouge."
+    },
+    {
+      "id": "t3",
+      "text": "[16:43:10|Quarante-trois et dix secondes]. Un pneu du train gauche roule sur la lamelle. Il *éclate*. Un morceau de plus de [4|quatre] kilos frappe le dessous de l'aile.",
+      "vo": "[firm, matter-of-fact] Quarante-trois et dix secondes. Un pneu du train gauche roule sur la lamelle. Il éclate. Un morceau de plus de quatre kilos frappe le dessous de l'aile.",
+      "voir": "Plan bas sur le train principal gauche lancé à plus de 300 km/h : le pneu avant droit passe sur la lamelle, se lacère et éclate ; un morceau de caoutchouc (« 4 kg ») file vers le haut et frappe l'intrados, juste sous le réservoir 5 ; la caméra suit le morceau."
+    },
+    {
+      "id": "t4",
+      "text": "[16:43:13|Treize secondes]. Le contrôleur te prévient : des *flammes* derrière toi. Ton réservoir fuit à environ [60|soixante] kilos par seconde. Souviens-toi : le pire cas, c'était quatre. Là, c'est au moins *dix* fois plus.",
+      "vo": "[tense] Treize secondes. Le contrôleur te prévient : des flammes derrière toi. Ton réservoir fuit à environ soixante kilos par seconde. Souviens-toi : le pire cas, c'était quatre. Là, c'est au moins dix fois plus.",
+      "voir": "Retour au plan de la première image, plus large : le kérosène jaillit sous l'aile gauche et s'embrase en une traînée de feu de plusieurs dizaines de mètres ; le compteur de débit du beat réservoir revient, l'aiguille passe la marque 4 et file à 60, zone rouge."
+    },
+    {
+      "id": "t5",
+      "text": "[16:43:22|Vingt-deux secondes]. L'alarme feu sonne, neuf secondes après l'appel du contrôleur. Ton moteur [2|deux] avale des gaz brûlants : on le coupe. Le [1|un], juste à côté, va s'étouffer à son tour.",
+      "vo": "[firm, matter-of-fact] Vingt-deux secondes. L'alarme feu sonne, neuf secondes après l'appel du contrôleur. Ton moteur deux avale des gaz brûlants : on le coupe. Le un, juste à côté, va s'étouffer à son tour.",
+      "voir": "Les deux réacteurs gauches en coupe sous l'aile, la flamme qui lèche leurs entrées d'air : le moteur 2 aspire le feu, passe au rouge et s'éteint (ses aubes ralentissent jusqu'à l'arrêt) ; le moteur 1, voisin, crachote ; un témoin d'alarme feu ambre clignote sur le côté du cadre."
+    },
+    {
+      "id": "t6",
+      "text": "[16:43:56|Cinquante-six secondes]. Tu as demandé à rentrer le train. Il ne rentre *pas*. Ton Concorde reste à [60|soixante] mètres du sol, et ne monte plus.",
+      "vo": "[tense] Cinquante-six secondes. Tu as demandé à rentrer le train. Il ne rentre pas. Ton Concorde reste à soixante mètres du sol, et ne monte plus.",
+      "voir": "Le Concorde de profil, en vol bas au-dessus de la campagne en maquette : les jambes du train principal restent sorties, cerclées de rouge ; une ligne d'altitude « 60 m » court sous lui, plate ; la traînée de feu derrière."
+    },
+    {
+      "id": "t7",
+      "text": "[16:44:00|Seize heures quarante-quatre]. Une autre alarme : trop près du sol. Ton copilote répète : Le Bourget, Le Bourget.",
+      "vo": "[firm, matter-of-fact] Seize heures quarante-quatre. Une autre alarme : trop près du sol. Ton copilote répète : Le Bourget, Le Bourget.",
+      "voir": "L'horloge saute à 16:44:00 ; vue de haut, la maquette du nord de Paris : la trajectoire ambre du Concorde depuis Roissy, et au loin la piste du Bourget qui s'allume ; l'ombre de l'avion rase les toits."
+    },
+    {
+      "id": "t8",
+      "hold": 0.3,
+      "text": "[16:44:29|Vingt-neuf secondes]. La poussée s'effondre. Une partie des commandes est détruite. Ton Concorde penche à gauche… et *tombe*.",
+      "vo": "[tense] Vingt-neuf secondes. La poussée s'effondre. Une partie des commandes est détruite. Ton Concorde penche à gauche... et tombe.",
+      "voir": "Le Concorde de trois quarts arrière, tuyères qui s'éteignent l'une après l'autre ; l'aile gauche s'abaisse, l'avion s'incline fortement et sort du cadre par le bas ; la caméra ne le suit pas : elle reste sur le ciel vide."
+    },
+    {
+      "id": "issue",
+      "hold": 0.3,
+      "text": "[16:44:31|Trente et une secondes]. Ton Concorde s'écrase sur un hôtel. [113|Cent treize] morts. Deux minutes pile après le top.",
+      "vo": "[calm] Trente et une secondes. Ton Concorde s'écrase sur un hôtel. Cent treize morts. Deux minutes pile après le top.",
+      "voir": "Aucune image du crash : l'horloge se fige à 16:44:31 et le T− tombe à zéro ; retour sur la piste vide de Roissy, au ras du bitume, la lamelle seule au premier plan, la traînée de suie qui s'éloigne."
+    },
+    {
+      "id": "defaut",
+      "text": "Alors, ce réservoir ? Le morceau de pneu frappe le dessous de l'aile. Derrière la paroi, le réservoir est plein de kérosène. Et un liquide, ça ne se comprime presque pas : la paroi s'enfonce, le kérosène est *repoussé*… et la paroi cède ailleurs, de l'intérieur.",
+      "vo": "[conversational, curious] Alors, ce réservoir ? Le morceau de pneu frappe le dessous de l'aile. Derrière la paroi, le réservoir est plein de kérosène. Et un liquide, ça ne se comprime presque pas : la paroi s'enfonce, le kérosène est repoussé... et la paroi cède ailleurs, de l'intérieur.",
+      "voAlt": [
+        "[curious] Alors, ce réservoir ? Le morceau de pneu frappe le dessous de l'aile. Derrière la paroi, le réservoir est plein de kérosène. Et un liquide, ça ne se comprime presque pas : la paroi s'enfonce, le kérosène est repoussé... et la paroi cède ailleurs, de l'intérieur."
+      ],
+      "voir": "LE CLIMAX, en grand et au ralenti : le réservoir 5 en coupe, plein de kérosène ambre ; le morceau de pneu frappe l'intrados, la paroi s'enfonce ; une onde rouge part du point d'impact et traverse tout le liquide ; elle atteint un autre panneau de la paroi, qui bombe vers l'extérieur et s'arrache, de l'intérieur ; le kérosène jaillit par le trou ; le panneau arraché cerclé de rouge."
+    },
+    {
+      "id": "preuve",
+      "text": "L'indice : sur la piste, un panneau de l'aile de [30|trente] centimètres, bombé vers l'extérieur, sans trace d'impact. Le titane n'a *jamais* touché le réservoir. Et ça, personne ne l'avait prévu.",
+      "vo": "[firm, matter-of-fact] L'indice : sur la piste, un panneau de l'aile de trente centimètres, bombé vers l'extérieur, sans trace d'impact. Le titane n'a jamais touché le réservoir. Et ça, personne ne l'avait prévu.",
+      "voir": "Le panneau d'intrados de 30 × 30 cm posé sur le bitume, de trois quarts sur son halo : sa face bombée vers l'extérieur, lisse, sans aucune marque ; à côté, la lamelle de titane, qui ne porte que des traces de caoutchouc ; un trait rouge relie la lamelle au pneu, aucun au réservoir."
+    },
+    {
+      "id": "depuis",
+      "text": "En [2001|deux mille un], six de ses réservoirs sont doublés de +Kevlar+, ses pneus changent. Et à Roissy, les inspections de piste passent à [3|trois] par jour.",
+      "vo": "[warm, conversational] En deux mille un, six de ses réservoirs sont doublés de Kevlar, ses pneus changent. Et à Roissy, les inspections de piste passent à trois par jour.",
+      "voAlt": [
+        "[curious] En deux mille un, six de ses réservoirs sont doublés de Kevlar, ses pneus changent. Et à Roissy, les inspections de piste passent à trois par jour."
+      ],
+      "voir": "La lumière blanchit, grille et halo passent au vert : le réservoir 5 en coupe reçoit une doublure de Kevlar qui passe du rouge au vert, le même choc arrive et la paroi tient ; puis la piste de Roissy vue de haut, un véhicule d'inspection la parcourt, trois coches vertes s'allument à côté d'une horloge (deux grises avant)."
+    },
+    {
+      "id": "comment",
+      "hold": 0.3,
+      "text": "Pour le BEA, dès l'avion touché, aucune manœuvre de l'équipage n'aurait pu empêcher l'accident. Toi, en +commentaire+ : le Concorde qui revole en [2001|deux mille un]… tu remontes dedans, ou *pas* ?",
+      "vo": "[conversational, curious] Pour le BEA, dès l'avion touché, aucune manœuvre de l'équipage n'aurait pu empêcher l'accident. [short pause] Toi, en commentaire : le Concorde qui revole en deux mille un... tu remontes dedans, ou pas ?",
+      "voAlt": [
+        "[curious] Pour le BEA, dès l'avion touché, aucune manœuvre de l'équipage n'aurait pu empêcher l'accident. [short pause] Toi, en commentaire : le Concorde qui revole en deux mille un... tu remontes dedans, ou pas ?"
+      ],
+      "voir": "Retour sur la ligne V1 de la piste, la maquette d'avion en feu posée juste après elle ; deux camps en duel sous l'avion : « je décolle » (la piste devant, rouge, trop courte) / « je freine »."
+    },
+    {
+      "id": "abo",
+      "text": "+Abonne-toi+ : prochain compte à rebours. [59|Cinquante-neuf] minutes après l'arrêt de sa locomotive, un train garé démarre tout *seul*.",
+      "vo": "[warm, conversational] Abonne-toi : [short pause] prochain compte à rebours. Cinquante-neuf minutes après l'arrêt de sa locomotive, un train garé démarre tout seul.",
+      "voir": "Panneau « S'abonner » et chevrons vers la colonne de boutons ; derrière, dans le noir chaud, une locomotive en maquette, phares éteints, et l'horloge ambre qui tourne de cinquante-neuf minutes."
+    },
+    {
+      "id": "boucle",
+      "text": "Tout s'est joué à la seconde…",
+      "vo": "[calm] Tout s'est joué à la seconde,",
+      "voir": "L'horloge rembobine vers 16:43:13 ; la caméra redescend au ras de la piste de Roissy et retrouve exactement la première image : le Concorde qui passe au-dessus, le feu sous l'aile gauche, la lamelle au premier plan."
+    }
+  ],
+  "cues": {
+    "choc": "accroche:feu",
+    "toprincipe": "principe-0.12",
+    "toreservoir": "reservoir-0.12",
+    "tot1": "t1-0.12",
+    "tot2": "t2-0.12",
+    "tot3": "t3-0.12",
+    "tot4": "t4-0.12",
+    "tot5": "t5-0.12",
+    "tot6": "t6-0.12",
+    "tot7": "t7-0.12",
+    "tot8": "t8-0.12",
+    "toissue": "issue-0.14",
+    "todefaut": "defaut-0.14",
+    "topreuve": "preuve-0.12",
+    "todepuis": "depuis-0.14",
+    "tocta": "comment-0.12",
+    "toabo": "abo-0.14",
+    "toloop": "boucle-0.12",
+    "interieur1": "promesse:l'intérieur",
+    "vun": "principe:V1",
+    "apres": "principe:Après",
+    "noeuds": "principe:nœuds",
+    "quatre1": "reservoir:quatre",
+    "retiens": "reservoir:Retiens",
+    "top": "t1:Top",
+    "lamelle1": "t1:lamelle",
+    "vdeux": "t2:V1",
+    "roule": "t3:roule",
+    "eclate": "t3:éclate",
+    "frappe1": "t3:frappe",
+    "flammes": "t4:flammes",
+    "soixante": "t4:soixante",
+    "dixfois": "t4:dix",
+    "alarme1": "t5:L'alarme",
+    "coupe": "t5:coupe",
+    "etouffer": "t5:s'étouffer",
+    "rentrepas": "t6:Il",
+    "bourget1": "t7:Bourget",
+    "effondre": "t8:s'effondre",
+    "tombe": "t8:tombe",
+    "hotel": "issue:hôtel",
+    "frappe2": "defaut:frappe",
+    "comprime": "defaut:comprime",
+    "enfonce": "defaut:s'enfonce",
+    "trigger": "defaut:repoussé-0.05",
+    "cede": "defaut:cède",
+    "panneau": "preuve:panneau",
+    "bombe": "preuve:bombé",
+    "verdict": "preuve:jamais",
+    "kevlar": "depuis:Kevlar",
+    "inspections": "depuis:inspections",
+    "remontes": "comment:remontes",
+    "duelB": "comment:pas",
+    "locomotive": "abo:locomotive",
+    "rewind": "boucle:joué"
+  },
+  "bedVolume": 0.8,
+  "sons": [
+    {
+      "id": "CR03-pneu-eclate",
+      "image": "le pneu du train gauche passe sur la lamelle et éclate (t3)",
+      "duree": 2,
+      "prompt": "Large aircraft tire bursting at very high speed on a concrete runway: violent rubber explosion bang, shredded rubber flapping and slapping, close, outdoors, isolated, no music"
+    },
+    {
+      "id": "CR03-debris-aile",
+      "image": "le morceau de pneu frappe le dessous de l'aile, sous le réservoir plein (t3, defaut)",
+      "duree": 1.5,
+      "prompt": "Heavy chunk of rubber slamming into the underside of an aluminium aircraft wing full of fuel: deep hollow metallic boom with a dull liquid-filled thud, close, isolated, no music"
+    },
+    {
+      "id": "CR03-panneau-arrache",
+      "image": "la paroi s'enfonce, le kérosène est repoussé et le panneau d'intrados s'arrache de l'intérieur (defaut)",
+      "duree": 2,
+      "prompt": "Aluminium aircraft skin panel bulging and tearing off from inside under a liquid pressure surge: metallic pop, rivets snapping, sudden gush of fuel, close, isolated, no music"
+    },
+    {
+      "id": "CR03-kerosene-fuite",
+      "image": "le kérosène jaillit sous l'aile à soixante kilos par seconde (promesse, t4)",
+      "duree": 3,
+      "prompt": "Jet fuel gushing violently from a ruptured aircraft wing tank at speed: heavy liquid torrent spraying into the air stream, strong wind rush, outdoors, isolated, no music"
+    },
+    {
+      "id": "CR03-torche-feu",
+      "image": "la traînée de feu de plusieurs dizaines de mètres derrière l'avion (accroche, t4)",
+      "duree": 4,
+      "prompt": "Huge trailing kerosene fire behind a jet aircraft at full power: deep roaring turbulent flame rush, fire whoosh blending with jet engine roar, outdoors, isolated, no music"
+    },
+    {
+      "id": "CR03-alarme-feu",
+      "image": "l'alarme feu moteur du poste de pilotage, cloche et gong (t5)",
+      "duree": 3,
+      "prompt": "Airliner cockpit engine fire warning: loud continuous fire bell ringing with a single master warning gong chime, heard inside a cockpit, isolated, no voices, no music"
+    },
+    {
+      "id": "CR03-reacteurs",
+      "image": "les quatre réacteurs à pleine poussée, post-combustion allumée, du « Top » (t1) à l'issue ; ils retombent au moteur 2 coupé (t5) et quand la poussée s'effondre (t8) ; le décollage de 2001 (comment)",
+      "duree": 6,
+      "prompt": "Four Concorde turbojet engines at full takeoff power with afterburners lit: steady deep thundering roar with crackle, heard outdoors from close behind the aircraft on the runway, continuous and loopable, isolated, no music",
+      "reserve": true
+    }
+  ],
+  "sfx": [
+    {
+      "type": "space",
+      "mix": 0.18
+    },
+    {
+      "type": "sample",
+      "file": "amb-vent.wav",
+      "loop": true,
+      "from": 0,
+      "gain": -28,
+      "bus": "under",
+      "fade": 0.05,
+      "curve": [
+        [
+          0,
+          0.7
+        ],
+        [
+          "toprincipe",
+          0.4
+        ],
+        [
+          "tot1",
+          0.8
+        ],
+        [
+          "tot3",
+          1
+        ],
+        [
+          "toissue",
+          1
+        ],
+        [
+          "todefaut-0.05",
+          1
+        ],
+        [
+          "todefaut",
+          0.12
+        ],
+        [
+          "topreuve-0.05",
+          0.12
+        ],
+        [
+          "topreuve",
+          0.9
+        ],
+        [
+          "todepuis",
+          0.35
+        ],
+        [
+          "tocta",
+          0.35
+        ],
+        [
+          "toloop",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "sample",
+      "file": "amb-tension.wav",
+      "loop": true,
+      "from": 0,
+      "gain": -16,
+      "bus": "under",
+      "fade": 0.05,
+      "curve": [
+        [
+          0,
+          0.8
+        ],
+        [
+          "toprincipe",
+          0.55
+        ],
+        [
+          "tot1",
+          0.7
+        ],
+        [
+          "tot3",
+          0.9
+        ],
+        [
+          "tot5",
+          1
+        ],
+        [
+          "toissue-0.05",
+          1
+        ],
+        [
+          "toissue",
+          0.25
+        ],
+        [
+          "todefaut",
+          0.6
+        ],
+        [
+          "trigger",
+          1
+        ],
+        [
+          "topreuve",
+          0.5
+        ],
+        [
+          "todepuis",
+          0.35
+        ],
+        [
+          "tocta",
+          0.35
+        ],
+        [
+          "toloop",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "sample",
+      "file": "CR03-torche-feu.wav",
+      "loop": true,
+      "from": 0,
+      "to": "promesse-0.12",
+      "gain": -16,
+      "bus": "under",
+      "fade": 0.05,
+      "curve": [
+        [
+          0,
+          0.9
+        ],
+        [
+          "choc",
+          1
+        ],
+        [
+          "promesse-0.12",
+          0.85
+        ]
+      ]
+    },
+    {
+      "type": "sample",
+      "file": "CR03-kerosene-fuite.wav",
+      "loop": true,
+      "from": "promesse:ouvert+0.3",
+      "to": "toprincipe",
+      "gain": -18,
+      "bus": "under",
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "CR03-torche-feu.wav",
+      "loop": true,
+      "from": "flammes",
+      "to": "toissue",
+      "gain": -17,
+      "bus": "under",
+      "fade": 0.6,
+      "curve": [
+        [
+          "flammes",
+          1
+        ],
+        [
+          "tot5",
+          0.85
+        ],
+        [
+          "coupe",
+          0.8
+        ],
+        [
+          "etouffer",
+          0.65
+        ],
+        [
+          "tot6",
+          0.6
+        ],
+        [
+          "tot7",
+          0.5
+        ],
+        [
+          "tot8",
+          0.75
+        ],
+        [
+          "effondre",
+          0.5
+        ],
+        [
+          "tombe",
+          0.35
+        ]
+      ]
+    },
+    {
+      "type": "sample",
+      "file": "CR03-kerosene-fuite.wav",
+      "loop": true,
+      "from": "t4:fuit",
+      "to": "tot5",
+      "gain": -22,
+      "bus": "under",
+      "fade": 0.4
+    },
+    {
+      "type": "sample",
+      "file": "CR03-torche-feu.wav",
+      "loop": true,
+      "from": "tocta",
+      "to": "comment:Concorde-0.14",
+      "gain": -24,
+      "bus": "under",
+      "fade": 0.4
+    },
+    {
+      "type": "sample",
+      "file": "CR03-torche-feu.wav",
+      "loop": true,
+      "from": "toloop",
+      "gain": -16,
+      "bus": "under",
+      "fade": 0.05
+    },
+    {
+      "type": "sample",
+      "file": "sig-dossier.wav",
+      "at": 0.02,
+      "gain": -8,
+      "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "CR03-panneau-arrache.wav",
+      "at": "promesse:ouvert+0.02",
+      "gain": -10
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "t1-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "t2-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "t3-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "t4-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "t5-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "t6-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "t7-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "t8-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "issue-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "CR03-pneu-eclate.wav",
+      "at": "eclate-0.02",
+      "gain": -8
+    },
+    {
+      "type": "sample",
+      "file": "CR03-debris-aile.wav",
+      "at": "frappe1+0.18",
+      "gain": -6
+    },
+    {
+      "type": "sample",
+      "file": "CR03-alarme-feu.wav",
+      "at": "alarme1-0.09",
+      "gain": -17,
+      "dur": 2.4,
+      "fade": 0.8
+    },
+    {
+      "type": "sample",
+      "file": "CR03-debris-aile.wav",
+      "at": "frappe2+0.21",
+      "gain": -6
+    },
+    {
+      "type": "sample",
+      "file": "CR03-panneau-arrache.wav",
+      "at": "defaut:ailleurs+0.02",
+      "gain": -5,
+      "bus": "main"
+    },
+    {
+      "type": "hush",
+      "from": "preuve:Et-0.3",
+      "to": "depuis-0.1",
+      "depth": -14
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "depuis-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "sig-boucle.wav",
+      "at": "rewind",
+      "gain": -10,
+      "offset": 0.6
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Système Décodé · CR03 · Concorde</title>
+    <link rel="stylesheet" href="gen/brand.css" />
+    <script src="gen/gsap.min.js"></script>
+    <style>
+      /* Les dispositifs récurrents (en-tête du Compte à rebours, étiquettes, appels) sont stylés dans kit/brand.css
+         ([data-serie="compte-a-rebours"]). Ici : la couleur de chaque étiquette de CE film, fixée par identifiant (.chip--live est alarme). */
+      #chip-bord, #chip-bilan { color: var(--papier); }
+      #chip-six, #chip-feu, #chip-alt { color: var(--alarme); }
+      #chip-v1, #chip-kevlar, #chip-inspect { color: var(--veille); }
+      .chip i { display: block; font: 600 24px/1.3 var(--mono); color: var(--papier); font-style: normal; margin-top: 6px; }
+      #hud-remain { color: rgb(255, 107, 107); }
+      #chip-kevlar { white-space: normal; flex-wrap: wrap; max-width: 820px; } #chip-kevlar i { flex-basis: 100%; }
+      #chip-inspect { white-space: normal; flex-wrap: wrap; max-width: 820px; } #chip-inspect .ticks { flex-basis: 100%; }
+      /* trois coches d'inspection : deux grises (avant), la troisième s'allume (fin.js les allume une à une) */
+      #chip-inspect .ticks { display: flex; gap: 14px; margin-top: 8px; }
+      #chip-inspect .ticks u { text-decoration: none; font: 800 44px/1 var(--mono); color: rgba(239, 234, 224, 0.58); }
+
+      /* LA JAUGE DE DÉBIT (world.js l'écrit depuis S.gauge / S.debit / S.mark) : un demi-cadran, 0 à 70 kg/s, la marque « 4 » qui reste,
+         l'aiguille ambre qui vire à l'alarme au-delà de 4 (data-zone="rouge"). Zone haute, à gauche : jamais avec une étiquette. */
+      #gauge { position: absolute; left: var(--safe-l, 64px); top: 452px; width: 400px; height: 300px; opacity: 0; pointer-events: none;
+        font-family: var(--mono); color: var(--papier); }
+      #gauge svg { position: absolute; left: 0; top: 0; width: 400px; height: 230px; overflow: visible; }
+      #gauge .arc { fill: none; stroke: rgba(239, 234, 224, 0.32); stroke-width: 10; }
+      #gauge .arc-red { fill: none; stroke: var(--alarme); stroke-width: 10; opacity: 0.55; }
+      #gauge-mark { opacity: 0; }
+      #gauge-mark line { stroke: var(--veille); stroke-width: 7; }
+      #gauge-mark text { fill: var(--veille); font: 800 30px var(--mono); }
+      #gauge-needle { position: absolute; left: 196px; top: 40px; width: 8px; height: 170px; transform-origin: 4px 170px;
+        background: var(--ambre); border-radius: 4px; box-shadow: 0 0 18px rgba(255, 178, 62, 0.6); transform: rotate(-90deg); }
+      #gauge[data-zone="rouge"] #gauge-needle { background: var(--alarme); box-shadow: 0 0 22px rgba(255, 45, 45, 0.7); }
+      #gauge .read { position: absolute; left: 0; width: 400px; top: 228px; text-align: center; }
+      #gauge-val { font: 800 64px/1 var(--mono); }
+      #gauge[data-zone="rouge"] #gauge-val { color: var(--alarme); }
+      #gauge .unit { display: block; font: 600 24px/1.4 var(--mono); opacity: 0.8; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-serie="compte-a-rebours" data-phase="nuit" data-composition-id="main" data-start="0" data-duration="148.033" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div id="vignette" class="layer"></div>
+      <div id="hud-shade"></div>
+      <div id="title-shade"></div>
+      <svg id="leaders" viewBox="0 0 1080 1920"></svg>
+
+      <!-- l'en-tête du Compte à rebours (kit/brand.css [data-serie="compte-a-rebours"], piloté par crHud dans main.js) :
+           l'étiquette à gauche, le nom du compte à droite, l'HEURE RÉELLE au centre (ambre), le temps qui reste dessous (alarme) -->
+      <header id="hud">
+        <div class="hud__tag"><i class="hud__dot"></i><span id="hud-tag">Compte à rebours · 03</span></div>
+        <em class="hud__brand" id="hud-brand">Système Décodé</em>
+        <i class="hud__burst" id="hud-burst"></i>
+        <div class="hud__clock" id="hud-clock">16:43:13</div>
+        <div class="hud__remain" id="hud-remain">T−1 min 18 s</div>
+        <nav class="hud__acts" id="hud-acts">
+          <span>01 L'heure</span><span>02 Le défaut</span><span>03 Depuis</span>
+        </nav>
+      </header>
+
+      <!-- Pas de pièce du dossier dans ce film : aucune page du BEA n'est citée telle quelle (docs/journal/CR03-architecte.md). -->
+
+      <!-- LA JAUGE DE DÉBIT (reservoir : « 4 kilos par seconde », t4 : « 60 ») -->
+      <div id="gauge" data-zone="ok">
+        <svg viewBox="0 0 400 230">
+          <path class="arc" d="M 30 210 A 170 170 0 0 1 370 210" />
+          <path class="arc-red" d="M 33.5 175.8 A 170 170 0 0 1 370 210" />
+          <g id="gauge-mark"><line x1="22.9" y1="177.8" x2="52.4" y2="183.2" /><text x="2" y="168">4</text></g>
+        </svg>
+        <i id="gauge-needle"></i>
+        <div class="read"><span id="gauge-val">0</span><span class="unit">kg de kérosène / s</span></div>
+      </div>
+
+      <!-- LES CHIFFRES QUE L’IMAGE NE MONTRE PAS (une étiquette à la fois, zone haute 436–790 ; chip(id, null, 96, 470, de, à)) -->
+      <div id="chip-v1" class="chip chip--live"><span>Ce jour-là · V1</span><b>150 nœuds</b><i>≈ 280 km/h</i></div>
+      <div id="chip-six" class="chip chip--live"><span>Avant 2000 · pneu éclaté</span><b>6 réservoirs percés</b></div>
+      <div id="chip-bord" class="chip chip--live"><span>Vol Air France 4590</span><b>109 à bord</b></div>
+      <div id="chip-feu" class="chip chip--live"><span>16:43:22</span><b>Feu moteur 2</b></div>
+      <div id="chip-alt" class="chip chip--live"><span>Le train ne rentre pas</span><b>≈ 60 m</b><i>il ne monte plus</i></div>
+      <div id="chip-bilan" class="chip chip--live"><span>25 juillet 2000 · Gonesse</span><b>113 morts</b></div>
+      <div id="chip-kevlar" class="chip chip--live"><span>Depuis 2001</span><b>Kevlar dans 6 réservoirs</b><i>de nouveaux pneus</i></div>
+      <div id="chip-inspect" class="chip chip--live"><span>Roissy · inspections de piste</span><b>3 par jour</b><div class="ticks"><u id="tick-1">✓</u><u id="tick-2">✓</u><u id="tick-3">✓</u></div></div>
+
+      <!-- appels à l’action (fin.js) : désignent l’interface, ne la remplacent pas. Pas de like dans ce format. -->
+      <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
+      <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
+
+      <!-- abo : le prochain compte à rebours (CR04, Lac-Mégantic) ; la voix dit le fait, pas le nom : le titre reste caviardé -->
+      <section id="next">
+        <div class="panel__h"><span>Prochain compte à rebours · 04</span><span>Classé</span></div>
+        <div id="next-title"><span>Dossier classé</span><span id="next-redact"></span></div>
+        <div id="next-fact"><span>Un train garé démarre tout seul.</span></div>
+        <div id="next-cta"><span>S’abonner pour l’ouvrir</span><span>+</span></div>
+      </section>
+
+      <!-- la question du commentaire en DEUX réponses (duelCall, fin.js, toneA ET toneB null : aucune ne s’allume d’une couleur
+           qui répondrait à la place du spectateur — le défaut de duelCall est vert pour B) -->
+      <div id="duel">
+        <div class="kicker">Le Concorde de 2001 ?</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">J’y remonte</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Jamais</span></div>
+        <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
+      </div>
+
+      <div id="callouts" class="layer"></div>
+      <div id="hook"></div>
+      <div id="captions"></div>
+      <div id="flash" class="layer"></div>
+      <!-- le grain de film, sur tout le cadre (reconstitution.js le déplace image par image, sur le temps du film) -->
+      <div id="grain" class="layer"></div>
+
+      <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
+      <!-- AUDIO:END -->
+    </div>
+
+    <script src="gen/episode.data.js"></script>
+    <script src="gen/bundle.js"></script>
+    <script>
+      const tl = window.SD.build();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
