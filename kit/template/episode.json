@@ -158,10 +158,18 @@
     "rewind": "boucle:toujours"
   },
   "bedVolume": 0.8,
+  "sons": [],
   "sfx": [
     {
-      "type": "drone",
-      "gain": -24,
+      "type": "space",
+      "mix": 0.18
+    },
+    {
+      "type": "sample",
+      "file": "amb-tension.wav",
+      "loop": true,
+      "from": 0,
+      "gain": -16,
       "curve": [
         [
           0,
@@ -194,71 +202,78 @@
       ]
     },
     {
-      "type": "hit",
+      "type": "sample",
+      "file": "sig-dossier.wav",
       "at": 0.02,
-      "gain": -13,
-      "pitch": 0.9
+      "gain": -8,
+      "bus": "main"
     },
     {
-      "type": "impact",
-      "at": 0.03,
-      "gain": -14,
-      "size": 1.2
-    },
-    {
-      "type": "swish",
-      "at": 0.14,
-      "dur": 0.3,
-      "gain": -15
-    },
-    {
-      "type": "suck",
+      "type": "sample",
+      "file": "aspiration.wav",
+      "at": "ouvre-0.7",
       "to": "ouvre-0.04",
-      "dur": 0.6,
-      "gain": -17
+      "offset": 0.6,
+      "gain": -18
     },
     {
       "type": "hush",
       "from": "ouvre",
-      "to": "explode-0.02",
-      "depth": -14
+      "to": "ouvre$+0.02",
+      "depth": -90
     },
     {
-      "type": "impact",
-      "at": "explode",
-      "gain": -16,
-      "size": 0.8
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.16",
+      "dur": 0.3,
+      "gain": -5,
+      "bus": "main"
     },
     {
-      "type": "impact",
+      "type": "sample",
+      "file": "sig-ouverture.wav",
+      "at": "ouvre$+0.38",
+      "offset": 1.75,
+      "gain": -2,
+      "bus": "main",
+      "dur": 0.55,
+      "fade": 0.2
+    },
+    {
+      "type": "sample",
+      "file": "riser.wav",
+      "at": "tozero-2",
+      "to": "tozero",
+      "offset": 1.5,
+      "gain": -22
+    },
+    {
+      "type": "sample",
+      "file": "impact-lourd.wav",
       "at": "tozero",
-      "gain": -12,
-      "size": 1.2
+      "gain": -17,
+      "bus": "main"
     },
     {
-      "type": "impact",
+      "type": "sample",
+      "file": "impact-lourd.wav",
       "at": "trigger",
-      "gain": -10,
-      "size": 1.4
-    },
-    {
-      "type": "blip",
-      "at": "verdict",
       "gain": -15,
-      "pitch": 0.7,
-      "heavy": true
+      "bus": "main"
     },
     {
-      "type": "impact",
-      "at": "toloop",
-      "gain": -16,
-      "size": 0.7
+      "type": "sample",
+      "file": "impact-sec.wav",
+      "at": "verdict",
+      "gain": -15
     },
     {
-      "type": "rewind",
+      "type": "sample",
+      "file": "sig-boucle.wav",
       "at": "rewind",
-      "dur": 1,
-      "gain": -21
+      "gain": -8,
+      "offset": 0.6
     }
   ]
 }

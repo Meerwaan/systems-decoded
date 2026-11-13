@@ -26,11 +26,7 @@
   "post": {
     "youtube": {
       "title": "Le fait le plus fou du film : comment on fabrique (ce que les gens tapent)",
-      "titleAlts": [
-        "La même accroche : la promesse dite autrement, avec le mot cherché",
-        "Un autre paradoxe que le film prouve : comment on fabrique, en clair"
-      ],
-      "titleNote": "Putaclic mais fidèle (docs/recette-long.md, « Le titre ») : l'accroche d'abord, puis « : » et ce que les gens tapent (autocomplétion de YouTube, vérifiée) ; chaque mot vrai dans le film ; 60 à 90 caractères ; jamais les mots d'une miniature.",
+      "titleNote": "Un seul titre, travaillé à fond (plus de variantes ni de test A/B depuis le 12/11). Putaclic mais fidèle (docs/recette-long.md, « Le titre ») : l'accroche d'abord, puis « : » et ce que les gens tapent (autocomplétion de YouTube, vérifiée) ; chaque mot vrai dans le film ; 60 à 90 caractères ; jamais les mots de la miniature.",
       "keyword": "comment on fabrique",
       "descriptionTemplate": "L'accroche en une phrase, puis comment on fabrique ce que les gens cherchent : ces deux premières lignes sont celles que montre la recherche.\n\nChapitres\n__CHAPITRES__\n\nSources : …\n\nFabriqué pour te sauver : comment on fabrique les objets qui te protègent. Abonne-toi : on se retrouve très vite, dans une autre usine.\n\nLa question du commentaire ?",
       "hashtags": [
@@ -49,40 +45,6 @@
     ],
     "tone": "signal",
     "tag": "Un fait · un chiffre",
-    "cam": {
-      "side": -420,
-      "drift": 0
-    },
-    "grade": {
-      "contrast": 1.32,
-      "saturation": 1.15
-    }
-  },
-  "thumb2": {
-    "at": "etape1+1",
-    "title": [
-      "UN AUTRE",
-      "OBJET"
-    ],
-    "tone": "veille",
-    "tag": "Un autre fait",
-    "cam": {
-      "side": -420,
-      "drift": 0
-    },
-    "grade": {
-      "contrast": 1.32,
-      "saturation": 1.15
-    }
-  },
-  "thumb3": {
-    "at": "ouvre+1",
-    "title": [
-      "UNE AUTRE",
-      "PHRASE"
-    ],
-    "tone": "signal",
-    "tag": "L'objet",
     "cam": {
       "side": -420,
       "drift": 0
@@ -234,6 +196,7 @@
     "rewind": "boucle:jour"
   },
   "bedVolume": 0.8,
+  "sons": [],
   "sfx": [
     {
       "type": "space",
