@@ -1,0 +1,9 @@
+# L07 · ce que les décors ont changé (à lire avant ta section de docs/L07-actes.md)
+
+1. `VIEW` recalé sur les vrais décors (14/11) : poses nouvelles `fibreBend`, `latheCut`, `proportions`, `echo`, `thumbDrop`, `crushed` ; `preformEnd` se filme corps REMONTÉ (`sink` 0, `sinter` 1, `section` 1). Poses non vues sur planche, à contrôler dans tes `look` : `bendWide`, `docs`, `splice`, `plug`, `spliceTight`, `cleaver`, `ricochet`, `subseaEnd`, `landing` (faible), `beach` (conduit peu lisible).
+2. **`spin`, `wind`, `flow` sont des VITESSES** (angle = temps × vitesse) : on les change par `now` ou sur une coupe, JAMAIS par une rampe `tl`/`st` (à t ≈ 300 s, une rampe fait des centaines de tours en une seconde). « spin ralentit » = un `now` plus bas.
+3. Mer (`voyage.js`) : `ship` > 0 et `pay` > 0 (grappin et boucle à 0) = « mode pose » : le câble du fond n'existe que derrière le navire. `AT.mer` pose `pay: 0, amp: 1`. Sans `amp`, la lumière tombe à ≈ 38 % au répéteur suivant (chapitre `repeteur` : 0 puis 1). `grapnel` > 0 déplace la coupure à `SEA.repair` jusqu'à `mend` 0,5.
+4. `blow` (soufflage) ne saute pas quand `crushed` passe à 1 ; `talk` = 2,2 foyers/s ; `pinch` 0 → 1 = le pli sous le pied du meuble (signal).
+5. Banc (`fibre.js`) : `named` 5 allume le cœur ; `assemble` 0 → 3 ; la cliveuse disparaît dès que la soudure commence ; l'ONT est posé sur le banc (y local −14). Le brouillard du banc est borné (`Math.max(d, 400)`).
+6. Usine : `burner`/`flame` suivent le chariot du tour ; `tank` = surface du liquide ; `claque` (pas `snap`) casse la fibre, éclair de deux images.
+7. Première image : **hook1** (derrière ta box) retenue ; `POSE0 = VIEW.hook1` recalé (box ≈ 45 % de la largeur). Les impulsions y sont petites : c1 les fait courir franchement dès l'image 1. Miniature : `thumbDrop` (goutte orange, `heat` 1, `drop` 0,5).

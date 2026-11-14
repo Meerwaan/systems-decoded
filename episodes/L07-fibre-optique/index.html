@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="gen/long.css" />
     <script src="gen/gsap.min.js"></script>
     <style>
-      /* The recurring devices of the long format are styled in kit/long.css (header, chapter cards, keywords,
+      /* L07: the header's readout is either « Température du verre » or « Lumière restante » (main.js swaps the label).
+         The chute (retitle, beat `chute`): « Internet » · « Dans les nuages » struck · « Dans du verre ».
+         The recurring devices of the long format are styled in kit/long.css (header, chapter cards, keywords,
          facts). The chapters create their facts and chips from script (kit/lib/long.js: fact, chipEl): this page
          does not change from one chapter to the next, so several hands can stage chapters at the same time. */
     </style>
@@ -22,7 +24,7 @@
       <svg id="leaders" viewBox="0 0 1920 1080"></svg>
 
       <header id="hud">
-        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier L07 · Fabriqué pour te sauver</span></div>
+        <div class="hud__tag"><i class="hud__dot"></i><span>Dossier L07 · Le fil de verre</span></div>
         <div class="hud__title" id="hud-title">La fibre optique</div>
         <div class="hud__step"><div class="hud__step-n" id="hud-step-n">Hors chaîne</div><div class="hud__step-t" id="hud-step-t"></div></div>
         <div class="hud__temp"><div class="hud__temp-l">Température du verre</div><div class="hud__temp-v" id="hud-temp-v">—</div></div>
@@ -37,11 +39,11 @@
 
       <!-- the chute (kit/lib/blocks.js · retitle) -->
       <div id="retitle">
-        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
+        <div class="kicker" id="retitle-k">Internet</div>
         <div id="retitle-main">
           <span id="retitle-slot">
-            <span id="retitle-a">L'idée reçue<i id="retitle-strike"></i></span>
-            <span id="retitle-b" class="is-veille">La vérité</span>
+            <span id="retitle-a">Dans les nuages<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Dans du verre</span>
           </span>
         </div>
       </div>
