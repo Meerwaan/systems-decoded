@@ -166,6 +166,23 @@
         "approx": true,
         "videos": 50
       }
+    },
+    "2026-11-14": {
+      "tiktok": {
+        "abonnes": 2534,
+        "likes": 30300,
+        "videos": 52
+      },
+      "youtube": {
+        "abonnes": 1230,
+        "approx": true,
+        "videos": 58
+      },
+      "instagram": {
+        "abonnes": 42000,
+        "approx": true,
+        "videos": 52
+      }
     }
   }
 }
