@@ -32,7 +32,17 @@
         "de fumée"
       ],
       "moment": "Au plafond",
-      "chap": "Au plafond : le détecteur de fumée"
+      "chap": "Au plafond : le détecteur de fumée",
+      "keep": [
+        [
+          0,
+          "chute$+1.0"
+        ],
+        [
+          "test-0.25",
+          "test$+1.2"
+        ]
+      ]
     },
     {
       "ep": "004",
@@ -82,7 +92,13 @@
         "minute"
       ],
       "moment": "Dans la cuisine",
-      "chap": "Sur le feu : la cocotte-minute"
+      "chap": "Sur le feu : la cocotte-minute",
+      "keep": [
+        [
+          0,
+          85.9
+        ]
+      ]
     },
     {
       "ep": "028",
@@ -111,8 +127,19 @@
       "titleNote": "Compilation (heures de visionnage), sortie samedi 14/11/2026. Un seul titre, une seule miniature, une seule description (règle du 12/11). Titre : l'ouverture du film (tu dors, ils veillent) et la bio du compte ; le mot cherché ouvre la description. Autocomplétion YouTube non relevée pour ce dossier : à vérifier le jour de la mise en ligne. Miniature « TON NEZ DORT AUSSI » (l'accroche du 001) : le titre ne la répète pas.",
       "keyword": "détecteur de fumée",
       "descriptionTemplate": "Détecteur de fumée, disjoncteur, différentiel, prise de terre : pendant que tu dors, huit systèmes veillent dans ta maison. La plupart, tu ne les as jamais regardés.\n\nOn les ouvre en 3D, pièce par pièce, le temps d'une nuit : le détecteur de fumée et sa chambre noire, le différentiel qui sent le courant qui manque, les trous dans la porte du micro-ondes, la pointe de métal qui coupe le gaz de ta gazinière, le disjoncteur qui protège le fil dans ton mur, les deux soupapes de la cocotte-minute, le détecteur de monoxyde de carbone qui compte ta dose… et la prise de terre, enterrée sous ta maison.\n\nChapitres\n__CHAPITRES__\n\nSources : chaque fait vient de son dossier d'origine, où il est sourcé (dossiers 001, 004, 009, 012, 016, 018, 028 et 030 de Système Décodé) ; la voix qui les relie n'ajoute aucun chiffre.\n\nReconstitutions 3D Système Décodé : huit dossiers, reliés en une seule nuit.\n\nEt toi : lequel tu vas vérifier en premier chez toi ? Le détecteur… ou le tableau ?\n\nSystème Décodé ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite, pour un autre dossier qui veille sur toi.",
-      "description": "Détecteur de fumée, disjoncteur, différentiel, prise de terre : pendant que tu dors, huit systèmes veillent dans ta maison. La plupart, tu ne les as jamais regardés.\n\nOn les ouvre en 3D, pièce par pièce, le temps d'une nuit : le détecteur de fumée et sa chambre noire, le différentiel qui sent le courant qui manque, les trous dans la porte du micro-ondes, la pointe de métal qui coupe le gaz de ta gazinière, le disjoncteur qui protège le fil dans ton mur, les deux soupapes de la cocotte-minute, le détecteur de monoxyde de carbone qui compte ta dose… et la prise de terre, enterrée sous ta maison.\n\nChapitres\n__CHAPITRES__\n\nSources : chaque fait vient de son dossier d'origine, où il est sourcé (dossiers 001, 004, 009, 012, 016, 018, 028 et 030 de Système Décodé) ; la voix qui les relie n'ajoute aucun chiffre.\n\nReconstitutions 3D Système Décodé : huit dossiers, reliés en une seule nuit.\n\nEt toi : lequel tu vas vérifier en premier chez toi ? Le détecteur… ou le tableau ?\n\nSystème Décodé ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite, pour un autre dossier qui veille sur toi.",
-      "chapters": [],
+      "description": "Détecteur de fumée, disjoncteur, différentiel, prise de terre : pendant que tu dors, huit systèmes veillent dans ta maison. La plupart, tu ne les as jamais regardés.\n\nOn les ouvre en 3D, pièce par pièce, le temps d'une nuit : le détecteur de fumée et sa chambre noire, le différentiel qui sent le courant qui manque, les trous dans la porte du micro-ondes, la pointe de métal qui coupe le gaz de ta gazinière, le disjoncteur qui protège le fil dans ton mur, les deux soupapes de la cocotte-minute, le détecteur de monoxyde de carbone qui compte ta dose… et la prise de terre, enterrée sous ta maison.\n\nChapitres\n00:00 Huit systèmes, le temps d'une nuit\n00:16 Au plafond : le détecteur de fumée\n01:30 Au tableau : le différentiel\n02:46 Dans la cuisine : la porte du micro-ondes\n03:58 Sur le gaz : la sécurité de la gazinière\n05:20 Dans le mur : le disjoncteur\n06:50 Sur le feu : la cocotte-minute\n08:21 Pendant que tu dors : le détecteur de CO\n09:43 Sous la maison : la prise de terre\n11:02 Lequel tu vérifies en premier ?\n\nSources : chaque fait vient de son dossier d'origine, où il est sourcé (dossiers 001, 004, 009, 012, 016, 018, 028 et 030 de Système Décodé) ; la voix qui les relie n'ajoute aucun chiffre.\n\nReconstitutions 3D Système Décodé : huit dossiers, reliés en une seule nuit.\n\nEt toi : lequel tu vas vérifier en premier chez toi ? Le détecteur… ou le tableau ?\n\nSystème Décodé ouvre les systèmes qui te protègent. Abonne-toi : on se retrouve très vite, pour un autre dossier qui veille sur toi.",
+      "chapters": [
+        "00:00 Huit systèmes, le temps d'une nuit",
+        "00:16 Au plafond : le détecteur de fumée",
+        "01:30 Au tableau : le différentiel",
+        "02:46 Dans la cuisine : la porte du micro-ondes",
+        "03:58 Sur le gaz : la sécurité de la gazinière",
+        "05:20 Dans le mur : le disjoncteur",
+        "06:50 Sur le feu : la cocotte-minute",
+        "08:21 Pendant que tu dors : le détecteur de CO",
+        "09:43 Sous la maison : la prise de terre",
+        "11:02 Lequel tu vérifies en premier ?"
+      ],
       "hashtags": [
         "#maison",
         "#electricite",

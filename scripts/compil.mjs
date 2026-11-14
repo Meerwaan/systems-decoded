@@ -241,7 +241,8 @@ function pieceMosaic(p, out, draft, mix, shorts) {
   const cols = n <= 3 ? n : n <= 6 ? 3 : 4;
   const rows = Math.ceil(n / cols);
   // the left half only: the right half stays free for YouTube's end screen
-  const cellH = Math.floor((H - 120 - (rows - 1) * 24) / rows);
+  // the cells fit both the height and the left half (eight covers on four columns would overflow it)
+  const cellH = Math.min(Math.floor((H - 120 - (rows - 1) * 24) / rows), Math.floor((((W / 2 - 96 - (cols - 1) * 24) / cols) * 16) / 9));
   const cellW = Math.round((cellH * 9) / 16);
   const gridW = cols * cellW + (cols - 1) * 24;
   const x0 = Math.round((W / 2 - gridW) / 2);
