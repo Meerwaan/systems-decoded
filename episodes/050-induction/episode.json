@@ -77,7 +77,9 @@
     "Capteur de température du verre et voyant H au-dessus d'environ 60 °C (h entre 45 et 60 °C) — manuel CDA HN6860FR, ManualsLib [S]",
     "La scène est un scénario typique, pas un fait divers : la main est posée sur un foyer allumé SANS casserole ; les bulles qui retombent, l'anneau de verre orange sont reconstitués ; le H vient d'une mesure ou d'une estimation selon les modèles (manuel CDA : temps de refroidissement estimé) par l'image",
     "Épinglé : le bourdonnement vient de la casserole, dont le fond multicouche vibre, surtout à forte puissance — Wikipedia EN [S] ; Siemens-Home BSH Belgique [P]",
-    "Annonce du 051 : un brise-glace ne pousse pas la glace, il la plie sous son poids — dossier 051, fait validé (docs/faits/051-brise-glace.md)"
+    "Annonce du 051 : un brise-glace ne pousse pas la glace, il la plie sous son poids — dossier 051, fait validé (docs/faits/051-brise-glace.md)",
+    "Image : l'en-tête est reconstitué — le chrono compte les secondes jusqu'au moment où tu soulèves la casserole (illustratif, jamais dit) ; « Champ ≈ 25 kHz » reprend la fréquence typique (20 à 50 kHz selon la plaque), 0 dès que la casserole est retirée",
+    "Image : le champ, les courants et la chaleur sont dessinés au ralenti (le champ ne bat pas à 25 kHz à l'écran) ; le fond chauffe en teinte orange, jamais incandescent ; le point de température sous le verre est une pastille discrète (mesure ou estimation selon les modèles)"
   ],
   "beats": [
     {
@@ -194,13 +196,62 @@
   ],
   "cues": {
     "choc": "accroche:allumée",
+    "rien": "accroche:rien",
+    "brule": "promesse:brûler",
+    "toscene": "scene-0.12",
+    "bouillons": "scene:bouillons",
+    "meme": "scene:Même",
+    "soulever": "scene:soulever",
+    "poser": "scene:poser",
+    "fond1": "scene:fond",
+    "dessous": "scene:dessous",
     "tobench": "ouvre:on-0.14",
     "explode": "ouvre:on",
+    "secteur": "eclate:secteur",
+    "lance": "eclate:lance",
+    "inducteur": "eclate:inducteur",
+    "bobine": "eclate:bobine",
+    "sousverre": "eclate:sous",
+    "coeur": "eclate:cœur",
+    "casserole1": "eclate:casserole",
+    "toprincipe": "principe-0.12",
+    "champ": "principe:champ",
+    "environ": "principe:environ",
+    "traverse": "principe:traverse",
+    "tourner": "principe:tourner",
+    "metal": "principe:métal",
+    "grille": "principe:grille",
+    "torepos": "repos-0.12",
+    "clignote": "repos:clignote",
+    "senti": "repos:senti",
+    "mais": "repos:Mais",
+    "posee": "repos:posée",
+    "brulant": "repos:brûlant",
     "tozero": "zero-0.12",
+    "souleves": "zero:soulèves",
+    "eteint": "zero:éteint",
+    "net": "zero:Net",
+    "bulles": "zero:bulles",
+    "descend": "zero:descend",
+    "toreponse": "reponse-0.12",
+    "garde": "reponse:gardé",
+    "sait": "reponse:sait",
+    "afficheur": "reponse:afficheur",
     "trigger": "reponse:apparaît-0.05",
+    "arrete": "reponse:arrête",
+    "dessus": "reponse:Juste",
     "toverdict": "chute-0.12",
     "verdict": "chute:pas",
+    "nait": "chute:naît",
     "tocta": "comment-0.12",
+    "parce": "comment:Parce",
+    "commentaire": "comment:commentaire",
+    "duelA": "comment:H",
+    "duelB": "comment:rien",
+    "tolike": "like-0.12",
+    "toabo": "abo-0.05",
+    "prochain": "abo:prochain",
+    "plie": "abo:plie",
     "toloop": "boucle-0.12",
     "rewind": "boucle:chez"
   },
@@ -240,6 +291,13 @@
       "id": "050-touche-bip",
       "image": "le foyer allumé clignote sous la main, l'afficheur bipe",
       "reprend": "bip"
+    },
+    {
+      "id": "050-casserole-pose",
+      "reserve": true,
+      "image": "la casserole revient se poser sur l'anneau de verre (comment, 65,6 → 66,8)",
+      "duree": 1.5,
+      "prompt": "Stainless steel saucepan full of hot water set down gently onto a glass ceramic cooktop, soft metal-on-glass contact thud, small water slosh, close-up, quiet kitchen, isolated, no music"
     }
   ],
   "sfx": [
@@ -249,37 +307,132 @@
     },
     {
       "type": "sample",
+      "file": "amb-interieur-nuit.wav",
+      "loop": true,
+      "from": 0,
+      "gain": -18,
+      "bus": "under",
+      "curve": [
+        [
+          0,
+          1
+        ],
+        [
+          "ouvre",
+          1
+        ],
+        [
+          "ouvre$",
+          0.1
+        ],
+        [
+          "torepos-0.04",
+          0.1
+        ],
+        [
+          "torepos",
+          1
+        ],
+        [
+          "toverdict-0.04",
+          1
+        ],
+        [
+          "toverdict",
+          0.1
+        ],
+        [
+          "tocta-0.04",
+          0.1
+        ],
+        [
+          "tocta",
+          1
+        ],
+        [
+          "tolike",
+          0.7
+        ],
+        [
+          "toloop-0.04",
+          0.7
+        ],
+        [
+          "toloop",
+          1
+        ]
+      ]
+    },
+    {
+      "type": "sample",
       "file": "amb-tension.wav",
       "loop": true,
       "from": 0,
-      "gain": -16,
+      "gain": -18,
+      "bus": "under",
       "curve": [
         [
           0,
           0.8
         ],
         [
-          "explode",
-          0.5
+          "dessous",
+          1
+        ],
+        [
+          "ouvre$",
+          0.3
+        ],
+        [
+          "torepos-0.04",
+          0.3
+        ],
+        [
+          "torepos",
+          0.7
+        ],
+        [
+          "brulant",
+          0.9
         ],
         [
           "tozero",
-          0.9
+          1
+        ],
+        [
+          "reponse",
+          0.8
         ],
         [
           "trigger",
           1
         ],
         [
+          "arrete",
+          0.6
+        ],
+        [
+          "toverdict-0.04",
+          0.6
+        ],
+        [
           "toverdict",
-          0.45
+          0.3
         ],
         [
           "tocta",
-          0.4
+          0.25
         ],
         [
-          "rewind",
+          "tolike",
+          0.2
+        ],
+        [
+          "toloop-0.04",
+          0.2
+        ],
+        [
+          "toloop",
           0.8
         ]
       ]
@@ -293,8 +446,14 @@
     },
     {
       "type": "sample",
+      "file": "whoosh-rapide.wav",
+      "at": "rien+0.18",
+      "gain": -22
+    },
+    {
+      "type": "sample",
       "file": "aspiration.wav",
-      "at": "ouvre-0.7",
+      "at": "dessous+0.22",
       "to": "ouvre-0.04",
       "offset": 0.6,
       "gain": -18
@@ -318,45 +477,61 @@
       "file": "sig-ouverture.wav",
       "at": "ouvre$+0.38",
       "offset": 1.75,
-      "gain": -2,
-      "bus": "main",
       "dur": 0.55,
-      "fade": 0.2
-    },
-    {
-      "type": "sample",
-      "file": "riser.wav",
-      "at": "tozero-2",
-      "to": "tozero",
-      "offset": 1.5,
-      "gain": -22
-    },
-    {
-      "type": "sample",
-      "file": "impact-lourd.wav",
-      "at": "tozero",
-      "gain": -17,
+      "fade": 0.2,
+      "gain": -2,
       "bus": "main"
     },
     {
       "type": "sample",
-      "file": "impact-lourd.wav",
-      "at": "trigger",
-      "gain": -15,
-      "bus": "main"
+      "file": "amb-electrique.wav",
+      "at": "secteur+0.38",
+      "dur": 3.4,
+      "fade": 0.6,
+      "gain": -12
+    },
+    {
+      "type": "sample",
+      "file": "whoosh-lent.wav",
+      "at": "toprincipe-0.1",
+      "gain": -20
+    },
+    {
+      "type": "sample",
+      "file": "bip.wav",
+      "at": "clignote+0.42",
+      "gain": -18
+    },
+    {
+      "type": "hush",
+      "from": "eteint",
+      "to": "net+0.44",
+      "depth": -30
+    },
+    {
+      "type": "sample",
+      "file": "bip.wav",
+      "at": "trigger+0.35",
+      "gain": -14
+    },
+    {
+      "type": "hush",
+      "from": "dessus+0.54",
+      "to": "chute",
+      "depth": -24
     },
     {
       "type": "sample",
       "file": "impact-sec.wav",
-      "at": "verdict",
+      "at": "verdict+0.5",
       "gain": -15
     },
     {
       "type": "sample",
       "file": "sig-boucle.wav",
-      "at": "rewind",
-      "gain": -8,
-      "offset": 0.6
+      "at": "boucle$+0.02",
+      "offset": 0.6,
+      "gain": -8
     }
   ]
 }

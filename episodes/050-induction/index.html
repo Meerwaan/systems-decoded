@@ -11,10 +11,11 @@
          kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
 
       /* le second compteur de l'en-tête (.hud__count est signal par défaut) */
-      #hud-count { color: var(--ink); }
+      #hud-count { color: var(--veille); }
       /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
-      #chip-toi { color: var(--ink); }
-      #chip-coeur { color: var(--veille); }
+      #chip-vide, #chip-onduleur, #chip-inducteur { color: var(--ink); }
+      #chip-coeur, #chip-champ, #chip-courants { color: var(--veille); }
+      #chip-h { color: var(--signal); }
     </style>
   </head>
   <body>
@@ -28,8 +29,8 @@
       <header id="hud">
         <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 050</span></div>
         <div class="hud__title" id="hud-title">Plaque à induction</div>
-        <div class="hud__clock" id="hud-clock">T−3,0 s</div>
-        <div class="hud__count" id="hud-count"><span id="hud-count-l">Mesure</span><b id="hud-count-v">0</b></div>
+        <div class="hud__clock" id="hud-clock">T−21,0 s</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Champ</span><b id="hud-count-v">≈ 25 kHz</b></div>
         <div class="hud__rule"></div>
         <nav class="hud__acts">
           <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
@@ -38,21 +39,25 @@
       </header>
 
       <!-- 01 · MENACE (acte1.js) -->
-      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <div id="chip-vide" class="chip chip--live"><span>Ce foyer</span><b>Allumé · sans casserole</b></div>
 
       <!-- 02 · AUTOPSIE (acte2.js) -->
-      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>En veille</b></div>
-
+      <div id="chip-onduleur" class="chip chip--live"><span>L'électronique</span><b>Onduleur</b></div>
+      <div id="chip-inducteur" class="chip chip--live"><span>L'inducteur</span><b>Bobine de cuivre</b></div>
+      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>Le fond de ta casserole</b></div>
+      <div id="chip-champ" class="chip chip--live"><span>Champ magnétique</span><b>≈ 25 000 fois par seconde</b></div>
+      <div id="chip-courants" class="chip chip--live"><span>Dans le métal</span><b>Courants induits</b></div>
 
       <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
+      <div id="chip-h" class="chip chip--live"><span>H</span><b>Verre encore chaud</b></div>
 
       <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
       <div id="retitle">
-        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
+        <div class="kicker" id="retitle-k">Ce qui chauffe</div>
         <div id="retitle-main">
           <span id="retitle-slot">
-            <span id="retitle-a">L'idée reçue<i id="retitle-strike"></i></span>
-            <span id="retitle-b" class="is-veille">La vérité</span>
+            <span id="retitle-a">La plaque<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Ta casserole</span>
           </span>
         </div>
       </div>
@@ -68,32 +73,20 @@
       </section>
 
       <section id="next">
-        <div class="panel__h"><span>Prochain dossier · 000</span><span>Classé</span></div>
+        <div class="panel__h"><span>Prochain dossier · 051</span><span>Classé</span></div>
         <div id="next-title"><span id="next-redact"></span></div>
         <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
-        <div id="next-fact"><span>Un fait, un seul.</span></div>
+        <div id="next-fact"><span>Il ne tape pas sur la glace : il la plie.</span></div>
         <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
       </section>
 
-      <!-- hors-série (filmCall) : le long vers lequel la promo envoie — le mot YouTube, jamais son logo -->
-      <section id="film">
-        <div class="panel__h"><span>Film complet</span><span id="film-length">0 min 00</span></div>
-        <div id="film-title">Le titre</div>
-        <div id="film-bar"><i></i></div>
-        <div id="film-where"><span>Sur YouTube</span><span>Système Décodé</span></div>
-      </section>
 
       <!-- la question du commentaire posée en DEUX réponses (duelCall, fin.js) : chacune s'allume quand la voix la dit, le film ne
            répond jamais à la place du spectateur — prendre parti fait commenter. Une question fermée à deux issues seulement. -->
       <div id="duel">
-        <div class="kicker">La tienne ?</div>
-        <div id="duel-row"><span id="duel-a" class="duel__opt">Réponse A</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Réponse B</span></div>
+        <div class="kicker">Sur ta plaque ?</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">Un H</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Rien</span></div>
         <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
-      </div>
-      <div id="cta-field">
-        <div class="kicker">La question de l'accroche ?</div>
-        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de lettres) -->
-        <div id="cta-field-v"><span id="cta-typed" class="is-veille">RÉPONSE</span><span id="cta-caret"></span></div>
       </div>
 
       <div id="callouts" class="layer"></div>
