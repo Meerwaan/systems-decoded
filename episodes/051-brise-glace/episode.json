@@ -24,11 +24,11 @@
     ],
     "cam": {
       "tx": 0,
-      "ty": 8,
-      "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
+      "ty": 1600,
+      "tz": -2200,
+      "d": 42000,
+      "az": -140,
+      "el": 28,
       "shift": -430,
       "side": 0,
       "fov": 28,
@@ -87,7 +87,10 @@
     "Il ne tape pas la glace, il pèse dessus — chute candidate du dossier : rupture en flexion [S POAC/MDPI] ; l'élan, la puissance et la forme de coque font la performance [P NAS 2005]",
     "Le vent et la marée : six jours, la banquise s'est serrée autour du Xuelong — Zhai et al. 2015 (vent d'est constant, glace qui converge et se compacte) [P]",
     "Épinglé : évacuation des 52 passagers par hélicoptère le 2/01/2014 ; le Shokalskiy se dégage le 8/01/2014 — Wikipedia, AMSA via recherche [S]",
-    "La scène est réelle (Antarctique, 25/12/2013 → 8/01/2014) ; l'image la reconstitue sans prêter de gestes aux équipages. Les gestes de l'acte 3 (citernes, roulis, recul, élan) sont ceux des brise-glace en général (Oden, brise-glace lourds), pas ceux documentés du Xuelong. Aucun degré de gîte ni débit de pompe n'est dit."
+    "La scène est réelle (Antarctique, 25/12/2013 → 8/01/2014) ; l'image la reconstitue sans prêter de gestes aux équipages. Les gestes de l'acte 3 (citernes, roulis, recul, élan) sont ceux des brise-glace en général (Oden, brise-glace lourds), pas ceux documentés du Xuelong. Aucun degré de gîte ni débit de pompe n'est dit.",
+    "L'image reconstitue (aucune image d'archive) : le brise-glace est un brise-glace générique, plein — ni le Xuelong ni l'Oden dessinés ; le navire pris (« ton navire ») est un navire de recherche de verre, sans nom à l'image. Dans l'accroche et la boucle, les deux navires sont rapprochés (≈ 1,2 km au lieu de ≈ 11 km) pour tenir dans un cadre ; la vue du dessus de la scène remet la vraie distance.",
+    "Ce que l'image montre sans chiffre : la ceinture de glace est dessinée plus épaisse que ses 50 mm (lisible en coupe), la gîte de l'acte 3 est illustrative (aucun angle de gîte ni débit de pompe n'est sourcé, aucun n'est écrit), la hauteur des crêtes de pression aussi. L'étrave « presque droite » de la comparaison est celle de l'étude citée (≈ 82°).",
+    "En-tête : « Déc. 2013 » (le Shokalskiy pris, 24-25/12/2013), « Janv. 2014 » (le Xuelong pris du 1er au 7 janvier 2014, six jours), « T+15 s » (la gîte complète de l'Oden en 15 s, CRREL / Backman 1994) ; « Distance 11 km » : le Xuelong à ≈ 6 milles nautiques du navire — Wikipedia « Akademik Shokalskiy » [S]."
   ],
   "beats": [
     {
@@ -212,7 +215,65 @@
     "verdict": "chute:pas",
     "tocta": "comment-0.12",
     "toloop": "boucle-0.12",
-    "rewind": "boucle:moment"
+    "rewind": "boucle:moment",
+    "navire": "accroche:navire",
+    "meme": "accroche:Même",
+    "coince": "accroche:coincé",
+    "metre": "promesse:mètre",
+    "frapper": "promesse:frapper",
+    "bloque": "promesse:bloqué",
+    "passagers": "scene:passagers",
+    "antarctique": "scene:Antarctique",
+    "plaques": "scene:plaques",
+    "pressent": "scene:pressent",
+    "arrive": "scene:arrive",
+    "dizaine": "scene:dizaine",
+    "serre1": "scene:serre",
+    "ceinture": "eclate:ceinture",
+    "citernes1": "eclate:citernes",
+    "bord1": "eclate:bord",
+    "devant": "eclate:devant",
+    "coeur": "eclate:cœur",
+    "inclinee": "eclate:inclinée",
+    "poids": "eclate:poids",
+    "ecrase": "principe:l'écrase",
+    "plie1": "principe:plie",
+    "vingt": "principe:vingt",
+    "pese1": "principe:pèse",
+    "environ": "principe:environ",
+    "droite": "principe:droite",
+    "torepos": "repos-0.12",
+    "fend": "repos:fend",
+    "basculent": "repos:basculent",
+    "labas": "repos:Mais",
+    "referme2": "repos:referme",
+    "cretes": "zero:crêtes",
+    "bords": "zero:bords",
+    "serre2": "zero:serre",
+    "arrete": "zero:s'arrête",
+    "oden": "reponse:citernes",
+    "rollFrom": "reponse:bord",
+    "rollTo": "reponse:secondes+0.3",
+    "roule": "reponse:roule",
+    "libere": "reponse:libère",
+    "recule": "reponse:recule",
+    "elan": "reponse:repart",
+    "proue": "reponse:proue",
+    "plie2": "reponse:plie",
+    "tape": "chute:tape",
+    "pese3": "chute:pèse",
+    "pris": "chute:pris",
+    "balance": "chute:balance",
+    "xuelong": "comment:Xuelong",
+    "vent": "comment:vent",
+    "jours": "comment:jours",
+    "commentaire": "comment:commentaire",
+    "duelA": "comment:brise",
+    "duelB": "comment:hélico",
+    "prochain": "abo:prochain",
+    "telesiege": "abo:télésiège",
+    "lache": "abo:lâche",
+    "rattrape": "abo:rattrape"
   },
   "bedVolume": 0.8,
   "sons": [
@@ -336,9 +397,9 @@
     {
       "type": "sample",
       "file": "riser.wav",
-      "at": "tozero-2",
-      "to": "tozero",
-      "offset": 1.5,
+      "at": "repos$",
+      "to": "zero-0.02",
+      "offset": 3,
       "gain": -22
     },
     {
@@ -351,22 +412,113 @@
     {
       "type": "sample",
       "file": "impact-lourd.wav",
-      "at": "trigger",
+      "at": "reponse$+0.02",
       "gain": -15,
       "bus": "main"
     },
     {
       "type": "sample",
       "file": "impact-sec.wav",
-      "at": "verdict",
+      "at": "chute:Il-0.25",
       "gain": -15
     },
     {
       "type": "sample",
       "file": "sig-boucle.wav",
-      "at": "rewind",
+      "at": "boucle$+0.02",
       "gain": -8,
       "offset": 0.6
+    },
+    {
+      "type": "hit",
+      "at": "accroche:Même-0.3",
+      "gain": -15,
+      "pitch": 0.85
+    },
+    {
+      "type": "click",
+      "at": "accroche$+0.06",
+      "gain": -17,
+      "pitch": 0.8
+    },
+    {
+      "type": "hit",
+      "at": "promesse:Alors-0.45",
+      "gain": -14
+    },
+    {
+      "type": "click",
+      "at": "scene:en-0.16",
+      "gain": -18
+    },
+    {
+      "type": "hit",
+      "at": "scene:Les-0.36",
+      "gain": -15,
+      "pitch": 0.8
+    },
+    {
+      "type": "click",
+      "at": "scene:Un-0.24",
+      "gain": -17,
+      "pitch": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "scene:une-0.3",
+      "gain": -15,
+      "pitch": 0.9
+    },
+    {
+      "type": "click",
+      "at": "scene:dans-0.3",
+      "gain": -18,
+      "pitch": 0.75
+    },
+    {
+      "type": "click",
+      "at": "eclate:Dedans-0.34",
+      "gain": -16
+    },
+    {
+      "type": "click",
+      "at": "eclate:Et-0.34",
+      "gain": -16,
+      "pitch": 0.9
+    },
+    {
+      "type": "hit",
+      "at": "eclate:cœur+0.4",
+      "gain": -14,
+      "pitch": 0.8
+    },
+    {
+      "type": "click",
+      "at": "principe:Inclinée-0.3",
+      "gain": -17
+    },
+    {
+      "type": "hit",
+      "at": "repos:se-0.22",
+      "gain": -15,
+      "pitch": 0.85
+    },
+    {
+      "type": "hit",
+      "at": "zero:Des-0.26",
+      "gain": -14,
+      "pitch": 0.8
+    },
+    {
+      "type": "click",
+      "at": "reponse:Il-0.24",
+      "gain": -16
+    },
+    {
+      "type": "hit",
+      "at": "reponse:repart-0.3",
+      "gain": -14,
+      "pitch": 0.85
     }
   ]
 }
