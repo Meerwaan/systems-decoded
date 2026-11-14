@@ -17,21 +17,21 @@
     "language": "fr"
   },
   "cover": {
-    "at": "defaut$",
+    "at": 0.04,
     "title": [
       "Concorde",
       "16:43"
     ],
     "lastTone": "#ffb23e",
     "cam": {
-      "tx": 30020,
-      "ty": 82,
-      "tz": -30000,
-      "d": 270,
-      "az": -64,
-      "el": 6,
+      "tx": -10239.2,
+      "ty": 22.9,
+      "tz": 0,
+      "d": 880,
+      "az": 48,
+      "el": 5,
       "fov": 30,
-      "shift": -300,
+      "shift": -380,
       "side": 0,
       "roll": 0
     }
@@ -553,6 +553,54 @@
       "gain": -22,
       "bus": "under",
       "fade": 0.4
+    },
+    {
+      "type": "sample",
+      "file": "CR03-reacteurs.wav",
+      "loop": true,
+      "from": "t1:gaz",
+      "to": "toissue",
+      "gain": -19,
+      "bus": "under",
+      "fade": 0.6,
+      "curve": [
+        [
+          "t1:gaz",
+          0.55
+        ],
+        [
+          "t2",
+          0.85
+        ],
+        [
+          "t3",
+          1
+        ],
+        [
+          "flammes",
+          0.8
+        ],
+        [
+          "coupe",
+          0.65
+        ],
+        [
+          "etouffer",
+          0.5
+        ],
+        [
+          "tot8",
+          0.45
+        ],
+        [
+          "effondre",
+          0.25
+        ],
+        [
+          "tombe",
+          0.12
+        ]
+      ]
     },
     {
       "type": "sample",

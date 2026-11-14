@@ -39,14 +39,25 @@ export default function acte3({ D, world }) {
     ...FIRST, ...STAGED.reservoir, culprit: 0, fault: 0, ok: 0, depuis: 0, gauge: 0, debit: 0, mark: 0,
     hit: 0, dent: 0, wave: 0, bulge: 0, tear: 0, gush: 0, kevlar: 0, kero: 0.5,
   });
+  // « Alors ce réservoir ? » on the whole bay (a slow push), then a CUT in the breath before « Le morceau » (retouche 13/11: in the
+  // wide shot the flying piece read as three bands and the section as an amber slab): the shock is seen close, the piece comes in
+  // from low left onto the intrados
+  const CHOC = t.morceau - 0.14; // 99.28, after « réservoir ? », before « Le morceau »
   path([
     [t.todefaut, T0],
-    [t.morceau, R([-8, 60, -46], { d: 230, az: -54, el: 2, shift: 0 })],
+    [CHOC - 0.02, { d: 375, az: -63, el: 7 }],
+  ]);
+  const M0 = { ...base, ...R([-6, 72, -44], { d: 170, az: -50, el: 2, shift: 0, ...CLOSE }) }; // a little wider and left: the piece enters early
+  cut(CHOC, null, M0);
+  path([
+    [CHOC, M0],
     [t.frappe, R([-2, 70, -34], { d: 135, az: -50, el: 2, ...CLOSE })],
     [t.derriere, R([0, 76, -28], { d: 145, az: -56, el: 5 })],
     [t.plein, R([2, 84, -12], { d: 200, az: -64, el: 9, dof: 0 })],
-    [t.liquide, R([10, 74, -2], { d: 330, az: -58, el: 6 })],
-    [t.comprime + 0.6, R([8, 73, -6], { d: 310, az: -63, el: 5 })],
+    // « Et un liquide, ça ne se comprime presque pas » (retouche 13/11: the whole bay at d 330 was a thin band): the tank centred,
+    // the cuvette at left, the kerosene full height, the panel at right — a slow push
+    [t.liquide, R([2, 82, -2], { d: 235, az: -56, el: 7 })],
+    [t.comprime + 0.6, R([2, 81, -4], { d: 222, az: -58, el: 6 })],
     [t.enfonce, R([4, 71, -14], { d: 265, az: -56, el: 4 })],
     [t.trigger, R([4, 71, -8], { d: 270, az: -59, el: 4 })],
     [t.cede, R([2, 69, 18], { d: 230, az: -64, el: 2 })],
@@ -54,6 +65,7 @@ export default function acte3({ D, world }) {
     [t.topreuve - 0.02, R([-16, 22, 30], { d: 180, az: -73, el: 4 })], // down with the falling panel: it lands, dome up
   ]);
   // « Le morceau de pneu frappe le dessous de l'aile »: it flies in from low left and lands flat on the intrados, the skin gives a little
+  // hit < 0.17 until the cut: the piece is still far off the left of the wide frame (z < −104, projected > 100 from its centre)
   st(t.morceau - 0.3, t.frappe - t.morceau + 0.3, { hit: 1 }, "none");
   st(t.frappe - 0.05, 0.1, { dent: 0.4 }, "power2.out");
   punch(t.frappe, 0.06);

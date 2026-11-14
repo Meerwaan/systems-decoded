@@ -35,3 +35,13 @@ Pas montée ici : elle est dans acte2b (t5). Mon acte coupe à `cutaway` 0.
 
 ## À changer ailleurs
 Rien.
+
+## Retouche du 13/11 (agent `retoucheur`, 12 images lues ; planches `.cache/planches/CR03/acte2c-retouche/`)
+- **Heurté 90,7 (16,1)** → le roulis `bank` 25 → 100 passe de `power2.in` 1,2 s (≈ 190°/s à la fin) à `sine.inOut` jusqu'à `tombe` + 0,3 ; la chute `alt` 280 → 40, `pitch` −20 passe de `power2.in` 0,55 s (≈ 1 200 unités/s) à `power1.in` de `tombe` − 0,1 jusqu'à `toissue` − 0,02 ; la caméra lève les yeux dès `tombe` (clé `aimW` +70, `shift` 25) puis +200 à la coupe. Vérifié à 90,67 / 90,70 / 90,733 (trois images en continuité) et 91,2 (l'avion sorti par le bas, toits seuls, sol sous lui hors cadre). Punch « tombe » gardé.
+- **81 « trop », avion petit** → path du t7 resserré à angles constants (clés `alarme` d 2 000, nouvelle clé `t7:sol` d 1 000 el 9, fin d 1 150 ; visées `aimW` × 0,67) : l'avion ≈ 1,5 × plus grand, centré, les toits de Gonesse au fond. Vérifié à 81. Un premier essai plus bas (d 1 050, visées inchangées) mettait l'avion au bord gauche sous l'horloge : abandonné.
+- **Le bâton noir à boule à 81 : PAS corrigé.** Il reste (bas du cadre). Ce n'est ni `traj`, ni `chunk`, ni `leak`/`fire`, ni `gear`, ni `burst`/`tear` (variantes d'état chiffrées, zone inchangée) ; `fs` le change → probablement une OMBRE portée (avion ou lumière du plateau). À trancher par l'agent du décor `piste.js` / `concorde.js`.
+- **92–96 suie illisible, lamelle minuscule : PAS corrigé, revenu à `VIEW.vide`.** Essai d'une vue rapprochée (d 75, el 10, derrière la lamelle) : flaque ambre floue, taches de suie sans forme, lamelle invisible — pire. La suie n'existe que là où le halo `fs` 70 éclaire ; une vue qui la lit demande un réglage du décor.
+
+## À changer ailleurs
+- `src/piste.js` (« issue: the soot ») : la suie doit se lire hors du halo — plus sombre et plus nette que le bitume en vue rasante (bord net, `w` 46 → ≈ 70), puis `VIEW.vide` relevé à el ≈ 2.
+- Décor (`piste.js` ombres ou `concorde.js`) : identifier le bâton noir à boule au bas du cadre à 81 s (`npm run look -- CR03 --at 81`), varier `fs` et l'ombre portée.

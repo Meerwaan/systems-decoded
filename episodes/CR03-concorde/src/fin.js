@@ -17,7 +17,7 @@
 // The aircraft moves: every camera aim and the light are worked out from its state at the key's instant (onPlane), the same
 // piecewise-linear law the tweens follow.
 import { duelCall, nextFile } from "@kit/blocks.js";
-import { BENCHED, STAGED, SET, VIEW, POSE0, FIRST, AT, onPlane, lit } from "./world.js";
+import { BENCHED, STAGED, SET, VIEW, POSE0, FIRST, AT, W, onPlane, lit } from "./world.js";
 
 const R2D = 180 / Math.PI;
 /** A pose from a camera point C looking at T (complete with `o`). */
@@ -74,7 +74,7 @@ export default function fin({ D }) {
   st(t.todepuis + 0.08, 0.9, { depuis: 1 }, "sine.inOut");
   path([
     [t.todepuis, BAY],
-    [c1, { d: 560, az: -56, el: 10, shift: 240 }],
+    [c1, { ...aim(W("reservoir", [-10, 1, 40])), d: 290, az: -58, el: 12, shift: 120 }], // retouche 13/11: in on the panel lying under the tank
   ]);
 
   /* ── « …six de ses réservoirs sont doublés de Kevlar, ses pneus changent. » — the same tank, whole; the lining; the same hit ── */
@@ -96,17 +96,23 @@ export default function fin({ D }) {
   st(t.pneus + 0.45, 0.3, { bulge: 0.2 }, "power2.out"); // …and the wall holds
 
   /* ── « Et à Roissy, les inspections de piste passent à 3 par jour. » — the runway from above, washed green by the van ── */
+  // retouche 13/11: low, just ahead of the van, looking back east — the van big in the lower frame, the runway behind it washed
+  // green up to the horizon, its edge lights green; under the camera the runway still amber. The van keeps one speed and the
+  // camera rides with it (one linear move, nothing turns).
   const c2 = t.et - 0.12;
-  const RUNWAY_MID = [-10500, 0, 0];
-  const INS = { tx: -8000, ty: 0, tz: 0, d: 11000, az: 70, el: 50, fov: 30, shift: 0, side: 0, roll: 0, drift: 0, dof: 0 };
-  cut(c2, SET.PISTE, INS, { ...CLEAN, alt: -100, run: 0, depuis: 0, ...lit(RUNWAY_MID, 4200) }); // depuis 0 here: in the green mood the wash is lost
-  path([
-    [c2, INS],
-    [t.insp, { tx: -8800, d: 12200, az: 74, el: 54 }],
-    [t.trois, { tx: -10000, d: 14000, az: 79, el: 59 }],
-    [t.tocta - 0.02, { tx: -10500, d: 14600, az: 81, el: 61 }],
-  ]);
-  st(t.insp - 0.2, t.jour + 0.25 - (t.insp - 0.2), { inspect: 1 }, "sine.inOut");
+  const e2 = t.tocta - 0.02;
+  const SPAN = 21355; // the runway between its thresholds (piste.js: THR_E 290 → THR_W)
+  const VS = 420; // the van's speed (units/s)
+  const INS0 = 0.3, INS1 = INS0 + (VS * (e2 - c2)) / SPAN;
+  const vanAt = (ins) => [290 - SPAN * ins - 2, 10, -60];
+  const vanCam = (ins, [ox, oy, oz]) => {
+    const T = vanAt(ins);
+    return toward([T[0] + ox, T[1] + oy, T[2] + oz], T, { fov: 30, shift: -120, side: 0, roll: 0, drift: 0, dof: 0 });
+  };
+  const vanLit = (ins) => lit([vanAt(ins)[0] + 40, 0, -50], 260);
+  cut(c2, SET.PISTE, vanCam(INS0, [-330, 165, 70]), { ...CLEAN, alt: -100, run: 0, depuis: 0, inspect: INS0, ...vanLit(INS0) }); // depuis 0: in the green mood the wash is lost
+  st(c2, e2 - c2, { inspect: INS1, ...vanLit(INS1) }, "none");
+  shot(c2, e2 - c2, vanCam(INS1, [-300, 155, 95]), "none");
   chip("chip-inspect", null, 96, 470, t.insp - 0.1, t.tocta - 0.3);
   tl.set(["#tick-1", "#tick-2", "#tick-3"], { color: "rgba(239, 234, 224, 0.58)", scale: 1 }, 0);
   tl.fromTo("#tick-3", { color: "rgba(239, 234, 224, 0.58)", scale: 1 }, { color: "#5cffb0", scale: 1.25, duration: 0.14, ease: "power2.out", immediateRender: false }, t.trois);
@@ -130,7 +136,6 @@ export default function fin({ D }) {
   st(t.aucune, g1 - t.aucune, { stop: 1 }, "power2.out"); // …and runs on past it, red
   path([
     [t.tocta, { ...aim(onPlane(bAt(t.tocta), [40, 20, 0])), d: 1000, az: 52, el: 7, fov: 30, shift: 40 }],
-    [t.touche, { ...aim(onPlane(bAt(t.touche), [0, 20, 0])), d: 1150, az: 60, el: 10 }],
     [t.aucune, { ...aim(onPlane(bAt(t.aucune), [-300, 10, 0])), d: 1700, az: 82, el: 9, shift: -40 }],
     [t.commentaire, { ...aim(onPlane(bAt(t.commentaire), [-380, 10, 0])), d: 1850, az: 86, el: 10, shift: -40 }],
     [t.concorde - 0.16, { ...aim(onPlane(bAt(t.concorde - 0.16), [-420, 10, 0])), d: 1900, az: 88, el: 10, shift: -40 }],

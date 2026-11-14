@@ -34,3 +34,9 @@ recette-agents, recette-actes, regles-image, CR03-actes-maj (vague 2 comprise), 
 
 ## À changer ailleurs
 - `episodes/CR03-concorde/index.html`, après la ligne `#chip-kevlar { … }` : `#chip-inspect { white-space: normal; flex-wrap: wrap; max-width: 820px; } #chip-inspect .ticks { flex-basis: 100%; }` (les coches sous le texte : l'étiquette ne touche plus le bord droit).
+
+## Retouche du 13/11 (retoucheur, planches `.cache/planches/CR03/fin-retouche/p1-p4.jpg`, 4 images lues)
+- **125,9 → 129,2 inspection noyée dans l'ambre** → le plan vu de très haut (d 11 000 → 14 600) remplacé par un plan bas juste devant la camionnette, regard vers l'est : `inspect` 0,30 → ≈ 0,365 linéaire (la camionnette à 420 /s, déjà en route à la coupe), caméra qui la suit d'un seul `shot` linéaire (offset [-330, 165, 70] → [-300, 155, 95], d ≈ 375, shift −120), lumière `lit` sur elle (fs 260) au lieu de la piste entière (fs 4 200). `depuis` reste 0. Vérifié à 126,0 · 127,467 / 127,5 / 127,533 · 128,9 · 129,18 : la camionnette se lit (≈ 35 px à 270), la piste derrière elle verte jusqu'à l'horizon, devant elle ambre ; trois images consécutives en continuité.
+- **121,9 → 123,1 panneau rouge → vert petit** → la coupe d'entrée (`BAY`) inchangée ; la clé de fin du `path` pousse sur le panneau tombé (visée `W("reservoir", [-10, 1, 40])`, d 290, el 12, shift 120). Vérifié à 122,0 / 122,3 (rouge) · 122,6 / 122,7 (vert) · 123,1 (≈ 45 px à 270, le double d'avant).
+- **Heurté à 131,1** → la clé `touche` (130,62) du `path` BEA retirée : le virage az 52 → 82 et le recul d 1 000 → 1 700 s'étalent sur 2,1 s (tocta → aucune) au lieu de 0,7 s. Vérifié à 129,6 · 130,2 · 130,7 · 131,1 · 131,5 · 132,0 : progression régulière. À confirmer par `qa` sur le prochain brouillon.
+- `npm run check -- CR03` passe. Boucle, `POSE0` / `FIRST`, coupes d'entrée et de sortie inchangées.

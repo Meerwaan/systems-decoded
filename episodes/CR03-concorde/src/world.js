@@ -142,7 +142,7 @@ export const VIEW = {
   // t8: three-quarter rear, its nozzles; it banks and drops out of the frame
   chute: pose(onPlane(AT.fall, [40, 20, 0]), { d: 720, az: 58, el: 4, fov: 30, shift: 40 }),
   // issue: the empty runway, low, the strip in the foreground, the soot trail away (the first image without the aircraft)
-  vide: pose([-10200, 9, 26], { d: 1310.03, az: 90.31, el: -0.245, fov: 24, shift: 240 }), // fs ≈ 60
+  vide: pose([-10200, 9, 26], { d: 1310.03, az: 90.31, el: 2, fov: 24, shift: 240 }), // fs ≈ 60
   // preuve: the panel on the asphalt, three-quarter, on its halo; the strip and the tyre piece beside it
   preuve: pose([FOUND.panel[0], 0.3, FOUND.panel[2]], { d: 10, az: -58, el: 30, fov: 30, shift: 40, ...CLOSE }),
   // depuis: the runway from above, the inspection vehicle running along it

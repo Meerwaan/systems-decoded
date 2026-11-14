@@ -39,3 +39,8 @@ recette-agents, recette-actes, regles-image, CR03-actes (haut + ma section + la 
 
 ## À changer ailleurs
 Rien.
+
+## Retouche du 13/11
+- **99,4–100,0, le choc en plan large** (dalle ambre, coupe illisible, débris en trois bandes) → la baie entière ne garde que « Alors ce réservoir ? » (poussée lente d 400 → 375) ; **coupe à 99,28** (`CHOC` = `morceau − 0,14`, dans le souffle après « réservoir ? ») sur un gros plan de la cuvette (`[-6, 72, -44]` d 170 az −50 el 2, `CLOSE`), puis poussée vers la pose `frappe` (d 135) ; `hit` garde son départ (`morceau − 0,3`) : à < 0,17 le morceau est encore hors du cadre large, à gauche. Vérifié à 99,29 / 99,323 (coupe propre, deux images en continuité). Une planche intermédiaire (cible `[-4, 72, -40]` d 160) montrait le morceau trop tard (un bord à 99,80) : cible élargie à gauche et `hit` remis à son départ d'origine **sans planche après** (budget de 12 images atteint) — à regarder sur le brouillon à 99,6–100,0 : le morceau doit entrer en bas à gauche vers 99,6.
+- **103–106, la baie en bande mince** → clés `liquide` et `comprime + 0,6` serrées : `[2, 82, -2]` d 235 az −56 el 7 → `[2, 81, -4]` d 222 az −58 el 6 (au lieu de d 330 / 310) : le réservoir centré, la cuvette à gauche, le kérosène sur toute la hauteur, le panneau à droite. Vérifié à 104,6 (essai) et 105,5.
+- Rien de changé à partir de `enfonce` ; la sortie à `todepuis` est intacte. `check` passe. Images lues : 12.

@@ -135,7 +135,7 @@ export default function acte2c({ D, world }) {
     ...AIR, run: 0, alt: -100, pitch: 0, bank: 0, n1: 0, n3: 0, n4: 0, fire: 0, leak: 0, ...lit([STRIP.at[0] - 40, 0, STRIP.at[2]], 70),
   });
   st(t.toissue + 0.1, 2.2, { soot: 1 }, "sine.inOut");
-  st(t.deux, t.top - t.deux, lit([STRIP.at[0], 0, STRIP.at[2]], 22), "sine.inOut");
+  st(t.deux, t.top - t.deux, lit([STRIP.at[0], 0, STRIP.at[2]], 30), "sine.inOut");
   path([
     [t.toissue, E0],
     [t.deux, { ...E0, fov: 22.5 }],

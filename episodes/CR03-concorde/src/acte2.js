@@ -97,16 +97,17 @@ export default function acte2({ D, world }) {
     [t.bord, { ...aim(onPlane({ ...R1, run: 210 }, [55, 20, 0])), az: 72, el: 9, d: 600 }],
     [SUR - 0.02, { ...aim(onPlane(R1, [60, 20, 0])), az: 75, el: 10, d: 585 }],
   ]);
-  // the strip, from above (no far runway in frame: its stripes shimmered at a grazing angle), a slow push onto it
+  // the strip, from above (no far runway in frame: its stripes shimmered at a grazing angle), ≈ half the width, a slow push onto it.
+  // retouche 2 (13/11): ONE light for the whole shot, set by the cut — fs 45 keeps the floor's amber pool (y = 0.001125 · fs) clear
+  // of the asphalt (0.03) and under the paint (0.08); the old 60 → 22 tween crossed the asphalt at fs ≈ 27: 23 stray frames 36,4–38,5
   const STR = aim([STRIP.at[0], 0.4, STRIP.at[2]]);
-  const STRV = { ...STR, d: 34, az: 74, el: 52, fov: 30, shift: 40, side: 0, dof: 0 };
-  cut(SUR, null, STRV, lit([STRIP.at[0], 0.4, STRIP.at[2]], 60));
-  st(t.sur, t.lamelle - t.sur, lit([STRIP.at[0], 0.4, STRIP.at[2]], 22), "sine.inOut");
+  const STRV = { ...STR, d: 16, az: 72, el: 48, fov: 30, shift: 40, side: 0, dof: 0 };
+  cut(SUR, null, STRV, lit([STRIP.at[0], 0.4, STRIP.at[2]], 45));
   path([
     [SUR, STRV],
-    [t.lamelle, { az: 70, el: 50, d: 22 }],
-    [t.cm, { az: 66, el: 49, d: 20 }],
-    [t.tot2 - 0.02, { az: 64, el: 48, d: 20 }],
+    [t.lamelle, { az: 71, el: 48, d: 14.6 }],
+    [t.cm, { az: 70, el: 48, d: 14 }],
+    [t.tot2 - 0.02, { az: 69, el: 48, d: 13.8 }],
   ]);
   // « titane »: the strip red, circled · « 43 centimètres »: the rule unrolls to its length
   st(t.titane, 0.12, { culprit: 1, fault: 1 }, "power2.out");
@@ -137,7 +138,7 @@ export default function acte2({ D, world }) {
   path([
     [t.tot2, V],
     [t.vdeux, { ...aim(onPlane(at(6200), [-85, 8, 0])), az: 44, el: 12, d: 380 }],
-    [t.nonretour, { ...aim(onPlane(NR, [-150, 10, 0])), az: 52, el: 22, d: 1000 }],
+    [t.nonretour, { ...aim(onPlane(NR, [-150, 10, 0])), az: 52, el: 22, d: 760 }], // retouche 2: the pull-back spread to tot3 (heurt 42,5)
     [t.tot3 - 0.02, { ...aim(onPlane(AHEAD, [-250, 10, 0])), az: 56, el: 26, d: 1400 }],
   ]);
 }

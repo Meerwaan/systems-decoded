@@ -47,7 +47,7 @@ export default function acte1({ D, world }) {
     toprincipe: "toprincipe", vun: "vun", avant: "principe:Avant", apres: "apres", non: "principe:non",
     decolles: "principe:décolles", ce: "principe:Ce", cent: "principe:150", toreservoir: "toreservoir",
   });
-  D.captionStyle({ hit: 0.25 });
+  D.captionStyle({ hit: 0.12 });
 
   const c1 = t.seize - 0.1; // cut: the other side of the fire
   const c2 = t.promesse - 0.12; // cut: under the wing

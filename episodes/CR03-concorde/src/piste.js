@@ -204,15 +204,24 @@ function sootMat() {
         float u = vUv.x, v = vUv.y;
         if (u > uShow) discard;
         float n = sdN(vec2(u * 70.0, v * 3.0)) * 0.6 + sdN(vec2(u * 330.0, v * 9.0)) * 0.4;
-        float across = 1.0 - smoothstep(0.12 + 0.26 * n, 0.5, abs(v - 0.5 + 0.08 * (sdN(vec2(u * 24.0, 3.7)) - 0.5)));
-        float along = smoothstep(0.0, 0.012, u) * (1.0 - 0.75 * smoothstep(0.55, 1.0, u));
-        float front = 1.0 - smoothstep(uShow - 0.025, uShow, u);
-        float a = across * along * front * (0.5 + 0.5 * n);
-        gl_FragColor = vec4(uColor, clamp(a * 1.25, 0.0, 0.95));
+        // (retouche 13/11) a clean, ragged edge (not a soft fade) and a near-opaque core: outside the floor's halo the soot reads by
+        // the paint it swallows (centreline, touchdown bars), so it must be as dark as the asphalt's darkest and cut sharp
+        float d = abs(v - 0.5 + 0.06 * (sdN(vec2(u * 24.0, 3.7)) - 0.5));
+        float edge = 0.4 + 0.08 * (n - 0.5);
+        float fe = max(fwidth(d), 1e-4);
+        float across = 1.0 - smoothstep(edge - fe * 1.5, edge + fe * 0.5, d);
+        float along = smoothstep(0.0, 0.006, u) * (1.0 - 0.4 * smoothstep(0.6, 1.0, u));
+        float front = 1.0 - smoothstep(uShow - 0.02, uShow, u);
+        float a = across * along * front * (0.82 + 0.18 * n);
+        gl_FragColor = vec4(uColor, clamp(a, 0.0, 0.97));
       }`,
     transparent: true,
     depthWrite: false,
     toneMapped: false,
+    // pulled forward past the paint (which is itself pulled forward): at a grazing view the paint otherwise wins the depth test
+    polygonOffset: true,
+    polygonOffsetFactor: -4,
+    polygonOffsetUnits: -16,
   });
 }
 
@@ -468,6 +477,9 @@ export function buildPiste() {
   const rowAttr = new Float32Array(fields.length * 3);
   const hedges = [], trees = [];
   const treeGeo = new THREE.IcosahedronGeometry(1, 1);
+  // (retouche 13/11) no hedge, no tree under the t7 flight past the runway: seen from the aircraft's height a hedge reads as a long
+  // black stick with a ball (its tree) across the frame (81 s). The random draws are kept so that the patchwork does not change.
+  const underFlight = (x, z) => x < -23800 && x > -29600 && z > -1000 && z < 2600;
   fields.forEach((c, i) => {
     const gap = 7;
     m4.makeScale(c.x1 - c.x0 - gap * 2, 1, c.z1 - c.z0 - gap * 2).setPosition((c.x0 + c.x1) / 2, Y.field, (c.z0 + c.z1) / 2);
@@ -481,14 +493,19 @@ export function buildPiste() {
       const horiz = edge === "n";
       const L = horiz ? c.x1 - c.x0 : c.z1 - c.z0;
       const hx = horiz ? (c.x0 + c.x1) / 2 : c.x0, hz = horiz ? c.z1 : (c.z0 + c.z1) / 2;
-      hedges.push(bare(new THREE.BoxGeometry(horiz ? L : 6, 7 + R() * 4, horiz ? 6 : L).translate(hx, 4, hz)));
+      const hh = 7 + R() * 4;
+      const crosses = horiz
+        ? hz > -1000 && hz < 2600 && c.x0 < -23800 && c.x1 > -29600
+        : hx < -23800 && hx > -29600 && c.z0 < 2600 && c.z1 > -1000;
+      if (!crosses) hedges.push(bare(new THREE.BoxGeometry(horiz ? L : 6, hh, horiz ? 6 : L).translate(hx, 4, hz)));
       for (let t = 120 + R() * 300; t < L - 60; t += 260 + R() * 420) {
         if (R() < 0.45) continue;
         const r = 10 + R() * 9;
         const tx = horiz ? c.x0 + t : c.x0, tz = horiz ? c.z1 : c.z0 + t;
         for (let k = 0; k < 3; k++) {
           const rr = r * (0.7 + R() * 0.4);
-          trees.push(bare(treeGeo.clone().scale(rr, rr * 0.92, rr).translate(tx + (R() - 0.5) * r * 1.6, rr * 0.95, tz + (R() - 0.5) * r * 1.6)));
+          const px = tx + (R() - 0.5) * r * 1.6, pz = tz + (R() - 0.5) * r * 1.6;
+          if (!crosses && !underFlight(px, pz)) trees.push(bare(treeGeo.clone().scale(rr, rr * 0.92, rr).translate(px, rr * 0.95, pz)));
         }
       }
     }
@@ -715,7 +732,7 @@ export function buildPiste() {
   solidMesh(mergeGeometries(grooves), clay({ tone: -1 }), chunk, { edges: 0, cast: false });
 
   /* ── issue: the soot along the runway, under where the left wing burnt, westward from the strip ── */
-  const SOOT = { x: STRIP.at[0] - 4, len: RUN.liftoff - RUN.strip + 120, z: 28, w: 46 };
+  const SOOT = { x: STRIP.at[0] - 4, len: RUN.liftoff - RUN.strip + 120, z: 28, w: 72 }; // (retouche 13/11) 46 → 72: over the centreline and the touchdown bars
   const sootM = sootMat();
   const soot = new THREE.Mesh(unitQuad(), sootM);
   soot.position.set(SOOT.x, Y.soot, SOOT.z);
