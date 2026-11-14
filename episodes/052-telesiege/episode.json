@@ -17,21 +17,21 @@
     "language": "fr"
   },
   "cover": {
-    "at": "eclate$",
+    "at": "eclate:serre+0.3",
     "title": [
       "Télésiège",
       "débrayable"
     ],
     "cam": {
       "tx": 0,
-      "ty": 8,
+      "ty": 48,
       "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
+      "d": 520,
+      "az": -46,
+      "el": 30,
       "shift": -430,
       "side": 0,
-      "fov": 28,
+      "fov": 30,
       "roll": 0
     }
   },
@@ -79,7 +79,9 @@
     "Serrage insuffisant : l'installation s'arrête, le véhicule est isolé pour contrôle — remontees-mecaniques.net [S]",
     "« Deux fois ce qu'il faut pour ne pas glisser, dans la pente la plus raide » : sécurité de 2 au glissement dans la pente la plus forte, coefficient d'adhérence au plus 0,18 — STRMTG RM2 v3 A5-5.1.11 [P]",
     "La scène est un scénario : une pince qui serre mal au départ, détectée au pesage, arrêt en gare. La longueur du quai, le chrono et la façon dont la pince serre mal sont reconstitués à l'image ; la voix ne raconte aucun cas réel et ne donne aucun seuil de serrage chiffré (il dépend du modèle)",
-    "Épinglé : Sun Peaks (Colombie-Britannique), 25/08/2018 — un élément de fixation oublié au remontage d'une pince, le siège a reculé sur la pente et heurté le suivant, aucun blessé — Technical Safety BC, II-736022-2018 [P]"
+    "Épinglé : Sun Peaks (Colombie-Britannique), 25/08/2018 — un élément de fixation oublié au remontage d'une pince, le siège a reculé sur la pente et heurté le suivant, aucun blessé — Technical Safety BC, II-736022-2018 [P]",
+    "Image : la gare, sa longueur, la place des pneus, de la came et du capteur, la façon dont la pince serre mal et la voie de garage sont reconstitués (un télésiège débrayable générique, aucun modèle de constructeur) ; la scène est un scénario, aucun cas réel",
+    "Image : l'en-tête affiche la vitesse du siège et celle du câble en ordres de grandeur sourcés (≈ 5 m/s = 18 km/h en ligne, ≈ 1 m/s = 3,6 km/h à quai) ; la jauge du pesage n'a aucun chiffre (le seuil dépend de la pince) et ne dit jamais « infaillible »"
   ],
   "beats": [
     {
@@ -183,8 +185,8 @@
     {
       "id": "abo",
       "hold": 0.2,
-      "text": "+Abonne-toi+ : prochain dossier, À FAIRE.",
-      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, À FAIRE.",
+      "text": "+Abonne-toi+ : prochain dossier, la carte sans contact. Elle n'a pas de *pile*… et pourtant, elle te répond.",
+      "vo": "[serious] Abonne-toi : [short pause] prochain dossier, la carte sans contact. Elle n'a pas de pile... et pourtant, elle te répond.",
       "voir": "Le panneau « S'abonner pour l'ouvrir », le dossier suivant sous scellés, ses chevrons."
     },
     {
@@ -201,10 +203,15 @@
     "tozero": "zero-0.12",
     "trigger": "reponse:trop-0.05",
     "toverdict": "chute-0.12",
-    "verdict": "chute:pas",
+    "verdict": "chute:vérifie",
     "tocta": "comment-0.12",
     "toloop": "boucle-0.12",
-    "rewind": "boucle:gare"
+    "rewind": "boucle:gare",
+    "torepos": "repos-0.12",
+    "tolike": "like-0.12",
+    "toabo": "abo-0.12",
+    "duelA": "comment:machine",
+    "duelB": "comment:mécanicien"
   },
   "bedVolume": 0.8,
   "sons": [
@@ -242,6 +249,20 @@
       "image": "tout le télésiège s'arrête d'un coup, les sièges se balancent",
       "duree": 4,
       "prompt": "Large chairlift emergency stop: motor winding down, a heavy brake clunk, then the steel cable creaking and the chairs swinging and squeaking on their hangers, outdoors, isolated, no music"
+    },
+    {
+      "id": "052-cable-glisse",
+      "image": "la pince mal serrée : le câble glisse d'un rien entre les mors (zero:mal, 54,30)",
+      "duree": 1.5,
+      "reserve": true,
+      "prompt": "Thick steel haul rope slipping a few centimeters through a loosely clamped steel grip: short grinding metallic scrape with a faint squeal, close, isolated, no music"
+    },
+    {
+      "id": "052-capteur",
+      "image": "le galet de la pince passe sur le rail du capteur, la came fléchit, la jauge tombe (reponse, 55,86 ; repos 45,42)",
+      "duree": 1.5,
+      "reserve": true,
+      "prompt": "Steel roller rolling onto a spring-loaded steel test rail in a chairlift station: a dull metallic clunk as the rail flexes, then a short rolling rumble, close, isolated, no music"
     }
   ],
   "sfx": [
@@ -251,10 +272,50 @@
     },
     {
       "type": "sample",
+      "file": "amb-vent.wav",
+      "loop": true,
+      "from": 0,
+      "to": "ouvre-0.04",
+      "gain": -28,
+      "bus": "under",
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "052-cable-poulie.wav",
+      "loop": true,
+      "from": 0,
+      "to": "ouvre-0.04",
+      "gain": -20,
+      "bus": "under",
+      "fade": 0.3,
+      "curve": [
+        [
+          0,
+          0.75
+        ],
+        [
+          4.9,
+          0.75
+        ],
+        [
+          5.4,
+          1
+        ],
+        [
+          6.3,
+          0.75
+        ]
+      ]
+    },
+    {
+      "type": "sample",
       "file": "amb-tension.wav",
       "loop": true,
       "from": 0,
       "gain": -16,
+      "bus": "under",
+      "fade": 0.05,
       "curve": [
         [
           0,
@@ -262,6 +323,10 @@
         ],
         [
           "explode",
+          0.4
+        ],
+        [
+          "torepos",
           0.5
         ],
         [
@@ -278,7 +343,7 @@
         ],
         [
           "tocta",
-          0.4
+          0.35
         ],
         [
           "rewind",
@@ -288,10 +353,92 @@
     },
     {
       "type": "sample",
+      "file": "052-cable-poulie.wav",
+      "loop": true,
+      "from": "principe-0.11",
+      "to": "reponse:s'arrête",
+      "gain": -26,
+      "bus": "under",
+      "fade": 0.4
+    },
+    {
+      "type": "sample",
+      "file": "amb-vent.wav",
+      "loop": true,
+      "from": "tozero",
+      "to": "toverdict",
+      "gain": -30,
+      "bus": "under",
+      "fade": 0.4
+    },
+    {
+      "type": "sample",
+      "file": "amb-vent.wav",
+      "loop": true,
+      "from": "tolike",
+      "to": "toloop",
+      "gain": -30,
+      "bus": "under",
+      "fade": 0.4
+    },
+    {
+      "type": "sample",
+      "file": "052-cable-poulie.wav",
+      "loop": true,
+      "from": "tolike",
+      "to": "toabo",
+      "gain": -26,
+      "bus": "under",
+      "fade": 1.2
+    },
+    {
+      "type": "sample",
+      "file": "amb-vent.wav",
+      "loop": true,
+      "from": "toloop",
+      "gain": -28,
+      "bus": "under",
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "052-cable-poulie.wav",
+      "loop": true,
+      "from": "toloop",
+      "gain": -22,
+      "bus": "under",
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
       "file": "sig-dossier.wav",
       "at": 0.02,
       "gain": -8,
       "bus": "main"
+    },
+    {
+      "type": "sample",
+      "file": "052-pneus.wav",
+      "at": 0.02,
+      "gain": -16,
+      "dur": 1.4,
+      "fade": 0.6
+    },
+    {
+      "type": "sample",
+      "file": "052-pince-ouvre.wav",
+      "at": 1.58,
+      "gain": -11,
+      "dur": 0.9,
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "052-pneus.wav",
+      "at": 13.32,
+      "gain": -14,
+      "dur": 0.45,
+      "fade": 0.15
     },
     {
       "type": "sample",
@@ -327,30 +474,56 @@
     },
     {
       "type": "sample",
-      "file": "riser.wav",
-      "at": "tozero-2",
-      "to": "tozero",
-      "offset": 1.5,
-      "gain": -22
+      "file": "052-pince-ouvre.wav",
+      "at": 24.28,
+      "gain": -13,
+      "dur": 0.9,
+      "fade": 0.3
     },
     {
       "type": "sample",
-      "file": "impact-lourd.wav",
-      "at": "tozero",
-      "gain": -17,
-      "bus": "main"
+      "file": "052-pince-ferme.wav",
+      "at": 29.7,
+      "gain": -11,
+      "dur": 0.6,
+      "fade": 0.2
     },
     {
       "type": "sample",
-      "file": "impact-lourd.wav",
-      "at": "trigger",
-      "gain": -15,
-      "bus": "main"
+      "file": "052-pneus.wav",
+      "at": 35.66,
+      "gain": -14,
+      "dur": 0.34,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "052-pneus.wav",
+      "at": 46.06,
+      "gain": -13,
+      "dur": 1.6,
+      "fade": 0.5
+    },
+    {
+      "type": "sample",
+      "file": "052-pince-ferme.wav",
+      "at": 53.58,
+      "gain": -9,
+      "dur": 0.55,
+      "fade": 0.15
+    },
+    {
+      "type": "sample",
+      "file": "052-arret.wav",
+      "at": 59.38,
+      "gain": -11,
+      "dur": 2.2,
+      "fade": 0.9
     },
     {
       "type": "sample",
       "file": "impact-sec.wav",
-      "at": "verdict",
+      "at": "verdict+0.42",
       "gain": -15
     },
     {
@@ -358,7 +531,7 @@
       "file": "sig-boucle.wav",
       "at": "rewind",
       "gain": -8,
-      "offset": 0.6
+      "offset": 0.9
     }
   ]
 }

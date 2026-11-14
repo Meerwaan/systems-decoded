@@ -10,15 +10,18 @@
       /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
          kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
 
-      /* le second compteur de l'en-tête (.hud__count est signal par défaut) */
-      #hud-count { color: var(--ink); }
+      .chip--live, #retitle, #net, #next, #duel, #cta-field, #film, .rail { opacity: 0; }
+      /* le second compteur de l'en-tête : la vitesse du câble (main.js le colore : veille tant qu'il court, signal à l'arrêt) */
+      #hud-count { color: var(--veille); }
       /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
-      #chip-toi { color: var(--ink); }
-      #chip-coeur { color: var(--veille); }
+      #chip-came, #chip-levier, #chip-mors, #chip-ressort, #chip-egal, #chip-pesage, #chip-deux { color: var(--veille); }
+      #chip-cinq { color: var(--ink); }
+      #chip-faible, #chip-isole { color: var(--signal); }
+      #next-fact span { font-size: 36px; line-height: 1.2; letter-spacing: 0.06em; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="60" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="90.933" data-width="1080" data-height="1920">
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
@@ -28,8 +31,8 @@
       <header id="hud">
         <div class="hud__tag"><i class="hud__dot"></i><span>Dossier 052</span></div>
         <div class="hud__title" id="hud-title">Télésiège débrayable</div>
-        <div class="hud__clock" id="hud-clock">T−3,0 s</div>
-        <div class="hud__count" id="hud-count"><span id="hud-count-l">Mesure</span><b id="hud-count-v">0</b></div>
+        <div class="hud__clock" id="hud-clock">18 km/h</div>
+        <div class="hud__count" id="hud-count"><span id="hud-count-l">Câble</span><b id="hud-count-v">18 km/h</b></div>
         <div class="hud__rule"></div>
         <nav class="hud__acts">
           <span>01 Menace</span><span>02 Autopsie</span><span>03 Réponse</span>
@@ -37,22 +40,31 @@
         </nav>
       </header>
 
-      <!-- 01 · MENACE (acte1.js) -->
-      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <!-- 01 · MENACE (acte1.js) : aucune étiquette — l'image et l'en-tête suffisent (« un panneau n'entre que s'il apporte un chiffre ») -->
 
-      <!-- 02 · AUTOPSIE (acte2.js) -->
-      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>En veille</b></div>
+      <!-- 02 · AUTOPSIE (acte2.js : l'éclaté, le principe) : une seule à la fois dans la zone haute -->
+      <div id="chip-came" class="chip chip--live"><span>En gare</span><b>Came</b></div>
+      <div id="chip-levier" class="chip chip--live"><b>Levier et galet</b></div>
+      <div id="chip-mors" class="chip chip--live"><span>Deux mors</span><b>Un fixe · un mobile</b></div>
+      <div id="chip-ressort" class="chip chip--live"><span>Le cœur</span><b>Ressort de serrage</b></div>
+      <div id="chip-cinq" class="chip chip--live"><span>À quai</span><b>5 fois moins vite</b></div>
+      <div id="chip-egal" class="chip chip--live"><span>Vitesse égale</span><b>Le câble est immobile</b></div>
 
+      <!-- 02 → 03 (acte3.js : le repos, puis la réponse) : un seul panneau à la fois dans la zone haute -->
+      <div id="chip-pesage" class="chip chip--live"><span>Au bout du quai</span><b>Capteur de pesage</b></div>
+      <div id="chip-faible" class="chip chip--live"><span>Serrage</span><b>Trop faible</b></div>
+      <div id="chip-isole" class="chip chip--live"><span>Ton siège</span><b>Isolé pour contrôle</b></div>
 
-      <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
+      <!-- fin.js : ce que le film doit encore -->
+      <div id="chip-deux" class="chip chip--live"><span>Pente la plus raide</span><b>2 fois ce qu'il faut</b></div>
 
       <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
       <div id="retitle">
-        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
+        <div class="kicker" id="retitle-k">Son secret</div>
         <div id="retitle-main">
           <span id="retitle-slot">
-            <span id="retitle-a">L'idée reçue<i id="retitle-strike"></i></span>
-            <span id="retitle-b" class="is-veille">La vérité</span>
+            <span id="retitle-a">Ta pince seule<i id="retitle-strike"></i></span>
+            <span id="retitle-b" class="is-veille">Ta pince et la gare</span>
           </span>
         </div>
       </div>
@@ -68,10 +80,10 @@
       </section>
 
       <section id="next">
-        <div class="panel__h"><span>Prochain dossier · 000</span><span>Classé</span></div>
+        <div class="panel__h"><span>Prochain dossier · 053</span><span>Classé</span></div>
         <div id="next-title"><span id="next-redact"></span></div>
         <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
-        <div id="next-fact"><span>Un fait, un seul.</span></div>
+        <div id="next-fact"><span>Elle n'a pas de pile. Et pourtant, elle te répond.</span></div>
         <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
       </section>
 
@@ -86,8 +98,8 @@
       <!-- la question du commentaire posée en DEUX réponses (duelCall, fin.js) : chacune s'allume quand la voix la dit, le film ne
            répond jamais à la place du spectateur — prendre parti fait commenter. Une question fermée à deux issues seulement. -->
       <div id="duel">
-        <div class="kicker">La tienne ?</div>
-        <div id="duel-row"><span id="duel-a" class="duel__opt">Réponse A</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Réponse B</span></div>
+        <div class="kicker">Pour ta pince ?</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">La machine</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Le mécanicien</span></div>
         <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
       </div>
       <div id="cta-field">
@@ -102,6 +114,8 @@
       <div id="flash" class="layer"></div>
 
       <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
       <!-- AUDIO:END -->
     </div>
 
