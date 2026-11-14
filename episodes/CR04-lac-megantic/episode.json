@@ -17,21 +17,21 @@
     "language": "fr"
   },
   "cover": {
-    "at": "t6$",
+    "at": 0.04,
     "title": [
       "Lac-Mégantic",
       "0 h 58"
     ],
     "cam": {
-      "tx": 0,
-      "ty": 8,
-      "tz": 0,
-      "d": 120,
-      "az": -40,
-      "el": 14,
-      "shift": -430,
+      "tx": -26.18,
+      "ty": 7.29,
+      "tz": -3.6,
+      "d": 60,
+      "az": 75.16,
+      "el": 1.11,
+      "shift": 0,
       "side": 0,
-      "fov": 28,
+      "fov": 54,
       "roll": 0
     }
   },
@@ -88,7 +88,8 @@
     "« Surtout l'air » : au départ, ≈ 97 400 lb sur ≈ 146 000 venaient encore du frein à air des locomotives — § 2.2 [P] ; « il fallait au moins douze freins à main » = le plus bas des scénarios du BST (12 à 18 posés sur les seuls wagons ; 15 à 20 avec l'arrêt fait à 13 psi ; 18 à 26 sans aucun frein à air) — § 2.2 [P]",
     "Épinglé TikTok : 13 passages à niveau traversés — § 1.1 [P]",
     "Image : le train, la pente, la ville, les locomotives, le moteur, le compresseur, les cylindres, les sabots, les volants de frein à main, le manomètre, le coupe-circuit et l'aiguille de vitesse sont des maquettes reconstituées ; la jauge « 66 » est un indicateur de la maquette (force convertie en tonnes), pas un instrument du bord ; le panneau « 16 » est en km/h pour le film (la restriction réelle est de 10 mph) ; la forme de la fumée, du feu et du déraillement est reconstituée ; personne n'est montré ni nommé (le rapport ne nomme personne) ; « tu » met le spectateur à la place du mécanicien sans lui prêter de faute (pratique répandue selon le BST) ; leviers et volants bougent sans main ; aucune photo ni schéma du rapport (reproduction non commerciale). En-tête : l'heure réelle par étape ; T− compte de 23:58:42 à 0:58:21",
-    "Annonce : À FAIRE — le CR05 n'est pas choisi (réserve : Challenger 1986) ; l'abo dit le format sans fait du prochain, la boucle tient sans lui"
+    "Annonce : À FAIRE — le CR05 n'est pas choisi (réserve : Challenger 1986) ; l'abo dit le format sans fait du prochain, la boucle tient sans lui",
+    "Image (architecte, 14/11) : maquettes d’argile au 1:20 reconstituées — la GE C30-7 MMA 5017 d’après sa fiche publiée (longueur, bogies C-C, roues de 40 po), les quatre autres locomotives sur la même silhouette, le wagon VB, le wagon tampon, 72 wagons-citernes DOT-111 ; l’emplacement du volant de frein à main, du compresseur, du turbo, du coupe-circuit et du cylindre de frein sur la locomotive est reconstitué ; distances Nantes → Lac-Mégantic compressées (≈ 2,4×) et pente accentuée (0,92 % → 3,5 %) ; le centre-ville, la courbe et la rue Frontenac sont schématiques ; la colonne de freinage (66 t) convertit les forces du BST (§ 1.14.2.3, 2.2 : 146 700 lb requis, 48 600 lb pour les sept freins à main, ≈ 1,6 t par psi d’air) ; aucune personne à l’image."
   ],
   "beats": [
     {
@@ -211,8 +212,8 @@
     },
     {
       "id": "abo",
-      "text": "+Abonne-toi+ : chaque compte à rebours, un vrai accident… et la sécurité qui a *lâché*. Le prochain : À FAIRE.",
-      "vo": "[warm, conversational] Abonne-toi : [short pause] chaque compte à rebours, un vrai accident... et la sécurité qui a lâché. Le prochain : À FAIRE.",
+      "text": "+Abonne-toi+ : chaque compte à rebours, un vrai accident… et la sécurité qui a *lâché*. Le prochain : un Airbus sans carburant, qui plane [19|dix-neuf] minutes au-dessus de l'Atlantique.",
+      "vo": "[warm, conversational] Abonne-toi : [short pause] chaque compte à rebours, un vrai accident... et la sécurité qui a lâché. Le prochain : un Airbus sans carburant, qui plane dix-neuf minutes au-dessus de l'Atlantique.",
       "voir": "Panneau « S'abonner » et chevrons vers la colonne de boutons ; derrière, l'horloge ambre qui tourne à rebours vers 0:58."
     },
     {
@@ -224,11 +225,97 @@
   ],
   "cues": {
     "choc": "accroche:démarre",
+    "garé": "accroche:garé",
+    "serres0": "accroche:serrés",
+    "recule": "promesse:on-0.24",
+    "locomotive0": "promesse:locomotive",
+    "tenait": "promesse:tenait",
+    "campair": "promesse:l'air",
+    "campmain": "promesse:freins",
+    "toprincipe": "principe-0.12",
+    "compresseur0": "principe:compresseur",
+    "coupe": "principe:Coupe",
+    "fuit0": "principe:fuit",
+    "tient": "principe:tient",
+    "assez": "principe:assez",
+    "toseuil": "seuil-0.12",
+    "dixmille": "seuil:dix",
+    "pente0": "seuil:pente",
+    "soixantesix": "seuil:soixante",
+    "retiens": "seuil:Retiens",
+    "tot1": "t1-0.12",
+    "nantes": "t1:Nantes",
+    "soixantedouze": "t1:soixante",
+    "megantic": "t1:Lac",
+    "bas": "t1:bas",
+    "allumee": "t1:allumée",
+    "sept": "t1:sept",
+    "tot2": "t2-0.12",
+    "essai": "t2:L'essai",
+    "desserre": "t2:desserre",
+    "seuls": "t2:seuls",
+    "serres2": "t2:serrés",
+    "rien": "t2:Rien",
+    "reussi": "t2:réussi",
+    "tot3": "t3-0.12",
+    "appelle": "t3:appelle",
+    "feu3": "t3:feu",
+    "tete3": "t3:tête",
+    "repare": "t3:mal",
+    "tot4": "t4-0.12",
+    "pompiers": "t4:pompiers",
+    "coupent": "t4:coupent",
+    "eteint": "t4:s'éteint",
+    "compresseur4": "t4:compresseur",
+    "arrete": "t4:s'arrête",
+    "tot5": "t5-0.12",
+    "fuit5": "t5:fuit",
+    "psi": "t5:psi",
+    "reste5": "t5:Le",
+    "onzequarante": "t5:Vers-0.2",
+    "repart": "t5:repart",
+    "seul5": "t5:seul",
     "tozero": "t6-0.12",
+    "souviens": "t6:Souviens",
+    "manque": "t6:manque",
+    "kilos": "t6:kilos",
     "trigger": "t6:part",
+    "toutseul": "t6:Tout",
     "toverdict": "defaut-0.12",
+    "reussi2": "defaut:réussi",
+    "locos": "defaut:locomotives",
+    "sept2": "defaut:sept",
     "verdict": "defaut:tiers",
+    "fallait": "defaut:fallait",
+    "vidait": "defaut:vidait",
+    "heure": "defaut:heure",
+    "tot7": "t7-0.12",
+    "personne": "t7:personne",
+    "entre": "t7:entre",
+    "centcinq": "t7:cent",
+    "passage": "t7:passage",
+    "seize": "t7:seize",
+    "toissue": "issue-0.12",
+    "deraille": "issue:déraille",
+    "embrase": "issue:s'embrase",
+    "morts": "issue:quarante",
+    "enquete": "issue:L'enquête",
+    "facteurs": "issue:dix",
+    "todepuis": "depuis-0.12",
+    "canada": "depuis:Canada",
+    "deux": "depuis:personnes-0.16",
+    "compagnie": "depuis:compagnie",
+    "methode": "depuis:méthode",
     "tocta": "comment-0.12",
+    "surtout": "comment:Surtout",
+    "douze": "comment:douze",
+    "commentaire": "comment:commentaire",
+    "normal": "comment:normal",
+    "pas": "comment:pas",
+    "toabo": "abo-0.12",
+    "lache": "abo:lâché",
+    "prochain": "abo:prochain",
+    "airbus": "abo:Airbus",
     "toloop": "boucle-0.12",
     "rewind": "boucle:nuit"
   },
@@ -273,6 +360,13 @@
       "id": "CR04-deraille",
       "image": "il déraille et le pétrole s'embrase, vu de loin",
       "reprend": "explosion"
+    },
+    {
+      "id": "CR04-passage-niveau",
+      "image": "les feux du passage à niveau du centre clignotent quand le train lancé passe (t7, 98,9 → 101,8)",
+      "duree": 3,
+      "prompt": "North American railway level crossing warning bell ringing fast and steady, mechanical bell clanging, at night, medium distance, isolated, no music",
+      "reserve": true
     }
   ],
   "sfx": [
@@ -282,18 +376,83 @@
     },
     {
       "type": "sample",
+      "file": "amb-vent.wav",
+      "loop": true,
+      "from": 0,
+      "gain": -30,
+      "bus": "under",
+      "fade": 0.05,
+      "curve": [
+        [
+          0,
+          0.7
+        ],
+        [
+          "toprincipe",
+          0.4
+        ],
+        [
+          "tot1",
+          0.8
+        ],
+        [
+          "tot3",
+          0.9
+        ],
+        [
+          "toissue",
+          1
+        ],
+        [
+          "todepuis",
+          0.35
+        ],
+        [
+          "tocta",
+          0.35
+        ],
+        [
+          "toloop",
+          0.8
+        ]
+      ]
+    },
+    {
+      "type": "sample",
       "file": "amb-tension.wav",
       "loop": true,
       "from": 0,
       "gain": -16,
+      "bus": "under",
+      "fade": 0.05,
       "curve": [
         [
           0,
           0.8
         ],
         [
-          "tozero",
+          "toprincipe",
+          0.45
+        ],
+        [
+          "toseuil",
+          0.55
+        ],
+        [
+          "tot1",
+          0.6
+        ],
+        [
+          "tot3",
+          0.8
+        ],
+        [
+          "tot5",
           0.9
+        ],
+        [
+          "tozero",
+          1
         ],
         [
           "trigger",
@@ -301,14 +460,26 @@
         ],
         [
           "toverdict",
-          0.45
+          0.6
+        ],
+        [
+          "tot7",
+          1
+        ],
+        [
+          "toissue",
+          1
+        ],
+        [
+          "todepuis",
+          0.35
         ],
         [
           "tocta",
-          0.4
+          0.3
         ],
         [
-          "rewind",
+          "toloop",
           0.8
         ]
       ]
@@ -322,37 +493,121 @@
     },
     {
       "type": "sample",
-      "file": "riser.wav",
-      "at": "tozero-2",
-      "to": "tozero",
-      "offset": 1.5,
-      "gain": -22
+      "file": "relais.wav",
+      "at": "t1-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
     },
     {
       "type": "sample",
-      "file": "impact-lourd.wav",
-      "at": "tozero",
+      "file": "relais.wav",
+      "at": "t2-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "vapeur.wav",
+      "at": "desserre+0.9",
       "gain": -17,
-      "bus": "main"
+      "dur": 1.1,
+      "fade": 0.6
     },
     {
       "type": "sample",
-      "file": "impact-lourd.wav",
-      "at": "trigger",
-      "gain": -15,
-      "bus": "main"
+      "file": "relais.wav",
+      "at": "t3-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
     },
     {
       "type": "sample",
-      "file": "impact-sec.wav",
-      "at": "verdict",
+      "file": "feu.wav",
+      "at": "feu3+0.35",
       "gain": -15
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "t4-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "disjoncteur.wav",
+      "at": "coupent+0.42",
+      "gain": -10
+    },
+    {
+      "type": "sample",
+      "file": "046-compresseur-arret.wav",
+      "at": "arrete+0.36",
+      "gain": -16,
+      "dur": 0.5,
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "t5-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "vapeur.wav",
+      "at": "fuit5+0.25",
+      "gain": -20,
+      "dur": 0.5,
+      "fade": 0.3
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "t6-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "relais.wav",
+      "at": "t7-0.08",
+      "gain": -9,
+      "dur": 0.3,
+      "fade": 0.1
+    },
+    {
+      "type": "sample",
+      "file": "metal-ecrase.wav",
+      "at": "deraille+0.92",
+      "gain": -15,
+      "fade": 0.6
+    },
+    {
+      "type": "sample",
+      "file": "explosion.wav",
+      "at": "embrase+0.44",
+      "gain": -12,
+      "bus": "main"
+    },
+    {
+      "type": "hush",
+      "from": "enquete-0.16",
+      "to": "todepuis-0.05",
+      "depth": -14
     },
     {
       "type": "sample",
       "file": "sig-boucle.wav",
       "at": "rewind",
-      "gain": -8,
+      "gain": -10,
       "offset": 0.6
     }
   ]

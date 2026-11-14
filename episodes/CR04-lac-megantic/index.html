@@ -7,101 +7,142 @@
     <link rel="stylesheet" href="gen/brand.css" />
     <script src="gen/gsap.min.js"></script>
     <style>
-      /* Les dispositifs récurrents (en-tête, étiquettes, titre barré, les trois appels à l'action) sont stylés dans
-         kit/brand.css. Ici : ce qui n'existe que dans cet épisode. */
+      /* Les dispositifs récurrents (en-tête du Compte à rebours, étiquettes, appels) sont stylés dans kit/brand.css
+         ([data-serie="compte-a-rebours"]). Ici : la couleur de chaque étiquette de CE film, fixée par identifiant (.chip--live est alarme). */
+      #chip-bilan, #chip-facteurs { color: var(--papier); }
+      #chip-911 { color: var(--alarme); }
+      #chip-essai, #chip-deux, #chip-douze { color: var(--veille); }
+      .chip i { display: block; font: 600 24px/1.3 var(--mono); color: var(--papier); font-style: normal; margin-top: 6px; }
+      #hud-remain { color: rgb(255, 107, 107); }
 
-      /* le second compteur de l'en-tête (.hud__count est signal par défaut) */
-      #hud-count { color: var(--ink); }
-      /* les étiquettes : couleur fixée par identifiant (.chip--live est signal par défaut) */
-      #chip-toi { color: var(--ink); }
-      #chip-coeur { color: var(--veille); }
+      /* LES TROIS INSTRUMENTS (world.js les écrit depuis l'état ; zone haute, à gauche ; un à la fois, jamais avec une étiquette) */
+      .instr { position: absolute; left: var(--safe-l, 64px); top: 452px; opacity: 0; pointer-events: none; font-family: var(--mono); color: var(--papier); }
+      .instr .unit { display: block; font: 600 24px/1.4 var(--mono); opacity: 0.8; }
+
+      /* #mano — le manomètre du cylindre de frein (S.mano, S.psi) : 0 à 100 psi sur 180°. Aiguille verte tant que le moteur tourne
+         (le compresseur recharge : ça tient), rouge moteur coupé (l'air fuit : c'est l'incident). */
+      #mano { width: 400px; height: 310px; }
+      #mano svg { position: absolute; left: 0; top: 0; width: 400px; height: 230px; overflow: visible; }
+      #mano .arc { fill: none; stroke: rgba(239, 234, 224, 0.32); stroke-width: 10; }
+      #mano .lbl { fill: rgba(239, 234, 224, 0.7); font: 600 24px var(--mono); }
+      #mano-needle { position: absolute; left: 196px; top: 40px; width: 8px; height: 170px; transform-origin: 4px 170px;
+        background: var(--veille); border-radius: 4px; box-shadow: 0 0 18px rgba(92, 255, 176, 0.55); transform: rotate(-90deg); }
+      #mano[data-zone="rouge"] #mano-needle { background: var(--alarme); box-shadow: 0 0 22px rgba(255, 45, 45, 0.7); }
+      #mano .read { position: absolute; left: 0; width: 400px; top: 228px; text-align: center; }
+      #mano-val { font: 800 64px/1 var(--mono); }
+      #mano[data-zone="rouge"] #mano-val { color: var(--alarme); }
+
+      /* #colonne — la force de freinage (S.col, S.mark ; l'air = 1,62 t par psi, les freins à main serrés) contre ce qu'il faut : 66 t.
+         Les freins à main en bas (sept crans), l'air au-dessus ; verte tant qu'elle passe la marque, rouge dessous. */
+      #colonne { width: 520px; height: 330px; }
+      #colonne .bar { position: absolute; left: 0; top: 0; width: 96px; height: 320px; border: 3px solid rgba(239, 234, 224, 0.45);
+        border-radius: 6px; display: flex; flex-direction: column-reverse; overflow: hidden; background: rgba(11, 7, 5, 0.55); }
+      #col-hb { width: 100%; height: 0; background: rgba(239, 234, 224, 0.82);
+        background-image: repeating-linear-gradient(to top, transparent 0 calc(100% / 7 - 3px), rgba(11, 7, 5, 0.9) calc(100% / 7 - 3px) calc(100% / 7)); }
+      #col-air { width: 100%; height: 0; background: var(--veille); box-shadow: 0 0 22px rgba(92, 255, 176, 0.5); }
+      #colonne[data-zone="rouge"] #col-air, #colonne[data-zone="rouge"] #col-hb { background-color: var(--alarme); box-shadow: 0 0 22px rgba(255, 45, 45, 0.6); }
+      #col-mark { position: absolute; left: -14px; width: 240px; height: 44px; bottom: calc(10px + 320px * 66.5 / 120 - 22px); opacity: 0; }
+      #col-mark::before { content: ""; position: absolute; left: 0; top: 19px; width: 124px; border-top: 6px solid var(--veille); }
+      #col-mark b { position: absolute; left: 132px; top: 5px; font: 800 34px/1 var(--mono); color: var(--veille); white-space: nowrap; }
+      #colonne .read { position: absolute; left: 150px; top: 0; }
+      #col-val { font: 800 64px/1 var(--mono); }
+      #colonne[data-zone="rouge"] #col-val { color: var(--alarme); }
+      #colonne .legend { position: absolute; left: 150px; top: 214px; font: 600 24px/1.5 var(--mono); }
+      #colonne .legend .k-air { color: var(--veille); }
+
+      /* #vitesse — la vitesse du train (S.speedo, S.kmh) : le chiffre, et une barre jusqu'à 110 avec la limite « 16 » de la rue Frontenac */
+      #vitesse { width: 600px; height: 230px; }
+      #vitesse-val { display: block; font: 800 96px/1.25 var(--mono); }
+      #vitesse .unit { margin-top: 4px; }
+      #vitesse[data-zone="rouge"] #vitesse-val { color: var(--alarme); }
+      #vitesse .track { position: absolute; left: 0; top: 196px; width: 560px; height: 14px; background: rgba(239, 234, 224, 0.25); border-radius: 7px; }
+      #vitesse-bar { position: absolute; left: 0; top: 0; height: 14px; width: 0; background: var(--ambre); border-radius: 7px; }
+      #vitesse[data-zone="rouge"] #vitesse-bar { background: var(--alarme); }
+      #vitesse .limit { position: absolute; left: calc(560px * 16 / 110); top: -16px; height: 46px; border-left: 5px solid var(--veille); }
+      #vitesse .limit b { position: absolute; left: 8px; top: 48px; font: 800 28px/1 var(--mono); color: var(--veille); }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="60" data-width="1080" data-height="1920">
+    <div id="root" data-serie="compte-a-rebours" data-phase="nuit" data-composition-id="main" data-start="0" data-duration="143.533" data-width="1080" data-height="1920">
       <canvas id="stage" width="1080" height="1920"></canvas>
       <div id="vignette" class="layer"></div>
       <div id="hud-shade"></div>
       <div id="title-shade"></div>
       <svg id="leaders" viewBox="0 0 1080 1920"></svg>
 
+      <!-- l'en-tête du Compte à rebours (kit/brand.css [data-serie="compte-a-rebours"], piloté par crHud dans main.js) :
+           l'étiquette à gauche, le nom du compte à droite, l'HEURE RÉELLE au centre (ambre), le temps qui reste dessous (alarme) -->
       <header id="hud">
-        <div class="hud__tag"><i class="hud__dot"></i><span>Compte à rebours 04</span></div>
-        <div class="hud__title" id="hud-title">Lac-Mégantic</div>
-        <div class="hud__clock" id="hud-clock">T−3,0 s</div>
-        <div class="hud__count" id="hud-count"><span id="hud-count-l">Mesure</span><b id="hud-count-v">0</b></div>
-        <div class="hud__rule"></div>
-        <nav class="hud__acts">
+        <div class="hud__tag"><i class="hud__dot"></i><span id="hud-tag">Compte à rebours · 04</span></div>
+        <em class="hud__brand" id="hud-brand">Système Décodé</em>
+        <i class="hud__burst" id="hud-burst"></i>
+        <div class="hud__clock" id="hud-clock">00:58</div>
+        <div class="hud__remain" id="hud-remain">T−0 s</div>
+        <nav class="hud__acts" id="hud-acts">
           <span>01 L'heure</span><span>02 Le défaut</span><span>03 Depuis</span>
-          <em class="hud__brand">Système Décodé</em>
         </nav>
       </header>
 
-      <!-- 01 · MENACE (acte1.js) -->
-      <div id="chip-toi" class="chip chip--live"><b>Toi</b></div>
+      <!-- Pas de pièce du dossier dans ce film : les photos et schémas du rapport du BST ne sont pas réutilisables (docs/faits/CR04-lac-megantic.md § 14). -->
 
-      <!-- 02 · AUTOPSIE (acte2.js) -->
-      <div id="chip-coeur" class="chip chip--live"><span>Le cœur</span><b>En veille</b></div>
-
-
-      <!-- 03 · RÉPONSE (acte3.js) : un seul panneau à la fois dans la zone haute -->
-
-      <!-- la chute (fin.js) : l'idée reçue, barrée, puis corrigée -->
-      <div id="retitle">
-        <div class="kicker" id="retitle-k">Ce qui te sauve</div>
-        <div id="retitle-main">
-          <span id="retitle-slot">
-            <span id="retitle-a">L'idée reçue<i id="retitle-strike"></i></span>
-            <span id="retitle-b" class="is-veille">La vérité</span>
-          </span>
-        </div>
+      <!-- LES INSTRUMENTS (world.js) -->
+      <div id="mano" class="instr" data-zone="ok">
+        <svg viewBox="0 0 400 230">
+          <path class="arc" d="M 30 210 A 170 170 0 0 1 370 210" />
+          <text class="lbl" x="18" y="244">0</text><text class="lbl" x="184" y="22">50</text><text class="lbl" x="348" y="244">100</text>
+        </svg>
+        <i id="mano-needle"></i>
+        <div class="read"><span id="mano-val">0</span><span class="unit">psi · cylindre de frein</span></div>
+      </div>
+      <div id="colonne" class="instr" data-zone="ok" data-brakes="0">
+        <div class="bar"><i id="col-hb"></i><i id="col-air"></i></div>
+        <div id="col-mark"><b>66 t</b></div>
+        <div class="read"><span id="col-val">0</span><span class="unit">tonnes de freinage</span></div>
+        <div class="legend"><span class="k-air">■ air</span><br /><span>■ freins à main</span></div>
+      </div>
+      <div id="vitesse" class="instr" data-zone="ok">
+        <span id="vitesse-val">0</span><span class="unit">km/h</span>
+        <div class="track"><i id="vitesse-bar"></i><i class="limit"><b>16</b></i></div>
       </div>
 
-      <!-- appels à l'action (fin.js) : désignent l'interface, ne la remplacent pas -->
+      <!-- LES CHIFFRES QUE L’IMAGE NE MONTRE PAS (une étiquette à la fois, zone haute 436–790 ; chip(id, null, 96, 470, de, à)) -->
+      <div id="chip-essai" class="chip chip--live"><span>23:03 · essai des freins à main</span><b>Réussi</b></div>
+      <div id="chip-911" class="chip chip--live"><span>23:40 · appel au 911</span><b>Feu sur la tête</b></div>
+      <div id="chip-bilan" class="chip chip--live"><span>6 juillet 2013 · Lac-Mégantic</span><b>47 morts</b></div>
+      <div id="chip-facteurs" class="chip chip--live"><span>Rapport du BST · R13D0054</span><b>18 facteurs</b></div>
+      <div id="chip-deux" class="chip chip--live"><span>Depuis 2013</span><b>2 personnes à bord</b><i>au minimum</i></div>
+      <div id="chip-douze" class="chip chip--live"><span>Selon l'enquête</span><b>12 freins à main</b><i>au moins</i></div>
+
+      <!-- appels à l’action (fin.js) : désignent l’interface, ne la remplacent pas. Pas de like dans ce format. -->
       <div id="rail-follow" class="rail"><i></i><i></i><i></i></div>
-      <div id="rail-like" class="rail"><i></i><i></i><i></i></div>
       <div id="rail-comment" class="rail"><i></i><i></i><i></i></div>
 
-      <section id="net" class="panel">
-        <div class="panel__h"><span>Ça remonte chez</span><span id="net-n">1 personne</span></div>
-        <div id="net-grid"><i id="net-wave"></i></div>
-      </section>
-
+      <!-- abo : le prochain compte à rebours (CR05) ; la voix dit le fait, pas le nom : le titre reste caviardé -->
       <section id="next">
-        <div class="panel__h"><span>Prochain dossier · 000</span><span>Classé</span></div>
-        <div id="next-title"><span id="next-redact"></span></div>
-        <!-- un seul fait comme appât ; aucun chiffre qui ne soit déjà sourcé -->
-        <div id="next-fact"><span>Un fait, un seul.</span></div>
-        <div id="next-cta"><span>S'abonner pour l'ouvrir</span><span>+</span></div>
+        <div class="panel__h"><span>Prochain compte à rebours · 05</span><span>Classé</span></div>
+        <div id="next-title"><span>Dossier classé</span><span id="next-redact"></span></div>
+        <div id="next-fact"><span>Un Airbus sans carburant plane 19 minutes.</span></div>
+        <div id="next-cta"><span>S’abonner pour l’ouvrir</span><span>+</span></div>
       </section>
 
-      <!-- hors-série (filmCall) : le long vers lequel la promo envoie — le mot YouTube, jamais son logo -->
-      <section id="film">
-        <div class="panel__h"><span>Film complet</span><span id="film-length">0 min 00</span></div>
-        <div id="film-title">Le titre</div>
-        <div id="film-bar"><i></i></div>
-        <div id="film-where"><span>Sur YouTube</span><span>Système Décodé</span></div>
-      </section>
-
-      <!-- la question du commentaire posée en DEUX réponses (duelCall, fin.js) : chacune s'allume quand la voix la dit, le film ne
-           répond jamais à la place du spectateur — prendre parti fait commenter. Une question fermée à deux issues seulement. -->
+      <!-- la question du commentaire en DEUX réponses (duelCall, fin.js, toneA ET toneB null : aucune ne s’allume d’une couleur
+           qui répondrait à la place du spectateur) -->
       <div id="duel">
-        <div class="kicker">La tienne ?</div>
-        <div id="duel-row"><span id="duel-a" class="duel__opt">Réponse A</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Réponse B</span></div>
+        <div class="kicker">Un train de pétrole garé seul, la nuit ?</div>
+        <div id="duel-row"><span id="duel-a" class="duel__opt">Normal</span><span class="duel__or">ou</span><span id="duel-b" class="duel__opt">Pas normal</span></div>
         <div id="duel-you"><span>À toi · en commentaire</span><i id="duel-caret"></i></div>
-      </div>
-      <div id="cta-field">
-        <div class="kicker">La question de l'accroche ?</div>
-        <!-- la réponse est déjà là, à chasse fixe : elle se révèle par sa largeur (commentCall, chars = son nombre de lettres) -->
-        <div id="cta-field-v"><span id="cta-typed" class="is-veille">RÉPONSE</span><span id="cta-caret"></span></div>
       </div>
 
       <div id="callouts" class="layer"></div>
       <div id="hook"></div>
       <div id="captions"></div>
       <div id="flash" class="layer"></div>
+      <!-- le grain de film, sur tout le cadre (reconstitution.js le déplace image par image, sur le temps du film) -->
+      <div id="grain" class="layer"></div>
 
       <!-- AUDIO:START (généré par scripts/build.mjs — ne pas éditer à la main) -->
+      <audio id="vo" src="audio/voix.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+      <audio id="bed" src="audio/bed.wav" data-start="0" data-track-index="12" data-volume="0.8"></audio>
       <!-- AUDIO:END -->
     </div>
 
