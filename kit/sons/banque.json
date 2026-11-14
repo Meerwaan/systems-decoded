@@ -464,6 +464,54 @@
       "famille": "sujet",
       "sujet": "CR03",
       "image": "l'alarme feu moteur du poste de pilotage, cloche et gong (t5)"
+    },
+    {
+      "id": "CR03-reacteurs",
+      "duree": 6,
+      "prompt": "Four Concorde turbojet engines at full takeoff power with afterburners lit: steady deep thundering roar with crackle, heard outdoors from close behind the aircraft on the runway, continuous and loopable, isolated, no music",
+      "famille": "sujet",
+      "sujet": "CR03",
+      "image": "les quatre réacteurs à pleine poussée, post-combustion allumée, du « Top » (t1) à l'issue ; ils retombent au moteur 2 coupé (t5) et quand la poussée s'effondre (t8) ; le décollage de 2001 (comment)"
+    },
+    {
+      "id": "052-cable-poulie",
+      "duree": 4,
+      "prompt": "Steel haul rope running fast over a large chairlift bullwheel and sheave rollers: steady rhythmic metallic rumble and soft clicking as the cable passes, medium distance, outdoors, isolated, no music",
+      "famille": "sujet",
+      "sujet": "052",
+      "image": "le câble qui file sans ralentir autour de la grande poulie de gare"
+    },
+    {
+      "id": "052-pince-ouvre",
+      "duree": 1.5,
+      "prompt": "Chairlift detachable grip opening as its roller hits the station rail: a hard steel clack, then the jaws releasing the cable with a short metallic scrape, close, isolated, no music",
+      "famille": "sujet",
+      "sujet": "052",
+      "image": "le galet monte sur la came, la pince s'ouvre et lâche le câble"
+    },
+    {
+      "id": "052-pneus",
+      "duree": 3,
+      "prompt": "Row of rubber tires spinning against a metal plate in a chairlift station, whirring rubber and a rapid thumping as a chair passes over them, accelerating, close, isolated, no music",
+      "famille": "sujet",
+      "sujet": "052",
+      "image": "la rangée de pneus qui ralentit puis relance le siège sur le quai"
+    },
+    {
+      "id": "052-pince-ferme",
+      "duree": 1.5,
+      "prompt": "Heavy spring-loaded steel grip snapping shut on a thick steel cable: a deep metallic clunk with a short spring twang, close, isolated, no music",
+      "famille": "sujet",
+      "sujet": "052",
+      "image": "le ressort referme les mors sur le câble"
+    },
+    {
+      "id": "052-arret",
+      "duree": 4,
+      "prompt": "Large chairlift emergency stop: motor winding down, a heavy brake clunk, then the steel cable creaking and the chairs swinging and squeaking on their hangers, outdoors, isolated, no music",
+      "famille": "sujet",
+      "sujet": "052",
+      "image": "tout le télésiège s'arrête d'un coup, les sièges se balancent"
     }
   ]
 }

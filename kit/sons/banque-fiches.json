@@ -526,5 +526,53 @@
     "annonce": 33,
     "fait": "2026-11-13T16:38",
     "prompt": "Airliner cockpit engine fire warning: loud continuous fire bell ringing with a single master warning gong chime, heard inside a cockpit, isolated, no voices, no music"
+  },
+  "CR03-reacteurs": {
+    "duree": 6,
+    "lufs": -11.12,
+    "crete": -1,
+    "annonce": 66,
+    "fait": "2026-11-13T19:22",
+    "prompt": "Four Concorde turbojet engines at full takeoff power with afterburners lit: steady deep thundering roar with crackle, heard outdoors from close behind the aircraft on the runway, continuous and loopable, isolated, no music"
+  },
+  "052-cable-poulie": {
+    "duree": 3.94,
+    "lufs": -18.45,
+    "crete": -1,
+    "annonce": 44,
+    "fait": "2026-11-13T22:47",
+    "prompt": "Steel haul rope running fast over a large chairlift bullwheel and sheave rollers: steady rhythmic metallic rumble and soft clicking as the cable passes, medium distance, outdoors, isolated, no music"
+  },
+  "052-pince-ouvre": {
+    "duree": 1.36,
+    "lufs": -18.39,
+    "crete": -1,
+    "annonce": 17,
+    "fait": "2026-11-13T22:47",
+    "prompt": "Chairlift detachable grip opening as its roller hits the station rail: a hard steel clack, then the jaws releasing the cable with a short metallic scrape, close, isolated, no music"
+  },
+  "052-pneus": {
+    "duree": 2.78,
+    "lufs": -12.96,
+    "crete": -1,
+    "annonce": 33,
+    "fait": "2026-11-13T22:47",
+    "prompt": "Row of rubber tires spinning against a metal plate in a chairlift station, whirring rubber and a rapid thumping as a chair passes over them, accelerating, close, isolated, no music"
+  },
+  "052-pince-ferme": {
+    "duree": 1.48,
+    "lufs": -17.33,
+    "crete": -1,
+    "annonce": 17,
+    "fait": "2026-11-13T22:47",
+    "prompt": "Heavy spring-loaded steel grip snapping shut on a thick steel cable: a deep metallic clunk with a short spring twang, close, isolated, no music"
+  },
+  "052-arret": {
+    "duree": 4,
+    "lufs": -12.26,
+    "crete": -1,
+    "annonce": 44,
+    "fait": "2026-11-13T22:47",
+    "prompt": "Large chairlift emergency stop: motor winding down, a heavy brake clunk, then the steel cable creaking and the chairs swinging and squeaking on their hangers, outdoors, isolated, no music"
   }
 }
